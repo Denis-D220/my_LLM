@@ -1,0 +1,163 @@
+In mathematics, differential calculus is a subfield of calculus that studies the rates at which quantities change.
+
+The primary objects of study in differential calculus are the derivative of a function, related notions such as the differential, and their applications. The derivative of a function at a chosen input equals the instantaneous rate of change of the function at that input. The process of finding a derivative is called differentiation. Geometrically, the derivative at a point is the slope of the tangent line to the graph of the function at that point, provided that the derivative exists and is defined at that point. For a real-valued function of a single real variable, the derivative of a function at a point generally determines the best linear approximation to the function at that point.
+
+Differential calculus is one of the two traditional divisions of calculus, the other being integral calculus—the study of accumulation or area beneath a curve. Differential calculus and integral calculus are connected by the fundamental theorem of calculus, which states that differentiation and integration are inverse processes in a precise sense.
+
+Differentiation has applications in nearly all quantitative disciplines. In physics, the derivative of the position of a moving body with respect to time is the velocity of the body, and the derivative of velocity with respect to time is acceleration. The derivative of momentum with respect to time gives force in Newton's second law of motion. The reaction rate of a chemical reaction is a derivative, and in operations research, derivatives help determine efficient ways to transport materials and design factories.
+
+Derivatives are frequently used to find the maxima and minima of functions. Equations involving derivatives are called differential equations and are fundamental in describing natural phenomena. Derivatives and their generalizations appear in many fields of mathematics, such as complex analysis, functional analysis, differential geometry, measure theory, and abstract algebra. The theory of derivatives is studied more closely and generalized in subjects such as real analysis, vector calculus, and multivariable calculus.
+
+Derivative
+
+The central idea of differential calculus is the derivative. For a real-valued function of one real variable, the derivative measures the instantaneous rate at which the value of the function changes with respect to its input. Geometrically, it is the slope of the tangent line to the graph of the function, when such a tangent line exists.
+
+If .mw-parser-output .texhtml{font-family:"Nimbus Roman No9 L","Times New Roman",Times,serif;font-size:118%;line-height:1;font-variant-numeric:lining-nums tabular-nums;font-kerning:none}.mw-parser-output .texhtml .texhtml{font-size:100%}.mw-parser-output .texhtml-big{font-size:165%}.mw-parser-output .mvar{font-style:italic}@media(min-width:640px){.mw-parser-output span.texhtml{white-space:nowrap}}y = f(x), the derivative of f at x is commonly denoted by f′(x) or by .mw-parser-output .sfrac{white-space:nowrap}.mw-parser-output .sfrac.tion,.mw-parser-output .sfrac .tion{display:inline-block;vertical-align:-0.5em;font-size:85%;text-align:center;margin-left:.1em;margin-right:.1em}.mw-parser-output .sfrac .num{display:block;border-bottom:1px solid}.mw-parser-output .sfrac .den{display:block;line-height:1.5em}.mw-parser-output .sr-only{border:0;clip:rect(0,0,0,0);clip-path:polygon(0px 0px,0px 0px,0px 0px);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}⁠dy/dx⁠. It is defined by the limit
+
+provided that this limit exists. The quotient inside the limit is the slope of a secant line through two nearby points on the graph. As h approaches zero, the secant line approaches the tangent line, if the limiting slope exists.
+
+For example, if f(x) = x2, then f′(x) = 2x. Thus the slope of the parabola y = x2 at x = 2 is 4.
+
+Many derivatives can be found using general rules rather than directly from the limit definition. These include the sum rule, product rule, quotient rule, and chain rule. The power rule, for instance, gives
+
+for positive integers n, and more generally in settings where the expression is defined.
+
+The derivative also gives the best linear approximation to a differentiable function near a point. In this sense, differentiation is closely related to the differential. For functions of several variables, analogous ideas lead to partial derivatives, directional derivatives, and the total derivative.
+
+Linear approximation and differentials
+
+The derivative can also be understood as the coefficient of the best linear approximation to a function near a point. If f is differentiable at a, then for values of x close to a,
+
+Equivalently, writing Δx = x − a and Δy = f(x) − f(a), the change in y is approximated by
+
+More precisely, the error in this approximation is small compared with  Δx = x − a. Determining effective estimates of how small is an important question in approximation theory.
+
+This linear part of the change is called the differential. In Leibniz notation it is written
+
+Here dx represents a small change in the input, and dy represents the corresponding linear approximation to the change in the output. For functions of several variables, the same idea leads to the total derivative.
+
+History of differentiation
+
+The concept of a derivative in the sense of a tangent line is a very old one, familiar to ancient Greek mathematicians such as Euclid (c. 300 BC), Archimedes (c. 287–212 BC), and Apollonius of Perga (c. 262–190 BC). Archimedes also made use of indivisibles, although these were primarily used to study areas and volumes rather than derivatives and tangents (see The Method of Mechanical Theorems). 
+The use of infinitesimals to compute rates of change was developed significantly by Bhāskara II (1114–1185); indeed, it has been argued that many of the key notions of differential calculus can be found in his work, such as "Rolle's theorem".
+
+The mathematician, Sharaf al-Dīn al-Tūsī (1135–1213), in his Treatise on Equations, established conditions for some cubic equations to have solutions, by finding the maxima of appropriate cubic polynomials. He obtained, for example, that the maximum (for positive x) of the cubic  ax2 – x3 occurs when x = 2a / 3, and concluded therefrom that the equation  ax2 = x3 + c has exactly one positive solution when c = 4a3 / 27, and two positive solutions whenever 0 < c < 4a3 / 27. The historian of science, Roshdi Rashed, has argued that al-Tūsī must have used the derivative of the cubic to obtain this result. Rashed's conclusion has been contested by other scholars, however, who argue that he could have obtained the result by other methods which do not require the derivative of the function to be known.
+
+The modern development of calculus is usually credited to Isaac Newton (1643–1727) and Gottfried Wilhelm Leibniz (1646–1716), who provided independent and unified approaches to differentiation and derivatives. The key insight, however, that earned them this credit, was the fundamental theorem of calculus relating differentiation and integration: this rendered obsolete most previous methods for computing areas and volumes. For their ideas on derivatives, both Newton and Leibniz built on significant earlier work by mathematicians such as Pierre de Fermat (1607–1665), Isaac Barrow (1630–1677), René Descartes (1596–1650), Christiaan Huygens (1629–1695), Blaise Pascal (1623–1662) and John Wallis (1616–1703). Regarding Fermat's influence, Newton once wrote in a letter that "I had the hint of this method  from Fermat's way of drawing tangents, and by applying it to abstract equations, directly and invertedly, I made it general." Isaac Barrow is generally given credit for the early development of the derivative. Nevertheless, Newton and Leibniz remain key figures in the history of differentiation, not least because Newton was the first to apply differentiation to theoretical physics, while Leibniz systematically developed much of the notation still used today.
+
+Since the 17th century many mathematicians have contributed to the theory of differentiation. In the 19th century, calculus was put on a much more rigorous footing by mathematicians such as Augustin Louis Cauchy (1789–1857), Bernhard Riemann (1826–1866), and Karl Weierstrass (1815–1897). It was also during this period that the differentiation was generalized to Euclidean space and the complex plane.
+
+The 20th century brought two major steps towards our present understanding and practice of derivation : Lebesgue integration, besides extending integral calculus to many more functions, clarified the relation between derivation and integration with the notion of absolute continuity. Later the theory of distributions (after Laurent Schwartz) extended derivation to generalized functions (e.g., the Dirac delta function previously introduced in Quantum Mechanics) and became fundamental to nowadays applied analysis especially by the use of weak solutions to partial differential equations.
+
+Significant results
+
+Basic theorems
+
+Interior extremum theorem
+
+If a differentiable function has a local maximum or local minimum at an interior point of its domain, then its derivative at that point is zero. Thus possible local maxima and minima of a differentiable function occur among the points where the derivative is zero, called stationary points or critical points.
+
+Rolle's theorem
+
+Rolle's theorem states that if a function is continuous on a closed interval {\displaystyle }, differentiable on the interior (a,b){\displaystyle (a,b)} of the interval, and has equal values at the two endpoints, then its derivative is zero at some point between the endpoints. Geometrically, if a smooth curve begins and ends at the same height, then somewhere between those endpoints it has a horizontal tangent line.
+
+Mean value theorem
+
+The mean value theorem generalizes Rolle's theorem. If a function is continuous on a closed interval {\displaystyle } and differentiable on its interior (a,b){\displaystyle (a,b)}, then at some point in the interval the instantaneous rate of change equals the average rate of change over the whole interval. In symbols, if f is continuous on  and differentiable on (a, b), then there is a point c in (a, b) such that
+
+The theorem is often used to deduce information about a function from information about its derivative. For example, if a function has derivative zero throughout an interval, then the function is constant on that interval.
+
+Taylor's theorem
+
+Taylor's theorem gives a way to approximate a sufficiently differentiable function by a polynomial whose coefficients are determined by the values of the function and its derivatives at a point. The first-degree Taylor polynomial is the linear approximation to the function. Higher-degree Taylor polynomials give successively refined approximations. The theorem also gives a remainder term that measures the error in the approximation.
+
+Taylor's theorem is the basis for Taylor series, which represent some functions as infinite series formed from their derivatives.
+
+Second fundamental theorem of calculus
+
+If a real-valued function f{\displaystyle f} is differentiable on the closed interval {\displaystyle }, such that f′{\displaystyle f'} is Riemann integrable over {\displaystyle }, then ∫abf′(x)dx=f(b)−f(a).{\displaystyle \int _{a}^{b}f'(x)dx=f(b)-f(a).}
+
+Useful corollaries
+
+Corollary 1: If f{\displaystyle f} is a differentiable real function defined on an open interval I{\displaystyle I} such that f′(x)=0{\displaystyle f'(x)=0} for all x∈I{\displaystyle x\in I}, then f{\displaystyle f} is constant over I.{\displaystyle I.}
+
+Corollary 2: If f{\displaystyle f} is a differentiable real function defined on an open interval I{\displaystyle I} such that f′(x)≥0{\displaystyle f'(x)\geq 0} for all x∈I{\displaystyle x\in I}, then f{\displaystyle f} is monotonically increasing over I{\displaystyle I}. If the inequality becomes strict, f{\displaystyle f} becomes necessarily strictly increasing. A similar result holds if the derivative of f{\displaystyle f} is less than or equal to (respectively, strictly less than) zero over I.{\displaystyle I.}
+
+Corollary 3: If the real functions f{\displaystyle f} and g{\displaystyle g} are differentiable and defined on an open interval I{\displaystyle I}, and f′(x)=g′(x){\displaystyle f'(x)=g'(x)} for all x∈I{\displaystyle x\in I}, then there exists a c∈R{\displaystyle c\in \mathbb {R} } such that for all x∈I{\displaystyle x\in I}, f(x)=g(x)+c{\displaystyle f(x)=g(x)+c}. Equivalently, the set of functions whose derivative is f′{\displaystyle f'} has the general form x↦f(x)+c{\displaystyle x\mapsto f(x)+c}, where c∈R.{\displaystyle c\in \mathbb {R} .}
+
+The above corollaries are true only when the function is defined over a single interval. It is a common mistake to apply them to functions over non-intervals. For example, if f:(−∞,0)∪(0,∞)→R{\displaystyle f:(-\infty ,0)\cup (0,\infty )\to \mathbb {R} } is such that f′(x)=1/x{\displaystyle f'(x)=1/x} for all non-zero real x{\displaystyle x}, it is incorrect to write the general form of the function f{\displaystyle f} as:
+x↦ln⁡(|x|)+c, where c∈R,{\displaystyle x\mapsto \operatorname {ln} (|x|)+c,{\text{ where }}c\in \mathbb {R} ,}
+when in fact, the general form is:
+x↦ln⁡(|x|)+c1 for x<0;x↦ln⁡(|x|)+c2 for x>0; where c1,c2∈R.{\displaystyle x\mapsto \operatorname {ln} (|x|)+c_{1}{\text{ for }}x<0;x\mapsto \operatorname {ln} (|x|)+c_{2}{\text{ for }}x>0;{\text{ where }}c_{1},c_{2}\in \mathbb {R} .}
+
+In general, including in higher dimensions, the first and third corollaries hold for real functions defined on connected subsets of Rn.{\displaystyle \mathbb {R} ^{n}.}
+
+Applications of derivatives
+
+Related rates
+
+In many practical problems, several quantities depend on a common variable, often time. If the quantities are related by an equation, then the equation relating them can be differentiated to obtain a relation among their rates of change. Such problems are an application of the chain rule.
+
+Optimization
+
+One use of differential calculus is to find maxima and minima of functions. Fermat's theorem implies that an interior maximum or minimum of a differentiable function can occur only where the derivative is zero. These points, together with endpoints and points where the derivative is undefined, give the main (and typically the only) candidates for extrema, which can then be compared numerically to select the largest and smallest values to obtain the global extrema.
+
+Further tests can often distinguish local maxima from local minima. The first derivative test uses the sign of the derivative on either side of a critical point, while the second derivative test uses the sign of the second derivative. These methods are used in curve sketching, elementary optimization problems, and mathematical modelling.
+
+In several variables, analogous methods use the gradient and the Hessian matrix. A critical point of a scalar-valued function occurs where the gradient is zero, and the eigenvalues of the Hessian can often be used to classify the critical point as a local maximum, local minimum, or saddle point.
+
+First and second derivative tests
+
+The first derivative test uses the sign of the derivative to determine whether a critical point is a local maximum or local minimum. If a function changes from increasing to decreasing at a critical point, then the point is a local maximum. If it changes from decreasing to increasing, then the point is a local minimum. The derivative detects whether a differentiable function is increasing or decreasing, and so examining its sign on either side of a critical point can determine whether the point is a local maximum, local minimum, or neither.
+
+The second derivative test uses the second derivative. If f′(x) = 0 and f″(x) > 0, then f has a local minimum at x. If f″(x) < 0, then f has a local maximum at x. If f″(x) = 0, the test is inconclusive, that is, x may be either a local maximum, local minimum or inflection point of f.
+
+Evaluation of integrals
+
+The second fundamental theorem of calculus can be used to evaluate the integral (if it exists) of a function over a closed and bounded interval, as long as the function has a closed form antiderivative over the interval. This is done by expressing the function as the derivative of another function, and taking the difference in the values of the antiderivative at the endpoints of the interval.
+
+Calculus of variations
+
+One example of an optimization problem is: Find the shortest curve between two points on a surface, assuming that the curve must also lie on the surface. If the surface is a plane, then the shortest curve is a line. But if the surface is, for example, egg-shaped, then the shortest path is not immediately clear. These paths are called geodesics, and one of the most fundamental problems in the calculus of variations is finding geodesics. Another example is: Find the smallest area surface filling in a closed curve in space. This surface is called a minimal surface and it, too, can be found using the calculus of variations.
+
+Physics
+
+Calculus is of vital importance in physics: many physical processes are described by equations involving derivatives, called differential equations. Physics is particularly concerned with the way quantities change and develop over time, and the concept of the time derivative — the rate of change over time — is essential for the precise definition of several important concepts. In particular, the time derivatives of an object's position are significant in Newtonian physics:
+
+For example, if an object's position on a line is given by
+
+then the object's velocity is
+
+and the object's acceleration is
+
+which is constant.
+
+Differential equations
+
+A differential equation is a relation between a collection of functions and their derivatives. An ordinary differential equation is a differential equation that relates functions of one variable to their derivatives with respect to that variable. A partial differential equation is a differential equation that relates functions of more than one variable to their partial derivatives. Differential equations arise naturally in the physical sciences, in mathematical modelling, and within mathematics itself. For example, Newton's second law, which describes the relationship between acceleration and force, can be stated as the ordinary differential equation
+
+The heat equation in one space variable, which describes how heat diffuses through a straight rod, is the partial differential equation
+
+Here u(x,t) is the temperature of the rod at position x and time t and α is a constant that depends on how fast heat diffuses through the rod.
+
+Implicit function theorem
+
+Some natural geometric shapes, such as circles, cannot be drawn as the graph of a function. For instance, if f(x, y) = x2 + y2 − 1, then the circle is the set of all pairs (x, y) such that f(x, y) = 0. This set is called the zero set of f, and is not the same as the graph of f, which is a paraboloid. The implicit function theorem converts relations such as f(x, y) = 0 into functions. It states that if f is continuously differentiable, then around most points, the zero set of f looks like graphs of functions pasted together. The points where this is not true are determined by a condition on the derivative of f. The circle, for instance, can be pasted together from the graphs of the two functions ± √1 - x2. In a neighborhood of every point on the circle except (−1, 0) and (1, 0), one of these two functions has a graph that looks like the circle. (These two functions also happen to meet (−1, 0) and (1, 0), but this is not guaranteed by the implicit function theorem.)
+
+The implicit function theorem is closely related to the inverse function theorem, which states when a function looks like graphs of invertible functions pasted together.
+
+See also
+
+Notes
+
+References
+
+Citations
+
+Works cited
+
+Other sources
+
+
+
+

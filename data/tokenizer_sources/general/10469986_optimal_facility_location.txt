@@ -1,0 +1,1627 @@
+Optimal facility location (OFL), also called location analysis, is a class of optimization problems. In all these problems, the goal is to decide where to locate some facility (e.g. a school, a gas station, a factory, etc.), in a way that optimizes some pre-specified criteria. Some examples are:
+
+"Decide where to locate a new school, given the locations of the students, such that the sum of daily transportation costs of all students to the school will be as small as possible."
+"Decide where to locate a new factory, given the locations of citizens, such that the minimum distance between the factory and a citizen house is as large as possible".
+OFL is studied in operations research, computational geometry (a branch of computer science), and location theory (a branch of economics). Some techniques used for OFL also apply to cluster analysis.
+There are various kinds of OFL problems. They differ in their objective function (e.g. sum of distances or minimum distance), in the optimization direction (maximization vs. minimization), in the number of facilities (one vs. many), and more.
+
+Utilitarian location: minimizing the sum of distances
+A minisum facility location problem is an OFL in which the input is a set of points in space, and the goal is to find a location for a facility, such that the sum of distances between the facility to the points is as small as possible. If the points correspond to people, and the distances correspond to their dis-utility (the cost they incur from traveling to a faraway facility), then minisum OFL is an instantiation of the utilitarian rule. Some special cases are:
+
+If there are only 3 input points, the solution is their Fermat point of the triangle.
+If there are n points, the solution is their geometric median.
+The Weber problem is a generalization in which each input point has a weight, and the goal is to minimize the weighted sum of distances.
+In the most general form, there can be multiple facilities, but each facility has a construction cost. The goal is to pick a subset of facilities to open, to minimize the sum of distances from each demand point to its nearest facility, plus the sum of construction costs of the facilities. A different common formulation limits the number of facilities to a fixed integer k instead of giving them a cost.
+The minisum facility location problem on general graphs is NP-hard to solve optimally, by reduction from (for example) the set cover problem. A number of approximation algorithms have been developed for the facility location problem and many of its variants.
+Without assumptions on the set of distances between clients and sites (in particular, without assuming that the distances satisfy the triangle inequality), the problem is known as non-metric facility location and can be approximated to within a factor O(log n). This factor is tight, via an approximation-preserving reduction from the set cover problem.
+If we assume distances between clients and sites are undirected and satisfy the triangle inequality, we are talking about a metric facility location (MFL) problem. The MFL is still NP-hard and hard to approximate within factor better than 1.463. The currently best known approximation algorithm achieves approximation ratio of 1.488.
+
+Egalitarian location: Minimizing the maximum distance
+A minimax facility location problem is an OFL in which the input is a set of points in space, and the goal is to find a location for a facility, such that the largest distance between the facility and any of the points is as small as possible. If the points correspond to people, and the distances correspond to their dis-utility, then minimax OFL is an instantiation of the egalitarian rule. Some special cases are:
+
+In the case of the Euclidean metric for k = 1 (one facility) on the plane, it is known as the smallest enclosing circle problem.
+For one facility in three dimensional space, it is known as the smallest enclosing sphere problem or 1-center problem. Its study is traced at least to the year of 1860.
+The general problem with k facilities, in a general metric space, is called Metric k-center.
+The multi-facility variant can be formally defined as follows:Given a point set P ⊂ 
+  
+    
+      
+        
+          
+            R
+          
+          
+            d
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{d}}
+  
+,
+find a point set S ⊂ 
+  
+    
+      
+        
+          
+            R
+          
+          
+            d
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{d}}
+  
+, |S| = k,
+so that
+
+maxp ∈ P(minq ∈ S(d(p, q)) ) is minimized.
+
+NP hardness
+Exact solution of k-center problem is NP hard.
+
+Approximation to the problem was found to be also NP hard when the error is small. The error level in the approximation algorithm is measured as an approximation factor, which is defined as the ratio between the approximation and the optimum. It's proved that the k-center problem approximation is NP hard when approximation factor is less than 1.822 (dimension = 2) or 2 (dimension > 2).
+
+Algorithms
+Exact solver
+There exist algorithms to produce exact solutions to this problem. One exact solver runs in time 
+  
+    
+      
+        
+          n
+          
+            O
+            (
+            
+              
+                k
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle n^{O({\sqrt {k}})}}
+  
+.
+1 + ε approximation
+1 + ε approximation is to find a solution with approximation factor no greater than 1 + ε. This approximation is NP hard as ε is arbitrary. One approach based on the coreset concept is proposed with execution complexity of  
+  
+    
+      
+        O
+        (
+        
+          2
+          
+            O
+            (
+            k
+            log
+            ⁡
+            k
+            
+              /
+            
+            
+              ε
+              
+                2
+              
+            
+            )
+          
+        
+        d
+        n
+        )
+      
+    
+    {\displaystyle O(2^{O(k\log k/\varepsilon ^{2})}dn)}
+  
+.
+As an alternative, another algorithm also based on core sets is available. It runs in 
+  
+    
+      
+        O
+        (
+        
+          k
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle O(k^{n})}
+  
+. The author claims that the running time is much less than the worst case and thus it's possible to solve some problems when k is small (say k < 5).
+Farthest-point clustering
+For the hardness of the problem, it's impractical to get an exact solution or precise approximation. Instead, an approximation with factor = 2 is widely used for large k cases. The approximation is referred to as the farthest-point clustering (FPC) algorithm, or farthest-first traversal. The algorithm is quite simple: pick any point from the set as one center; search for the farthest point from remaining set as another center; repeat the process until k centers are found.
+It is easy to see that this algorithm runs in linear time. As approximation with factor less than 2 is proved to be NP hard, FPC was regarded as the best approximation one can find.
+As per the performance of execution, the time complexity is later improved to O(n log k) with box decomposition technique.
+
+Maximizing the minimum distance
+A maximin facility location, also called obnoxious facility location problem, seeks a location which maximizes the smallest distance to the input points. It is another instantiation of the egalitarian rule, assuming that the utility of each agent is an increasing function of the distance from the obnoxious facility.
+
+In the case of the Euclidean metric, it is known as the largest empty sphere problem.
+The planar single-facility case (largest empty circle problem) may be solved in  optimal time Θ(n log n).
+
+Integer programming formulations
+OFL problems are often solved as integer programs, posed as follows: suppose there are 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ facilities and 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ customers. We wish to choose (1) which of the 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ facilities to open, and (2) which (open) facilities to use to supply the 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ customers, in order to satisfy some fixed demand at minimum cost. We introduce the following notation: let 
+  
+    
+      
+        
+          f
+          
+            i
+          
+        
+      
+    
+    {\displaystyle f_{i}}
+  
+ denote the (fixed) cost of opening facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+, for 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle i=1,\dots ,n}
+  
+. Let 
+  
+    
+      
+        
+          c
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle c_{ij}}
+  
+denote the cost to ship a product from facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ to customer 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+ for 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle i=1,\dots ,n}
+  
+ and 
+  
+    
+      
+        j
+        =
+        1
+        ,
+        …
+        ,
+        m
+      
+    
+    {\displaystyle j=1,\dots ,m}
+  
+. Let 
+  
+    
+      
+        
+          d
+          
+            j
+          
+        
+      
+    
+    {\displaystyle d_{j}}
+  
+ denote the demand of customer 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+ for 
+  
+    
+      
+        j
+        =
+        1
+        ,
+        …
+        ,
+        m
+      
+    
+    {\displaystyle j=1,\dots ,m}
+  
+. Further suppose that each facility has a maximum output. Let 
+  
+    
+      
+        
+          u
+          
+            i
+          
+        
+      
+    
+    {\displaystyle u_{i}}
+  
+ denote the maximum amount of product that can be produced by facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+, that is, let 
+  
+    
+      
+        
+          u
+          
+            i
+          
+        
+      
+    
+    {\displaystyle u_{i}}
+  
+ denote the capacity of facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+. The remainder of this section follows.
+
+Capacitated facility location
+In our initial formulation, introduce a binary variable 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+    {\displaystyle x_{i}}
+  
+ for 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle i=1,\dots ,n}
+  
+, where 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle x_{i}=1}
+  
+ if facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ is open, and 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle x_{i}=0}
+  
+ otherwise. Further introduce the variable 
+  
+    
+      
+        
+          y
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle y_{ij}}
+  
+ for 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle i=1,\dots ,n}
+  
+ and 
+  
+    
+      
+        j
+        =
+        1
+        ,
+        …
+        ,
+        m
+      
+    
+    {\displaystyle j=1,\dots ,m}
+  
+ which represents the fraction of the demand 
+  
+    
+      
+        
+          d
+          
+            j
+          
+        
+      
+    
+    {\displaystyle d_{j}}
+  
+ filled by facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+. The so-called capacitated facility location problem is then given by
+  
+    
+      
+        
+          
+            
+              
+                min
+              
+              
+                
+                  
+                    ∑
+                    
+                      i
+                      =
+                      1
+                    
+                    
+                      n
+                    
+                  
+                  
+                    ∑
+                    
+                      j
+                      =
+                      1
+                    
+                    
+                      m
+                    
+                  
+                  
+                    c
+                    
+                      i
+                      j
+                    
+                  
+                  
+                    d
+                    
+                      j
+                    
+                  
+                  
+                    y
+                    
+                      i
+                      j
+                    
+                  
+                  +
+                  
+                    ∑
+                    
+                      i
+                      =
+                      1
+                    
+                    
+                      n
+                    
+                  
+                  
+                    f
+                    
+                      i
+                    
+                  
+                  
+                    x
+                    
+                      i
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  s.t.
+                
+              
+              
+                
+                  
+                    ∑
+                    
+                      i
+                      =
+                      1
+                    
+                    
+                      n
+                    
+                  
+                  
+                    y
+                    
+                      i
+                      j
+                    
+                  
+                  =
+                  1
+                  
+                     for all 
+                  
+                  j
+                  =
+                  1
+                  ,
+                  …
+                  ,
+                  m
+                
+              
+            
+            
+              
+              
+                
+                  
+                    ∑
+                    
+                      j
+                      =
+                      1
+                    
+                    
+                      m
+                    
+                  
+                  
+                    d
+                    
+                      j
+                    
+                  
+                  
+                    y
+                    
+                      i
+                      j
+                    
+                  
+                  ⩽
+                  
+                    u
+                    
+                      i
+                    
+                  
+                  
+                    x
+                    
+                      i
+                    
+                  
+                  
+                     for all 
+                  
+                  i
+                  =
+                  1
+                  …
+                  ,
+                  n
+                
+              
+            
+            
+              
+              
+                
+                  y
+                  
+                    i
+                    j
+                  
+                
+                ⩾
+                0
+                
+                   for all 
+                
+                i
+                =
+                1
+                ,
+                …
+                ,
+                n
+                
+                   and 
+                
+                j
+                =
+                1
+                ,
+                …
+                ,
+                m
+              
+            
+            
+              
+              
+                
+                  x
+                  
+                    i
+                  
+                
+                ∈
+                {
+                0
+                ,
+                1
+                }
+                
+                   for all 
+                
+                i
+                =
+                1
+                ,
+                …
+                ,
+                n
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{array}{rl}\min &\displaystyle \sum _{i=1}^{n}\sum _{j=1}^{m}c_{ij}d_{j}y_{ij}+\sum _{i=1}^{n}f_{i}x_{i}\\{\text{s.t.}}&\displaystyle \sum _{i=1}^{n}y_{ij}=1{\text{ for all }}j=1,\dots ,m\\&\displaystyle \sum _{j=1}^{m}d_{j}y_{ij}\leqslant u_{i}x_{i}{\text{ for all }}i=1\dots ,n\\&y_{ij}\geqslant 0{\text{ for all }}i=1,\dots ,n{\text{ and }}j=1,\dots ,m\\&x_{i}\in \{0,1\}{\text{ for all }}i=1,\dots ,n\end{array}}}
+  
+
+Note that the second set of constraints ensures that if 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle x_{i}=0}
+  
+, that is, facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ isn't open, then 
+  
+    
+      
+        
+          y
+          
+            i
+            j
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle y_{ij}=0}
+  
+ for all 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+, that is, no demand for any customer can be filled from facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+.
+
+Uncapacitated facility location
+A common case of the capacitated facility location problem above is the case when 
+  
+    
+      
+        
+          u
+          
+            i
+          
+        
+        =
+        +
+        ∞
+      
+    
+    {\displaystyle u_{i}=+\infty }
+  
+ for all 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle i=1,\dots ,n}
+  
+. In this case, it is always optimal to satisfy all of the demand from customer 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+ from the nearest open facility. Because of this, we may replace the continuous variables 
+  
+    
+      
+        
+          y
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle y_{ij}}
+  
+ from above with the binary variables 
+  
+    
+      
+        
+          z
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle z_{ij}}
+  
+, where 
+  
+    
+      
+        
+          z
+          
+            i
+            j
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle z_{ij}=1}
+  
+ if customer 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+ is supplied by facility 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+, and 
+  
+    
+      
+        
+          z
+          
+            i
+            j
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle z_{ij}=0}
+  
+ otherwise. The uncapacitated facility location problem is then given by
+  
+    
+      
+        
+          
+            
+              
+                min
+              
+              
+                
+                  
+                    ∑
+                    
+                      i
+                      =
+                      1
+                    
+                    
+                      n
+                    
+                  
+                  
+                    ∑
+                    
+                      j
+                      =
+                      1
+                    
+                    
+                      m
+                    
+                  
+                  
+                    c
+                    
+                      i
+                      j
+                    
+                  
+                  
+                    d
+                    
+                      j
+                    
+                  
+                  
+                    z
+                    
+                      i
+                      j
+                    
+                  
+                  +
+                  
+                    ∑
+                    
+                      i
+                      =
+                      1
+                    
+                    
+                      n
+                    
+                  
+                  
+                    f
+                    
+                      i
+                    
+                  
+                  
+                    x
+                    
+                      i
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  s.t.
+                
+              
+              
+                
+                  
+                    ∑
+                    
+                      i
+                      =
+                      1
+                    
+                    
+                      n
+                    
+                  
+                  
+                    z
+                    
+                      i
+                      j
+                    
+                  
+                  =
+                  1
+                  
+                     for all 
+                  
+                  j
+                  =
+                  1
+                  ,
+                  …
+                  ,
+                  m
+                
+              
+            
+            
+              
+              
+                
+                  
+                    ∑
+                    
+                      j
+                      =
+                      1
+                    
+                    
+                      m
+                    
+                  
+                  
+                    z
+                    
+                      i
+                      j
+                    
+                  
+                  ⩽
+                  M
+                  
+                    x
+                    
+                      i
+                    
+                  
+                  
+                     for all 
+                  
+                  i
+                  =
+                  1
+                  …
+                  ,
+                  n
+                
+              
+            
+            
+              
+              
+                
+                  z
+                  
+                    i
+                    j
+                  
+                
+                ∈
+                {
+                0
+                ,
+                1
+                }
+                
+                   for all 
+                
+                i
+                =
+                1
+                ,
+                …
+                ,
+                n
+                
+                   and 
+                
+                j
+                =
+                1
+                ,
+                …
+                ,
+                m
+              
+            
+            
+              
+              
+                
+                  x
+                  
+                    i
+                  
+                
+                ∈
+                {
+                0
+                ,
+                1
+                }
+                
+                   for all 
+                
+                i
+                =
+                1
+                ,
+                …
+                ,
+                n
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{array}{rl}\min &\displaystyle \sum _{i=1}^{n}\sum _{j=1}^{m}c_{ij}d_{j}z_{ij}+\sum _{i=1}^{n}f_{i}x_{i}\\{\text{s.t.}}&\displaystyle \sum _{i=1}^{n}z_{ij}=1{\text{ for all }}j=1,\dots ,m\\&\displaystyle \sum _{j=1}^{m}z_{ij}\leqslant Mx_{i}{\text{ for all }}i=1\dots ,n\\&z_{ij}\in \{0,1\}{\text{ for all }}i=1,\dots ,n{\text{ and }}j=1,\dots ,m\\&x_{i}\in \{0,1\}{\text{ for all }}i=1,\dots ,n\end{array}}}
+  
+
+where 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ is a constant chosen to be suitably large. The choice of 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ can affect computation results—the best choice in this instance is obvious: take 
+  
+    
+      
+        M
+        =
+        m
+      
+    
+    {\displaystyle M=m}
+  
+. Then, if 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle x_{i}=1}
+  
+, any choice of the 
+  
+    
+      
+        
+          z
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle z_{ij}}
+  
+ will satisfy the second set of constraints.
+Another formulation possibility for the uncapacitated facility location problem is to disaggregate the capacity constraints (the big-
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ constraints). That is, replace the constraints
+  
+    
+      
+        
+          ∑
+          
+            j
+            =
+            1
+          
+          
+            m
+          
+        
+        
+          z
+          
+            i
+            j
+          
+        
+        ⩽
+        M
+        
+          x
+          
+            i
+          
+        
+        
+           for all 
+        
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle \sum _{j=1}^{m}z_{ij}\leqslant Mx_{i}{\text{ for all }}i=1,\dots ,n}
+  
+with the constraints
+  
+    
+      
+        
+          z
+          
+            i
+            j
+          
+        
+        ⩽
+        
+          x
+          
+            i
+          
+        
+        
+           for all 
+        
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+        
+           and 
+        
+        j
+        =
+        1
+        ,
+        …
+        ,
+        m
+      
+    
+    {\displaystyle z_{ij}\leqslant x_{i}{\text{ for all }}i=1,\dots ,n{\text{ and }}j=1,\dots ,m}
+  
+In practice, this new formulation performs significantly better, in the sense that it has a tighter linear programming relaxation than the first formulation. Notice that summing the new constraints together yields the original big-
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ constraints. In the capacitated case, these formulations are not equivalent. More information about the uncapacitated facility location problem can be found in Chapter 3 of "Discrete location theory".
+
+Pareto-efficient locations
+Rather than finding a location that optimizes a single objective, one may be interested in finding all locations that can possibly be optimal for some objective. This is defined formally as follows. Let X be a normed space with norm |.|. Let A be a non-empty subset of X. A point x in X is called ---
+
+Strictly efficient w.r.t. A if for all y≠x there exists a in A that is nearer to x than to y (|a-x| < |a-y|). Equivalently: the intersection (for all a in A) of Ball(a,|x-a|) is the singleton {x}.
+Efficient w.r.t. A if for all y≠x either there exists a in A that is nearer to x than to y (|a-x| < |a-y|), or all a in A are at least as near to x than to y (|a-x| ≤ |a-y|). Equivalently: the intersection (for all a in A) of Ball(a,|x-a|), intersect the union (for all a in A) of interior(Ball(a,|x-a|)), is empty.
+Weakly efficient w.r.t A if for all y≠x there exists a in A that is at least as near to x as to y (|a-x| ≤ |a-y|). Equivalently: the intersection (for all a in A) of interior(Ball(a,|x-a|)) is empty.
+These concepts are motivated by considering each point in A as representing the location of an agent, and the points x and y are potential locations for a facility. Each agent prefers the facility to be as near as possible to his own location. With this interpretation, efficiency and weak-efficiency correspond to the economic notions of Pareto-efficiency and weak Pareto-efficiency respectively.
+Every location minimizing the sum of distances, or the weighted sum of distances, is efficient w.r.t. the input points. Every location minimizing the maximum distance is weakly-efficient w.r.t. the input points. 
+These efficiency concepts satisfy the following properties for every norm:
+
+If A is bounded, then the sets of strictly-efficient, efficient and weakly-efficient points are all bounded.
+If A is a subset of B, then the same containment holds between the sets of strictly-efficient points and the set of weakly-efficient points, but not between the sets of efficient points.
+The sets of strictly-efficient and efficient points are closed under closure, but the set of weakly-efficient points is not.
+With some assumptions on the norm, additional properties are satisfied:
+
+If X is a strictly convex normed space, then all three efficiency concepts are equivalent.
+If X is a Hilbert space (for example, when the norm is the L2 norm), then for all three efficiency concepts, the set of points satisfying them is the closed convex hull of A.
+If X is two-dimensional and strictly convex, and A is bounded, then for all three efficiency concepts, the set of points satisfying them is the closed convex hull of A.
+If A is a compact set, then its set of weakly-efficient points is closed. Moreover, if X is strictly-convex, or two-dimensional, or polyhedral, then its sets of efficient points and strictly-efficient points are closed.
+A normed space is strictly convex if and only if, for every set A of size 2, all points in conv(A) are strictly-efficient w.r.t. A.
+A two-dimensional normed space is strictly convex if and only if, for every compact subset A fo X, all points in conv(A) are strictly-efficient w.r.t. A. For three dimensions, there is a counter-example based on some metric on a cylinder.
+
+History
+The history of the location problem is typically traced back to the Weber problem and its parallel formulations. Alfred Weber framed the problem as follows: We wish to find the location on a Euclidean plane for a firm to locate itself, as to minimize the ton-mileage, and as such the cost, of its goods transport. This firm ships and receives goods from three fixed locations in fixed proportions which travel in a straight line. While this problem may not have been novel, this marks the start of its practical usage.
+In 1957 and 1962 the first algorithms were formulated for variations on the Weber problem with more than 3 points for the facility to deliver to (although previous work by E. Weiszfeld in 1937 may be interpreted as doing a similar thing without the context of Weber). Previously the only mechanical methods such as a Varignon frame could solve these problems. At the same time, work was being done on developing and solving the minimax problem, which instead of considering the total distance traveled considers the most affected community, scaled.
+In the 70s, responding to the concern about local effects of certain facilities resulting from silent spring, obnoxious facility models were developed. The goal of these models is opposite of the conventional model, instead of keeping facilities as close as possible to communities, they seek to maximise the distance to minimize how affected communities are by these facilities.
+
+Applications
+
+Healthcare
+In healthcare, incorrect facility location decisions have a serious impact on the community beyond simple cost and service metrics; for instance, hard-to-access healthcare facilities are likely to be associated with increased morbidity and mortality. From this perspective, facility location modeling for healthcare is more critical than similar modeling for other areas.
+
+Solid waste management
+Municipal solid waste management still remains a challenge for developing countries because of increasing waste production and high costs associated with waste management. Through the formulation and exact resolution of a facility location problem it is possible to optimize the location of landfills for waste disposal.
+
+Clustering
+A particular subset of cluster analysis problems can be viewed as facility location problems. In a centroid-based clustering problem, the objective is to partition 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ data points (elements of a common metric space) into equivalence classes—often called colors—such that points of the same color are close to one another (equivalently, such that points of different colors are far from one another).
+To see how one might view (read "transform" or "reduce") a centroid-based clustering problem as a (metric) facility location problem, view each data point in the former as a demand point in the latter. Suppose that the data to be clustered are elements of a metric space 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ (e.g. let 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ be 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+-dimensional Euclidean space for some fixed 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+). In the facility location problem that we are constructing, we permit facilities to be placed at any point within this metric space 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+; this defines the set of allowed facility locations 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+. We define the costs 
+  
+    
+      
+        
+          c
+          
+            ℓ
+            ,
+            d
+          
+        
+      
+    
+    {\displaystyle c_{\ell ,d}}
+  
+ to be the pairwise distances between location-demand point pairs (e.g., see metric k-center). In a centroid-based clustering problem, one partitions the data into 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ equivalence classes (i.e. colors) each of which has a centroid. Let us see how a solution to our constructed facility location problem also achieves such a partition. A feasible solution is a non-empty subset 
+  
+    
+      
+        
+          L
+          ′
+        
+        ⊆
+        L
+      
+    
+    {\displaystyle L'\subseteq L}
+  
+ of 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ locations. These locations in our facility location problem comprise a set of 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ centroids in our centroid-based clustering problem. Now, assign each demand point 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ to the location 
+  
+    
+      
+        
+          ℓ
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \ell ^{*}}
+  
+ that minimizes its servicing-cost; that is, assign the data point 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ to the centroid 
+  
+    
+      
+        
+          ℓ
+          
+            ∗
+          
+        
+        :=
+        
+          
+            a
+            r
+            g
+            
+            m
+            i
+            n
+          
+          
+            ℓ
+            ∈
+            L
+          
+        
+        {
+        
+          c
+          
+            ℓ
+            ,
+            d
+          
+        
+        }
+      
+    
+    {\displaystyle \ell ^{*}:=\mathrm {arg\,min} _{\ell \in L}\{c_{\ell ,d}\}}
+  
+ (break ties arbitrarily). This achieves the partitioning provided that the facility location problem's costs 
+  
+    
+      
+        
+          c
+          
+            ℓ
+            ,
+            d
+          
+        
+      
+    
+    {\displaystyle c_{\ell ,d}}
+  
+ are defined such that they are the images of the centroid-based clustering problem's distance function.
+The popular algorithms textbook Algorithm Design  provides a related problem-description and an approximation algorithm. The authors refer to the metric facility location problem (i.e. the centroid-based clustering problem or the metric 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+-center problem) as the center selection problem, thereby growing the list of synonyms.
+Furthermore, see that in our above definition of the facility location problem that the objective function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is general. Specific choices of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ yield different variants of the facility location problem, and hence different variants of the centroid-based clustering problem. For example, one might choose to minimize the sum of distances from each location to each of its assigned demand points (à la the Weber problem), or one might elect to minimize the maximum of all such distances (à la the 1-center problem).

@@ -1,0 +1,511 @@
+In fluid dynamics, hydrodynamic stability is the field which analyses the stability and the onset of instability of fluid flows. The study of hydrodynamic stability aims to find out if a given flow is stable or unstable, and if so, how these instabilities will cause the development of turbulence. The foundations of hydrodynamic stability, both theoretical and experimental, were laid most notably by Helmholtz, Kelvin, Rayleigh and Reynolds during the nineteenth century. These foundations have given many useful tools to study hydrodynamic stability. These include Reynolds number, the Euler equations, and the Navier–Stokes equations. When studying flow stability it is useful to understand more simplistic systems, e.g. incompressible and inviscid fluids which can then be developed further onto more complex flows. Since the 1980s, more computational methods are being used to model and analyse the more complex flows.
+
+Stable and unstable flows
+To distinguish between the different states of fluid flow one must consider how the fluid reacts to a disturbance in the initial state. These disturbances will relate to the initial properties of the system, such as velocity, pressure, and density. James Clerk Maxwell expressed the qualitative concept of stable and unstable flow nicely when he said: "when an infinitely small variation of the present state will alter only by an infinitely small quantity the state at some future time, the condition of the system, whether at rest or in motion, is said to be stable but when an infinitely small variation in the present state may bring about a finite difference in the state of the system in a finite time, the system is said to be unstable." 
+That means that for a stable flow, any infinitely small variation, which is considered a disturbance, will not have any noticeable effect on the initial state of the system and will eventually die down in time. For a fluid flow to be considered stable it must be stable with respect to every possible disturbance. This implies that there exists no mode of disturbance for which it is unstable.
+On the other hand, for an unstable flow, any variations will have some noticeable effect on the state of the system which would then cause the disturbance to grow in amplitude in such a way that the system progressively departs from the initial state and never returns to it. This means that there is at least one mode of disturbance with respect to which the flow is unstable, and the disturbance will therefore distort the existing force equilibrium.
+
+Determining flow stability
+
+Reynolds number
+A key tool used to determine the stability of a flow is the Reynolds number (Re), first put forward by George Gabriel Stokes at the start of the 1850s. Associated with Osborne Reynolds who further developed the idea in the early 1880s, this dimensionless number gives the ratio of inertial terms and viscous terms. In a physical sense, this number is a ratio of the forces which are due to the momentum of the fluid (inertial terms), and the forces which arise from the relative motion of the different layers of a flowing fluid (viscous terms). The equation for this is
+
+  
+    
+      
+        
+          R
+          
+            e
+          
+        
+        =
+        
+          
+            inertial
+            viscous
+          
+        
+        =
+        
+          
+            
+              ρ
+              
+                u
+                
+                  2
+                
+              
+            
+            
+              
+                μ
+                u
+              
+              L
+            
+          
+        
+        =
+        
+          
+            
+              ρ
+              u
+              L
+            
+            μ
+          
+        
+        =
+        
+          
+            
+              u
+              L
+            
+            ν
+          
+        
+      
+    
+    {\displaystyle R_{e}={\frac {\text{inertial}}{\text{viscous}}}={\frac {\rho u^{2}}{\frac {\mu u}{L}}}={\frac {\rho uL}{\mu }}={\frac {uL}{\nu }}}
+  
+
+where
+
+The Reynolds number is useful because it can provide cut off points for when flow is stable or unstable, namely the Critical Reynolds number 
+  
+    
+      
+        
+          R
+          
+            c
+          
+        
+      
+    
+    {\displaystyle R_{c}}
+  
+. As it increases, the amplitude of a disturbance which could then lead to instability gets smaller. At high Reynolds numbers it is agreed that fluid flows will be unstable. High Reynolds number can be achieved in several ways, e.g. if 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ is a small value or if 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ and 
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle {\text{u}}}
+  
+ are high values. This means that instabilities will arise almost immediately and the flow will become unstable or turbulent.
+
+Navier–Stokes equation and the continuity equation
+In order to analytically find the stability of fluid flows, it is useful to note that hydrodynamic stability has a lot in common with stability in other fields, such as magnetohydrodynamics, plasma physics and elasticity; although the physics is different in each case, the mathematics and the techniques used are similar. The essential problem is modeled by nonlinear partial differential equations and the stability of known steady and unsteady solutions are examined. The governing equations for almost all hydrodynamic stability problems are the Navier–Stokes equation and the continuity equation. The Navier–Stokes equation is given by:
+
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                u
+              
+            
+            
+              ∂
+              t
+            
+          
+        
+        +
+        (
+        
+          u
+        
+        ⋅
+        ∇
+        )
+        
+          u
+        
+        −
+        ν
+        
+        
+          ∇
+          
+            2
+          
+        
+        
+          u
+        
+        =
+        −
+        ∇
+        
+          p
+          
+            0
+          
+        
+        +
+        
+          b
+        
+        ,
+      
+    
+    {\displaystyle {\frac {\partial \mathbf {u} }{\partial t}}+(\mathbf {u} \cdot \nabla )\mathbf {u} -\nu \,\nabla ^{2}\mathbf {u} =-\nabla p_{0}+\mathbf {b} ,}
+  
+
+where
+
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle \mathbf {u} }
+  
+ is the velocity field of fluid
+
+  
+    
+      
+        
+          p
+          
+            0
+          
+        
+      
+    
+    {\displaystyle p_{0}}
+  
+ is the pressure of fluid
+
+  
+    
+      
+        
+          b
+        
+      
+    
+    {\displaystyle \mathbf {b} }
+  
+ is the body force acting on fluid e.g., gravity
+
+  
+    
+      
+        ν
+      
+    
+    {\displaystyle \nu }
+  
+ is the kinematic viscosity
+
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                u
+              
+            
+            
+              ∂
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial \mathbf {u} }{\partial t}}}
+  
+ partial derivative of the velocity field with respect to time
+
+  
+    
+      
+        ∇
+        =
+        
+          (
+          
+            
+              
+                ∂
+                
+                  ∂
+                  x
+                
+              
+            
+            ,
+            
+              
+                ∂
+                
+                  ∂
+                  y
+                
+              
+            
+            ,
+            
+              
+                ∂
+                
+                  ∂
+                  z
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \nabla =\left({\frac {\partial }{\partial x}},{\frac {\partial }{\partial y}},{\frac {\partial }{\partial z}}\right)}
+  
+ is the gradient operator
+Here 
+  
+    
+      
+        ∇
+      
+    
+    {\displaystyle \nabla }
+  
+ is being used as an operator acting on the velocity field on the left hand side of the equation and then acting on the pressure on the right hand side.
+and the continuity equation is given by:
+
+  
+    
+      
+        
+          
+            
+              D
+              
+                ρ
+              
+            
+            
+              D
+              t
+            
+          
+        
+        +
+        ρ
+        
+        ∇
+        ⋅
+        
+          u
+        
+        =
+        0
+      
+    
+    {\displaystyle {\frac {D\mathbf {\rho } }{Dt}}+\rho \,\nabla \cdot \mathbf {u} =0}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              D
+              
+                ρ
+              
+            
+            
+              D
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {D\mathbf {\rho } }{Dt}}}
+  
+ is the material derivative of the density.
+Once again 
+  
+    
+      
+        ∇
+      
+    
+    {\displaystyle \nabla }
+  
+ is being used as an operator on 
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle \mathbf {u} }
+  
+ and is calculating the divergence of the velocity.
+But if the fluid being considered is incompressible, which means the density is constant, then 
+  
+    
+      
+        
+          
+            
+              D
+              
+                ρ
+              
+            
+            
+              D
+              t
+            
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle {\frac {D{\boldsymbol {\rho }}}{Dt}}=0}
+  
+ and hence:
+
+  
+    
+      
+        ∇
+        ⋅
+        
+          u
+        
+        =
+        0
+      
+    
+    {\displaystyle \nabla \cdot \mathbf {u} =0}
+  
+
+The assumption that a flow is incompressible is a good one and applies to most fluids travelling at most speeds. It is assumptions of this form that will help to simplify the Navier–Stokes equation into differential equations, like Euler's equation, which are easier to work with.
+
+Euler's equation
+If one considers a flow which is inviscid, this is where the viscous forces are small and can therefore be neglected in the calculations, then one arrives at Euler's equations:
+
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                u
+              
+            
+            
+              ∂
+              t
+            
+          
+        
+        +
+        (
+        
+          u
+        
+        ⋅
+        ∇
+        )
+        
+          u
+        
+        =
+        −
+        ∇
+        
+          p
+          
+            0
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial \mathbf {u} }{\partial t}}+(\mathbf {u} \cdot \nabla )\mathbf {u} =-\nabla p_{0}}
+  
+
+Although in this case we have assumed an inviscid fluid this assumption does not hold for flows where there is a boundary. The presence of a boundary causes some viscosity at the boundary layer which cannot be neglected and one arrives back at the Navier–Stokes equation. Finding the solutions to these governing equations under different circumstances and determining their stability is the fundamental principle in determining the stability of the fluid flow itself.
+
+Linear stability analysis
+To determine whether the flow is stable or unstable, one often employs the method of linear stability analysis. In this type of analysis, the governing equations and boundary conditions are linearized. This is based on the fact that the concept of 'stable' or 'unstable' is based on an infinitely small disturbance. For such disturbances, it is reasonable to assume that disturbances of different wavelengths evolve independently. (A nonlinear governing equation will allow disturbances of different wavelengths to interact with each other.)
+
+Analysing flow stability
+
+Bifurcation theory
+Bifurcation theory  is a useful way to study the stability of a given flow, with the changes that occur in the structure of a given system. Hydrodynamic stability is a series of differential equations and their solutions. A bifurcation occurs when a small change in the parameters of the system causes a qualitative change in its behavior,. The parameter that is being changed in the case of hydrodynamic stability is the Reynolds number. It can be shown that the occurrence of bifurcations falls in line with the occurrence of instabilities.
+
+Laboratory and computational experiments
+Laboratory experiments are a very useful way of gaining information about a given flow without having to use more complex mathematical techniques. Sometimes physically seeing the change in the flow over time is just as useful as a numerical approach and any findings from these experiments can be related back to the underlying theory. Experimental analysis is also useful because it allows one to vary the governing parameters very easily and their effects will be visible.
+When dealing with more complicated mathematical theories such as Bifurcation theory and Weakly nonlinear theory, numerically solving such problems becomes very difficult and time-consuming but with the help of computers this process becomes much easier and quicker. Since the 1980s computational analysis has become more and more useful, the improvement of algorithms which can solve the governing equations, such as the Navier–Stokes equation, means that they can be integrated more accurately for various types of flow.
+
+Applications
+
+Kelvin–Helmholtz instability
+The Kelvin–Helmholtz instability (KHI) is an application of hydrodynamic stability that can be seen in nature. It occurs when there are two fluids flowing at different velocities. The difference in velocity of the fluids causes a shear velocity at the interface of the two layers. The shear velocity of one fluid moving induces a shear stress on the other which, if greater than the restraining surface tension, then results in an instability along the interface between them. This motion causes the appearance of a series of overturning ocean waves, a characteristic of the Kelvin–Helmholtz instability. Indeed, the apparent ocean wave-like nature is an example of vortex formation, which are formed when a fluid is rotating about some axis, and is often associated with this phenomenon.
+The Kelvin–Helmholtz instability can be seen in the bands in planetary atmospheres such as Saturn and Jupiter, for example in the giant red spot vortex. In the atmosphere surrounding the giant red spot there is the biggest example of KHI that is known of and is caused by the shear force at the interface of the different layers of Jupiter's atmosphere. There have been many images captured where the ocean-wave like characteristics discussed earlier can be seen clearly, with as many as 4 shear layers visible.
+Weather satellites take advantage of this instability to measure wind speeds over large bodies of water. Waves are generated by the wind, which shears the water at the interface between it and the surrounding air. The computers on board the satellites determine the roughness of the ocean by measuring the wave height. This is done by using radar, where a radio signal is transmitted to the surface and the delay from the reflected signal is recorded, known as the "time of flight". From this meteorologists are able to understand the movement of clouds and the expected air turbulence near them.
+
+Rayleigh–Taylor instability
+
+The Rayleigh–Taylor instability is another application of hydrodynamic stability and also occurs between two fluids but this time the densities of the fluids are different. Due to the difference in densities, the two fluids will try to reduce their combined potential energy. The less dense fluid will do this by trying to force its way upwards, and the more dense fluid will try to force its way downwards. Therefore, there are two possibilities: if the lighter fluid is on top the interface is said to be stable, but if the heavier fluid is on top, then the equilibrium of the system is unstable to any disturbances of the interface. If this is the case then both fluids will begin to mix. Once a small amount of heavier fluid is displaced downwards with an equal volume of lighter fluid upwards, the potential energy is now lower than the initial state, therefore the disturbance will grow and lead to the turbulent flow associated with Rayleigh–Taylor instabilities.
+This phenomenon can be seen in interstellar gas, such as the Crab Nebula. It is pushed out of the Galactic plane by magnetic fields and cosmic rays and then becomes Rayleigh–Taylor unstable if it is pushed past its normal scale height. This instability also explains the mushroom cloud which forms in processes such as volcanic eruptions and atomic bombs.
+Rayleigh–Taylor instability has a big effect on the Earth's climate. Winds that come from the coast of Greenland and Iceland cause evaporation of the ocean surface over which they pass, increasing the salinity of the ocean water near the surface, and making the water near the surface denser. This then generates plumes which drive the ocean currents. This process acts as a heat pump, transporting warm equatorial water North. Without the ocean overturning, Northern Europe would likely face drastic drops in temperature.
+
+Diffusiophoretic convective instability
+The presence of colloid particles (typically with size in the range between 1 nanometer and 1 micron), uniformly dispersed in a binary liquid mixtures, is able to drive a convective hydrodynamic instability even though the system is initially in a condition of stable gravitational equilibrium (hence opposite to the Rayleigh-Taylor instability discussed above).
+If a liquid contains a heavier molecular solute the concentration of which diminishes with the height, the system is gravitationally stable. Indeed, if a portion of fluid moves upwards due to a spontaneous fluctuation, it will end up being surrounded by less dense fluid and hence will be pushed back downwards. This mechanism thus inhibits convective motions. It has been shown, however, that this mechanism breaks down if the binary mixture contains uniformly dispersed colloidal particles. In that case, convective motions arise even if the system is gravitationally stable.
+The key phenomenon to understand this instability is diffusiophoresis: in order to minimize the interfacial energy between colloidal particle and liquid solution, the gradient of molecular solute determines an internal migration of colloids which brings them upwards, thus depleting them at the bottom. In order words, since the colloids are slightly denser than the liquid mixture, this leads to a local increase of density with height. This instability, even in the absence of a thermal gradient, causes convective motions similar to those observed when a liquid is heated up from the bottom (known as  Rayleigh-Bénard convection), where the upward migration is due to thermal dilation, and leads to pattern formation.
+This instability explains how animals get their intricate and distinctive patterns such as colorful stripes of tropical fish.

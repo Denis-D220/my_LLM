@@ -1,0 +1,206 @@
+In matrix analysis Stahl's theorem is a theorem proved in 2011 by Herbert Stahl concerning Laplace transforms for special matrix functions. It originated in 1975 as the Bessis-Moussa-Villani (BMV) conjecture by Daniel Bessis, Pierre Moussa, and Marcel Villani. In 2004 Elliott H. Lieb and Robert Seiringer gave two important reformulations of the BMV conjecture. In 2015, Alexandre Eremenko gave a simplified proof of Stahl's theorem.
+In 2023, Otte Heinävaara proved a structure theorem for Hermitian matrices introducing tracial joint spectral measures that implies Stahl's theorem as a corollary.
+
+Statement of the theorem
+Let 
+  
+    
+      
+        tr
+      
+    
+    {\displaystyle \operatorname {tr} }
+  
+ denote the trace of a matrix. If 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ and 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ are 
+  
+    
+      
+        n
+        ×
+        n
+      
+    
+    {\displaystyle n\times n}
+  
+ Hermitian matrices and 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is positive semidefinite, define 
+  
+    
+      
+        
+          f
+        
+        (
+        t
+        )
+        =
+        tr
+        ⁡
+        (
+        exp
+        ⁡
+        (
+        A
+        −
+        t
+        B
+        )
+        )
+      
+    
+    {\displaystyle \mathbf {f} (t)=\operatorname {tr} (\exp(A-tB))}
+  
+, for all real 
+  
+    
+      
+        t
+        ≥
+        0
+      
+    
+    {\displaystyle t\geq 0}
+  
+. Then 
+  
+    
+      
+        
+          f
+        
+      
+    
+    {\displaystyle \mathbf {f} }
+  
+ can be represented as the Laplace transform of a non-negative Borel measure 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ on 
+  
+    
+      
+        [
+        0
+        ,
+        ∞
+        )
+      
+    
+    {\displaystyle [0,\infty )}
+  
+. In other words, for all real 
+  
+    
+      
+        t
+        ≥
+        0
+      
+    
+    {\displaystyle t\geq 0}
+  
+,
+
+  
+    
+      
+        
+          f
+        
+      
+    
+    {\displaystyle \mathbf {f} }
+  
+(t) = 
+  
+    
+      
+        
+          ∫
+          
+            [
+            0
+            ,
+            ∞
+            )
+          
+        
+        
+          e
+          
+            −
+            t
+            s
+          
+        
+        
+        d
+        μ
+        (
+        s
+        )
+      
+    
+    {\displaystyle \int _{[0,\infty )}e^{-ts}\,d\mu (s)}
+  
+,
+for some non-negative measure 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ depending upon 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ and 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+.

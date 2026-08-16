@@ -1,0 +1,24 @@
+A Name Authority Pointer (NAPTR) is a type of resource record in the Domain Name System of the Internet.
+NAPTR records are most commonly used for applications in Internet telephony, for example, in the mapping of servers and user addresses in the Session Initiation Protocol (SIP).  The combination of NAPTR records with Service Records (SRV) allows the chaining of multiple records to form complex rewrite rules which produce new domain labels or uniform resource identifiers (URIs).
+The DNS type code for the NAPTR record is 35.
+
+Rationale
+Uniform Resource Names (URNs) are a subset of Uniform Resource Identifiers (URIs) used for abstract identifiers, such as a person's name or their telephone number.  For URNs to be meaningful, they must be mapped to a concrete resource of some sort.  Uniform Resource Locators (URLs) are often used to describe such resources, such as a computer hostname, or a local file.
+The NAPTR record aids in the standardization of URNs.  NAPTR records map between sets of URNs, URLs and plain domain names and suggest to clients the protocols available for communication with the mapped resource. Each NAPTR record contains a service name, a set of flags, a regular expression rule, an order value, a preference and a replacement pattern.  Multiple records can be chained together in a cascade to rewrite URIs in deterministic ways. These cascading rules have been standardized in RFC 2915 and 3403.
+
+Example
+A common use of NAPTR records is by the Session Initiation Protocol, which routes telephony sessions over IP networks. For example, the URI for the US telephone number 1-800-555-1234 might be tel:+1-800-555-1234 and its domain name 4.3.2.1.5.5.5.0.0.8.1.e164.arpa.  A SIP client querying that name might receive:
+
+The first record has an order value of 100, which is lower than 102 and therefore has precedence. Its preference of 10 is unimportant as there are no other rules with order 100.  The service name E2U+sip is an ENUM string indicating that the record can be used in telephone number-to-SIP-URI queries.  The client applies the regular expression !^.*$!sip:customer-service@example.com!, which replaces its entire URI tel:+1-800-555-1234 with sip:customer-service@example.com.  The flag U indicates that the replacement string is a SIP URI, and that no further rules should be applied.
+To resolve the SIP URI, the client performs a second NAPTR lookup—on example.com, yielding:
+
+As in the first example, the client picks the first record because it has the lowest order value.  The regular expression rule replaces the query URI, this time with the domain name _sip._udp.example.com.  The flag S indicates that the resulting domain name points to a SRV record. The client thus finishes with _sip._udp.example.com, for which it can then fetch an SRV record to initiate a telephony call.
+
+Support
+
+NAPTR implementations generally also implement EDNS as responses returning multiple NAPTR records are usually larger than the normal 512 byte packet size limit and would otherwise require a less efficient fallback to TCP, rather than UDP, for the transport protocol.
+
+Services
+Below are some Voice over IP services and products that require or support NAPTR records.
+
+NAPTR records are also used by non-SIP services. Notable roaming services using NAPTR for route signposting are listed below:

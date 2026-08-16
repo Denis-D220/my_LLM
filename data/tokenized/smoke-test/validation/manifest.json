@@ -1,0 +1,25 @@
+{
+  "format": "llm_uint16_token_shards",
+  "format_version": 1,
+  "split": "validation",
+  "dtype": "uint16",
+  "byte_order": "little",
+  "token_item_bytes": 2,
+  "tokenizer_vocab_size": 24000,
+  "tokens_per_shard": 1000000,
+  "total_tokens": 44707,
+  "total_bytes": 89414,
+  "stream_sha256": "eaab084b2ebb12cee149416bd91f836e31160fe00bab0583d55cabecd7502223",
+  "shard_count": 1,
+  "shards": [
+    {
+      "filename": "validation-00000.bin",
+      "index": 0,
+      "token_start": 0,
+      "token_end": 44707,
+      "token_count": 44707,
+      "byte_count": 89414,
+      "sha256": "eaab084b2ebb12cee149416bd91f836e31160fe00bab0583d55cabecd7502223"
+    }
+  ]
+}

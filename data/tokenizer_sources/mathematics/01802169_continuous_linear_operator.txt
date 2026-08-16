@@ -1,0 +1,3515 @@
+In functional analysis and related areas of mathematics, a continuous linear operator or continuous linear mapping is a continuous linear transformation between topological vector spaces.
+An operator between two normed spaces is a bounded linear operator if and only if it is a continuous linear operator.
+
+Continuous linear operators
+
+Characterizations of continuity
+
+Suppose that 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is a linear operator between two topological vector spaces (TVSs). 
+The following are equivalent: 
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is continuous.
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is continuous at some point 
+  
+    
+      
+        x
+        ∈
+        X
+        .
+      
+    
+    {\displaystyle x\in X.}
+  
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is continuous at the origin in 
+  
+    
+      
+        X
+        .
+      
+    
+    {\displaystyle X.}
+  
+
+If 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is locally convex then this list may be extended to include:
+
+for every continuous seminorm 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ on 
+  
+    
+      
+        Y
+        ,
+      
+    
+    {\displaystyle Y,}
+  
+ there exists a continuous seminorm 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ on 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ such that 
+  
+    
+      
+        q
+        ∘
+        F
+        ≤
+        p
+        .
+      
+    
+    {\displaystyle q\circ F\leq p.}
+  
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are both Hausdorff locally convex spaces then this list may be extended to include:
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is weakly continuous and its transpose 
+  
+    
+      
+        
+          
+
+          
+          
+            t
+          
+        
+        F
+        :
+        
+          Y
+          
+            ′
+          
+        
+        →
+        
+          X
+          
+            ′
+          
+        
+      
+    
+    {\displaystyle {}^{t}F:Y^{\prime }\to X^{\prime }}
+  
+ maps equicontinuous subsets of 
+  
+    
+      
+        
+          Y
+          
+            ′
+          
+        
+      
+    
+    {\displaystyle Y^{\prime }}
+  
+ to equicontinuous subsets of 
+  
+    
+      
+        
+          X
+          
+            ′
+          
+        
+        .
+      
+    
+    {\displaystyle X^{\prime }.}
+  
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a sequential space (such as a pseudometrizable space) then this list may be extended to include:
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is sequentially continuous at some (or equivalently, at every) point of its domain.
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is pseudometrizable or metrizable (such as a normed or Banach space) then we may add to this list: 
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is a bounded linear operator (that is, it maps bounded subsets of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to bounded subsets of 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+).
+
+If 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is seminormable space (such as a normed space) then this list may be extended to include:
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ maps some neighborhood of 0 to a bounded subset of 
+  
+    
+      
+        Y
+        .
+      
+    
+    {\displaystyle Y.}
+  
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are both normed or seminormed spaces (with both seminorms denoted by 
+  
+    
+      
+        ‖
+        ⋅
+        ‖
+      
+    
+    {\displaystyle \|\cdot \|}
+  
+) then this list may be extended to include:
+
+for every 
+  
+    
+      
+        r
+        >
+        0
+      
+    
+    {\displaystyle r>0}
+  
+ there exists some 
+  
+    
+      
+        δ
+        >
+        0
+      
+    
+    {\displaystyle \delta >0}
+  
+ such that 
+  
+    
+      
+        
+           for all 
+        
+        x
+        ,
+        y
+        ∈
+        X
+        ,
+        
+           if 
+        
+        ‖
+        x
+        −
+        y
+        ‖
+        <
+        δ
+        
+           then 
+        
+        ‖
+        F
+        x
+        −
+        F
+        y
+        ‖
+        <
+        r
+        .
+      
+    
+    {\displaystyle {\text{ for all }}x,y\in X,{\text{ if }}\|x-y\|<\delta {\text{ then }}\|Fx-Fy\|<r.}
+  
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are Hausdorff locally convex spaces with 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ finite-dimensional then this list may be extended to include:
+
+the graph of 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is closed in 
+  
+    
+      
+        X
+        ×
+        Y
+        .
+      
+    
+    {\displaystyle X\times Y.}
+  
+
+Continuity and boundedness
+Throughout, 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is a linear map between topological vector spaces (TVSs).
+Bounded subset
+
+The notion of a "bounded set" for a topological vector space is that of being a von Neumann bounded set. 
+If the space happens to also be a normed space (or a seminormed space) then a subset 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is von Neumann bounded if and only if it is norm bounded, meaning that 
+  
+    
+      
+        
+          sup
+          
+            s
+            ∈
+            S
+          
+        
+        ‖
+        s
+        ‖
+        <
+        ∞
+        .
+      
+    
+    {\displaystyle \sup _{s\in S}\|s\|<\infty .}
+  
+ 
+A subset of a normed (or seminormed) space is called bounded if it is norm-bounded (or equivalently, von Neumann bounded). 
+For example, the scalar field (
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ or 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+) with the absolute value 
+  
+    
+      
+        
+          |
+        
+        ⋅
+        
+          |
+        
+      
+    
+    {\displaystyle |\cdot |}
+  
+ is a normed space, so a subset 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is bounded if and only if 
+  
+    
+      
+        
+          sup
+          
+            s
+            ∈
+            S
+          
+        
+        
+          |
+        
+        s
+        
+          |
+        
+      
+    
+    {\displaystyle \sup _{s\in S}|s|}
+  
+ is finite, which happens if and only if 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is contained in some open (or closed) ball centered at the origin (zero).
+Any translation, scalar multiple, and subset of a bounded set is again bounded.
+Function bounded on a set
+If 
+  
+    
+      
+        S
+        ⊆
+        X
+      
+    
+    {\displaystyle S\subseteq X}
+  
+ is a set then 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is said to be bounded on 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ if 
+  
+    
+      
+        F
+        (
+        S
+        )
+      
+    
+    {\displaystyle F(S)}
+  
+ is a bounded subset of 
+  
+    
+      
+        Y
+        ,
+      
+    
+    {\displaystyle Y,}
+  
+ which if 
+  
+    
+      
+        (
+        Y
+        ,
+        ‖
+        ⋅
+        ‖
+        )
+      
+    
+    {\displaystyle (Y,\|\cdot \|)}
+  
+ is a normed (or seminormed) space happens if and only if 
+  
+    
+      
+        
+          sup
+          
+            s
+            ∈
+            S
+          
+        
+        ‖
+        F
+        (
+        s
+        )
+        ‖
+        <
+        ∞
+        .
+      
+    
+    {\displaystyle \sup _{s\in S}\|F(s)\|<\infty .}
+  
+ 
+A linear map 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is bounded on a set 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ if and only if it is bounded on 
+  
+    
+      
+        x
+        +
+        S
+        :=
+        {
+        x
+        +
+        s
+        :
+        s
+        ∈
+        S
+        }
+      
+    
+    {\displaystyle x+S:=\{x+s:s\in S\}}
+  
+ for every 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  
+ (because 
+  
+    
+      
+        F
+        (
+        x
+        +
+        S
+        )
+        =
+        F
+        (
+        x
+        )
+        +
+        F
+        (
+        S
+        )
+      
+    
+    {\displaystyle F(x+S)=F(x)+F(S)}
+  
+ and any translation of a bounded set is again bounded) if and only if it is bounded on 
+  
+    
+      
+        c
+        S
+        :=
+        {
+        c
+        s
+        :
+        s
+        ∈
+        S
+        }
+      
+    
+    {\displaystyle cS:=\{cs:s\in S\}}
+  
+ for every non-zero scalar 
+  
+    
+      
+        c
+        ≠
+        0
+      
+    
+    {\displaystyle c\neq 0}
+  
+ (because 
+  
+    
+      
+        F
+        (
+        c
+        S
+        )
+        =
+        c
+        F
+        (
+        S
+        )
+      
+    
+    {\displaystyle F(cS)=cF(S)}
+  
+ and any scalar multiple of a bounded set is again bounded). 
+Consequently, if 
+  
+    
+      
+        (
+        X
+        ,
+        ‖
+        ⋅
+        ‖
+        )
+      
+    
+    {\displaystyle (X,\|\cdot \|)}
+  
+ is a normed or seminormed space, then a linear map 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is bounded on some (equivalently, on every) non-degenerate open or closed ball (not necessarily centered at the origin, and of any radius) if and only if it is bounded on the closed unit ball centered at the origin 
+  
+    
+      
+        {
+        x
+        ∈
+        X
+        :
+        ‖
+        x
+        ‖
+        ≤
+        1
+        }
+        .
+      
+    
+    {\displaystyle \{x\in X:\|x\|\leq 1\}.}
+  
+
+Bounded linear maps
+
+By definition, a linear map 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ between TVSs is said to be bounded and is called a bounded linear operator if for every (von Neumann) bounded subset 
+  
+    
+      
+        B
+        ⊆
+        X
+      
+    
+    {\displaystyle B\subseteq X}
+  
+ of its domain, 
+  
+    
+      
+        F
+        (
+        B
+        )
+      
+    
+    {\displaystyle F(B)}
+  
+ is a bounded subset of it codomain; or said more briefly, if it is bounded on every bounded subset of its domain. When the domain 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a normed (or seminormed) space then it suffices to check this condition for the open or closed unit ball centered at the origin. Explicitly, if 
+  
+    
+      
+        
+          B
+          
+            1
+          
+        
+      
+    
+    {\displaystyle B_{1}}
+  
+ denotes this ball then 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is a bounded linear operator if and only if 
+  
+    
+      
+        F
+        
+          (
+          
+            B
+            
+              1
+            
+          
+          )
+        
+      
+    
+    {\displaystyle F\left(B_{1}\right)}
+  
+ is a bounded subset of 
+  
+    
+      
+        Y
+        ;
+      
+    
+    {\displaystyle Y;}
+  
+ if 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is also a (semi)normed space then this happens if and only if the operator norm 
+  
+    
+      
+        ‖
+        F
+        ‖
+        :=
+        
+          sup
+          
+            ‖
+            x
+            ‖
+            ≤
+            1
+          
+        
+        ‖
+        F
+        (
+        x
+        )
+        ‖
+        <
+        ∞
+      
+    
+    {\displaystyle \|F\|:=\sup _{\|x\|\leq 1}\|F(x)\|<\infty }
+  
+ is finite. Every sequentially continuous linear operator is bounded.
+Function bounded on a neighborhood and local boundedness
+
+In contrast, a map 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is said to be bounded on a neighborhood of a point 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  
+ or locally bounded at 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ if there exists a neighborhood 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ of this point in 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ such that 
+  
+    
+      
+        F
+        (
+        U
+        )
+      
+    
+    {\displaystyle F(U)}
+  
+ is a bounded subset of 
+  
+    
+      
+        Y
+        .
+      
+    
+    {\displaystyle Y.}
+  
+ 
+It is "bounded on a neighborhood" (of some point) if there exists some point 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ in its domain at which it is locally bounded, in which case this linear map 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is necessarily locally bounded at every point of its domain. 
+The term "locally bounded" is sometimes used to refer to a map that is locally bounded at every point of its domain, but some functional analysis authors define "locally bounded" to instead be a synonym of "bounded linear operator", which are related but not equivalent concepts. For this reason, this article will avoid the term "locally bounded" and instead say "locally bounded at every point" (there is no disagreement about the definition of "locally bounded at a point").
+
+Bounded on a neighborhood implies continuous implies bounded
+A linear map is "bounded on a neighborhood" (of some point) if and only if it is locally bounded at every point of its domain, in which case it is necessarily continuous (even if its domain is not a normed space) and thus also bounded (because a continuous linear operator is always a bounded linear operator).
+For any linear map, if it is bounded on a neighborhood then it is continuous, and if it is continuous then it is bounded.  The converse statements are not true in general but they are both true when the linear map's domain is a normed space. Examples and additional details are now given below.
+
+Continuous and bounded but not bounded on a neighborhood
+The next example shows that it is possible for a linear map to be continuous (and thus also bounded) but not bounded on any neighborhood. In particular, it demonstrates that being "bounded on a neighborhood" is not always synonymous with being "bounded".
+Example: A continuous and bounded linear map that is not bounded on any neighborhood: If 
+  
+    
+      
+        Id
+        :
+        X
+        →
+        X
+      
+    
+    {\displaystyle \operatorname {Id} :X\to X}
+  
+ is the identity map on some locally convex topological vector space then this linear map is always continuous (indeed, even a TVS-isomorphism) and bounded, but 
+  
+    
+      
+        Id
+      
+    
+    {\displaystyle \operatorname {Id} }
+  
+ is bounded on a neighborhood if and only if there exists a bounded neighborhood of the origin in 
+  
+    
+      
+        X
+        ,
+      
+    
+    {\displaystyle X,}
+  
+ which is equivalent to 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ being a seminormable space (which if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is Hausdorff, is the same as being a normable space). 
+This shows that it is possible for a linear map to be continuous but not bounded on any neighborhood. 
+Indeed, this example shows that every locally convex space that is not seminormable has a linear TVS-automorphism that is not bounded on any neighborhood of any point. 
+Thus although every linear map that is bounded on a neighborhood is necessarily continuous, the converse is not guaranteed in general.
+
+Guaranteeing converses
+To summarize the discussion below, for a linear map on a normed (or seminormed) space, being continuous, being bounded, and being bounded on a neighborhood are all equivalent. 
+A linear map whose domain or codomain is normable (or seminormable) is continuous if and only if it bounded on a neighborhood. 
+And a bounded linear operator valued in a locally convex space will be continuous if its domain is (pseudo)metrizable or bornological.
+Guaranteeing that "continuous" implies "bounded on a neighborhood"
+A TVS is said to be locally bounded if there exists a neighborhood that is also a bounded set. For example, every normed or seminormed space is a locally bounded TVS since the unit ball centered at the origin is a bounded neighborhood of the origin. 
+If 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is a bounded neighborhood of the origin in a (locally bounded) TVS then its image under any continuous linear map will be a bounded set (so this map is thus bounded on this neighborhood 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+). 
+Consequently, a linear map from a locally bounded TVS into any other TVS is continuous if and only if it is bounded on a neighborhood. 
+Moreover, any TVS with this property must be a locally bounded TVS. Explicitly, if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a TVS such that every continuous linear map (into any TVS) whose domain is 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is necessarily bounded on a neighborhood, then 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ must be a locally bounded TVS (because the identity function 
+  
+    
+      
+        X
+        →
+        X
+      
+    
+    {\displaystyle X\to X}
+  
+ is always a continuous linear map).
+Any linear map from a TVS into a locally bounded TVS (such as any linear functional) is continuous if and only if it is bounded on a neighborhood. 
+Conversely, if 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is a TVS such that every continuous linear map (from any TVS) with codomain 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is necessarily bounded on a neighborhood, then 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ must be a locally bounded TVS. 
+In particular, a linear functional on an arbitrary TVS is continuous if and only if it is bounded on a neighborhood.
+Thus when the domain or the codomain of a linear map is normable or seminormable, then continuity will be equivalent to being bounded on a neighborhood.
+Guaranteeing that "bounded" implies "continuous"
+A continuous linear operator is always a bounded linear operator. 
+But importantly, in the most general setting of a linear operator between arbitrary topological vector spaces, it is possible for a linear operator to be bounded but to not be continuous.
+A linear map whose domain is pseudometrizable (such as any normed space) is bounded if and only if it is continuous. 
+The same is true of a linear map from a bornological space into a locally convex space.
+Guaranteeing that "bounded" implies "bounded on a neighborhood"
+In general, without additional information about either the linear map or its domain or codomain, the map being "bounded" is not equivalent to it being "bounded on a neighborhood". 
+If 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is a bounded linear operator from a normed space 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ into some TVS then 
+  
+    
+      
+        F
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle F:X\to Y}
+  
+ is necessarily continuous; this is because any open ball 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ centered at the origin in 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is both a bounded subset (which implies that 
+  
+    
+      
+        F
+        (
+        B
+        )
+      
+    
+    {\displaystyle F(B)}
+  
+ is bounded since 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is a bounded linear map) and a neighborhood of the origin in 
+  
+    
+      
+        X
+        ,
+      
+    
+    {\displaystyle X,}
+  
+ so that 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is thus bounded on this neighborhood 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ of the origin, which (as mentioned above) guarantees continuity.
+
+Continuous linear functionals
+
+Every linear functional on a topological vector space (TVS) is a linear operator so all of the properties described above for continuous linear operators apply to them. 
+However, because of their specialized nature, we can say even more about continuous linear functionals than we can about more general continuous linear operators.
+
+Characterizing continuous linear functionals
+Let 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ be a topological vector space (TVS) over the field 
+  
+    
+      
+        
+          F
+        
+      
+    
+    {\displaystyle \mathbb {F} }
+  
+ (
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ need not be Hausdorff or locally convex) and let 
+  
+    
+      
+        f
+        :
+        X
+        →
+        
+          F
+        
+      
+    
+    {\displaystyle f:X\to \mathbb {F} }
+  
+ be a linear functional on 
+  
+    
+      
+        X
+        .
+      
+    
+    {\displaystyle X.}
+  
+ 
+The following are equivalent:
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is continuous.
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is uniformly continuous on 
+  
+    
+      
+        X
+        .
+      
+    
+    {\displaystyle X.}
+  
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is continuous at some point of 
+  
+    
+      
+        X
+        .
+      
+    
+    {\displaystyle X.}
+  
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is continuous at the origin.
+By definition, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ said to be continuous at the origin if for every open (or closed) ball 
+  
+    
+      
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle B_{r}}
+  
+ of radius 
+  
+    
+      
+        r
+        >
+        0
+      
+    
+    {\displaystyle r>0}
+  
+ centered at 
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+ in the codomain 
+  
+    
+      
+        
+          F
+        
+        ,
+      
+    
+    {\displaystyle \mathbb {F} ,}
+  
+ there exists some neighborhood 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ of the origin in 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ such that 
+  
+    
+      
+        f
+        (
+        U
+        )
+        ⊆
+        
+          B
+          
+            r
+          
+        
+        .
+      
+    
+    {\displaystyle f(U)\subseteq B_{r}.}
+  
+
+If 
+  
+    
+      
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle B_{r}}
+  
+ is a closed ball then the condition 
+  
+    
+      
+        f
+        (
+        U
+        )
+        ⊆
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle f(U)\subseteq B_{r}}
+  
+ holds if and only if 
+  
+    
+      
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        ≤
+        r
+        .
+      
+    
+    {\displaystyle \sup _{u\in U}|f(u)|\leq r.}
+  
+
+It is important that 
+  
+    
+      
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle B_{r}}
+  
+ be a closed ball in this supremum characterization. Assuming that 
+  
+    
+      
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle B_{r}}
+  
+ is instead an open ball, then 
+  
+    
+      
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        <
+        r
+      
+    
+    {\displaystyle \sup _{u\in U}|f(u)|<r}
+  
+ is a sufficient but not necessary condition for 
+  
+    
+      
+        f
+        (
+        U
+        )
+        ⊆
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle f(U)\subseteq B_{r}}
+  
+ to be true (consider for example when 
+  
+    
+      
+        f
+        =
+        Id
+      
+    
+    {\displaystyle f=\operatorname {Id} }
+  
+ is the identity map on 
+  
+    
+      
+        X
+        =
+        
+          F
+        
+      
+    
+    {\displaystyle X=\mathbb {F} }
+  
+ and 
+  
+    
+      
+        U
+        =
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle U=B_{r}}
+  
+), whereas the non-strict inequality 
+  
+    
+      
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        ≤
+        r
+      
+    
+    {\displaystyle \sup _{u\in U}|f(u)|\leq r}
+  
+ is instead a necessary but not sufficient condition for 
+  
+    
+      
+        f
+        (
+        U
+        )
+        ⊆
+        
+          B
+          
+            r
+          
+        
+      
+    
+    {\displaystyle f(U)\subseteq B_{r}}
+  
+ to be true (consider for example 
+  
+    
+      
+        X
+        =
+        
+          R
+        
+        ,
+        f
+        =
+        Id
+        ,
+      
+    
+    {\displaystyle X=\mathbb {R} ,f=\operatorname {Id} ,}
+  
+ and the closed neighborhood 
+  
+    
+      
+        U
+        =
+        [
+        −
+        r
+        ,
+        r
+        ]
+      
+    
+    {\displaystyle U=[-r,r]}
+  
+). This is one of several reasons why many definitions involving linear functionals, such as polar sets for example, involve closed (rather than open) neighborhoods and non-strict 
+  
+    
+      
+        
+        ≤
+        
+      
+    
+    {\displaystyle \,\leq \,}
+  
+ (rather than strict
+  
+    
+      
+        
+        <
+        
+      
+    
+    {\displaystyle \,<\,}
+  
+) inequalities.
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is bounded on a neighborhood (of some point). Said differently, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a locally bounded at some point of its domain.
+Explicitly, this means that there exists some neighborhood 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ of some point 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  
+ such that 
+  
+    
+      
+        f
+        (
+        U
+        )
+      
+    
+    {\displaystyle f(U)}
+  
+ is a bounded subset of 
+  
+    
+      
+        
+          F
+        
+        ;
+      
+    
+    {\displaystyle \mathbb {F} ;}
+  
+ that is, such that 
+  
+    
+      
+        
+          
+            sup
+            
+              u
+              ∈
+              U
+            
+          
+          
+            |
+          
+          f
+          (
+          u
+          )
+          
+            |
+          
+          <
+          ∞
+          .
+        
+      
+    
+    {\textstyle \displaystyle \sup _{u\in U}|f(u)|<\infty .}
+  
+ This supremum over the neighborhood 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is equal to 
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+ if and only if 
+  
+    
+      
+        f
+        =
+        0.
+      
+    
+    {\displaystyle f=0.}
+  
+
+Importantly, a linear functional being "bounded on a neighborhood" is in general not equivalent to being a "bounded linear functional" because (as described above) it is possible for a linear map to be bounded but not continuous. However, continuity and boundedness are equivalent if the domain is a normed or seminormed space; that is, for a linear functional on a normed space, being "bounded" is equivalent to being "bounded on a neighborhood".
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is bounded on a neighborhood of the origin. Said differently, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a locally bounded at the origin. 
+The equality 
+  
+    
+      
+        
+          sup
+          
+            x
+            ∈
+            s
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        x
+        )
+        
+          |
+        
+        =
+        
+          |
+        
+        s
+        
+          |
+        
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+      
+    
+    {\displaystyle \sup _{x\in sU}|f(x)|=|s|\sup _{u\in U}|f(u)|}
+  
+ holds for all scalars 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ and when 
+  
+    
+      
+        s
+        ≠
+        0
+      
+    
+    {\displaystyle s\neq 0}
+  
+ then 
+  
+    
+      
+        s
+        U
+      
+    
+    {\displaystyle sU}
+  
+ will be neighborhood of the origin. So in particular, if 
+  
+    
+      
+        R
+        :=
+        
+          
+            sup
+            
+              u
+              ∈
+              U
+            
+          
+          
+            |
+          
+          f
+          (
+          u
+          )
+          
+            |
+          
+        
+      
+    
+    {\textstyle R:=\displaystyle \sup _{u\in U}|f(u)|}
+  
+ is a positive real number then for every positive real 
+  
+    
+      
+        r
+        >
+        0
+        ,
+      
+    
+    {\displaystyle r>0,}
+  
+ the set 
+  
+    
+      
+        
+          N
+          
+            r
+          
+        
+        :=
+        
+          
+            
+              r
+              R
+            
+          
+        
+        U
+      
+    
+    {\displaystyle N_{r}:={\tfrac {r}{R}}U}
+  
+ is a neighborhood of the origin and 
+  
+    
+      
+        
+          
+            sup
+            
+              n
+              ∈
+              
+                N
+                
+                  r
+                
+              
+            
+          
+          
+            |
+          
+          f
+          (
+          n
+          )
+          
+            |
+          
+          =
+          r
+          .
+        
+      
+    
+    {\displaystyle \displaystyle \sup _{n\in N_{r}}|f(n)|=r.}
+  
+ Using 
+  
+    
+      
+        r
+        :=
+        1
+      
+    
+    {\displaystyle r:=1}
+  
+ proves the next statement when 
+  
+    
+      
+        R
+        ≠
+        0.
+      
+    
+    {\displaystyle R\neq 0.}
+  
+
+There exists some neighborhood 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ of the origin such that 
+  
+    
+      
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        ≤
+        1
+      
+    
+    {\displaystyle \sup _{u\in U}|f(u)|\leq 1}
+  
+
+This inequality holds if and only if 
+  
+    
+      
+        
+          sup
+          
+            x
+            ∈
+            r
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        x
+        )
+        
+          |
+        
+        ≤
+        r
+      
+    
+    {\displaystyle \sup _{x\in rU}|f(x)|\leq r}
+  
+ for every real 
+  
+    
+      
+        r
+        >
+        0
+        ,
+      
+    
+    {\displaystyle r>0,}
+  
+ which shows that the positive scalar multiples 
+  
+    
+      
+        {
+        r
+        U
+        :
+        r
+        >
+        0
+        }
+      
+    
+    {\displaystyle \{rU:r>0\}}
+  
+ of this single neighborhood 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ will satisfy the definition of continuity at the origin given in (4) above.
+By definition of the set 
+  
+    
+      
+        
+          U
+          
+            ∘
+          
+        
+        ,
+      
+    
+    {\displaystyle U^{\circ },}
+  
+ which is called the (absolute) polar of 
+  
+    
+      
+        U
+        ,
+      
+    
+    {\displaystyle U,}
+  
+ the inequality 
+  
+    
+      
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        ≤
+        1
+      
+    
+    {\displaystyle \sup _{u\in U}|f(u)|\leq 1}
+  
+ holds if and only if 
+  
+    
+      
+        f
+        ∈
+        
+          U
+          
+            ∘
+          
+        
+        .
+      
+    
+    {\displaystyle f\in U^{\circ }.}
+  
+ Polar sets, and so also this particular inequality, play important roles in duality theory.
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a locally bounded at every point of its domain.
+The kernel of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is closed in 
+  
+    
+      
+        X
+        .
+      
+    
+    {\displaystyle X.}
+  
+
+Either 
+  
+    
+      
+        f
+        =
+        0
+      
+    
+    {\displaystyle f=0}
+  
+ or else the kernel of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is not dense in 
+  
+    
+      
+        X
+        .
+      
+    
+    {\displaystyle X.}
+  
+
+There exists a continuous seminorm 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ on 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ such that 
+  
+    
+      
+        
+          |
+        
+        f
+        
+          |
+        
+        ≤
+        p
+        .
+      
+    
+    {\displaystyle |f|\leq p.}
+  
+
+In particular, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is continuous if and only if the seminorm 
+  
+    
+      
+        p
+        :=
+        
+          |
+        
+        f
+        
+          |
+        
+      
+    
+    {\displaystyle p:=|f|}
+  
+ is a continuous.
+The graph of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is closed.
+
+  
+    
+      
+        Re
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {Re} f}
+  
+ is continuous, where 
+  
+    
+      
+        Re
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {Re} f}
+  
+ denotes the real part of 
+  
+    
+      
+        f
+        .
+      
+    
+    {\displaystyle f.}
+  
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are complex vector spaces then this list may be extended to include:
+
+The imaginary part 
+  
+    
+      
+        Im
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {Im} f}
+  
+ of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is continuous.
+
+If the domain 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a sequential space then this list may be extended to include:
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is sequentially continuous at some (or equivalently, at every) point of its domain.
+
+If the domain 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is metrizable or pseudometrizable (for example, a Fréchet space or a normed space) then this list may be extended to include:
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a bounded linear operator (that is, it maps bounded subsets of its domain to bounded subsets of its codomain).
+
+If the domain 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a bornological space (for example, a pseudometrizable TVS) and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is locally convex then this list may be extended to include:
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a bounded linear operator.
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is sequentially continuous at some (or equivalently, at every) point of its domain.
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is sequentially continuous at the origin.
+
+and if in addition 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a vector space over the real numbers (which in particular, implies that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is real-valued) then this list may be extended to include:
+
+There exists a continuous seminorm 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ on 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ such that 
+  
+    
+      
+        f
+        ≤
+        p
+        .
+      
+    
+    {\displaystyle f\leq p.}
+  
+
+For some real 
+  
+    
+      
+        r
+        ,
+      
+    
+    {\displaystyle r,}
+  
+ the half-space 
+  
+    
+      
+        {
+        x
+        ∈
+        X
+        :
+        f
+        (
+        x
+        )
+        ≤
+        r
+        }
+      
+    
+    {\displaystyle \{x\in X:f(x)\leq r\}}
+  
+ is closed.
+For any real 
+  
+    
+      
+        r
+        ,
+      
+    
+    {\displaystyle r,}
+  
+ the half-space 
+  
+    
+      
+        {
+        x
+        ∈
+        X
+        :
+        f
+        (
+        x
+        )
+        ≤
+        r
+        }
+      
+    
+    {\displaystyle \{x\in X:f(x)\leq r\}}
+  
+ is closed.
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is complex then either all three of 
+  
+    
+      
+        f
+        ,
+      
+    
+    {\displaystyle f,}
+  
+ 
+  
+    
+      
+        Re
+        ⁡
+        f
+        ,
+      
+    
+    {\displaystyle \operatorname {Re} f,}
+  
+ and 
+  
+    
+      
+        Im
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {Im} f}
+  
+ are continuous (respectively, bounded), or else all three are discontinuous (respectively, unbounded).
+
+Examples
+Every linear map whose domain is a finite-dimensional Hausdorff topological vector space (TVS) is continuous. This is not true if the finite-dimensional TVS is not Hausdorff.
+Every (constant) map 
+  
+    
+      
+        X
+        →
+        Y
+      
+    
+    {\displaystyle X\to Y}
+  
+ between TVS that is identically equal to zero is a linear map that is continuous, bounded, and bounded on the neighborhood 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ of the origin. In particular, every TVS has a non-empty continuous dual space (although it is possible for the constant zero map to be its only continuous linear functional).
+Suppose 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is any Hausdorff TVS. Then every linear functional on 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is necessarily continuous if and only if every vector subspace of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is closed. Every linear functional on 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is necessarily a bounded linear functional if and only if every bounded subset of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is contained in a finite-dimensional vector subspace.
+
+Properties
+A locally convex metrizable topological vector space is normable if and only if every bounded linear functional on it is continuous.
+A continuous linear operator maps bounded sets into bounded sets.
+The proof uses the facts that the translation of an open set in a linear topological space is again an open set, and the equality
+
+  
+    
+      
+        
+          F
+          
+            −
+            1
+          
+        
+        (
+        D
+        )
+        +
+        x
+        =
+        
+          F
+          
+            −
+            1
+          
+        
+        (
+        D
+        +
+        F
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle F^{-1}(D)+x=F^{-1}(D+F(x))}
+  
+
+for any subset 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+ of 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ and any 
+  
+    
+      
+        x
+        ∈
+        X
+        ,
+      
+    
+    {\displaystyle x\in X,}
+  
+ which is true due to the additivity of 
+  
+    
+      
+        F
+        .
+      
+    
+    {\displaystyle F.}
+  
+
+Properties of continuous linear functionals
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a complex normed space and 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a linear functional on 
+  
+    
+      
+        X
+        ,
+      
+    
+    {\displaystyle X,}
+  
+ then 
+  
+    
+      
+        ‖
+        f
+        ‖
+        =
+        ‖
+        Re
+        ⁡
+        f
+        ‖
+      
+    
+    {\displaystyle \|f\|=\|\operatorname {Re} f\|}
+  
+ (where in particular, one side is infinite if and only if the other side is infinite).
+Every non-trivial continuous linear functional on a TVS 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is an open map. 
+If 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a linear functional on a real vector space 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and if 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is a seminorm on 
+  
+    
+      
+        X
+        ,
+      
+    
+    {\displaystyle X,}
+  
+ then 
+  
+    
+      
+        
+          |
+        
+        f
+        
+          |
+        
+        ≤
+        p
+      
+    
+    {\displaystyle |f|\leq p}
+  
+ if and only if 
+  
+    
+      
+        f
+        ≤
+        p
+        .
+      
+    
+    {\displaystyle f\leq p.}
+  
+
+If 
+  
+    
+      
+        f
+        :
+        X
+        →
+        
+          F
+        
+      
+    
+    {\displaystyle f:X\to \mathbb {F} }
+  
+ is a linear functional and 
+  
+    
+      
+        U
+        ⊆
+        X
+      
+    
+    {\displaystyle U\subseteq X}
+  
+ is a non-empty subset, then by defining the sets 
+
+  
+    
+      
+        f
+        (
+        U
+        )
+        :=
+        {
+        f
+        (
+        u
+        )
+        :
+        u
+        ∈
+        U
+        }
+        
+        
+           and 
+        
+        
+        
+          |
+        
+        f
+        (
+        U
+        )
+        
+          |
+        
+        :=
+        {
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        :
+        u
+        ∈
+        U
+        }
+        ,
+      
+    
+    {\displaystyle f(U):=\{f(u):u\in U\}\quad {\text{ and }}\quad |f(U)|:=\{|f(u)|:u\in U\},}
+  
+
+the supremum 
+  
+    
+      
+        
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        
+      
+    
+    {\displaystyle \,\sup _{u\in U}|f(u)|\,}
+  
+ can be written more succinctly as 
+  
+    
+      
+        
+        sup
+        
+          |
+        
+        f
+        (
+        U
+        )
+        
+          |
+        
+        
+      
+    
+    {\displaystyle \,\sup |f(U)|\,}
+  
+ because
+
+  
+    
+      
+        sup
+        
+          |
+        
+        f
+        (
+        U
+        )
+        
+          |
+        
+         
+        =
+         
+        sup
+        {
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        :
+        u
+        ∈
+        U
+        }
+         
+        =
+         
+        
+          sup
+          
+            u
+            ∈
+            U
+          
+        
+        
+          |
+        
+        f
+        (
+        u
+        )
+        
+          |
+        
+        .
+      
+    
+    {\displaystyle \sup |f(U)|~=~\sup\{|f(u)|:u\in U\}~=~\sup _{u\in U}|f(u)|.}
+  
+
+If 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ is a scalar then
+
+  
+    
+      
+        sup
+        
+          |
+        
+        f
+        (
+        s
+        U
+        )
+        
+          |
+        
+         
+        =
+         
+        
+          |
+        
+        s
+        
+          |
+        
+        sup
+        
+          |
+        
+        f
+        (
+        U
+        )
+        
+          |
+        
+      
+    
+    {\displaystyle \sup |f(sU)|~=~|s|\sup |f(U)|}
+  
+
+so that if 
+  
+    
+      
+        r
+        >
+        0
+      
+    
+    {\displaystyle r>0}
+  
+ is a real number and 
+  
+    
+      
+        
+          B
+          
+            ≤
+            r
+          
+        
+        :=
+        {
+        c
+        ∈
+        
+          F
+        
+        :
+        
+          |
+        
+        c
+        
+          |
+        
+        ≤
+        r
+        }
+      
+    
+    {\displaystyle B_{\leq r}:=\{c\in \mathbb {F} :|c|\leq r\}}
+  
+ is the closed ball of radius 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ centered at the origin then the following are equivalent:
+
+  
+    
+      
+        f
+        (
+        U
+        )
+        ⊆
+        
+          B
+          
+            ≤
+            1
+          
+        
+      
+    
+    {\textstyle f(U)\subseteq B_{\leq 1}}
+  
+
+  
+    
+      
+        sup
+        
+          |
+        
+        f
+        (
+        U
+        )
+        
+          |
+        
+        ≤
+        1
+      
+    
+    {\textstyle \sup |f(U)|\leq 1}
+  
+
+  
+    
+      
+        sup
+        
+          |
+        
+        f
+        (
+        r
+        U
+        )
+        
+          |
+        
+        ≤
+        r
+      
+    
+    {\textstyle \sup |f(rU)|\leq r}
+  
+
+  
+    
+      
+        f
+        (
+        r
+        U
+        )
+        ⊆
+        
+          B
+          
+            ≤
+            r
+          
+        
+        .
+      
+    
+    {\textstyle f(rU)\subseteq B_{\leq r}.}

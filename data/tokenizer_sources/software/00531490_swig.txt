@@ -1,0 +1,47 @@
+The Simplified Wrapper and Interface Generator (SWIG) is an open-source software tool used to connect computer programs or libraries written in C or C++ with scripting languages such as Lua, Perl, PHP, Python, R, Ruby, Tcl, and other language implementations like C#, Java, JavaScript, Go, D, OCaml, Octave, Scilab and Scheme. Output can also be in the form of XML.
+
+Function
+
+The aim is to allow the calling of native functions (that were written in C or C++) by other programming languages, passing complex data types to those functions, keeping memory from being inappropriately freed, inheriting object classes across languages, etc. The programmer writes an interface file containing a list of C/C++ functions to be made visible to an interpreter. SWIG will compile the interface file and generate code in regular C/C++ and the target programming language. SWIG will generate conversion code for functions with simple arguments; conversion code for complex types of arguments must be written by the programmer. The SWIG tool creates source code that provides the glue between C/C++ and the target language.  Depending on the language, this glue comes in three forms:
+
+a shared library that an extant interpreter can link to as some form of extension module, or
+a shared library that can be linked to other programs compiled in the target language (for example, using Java Native Interface (JNI) in Java).
+a shared dynamic library source code that should be compiled and dynamically loaded (e.g. Node.js native extensions)
+SWIG is not used for calling interpreted functions by native code; this must be done by the programmer manually.
+
+Example
+SWIG wraps simple C declarations by creating an interface that closely matches the way in which the declarations would be used in a C program. For example, consider the following interface file:
+
+In this file, there are two functions sin() and strcmp(), a global variable Foo, and two constants STATUS and VERSION. When SWIG creates an extension module, these declarations are accessible as scripting language functions, variables, and constants respectively. In Python:
+
+Purpose
+There are two main reasons to embed a scripting engine in an existing C/C++ program:
+
+The program can then be customized far faster, via a scripting language instead of C/C++. The scripting engine may even be exposed to the end-user, so that they can automate common tasks by writing scripts.
+Even if the final product is not to contain the scripting engine, it may nevertheless be very useful for writing test scripts.
+There are several reasons to create dynamic libraries that can be loaded into extant interpreters, including:
+
+Provide access to a C/C++ library which has no equivalent in the scripting language.
+Write the whole program in the scripting language first, and after profiling, rewrite performance-critical code in C or C++.
+
+History
+SWIG is written in C and C++ and has been publicly available since February 1996. The initial author and main developer was David M. Beazley who developed SWIG while working as a graduate student at Los Alamos National Laboratory and the University of Utah and while on the faculty at the University of Chicago. Development is currently supported by an active group of volunteers led by William Fulton. SWIG has been released under a GNU General Public License.
+
+Google Summer of Code
+SWIG was a successful participant of Google Summer of Code in 2008, 2009, 2012. In 2008, SWIG got four slots. Haoyu Bai spent his summers on SWIG's Python 3.0 Backend, Jan Jezabek worked on Support for generating COM wrappers, Cheryl Foil spent her time on Comment 'Translator' for SWIG, and Maciej Drwal worked on a C backend.
+In 2009, SWIG again participated in Google Summer of Code. This time four students participated. Baozeng Ding worked on a Scilab module. Matevz Jekovec spent time on C++0x features. Ashish Sharma spent his summer on an Objective-C module, Miklos Vajna spent his time on PHP directors.
+In 2012, SWIG participated in Google Summer of Code. This time four out of five students successfully completed the project. Leif Middelschulte worked on a C target language module. Swati Sharma enhanced the Objective-C module. Neha Narang added the new module on JavaScript. Dmitry Kabak worked on source code documentation and Doxygen comments.
+
+Alternatives
+For Python, similar functionality is offered by SIP, Pybind11, and Boost's Boost.python library.
+
+Projects using SWIG
+ZXID (Apache License, Version 2.0)
+Symlabs SFIS (commercial)
+LLDB
+GNU Radio up to (including) version 3.8.x.x; later versions use Pybind11
+Xapian
+TensorFlow
+Apache SINGA
+QuantLib
+Babeltrace

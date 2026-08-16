@@ -1,0 +1,143 @@
+Multi-memory controllers or memory management controllers (MMC) are different kinds of special chips designed by various video game developers for use in Nintendo Entertainment System (NES) cartridges. These chips extend the capabilities of the original console and make it possible to create NES games with features the original console cannot offer alone. The basic NES hardware supports only 40KB of ROM total, up to 32KB PRG and 8KB CHR, thus only a single tile and sprite table are possible. This limit was rapidly reached within the Famicom's first two years on the market and game developers began requesting a way to expand the console's capabilities.
+In the emulation and Homebrew community, these chips are also known as mappers.
+
+List of MMC chips
+
+CNROM
+Manufacturer: Nintendo
+Games: Gradius, Ghostbusters, Gyruss, Arkanoid
+CNROM is the earliest banking hardware introduced on the Famicom--the first game to use it was Ninja Jajamaru-kun, which was released in late 1985. It consists of a single 7400 series discrete logic chip. CNROM supports a single fixed PRG bank and up to eight CHR banks for 96KB total ROM. Some third party variations supported additional capabilities. The vast majority of CNROM games have 32k CHR ROM however some have 16k CHR ROM. Three games (Ninja Jajamaru-kun, Joust, and City Connection (J)) have 16k PRG ROM and 16k CHR ROM. A few Famicom CNROM games incorporated a weak copy protection consisting of a diode setup designed to prevent access to the CHR data if the game detected that it was running in RAM instead of ROM. Most CNROM games put the game's level data in unused portions of the CHR ROM and blank the PPU to read it; this frees up PRG ROM space for additional game logic or other data.
+
+UNROM
+Manufacturer: Nintendo
+Games: Pro Wrestling, Ikari Warriors, Mega Man, Contra, Castlevania
+Early NES mappers are composed of 7400 series discrete logic chips. UNROM appeared in late 1986. It supports a single fixed 16KB PRG bank, the rest of the PRG being switchable. Instead of a dedicated ROM chip to hold graphics data (called CHR by Nintendo), games using UNROM store graphics data in the program ROM and copy it to a RAM on the cartridge at run time. This allows for effects such as animated tiles or graphics transformations, and it requires fewer total tiles than CHR ROM games as the latter often have to duplicate tiles between banks. However some of the PRG ROM will have to be used to hold the graphics, leaving less room for code or other data. The vast majority of UNROM games have 128k PRG ROM, a few such as Paperboy 2 use 256k. A single game, Crazy Climber, has the fixed PRG bank at $8000-$BFFF instead of the normal $C000-$FFFF in order to support PCM channel samples.
+
+MMC1
+
+Manufacturer: Nintendo
+Games: The Legend of Zelda, Mega Man 2, Metroid, Godzilla: Monster of Monsters!, Teenage Mutant Ninja Turtles, and more.
+The MMC1 is Nintendo's first custom MMC integrated circuit to incorporate support for PRG RAM, battery-backed saves, and multi-directional scrolling configurations. It is the most widely used first party mapper and there are more variants of MMC1 cartridge boards than any other type. Maximum memory capacity is 512k of PRG ROM and 128k of CHR ROM. Optionally CHR RAM may be used in which case the graphics are stored in the PRG ROM and copied to CHR RAM as needed.
+The chip comes in at least five different versions: MMC1A, MMC1B1, MMC1B2, MMC1B3 and MMC1C. The differences between the different versions are slight, mostly owing to save game memory protection behavior. The MMC1 chip allows for switching of different memory banks. Program ROM can be selected in 16KB or 32KB chunks, and character ROM can be selected in 4KB or 8KB chunks. An unusual feature of this memory controller is that its input is serial, rather than parallel, so 5 sequential writes (with bit shifting) are needed to send a command to the circuit. MMC1 does not have the ability to disable write access to the PRG RAM so games that use a battery save would require the Reset button to be held down at power off to avoid possible corruption of the save data. The chip's registers are accessed serially so several writes are required and consequently switching ROM banks on MMC1 is slow.
+
+MMC2
+Manufacturer: Nintendo
+Games: Mike Tyson's Punch-Out!!
+The MMC2 is only used in  Mike Tyson's Punch-Out!! and the later rerelease which replaced Mike Tyson. A single 8KB bank of program ROM can be selected (with the remaining 24KB locked) and character ROM can be selected in two pairs of 4KB banks, which would be automatically switched when the video hardware attempts to load particular graphic tiles from memory, thus allowing a larger amount of graphics to be used on the screen without the need for the game itself to manually switch them.
+
+MMC3
+
+Manufacturer: Nintendo
+Games: Mega Man 3, 4, 5, 6, Super Mario Bros. 2NA/EU, Super Mario Bros. 3, Kirby's Adventure, and more.
+The MMC3 was introduced in 1988 and 8 Eyes is the first game it was used in. It adds an IRQ timer to allow split screen scrolling without the sacrifice of sprite 0, along with two selectable 8KB program ROM banks and two 2KB+four 1KB selectable character ROM banks, which allows easy instant swapping of sprite and tile data. 8KB of save game RAM is supported. Maximum ROM capacity is 512k PRG and 256k CHR. The single screen mirroring mode from MMC1 is not present. The MMC3 supports disabling write access to the PRG RAM so that it is unnecessary to hold Reset down at power off to prevent data loss in games that use a battery backed save. MMC3 registers only require two writes to access so it can switch ROM banks faster than MMC1. There were two different MMC3 variants manufactured by Sharp and NEC; the NEC chips only support a single IRQ while the Sharp ones allow one every eight rows of screen.
+
+MMC4
+Manufacturer: Nintendo
+Games: Fire Emblem, Fire Emblem Gaiden, and Famicom Wars
+This chip is only used in three games, all of which were released only for the Famicom in Japan, and were developed by Intelligent Systems. Functionally, it is nearly identical to the MMC2, with the only difference being that the MMC4 switches program ROM in 16KB banks instead of 8KB banks and has support for a battery-backed SRAM to save game data.
+
+MMC5
+Manufacturer: Nintendo
+Games: Castlevania III: Dracula's CurseNA/EU, Just Breed, Metal Slader Glory, Laser Invasion, Uchuu Keibitai SDF, Nobunaga's Ambition II, Nobunaga no Yabou - Sengoku Gunyuu Den, Bandit Kings of Ancient China, Romance of the Three Kingdoms II, Uncharted Waters, Genghis Khan II: Clan of the Gray Wolf, Gemfire, L'Empereur, Ishin no Arashi, Shin 4 Nin Uchi Mahjong - Yakuman Tengoku
+The MMC5 is Nintendo's most advanced MMC. It was originally also the most expensive. Only Koei used this chip regularly. It is similar to Konami's VRC6, but interrupt handling works differently. The chip has 1KB of extra RAM, two extra square wave sound channels, one extra PCM sound channel, support for vertical split screen scrolling, improved graphics capabilities (making 16,384 different tiles available per screen rather than only 256, and allowing each individual 8x8-pixel background tile to have its own color assignment instead of being restricted to one color set per 2x2 tile group), highly configurable program ROM and character ROM bank switching, and a scanline-based IRQ counter. The MMC5 supports up to 2MB total ROM, however no commercially released game exceeded 1MB.
+
+MMC6
+Manufacturer: Nintendo
+Games: StarTropics, Zoda's Revenge: StarTropics II
+The MMC6 is similar to the MMC3, with an additional 1 KB of RAM which can be saved with battery backup.
+
+Famicom Disk System
+Manufacturer: Nintendo
+Games: Akumajo Dracula, Arumana no Kiseki, Ai Senshi Nicol, Big Challenge! Dogfight Spirit, Bio Miracle Bokutte Upa, CrackoutJP, Double DribbleJP, Dracula II, Falsion, Famicom Tantei Club Part II: Ushiro ni Tatsu Shōjo, Kid IcarusJP, KiKi KaiKai, Meikyuu Jiin Dababa, MetroidJP, Pro WrestlingJP, Relics - Ankoku Yousai, Risa no Yōsei Densetsu, Shin Onigashima, Super Mario Bros. 2JP, The Legend of Zelda (FDS release), The Mysterious Murasame Castle, Vs. Excitebike, Yūyūki, Zelda II: The Adventure of LinkJP, and more.
+The Famicom Disk System's ASIC is an extended audio chip, which supports one channel of single-cycle (6-bit × 64 step) wavetable-lookup synthesis with a built in phase modulator (PM) for sound generation similar to that of frequency modulation synthesis. Some cartridge conversions of Disk System games have MMCs to replace the audio channel.
+
+AOROM
+Manufacturer: Nintendo
+Games: Battletoads, Wizards & Warriors, Cobra Triangle, Jeopardy!
+The A*ROM MMC, named after the AMROM, ANROM, and AOROM cartridge boards that use it, was developed by Chris Stamper of Rare, and manufactured by Nintendo. It is found in games developed by Rare for Nintendo, Tradewest, GameTek, Acclaim, and Milton Bradley. It allows the PRG ROM to be switched in a single 32KB piece and uses CHR RAM for up to 256KB total ROM. Unlike other chips, it uses one screen mirroring.
+
+Third-party chips
+Several Japanese manufacturers produced their own Famicom cartridges, PCBs, and mappers, including Konami, Sunsoft, Jaleco, Irem, Bandai, and Namco. Nintendo had tighter control of NES cartridge manufacturing--third parties could only use their own hardware if they had the standard gray NES cartridge shell and included the 10NES lockout chip and consequently most did not do so for cost reasons, opting instead to simply purchase Nintendo's hardware. Acclaim, Konami, and Tengen manufactured their own cartridge PCBs and used third-party mappers as did Sunsoft for a single game (Batman: Return of the Joker).
+
+VRC1
+Manufacturer: Konami, Jaleco (SS8805)
+Games: Exciting Boxing, Ganbare Goemon! Karakuri Douchuu, Jajamaru Ninpouchou, King Kong 2: Ikari no Megaton Punch, Moero!! Junior Basket: Two on Two, Tetsuwan Atom
+
+VRC2
+Manufacturer: Konami
+Games: ContraJP, Tiny Toon AdventuresJP, Akumajō Special: Boku Dracula-kun
+The VRC2 is a chip from Konami that allows program ROM to be switched in 8KB banks, and character ROM to be switched in 1KB banks. This MMC has two known revisions: VRC2a and VRC2b.
+
+VRC3
+Manufacturer: Konami
+Games: SalamanderJP
+Exclusively used in the Japanese version of Salamander.
+
+VRC4
+
+Manufacturer: Konami
+Games: Gradius IIJP, Crisis Force, Bio Miracle:Boku tte Upa, Ganbare Goemon Gaiden 2, WaiWai World, WaiWai World 2, Twinbee 3
+The VRC4 Chip is similar to the VRC2 chip, other than the VRC4 allowing for 512KB CHR capacity, 2 8KB PRG ROM banking modes and 1 screen mirroring.
+
+VRC5
+Manufacturer: Konami
+Games: Space SchoolJP
+Exclusively used in the QTa adapter in Konami's Space School series of educational games.
+
+VRC6
+
+Manufacturer: Konami
+Games: Akumajō Densetsu, Mōryō Senki MADARA, Esper Dream 2: Aratanaru Tatakai
+The VRC6 (Virtual Rom Controller) is an advanced MMC chip from Konami, supporting bank switching for both program code and graphics as well as a CPU cycle–based IRQ counter, which can also act as a scanline counter. The chip also contains support for three extra sound channels (two square waves of eight duty cycles each, which can be configured to play PCM samples using 100% duty cycle, and one sawtooth wave). It is used in Akumajō Densetsu, the Japanese version of Castlevania III: Dracula's Curse, while the Western version uses the MMC5 from Nintendo. Since the Nintendo Entertainment System by design does not allow cartridges to add additional sound channels, the Famicom version's soundtrack was reworked to follow those specifications; the soundtrack for the Western version utilizes the five stock sound channels built into the NES.
+
+VRC7
+
+Manufacturer: Konami, Yamaha
+Games: Lagrange Point, Tiny Toon Adventures 2: Trouble in WackylandJP
+The VRC7 is an advanced MMC chip from Konami, supporting bank switching and IRQ counting equivalent to the VRC6, as well as containing a YM2413 derivative providing 6 channels of 2-op FM synthesis. The advanced audio hardware is used only in the Famicom game Lagrange Point. The Japanese version of Tiny Toon Adventures 2 also uses the VRC7 but does not take advantage of the extended audio. A disadvantage of the extended audio portion is that it produces some quantization noise, noticeable at lower notes. This was a carryover from the YM2413, which the VRC7's FM chip is based on.
+
+Bandai FCG-2
+Manufacturer: Bandai
+Games: Dragon Ball: Dai Maou Fukkatsu, Dragon Ball 3: Gokuu Den, Famicom Jump: Eiyuu Retsuden
+The FCG-1 or 2 are similar to MMC3 in capability. They have optional support for Bandai's Datach system or a small serial SRAM of 128 or 256 byte capacity that is indirectly accessed through the mapper registers and is not directly visible to the Famicom's CPU.
+
+Namco 109
+Manufacturer: Namco
+Games: Family Stadium, Mappy Land, Gauntlet, Ring King
+The 109 was one of the few non-Nintendo mappers to appear in NES cartridges. It was similar to MMC1 but could address a much smaller amount of memory and was capable of 8kb PRG banking and 1kb CHR banking.
+
+Namco 163
+Manufacturer: Namco
+Games: Erika to Satoru no Yume Bōken, Final Lap, King of Kings, Mappy Kids, Digital Devil Story: Megami Tensei II, Namco Classic II, Romance of the Three Kingdoms, Romance of the Three Kingdoms II, Yokai Dochuki, Rolling ThunderJP, Top Striker
+The 163 has been only used in games exclusive to Japan. Its capabilities were a little better than Nintendo's MMC3. A variant contained extra sound hardware that plays 4-bit wave samples. It supports 1 to 8 extra sound channels, but audible aliasing appears when a sufficiently large number of channels are enabled due to the increasingly audible time-division multiplexing.
+
+FME-7
+Manufacturer: Sunsoft
+Games: Batman: Return of the Joker, Hebereke, and more.
+The FME-7 is a memory mapping circuit developed by Sunsoft for use in NES and Famicom cartridges. It switches program ROM in 8KB banks and switches the character ROM 1KB banks. It also contains hardware to generate IRQ signals after a specified number of CPU clock cycles, thus achieving split-screen effects with minimal use of processing power.
+
+SUNSOFT-4
+
+Manufacturer: Sunsoft
+
+SUNSOFT 5B
+Manufacturer: Sunsoft
+Games: Gimmick!
+This version of the FME-7 contains a variant of the widely used Yamaha YM2149 (SSG), a derivative of the popular AY-3-8910 chip.
+
+Unlicensed MMCs
+Some individual (homebrew) and unlicensed developers have made custom MMCs for the NES, most of which simply expand the available memory.
+
+228
+Manufacturer: Active Enterprises
+Games: Action 52, Cheetahmen II
+228 is a simple bank switching MMC developed for use in the games Action 52 and Cheetahmen II. It does not have a nametable control bit. In the Action 52 multicart, it also contains a small 16-bit register area that contains the old menu selection when exiting a game.
+
+GTROM
+Manufacturer: Membler Industries
+GTROM or Cheapocadabra is a self-flashable MMC developed in 2015 for the homebrew market. The board contains 512K of PRG ROM, 16K of CHR ROM, and two LEDs. While the GTROM does not contain PRG RAM, saved games are possible due to PRG ROM being flashable by NES software.
+
+MXM-1
+Manufacturer: Something Nerdy Studios
+Games: Former Dawn
+MXM-1 is a custom MMC developed in 2022 for use in the homebrew game Former Dawn. Unlike most unlicensed MMCs, it greatly expands upon the feature set of the stock NES, allowing it to use 8x1 attributes for using more colors while also featuring FMV playback, expanded audio (8 channels of PCM audio with an echo buffer, wavetable support, and smooth sinc function based interpolation) and direct access to 768M of ROM (indirectly 2.8G) and 1M of RAM.

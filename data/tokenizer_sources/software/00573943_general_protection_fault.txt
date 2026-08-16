@@ -1,0 +1,76 @@
+A general protection fault (GPF) in the x86 instruction set architectures (ISAs) is a fault (a type of interrupt) initiated by ISA-defined protection mechanisms in response to an access violation caused by some running code, either in the kernel or a user program. The mechanism is first described in Intel manuals and datasheets for the Intel 80286 CPU, which was introduced in 1983; it is also described in section 9.8.13 in the Intel 80386 programmer's reference manual from 1986. A general protection fault is implemented as an interrupt (vector number 13 (0Dh)). Some operating systems may also classify some exceptions not related to access violations, such as illegal opcode exceptions, as general protection faults, even though they have nothing to do with memory protection. If a CPU detects a protection violation, it stops executing the code and sends a GPF interrupt. In most cases, the operating system removes the failing process from the execution queue, signals the user, and continues executing other processes. If, however, the operating system fails to catch the general protection fault, i.e. another protection violation occurs before the operating system returns from the previous GPF interrupt, the CPU signals a double fault, stopping the operating system. If yet another failure (triple fault) occurs, the CPU is unable to recover; since 80286, the CPU enters a special halt state called "Shutdown", which can only be exited through a hardware reset. The IBM PC AT, the first PC-compatible system to contain an 80286, has hardware that detects the Shutdown state and automatically resets the CPU when it occurs. All descendants of the PC AT do the same, so in a PC, a triple fault causes an immediate system reset.
+
+Specific behavior
+
+Microsoft Windows
+In Microsoft Windows, the general protection fault presents with varied language, depending on product version:
+
+Windows 11 no longer displays error messages for general protection faults; if a fault occurs, the program is simply closed. 
+In Windows 95, 98 and Me, there is an alternate error message, used mostly with Windows 3.x programs: "An error has occurred in your program. To keep working anyway, click Ignore and save your work in a new file. To quit this program, click Close. You will lose information you entered since your last save." Clicking "Close" results in one of the error messages above, depending on Windows version. "Ignore" sometimes does this too.
+
+Unix
+In Linux and other Unices, the errors are reported separately (e.g. segmentation fault for memory errors).
+
+Memory errors
+In memory errors, the faulting program accesses memory that it should not access. Examples include:
+
+Attempting to write to a read-only portion of memory
+Attempting to execute bytes in memory which are not designated as instructions
+Attempting to read as data bytes in memory which are designated as instructions
+Other miscellaneous conflicts between the designation of a part of memory and its use
+However, many modern operating systems implement their memory access-control schemes via paging instead of segmentation, so it is often the case that invalid memory references in operating systems such as Windows are reported via page faults instead of general protection faults. Operating systems typically provide an abstraction layer (such as exception handling or signals) that hides whatever internal processor mechanism was used to raise a memory access error from a program, for the purposes of providing a standard interface for handling many different types of processor-generated error conditions.
+In terms of the x86 architecture, general protection faults are specific to segmentation-based protection when it comes to memory accesses.  However, general protection faults are still used to report other protection violations (aside from memory access violations) when paging is used, such as the use of instructions not accessible from the current privilege level (CPL).
+While it is theoretically possible for an operating system to utilize both paging and segmentation, for the most part, common operating systems typically rely on paging for the bulk of their memory access control needs.
+
+Privilege errors
+There are some things on a computer which are reserved for the exclusive use of the operating system. If a program which is not part of the operating system attempts to use one of these features, it may cause a general protection fault.
+Additionally, there are storage locations which are reserved both for the operating system and the processor itself. As a consequence of their reservation, they are read-only and an attempt to write data to them by an unprivileged program produces  an error.
+
+Technical causes for faults
+General protection faults are raised by the processor when a protected instruction is encountered which exceeds the permission level of the currently executing task, either because a user-mode program is attempting a protected instruction, or because the operating system has issued a request which would put the processor into an undefined state.
+General protection faults are caught and handled by modern operating systems. Generally, if the fault originated in a user-mode program, the user-mode program is terminated. If, however, the fault originated in a core system driver or the operating system itself, the operating system usually saves diagnostic information either to a file or to the screen and stops operating. It either restarts the computer or displays an error screen, such as a Blue Screen of Death or kernel panic.
+
+Segment limits exceeded
+Segment limits can be exceeded:
+
+with code segment (CS), data segment (DS), or ES, FS, or GS (extra segment) registers; or
+accessing descriptor tables such as the Global Descriptor Table (GDT), the Interrupt descriptor table (IDT) and the Local Descriptor Table (LDT).
+
+Segment permissions violated
+Segment permissions can be violated by:
+
+jumping to non-executable segments
+writing to code segments, or read only segments
+reading execute-only segments
+
+Segments illegally loaded
+This can occur when:
+
+a stack segment (SS) is loaded with a segment selector for a read only, executable, null segment, or segment with descriptor privilege not matching the current privilege in CS
+a code segment (CS) loaded with a segment selector for a data, system, or null segment
+SS, DS, ES, FS, or GS are segments loaded with a segment selector for a system segment
+SS, DS, ES, FS, or GS are segments loaded with a segment selector for an execute-only code segment
+accessing memory using DS, ES, FS, or GS registers, when they contain a null selector
+
+Switching
+Faults can occur in the task state segment (TSS) structure when:
+
+switching to a busy task during a call or jump instruction
+switching to an available task during an interrupt return (IRET) instruction
+using a segment selector on a switch pointing to a TSS descriptor in the LDT
+
+Miscellaneous
+Other causes of general protection faults are:
+
+attempting to access an interrupt/exception handler from virtual 8086 mode when the handler's code segment descriptor privilege level (DPL) is greater than zero
+attempting to write a one into the reserved bits of CR4
+attempting to execute privileged instructions when the current privilege level (CPL) is not zero
+attempting to execute a single instruction with a length greater than 15 bytes (possibly by prepending the instruction with superfluous prefixes)
+writing to a reserved bit in an MSR instruction
+accessing a gate containing a null segment selector
+executing a software interrupt when the CPL is greater than the DPL set for the interrupt gate
+the segment selector in a call, interrupt or trap gate does not point to a code segment
+violating privilege rules
+enabling paging whilst disabling protection
+referencing the interrupt descriptor table following an interrupt or exception that is not an interrupt, trap, or a task gate
+Legacy SSE: Memory operand is not 16-byte aligned.

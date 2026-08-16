@@ -1,0 +1,16 @@
+ZeroNet is a decentralized web-like network of peer-to-peer users, created by Tamas Kocsis in 2015. The programming for the network was based in Budapest, Hungary. It is built in Python and fully open source. Instead of having an IP address, sites are identified by a public key (specifically a bitcoin address). The private key allows the owner of a site to sign and publish changes, which propagate through the network. Sites can be accessed through an ordinary web browser when using the ZeroNet application, which acts as a local webhost for such pages. In addition to using bitcoin cryptography, ZeroNet uses trackers from the BitTorrent network to negotiate connections between peers. ZeroNet is not anonymous by default, but it supports routing traffic through the Tor network.
+The ZeroNet website and bittorrent tracker are blocked in mainland China. Despite the censorship, however, it is still possible to access ZeroNet from behind the Great Firewall of China, even over Tor, by bootstrapping over Meek, and connecting to peers directly.
+There is no way to take down a ZeroNet page which still has seeders, thus making such pages immune to most third-party methods of taking them down, including DMCA takedown notices.
+
+Hiatus and forks
+
+Development has stopped for several months after stable release of v0.7.1 on GitHub. The zeronet-conservancy fork maintains existing codebase and adds features aimed at gradually migrating to a new p2p network designed from scratch
+
+Development of the network
+
+The feasibility of peer-to-peer online web-sites had been hypothesised for some time, with The Pirate Bay suggesting they would build a network, as well as BitTorrent Inc. which created the closed-source Project Maelstrom.
+Sites on ZeroNet are known as "zites" by its users.
+ZeroNet supports HTML, CSS and JavaScript.
+Server-side languages like PHP are not supported, although ZeroNet creates and gives API to interact with SQLite databases, their data also distributed (as JSON files) via P2P.
+By default, sites have a size limit of 10 megabytes, but users may grant a site permission to use more storage space if they wish.
+With plugins and the ZeroFrame API, sites can communicate with ZeroNet calling Python by JavaScript.

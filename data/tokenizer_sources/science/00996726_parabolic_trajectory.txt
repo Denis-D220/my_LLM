@@ -1,0 +1,910 @@
+In astrodynamics or celestial mechanics a parabolic trajectory is a Kepler orbit with the eccentricity (e) equal to 1 and is an unbound orbit that is exactly on the border between elliptical and hyperbolic. When moving away from the source it is called an escape orbit, otherwise a capture orbit. It is also sometimes referred to as a 
+  
+    
+      
+        
+          C
+          
+            3
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle C_{3}=0}
+  
+ orbit (see characteristic energy).
+Under standard assumptions a body traveling along an escape orbit will coast along a parabolic trajectory to infinity, with velocity relative to the central body tending to zero, and therefore will never return. Parabolic trajectories are minimum-energy escape trajectories, separating positive-energy hyperbolic trajectories from negative-energy elliptic orbits.
+
+History
+In 1609, Galileo wrote in his 102nd folio (MS. Gal 72) about parabolic trajectory calculations, later found in Discorsi e dimostrazioni matematiche intorno a due nuove scienze as projectiles impetus.
+
+Velocity
+The orbital velocity (
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+) of a body travelling along a parabolic trajectory can be computed as:
+
+  
+    
+      
+        v
+        =
+        
+          
+            
+              
+                2
+                μ
+              
+              r
+            
+          
+        
+      
+    
+    {\displaystyle v={\sqrt {2\mu  \over r}}}
+  
+
+where:
+
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is the radial distance of the orbiting body from the central body,
+
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ is the standard gravitational parameter.
+At any position the orbiting body has the escape velocity for that position.
+If a body has an escape velocity with respect to the Earth, this is not enough to escape the Solar System, so near the Earth the orbit resembles a parabola, but further away it bends into an elliptical orbit around the Sun.
+This velocity (
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+) is closely related to the orbital velocity of a body in a circular orbit of the radius equal to the radial position of orbiting body on the parabolic trajectory:
+
+  
+    
+      
+        v
+        =
+        
+          
+            2
+          
+        
+        
+        
+          v
+          
+            o
+          
+        
+      
+    
+    {\displaystyle v={\sqrt {2}}\,v_{o}}
+  
+
+where:
+
+  
+    
+      
+        
+          v
+          
+            o
+          
+        
+      
+    
+    {\displaystyle v_{o}}
+  
+ is orbital velocity of a body in circular orbit.
+
+Equation of motion
+For a body moving along this kind of trajectory the orbital equation is:
+
+  
+    
+      
+        r
+        =
+        
+          
+            
+              h
+              
+                2
+              
+            
+            μ
+          
+        
+        
+          
+            1
+            
+              1
+              +
+              cos
+              ⁡
+              ν
+            
+          
+        
+      
+    
+    {\displaystyle r={h^{2} \over \mu }{1 \over {1+\cos \nu }}}
+  
+
+where:
+
+  
+    
+      
+        r
+        
+      
+    
+    {\displaystyle r\,}
+  
+ is the radial distance of the orbiting body from the central body,
+
+  
+    
+      
+        h
+        
+      
+    
+    {\displaystyle h\,}
+  
+ is the specific angular momentum of the orbiting body,
+
+  
+    
+      
+        ν
+        
+      
+    
+    {\displaystyle \nu \,}
+  
+ is the true anomaly of the orbiting body,
+
+  
+    
+      
+        μ
+        
+      
+    
+    {\displaystyle \mu \,}
+  
+ is the standard gravitational parameter.
+
+Energy
+Under standard assumptions, the specific orbital energy (
+  
+    
+      
+        ϵ
+      
+    
+    {\displaystyle \epsilon }
+  
+) of a parabolic trajectory is zero, so the orbital energy conservation equation for this trajectory takes the form:
+
+  
+    
+      
+        ϵ
+        =
+        
+          
+            
+              v
+              
+                2
+              
+            
+            2
+          
+        
+        −
+        
+          
+            μ
+            r
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle \epsilon ={v^{2} \over 2}-{\mu  \over r}=0}
+  
+
+where:
+
+  
+    
+      
+        v
+        
+      
+    
+    {\displaystyle v\,}
+  
+ is the orbital velocity of the orbiting body,
+
+  
+    
+      
+        r
+        
+      
+    
+    {\displaystyle r\,}
+  
+ is the radial distance of the orbiting body from the central body,
+
+  
+    
+      
+        μ
+        
+      
+    
+    {\displaystyle \mu \,}
+  
+ is the standard gravitational parameter.
+This is entirely equivalent to the characteristic energy (square of the speed at infinity) being 0:
+
+  
+    
+      
+        
+          C
+          
+            3
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle C_{3}=0}
+  
+
+Barker's equation
+Barker's equation relates the time of flight 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ to the true anomaly 
+  
+    
+      
+        ν
+      
+    
+    {\displaystyle \nu }
+  
+ of a parabolic trajectory:
+
+  
+    
+      
+        t
+        −
+        T
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          
+            
+              
+                p
+                
+                  3
+                
+              
+              μ
+            
+          
+        
+        
+          (
+          
+            D
+            +
+            
+              
+                1
+                3
+              
+            
+            
+              D
+              
+                3
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle t-T={\frac {1}{2}}{\sqrt {\frac {p^{3}}{\mu }}}\left(D+{\frac {1}{3}}D^{3}\right)}
+  
+
+where:
+
+  
+    
+      
+        D
+        =
+        tan
+        ⁡
+        
+          
+            ν
+            2
+          
+        
+      
+    
+    {\displaystyle D=\tan {\frac {\nu }{2}}}
+  
+ is an auxiliary variable
+
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is the time of periapsis passage
+
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ is the standard gravitational parameter
+
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is the semi-latus rectum of the trajectory, given by 
+  
+    
+      
+        p
+        =
+        
+          h
+          
+            2
+          
+        
+        
+          /
+        
+        μ
+      
+    
+    {\displaystyle p=h^{2}/\mu }
+  
+
+More generally, the time (epoch) between any two points on an orbit is 
+
+  
+    
+      
+        
+          t
+          
+            f
+          
+        
+        −
+        
+          t
+          
+            0
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          
+            
+              
+                p
+                
+                  3
+                
+              
+              μ
+            
+          
+        
+        
+          (
+          
+            
+              D
+              
+                f
+              
+            
+            +
+            
+              
+                1
+                3
+              
+            
+            
+              D
+              
+                f
+              
+              
+                3
+              
+            
+            −
+            
+              D
+              
+                0
+              
+            
+            −
+            
+              
+                1
+                3
+              
+            
+            
+              D
+              
+                0
+              
+              
+                3
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle t_{f}-t_{0}={\frac {1}{2}}{\sqrt {\frac {p^{3}}{\mu }}}\left(D_{f}+{\frac {1}{3}}D_{f}^{3}-D_{0}-{\frac {1}{3}}D_{0}^{3}\right)}
+  
+
+Alternately, the equation can be expressed in terms of periapsis distance, in a parabolic orbit 
+  
+    
+      
+        
+          r
+          
+            p
+          
+        
+        =
+        p
+        
+          /
+        
+        2
+      
+    
+    {\displaystyle r_{p}=p/2}
+  
+:
+
+  
+    
+      
+        t
+        −
+        T
+        =
+        
+          
+            
+              
+                2
+                
+                  r
+                  
+                    p
+                  
+                  
+                    3
+                  
+                
+              
+              μ
+            
+          
+        
+        
+          (
+          
+            D
+            +
+            
+              
+                1
+                3
+              
+            
+            
+              D
+              
+                3
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle t-T={\sqrt {\frac {2r_{p}^{3}}{\mu }}}\left(D+{\frac {1}{3}}D^{3}\right)}
+  
+
+Unlike Kepler's equation, which is used to solve for true anomalies in elliptical and hyperbolic trajectories, the true anomaly in Barker's equation can be solved directly for 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+. If the following substitutions are made
+
+  
+    
+      
+        
+          
+            
+              
+                A
+              
+              
+                
+                =
+                
+                  
+                    3
+                    2
+                  
+                
+                
+                  
+                    
+                      μ
+                      
+                        2
+                        
+                          r
+                          
+                            p
+                          
+                          
+                            3
+                          
+                        
+                      
+                    
+                  
+                
+                (
+                t
+                −
+                T
+                )
+              
+            
+            
+              
+                B
+              
+              
+                
+                =
+                
+                  
+                    
+                      A
+                      +
+                      
+                        
+                          
+                            A
+                            
+                              2
+                            
+                          
+                          +
+                          1
+                        
+                      
+                    
+                    
+                      3
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}A&={\frac {3}{2}}{\sqrt {\frac {\mu }{2r_{p}^{3}}}}(t-T)\\[3pt]B&={\sqrt[{3}]{A+{\sqrt {A^{2}+1}}}}\end{aligned}}}
+  
+
+then
+
+  
+    
+      
+        ν
+        =
+        2
+        arctan
+        ⁡
+        
+          (
+          
+            B
+            −
+            
+              
+                1
+                B
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \nu =2\arctan \left(B-{\frac {1}{B}}\right)}
+  
+
+With hyperbolic functions the solution can be also expressed as:
+
+  
+    
+      
+        ν
+        =
+        2
+        arctan
+        ⁡
+        
+          (
+          
+            2
+            sinh
+            ⁡
+            
+              
+                
+                  
+                    a
+                    r
+                    c
+                    s
+                    i
+                    n
+                    h
+                  
+                  
+                    
+                      
+                        3
+                        M
+                      
+                      2
+                    
+                  
+                
+                3
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \nu =2\arctan \left(2\sinh {\frac {\mathrm {arcsinh} {\frac {3M}{2}}}{3}}\right)}
+  
+
+where
+
+  
+    
+      
+        M
+        =
+        
+          
+            
+              μ
+              
+                2
+                
+                  r
+                  
+                    p
+                  
+                  
+                    3
+                  
+                
+              
+            
+          
+        
+        (
+        t
+        −
+        T
+        )
+      
+    
+    {\displaystyle M={\sqrt {\frac {\mu }{2r_{p}^{3}}}}(t-T)}
+  
+
+Radial parabolic trajectory
+A radial parabolic trajectory is a non-periodic trajectory on a straight line where the relative velocity of the two objects is always the escape velocity. There are two cases: the bodies move away from each other or towards each other.
+There is a rather simple expression for the position as function of time:
+
+  
+    
+      
+        r
+        =
+        
+          
+            
+              
+                
+                  9
+                  2
+                
+              
+              μ
+              
+                t
+                
+                  2
+                
+              
+            
+            
+              3
+            
+          
+        
+      
+    
+    {\displaystyle r={\sqrt[{3}]{{\frac {9}{2}}\mu t^{2}}}}
+  
+
+where 
+
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ is the standard gravitational parameter
+
+  
+    
+      
+        t
+        =
+        0
+        
+        
+      
+    
+    {\displaystyle t=0\!\,}
+  
+ corresponds to the extrapolated time of the fictitious starting or ending at the center of the central body.
+At any time the average speed from 
+  
+    
+      
+        t
+        =
+        0
+        
+        
+      
+    
+    {\displaystyle t=0\!\,}
+  
+ is 1.5 times the current speed, i.e. 1.5 times the local escape velocity.
+To have 
+  
+    
+      
+        t
+        =
+        0
+        
+        
+      
+    
+    {\displaystyle t=0\!\,}
+  
+ at the surface, apply a time shift; for the Earth (and any other spherically symmetric body with the same average density) as central body this time shift is 6 minutes and 20 seconds; seven of these periods later the height above the surface is three times the radius, etc.

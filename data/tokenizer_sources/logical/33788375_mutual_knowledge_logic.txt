@@ -1,0 +1,283 @@
+Mutual knowledge is a fundamental concept about information in game theory, (epistemic) logic, and epistemology.  An event is mutual knowledge if all agents know that the event occurred. However, mutual knowledge by itself implies nothing about what agents know about other agents' knowledge: i.e. it is possible that an event is mutual knowledge but that each agent is unaware that the other agents know it has occurred. Common knowledge is a related but stronger notion; any event that is common knowledge is also mutual knowledge.
+The philosopher Stephen Schiffer, in his book Meaning, developed a notion he called "mutual knowledge" which functions quite similarly to David K. Lewis's "common knowledge".
+Communications (verbal or non-verbal) can turn mutual knowledge into common knowledge. For example, in the Muddy Children Puzzle with two children (Alice and Bob, 
+  
+    
+      
+        G
+        =
+        {
+        a
+        ,
+        b
+        }
+      
+    
+    {\displaystyle G=\{a,b\}}
+  
+), if they both have muddy face (viz. 
+  
+    
+      
+        
+          M
+          
+            a
+          
+        
+        ∧
+        
+          M
+          
+            b
+          
+        
+      
+    
+    {\displaystyle M_{a}\land M_{b}}
+  
+), both of them know that there is at least one muddy face. Written formally, let 
+  
+    
+      
+        p
+        =
+        [
+        ∃
+        x
+        
+        ∈
+        
+        G
+        (
+        
+          M
+          
+            x
+          
+        
+        )
+        ]
+      
+    
+    {\displaystyle p=[\exists x\!\in \!G(M_{x})]}
+  
+, and then we have 
+  
+    
+      
+        
+          K
+          
+            a
+          
+        
+        p
+        ∧
+        
+          K
+          
+            b
+          
+        
+        p
+      
+    
+    {\displaystyle K_{a}p\land K_{b}p}
+  
+. However, neither of them know that the other child knows (
+  
+    
+      
+        (
+        ¬
+        
+          K
+          
+            a
+          
+        
+        
+          K
+          
+            b
+          
+        
+        p
+        )
+        ∧
+        (
+        ¬
+        
+          K
+          
+            b
+          
+        
+        
+          K
+          
+            a
+          
+        
+        p
+        )
+      
+    
+    {\displaystyle (\neg K_{a}K_{b}p)\land (\neg K_{b}K_{a}p)}
+  
+), which makes 
+  
+    
+      
+        p
+        =
+        [
+        ∃
+        x
+        
+        ∈
+        
+        G
+        (
+        
+          M
+          
+            x
+          
+        
+        )
+        ]
+      
+    
+    {\displaystyle p=[\exists x\!\in \!G(M_{x})]}
+  
+ mutual knowledge. Now suppose if Alice tells Bob that she knows 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ (so that 
+  
+    
+      
+        
+          K
+          
+            a
+          
+        
+        p
+      
+    
+    {\displaystyle K_{a}p}
+  
+ becomes common knowledge, i.e. 
+  
+    
+      
+        
+          C
+          
+            G
+          
+        
+        
+          K
+          
+            a
+          
+        
+        p
+      
+    
+    {\displaystyle C_{G}K_{a}p}
+  
+), and then Bob tells Alice that he knows 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ as well (so that 
+  
+    
+      
+        
+          K
+          
+            b
+          
+        
+        p
+      
+    
+    {\displaystyle K_{b}p}
+  
+ becomes common knowledge, i.e. 
+  
+    
+      
+        
+          C
+          
+            G
+          
+        
+        
+          K
+          
+            b
+          
+        
+        p
+      
+    
+    {\displaystyle C_{G}K_{b}p}
+  
+), this will turn 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ into common knowledge (
+  
+    
+      
+        
+          C
+          
+            G
+          
+        
+        
+          E
+          
+            G
+          
+        
+        p
+        ⇒
+        
+          C
+          
+            G
+          
+        
+        p
+      
+    
+    {\displaystyle C_{G}E_{G}p\Rightarrow C_{G}p}
+  
+), which is equivalent to the effect of a public announcement "there is at least one muddy face".

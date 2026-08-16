@@ -1,0 +1,183 @@
+In cryptography, a public-key certificate, also known as a digital certificate or identity certificate, is an electronic document used to prove the valid attribution of a public key to the identity of its holder. The certificate includes the public key and information about it, information about the identity of its owner (called the subject), and the digital signature of an entity that has verified the certificate's contents (called the issuer).
+If the party examining the certificate trusts the issuer and finds the signature to be a valid signature of that issuer, then it can use the included public key to interact securely with the certificate's subject. In email encryption, code signing, and e-signature systems, a certificate's subject is typically a person or organization. However, in Transport Layer Security (TLS) a certificate's subject is typically a computer or other device, though TLS certificates may identify organizations or individuals in addition to their core role in identifying devices. TLS, sometimes called by its older name Secure Sockets Layer (SSL), is notable for being a part of HTTPS, a protocol for securely browsing the web.
+In a typical public-key infrastructure (PKI) scheme, the certificate issuer is a certificate authority (CA), usually a company that charges customers a fee to issue certificates for them. By contrast, in a web of trust scheme, individuals sign each other's keys directly, in a format that performs a similar function to a public-key certificate. 
+A public-key certificate is typically requested from a PKI using a CSR, which needs to be transferred using a secure certificate enrollment protocol such as CMP, EST, or ACME. The parties involved in the enrollment process must verify the authenticity, integrity, and authorization of the CSR, for which the certificate issuer bears the main responsibility.
+In case of key compromise or other situations that may lead to unauthorized use, a certificate may need to be revoked.
+The general format for public-key and attribute certificates is defined by X.509. For public-key certificates,  the format has been profiled by the IETF for Internet-related use cases, such as Public-Key Infrastructure (X.509).
+
+Chain of trust
+
+A digital certificate system provides a chain of trust, meaning most certificates can be validated against parent certificates. The chain starts with a root certificate, which serves as a trust anchor (a.k.a. root of trust). This certificate is self-signed (see below) and has no parent. The issuing certificate authority uses other methods to safeguard and validate this certificate.
+An intermediate certificate has a purpose similar to that of the root certificate – its only use is to sign other certificates. However, an intermediate certificate is not self-signed. A root certificate or another intermediate certificate needs to sign it. 
+An end-entity certificate, or leaf certificate, is any certificate that cannot sign other certificates. For instance, TLS/SSL server and client certificates, email certificates, code signing certificates, and qualified certificates are all end-entity certificates.
+
+Types of certificate
+
+TLS/SSL server certificate
+The Transport Layer Security (TLS) protocol – as well as its outdated predecessor, the Secure Sockets Layer (SSL) protocol – ensures that the communication between a client computer and a server is secure. The protocol requires the server to present a digital certificate, proving that it is the intended destination. The connecting client conducts certification path validation, ensuring that:
+
+The subject of the certificate matches the hostname (not to be confused with the domain name) to which the client is trying to connect.
+A trusted certificate authority has signed the certificate.
+The Subject field of the certificate must identify the primary hostname of the server as the Common Name. This means that the name listed in the certificate should exactly match the domain name users connect to (for example, www.example.com), ensuring that the certificate is valid for that specific hostname. The hostname must be publicly accessible, not using private addresses or reserved domains. A certificate may be valid for multiple hostnames (e.g., a domain and its subdomains). Such certificates are commonly called Subject Alternative Name (SAN) certificates or Unified Communications Certificates (UCC). These certificates contain the Subject Alternative Name field, though many CAs also put them into the Subject Common Name field for backward compatibility. If some of the hostnames contain an asterisk (*), a certificate may also be called a wildcard certificate.
+Once the certification path validation is successful, the client can establish an encrypted connection with the server.
+Internet-facing servers, such as public Web servers, must obtain their certificates from a trusted, public certificate authority (CA).
+
+TLS/SSL client certificate
+Client certificates authenticate the client connecting to a TLS service, for instance to provide access control. Because most services provide access to individuals, rather than devices, most client certificates contain an email address or personal name rather than a hostname. In addition, the certificate authority that issues the client certificate is usually the service provider to which client connects because it is the provider that needs to perform authentication.
+While most web browsers support client certificates, the most common form of authentication on the Internet is a username and password pair. Client certificates are more common in virtual private networks (VPN) and Remote Desktop Services, where they authenticate devices.
+
+Email certificate
+In accordance with the S/MIME protocol, email certificates can both establish the message integrity and encrypt messages. To establish encrypted email communication, the communicating parties must have their digital certificates in advance. Each must send the other one digitally signed email and opt to import the sender's certificate.
+Some publicly trusted certificate authorities provide email certificates, but more commonly S/MIME is used when communicating within a given organization, and that organization runs its own CA, which is trusted by participants in that email system.
+
+Self-signed certificate
+
+A self-signed certificate is a certificate with a subject that matches its issuer, and a signature that can be verified by its own public key.
+Although this type of certificate is worthless for establishing remote trust between unacquainted parties, it has full trust value when the issuer and the sole user are the same entity. As discussed above (in § Chain of trust), a root certificate is a self-signed certificate. The certificate authority, which is the sole user of the certificate, uses other means to validate and safeguard it. Another example is the Encrypting File System on Microsoft Windows, which issues a self-signed certificate on behalf of the encrypting user, and uses it to transparently decrypt data on the fly.
+
+Subject Alternative Name certificate
+
+Subject Alternative Name (SAN) certificates are an extension to X.509 that allows various values to be associated with a security certificate using a subjectAltName field. These values are called Subject Alternative Names (SANs). Names include:
+
+Email addresses
+IP addresses
+URIs
+DNS names: this is usually also provided as the Common Name RDN within the Subject field of the main certificate.
+Directory names: alternative Distinguished Names to that given in the Subject.
+Other names, given as a General Name or Universal Principal Name: a registered object identifier followed by a value.
+As of May 2000, Subject Alternative Names are the preferred method of adding DNS names to certificates. The previous method of putting DNS names in the commonName field is now deprecated. Google Chrome version 58 (March 2017) removed support for checking the commonName field at all, instead only looking at the SANs.
+As shown in the picture of Wikimedia's section on the right, the SAN field can contain wildcards. Not all vendors support or endorse mixing wildcards into SAN certificates.
+
+Wildcard certificate
+
+A public-key certificate which uses an asterisk * (the wildcard) in the domain name portion of it subject is called a Wildcard certificate.
+Through the use of *, a single certificate may be used for multiple sub-domains. It is commonly used for transport layer security in computer networking.
+For example, a single wildcard certificate for https://*.example.com will secure all these subdomains on the https://*.example.com domain:
+
+payment.example.com
+contact.example.com
+login-secure.example.com
+www.example.com
+Instead of getting separate certificates for subdomains, you can use a single certificate for all main domains and subdomains and reduce cost. 
+Because the wildcard only covers one level of subdomains (the asterisk doesn't match full stops), these domains would not be valid for the certificates:
+
+test.login.example.com
+example.com
+Note possible exceptions by CAs, for example wildcard-plus cert by DigiCert contains an automatic "Plus" property for the naked domain example.com.
+
+Limitations
+Only a single level of subdomain matching is supported.
+It is not possible to get a wildcard for an Extended Validation Certificate.  A workaround could be to add every virtual host name in the Subject Alternative Name (SAN) extension, the major problem being that the certificate needs to be reissued whenever a new virtual server is added. (See Transport Layer Security § Support for name-based virtual servers for more information.)
+Wildcards can be added as domains in multi-domain certificates or Unified Communications Certificates (UCC). In addition, wildcards themselves can have subjectAltName extensions, including other wildcards. For example, the wildcard certificate *.wikipedia.org has *.m.wikimedia.org as a Subject Alternative Name. Thus it secures www.wikipedia.org as well as the completely different website name meta.m.wikimedia.org.
+RFC 6125 argues against wildcard certificates on security grounds, in particular "partial wildcards".
+
+Further examples
+The wildcard applies only to one level of the domain name. *.example.com matches sub1.example.com but not example.com and not sub2.sub1.domain.com
+Early specifications allowed the wildcard to appear anywhere inside a label as a "partial wildcard": 
+
+f*.domain.com is OK. It will match frog.domain.com but not frog.super.domain.com
+baz*.example.net is OK and matches baz1.example.net
+*baz.example.net is OK and matches foobaz.example.net
+b*z.example.net is OK and matches buzz.example.net
+However, use of "partial-wildcard" certs is not recommended.  As of 2011, partial wildcard support is optional, and is explicitly disallowed in SubjectAltName headers that are required for multi-name certificates. All major browsers have deliberately removed support for partial-wildcard certificates; they will result in a "SSL_ERROR_BAD_CERT_DOMAIN" error. Similarly, it is typical for standard libraries in programming languages to not support "partial-wildcard" certificates. For example, any "partial-wildcard" certificate will not work with the latest versions of both Python and Go. Thus, 
+Do not allow a label that consists entirely of just a wildcard unless it is the left-most label
+
+sub1.*.domain.com is not allowed.
+A cert with multiple wildcards in a name is not allowed.
+
+*.*.domain.com
+A cert with * plus a top-level domain is not allowed.
+
+*.com
+Too general and should not be allowed.
+
+*
+International domain names encoded in ASCII (A-label) are labels that are ASCII-encoded and begin with xn--. URLs with international labels cannot contain wildcards.
+
+xn--caf-dma.com is café.com
+xn--caf-dma*.com is not allowed
+Lw*.xn--caf-dma.com is allowed
+
+Other certificates
+EMV certificate: EMV is a payment method based on a technical standard for payment cards, payment terminals and automated teller machines (ATM). EMV payment cards are preloaded with a card issuer certificate, signed by the EMV certificate authority to validate authenticity of the payment card during the payment transaction.
+Code-signing certificate: Certificates can validate apps (or their binaries) to ensure they were not tampered with during delivery.
+Qualified certificate: A certificate identifying an individual, typically for electronic signature purposes. These are most commonly used in Europe, where the eIDAS regulation standardizes them and requires their recognition.
+Role-based certificate: Defined in the X.509 Certificate Policy for the Federal Bridge Certification Authority (FBCA), role-based certificates "identify a specific role on behalf of which the subscriber is authorized to act rather than the subscriber’s name and are issued in the interest of supporting accepted business practices."
+Group certificate: Defined in the X.509 Certificate Policy for the Federal Bridge Certification Authority (FBCA), for "cases where there are several entities acting in one capacity, and where non-repudiation for transactions is not desired."
+
+Common fields
+These are some of the most common fields in certificates. Most certificates contain a number of fields not listed here. Note that in terms of a certificate's X.509 representation, a certificate is not "flat" but contains these fields nested in various structures within the certificate.
+Serial Number: Used to uniquely identify the certificate within a CA's systems. In particular this is used to track revocation information.
+Subject: The entity a certificate belongs to: a machine, an individual, or an organization.
+Issuer: The entity that verified the information and signed the certificate.
+Not Before: The earliest time and date on which the certificate is valid. Usually set to a few hours or days prior to the moment the certificate was issued, to avoid clock skew problems.
+Not After: The time and date past which the certificate is no longer valid.
+Key Usage: The valid cryptographic uses of the certificate's public key. Common values include digital signature validation, key encipherment, and certificate signing.
+Extended Key Usage: The applications in which the certificate may be used. Common values include TLS server authentication, email protection, and code signing.
+Public Key: A public key belonging to the certificate subject.
+Signature Algorithm: This contain a hashing algorithm and a digital signature algorithm. For example "sha256RSA" where sha256 is the hashing algorithm and RSA is the signature algorithm.
+Signature: The body of the certificate is hashed (hashing algorithm in "Signature Algorithm" field is used) and then the hash is signed (signature algorithm in the "Signature Algorithm" field is used) with the issuer's private key.
+
+Example
+This is an example of a decoded SSL/TLS certificate retrieved from SSL.com's website. The issuer's common name (CN) is shown as SSL.com EV SSL Intermediate CA RSA R3, identifying this as an Extended Validation (EV) certificate. Validated information about the website's owner (SSL Corp) is located in the Subject field. The X509v3 Subject Alternative Name field contains a list of domain names covered by the certificate. The X509v3 Extended Key Usage and X509v3 Key Usage fields show all appropriate uses.
+
+Usage in the European Union
+In the European Union, (advanced) electronic signatures on legal documents are commonly performed using digital signatures with accompanying identity certificates. However, only qualified electronic signatures (which require using a qualified trust service provider and signature creation device) are given the same power as a physical signature.
+
+Certificate authorities
+
+In the X.509 trust model, a certificate authority (CA) is responsible for signing certificates. These certificates act as an introduction between two parties, which means that a CA acts as a trusted third party. A CA processes requests from people or organizations requesting certificates (called subscribers), verifies the information, and potentially signs an end-entity certificate based on that information. To perform this role effectively, a CA needs to have one or more broadly trusted root certificates or intermediate certificates and the corresponding private keys. CAs may achieve this broad trust by having their root certificates included in popular software, or by obtaining a cross-signature from another CA delegating trust. Other CAs are trusted within a relatively small community, like a business, and are distributed by other mechanisms like Windows Group Policy.
+Certificate authorities are also responsible for maintaining up-to-date revocation information about certificates they have issued, indicating whether certificates are still valid. They provide this information through Online Certificate Status Protocol (OCSP) and/or Certificate Revocation Lists (CRLs). Some of the larger certificate authorities in the market include IdenTrust, DigiCert, and Sectigo.
+
+Root programs
+Some major software contain a list of certificate authorities that are trusted by default. This makes it easier for end-users to validate certificates, and easier for people or organizations that request certificates to know which certificate authorities can issue a certificate that will be broadly trusted. This is particularly important in HTTPS, where a web site operator generally wants to get a certificate that is trusted by nearly all potential visitors to their web site.
+The policies and processes a provider uses to decide which certificate authorities their software should trust are called root programs. The most influential root programs are:
+
+Microsoft Root Program
+Apple Root Program
+Mozilla Root Program
+Oracle Java root program
+Adobe AATL Adobe Approved Trust List and EUTL root programs (used for document signing)
+Browsers other than Firefox generally use the operating system's facilities to decide which certificate authorities are trusted. So, for instance, Chrome on Windows trusts the certificate authorities included in the Microsoft Root Program, while on macOS or iOS, Chrome trusts the certificate authorities in the Apple Root Program. Edge and Safari use their respective operating system trust stores as well, but each is only available on a single OS. Firefox uses the Mozilla Root Program trust store on all platforms.
+The Mozilla Root Program is operated publicly, and its certificate list is part of the open source Firefox web browser, so it is broadly used outside Firefox. For instance, while there is no common Linux Root Program, many Linux distributions, like Debian, include a package that periodically copies the contents of the Firefox trust list, which is then used by applications.
+Root programs generally provide a set of valid purposes with the certificates they include. For instance, some CAs may be considered trusted for issuing TLS server certificates, but not for code signing certificates. This is indicated with a set of trust bits in a root certificate storage system.
+
+Revocation
+
+A certificate may be revoked before it expires, which signals that it is no longer valid. Without revocation, an attacker would be able to exploit such a compromised or misissued certificate until expiry. Hence, revocation is an important part of a public key infrastructure. Revocation is performed by the issuing certificate authority, which produces a cryptographically authenticated statement of revocation.
+For distributing revocation information to clients, timeliness of the discovery of revocation (and hence the window for an attacker to exploit a compromised certificate) trades off against resource usage in querying revocation statuses and privacy concerns. If revocation information is unavailable (either due to accident or an attack), clients must decide whether to fail-hard and treat a certificate as if it is revoked (and so degrade availability) or to fail-soft and treat it as unrevoked (and allow attackers to sidestep revocation).
+Due to the cost of revocation checks and the availability impact from potentially-unreliable remote services, Web browsers limit the revocation checks they will perform, and will fail-soft where they do. Certificate revocation lists are too bandwidth-costly for routine use, and the Online Certificate Status Protocol presents connection latency and privacy issues. Other schemes have been proposed but have not yet been successfully deployed to enable fail-hard checking.
+
+Website security
+The most common use of certificates is for HTTPS-based web sites. A web browser validates that an HTTPS web server is authentic, so that the user can feel secure that his/her interaction with the web site has no eavesdroppers and that the web site is who it claims to be. This security is important for electronic commerce. In practice, a web site operator obtains a certificate by applying to a certificate authority with a certificate signing request. The certificate request is an electronic document that contains the web site name, company information and the public key. The certificate provider signs the request, thus producing a public certificate. During web browsing, this public certificate is served to any web browser that connects to the web site and proves to the web browser that the provider believes it has issued a certificate to the owner of the web site.
+As an example, when a user connects to https://www.example.com/ with their browser, if the browser does not give any certificate warning message, then the user can be theoretically sure that interacting with https://www.example.com/ is equivalent to interacting with the entity in contact with the email address listed in the public registrar under "example.com", even though that email address may not be displayed anywhere on the web site. No other surety of any kind is implied. Further, the relationship between the purchaser of the certificate, the operator of the web site, and the generator of the web site content may be tenuous and is not guaranteed. At best, the certificate guarantees uniqueness of the web site, provided that the web site itself has not been compromised (hacked) or the certificate issuing process subverted.
+A certificate provider can opt to issue three types of certificates, each requiring its own degree of vetting rigor.  In order of increasing rigor (and naturally, cost) they are: Domain Validation, Organization Validation and Extended Validation.  These rigors are loosely agreed upon by voluntary participants in the CA/Browser Forum.
+
+Validation levels
+
+Domain validation
+
+A certificate provider will issue a domain-validated (DV) certificate to a purchaser if the purchaser can demonstrate one vetting criterion: the right to administratively manage the affected DNS domain(s).
+
+Organization validation
+A certificate provider will issue an organization validation (OV) class certificate to a purchaser if the purchaser can meet two criteria:  the right to administratively manage the domain name in question, and perhaps, the organization's actual existence as a legal entity.  A certificate provider publishes its OV vetting criteria through its certificate policy.
+
+Extended validation
+
+To acquire an Extended Validation (EV) certificate, the purchaser must persuade the certificate provider of its legal identity, including manual verification checks by a human. As with OV certificates, a certificate provider publishes its EV vetting criteria through its certificate policy.
+Until 2019, major browsers such as Chrome and Firefox generally offered users a visual indication of the legal identity when a site presented an EV certificate. This was done by showing the legal name before the domain, and a bright green color to highlight the change. Most browsers deprecated this feature providing no visual difference to the user on the type of certificate used. This change followed security concerns raised by forensic experts and successful attempts to purchase EV certificates to impersonate famous organizations, proving the inefficiency of these visual indicators and highlighting potential abuses.
+
+Weaknesses
+A web browser will give no warning to the user if a web site suddenly presents a different certificate, even if that certificate has a lower number of key bits, even if it has a different provider, and even if the previous certificate had an expiry date far into the future. Where certificate providers are under the jurisdiction of governments, those governments may have the freedom to order the provider to generate any certificate, such as for the purposes of law enforcement. Subsidiary wholesale certificate providers also have the freedom to generate any certificate.
+All web browsers come with an extensive built-in list of trusted root certificates, many of which are controlled by organizations that may be unfamiliar to the user.  Each of these organizations is free to issue any certificate for any web site and have the guarantee that web browsers that include its root certificates will accept it as genuine. In this instance, end users must rely on the developer of the browser software to manage its built-in list of certificates and on the certificate providers to behave correctly and to inform the browser developer of problematic certificates. While uncommon, there have been incidents in which fraudulent certificates have been issued: in some cases, the browsers have detected the fraud; in others, some time passed before browser developers removed these certificates from their software.
+The list of built-in certificates is also not limited to those provided by the browser developer: users (and to a degree applications) are free to extend the list for special purposes such as for company intranets.  This means that if someone gains access to a machine and can install a new root certificate in the browser, that browser will recognize websites that use the inserted certificate as legitimate.
+For provable security, this reliance on something external to the system has the consequence that any public-key certification scheme has to rely on some special setup assumption, such as the existence of a certificate authority.
+
+Usefulness versus unsecured web sites
+In spite of the limitations described above, certificate-authenticated TLS is considered mandatory by all security guidelines whenever a web site hosts confidential information or performs material transactions. This is because, in practice, in spite of the weaknesses described above, web sites secured by public-key certificates are still more secure than unsecured http:// web sites.
+
+Standards
+The National Institute of Standards and Technology (NIST) Computer Security Division provides guidance documents for public-key certificates:
+
+SP 800-32 Introduction to Public Key Technology and the Federal PKI Infrastructure
+SP 800-25 Federal Agency Use of Public Key Technology for Digital Signatures and Authentication

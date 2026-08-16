@@ -1,0 +1,2018 @@
+In Euclidean geometry, the Fermat point of a triangle, also called the Torricelli point or Fermat–Torricelli point, is a point such that the sum of the three distances from each of the three vertices of the triangle to the point is the smallest possible or, equivalently, the geometric median of the three vertices. It is so named because this problem was first raised by Fermat in a private letter to Evangelista Torricelli, who solved it.
+The Fermat point gives a solution to the geometric median and Steiner tree problems for three points.
+
+Construction
+The Fermat point of a triangle with largest angle at most 120° is simply its first isogonic center or X(13), which is constructed as follows:
+
+Construct an equilateral triangle on each of two arbitrarily chosen sides of the given triangle.
+Draw a line from each new vertex to the opposite vertex of the original triangle.
+The two lines intersect at the Fermat point.
+An alternative method is the following:
+
+On each of two arbitrarily chosen sides, construct an isosceles triangle, with base the side in question, 30-degree angles at the base, and the third vertex of each isosceles triangle lying outside the original triangle.
+For each isosceles triangle draw a circle, in each case with center on the new vertex of the isosceles triangle and with radius equal to each of the two new sides of that isosceles triangle.
+The intersection inside the original triangle between the two circles is the Fermat point.
+When a triangle has an angle greater than 120°, the Fermat point is sited at the obtuse-angled vertex.
+In what follows "Case 1" means the triangle has an angle exceeding 120°. "Case 2" means no angle of the triangle exceeds 120°.
+
+Location of X(13)
+
+Fig. 2 shows the equilateral triangles △ARB, △AQC, △CPB attached to the sides of the arbitrary triangle △ABC.
+Here is a proof using properties of concyclic points to show that the three lines RC, BQ, AP in Fig 2 all intersect at the point F and cut one another at angles of 60°.
+The triangles △RAC, △BAQ are congruent because the second is a 60° rotation of the first about A. Hence ∠ARF = ∠ABF and ∠AQF = ∠ACF. By the converse of the inscribed angle theorem applied to the segment AF, the points ARBF are concyclic (they lie on a circle).  Similarly, the points AFCQ are concyclic.
+∠ARB = 60°, so ∠AFB = 120°, using the  inscribed angle theorem.  Similarly, ∠AFC = 120°.
+So ∠BFC = 120°.  Therefore, ∠BFC + ∠BPC = 180°.  Using the inscribed angle theorem, this implies that the points BPCF are concyclic. So, using the inscribed angle theorem applied to the segment BP, ∠BFP = ∠BCP = 60°. Because ∠BFP + ∠BFA = 180°, the point F lies on the line segment AP.  So, the lines RC, BQ, AP are  concurrent (they intersect at a single point).   Q.E.D.
+This proof applies only in Case 2, since if ∠BAC > 120°, point A lies inside the circumcircle of △BPC which switches the relative positions of A and F. However it is easily modified to cover Case 1. Then ∠AFB = ∠AFC = 60° hence ∠BFC = ∠AFB + ∠AFC = 120° which means BPCF is concyclic so ∠BFP = ∠BCP = 60° = ∠BFA. Therefore, A lies on FP.
+The lines joining the centers of the circles in Fig. 2 are perpendicular to the line segments AP, BQ, CR.  For example, the line joining the center of the circle containing △ARB and the center of the circle containing △AQC, is perpendicular to the segment AP.   So, the lines joining the centers of the circles also intersect at 60° angles.  Therefore, the centers of the circles form an equilateral triangle. This is known as Napoleon's Theorem.
+
+Location of the Fermat point
+
+Traditional geometry
+
+Given any Euclidean triangle △ABC and an arbitrary point P let 
+  
+    
+      
+        d
+        (
+        P
+        )
+        =
+        
+          |
+        
+        P
+        A
+        
+          |
+        
+        +
+        
+          |
+        
+        P
+        B
+        
+          |
+        
+        +
+        
+          |
+        
+        P
+        C
+        
+          |
+        
+        .
+      
+    
+    {\displaystyle d(P)=|PA|+|PB|+|PC|.}
+  
+ The aim of this section is to identify a point P0 such that 
+  
+    
+      
+        d
+        (
+        
+          P
+          
+            0
+          
+        
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(P_{0})<d(P)}
+  
+ for all 
+  
+    
+      
+        P
+        ≠
+        
+          P
+          
+            0
+          
+        
+        .
+      
+    
+    {\displaystyle P\neq P_{0}.}
+  
+ If such a point exists then it will be the Fermat point. In what follows Δ will denote the points inside the triangle and will be taken to include its boundary Ω.
+A key result that will be used is the dogleg rule, which asserts that if a triangle and a polygon have one side in common and the rest of the triangle lies inside the polygon then the triangle has a shorter perimeter than the polygon:
+
+If AB is the common side, extend AC to cut the polygon at the point X. Then the polygon's perimeter is, by the triangle inequality:
+
+  
+    
+      
+        
+          perimeter
+        
+        >
+        
+          |
+        
+        A
+        B
+        
+          |
+        
+        +
+        
+          |
+        
+        A
+        X
+        
+          |
+        
+        +
+        
+          |
+        
+        X
+        B
+        
+          |
+        
+        =
+        
+          |
+        
+        A
+        B
+        
+          |
+        
+        +
+        
+          |
+        
+        A
+        C
+        
+          |
+        
+        +
+        
+          |
+        
+        C
+        X
+        
+          |
+        
+        +
+        
+          |
+        
+        X
+        B
+        
+          |
+        
+        ≥
+        
+          |
+        
+        A
+        B
+        
+          |
+        
+        +
+        
+          |
+        
+        A
+        C
+        
+          |
+        
+        +
+        
+          |
+        
+        B
+        C
+        
+          |
+        
+        .
+      
+    
+    {\displaystyle {\text{perimeter}}>|AB|+|AX|+|XB|=|AB|+|AC|+|CX|+|XB|\geq |AB|+|AC|+|BC|.}
+  
+
+Let P be any point outside Δ. Associate each vertex with its remote zone; that is, the half-plane beyond the (extended) opposite side. These 3 zones cover the entire plane except for Δ itself and P clearly lies in either one or two of them. If P is in two (say the B and C zones’ intersection) then setting 
+  
+    
+      
+        
+          P
+          ′
+        
+        =
+        A
+      
+    
+    {\displaystyle P'=A}
+  
+ implies 
+  
+    
+      
+        d
+        (
+        
+          P
+          ′
+        
+        )
+        =
+        d
+        (
+        A
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(P')=d(A)<d(P)}
+  
+ by the dogleg rule. Alternatively if P is in only one zone, say the A-zone, then 
+  
+    
+      
+        d
+        (
+        
+          P
+          ′
+        
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(P')<d(P)}
+  
+ where P' is the intersection of AP and BC. So for every point P outside Δ there exists a point P' in Ω such that 
+  
+    
+      
+        d
+        (
+        
+          P
+          ′
+        
+        )
+        <
+        d
+        (
+        P
+        )
+        .
+      
+    
+    {\displaystyle d(P')<d(P).}
+  
+
+Case 1.    The triangle has an angle ≥ 120°.
+Without loss of generality, suppose that the angle at A is ≥ 120°. Construct the equilateral triangle △AFB and for any point P in Δ (except A itself) construct Q so that the triangle △AQP is equilateral and has the orientation shown. Then the triangle △ABP is a 60° rotation of the triangle △AFQ about A so these two triangles are congruent and it follows that 
+  
+    
+      
+        d
+        (
+        P
+        )
+        =
+        
+          |
+        
+        C
+        P
+        
+          |
+        
+        +
+        
+          |
+        
+        P
+        Q
+        
+          |
+        
+        +
+        
+          |
+        
+        Q
+        F
+        
+          |
+        
+      
+    
+    {\displaystyle d(P)=|CP|+|PQ|+|QF|}
+  
+ which is simply the length of the path CPQF. As P is constrained to lie within △ABC, by the dogleg rule the length of this path exceeds 
+  
+    
+      
+        
+          |
+        
+        A
+        C
+        
+          |
+        
+        +
+        
+          |
+        
+        A
+        F
+        
+          |
+        
+        =
+        d
+        (
+        A
+        )
+        .
+      
+    
+    {\displaystyle |AC|+|AF|=d(A).}
+  
+ Therefore, 
+  
+    
+      
+        d
+        (
+        A
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(A)<d(P)}
+  
+ for all 
+  
+    
+      
+        P
+        ∈
+        Δ
+        ,
+        P
+        ≠
+        A
+        .
+      
+    
+    {\displaystyle P\in \Delta ,P\neq A.}
+  
+ Now allow P to range outside Δ. From above a point 
+  
+    
+      
+        
+          P
+          ′
+        
+        ∈
+        Ω
+      
+    
+    {\displaystyle P'\in \Omega }
+  
+ exists such that 
+  
+    
+      
+        d
+        (
+        
+          P
+          ′
+        
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(P')<d(P)}
+  
+ and as 
+  
+    
+      
+        d
+        (
+        A
+        )
+        ≤
+        d
+        (
+        
+          P
+          ′
+        
+        )
+      
+    
+    {\displaystyle d(A)\leq d(P')}
+  
+ it follows that 
+  
+    
+      
+        d
+        (
+        A
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(A)<d(P)}
+  
+ for all P outside Δ. Thus 
+  
+    
+      
+        d
+        (
+        A
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(A)<d(P)}
+  
+ for all 
+  
+    
+      
+        P
+        ≠
+        A
+      
+    
+    {\displaystyle P\neq A}
+  
+ which means that A is the Fermat point of Δ. In other words, the Fermat point lies at the obtuse-angled vertex.
+Case 2.    The triangle has no angle ≥ 120°.
+Construct the equilateral triangle △BCD, let P be any point inside Δ, and construct the equilateral triangle △CPQ. Then △CQD is a 60° rotation of △CPB about C so 
+
+  
+    
+      
+        d
+        (
+        P
+        )
+        =
+        
+          |
+        
+        P
+        A
+        
+          |
+        
+        +
+        
+          |
+        
+        P
+        B
+        
+          |
+        
+        +
+        
+          |
+        
+        P
+        C
+        
+          |
+        
+        =
+        
+          |
+        
+        A
+        P
+        
+          |
+        
+        +
+        
+          |
+        
+        P
+        Q
+        
+          |
+        
+        +
+        
+          |
+        
+        Q
+        D
+        
+          |
+        
+      
+    
+    {\displaystyle d(P)=|PA|+|PB|+|PC|=|AP|+|PQ|+|QD|}
+  
+
+which shows that the sum of the distances sought is just the length of the path APQD from A to D along a piecewise linear line. Now we show that if P is chosen to be the isogonic center of △ABC the path APQD lies on a straight line - and thus it is minimal. To do this, construct the equilateral triangle △ABF. Let P0 be the point where AD and CF intersect. By construction, this point is the first isogonic center (see above) of △ABC. Carry out the same exercise with P0 as you did with P, and find the point Q0. By the angular restriction P0 lies inside △ABC. Since P0 is the isogonic center, ∠AP0C = 120°; by construction ∠CP0Q0 = 60°, therefore A, P0 and Q0 are aligned on the line from A to D. (Also, △BCF is a 60° rotation of △BDA about B, so Q0 must lie somewhere on AD). Since ∠CDB = 60° it follows that Q0 lies between P0 and D. Since the path AP0Q0D now lies on a straight line,  
+  
+    
+      
+        d
+        (
+        
+          P
+          
+            0
+          
+        
+        )
+        =
+        
+          |
+        
+        A
+        D
+        
+          |
+        
+        .
+      
+    
+    {\displaystyle d(P_{0})=|AD|.}
+  
+ Moreover, if 
+  
+    
+      
+        P
+        ≠
+        
+          P
+          
+            0
+          
+        
+      
+    
+    {\displaystyle P\neq P_{0}}
+  
+ then either P or Q won't lie on AD which means 
+  
+    
+      
+        d
+        (
+        
+          P
+          
+            0
+          
+        
+        )
+        =
+        
+          |
+        
+        A
+        D
+        
+          |
+        
+        <
+        d
+        (
+        P
+        )
+        .
+      
+    
+    {\displaystyle d(P_{0})=|AD|<d(P).}
+  
+ Now allow P to range outside Δ. From above a point 
+  
+    
+      
+        
+          P
+          ′
+        
+        ∈
+        Ω
+      
+    
+    {\displaystyle P'\in \Omega }
+  
+ exists such that 
+  
+    
+      
+        d
+        (
+        
+          P
+          ′
+        
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(P')<d(P)}
+  
+ and as 
+  
+    
+      
+        d
+        (
+        
+          P
+          
+            0
+          
+        
+        )
+        ≤
+        d
+        (
+        
+          P
+          ′
+        
+        )
+      
+    
+    {\displaystyle d(P_{0})\leq d(P')}
+  
+ it follows that 
+  
+    
+      
+        d
+        (
+        
+          P
+          
+            0
+          
+        
+        )
+        <
+        d
+        (
+        P
+        )
+      
+    
+    {\displaystyle d(P_{0})<d(P)}
+  
+ for all P outside Δ. That means P0 is the Fermat point of Δ. In other words, the Fermat point is coincident with the first isogonic center.
+
+Vector analysis
+Let O, A, B, C, X be any five points in a plane. Denote the vectors 
+  
+    
+      
+        
+          
+            
+              O
+              A
+            
+            →
+          
+        
+        ,
+         
+        
+          
+            
+              O
+              B
+            
+            →
+          
+        
+        ,
+         
+        
+          
+            
+              O
+              C
+            
+            →
+          
+        
+        ,
+         
+        
+          
+            
+              O
+              X
+            
+            →
+          
+        
+      
+    
+    {\displaystyle {\overrightarrow {OA}},\ {\overrightarrow {OB}},\ {\overrightarrow {OC}},\ {\overrightarrow {OX}}}
+  
+ by a, b, c, x respectively, and let i, j, k be the unit vectors from O along a, b, c.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  |
+                
+                
+                  a
+                
+                
+                  |
+                
+              
+              
+                
+                =
+                
+                  a
+                  ⋅
+                  i
+                
+                =
+                (
+                
+                  a
+                
+                −
+                
+                  x
+                
+                )
+                
+                  
+                  ⋅
+                  
+                  i
+                
+                +
+                
+                  x
+                  ⋅
+                  i
+                
+                ≤
+                
+                  |
+                
+                
+                  a
+                
+                −
+                
+                  x
+                
+                
+                  |
+                
+                +
+                
+                  x
+                  ⋅
+                  i
+                
+                ,
+              
+            
+            
+              
+                
+                  |
+                
+                
+                  b
+                
+                
+                  |
+                
+              
+              
+                
+                =
+                
+                  b
+                  ⋅
+                  j
+                
+                =
+                (
+                
+                  b
+                
+                −
+                
+                  x
+                
+                )
+                
+                  
+                  ⋅
+                  
+                  j
+                
+                +
+                
+                  x
+                  ⋅
+                  j
+                
+                ≤
+                
+                  |
+                
+                
+                  b
+                
+                −
+                
+                  x
+                
+                
+                  |
+                
+                +
+                
+                  x
+                  ⋅
+                  j
+                
+                ,
+              
+            
+            
+              
+                
+                  |
+                
+                
+                  c
+                
+                
+                  |
+                
+              
+              
+                
+                =
+                
+                  c
+                  ⋅
+                  k
+                
+                =
+                (
+                
+                  c
+                
+                −
+                
+                  x
+                
+                )
+                
+                  
+                  ⋅
+                  
+                  k
+                
+                +
+                
+                  x
+                  ⋅
+                  k
+                
+                ≤
+                
+                  |
+                
+                
+                  c
+                
+                −
+                
+                  x
+                
+                
+                  |
+                
+                +
+                
+                  x
+                  ⋅
+                  k
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}|\mathbf {a} |&=\mathbf {a\cdot i} =(\mathbf {a} -\mathbf {x} )\mathbf {\,\cdot \,i} +\mathbf {x\cdot i} \leq |\mathbf {a} -\mathbf {x} |+\mathbf {x\cdot i} ,\\|\mathbf {b} |&=\mathbf {b\cdot j} =(\mathbf {b} -\mathbf {x} )\mathbf {\,\cdot \,j} +\mathbf {x\cdot j} \leq |\mathbf {b} -\mathbf {x} |+\mathbf {x\cdot j} ,\\|\mathbf {c} |&=\mathbf {c\cdot k} =(\mathbf {c} -\mathbf {x} )\mathbf {\,\cdot \,k} +\mathbf {x\cdot k} \leq |\mathbf {c} -\mathbf {x} |+\mathbf {x\cdot k} .\end{aligned}}}
+  
+
+Adding a, b, c gives 
+
+  
+    
+      
+        
+          |
+        
+        
+          a
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          b
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          c
+        
+        
+          |
+        
+        ≤
+        
+          |
+        
+        
+          a
+        
+        −
+        
+          x
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          b
+        
+        −
+        
+          x
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          c
+        
+        −
+        
+          x
+        
+        
+          |
+        
+        +
+        
+          x
+        
+        ⋅
+        (
+        
+          i
+        
+        +
+        
+          j
+        
+        +
+        
+          k
+        
+        )
+        .
+      
+    
+    {\displaystyle |\mathbf {a} |+|\mathbf {b} |+|\mathbf {c} |\leq |\mathbf {a} -\mathbf {x} |+|\mathbf {b} -\mathbf {x} |+|\mathbf {c} -\mathbf {x} |+\mathbf {x} \cdot (\mathbf {i} +\mathbf {j} +\mathbf {k} ).}
+  
+
+If a, b, c meet at O at angles of 120° then i + j + k = 0, so 
+
+  
+    
+      
+        
+          |
+        
+        
+          a
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          b
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          c
+        
+        
+          |
+        
+        ≤
+        
+          |
+        
+        
+          a
+        
+        −
+        
+          x
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          b
+        
+        −
+        
+          x
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        
+          c
+        
+        −
+        
+          x
+        
+        
+          |
+        
+      
+    
+    {\displaystyle |\mathbf {a} |+|\mathbf {b} |+|\mathbf {c} |\leq |\mathbf {a} -\mathbf {x} |+|\mathbf {b} -\mathbf {x} |+|\mathbf {c} -\mathbf {x} |}
+  
+
+for all x. In other words, 
+
+  
+    
+      
+        
+          |
+        
+        O
+        A
+        
+          |
+        
+        +
+        
+          |
+        
+        O
+        B
+        
+          |
+        
+        +
+        
+          |
+        
+        O
+        C
+        
+          |
+        
+        ≤
+        
+          |
+        
+        X
+        A
+        
+          |
+        
+        +
+        
+          |
+        
+        X
+        B
+        
+          |
+        
+        +
+        
+          |
+        
+        X
+        C
+        
+          |
+        
+      
+    
+    {\displaystyle |OA|+|OB|+|OC|\leq |XA|+|XB|+|XC|}
+  
+
+and hence O is the Fermat point of △ABC. 
+This argument fails when the triangle has an angle ∠C > 120° because there is no point O where a, b, c meet at angles of 120°. Nevertheless, it is easily fixed by redefining k = − (i + j) and placing O at C so that c = 0. Note that |k| ≤ 1 because the angle between the unit vectors i, j is ∠C which exceeds 120°. Since 
+
+  
+    
+      
+        
+          |
+        
+        
+          0
+        
+        
+          |
+        
+        ≤
+        
+          |
+        
+        
+          0
+        
+        −
+        
+          x
+        
+        
+          |
+        
+        +
+        
+          x
+          ⋅
+          k
+        
+        ,
+      
+    
+    {\displaystyle |\mathbf {0} |\leq |\mathbf {0} -\mathbf {x} |+\mathbf {x\cdot k} ,}
+  
+
+the third inequality still holds, the other two inequalities are unchanged. The proof now continues as above (adding the three inequalities and using i + j + k = 0) to reach the same conclusion that O (or in this case C) must be the Fermat point of △ABC.
+
+Lagrange multipliers
+Another approach to finding the point within a triangle, from which the sum of the distances to the vertices of the triangle is minimal, is to use one of the mathematical optimization methods; specifically, the method of Lagrange multipliers and the law of cosines.
+We draw lines from the point within the triangle to its vertices and call them X, Y, Z. Also, let the lengths of these lines be x, y, z respectively. Let the angle between X and Y be α, Y and Z be β. Then the angle between X and Z is π − α − β. Using the method of Lagrange multipliers we have to find the minimum of the Lagrangian L, which is expressed as:
+
+  
+    
+      
+        L
+        =
+        x
+        +
+        y
+        +
+        z
+        +
+        
+          λ
+          
+            1
+          
+        
+        (
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          y
+          
+            2
+          
+        
+        −
+        2
+        x
+        y
+        cos
+        ⁡
+        (
+        α
+        )
+        −
+        
+          a
+          
+            2
+          
+        
+        )
+        +
+        
+          λ
+          
+            2
+          
+        
+        (
+        
+          y
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            2
+          
+        
+        −
+        2
+        y
+        z
+        cos
+        ⁡
+        (
+        β
+        )
+        −
+        
+          b
+          
+            2
+          
+        
+        )
+        +
+        
+          λ
+          
+            3
+          
+        
+        (
+        
+          z
+          
+            2
+          
+        
+        +
+        
+          x
+          
+            2
+          
+        
+        −
+        2
+        z
+        x
+        cos
+        ⁡
+        (
+        α
+        +
+        β
+        )
+        −
+        
+          c
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle L=x+y+z+\lambda _{1}(x^{2}+y^{2}-2xy\cos(\alpha )-a^{2})+\lambda _{2}(y^{2}+z^{2}-2yz\cos(\beta )-b^{2})+\lambda _{3}(z^{2}+x^{2}-2zx\cos(\alpha +\beta )-c^{2})}
+  
+
+where a, b, c are the lengths of the sides of the triangle.
+Equating each of the five partial derivatives 
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                L
+              
+              
+                ∂
+                x
+              
+            
+          
+        
+        ,
+        
+          
+            
+              
+                ∂
+                L
+              
+              
+                ∂
+                y
+              
+            
+          
+        
+        ,
+        
+          
+            
+              
+                ∂
+                L
+              
+              
+                ∂
+                z
+              
+            
+          
+        
+        ,
+        
+          
+            
+              
+                ∂
+                L
+              
+              
+                ∂
+                α
+              
+            
+          
+        
+        ,
+        
+          
+            
+              
+                ∂
+                L
+              
+              
+                ∂
+                β
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\partial L}{\partial x}},{\tfrac {\partial L}{\partial y}},{\tfrac {\partial L}{\partial z}},{\tfrac {\partial L}{\partial \alpha }},{\tfrac {\partial L}{\partial \beta }}}
+  
+ to zero and eliminating λ1, λ2, λ3 eventually gives sin α = sin β and sin(α + β) = − sin β so α = β = 120°. However the elimination is a long and tedious business, and the end result covers only Case 2.
+
+Properties
+
+When the largest angle of the triangle is not larger than 120°, X(13) is the Fermat point.
+The angles subtended by the sides of the triangle at X(13) are all equal to 120° (Case 2), or 60°, 60°, 120° (Case 1).
+The circumcircles of the three constructed equilateral triangles are concurrent at X(13).
+Trilinear coordinates for the first isogonic center, X(13):
+
+  
+    
+      
+        
+          
+            
+              
+              
+                csc
+                ⁡
+                
+                  (
+                  
+                    A
+                    +
+                    
+                      
+                        
+                          π
+                          3
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                csc
+                ⁡
+                
+                  (
+                  
+                    B
+                    +
+                    
+                      
+                        
+                          π
+                          3
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                csc
+                ⁡
+                
+                  (
+                  
+                    C
+                    +
+                    
+                      
+                        
+                          π
+                          3
+                        
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                sec
+                ⁡
+                
+                  (
+                  
+                    A
+                    −
+                    
+                      
+                        
+                          π
+                          6
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                sec
+                ⁡
+                
+                  (
+                  
+                    B
+                    −
+                    
+                      
+                        
+                          π
+                          6
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                sec
+                ⁡
+                
+                  (
+                  
+                    C
+                    −
+                    
+                      
+                        
+                          π
+                          6
+                        
+                      
+                    
+                  
+                  )
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\csc \left(A+{\tfrac {\pi }{3}}\right):\csc \left(B+{\tfrac {\pi }{3}}\right):\csc \left(C+{\tfrac {\pi }{3}}\right)\\&=\sec \left(A-{\tfrac {\pi }{6}}\right):\sec \left(B-{\tfrac {\pi }{6}}\right):\sec \left(C-{\tfrac {\pi }{6}}\right).\end{aligned}}}
+  
+
+Trilinear coordinates for the second isogonic center, X(14):
+
+  
+    
+      
+        
+          
+            
+              
+              
+                csc
+                ⁡
+                
+                  (
+                  
+                    A
+                    −
+                    
+                      
+                        
+                          π
+                          3
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                csc
+                ⁡
+                
+                  (
+                  
+                    B
+                    −
+                    
+                      
+                        
+                          π
+                          3
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                csc
+                ⁡
+                
+                  (
+                  
+                    C
+                    −
+                    
+                      
+                        
+                          π
+                          3
+                        
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                sec
+                ⁡
+                
+                  (
+                  
+                    A
+                    +
+                    
+                      
+                        
+                          π
+                          6
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                sec
+                ⁡
+                
+                  (
+                  
+                    B
+                    +
+                    
+                      
+                        
+                          π
+                          6
+                        
+                      
+                    
+                  
+                  )
+                
+                :
+                sec
+                ⁡
+                
+                  (
+                  
+                    C
+                    +
+                    
+                      
+                        
+                          π
+                          6
+                        
+                      
+                    
+                  
+                  )
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\csc \left(A-{\tfrac {\pi }{3}}\right):\csc \left(B-{\tfrac {\pi }{3}}\right):\csc \left(C-{\tfrac {\pi }{3}}\right)\\&=\sec \left(A+{\tfrac {\pi }{6}}\right):\sec \left(B+{\tfrac {\pi }{6}}\right):\sec \left(C+{\tfrac {\pi }{6}}\right).\end{aligned}}}
+  
+
+Trilinear coordinates for the Fermat point:
+
+  
+    
+      
+        1
+        −
+        u
+        +
+        u
+        v
+        w
+        sec
+        ⁡
+        
+          (
+          
+            A
+            −
+            
+              
+                
+                  π
+                  6
+                
+              
+            
+          
+          )
+        
+        :
+        1
+        −
+        v
+        +
+        u
+        v
+        w
+        sec
+        ⁡
+        
+          (
+          
+            B
+            −
+            
+              
+                
+                  π
+                  6
+                
+              
+            
+          
+          )
+        
+        :
+        1
+        −
+        w
+        +
+        u
+        v
+        w
+        sec
+        ⁡
+        
+          (
+          
+            C
+            −
+            
+              
+                
+                  π
+                  6
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle 1-u+uvw\sec \left(A-{\tfrac {\pi }{6}}\right):1-v+uvw\sec \left(B-{\tfrac {\pi }{6}}\right):1-w+uvw\sec \left(C-{\tfrac {\pi }{6}}\right)}
+  
+
+where u, v, w respectively denote the Boolean variables (A < 120°), (B < 120°), (C < 120°).
+The isogonal conjugate of X(13) is the first isodynamic point, X(15):
+
+  
+    
+      
+        sin
+        ⁡
+        
+          (
+          
+            A
+            +
+            
+              
+                
+                  π
+                  3
+                
+              
+            
+          
+          )
+        
+        :
+        sin
+        ⁡
+        
+          (
+          
+            B
+            +
+            
+              
+                
+                  π
+                  3
+                
+              
+            
+          
+          )
+        
+        :
+        sin
+        ⁡
+        
+          (
+          
+            C
+            +
+            
+              
+                
+                  π
+                  3
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle \sin \left(A+{\tfrac {\pi }{3}}\right):\sin \left(B+{\tfrac {\pi }{3}}\right):\sin \left(C+{\tfrac {\pi }{3}}\right).}
+  
+
+The isogonal conjugate of X(14) is the second isodynamic point, X(16):
+
+  
+    
+      
+        sin
+        ⁡
+        
+          (
+          
+            A
+            −
+            
+              
+                
+                  π
+                  3
+                
+              
+            
+          
+          )
+        
+        :
+        sin
+        ⁡
+        
+          (
+          
+            B
+            −
+            
+              
+                
+                  π
+                  3
+                
+              
+            
+          
+          )
+        
+        :
+        sin
+        ⁡
+        
+          (
+          
+            C
+            −
+            
+              
+                
+                  π
+                  3
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle \sin \left(A-{\tfrac {\pi }{3}}\right):\sin \left(B-{\tfrac {\pi }{3}}\right):\sin \left(C-{\tfrac {\pi }{3}}\right).}
+  
+
+The following triangles are equilateral:
+antipedal triangle of X(13)
+Antipedal triangle of X(14)
+Pedal triangle of X(15)
+Pedal triangle of X(16)
+Circumcevian triangle of X(15)
+Circumcevian triangle of X(16)
+The lines X(13)X(15) and X(14)X(16) are parallel to the Euler line.  The three lines meet at the Euler infinity point, X(30).
+The points X(13), X(14), the circumcenter, and the nine-point center lie on a Lester circle.
+The line X(13)X(14) meets the Euler line at midpoint of X(2) and X(4).
+The Fermat point lies in the open orthocentroidal disk punctured at its own center, and could be any point therein.
+
+Aliases
+The isogonic centers X(13) and X(14) are also known as the first Fermat point and the second Fermat point respectively. Alternatives are the positive Fermat point and the negative Fermat point. However these different names can be confusing and are perhaps best avoided. The problem is that much of the literature blurs the distinction between the Fermat point and the first Fermat point whereas it is only in Case 2 above that they are actually the same.
+
+History
+This question was proposed by Fermat, as a challenge to Evangelista Torricelli. He solved the problem in a similar way to Fermat's, albeit using the intersection of the circumcircles of the three regular triangles instead. His pupil, Viviani, published the solution in 1659.

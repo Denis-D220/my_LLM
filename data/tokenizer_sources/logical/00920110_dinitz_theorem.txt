@@ -1,0 +1,1095 @@
+In combinatorics, the Dinitz theorem, formerly known as the Dinitz conjecture, is a statement about the extension of arrays to partial Latin squares, proposed in 1979 by Jeff Dinitz, and proved in 1994 by Fred Galvin.
+
+Statement
+The Dinitz theorem states that, given an 
+  
+    
+      
+        n
+        ×
+        n
+      
+    
+    {\displaystyle n\times n}
+  
+ square array, a set of 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ symbols with 
+  
+    
+      
+        m
+        ≥
+        n
+      
+    
+    {\displaystyle m\geq n}
+  
+, and for each cell of the array an 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-element set drawn from the pool of 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ symbols, it is possible to label each cell with one of the elements of its set in such a way that no symbol is repeated within any row or any column. The resulting array is a partial Latin square: if all the cell sets happen to be the same set of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ symbols, the labeling is an ordinary 
+  
+    
+      
+        n
+        ×
+        n
+      
+    
+    {\displaystyle n\times n}
+  
+ Latin square.
+
+Formulation as list edge coloring
+The theorem is most naturally expressed in the language of list coloring. For a graph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+, a list assignment 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ attaches to every edge 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ a set 
+  
+    
+      
+        L
+        (
+        e
+        )
+      
+    
+    {\displaystyle L(e)}
+  
+ of permitted colors; a proper 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+-edge-coloring assigns to each edge a color from its own list so that adjacent edges (those sharing an endpoint) receive distinct colors. The list chromatic index 
+  
+    
+      
+        
+          χ
+          
+            ℓ
+          
+          ′
+        
+        (
+        G
+        )
+      
+    
+    {\displaystyle \chi '_{\ell }(G)}
+  
+ is the least integer 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ such that a proper 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+-edge-coloring exists for every list assignment with 
+  
+    
+      
+        
+          |
+        
+        L
+        (
+        e
+        )
+        
+          |
+        
+        ≥
+        k
+      
+    
+    {\displaystyle |L(e)|\geq k}
+  
+ for all edges 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+. Since one may always take identical lists, 
+  
+    
+      
+        
+          χ
+          
+            ℓ
+          
+          ′
+        
+        (
+        G
+        )
+        ≥
+        
+          χ
+          ′
+        
+        (
+        G
+        )
+        ≥
+        Δ
+        (
+        G
+        )
+      
+    
+    {\displaystyle \chi '_{\ell }(G)\geq \chi '(G)\geq \Delta (G)}
+  
+, where 
+  
+    
+      
+        
+          χ
+          ′
+        
+      
+    
+    {\displaystyle \chi '}
+  
+ is the ordinary chromatic index and 
+  
+    
+      
+        Δ
+      
+    
+    {\displaystyle \Delta }
+  
+ the maximum degree.
+An 
+  
+    
+      
+        n
+        ×
+        n
+      
+    
+    {\displaystyle n\times n}
+  
+ Latin square corresponds to a proper edge coloring of the complete bipartite graph 
+  
+    
+      
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+      
+    
+    {\displaystyle K_{n,n}}
+  
+ with 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ colors: the two vertex classes are the rows and the columns, the edge joining row 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ to column 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+ represents the cell 
+  
+    
+      
+        (
+        i
+        ,
+        j
+        )
+      
+    
+    {\displaystyle (i,j)}
+  
+, and its color is the symbol placed in that cell. Under this correspondence, prescribing an 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-element list for each cell is exactly prescribing an 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-element list for each edge. The Dinitz theorem is therefore the statement that
+
+  
+    
+      
+        
+          χ
+          
+            ℓ
+          
+          ′
+        
+        (
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+        )
+        =
+        n
+        .
+      
+    
+    {\displaystyle \chi '_{\ell }(K_{n,n})=n.}
+  
+
+Because 
+  
+    
+      
+        Δ
+        (
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+        )
+        =
+        n
+      
+    
+    {\displaystyle \Delta (K_{n,n})=n}
+  
+, this asserts that the list chromatic index of 
+  
+    
+      
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+      
+    
+    {\displaystyle K_{n,n}}
+  
+ attains its smallest possible value.
+
+Galvin's theorem
+Galvin proved a considerably more general result: for every bipartite multigraph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+,
+
+  
+    
+      
+        
+          χ
+          
+            ℓ
+          
+          ′
+        
+        (
+        G
+        )
+        =
+        
+          χ
+          ′
+        
+        (
+        G
+        )
+        .
+      
+    
+    {\displaystyle \chi '_{\ell }(G)=\chi '(G).}
+  
+
+By Kőnig's edge-coloring theorem the chromatic index of a bipartite multigraph equals its maximum degree, so 
+  
+    
+      
+        
+          χ
+          
+            ℓ
+          
+          ′
+        
+        (
+        G
+        )
+        =
+        Δ
+        (
+        G
+        )
+      
+    
+    {\displaystyle \chi '_{\ell }(G)=\Delta (G)}
+  
+. Taking 
+  
+    
+      
+        G
+        =
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+      
+    
+    {\displaystyle G=K_{n,n}}
+  
+ recovers the Dinitz theorem.
+
+Proof via kernels
+Galvin's argument uses the notion of a kernel of a directed graph. A kernel of a digraph 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+ is a set 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ of vertices that is independent (no arc joins two vertices of 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+) and absorbing (every vertex outside 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ has an arc directed into 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+). The proof combines this with the following lemma, the kernel method.
+Kernel lemma. Let 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+ be an orientation of a graph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ such that every induced subdigraph of 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+ has a kernel, and let 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ be a list assignment (on the vertices) with 
+  
+    
+      
+        
+          |
+        
+        L
+        (
+        v
+        )
+        
+          |
+        
+        ≥
+        
+          d
+          
+            D
+          
+          
+            +
+          
+        
+        (
+        v
+        )
+        +
+        1
+      
+    
+    {\displaystyle |L(v)|\geq d_{D}^{+}(v)+1}
+  
+ for every vertex 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+, where 
+  
+    
+      
+        
+          d
+          
+            D
+          
+          
+            +
+          
+        
+        (
+        v
+        )
+      
+    
+    {\displaystyle d_{D}^{+}(v)}
+  
+ is the out-degree of 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+. Then 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ has a proper 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+-coloring.
+The lemma is proved by induction: choose a color 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ appearing in some list, let 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ be the set of vertices whose lists contain 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+, take a kernel 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ of the subdigraph induced on 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, color the vertices of 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ with 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+, and delete 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ from the graph together with 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ from all remaining lists. Every vertex of 
+  
+    
+      
+        A
+        ∖
+        K
+      
+    
+    {\displaystyle A\setminus K}
+  
+ loses at least one out-neighbor, so the out-degree condition is preserved and induction applies.
+To apply this to 
+  
+    
+      
+        L
+        (
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle L(K_{n,n})}
+  
+, whose vertices are the 
+  
+    
+      
+        
+          n
+          
+            2
+          
+        
+      
+    
+    {\displaystyle n^{2}}
+  
+ cells 
+  
+    
+      
+        (
+        i
+        ,
+        j
+        )
+      
+    
+    {\displaystyle (i,j)}
+  
+, fix a reference Latin square that assigns to cell 
+  
+    
+      
+        (
+        i
+        ,
+        j
+        )
+      
+    
+    {\displaystyle (i,j)}
+  
+ a symbol 
+  
+    
+      
+        σ
+        (
+        i
+        ,
+        j
+        )
+        ∈
+        {
+        1
+        ,
+        …
+        ,
+        n
+        }
+      
+    
+    {\displaystyle \sigma (i,j)\in \{1,\dots ,n\}}
+  
+. Orient the line graph as follows: for two cells in the same row, direct the arc from the smaller reference symbol to the larger; for two cells in the same column, direct it from the larger to the smaller. Because the symbols in each row and each column form a permutation of 
+  
+    
+      
+        {
+        1
+        ,
+        …
+        ,
+        n
+        }
+      
+    
+    {\displaystyle \{1,\dots ,n\}}
+  
+, the cell 
+  
+    
+      
+        (
+        i
+        ,
+        j
+        )
+      
+    
+    {\displaystyle (i,j)}
+  
+ with 
+  
+    
+      
+        σ
+        (
+        i
+        ,
+        j
+        )
+        =
+        s
+      
+    
+    {\displaystyle \sigma (i,j)=s}
+  
+ has exactly 
+  
+    
+      
+        n
+        −
+        s
+      
+    
+    {\displaystyle n-s}
+  
+ out-arcs within its row and 
+  
+    
+      
+        s
+        −
+        1
+      
+    
+    {\displaystyle s-1}
+  
+ within its column, giving out-degree
+
+  
+    
+      
+        
+          d
+          
+            +
+          
+        
+        (
+        i
+        ,
+        j
+        )
+        =
+        (
+        n
+        −
+        s
+        )
+        +
+        (
+        s
+        −
+        1
+        )
+        =
+        n
+        −
+        1
+      
+    
+    {\displaystyle d^{+}(i,j)=(n-s)+(s-1)=n-1}
+  
+
+for every cell. Lists of size 
+  
+    
+      
+        n
+        =
+        (
+        n
+        −
+        1
+        )
+        +
+        1
+      
+    
+    {\displaystyle n=(n-1)+1}
+  
+ thus satisfy the hypothesis of the kernel lemma.
+Finally, every induced subdigraph has a kernel: a set of cells corresponds to a bipartite graph between rows and columns, and interpreting the reference symbols as preference rankings turns a kernel into a stable matching, which exists by the Gale–Shapley theorem. Hence 
+  
+    
+      
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+      
+    
+    {\displaystyle K_{n,n}}
+  
+ is 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-edge-choosable.
+
+History
+Dinitz posed the problem in 1979, and it circulated for over a decade as one of the best-known open questions on list coloring. Partial results preceded Galvin's solution: Jeannette Janssen proved the statement for 
+  
+    
+      
+        (
+        n
+        −
+        1
+        )
+        ×
+        n
+      
+    
+    {\displaystyle (n-1)\times n}
+  
+ rectangular arrays, and for the square case with lists of size 
+  
+    
+      
+        n
+        +
+        1
+      
+    
+    {\displaystyle n+1}
+  
+, by applying the polynomial method of Alon and Tarsi. Galvin settled the full conjecture in 1994 (published 1995) with the kernel argument above, which is elementary and self-contained. Expository accounts were given by Zeilberger and in the textbook literature.
+
+Generalizations
+Galvin's proof extends verbatim from 
+  
+    
+      
+        
+          K
+          
+            n
+            ,
+            n
+          
+        
+      
+    
+    {\displaystyle K_{n,n}}
+  
+ to all bipartite multigraphs, and more generally to line-perfect graphs by way of Maffray's characterization of the line graphs possessing kernels. Alexandr Kostochka, Borodin, and Woodall strengthened the bipartite result by allowing shorter lists: for a bipartite graph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+, a proper edge coloring exists whenever each edge 
+  
+    
+      
+        u
+        v
+      
+    
+    {\displaystyle uv}
+  
+ is given a list of size at least 
+  
+    
+      
+        max
+        {
+        
+          d
+          
+            G
+          
+        
+        (
+        u
+        )
+        ,
+        
+          d
+          
+            G
+          
+        
+        (
+        v
+        )
+        }
+      
+    
+    {\displaystyle \max\{d_{G}(u),d_{G}(v)\}}
+  
+.
+The list edge-coloring conjecture (or list coloring conjecture) asserts that 
+  
+    
+      
+        
+          χ
+          
+            ℓ
+          
+          ′
+        
+        (
+        G
+        )
+        =
+        
+          χ
+          ′
+        
+        (
+        G
+        )
+      
+    
+    {\displaystyle \chi '_{\ell }(G)=\chi '(G)}
+  
+ for every loopless multigraph, not just bipartite ones; it remains open in general. An even more general conjecture states that the list chromatic number of every claw-free graph equals its chromatic number. The Dinitz theorem is also related to Rota's basis conjecture.

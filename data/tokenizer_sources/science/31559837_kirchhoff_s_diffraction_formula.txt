@@ -1,0 +1,3063 @@
+Kirchhoff's diffraction formula (also called Fresnel–Kirchhoff diffraction formula) approximates  light intensity and phase in optical diffraction: light fields in the boundary regions of shadows. The approximation
+can be used to model light propagation in a wide range of configurations, either analytically or using numerical modelling. It gives an expression for the wave disturbance when a monochromatic spherical wave is the incoming wave of a situation under consideration. This formula is derived by applying the Kirchhoff integral theorem, which uses the Green's second identity to derive the solution to the homogeneous scalar wave equation, to a spherical wave with some approximations.
+The Huygens–Fresnel principle can be derived by the Fresnel–Kirchhoff diffraction formula.
+
+Derivation of Kirchhoff's diffraction formula
+Kirchhoff's integral theorem, sometimes referred to as the Fresnel–Kirchhoff integral theorem, uses Green's second identity to derive the solution of the homogeneous scalar wave equation at an arbitrary spatial position P in terms of the solution of the wave equation and its first order derivative at all points on an arbitrary closed surface 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ as the boundary of some volume including P.
+The solution provided by the integral theorem for a monochromatic source is
+
+  
+    
+      
+        U
+        (
+        
+          
+            P
+          
+        
+        )
+        =
+        
+          
+            1
+            
+              4
+              π
+            
+          
+        
+        
+          ∫
+          
+            S
+          
+        
+        
+          [
+          
+            U
+            
+              
+                ∂
+                
+                  ∂
+                  
+                    
+                      n
+                    
+                  
+                
+              
+            
+            
+              (
+              
+                
+                  
+                    e
+                    
+                      i
+                      k
+                      s
+                    
+                  
+                  s
+                
+              
+              )
+            
+            −
+            
+              
+                
+                  e
+                  
+                    i
+                    k
+                    s
+                  
+                
+                s
+              
+            
+            
+              
+                
+                  ∂
+                  U
+                
+                
+                  ∂
+                  
+                    
+                      n
+                    
+                  
+                
+              
+            
+          
+          ]
+        
+        d
+        S
+        ,
+      
+    
+    {\displaystyle U({\textbf {P}})={\frac {1}{4\pi }}\int _{S}\left[U{\frac {\partial }{\partial {\textbf {n}}}}\left({\frac {e^{iks}}{s}}\right)-{\frac {e^{iks}}{s}}{\frac {\partial U}{\partial {\textbf {n}}}}\right]dS,}
+  
+
+where 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is the spatial part of the solution of the homogeneous scalar wave equation (i.e., 
+  
+    
+      
+        V
+        (
+        
+          r
+        
+        ,
+        t
+        )
+        =
+        U
+        (
+        
+          r
+        
+        )
+        
+          e
+          
+            −
+            i
+            ω
+            t
+          
+        
+      
+    
+    {\displaystyle V(\mathbf {r} ,t)=U(\mathbf {r} )e^{-i\omega t}}
+  
+ as the homogeneous scalar wave equation solution), k is the wavenumber, and s is the distance from P to an (infinitesimally small) integral surface element, and 
+  
+    
+      
+        
+          
+            ∂
+            
+              ∂
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial }{\partial n}}}
+  
+ denotes differentiation along the integral surface element normal unit vector 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ (i.e., a normal derivative), i.e., 
+  
+    
+      
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              n
+            
+          
+        
+        =
+        ∇
+        f
+        ⋅
+        n
+      
+    
+    {\displaystyle {\frac {\partial f}{\partial n}}=\nabla f\cdot n}
+  
+. Note that the surface normal or the direction of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is toward the inside of the enclosed volume in this integral; if the more usual outer-pointing normal is used, the integral will have the opposite sign. And also note that, in the integral theorem shown here, 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and P are vector quantities while other terms are scalar quantities.
+For the below cases, the following basic assumptions are made.
+
+The distance between a point source of waves and an integral area, the distance between the integral area and an observation point P, and the dimension of opening S are much greater than the wave wavelength 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+.
+
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              ∂
+              U
+            
+            
+              ∂
+              n
+            
+          
+        
+        =
+        ∇
+        U
+        ⋅
+        n
+      
+    
+    {\displaystyle {\frac {\partial U}{\partial n}}=\nabla U\cdot n}
+  
+ are discontinuous at the boundaries of the aperture, called Kirchhoff's boundary conditions. This may be related with another assumption that waves on an aperture (or an open area) is same to the waves that would be present if there was no obstacle for the waves.
+
+Point source
+ Consider a monochromatic point source at P0, which illuminates an aperture in a screen. The intensity of the wave emitted by a point source falls off as the inverse square of the distance traveled, so the amplitude falls off as the inverse of the distance. The complex amplitude of the disturbance at a distance 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is given by
+
+  
+    
+      
+        U
+        (
+        r
+        )
+        =
+        
+          
+            
+              a
+              
+                e
+                
+                  i
+                  k
+                  r
+                
+              
+            
+            r
+          
+        
+        ,
+      
+    
+    {\displaystyle U(r)={\frac {ae^{ikr}}{r}},}
+  
+
+where 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ represents the magnitude of the disturbance at the point source.
+The disturbance at a spatial position P can be found by applying the Kirchhoff's integral theorem to the closed surface formed by the intersection of a sphere of radius R with the screen. The integration is performed over the areas A1, A2 and A3, giving
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        
+          
+            1
+            
+              4
+              π
+            
+          
+        
+        
+          [
+          
+            
+              ∫
+              
+                
+                  A
+                  
+                    1
+                  
+                
+              
+            
+            +
+            
+              ∫
+              
+                
+                  A
+                  
+                    2
+                  
+                
+              
+            
+            +
+            
+              ∫
+              
+                
+                  A
+                  
+                    3
+                  
+                
+              
+            
+          
+          ]
+        
+        
+          (
+          
+            U
+            
+              
+                ∂
+                
+                  ∂
+                  n
+                
+              
+            
+            
+              (
+              
+                
+                  
+                    e
+                    
+                      i
+                      k
+                      s
+                    
+                  
+                  s
+                
+              
+              )
+            
+            −
+            
+              
+                
+                  e
+                  
+                    i
+                    k
+                    s
+                  
+                
+                s
+              
+            
+            
+              
+                
+                  ∂
+                  U
+                
+                
+                  ∂
+                  n
+                
+              
+            
+          
+          )
+        
+        d
+        S
+        .
+      
+    
+    {\displaystyle U(P)={\frac {1}{4\pi }}\left[\int _{A_{1}}+\int _{A_{2}}+\int _{A_{3}}\right]\left(U{\frac {\partial }{\partial n}}\left({\frac {e^{iks}}{s}}\right)-{\frac {e^{iks}}{s}}{\frac {\partial U}{\partial n}}\right)dS.}
+  
+
+To solve the equation, it is assumed that the values of 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              ∂
+              U
+            
+            
+              ∂
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial U}{\partial n}}}
+  
+ in the aperture area A1 are the same as when the screen is not present, so at the position Q,
+
+  
+    
+      
+        
+          U
+          
+            
+              A
+              
+                1
+              
+            
+          
+        
+        =
+        
+          
+            
+              a
+              
+                e
+                
+                  i
+                  k
+                  r
+                
+              
+            
+            r
+          
+        
+        ,
+      
+    
+    {\displaystyle U_{A_{1}}={\frac {ae^{ikr}}{r}},}
+  
+
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                U
+                
+                  
+                    A
+                    
+                      1
+                    
+                  
+                
+              
+            
+            
+              ∂
+              n
+            
+          
+        
+        =
+        ∇
+        
+          U
+          
+            
+              A
+              
+                1
+              
+            
+          
+        
+        ⋅
+        n
+        =
+        
+          
+            
+              a
+              
+                e
+                
+                  i
+                  k
+                  r
+                
+              
+            
+            r
+          
+        
+        
+          [
+          
+            i
+            k
+            −
+            
+              
+                1
+                r
+              
+            
+          
+          ]
+        
+        cos
+        ⁡
+        (
+        n
+        ,
+        r
+        )
+        ,
+      
+    
+    {\displaystyle {\frac {\partial U_{A_{1}}}{\partial n}}=\nabla U_{A_{1}}\cdot n={\frac {ae^{ikr}}{r}}\left[ik-{\frac {1}{r}}\right]\cos(n,r),}
+  
+
+where 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is the length of the straight line P0Q, and 
+  
+    
+      
+        (
+        n
+        ,
+        r
+        )
+      
+    
+    {\displaystyle (n,r)}
+  
+ is the angle between a straightly extended version of P0Q and the (inward) normal to the aperture. Note that 
+  
+    
+      
+        0
+        <
+        (
+        n
+        ,
+        r
+        )
+        <
+        
+          
+            π
+            2
+          
+        
+      
+    
+    {\displaystyle 0<(n,r)<{\frac {\pi }{2}}}
+  
+ so 
+  
+    
+      
+        cos
+        ⁡
+        (
+        n
+        ,
+        r
+        )
+      
+    
+    {\displaystyle \cos(n,r)}
+  
+ is a positive real number on A1.
+At Q, we also have
+
+  
+    
+      
+        
+          
+            ∂
+            
+              ∂
+              n
+            
+          
+        
+        
+          (
+          
+            
+              
+                e
+                
+                  i
+                  k
+                  s
+                
+              
+              s
+            
+          
+          )
+        
+        =
+        
+          
+            
+              e
+              
+                i
+                k
+                s
+              
+            
+            s
+          
+        
+        
+          [
+          
+            i
+            k
+            −
+            
+              
+                1
+                s
+              
+            
+          
+          ]
+        
+        cos
+        ⁡
+        (
+        n
+        ,
+        s
+        )
+        ,
+      
+    
+    {\displaystyle {\frac {\partial }{\partial n}}\left({\frac {e^{iks}}{s}}\right)={\frac {e^{iks}}{s}}\left[ik-{\frac {1}{s}}\right]\cos(n,s),}
+  
+
+where 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ is the length of the straight line PQ, and 
+  
+    
+      
+        (
+        n
+        ,
+        s
+        )
+      
+    
+    {\displaystyle (n,s)}
+  
+ is the angle between a straightly extended version of PQ and the (inward) normal to the aperture. Note that 
+  
+    
+      
+        
+          
+            π
+            2
+          
+        
+        <
+        (
+        n
+        ,
+        s
+        )
+        <
+        
+          
+            
+              3
+              π
+            
+            2
+          
+        
+      
+    
+    {\displaystyle {\frac {\pi }{2}}<(n,s)<{\frac {3\pi }{2}}}
+  
+ so 
+  
+    
+      
+        cos
+        ⁡
+        (
+        n
+        ,
+        s
+        )
+      
+    
+    {\displaystyle \cos(n,s)}
+  
+ is a negative real number on A1.
+Two more following assumptions are made.
+
+In the above normal derivatives, the terms 
+  
+    
+      
+        
+          
+            1
+            r
+          
+        
+      
+    
+    {\displaystyle {\frac {1}{r}}}
+  
+ and 
+  
+    
+      
+        
+          
+            1
+            s
+          
+        
+      
+    
+    {\displaystyle {\frac {1}{s}}}
+  
+ in the both square brackets are assumed to be negligible compared with the wavenumber 
+  
+    
+      
+        k
+        =
+        
+          
+            
+              2
+              π
+            
+            λ
+          
+        
+      
+    
+    {\displaystyle k={\frac {2\pi }{\lambda }}}
+  
+, means 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ and 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ are much greater than the wavelength 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+.
+Kirchhoff assumes that the values of 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              ∂
+              U
+            
+            
+              ∂
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial U}{\partial n}}}
+  
+ on the opaque areas marked by A2 are zero. This implies that 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              ∂
+              U
+            
+            
+              ∂
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial U}{\partial n}}}
+  
+ are discontinuous at the edge of the aperture A1. This is not the case, and this is one of the approximations used in deriving the Kirchhoff's diffraction formula. These assumptions are sometimes referred to as Kirchhoff's boundary conditions.
+The contribution from the hemisphere A3 to the integral is expected to be zero, and it can be justified by one of the following reasons.
+
+Make the assumption that the source starts to radiate at a particular time, and then make R large enough, so that when the disturbance at P is being considered, no contributions from A3 will have arrived there. Such a wave is no longer monochromatic, since a monochromatic wave must exist at all times, but that assumption is not necessary, and a more formal argument avoiding its use has been derived.
+A wave emanated from the aperture A1 is expected to evolve toward a spherical wave as it propagates (Water wave examples of this can be found in many pictures showing a water wave passing through a relatively narrow opening.). So, if R is large enough, then the integral on A3 becomes 
+  
+    
+      
+        U
+        (
+        P
+        )
+        ∼
+        −
+        
+          
+            
+              i
+              a
+            
+            
+              2
+              λ
+            
+          
+        
+        
+          ∫
+          
+            
+              A
+              
+                3
+              
+            
+          
+        
+        
+          
+            
+              e
+              
+                2
+                i
+                k
+                (
+                
+                  r
+                  ′
+                
+                )
+              
+            
+            
+              r
+              
+                ′
+                
+                  2
+                
+              
+            
+          
+        
+        [
+        cos
+        ⁡
+        (
+        n
+        ,
+        
+          r
+          ′
+        
+        )
+        −
+        cos
+        ⁡
+        (
+        n
+        ,
+        
+          r
+          ′
+        
+        )
+        ]
+        d
+        
+          
+            A
+            
+              3
+            
+          
+        
+        =
+        −
+        
+          
+            
+              i
+              a
+            
+            
+              2
+              λ
+            
+          
+        
+        
+          ∫
+          
+            
+              A
+              
+                3
+              
+            
+          
+        
+        
+          e
+          
+            2
+            i
+            k
+            (
+            
+              r
+              ′
+            
+            )
+          
+        
+        [
+        cos
+        ⁡
+        (
+        n
+        ,
+        
+          r
+          ′
+        
+        )
+        −
+        cos
+        ⁡
+        (
+        n
+        ,
+        
+          r
+          ′
+        
+        )
+        ]
+        d
+        
+          Ω
+        
+        =
+        0
+      
+    
+    {\displaystyle U(P)\sim -{\frac {ia}{2\lambda }}\int _{A_{3}}{\frac {e^{2ik(r')}}{r'^{2}}}[\cos(n,r')-\cos(n,r')]d{A_{3}}=-{\frac {ia}{2\lambda }}\int _{A_{3}}e^{2ik(r')}[\cos(n,r')-\cos(n,r')]d{\Omega }=0}
+  
+ where 
+  
+    
+      
+        
+          r
+          ′
+        
+      
+    
+    {\displaystyle r'}
+  
+ and 
+  
+    
+      
+        d
+        Ω
+      
+    
+    {\displaystyle d\Omega }
+  
+ are the distance from the center of the aperture A1 to an integral surface element and the differential solid angle in the spherical coordinate system respectively.
+As a result, finally, the integral above, which represents the complex amplitude at P, becomes
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        −
+        
+          
+            
+              i
+              a
+            
+            
+              2
+              λ
+            
+          
+        
+        
+          ∫
+          
+            
+              A
+              
+                1
+              
+            
+          
+        
+        
+          
+            
+              e
+              
+                i
+                k
+                (
+                r
+                +
+                s
+                )
+              
+            
+            
+              r
+              s
+            
+          
+        
+        [
+        cos
+        ⁡
+        (
+        n
+        ,
+        r
+        )
+        −
+        cos
+        ⁡
+        (
+        n
+        ,
+        s
+        )
+        ]
+        d
+        
+          
+            A
+            
+              1
+            
+          
+        
+        .
+      
+    
+    {\displaystyle U(P)=-{\frac {ia}{2\lambda }}\int _{A_{1}}{\frac {e^{ik(r+s)}}{rs}}[\cos(n,r)-\cos(n,s)]d{A_{1}}.}
+  
+
+This is the Kirchhoff or Fresnel–Kirchhoff diffraction formula.
+
+Equivalence to Huygens–Fresnel principle
+
+The Huygens–Fresnel principle can be derived by integrating over a different closed surface (the boundary of some volume having an observation point P). The area A1 above is replaced by a part of a wavefront (emitted from a P0) at r0, which is the closest to the aperture, and a portion of a cone with a vertex at P0, which is labeled A4 in the right diagram. If the wavefront is positioned such that the wavefront is very close to the edges of the aperture, then the contribution from A4 can be neglected (assumed here). On this new A1, the inward (toward the volume enclosed by the closed integral surface, so toward the right side in the diagram) normal 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ to A1 is along the radial direction from P0, i.e., the direction perpendicular to the wavefront. As a result, the angle 
+  
+    
+      
+        (
+        n
+        ,
+        r
+        )
+        =
+        0
+      
+    
+    {\displaystyle (n,r)=0}
+  
+ and the angle 
+  
+    
+      
+        (
+        n
+        ,
+        s
+        )
+      
+    
+    {\displaystyle (n,s)}
+  
+ is related with the angle 
+  
+    
+      
+        χ
+      
+    
+    {\displaystyle \chi }
+  
+ (the angle as defined in Huygens–Fresnel principle) as
+
+  
+    
+      
+        (
+        n
+        ,
+        s
+        )
+        =
+        π
+        −
+        χ
+        .
+      
+    
+    {\displaystyle (n,s)=\pi -\chi .}
+  
+
+The complex amplitude of the wavefront at r0 is given by
+
+  
+    
+      
+        U
+        (
+        
+          r
+          
+            0
+          
+        
+        )
+        =
+        
+          
+            
+              a
+              
+                e
+                
+                  i
+                  k
+                  
+                    r
+                    
+                      0
+                    
+                  
+                
+              
+            
+            
+              r
+              
+                0
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle U(r_{0})={\frac {ae^{ikr_{0}}}{r_{0}}}.}
+  
+
+So, the diffraction formula becomes
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        −
+        
+          
+            i
+            
+              2
+              λ
+            
+          
+        
+        
+          
+            
+              a
+              
+                e
+                
+                  i
+                  k
+                  
+                    r
+                    
+                      0
+                    
+                  
+                
+              
+            
+            
+              r
+              
+                0
+              
+            
+          
+        
+        
+          ∫
+          
+            S
+          
+        
+        
+          
+            
+              e
+              
+                i
+                k
+                s
+              
+            
+            s
+          
+        
+        (
+        1
+        +
+        cos
+        ⁡
+        χ
+        )
+        d
+        S
+        ,
+      
+    
+    {\displaystyle U(P)=-{\frac {i}{2\lambda }}{\frac {ae^{ikr_{0}}}{r_{0}}}\int _{S}{\frac {e^{iks}}{s}}(1+\cos \chi )dS,}
+  
+
+where the integral is done over the part of the wavefront at r0 which is the closest to the aperture in the diagram. This integral leads to the Huygens–Fresnel principle (with the obliquity factor 
+  
+    
+      
+        
+          
+            
+              1
+              +
+              cos
+              ⁡
+              χ
+            
+            2
+          
+        
+      
+    
+    {\textstyle {\frac {1+\cos \chi }{2}}}
+  
+).
+In the derivation of this integral, instead of the geometry depicted in the right diagram, double spheres centered at P0 with the inner sphere radius r0 and an infinite outer sphere radius can be used. In this geometry, the observation point P is located in the volume enclosed by the two spheres so the Fresnel-Kirchhoff diffraction formula is applied on the two spheres. (The surface normal on these integral surfaces are, say again, toward the enclosed volume in the diffraction formula above.) In the formula application, the integral on the outer sphere is zero by a similar reason of the integral on the hemisphere as zero above.
+
+Extended source
+Assume that the aperture is illuminated by an extended source wave. The complex amplitude at the aperture is given by U0(r).
+It is assumed, as before, that the values of 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              ∂
+              U
+            
+            
+              ∂
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial U}{\partial n}}}
+  
+ in the area A1 are the same as when the screen is not present, that the values of 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              ∂
+              U
+            
+            
+              ∂
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial U}{\partial n}}}
+  
+ in A2 are zero (Kirchhoff's boundary conditions) and that the contribution from A3 to the integral are also zero. It is also assumed that 1/s is negligible compared with k. We then have
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        
+          
+            1
+            
+              4
+              π
+            
+          
+        
+        
+          ∫
+          
+            
+              A
+              
+                1
+              
+            
+          
+        
+        
+          
+            
+              e
+              
+                i
+                k
+                s
+              
+            
+            s
+          
+        
+        
+          [
+          
+            i
+            k
+            
+              U
+              
+                0
+              
+            
+            (
+            r
+            )
+            cos
+            ⁡
+            (
+            n
+            ,
+            s
+            )
+            −
+            
+              
+                
+                  ∂
+                  
+                    U
+                    
+                      0
+                    
+                  
+                  (
+                  r
+                  )
+                
+                
+                  ∂
+                  n
+                
+              
+            
+          
+          ]
+        
+        
+        d
+        S
+        .
+      
+    
+    {\displaystyle U(P)={\frac {1}{4\pi }}\int _{A_{1}}{\frac {e^{iks}}{s}}\left[ikU_{0}(r)\cos(n,s)-{\frac {\partial U_{0}(r)}{\partial n}}\right]\,dS.}
+  
+
+This is the most general form of the Kirchhoff diffraction formula. To solve this equation for an extended source, an additional integration would be required to sum the contributions made by the individual points in the source. If, however, we assume that the light from the source at each point in the aperture has a well-defined direction, which is the case if the distance between the source and the aperture is significantly greater than the wavelength, then we can write
+
+  
+    
+      
+        
+          U
+          
+            0
+          
+        
+        (
+        r
+        )
+        ≈
+        a
+        (
+        r
+        )
+        
+          e
+          
+            i
+            k
+            r
+          
+        
+        ,
+      
+    
+    {\displaystyle U_{0}(r)\approx a(r)e^{ikr},}
+  
+
+where a(r) is the magnitude of the disturbance at the point r in the aperture.  We then have
+
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                
+                  U
+                  
+                    0
+                  
+                
+                (
+                r
+                )
+              
+            
+            
+              ∂
+              n
+            
+          
+        
+        =
+        i
+        k
+        a
+        (
+        r
+        )
+        
+          e
+          
+            i
+            k
+            r
+          
+        
+        cos
+        ⁡
+        (
+        n
+        ,
+        r
+        )
+      
+    
+    {\displaystyle {\frac {\partial {U_{0}(r)}}{\partial n}}=ika(r)e^{ikr}\cos(n,r)}
+  
+
+and thus
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        −
+        
+          
+            i
+            
+              2
+              λ
+            
+          
+        
+        
+          ∫
+          
+            S
+          
+        
+        a
+        (
+        r
+        )
+        
+          
+            
+              e
+              
+                i
+                k
+                (
+                s
+                +
+                r
+                )
+              
+            
+            s
+          
+        
+        [
+        cos
+        ⁡
+        χ
+        +
+        cos
+        ⁡
+        (
+        n
+        ,
+        r
+        )
+        ]
+        
+        d
+        S
+        .
+      
+    
+    {\displaystyle U(P)=-{\frac {i}{2\lambda }}\int _{S}a(r){\frac {e^{ik(s+r)}}{s}}[\cos \chi +\cos(n,r)]\,dS.}
+  
+
+Fraunhofer and Fresnel diffraction equations
+In spite of the various approximations that were made in arriving at the formula, it is adequate to describe the majority of problems in instrumental optics. This is mainly because the wavelength of light is much smaller than the dimensions of any obstacles encountered. Analytical solutions are not possible for most configurations, but the Fresnel diffraction equation and Fraunhofer diffraction equation, which are approximations of Kirchhoff's formula for the near field and far field, can be applied to a very wide range of optical systems.
+One of the important assumptions made in arriving at the Kirchhoff diffraction formula is that r and s are significantly greater than λ.  Another approximation can be made, which significantly simplifies the equation further: this is that the distances P0Q and QP are much greater than the dimensions of the aperture.  This allows one to make two further approximations:
+
+cos(n, r) − cos(n, s) is replaced with 2cos β, where β is the angle between P0P and the normal to the aperture. The factor 1/rs is replaced with 1/r's', where r' and s' are the distances from P0 and P to the origin, which is located in the aperture.  The complex amplitude then becomes:
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        −
+        
+          
+            
+              i
+              a
+              cos
+              ⁡
+              β
+            
+            
+              λ
+              
+                r
+                ′
+              
+              
+                s
+                ′
+              
+            
+          
+        
+        
+          ∫
+          
+            S
+          
+        
+        
+          e
+          
+            i
+            k
+            (
+            r
+            +
+            s
+            )
+          
+        
+        
+        d
+        s
+        .
+      
+    
+    {\displaystyle U(P)=-{\frac {ia\cos \beta }{\lambda r's'}}\int _{S}e^{ik(r+s)}\,ds.}
+  
+
+Assume that the aperture lies in the xy plane, and the coordinates of P0, P and Q (a general point in the aperture) are (x0, y0, z0), (x, y, z) and (x', y', 0) respectively.  We then have:
+
+  
+    
+      
+         
+        
+          r
+          
+            2
+          
+        
+        =
+        (
+        
+          x
+          
+            0
+          
+        
+        −
+        
+          x
+          ′
+        
+        
+          )
+          
+            2
+          
+        
+        +
+        (
+        
+          y
+          
+            0
+          
+        
+        −
+        
+          y
+          ′
+        
+        
+          )
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            0
+          
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle ~r^{2}=(x_{0}-x')^{2}+(y_{0}-y')^{2}+z_{0}^{2},}
+  
+
+  
+    
+      
+         
+        
+          s
+          
+            2
+          
+        
+        =
+        (
+        x
+        −
+        
+          x
+          ′
+        
+        
+          )
+          
+            2
+          
+        
+        +
+        (
+        y
+        −
+        
+          y
+          ′
+        
+        
+          )
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle ~s^{2}=(x-x')^{2}+(y-y')^{2}+z^{2},}
+  
+
+  
+    
+      
+         
+        
+          r
+          
+            ′
+            
+              2
+            
+          
+        
+        =
+        
+          x
+          
+            0
+          
+          
+            2
+          
+        
+        +
+        
+          y
+          
+            0
+          
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            0
+          
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle ~r'^{2}=x_{0}^{2}+y_{0}^{2}+z_{0}^{2},}
+  
+
+  
+    
+      
+         
+        
+          s
+          
+            ′
+            
+              2
+            
+          
+        
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          y
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle ~s'^{2}=x^{2}+y^{2}+z^{2}.}
+  
+
+We can express r and s as follows:
+
+  
+    
+      
+        r
+        =
+        
+          r
+          ′
+        
+        
+          
+            [
+            
+              1
+              −
+              
+                
+                  
+                    2
+                    (
+                    
+                      x
+                      
+                        0
+                      
+                    
+                    
+                      x
+                      ′
+                    
+                    +
+                    
+                      y
+                      
+                        0
+                      
+                    
+                    
+                      y
+                      ′
+                    
+                    )
+                  
+                  
+                    r
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                
+              
+              +
+              
+                
+                  
+                    
+                      x
+                      
+                        ′
+                        
+                          2
+                        
+                      
+                    
+                    +
+                    
+                      y
+                      
+                        ′
+                        
+                          2
+                        
+                      
+                    
+                  
+                  
+                    r
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle r=r'\left[1-{\frac {2(x_{0}x'+y_{0}y')}{r'^{2}}}+{\frac {x'^{2}+y'^{2}}{r'^{2}}}\right]^{1/2},}
+  
+
+  
+    
+      
+        s
+        =
+        
+          s
+          ′
+        
+        
+          
+            [
+            
+              1
+              −
+              
+                
+                  
+                    2
+                    (
+                    x
+                    
+                      x
+                      ′
+                    
+                    +
+                    y
+                    
+                      y
+                      ′
+                    
+                    )
+                  
+                  
+                    s
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                
+              
+              +
+              
+                
+                  
+                    
+                      x
+                      
+                        ′
+                        
+                          2
+                        
+                      
+                    
+                    +
+                    
+                      y
+                      
+                        ′
+                        
+                          2
+                        
+                      
+                    
+                  
+                  
+                    s
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle s=s'\left[1-{\frac {2(xx'+yy')}{s'^{2}}}+{\frac {x'^{2}+y'^{2}}{s'^{2}}}\right]^{1/2}.}
+  
+
+These can be expanded as power series:
+
+  
+    
+      
+        r
+        =
+        
+          r
+          ′
+        
+        
+          [
+          
+            1
+            −
+            
+              
+                1
+                
+                  2
+                  
+                    r
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            
+              [
+              
+                2
+                (
+                
+                  x
+                  
+                    0
+                  
+                
+                
+                  x
+                  ′
+                
+                +
+                
+                  y
+                  
+                    0
+                  
+                
+                
+                  y
+                  ′
+                
+                )
+                −
+                (
+                
+                  x
+                  
+                    ′
+                    
+                      2
+                    
+                  
+                
+                +
+                
+                  y
+                  
+                    ′
+                    
+                      2
+                    
+                  
+                
+                )
+              
+              ]
+            
+            +
+            
+              
+                1
+                
+                  8
+                  
+                    r
+                    
+                      ′
+                      
+                        4
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                [
+                
+                  2
+                  (
+                  
+                    x
+                    
+                      0
+                    
+                  
+                  
+                    x
+                    ′
+                  
+                  +
+                  
+                    y
+                    
+                      0
+                    
+                  
+                  
+                    y
+                    ′
+                  
+                  )
+                  −
+                  (
+                  
+                    x
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                  +
+                  
+                    y
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                ]
+              
+              
+                2
+              
+            
+            +
+            ⋯
+          
+          ]
+        
+        ,
+      
+    
+    {\displaystyle r=r'\left[1-{\frac {1}{2r'^{2}}}\left[2(x_{0}x'+y_{0}y')-(x'^{2}+y'^{2})\right]+{\frac {1}{8r'^{4}}}\left[2(x_{0}x'+y_{0}y')-(x'^{2}+y'^{2})\right]^{2}+\cdots \right],}
+  
+
+  
+    
+      
+        s
+        =
+        
+          s
+          ′
+        
+        
+          [
+          
+            1
+            −
+            
+              
+                1
+                
+                  2
+                  
+                    s
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            
+              [
+              
+                2
+                (
+                x
+                
+                  x
+                  ′
+                
+                +
+                y
+                
+                  y
+                  ′
+                
+                )
+                −
+                (
+                
+                  x
+                  
+                    ′
+                    
+                      2
+                    
+                  
+                
+                +
+                
+                  y
+                  
+                    ′
+                    
+                      2
+                    
+                  
+                
+                )
+              
+              ]
+            
+            +
+            
+              
+                1
+                
+                  8
+                  
+                    s
+                    
+                      ′
+                      
+                        4
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                [
+                
+                  2
+                  (
+                  x
+                  
+                    x
+                    ′
+                  
+                  +
+                  y
+                  
+                    y
+                    ′
+                  
+                  )
+                  −
+                  (
+                  
+                    x
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                  +
+                  
+                    y
+                    
+                      ′
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                ]
+              
+              
+                2
+              
+            
+            +
+            ⋯
+          
+          ]
+        
+        .
+      
+    
+    {\displaystyle s=s'\left[1-{\frac {1}{2s'^{2}}}\left[2(xx'+yy')-(x'^{2}+y'^{2})\right]+{\frac {1}{8s'^{4}}}\left[2(xx'+yy')-(x'^{2}+y'^{2})\right]^{2}+\cdots \right].}
+  
+
+The complex amplitude at P can now be expressed as
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        −
+        
+          
+            
+              i
+              cos
+              ⁡
+              β
+            
+            λ
+          
+        
+        
+          
+            
+              a
+              
+                e
+                
+                  i
+                  k
+                  (
+                  
+                    r
+                    ′
+                  
+                  +
+                  
+                    s
+                    ′
+                  
+                  )
+                
+              
+            
+            
+              
+                r
+                ′
+              
+              
+                s
+                ′
+              
+            
+          
+        
+        
+          ∫
+          
+            S
+          
+        
+        
+          e
+          
+            i
+            k
+            f
+            (
+            
+              x
+              ′
+            
+            ,
+            
+              y
+              ′
+            
+            )
+          
+        
+        
+        d
+        
+          x
+          ′
+        
+        d
+        
+          y
+          ′
+        
+        ,
+      
+    
+    {\displaystyle U(P)=-{\frac {i\cos \beta }{\lambda }}{\frac {ae^{ik(r'+s')}}{r's'}}\int _{S}e^{ikf(x',y')}\,dx'dy',}
+  
+
+where f(x', y') includes all the terms in the expressions above for s and r apart from the first term in each expression and can be written in the form
+
+  
+    
+      
+        f
+        (
+        
+          x
+          ′
+        
+        ,
+        
+          y
+          ′
+        
+        )
+        =
+        
+          c
+          
+            1
+          
+        
+        
+          x
+          ′
+        
+        +
+        
+          c
+          
+            2
+          
+        
+        
+          y
+          ′
+        
+        +
+        
+          c
+          
+            3
+          
+        
+        
+          x
+          
+            ′
+            
+              2
+            
+          
+        
+        +
+        
+          c
+          
+            4
+          
+        
+        
+          y
+          
+            ′
+            
+              2
+            
+          
+        
+        +
+        
+          c
+          
+            5
+          
+        
+        
+          x
+          ′
+        
+        
+          y
+          ′
+        
+        ⋯
+        ,
+      
+    
+    {\displaystyle f(x',y')=c_{1}x'+c_{2}y'+c_{3}x'^{2}+c_{4}y'^{2}+c_{5}x'y'\cdots ,}
+  
+
+where the ci are constants.
+
+Fraunhofer diffraction
+
+If all the terms in f(x', y') can be neglected except for the terms in x' and y', we have the Fraunhofer diffraction equation.  If the direction cosines of P0Q and PQ are
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  l
+                  
+                    0
+                  
+                
+              
+              
+                
+                =
+                −
+                
+                  x
+                  
+                    0
+                  
+                
+                
+                  /
+                
+                
+                  r
+                  ′
+                
+                ,
+              
+            
+            
+              
+                
+                  m
+                  
+                    0
+                  
+                
+              
+              
+                
+                =
+                −
+                
+                  y
+                  
+                    0
+                  
+                
+                
+                  /
+                
+                
+                  r
+                  ′
+                
+                ,
+              
+            
+            
+              
+                l
+              
+              
+                
+                =
+                x
+                
+                  /
+                
+                
+                  s
+                  ′
+                
+                ,
+              
+            
+            
+              
+                m
+              
+              
+                
+                =
+                y
+                
+                  /
+                
+                
+                  s
+                  ′
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}l_{0}&=-x_{0}/r',\\m_{0}&=-y_{0}/r',\\l&=x/s',\\m&=y/s'.\end{aligned}}}
+  
+
+The Fraunhofer diffraction equation is then
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        C
+        
+          ∫
+          
+            S
+          
+        
+        
+          e
+          
+            i
+            k
+            [
+            (
+            
+              l
+              
+                0
+              
+            
+            −
+            l
+            )
+            
+              x
+              ′
+            
+            +
+            (
+            
+              m
+              
+                0
+              
+            
+            −
+            m
+            )
+            
+              y
+              ′
+            
+            ]
+          
+        
+        
+        d
+        
+          x
+          ′
+        
+        d
+        
+          y
+          ′
+        
+        ,
+      
+    
+    {\displaystyle U(P)=C\int _{S}e^{ik[(l_{0}-l)x'+(m_{0}-m)y']}\,dx'dy',}
+  
+
+where C is a constant.  This can also be written in the form
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        =
+        C
+        
+          ∫
+          
+            S
+          
+        
+        
+          e
+          
+            i
+            (
+            
+              
+                k
+              
+              
+                0
+              
+            
+            −
+            
+              k
+            
+            )
+            ⋅
+            
+              
+                r
+              
+              ′
+            
+          
+        
+        
+        d
+        
+          r
+          ′
+        
+        ,
+      
+    
+    {\displaystyle U(P)=C\int _{S}e^{i(\mathbf {k} _{0}-\mathbf {k} )\cdot \mathbf {r} '}\,dr',}
+  
+
+where k0 and k are the wave vectors of the waves traveling from P0 to the aperture and from the aperture to P respectively, and r' is a point in the aperture.
+If the point source is replaced by an extended source whose complex amplitude at the aperture is given by U0(r' ), then the Fraunhofer diffraction equation is:
+
+  
+    
+      
+        U
+        (
+        P
+        )
+        ∝
+        
+          ∫
+          
+            S
+          
+        
+        
+          a
+          
+            0
+          
+        
+        (
+        
+          
+            r
+          
+          ′
+        
+        )
+        
+          e
+          
+            i
+            (
+            
+              
+                k
+              
+              
+                0
+              
+            
+            −
+            
+              k
+            
+            )
+            ⋅
+            
+              
+                r
+              
+              ′
+            
+          
+        
+        
+        d
+        
+          r
+          ′
+        
+        ,
+      
+    
+    {\displaystyle U(P)\propto \int _{S}a_{0}(\mathbf {r} ')e^{i(\mathbf {k} _{0}-\mathbf {k} )\cdot \mathbf {r} '}\,dr',}
+  
+
+where a0(r') is, as before, the magnitude of the disturbance at the aperture.
+In addition to the approximations made in deriving the Kirchhoff equation, it is assumed that
+
+r and s are significantly greater than the size of the aperture,
+second- and higher-order terms in the expression f(x', y') can be neglected.
+
+Fresnel diffraction
+
+When the quadratic terms cannot be neglected but all higher order terms can, the equation becomes the Fresnel diffraction equation. The approximations for the Kirchhoff equation are used, and additional assumptions are:
+
+r and s are significantly greater than the size of the aperture,
+third- and higher-order terms in the expression f(x', y') can be neglected.

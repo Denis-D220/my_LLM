@@ -1,0 +1,2127 @@
+In mathematics, there are several equivalent ways of defining the real numbers. One of them is that they form a complete ordered field that does not contain any smaller complete ordered field. Such a definition does not prove that such a complete ordered field exists, and the existence proof consists of constructing a mathematical structure that satisfies the definition.
+The article presents several such constructions. They are equivalent in the sense that, given the result of any two such constructions, there is a unique isomorphism of ordered fields between them. This results from the above definition and is independent of particular constructions. These isomorphisms allow identifying the results of the constructions, and, in practice, to forget which construction has been chosen.
+
+Axiomatic definitions
+An axiomatic definition of the real numbers consists of defining them as the elements of  a complete ordered field. This means the following: The real numbers form a set, commonly denoted 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, containing two distinguished elements denoted 0 and 1, and on which are defined  two binary operations and one binary relation; the operations are called addition and multiplication of real numbers and denoted respectively with + and ×; the binary relation is inequality, denoted 
+  
+    
+      
+        ≤
+        .
+      
+    
+    {\displaystyle \leq .}
+  
+ Moreover, the following properties called axioms must be satisfied.
+The existence of such a structure is a theorem, which is proved by constructing such a structure. A consequence of the axioms is that this structure is unique up to an isomorphism, and thus, the real numbers can be used and manipulated, without referring to the method of construction.
+
+Axioms
+
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ is a field under addition and multiplication. In other words,
+For all x, y, and z in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, x + (y + z) = (x + y) + z and x × (y × z) = (x × y) × z. (associativity of addition and multiplication)
+For all x and y in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, x + y = y + x and x × y = y × x. (commutativity of addition and multiplication)
+For all x, y, and z in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, x × (y + z) = (x × y) + (x × z). (distributivity of multiplication over addition)
+For all x in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, x + 0 = x. (existence of additive identity)
+0 is not equal to 1, and for all x in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, x × 1 = x. (existence of multiplicative identity)
+For every x in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, there exists an element −x in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, such that x + (−x) = 0. (existence of additive inverses)
+For every x ≠ 0 in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, there exists an element x−1 in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, such that x × x−1 = 1. (existence of multiplicative inverses)
+
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ is totally ordered for 
+  
+    
+      
+        ≤
+      
+    
+    {\displaystyle \leq }
+  
+. In other words,
+For all x in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, x ≤ x. (reflexivity)
+For all x and y in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, if x ≤ y and y ≤ x, then x = y. (antisymmetry)
+For all x, y, and z in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, if x ≤ y and y ≤ z, then x ≤ z. (transitivity)
+For all x and y in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, x ≤ y or y ≤ x. (totality)
+Addition and multiplication are compatible with the order. In other words,
+For all x, y and z in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, if x ≤ y, then x + z ≤ y + z. (preservation of order under addition)
+For all x and y in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, if 0 ≤ x and 0 ≤ y, then 0 ≤ x × y (preservation of order under multiplication)
+The order ≤ is complete in the following sense: every non-empty subset of 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ that is bounded above has a least upper bound. In other words,
+If A is a non-empty subset of 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, and if A has an upper bound in 
+  
+    
+      
+        
+          R
+        
+        ,
+      
+    
+    {\displaystyle \mathbb {R} ,}
+  
+ then A has a least upper bound u, such that for every upper bound v of A, u ≤ v.
+
+On the least upper bound property
+Axiom 4, which requires the order to be Dedekind-complete, implies the Archimedean property (though the converse does not hold).
+The axiom is crucial in the characterization of the reals. For example, the totally ordered field of the rational numbers Q satisfies the first three axioms, but not the fourth. In other words, models of the rational numbers are also models of the first three axioms.
+Note that the axiom is nonfirstorderizable, as it expresses a statement about collections of reals and not just individual such numbers. As such, the reals are not given by a first-order logic theory.
+
+On models
+A model of real numbers is a mathematical structure that satisfies the above axioms.
+Several models are given below. Any two models are isomorphic; so, the real numbers are unique up to isomorphisms.
+Saying that any two models are isomorphic means that for any two models 
+  
+    
+      
+        (
+        
+          R
+        
+        ,
+        
+          0
+          
+            
+              R
+            
+          
+        
+        ,
+        
+          1
+          
+            
+              R
+            
+          
+        
+        ,
+        
+          +
+          
+            
+              R
+            
+          
+        
+        ,
+        
+          ×
+          
+            
+              R
+            
+          
+        
+        ,
+        
+          ≤
+          
+            
+              R
+            
+          
+        
+        )
+      
+    
+    {\displaystyle (\mathbb {R} ,0_{\mathbb {R} },1_{\mathbb {R} },+_{\mathbb {R} },\times _{\mathbb {R} },\leq _{\mathbb {R} })}
+  
+ and 
+  
+    
+      
+        (
+        S
+        ,
+        
+          0
+          
+            S
+          
+        
+        ,
+        
+          1
+          
+            S
+          
+        
+        ,
+        
+          +
+          
+            S
+          
+        
+        ,
+        
+          ×
+          
+            S
+          
+        
+        ,
+        
+          ≤
+          
+            S
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle (S,0_{S},1_{S},+_{S},\times _{S},\leq _{S}),}
+  
+ there is a bijection 
+  
+    
+      
+        f
+        :
+        
+          R
+        
+        →
+        S
+      
+    
+    {\displaystyle f\colon \mathbb {R} \to S}
+  
+ that preserves both the field operations and the order. Explicitly,
+
+f is both injective and surjective.
+f(0ℝ) = 0S and f(1ℝ) = 1S.
+f(x +ℝ y) = f(x) +S f(y) and f(x ×ℝ y) = f(x) ×S f(y), for all x and y in 
+  
+    
+      
+        
+          R
+        
+        .
+      
+    
+    {\displaystyle \mathbb {R} .}
+  
+
+x ≤ℝ y if and only if f(x) ≤S f(y),  for all x and y in 
+  
+    
+      
+        
+          R
+        
+        .
+      
+    
+    {\displaystyle \mathbb {R} .}
+  
+
+Tarski's axiomatization of the reals
+
+An alternative synthetic axiomatization of the real numbers and their arithmetic was given by Alfred Tarski, consisting of only the 8 axioms shown below and a mere four primitive notions: a set called the real numbers, denoted 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, a binary relation over 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ called order, denoted by the infix operator <, a binary operation over 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ called addition, denoted by the infix operator +, and the constant 1.
+Axioms of order (primitives: 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, <):
+Axiom 1. If x < y, then not y < x. That is, "<" is an asymmetric relation.
+Axiom 2. If x < z, there exists a y such that x < y and y < z. In other words, "<" is dense in 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+.
+Axiom 3. "<" is Dedekind-complete. More formally, for all X, Y ⊆ 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, if for all x ∈ X and y ∈ Y, x < y, then there exists a z such that for all x ∈ X and y ∈ Y, if z ≠ x and z ≠ y, then x < z and z < y.
+To clarify the above statement somewhat, let X ⊆ 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ and Y ⊆ 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+. We now define two common English verbs in a particular way that suits our purpose:
+
+X precedes Y if and only if for every x ∈ X and every y ∈ Y, x < y.
+The real number z separates X and Y if and only if for every x ∈ X with x ≠ z and every y ∈ Y with y ≠ z, x < z and z < y.
+Axiom 3 can then be stated as:
+
+"If a set of reals precedes another set of reals, then there exists at least one real number separating the two sets."
+Axioms of addition (primitives: 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, <, +):
+Axiom 4. x + (y + z) = (x + z) + y.
+Axiom 5. For all x, y, there exists a z such that x + z = y.
+Axiom 6. If x + y < z + w, then x < z or y < w.
+Axioms for one (primitives: 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, <, +, 1):
+Axiom 7. 1 ∈ 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+.
+Axiom 8. 1 < 1 + 1.
+These axioms imply that 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ is a linearly ordered abelian group under addition with distinguished element 1. 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ is also Dedekind-complete and divisible.
+
+Explicit constructions of models
+We shall not prove that any models of the axioms are isomorphic. Such a proof can be found in any number of modern analysis or set theory textbooks. We will sketch the basic definitions and properties of a number of constructions, however, because each of these is important for both mathematical and historical reasons. The first three, due to Georg Cantor/Charles Méray, Richard Dedekind/Joseph Bertrand and Karl Weierstrass all occurred within a few years of each other. Each has advantages and disadvantages.
+
+Construction from Cauchy sequences
+Let R be the set of Cauchy sequences of rational numbers. That is, sequences
+
+of rational numbers such that for every rational ε > 0, there exists an integer N such that for all natural numbers m, n > N, one has  |xm − xn| < ε. Here the vertical bars denote the absolute value.
+Cauchy sequences (xn) and (yn) can be added and multiplied as follows:
+
+Two Cauchy sequences (xn) and (yn) are called equivalent if and only if the difference between them tends to zero; that is, for every rational number ε > 0, there exists an integer N such that for all natural numbers n > N, one has  |xn − yn| < ε.
+This defines an equivalence relation that is compatible with the operations defined above, and the set R of all equivalence classes can be shown to satisfy all axioms of the real numbers. 
+  
+    
+      
+        
+          Q
+        
+      
+    
+    {\displaystyle \mathbb {Q} }
+  
+ can be considered as a subset of 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ by identifying a rational number r with the equivalence class of the Cauchy sequence  (r, r, r, ...).
+Comparison between real numbers is obtained by defining the following comparison between Cauchy sequences: (xn) ≥  (yn) if and only if   
+x is equivalent to y or there exists an integer N such that xn ≥  yn for all    
+n > N.
+By construction, every real number x is represented by a Cauchy sequence of rational numbers. This representation is far from unique; every rational sequence that converges to x is a Cauchy sequence representing x. This reflects the observation that one can often use different sequences to approximate the same real number.
+The only real number axiom that does not follow easily from the definitions is the completeness of ≤, i.e. the least upper bound property. It can be proved as follows: Let S be a non-empty subset of 
+  
+    
+      
+        
+          
+            R
+          
+          ′
+        
+      
+    
+    {\displaystyle \mathbb {R} '}
+  
+ and U be an upper bound for S. Substituting a larger value if necessary, we may assume U is rational. Since S is non-empty, we can choose a rational number L such that L < s for some s in S. Now define sequences of rationals (un) and (ln) as follows:
+Set u0 = U and l0 = L. For each n consider the number
+mn = (un + ln)/2.
+If mn is an upper bound for S, set un+1 = mn and ln+1 = ln.
+Otherwise set
+ln+1 = mn and un+1 = un.
+This defines two Cauchy sequences of rationals, and so the real numbers l = (ln) and u = (un). It is easy to prove, by induction on n that un is an upper bound for S for all n
+and ln is never an upper bound for S for any n.
+Thus u is an upper bound for S. To see that it is a least upper bound, notice that the limit of (un − ln) is 0, and so l = u. Now suppose b < u = l is a smaller upper bound for S. Since (ln) is monotonic increasing it is easy to see that  b < ln for some n. But ln is not an upper bound for S and so neither is b. Hence u is a least upper bound for S and ≤ is complete.
+The usual decimal notation can be translated to Cauchy sequences in a natural way. For example, the notation π = 3.1415... means that π is the equivalence class of the Cauchy sequence (3,  3.1,  3.14,  3.141,  3.1415, ...). The equation 0.999... = 1 states that the sequences (0,  0.9,  0.99,  0.999,...) and (1, 1, 1, 1,...) are equivalent, i.e., their difference converges to 0.
+An advantage of constructing 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ as the completion of 
+  
+    
+      
+        
+          Q
+        
+      
+    
+    {\displaystyle \mathbb {Q} }
+  
+ is that the method can be used for the completion of any metric space, simply by replacing everywhere ⁠
+  
+    
+      
+        
+          |
+        
+        x
+        −
+        y
+        
+          |
+        
+      
+    
+    {\displaystyle |x-y|}
+  
+⁠ with ⁠
+  
+    
+      
+        d
+        (
+        x
+        ,
+        y
+        )
+      
+    
+    {\displaystyle d(x,y)}
+  
+⁠, where ⁠
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+⁠ denotes the distance of the metric space.
+In particular, the fields of p-adic numbers can be defined as the completions of the rationals with respect to other absolute values, the p-adic absolute values.
+
+Construction by Dedekind cuts
+
+A Dedekind cut in an ordered field is a partition of it, (A, B), such that A is nonempty and closed downwards, B is nonempty and closed upwards, and A contains no greatest element. Real numbers can be constructed as Dedekind cuts of rational numbers.
+For convenience we may take the lower set 
+  
+    
+      
+        A
+        
+      
+    
+    {\displaystyle A\,}
+  
+ as the representative of any given Dedekind cut 
+  
+    
+      
+        (
+        A
+        ,
+        B
+        )
+        
+      
+    
+    {\displaystyle (A,B)\,}
+  
+, since 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ completely determines 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+.  By doing this we may think intuitively of a real number as being represented by the set of all smaller rational numbers.  In more detail, a real number 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is any subset of the set 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\textbf {Q}}}
+  
+ of rational numbers that fulfills the following conditions:
+
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is not empty
+
+  
+    
+      
+        r
+        ≠
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle r\neq {\textbf {Q}}}
+  
+
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is closed downwards.  In other words,  for all 
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle x,y\in {\textbf {Q}}}
+  
+ such that 
+  
+    
+      
+        x
+        <
+        y
+      
+    
+    {\displaystyle x<y}
+  
+, if 
+  
+    
+      
+        y
+        ∈
+        r
+      
+    
+    {\displaystyle y\in r}
+  
+ then 
+  
+    
+      
+        x
+        ∈
+        r
+      
+    
+    {\displaystyle x\in r}
+  
+
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ contains no greatest element.  In other words, there is no 
+  
+    
+      
+        x
+        ∈
+        r
+      
+    
+    {\displaystyle x\in r}
+  
+ such that for all 
+  
+    
+      
+        y
+        ∈
+        r
+      
+    
+    {\displaystyle y\in r}
+  
+, 
+  
+    
+      
+        y
+        ≤
+        x
+      
+    
+    {\displaystyle y\leq x}
+  
+
+We form the set 
+  
+    
+      
+        
+          
+            R
+          
+        
+      
+    
+    {\displaystyle {\textbf {R}}}
+  
+ of real numbers as the set of all Dedekind cuts 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ of 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\textbf {Q}}}
+  
+, and define a total ordering on the real numbers as follows: 
+  
+    
+      
+        x
+        ≤
+        y
+        ⇔
+        x
+        ⊆
+        y
+      
+    
+    {\displaystyle x\leq y\Leftrightarrow x\subseteq y}
+  
+
+We embed the rational numbers into the reals by identifying the rational number 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ with the set of all smaller rational numbers 
+  
+    
+      
+        {
+        x
+        ∈
+        
+          
+            Q
+          
+        
+        :
+        x
+        <
+        q
+        }
+      
+    
+    {\displaystyle \{x\in {\textbf {Q}}:x<q\}}
+  
+. Since the rational numbers are dense, such a set can have no greatest element and thus fulfills the conditions for being a real number laid out above.
+Addition. 
+  
+    
+      
+        A
+        +
+        B
+        :=
+        {
+        a
+        +
+        b
+        :
+        a
+        ∈
+        A
+        ∧
+        b
+        ∈
+        B
+        }
+      
+    
+    {\displaystyle A+B:=\{a+b:a\in A\land b\in B\}}
+  
+
+Subtraction. 
+  
+    
+      
+        A
+        −
+        B
+        :=
+        {
+        a
+        −
+        b
+        :
+        a
+        ∈
+        A
+        ∧
+        b
+        ∈
+        (
+        
+          
+            Q
+          
+        
+        ∖
+        B
+        )
+        }
+      
+    
+    {\displaystyle A-B:=\{a-b:a\in A\land b\in ({\textbf {Q}}\setminus B)\}}
+  
+ where 
+  
+    
+      
+        
+          
+            Q
+          
+        
+        ∖
+        B
+      
+    
+    {\displaystyle {\textbf {Q}}\setminus B}
+  
+ denotes the relative complement of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ in 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\textbf {Q}}}
+  
+, 
+  
+    
+      
+        {
+        x
+        :
+        x
+        ∈
+        
+          
+            Q
+          
+        
+        ∧
+        x
+        ∉
+        B
+        }
+      
+    
+    {\displaystyle \{x:x\in {\textbf {Q}}\land x\notin B\}}
+  
+
+Negation is a special case of subtraction: 
+  
+    
+      
+        −
+        B
+        :=
+        {
+        a
+        −
+        b
+        :
+        a
+        <
+        0
+        ∧
+        b
+        ∈
+        (
+        
+          
+            Q
+          
+        
+        ∖
+        B
+        )
+        }
+      
+    
+    {\displaystyle -B:=\{a-b:a<0\land b\in ({\textbf {Q}}\setminus B)\}}
+  
+
+Defining multiplication is less straightforward.
+if 
+  
+    
+      
+        A
+        ,
+        B
+        ≥
+        0
+      
+    
+    {\displaystyle A,B\geq 0}
+  
+ then 
+  
+    
+      
+        A
+        ×
+        B
+        :=
+        {
+        a
+        ×
+        b
+        :
+        a
+        ≥
+        0
+        ∧
+        a
+        ∈
+        A
+        ∧
+        b
+        ≥
+        0
+        ∧
+        b
+        ∈
+        B
+        }
+        ∪
+        {
+        x
+        ∈
+        
+          Q
+        
+        :
+        x
+        <
+        0
+        }
+      
+    
+    {\displaystyle A\times B:=\{a\times b:a\geq 0\land a\in A\land b\geq 0\land b\in B\}\cup \{x\in \mathrm {Q} :x<0\}}
+  
+
+if either 
+  
+    
+      
+        A
+        
+      
+    
+    {\displaystyle A\,}
+  
+ or 
+  
+    
+      
+        B
+        
+      
+    
+    {\displaystyle B\,}
+  
+ is negative, we use the identities 
+  
+    
+      
+        A
+        ×
+        B
+        =
+        −
+        (
+        A
+        ×
+        −
+        B
+        )
+        =
+        −
+        (
+        −
+        A
+        ×
+        B
+        )
+        =
+        (
+        −
+        A
+        ×
+        −
+        B
+        )
+        
+      
+    
+    {\displaystyle A\times B=-(A\times -B)=-(-A\times B)=(-A\times -B)\,}
+  
+ to convert 
+  
+    
+      
+        A
+        
+      
+    
+    {\displaystyle A\,}
+  
+ and/or 
+  
+    
+      
+        B
+        
+      
+    
+    {\displaystyle B\,}
+  
+ to positive numbers and then apply the definition above.
+We define division in a similar manner:
+if 
+  
+    
+      
+        A
+        ≥
+        0
+        
+          
+             and 
+          
+        
+        B
+        >
+        0
+      
+    
+    {\displaystyle A\geq 0{\mbox{ and }}B>0}
+  
+ then 
+  
+    
+      
+        A
+        
+          /
+        
+        B
+        :=
+        {
+        a
+        
+          /
+        
+        b
+        :
+        a
+        ∈
+        A
+        ∧
+        b
+        ∈
+        (
+        
+          
+            Q
+          
+        
+        ∖
+        B
+        )
+        }
+      
+    
+    {\displaystyle A/B:=\{a/b:a\in A\land b\in ({\textbf {Q}}\setminus B)\}}
+  
+
+if either 
+  
+    
+      
+        A
+        
+      
+    
+    {\displaystyle A\,}
+  
+ or 
+  
+    
+      
+        B
+        
+      
+    
+    {\displaystyle B\,}
+  
+ is negative, we use the identities 
+  
+    
+      
+        A
+        
+          /
+        
+        B
+        =
+        −
+        (
+        A
+        
+          /
+        
+        
+          −
+          B
+        
+        )
+        =
+        −
+        (
+        −
+        A
+        
+          /
+        
+        B
+        )
+        =
+        −
+        A
+        
+          /
+        
+        
+          −
+          B
+        
+        
+      
+    
+    {\displaystyle A/B=-(A/{-B})=-(-A/B)=-A/{-B}\,}
+  
+ to convert 
+  
+    
+      
+        A
+        
+      
+    
+    {\displaystyle A\,}
+  
+ to a non-negative number  and/or 
+  
+    
+      
+        B
+        
+      
+    
+    {\displaystyle B\,}
+  
+ to a positive number and then apply the definition above.
+Supremum.  If a nonempty set 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ of real numbers has any upper bound in 
+  
+    
+      
+        
+          
+            R
+          
+        
+      
+    
+    {\displaystyle {\textbf {R}}}
+  
+, then it has a least upper bound in 
+  
+    
+      
+        
+          
+            R
+          
+        
+      
+    
+    {\displaystyle {\textbf {R}}}
+  
+ that is equal to 
+  
+    
+      
+        ⋃
+        S
+      
+    
+    {\displaystyle \bigcup S}
+  
+.
+As an example of a Dedekind cut representing an irrational number, we may take the positive square root of 2.  This can be defined by the set 
+  
+    
+      
+        A
+        =
+        {
+        x
+        ∈
+        
+          
+            Q
+          
+        
+        :
+        x
+        <
+        0
+        ∨
+        x
+        ×
+        x
+        <
+        2
+        }
+      
+    
+    {\displaystyle A=\{x\in {\textbf {Q}}:x<0\lor x\times x<2\}}
+  
+. It can be seen from the definitions above that 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is a real number, and that 
+  
+    
+      
+        A
+        ×
+        A
+        =
+        2
+        
+      
+    
+    {\displaystyle A\times A=2\,}
+  
+. However, neither claim is immediate. Showing that 
+  
+    
+      
+        A
+        
+      
+    
+    {\displaystyle A\,}
+  
+ is real requires showing that 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ has no greatest element, i.e. that for any positive rational 
+  
+    
+      
+        x
+        
+      
+    
+    {\displaystyle x\,}
+  
+ with 
+  
+    
+      
+        x
+        ×
+        x
+        <
+        2
+        
+      
+    
+    {\displaystyle x\times x<2\,}
+  
+, there is a rational 
+  
+    
+      
+        y
+        
+      
+    
+    {\displaystyle y\,}
+  
+ with 
+  
+    
+      
+        x
+        <
+        y
+        
+      
+    
+    {\displaystyle x<y\,}
+  
+ and 
+  
+    
+      
+        y
+        ×
+        y
+        <
+        2
+        
+        .
+      
+    
+    {\displaystyle y\times y<2\,.}
+  
+ The choice 
+  
+    
+      
+        y
+        =
+        
+          
+            
+              2
+              x
+              +
+              2
+            
+            
+              x
+              +
+              2
+            
+          
+        
+        
+      
+    
+    {\displaystyle y={\frac {2x+2}{x+2}}\,}
+  
+ works.  Then  
+  
+    
+      
+        A
+        ×
+        A
+        ≤
+        2
+      
+    
+    {\displaystyle A\times A\leq 2}
+  
+ but to show equality requires showing that if 
+  
+    
+      
+        r
+        
+      
+    
+    {\displaystyle r\,}
+  
+ is any rational number with 
+  
+    
+      
+        r
+        <
+        2
+        
+      
+    
+    {\displaystyle r<2\,}
+  
+, then there is positive 
+  
+    
+      
+        x
+        
+      
+    
+    {\displaystyle x\,}
+  
+ in 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ with 
+  
+    
+      
+        r
+        <
+        x
+        ×
+        x
+        
+      
+    
+    {\displaystyle r<x\times x\,}
+  
+.
+An advantage of this construction is that each real number corresponds to a unique cut. Furthermore, by relaxing the first two requirements of the definition of a cut, the extended real number system may be obtained by associating 
+  
+    
+      
+        −
+        ∞
+      
+    
+    {\displaystyle -\infty }
+  
+ with the empty set and 
+  
+    
+      
+        ∞
+      
+    
+    {\displaystyle \infty }
+  
+ with all of 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\textbf {Q}}}
+  
+.
+
+Construction using hyperreal numbers
+As in the hyperreal numbers, one constructs the hyperrationals 
+  
+    
+      
+        
+          
+          
+            ∗
+          
+        
+        
+          Q
+        
+      
+    
+    {\displaystyle ^{*}\mathbb {Q} }
+  
+ from the rational numbers by means of an ultrafilter.  Here a hyperrational is by definition a ratio of two hyperintegers.  Consider the ring 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ of all limited (i.e. finite) elements in 
+  
+    
+      
+        
+          
+          
+            ∗
+          
+        
+        
+          Q
+        
+      
+    
+    {\displaystyle ^{*}\mathbb {Q} }
+  
+.  Then 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ has a unique maximal ideal 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, the infinitesimal hyperrational numbers.  The quotient ring 
+  
+    
+      
+        B
+        
+          /
+        
+        I
+      
+    
+    {\displaystyle B/I}
+  
+ gives the field 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ of real numbers. This construction uses a non-principal ultrafilter over the set of natural numbers, the existence of which is guaranteed by the axiom of choice.
+It turns out that the maximal ideal respects the order on 
+  
+    
+      
+        
+          
+          
+            ∗
+          
+        
+        
+          Q
+        
+      
+    
+    {\displaystyle ^{*}\mathbb {Q} }
+  
+.  Hence the resulting field is an ordered field.  Completeness can be proved in a similar way to the construction from the Cauchy sequences.
+
+Construction from surreal numbers
+Every ordered field can be embedded in the surreal numbers. The real numbers form a maximal subfield that is Archimedean (meaning that no real number is infinitely large or infinitely small).  This embedding is not unique, though it can be chosen in a canonical way.
+
+Construction from integers (Eudoxus reals)
+A relatively less known construction allows to define real numbers using only the additive group of integers 
+  
+    
+      
+        
+          Z
+        
+      
+    
+    {\displaystyle \mathbb {Z} }
+  
+ with different versions.  Arthan (2004), who attributes this construction to unpublished work by Stephen Schanuel, refers to this construction as the Eudoxus reals, naming them after ancient Greek astronomer and mathematician Eudoxus of Cnidus.  As noted by Shenitzer (1987) and Arthan (2004), Eudoxus's treatment of quantity using the behavior of proportions became the basis for this construction.  This construction has been formally verified to give a Dedekind-complete ordered field by the IsarMathLib project. 
+Let an almost homomorphism be a map 
+  
+    
+      
+        f
+        :
+        
+          Z
+        
+        →
+        
+          Z
+        
+      
+    
+    {\displaystyle f:\mathbb {Z} \to \mathbb {Z} }
+  
+ such that the set 
+  
+    
+      
+        {
+        f
+        (
+        n
+        +
+        m
+        )
+        −
+        f
+        (
+        m
+        )
+        −
+        f
+        (
+        n
+        )
+        :
+        n
+        ,
+        m
+        ∈
+        
+          Z
+        
+        }
+      
+    
+    {\displaystyle \{f(n+m)-f(m)-f(n):n,m\in \mathbb {Z} \}}
+  
+ is finite (equivalently, 
+  
+    
+      
+        f
+        (
+        n
+        +
+        m
+        )
+        −
+        f
+        (
+        m
+        )
+        −
+        f
+        (
+        n
+        )
+      
+    
+    {\displaystyle f(n+m)-f(m)-f(n)}
+  
+ is bounded). (Note that 
+  
+    
+      
+        f
+        (
+        n
+        )
+        =
+        ⌊
+        α
+        n
+        ⌋
+      
+    
+    {\displaystyle f(n)=\lfloor \alpha n\rfloor }
+  
+ is an almost homomorphism for every 
+  
+    
+      
+        α
+        ∈
+        
+          R
+        
+      
+    
+    {\displaystyle \alpha \in \mathbb {R} }
+  
+.) Almost homomorphisms form an abelian group under pointwise addition. We say that two almost homomorphisms 
+  
+    
+      
+        f
+        ,
+        g
+      
+    
+    {\displaystyle f,g}
+  
+ are almost equal if the set 
+  
+    
+      
+        {
+        f
+        (
+        n
+        )
+        −
+        g
+        (
+        n
+        )
+        :
+        n
+        ∈
+        
+          Z
+        
+        }
+      
+    
+    {\displaystyle \{f(n)-g(n):n\in \mathbb {Z} \}}
+  
+ is finite (equivalently, 
+  
+    
+      
+        f
+        (
+        n
+        )
+        −
+        g
+        (
+        n
+        )
+      
+    
+    {\displaystyle f(n)-g(n)}
+  
+ is bounded). This defines an equivalence relation on the set of almost homomorphisms. Real numbers are defined as the equivalence classes of this relation. Alternatively, the almost homomorphisms taking only finitely many values form a subgroup, and the underlying additive group of the real number is the quotient group. To add real numbers defined this way we add the almost homomorphisms that represent them. Multiplication of real numbers corresponds to functional composition of almost homomorphisms. If 
+  
+    
+      
+        [
+        f
+        ]
+      
+    
+    {\displaystyle [f]}
+  
+ denotes the real number represented by an almost homomorphism 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ we say that 
+  
+    
+      
+        0
+        ≤
+        [
+        f
+        ]
+      
+    
+    {\displaystyle 0\leq [f]}
+  
+ if 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is bounded or 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ takes an infinite number of positive values on 
+  
+    
+      
+        
+          
+            Z
+          
+          
+            +
+          
+        
+      
+    
+    {\displaystyle \mathbb {Z} ^{+}}
+  
+ (equivalently, 
+  
+    
+      
+        0
+        <
+        [
+        f
+        ]
+      
+    
+    {\displaystyle 0<[f]}
+  
+ if 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ has no upper bound). This defines the linear order relation on the set of real numbers constructed this way.
+
+Other constructions
+Faltin et al. (1975) write: "Few mathematical structures have undergone as many revisions or have been presented in as many guises as the real numbers. Every generation reexamines the reals in the light of its values and mathematical objectives."
+A number of other constructions have been given, by:
+
+de Bruijn (1976), de Bruijn (1977)
+Rieger (1982)
+Knopfmacher & Knopfmacher (1987), Knopfmacher & Knopfmacher (1988)
+For an overview, see Weiss (2015).
+As a reviewer of one noted: "The details are all included, but as usual they are tedious and not too instructive."

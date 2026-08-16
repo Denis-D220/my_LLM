@@ -1,0 +1,80 @@
+The Ensoniq AudioPCI is a Peripheral Component Interconnect (PCI)-based sound card released in 1997. It was Ensoniq's last sound card product before they were acquired by Creative Technology. The card represented a shift in Ensoniq's market positioning. Whereas the Soundscape line had been made up primarily of low-volume high-end products full of features, the AudioPCI was designed to be a very simple, low-cost product to appeal to system OEMs and thus hopefully sell in mass quantities.
+
+Low cost
+
+Towards the end of the 1990s, Ensoniq was struggling financially. Their cards were very popular with PC OEMs, but their costs were too high and their musical instrument division was fading in revenue. Pressure from intense competition, especially with the dominant Creative Labs, was forcing audio card makers to try to keep their prices low.
+The AudioPCI, released in July 1997, was designed primarily to be cheap. In comparison to the wide variety of chips on and sheer size of the older Soundscape boards, the highly integrated two chip design of the AudioPCI is an obvious shift in design philosophy. The board consists only of a very small software-driven audio chip (one of the following: S5016, ES1370, ES 1371) and a companion digital-to-analog converter (DAC). In another cost-cutting move, the previously typical ROM chip used for storage of samples for sample-based synthesis was replaced with the facility to use system RAM as storage for this audio data. This was made possible by the move to the PCI bus, with its far greater bandwidth and more efficient bus mastering interface when compared to the older ISA bus standard.
+
+Features
+AudioPCI, while designed to be cheap, is still quite functional. It offers many of the audio capabilities of the Soundscape ELITE card, including several digital effects (reverb, chorus, and spatial enhancement) when used with Microsoft Windows 95 and later versions of Windows.
+AudioPCI was one of the first cards to have Microsoft DirectSound3D 4-speaker playback support. The 4-speaker mode is only activated by software supporting the DirectSound3D quadraphonic mode. An oddity is that the rear channel was connected to the same output jack as line input. The jack switches modes if 4-speaker output became active.
+The DOS and Windows drivers support sample-based synthesis through Ensoniq's ".ecw" patch set format. Several patch set choices are available, varying in size and instrument quality (2, 4, or 8 MB).
+The ".ecw" file format (Ensoniq Concert Wavetable) was never made open as had been hoped for by enthusiasts. Consequently, there are very few custom wave sets available, in contrast to the huge availability of home-made releases in E-mu's SoundFont format. It was particularly unfortunate because the AudioPCI used system RAM for patch set storage which in itself offers tremendous potential for new patch sets over the traditional ROM storage previously used. It is also disappointing considering the incredible popularity and longevity of the Ensoniq ES1370 chipset and its descendants, some of which were still in use six years after the original AudioPCI board, and the fact that DOS drivers for the far newer Sound Blaster Audigy still use ".ecw" wave sets. These newer cards are unable to use SoundFonts in DOS, limiting them to the three official .ecw wavesets from the late '90s and one incomplete unofficial waveset.
+
+DOS compatibility
+The AudioPCI supported DOS games and applications using a software driver that would install during DOS, or the DOS portion of Windows 9x. This driver virtualized a Sound Blaster-compatible ISA sound card through the use of the PC's NMI and a terminate-and-stay-resident program. This allowed the AudioPCI to have more compatible out-of-the-box DOS support than some of its PCI competitors for the time.
+For example, the competing Monster Sound from Diamond Multimedia was limited to running DOS games in Windows 9x-DOS command windows, meaning DOS compatibility was frequently only reliable through an additional ISA sound card. Creative was struggling with the challenge of legacy support as well, and had created the SB-Link, an interconnect that allowed access to the serial-IRQ and PC/PCI grant/request sideband signals offered by some PCI chipsets of the time, in order to achieve DOS compatibility for their Sound Blaster AWE64-variant PCI sound cards. SB-Link was also used by a number of other chipset vendors, such as ESS and Yamaha.
+While Ensoniq's approach generally worked with most games, some older games had problems detecting the virtualized hardware on some systems. In addition, the DOS driver required a memory manager such as EMM386 to be loaded, which not only required additional conventional memory space but also put the CPU into Virtual-86 mode, conflicting with games that utilized a modified form of protected mode, called 'flat mode'. This mode allowed fast, direct access to the system's entire RAM without requiring a memory manager or memory protection mechanism. This is not a requirement exclusive to AudioPCI, however, as a number of ISA sound cards used it as well, including the Creative AWE ISA series.
+The AudioPCI DOS driver included Ensoniq Soundscape 16-bit digital audio and sample-based synthesis support, along with support for Sound Blaster Pro, AdLib Gold, General MIDI, and MT-32. However, without actual hardware for FM synthesis, FM music and sound effects were simulated using samples, often with unacceptable results. Therefore, it was practical to configure DOS games to utilize the General MIDI synthesizer and digital sound effects, whenever possible, for better sound quality. DOS MIDI utilizes the same .ecw patch set files as Windows MIDI.
+AudioPCI supports OPL features; however too fast CPU (for example Pentium 4 2.0 and faster) would break OPL-related sounds (for example MIDI). Using WDM audio drivers can mitigate this problem. This problem is also affected to hypervisors such as VMware Workstation and KVM.
+
+Creative acquisition
+Part of the deal when Ensoniq was purchased by Creative Labs was to integrate the AudioPCI DOS driver into the upcoming Sound Blaster Live!. Creative added Sound Blaster 16 emulation to the driver and removed the Ensoniq SoundScape support. AudioPCI itself was re-branded as several Creative Labs sound cards, including the Sound Blaster PCI 64, PCI 128, Vibra PCI, and others. The Ensoniq ES1370 audio chip was renamed Creative 5507 and revised into AC'97-compliant variants, the ES1371 and ES1373, and used for several more years on card and as integrated motherboard audio.
+Cards with ES1370 run natively at 44 kHz sampling frequency, meaning that 12, 24, 32 and 48 kHz become resampled. Resampling means lower sound quality, worse synchronization and possibly higher CPU utilization. Cards with ES1371 run at 48 kHz conforming to AC97, so 11, 22 and 44 kHz become resampled. For few soundcards feature multiple quartzes or a PLL, resampling is often used with all its potential problems.
+Creative Labs Malvern (which was the former Ensoniq company that had been acquired) later released the Ectiva 1938 (EV1938). This single chip PCI audio controller was based on the ES1371/ES1373 and was register compatible with these previous chips. The main difference between the EV1938 and previous chips was the inclusion of a built-in AC'97 codec (hence producing a cheaper, single chip audio solution). The EV1938 was also used for both integrated audio on laptops/motherboards and on cards, such as the "Sound Blaster AudioPCI 64V" (CT4730).
+
+PCI Bus Digital Audio and Music Controller
+
+ES1370
+
+The AudioPCI ES1370 was developed by Ensoniq. One important feature of this chip was that it used the PCI bus, instead of the ISA bus commonly used by sound cards at that point. It was one of the first PCI sound card solutions to offer MS-DOS legacy compatibility without special hardware extensions to the standard PCI slot. When paired with a capable codec, such as the AK4531 (pre-AC'97), the ES1370 supported the then-latest in 3D audio positioning through 4-speaker surround sound. The chip was also a PCI bus master device that was designed to provide high-speed access to system RAM and resources, for sample synthesis data and effect processing. Depending on the drivers, it may also be called the Sound Blaster 64/128 in the device manager.
+ES1370 was one of the first audio chips to support the Microsoft DirectSound3D audio API. When programs took full advantage of the API's capabilities, the ES1370 was capable of both global spatial and localized 3D sound effects, in both 2 and 4-speaker mode. The chip was capable of spatializing all audio automatically, but still required DirectSound3D usage for specific localization of sounds.
+The ES1370 is also emulated as a piece of virtual hardware in QEMU and VMware.
+
+ENSONIQ SoundScape 'wavetable' sample-based synthesis (frequently called 'wavetable synthesis', albeit incorrectly)
+2 and 4 MB downloadable sound sets (2 MB = GM, 4 MB & 8 MB = GM+GS+10 drum kits)
+32 simultaneous MIDI voices
+Uses system RAM for sound storage (memory locked or dynamic OS control)
+Multi-algorithm reverb and chorus
+Multiple level spatial 3D sound
+Microsoft DirectSound3D compatible (4 speaker 3D sound with AK4531 codec)
+16-bit Record & Playback at up to 48 kHz
+Support for hardware sound rendering
+Support for EAX 1.0, OpenAL
+Low system overhead, PCI bus master
+100% DOS legacy compatible (allegedly; some games fail to detect the virtualized hardware and/or clash with Virtual-86 mode)
+Unlimited digital audio streams
+I²S input
+OPL-FM and MPU-401 emulation (using the sample synthesis engine; FM emulation was inauthentic at best)
+Only a single, shared IRQ required
+No ISA signals required
+No distributed DMA signals required
+Drivers: DOS, Windows 3.1x, Windows 9x, Windows NT 4.0, Windows 2000, Windows XP (WinNT (Alpha), Solaris (SPARCengine Ultra AX), Linux, and BeOS available); Creative provided WDM drivers for Windows 98 SE and later
+Compared to Sound Blaster Live!, ES1370 lacks support of DirectSound hardware acceleration, makes it more relied on KMixer
+
+ES1371 and ES1373
+
+Ensoniq/Creative ES1371 and ES1373 (AudioPCI 97) are AC'97-compatible versions.
+
+Sample sets: 2, 4, and 8 MB sets
+128 General MIDI sample-based instruments, 61 drum programs, 128 MT-32 instruments, Roland GS Sound set in 4 & 8 MB sets
+Synthesizer: Up to 32 simultaneous voice polyphony, 16 MIDI channels
+Digital effects: reverb, chorus, and spatial enhancement
+OPL-FM and MPU-401 emulation (using the sample synthesis engine; FM emulation was inauthentic at best)
+Digital audio
+16-bit record & playback at up to 48 kHz (mono/stereo). A/D D/A codec
+Lowest Noise: >Signal-to-noise ratio 90 dbr typical. Frequency response: 20 Hz - 22 kHz
+Full duplex operation (simultaneous record/playback)
+S/PDIF and I²S output — ES1373 only.
+Supported standards. 100% DOS legacy game compatible (allegedly; some games fail to detect the virtualized hardware and/or clash with Virtual-86 mode):
+ENSONIQ Soundscape, Microsoft Direct Audio (DirectX), OpenAL, Sound Blaster Pro (2), General MIDI, MT-32 (although with different instrument sounds), AdLib/FM (simulated via sample-synthesis), MPC 1,2,3
+Drivers: DOS, Windows (3.1, 9x, NT 4.0, 2000, XP), FreeBSD, Linux; Creative provided WDM drivers for Windows 98 SE and later
+Compared to Sound Blaster Live!, ES1371 and ES1373 lack support of DirectSound hardware acceleration, make they more relied on KMixer
+The CT5880 chip is a relabeled ES1371, may be found on some cheap cards i.e. SB Creative VIBRA 128 PCI.
+
+EV1938
+
+Creative EV1938 (AudioPCI 64V) is virtually identical to ES1371/ES1373 and is a later (cost reduced) product.
+
+Built-in AC'97 codec
+2-channels only

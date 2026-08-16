@@ -1,0 +1,72 @@
+Concise Binary Object Representation (CBOR) is a binary data serialization format loosely based on JSON authored by Carsten Bormann and Paul Hoffman. Like JSON it allows the transmission of data objects that contain name–value pairs, but in a more concise manner. This increases processing and transfer speeds at the cost of human readability. It is defined in IETF RFC 8949.
+Amongst other uses, it is the recommended data serialization layer for the CoAP Internet of Things protocol suite and the data format on which COSE messages are based. It is also used in the Client-to-Authenticator Protocol (CTAP) within the scope of the FIDO2 project.
+CBOR was inspired by MessagePack, which was developed and promoted by Sadayuki Furuhashi. CBOR extended MessagePack, particularly by allowing to distinguish text strings from byte strings, which was implemented in 2013 in MessagePack.
+
+Specification of the CBOR encoding
+CBOR encoded data is seen as a stream of data items. Each data item consists of a header byte containing a 3-bit type and 5-bit short count.  This is followed by an optional extended count (if the short count is in the range 24–27), and an optional payload.
+For types 0, 1, and 7, there is no payload; the count is the value.  For types 2 (byte string) and 3 (text string), the count is the length of the payload.  For types 4 (array) and 5 (map), the count is the number of items (pairs) in the payload.  For type 6 (tag), the payload is a single item and the count is a numeric tag number which describes the enclosed item.
+
+Examples
+
+Major type and count handling in each data item
+Each data item's behaviour is defined by the major type and count.  
+The major type is used for selecting the main behaviour or type of each data item.
+The 5-bit short count field encodes counts 0–23 directly.  Short counts of 24–27 indicate the count value is in a following 8, 16, 32 or 64-bit extended count field.  Values 28–30 are not assigned and must not be used.
+Types are divided into "atomic" types 0–1 and 6–7, for which the count field encodes the value directly, and non-atomic types 2–5, for which the count field encodes the size of the following payload field.
+A short count of 31 is used with non-atomic types 2–5 to indicate an indefinite length; the payload is the following items until a "break" marker byte of 255 (type=7, short count=31).  A short count of 31 is not permitted with the other atomic types 0, 1 or 6.
+Type 6 (tag) is unusual in that its count field encodes a value directly, but also has a payload field (which always consists of a single item).
+Extended counts, and all multi-byte values, are encoded in network (big-endian) byte order.
+
+CBOR data item field encoding
+
+Tiny Field Encoding
+
+Short Field Encoding
+
+Long Field Encoding
+
+Integers (types 0 and 1)
+For integers, the count field is the value; there is no payload.  Type 0 encodes positive or unsigned integers, with values up to 264−1.  Type 1 encodes negative integers, with a value of −1−count, for values from −264 to −1.
+
+Strings (types 2 and 3)
+Types 2 and 3 have a count field which encodes the length in bytes of the payload.  Type 2 is an unstructured byte string.  Type 3 is a UTF-8 text string.
+A short count of 31 indicates an indefinite-length string.  This is followed by zero or more definite-length strings of the same type, terminated by a "break" marker byte.  The value of the item is the concatenation of the values of the enclosed items.  Items of a different type, or nested indefinite-length strings, are not permitted.  Text strings must be individually well-formed; UTF-8 characters may not be split across items.
+
+Arrays and maps (types 4 and 5)
+Type 4 has a count field encoding the number of following items, followed by that many items.  The items need not all be the same type; some programming languages call this a "tuple" rather than an "array".
+Alternatively, an indefinite-length encoding with a short count of 31 may be used.  This continues until a "break" marker byte of 255.  Because nested items may also use the indefinite encoding, the parser must pair the break markers with the corresponding indefinite-length header bytes.
+Type 5 is similar but encodes a map (also called a dictionary, or associative array) of key/value pairs.  In this case, the count encodes the number of pairs of items.  If the indefinite-length encoding is used, there must be an even number of items before the "break" marker byte.
+
+Semantic tag (type 6)
+A semantic tag is another atomic type for which the count is the value, but it also has a payload (a single following item), and the two are considered one item in e.g. an array or a map.
+The tag number provides additional type information for the following item, beyond what the 3-bit major type can provide.  For example, a tag of 1 indicates that the following number is a Unix time value.  A tag of 2 indicates that the following byte string encodes an unsigned bignum.  A tag of 32 indicates that the following text string is a URI as defined in RFC 3986. RFC 8746 defines tags 64–87 to encode homogeneous arrays of fixed-size integer or floating-point values as byte strings.
+The tag 55799 is allocated to mean "CBOR data follows".  This is a semantic no-op, but allows the corresponding tag bytes d9 d9 f7 to be prepended to a CBOR file without affecting its meaning.  These bytes may be used as a "magic number" to distinguish the beginning of CBOR data.
+The all-ones tag values 0xffff, 0xffffffff and 0xffffffffffffffff are reserved to indicate the absence of a tag in a CBOR decoding library; they should never appear in a data stream.
+The break marker pseudo-item may not be the payload of a tag.
+
+Special/float (type 7)
+This major type is used to encode various special values that do not fit into the other categories.  It follows the same encoding-size rules as the other atomic types (0, 1, and 6), but the count field is interpreted differently.
+Values 0–19 are not currently defined.
+The values 20–23 are used to encode the special values false, true, null, and undefined.  
+A short count of 24 indicates a 1-byte extended count follows which can be used in future to encode additional special values.  To simplify decoding, the values 0–31 may not be encoded in this form.  None of the values 32–255 are currently defined.
+Short counts of 25, 26 or 27 indicate a following extended count field is to be interpreted as a (big-endian) 16-, 32- or 64-bit IEEE floating point value.  These are the same sizes as an extended count, but are interpreted differently.  In particular, for all other major types, a 2-byte extended count of 0x1234 and a 4-byte extended count of 0x00001234 are exactly equivalent.  This is not the case for floating-point values.
+Short counts 28–30 are reserved, like for all other major types.
+A short count of 31 encodes the special "break" marker which terminates an indefinite-length encoding.  This is related to, but different from, the use with other major types where a short count of 31 begins an indefinite length encoding.  This is not an item, and may not appear in a defined-length payload.
+
+Semantic tag registration
+IANA has created the CBOR tags registry, located at https://www.iana.org/assignments/cbor-tags/cbor-tags.xhtml . Registrations must contain the template outlined below.
+
+DAG-CBOR
+The DAG-CBOR specification is a stricter subset of CBOR, developed by Protocol Labs. The problem that DAG-CBOR solves is that, in CBOR, an object can be serialized in more than one way. For example, {"b":1,"a":2} can be represented as eitheror This means that one object can have two different serializations. The DAG-CBOR specification uniquely picks a single CBOR representation, out of all possible CBOR representations of an object. Some objects that can have a CBOR representation no longer has a DAG-CBOR representation, because their nature does not allow for a unique representation. For example, an indefinite-length items (can be a string, byte sequence, list, and map) does not have a DAG-CBOR representation, even though it can have a CBOR representation.
+The DAG-CBOR specification allows consistent content-addressable storage. Specifically, a piece of data can be uniquely serialized as a sequence of bytes, and this sequence can then be hashed as its CID (content ID), usable for content-addressing.
+The name "DAG" denotes "directed acyclic graph", since the specification was produced specifically to allow for data objects in the form of Merkle DAGs.
+
+Cryptography
+
+Object signing and encryption
+
+CBOR Object Signing and Encryption (COSE) is a binary format for authenticated and/or encrypted CBOR data structures.
+
+Web tokens
+
+A CBOR Web Token (CWT) is a signed token that uses CBOR as the serialization format. They are an alternative to JSON Web Tokens (JWTs).

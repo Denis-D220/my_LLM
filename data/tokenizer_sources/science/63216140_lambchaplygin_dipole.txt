@@ -1,0 +1,383 @@
+The Lamb–Chaplygin dipole model is a mathematical description for a particular inviscid and steady dipolar vortex flow. It is a non-trivial solution to the two-dimensional Euler equations. The model is named after Horace Lamb and Sergey Alexeyevich Chaplygin, who independently discovered this flow structure. This dipole is the two-dimensional analogue of Hill's spherical vortex.
+
+The model
+A two-dimensional (2D), solenoidal vector field 
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle \mathbf {u} }
+  
+ may be described by a scalar stream function 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+, via 
+  
+    
+      
+        
+          u
+        
+        =
+        −
+        
+          
+            e
+            
+              z
+            
+          
+        
+        ×
+        
+          ∇
+        
+        ψ
+      
+    
+    {\displaystyle \mathbf {u} =-\mathbf {e_{z}} \times \mathbf {\nabla } \psi }
+  
+, where 
+  
+    
+      
+        
+          
+            e
+            
+              z
+            
+          
+        
+      
+    
+    {\displaystyle \mathbf {e_{z}} }
+  
+ is the right-handed unit vector perpendicular to the 2D plane. By definition, the stream function is related to the vorticity 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+ via a Poisson equation:  
+  
+    
+      
+        −
+        
+          ∇
+          
+            2
+          
+        
+        ψ
+        =
+        ω
+      
+    
+    {\displaystyle -\nabla ^{2}\psi =\omega }
+  
+. The Lamb–Chaplygin model follows from demanding the following characteristics: 
+
+The dipole has a circular atmosphere/separatrix with radius 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+: 
+  
+    
+      
+        ψ
+        
+          (
+          
+            r
+            =
+            R
+          
+          )
+        
+        =
+        0
+      
+    
+    {\displaystyle \psi \left(r=R\right)=0}
+  
+.
+The dipole propages through an otherwise irrotational fluid (
+  
+    
+      
+        ω
+        (
+        r
+        >
+        R
+        )
+        =
+        0
+        )
+      
+    
+    {\displaystyle \omega (r>R)=0)}
+  
+ at translation velocity 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+.
+The flow is steady in the co-moving frame of reference: 
+  
+    
+      
+        ω
+        (
+        r
+        <
+        R
+        )
+        =
+        f
+        
+          (
+          ψ
+          )
+        
+      
+    
+    {\displaystyle \omega (r<R)=f\left(\psi \right)}
+  
+.
+Inside the atmosphere, there is a linear relation between the vorticity and the stream function 
+  
+    
+      
+        ω
+        =
+        
+          k
+          
+            2
+          
+        
+        ψ
+      
+    
+    {\displaystyle \omega =k^{2}\psi }
+  
+
+The solution 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ in cylindrical coordinates (
+  
+    
+      
+        r
+        ,
+        θ
+      
+    
+    {\displaystyle r,\theta }
+  
+), in the co-moving frame of reference reads:
+
+  
+    
+      
+        
+          
+            
+              
+                ψ
+                =
+                
+                  
+                    {
+                    
+                      
+                        
+                          
+                            
+                              
+                                −
+                                2
+                                U
+                                
+                                  J
+                                  
+                                    1
+                                  
+                                
+                                (
+                                k
+                                r
+                                )
+                              
+                              
+                                k
+                                
+                                  J
+                                  
+                                    0
+                                  
+                                
+                                (
+                                k
+                                R
+                                )
+                              
+                            
+                          
+                          
+                            s
+                            i
+                            n
+                          
+                          (
+                          θ
+                          )
+                          ,
+                        
+                        
+                          
+                            for 
+                          
+                          r
+                          <
+                          R
+                          ,
+                        
+                      
+                      
+                        
+                          U
+                          
+                            (
+                            
+                              
+                                
+                                  
+                                    R
+                                    
+                                      2
+                                    
+                                  
+                                  r
+                                
+                              
+                              −
+                              r
+                            
+                            )
+                          
+                          
+                            s
+                            i
+                            n
+                          
+                          (
+                          θ
+                          )
+                          ,
+                        
+                        
+                          
+                            for 
+                          
+                          r
+                          ≥
+                          R
+                          ,
+                        
+                      
+                    
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\psi ={\begin{cases}{\frac {-2UJ_{1}(kr)}{kJ_{0}(kR)}}\mathrm {sin} (\theta ),&{\text{for }}r<R,\\U\left({\frac {R^{2}}{r}}-r\right)\mathrm {sin} (\theta ),&{\text{for }}r\geq R,\end{cases}}\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        
+          J
+          
+            0
+          
+        
+        
+           and 
+        
+        
+          J
+          
+            1
+          
+        
+      
+    
+    {\displaystyle J_{0}{\text{ and }}J_{1}}
+  
+ are the zeroth and first Bessel functions of the first kind, respectively. Further, the value of 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ is such that 
+  
+    
+      
+        k
+        R
+        =
+        3.8317...
+      
+    
+    {\displaystyle kR=3.8317...}
+  
+, the first non-trivial zero of the first Bessel function of the first kind.
+
+Usage and considerations
+Since the seminal work of P. Orlandi, the Lamb–Chaplygin vortex model has been a popular choice for numerical studies on vortex-environment interactions. The fact that it does not deform make it a prime candidate for consistent flow initialization. A less favorable property is that the second derivative of the flow field at the dipole's edge is not continuous. Further, it serves a framework for stability analysis on dipolar-vortex structures.

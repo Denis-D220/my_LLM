@@ -1,0 +1,182 @@
+Z Matrix or bus impedance matrix in computing is an important tool in power system analysis. Though, it is not frequently used in power flow study, unlike Ybus matrix, it is, however, an important tool in other power system studies like short circuit analysis or fault study. 
+The Zbus matrix can be computed by matrix inversion of the Ybus matrix.  Since the Ybus matrix is usually sparse, the explicit Zbus matrix would be dense and very memory intensive to handle directly.
+
+Context
+Electric power transmission needs optimization. Only Computer simulation allows the complex handling required. The Zbus matrix is a big tool in that box.
+
+Formulation
+Z Matrix can be formed by either inverting the Ybus matrix or by using Z bus building algorithm. The latter method is harder to implement but more practical and faster (in terms of computer run time and number of floating-point operations per second) for a relatively large system.
+Formulation:
+
+  
+    
+      
+        
+          Z
+          
+            b
+            u
+            s
+          
+        
+        =
+        
+          
+            
+              Y
+              
+                b
+                u
+                s
+              
+            
+          
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle Z_{bus}={Y_{bus}}^{-1}}
+  
+
+Because the Zbus is the inverse of the Ybus, it is symmetrical like the Ybus. The diagonal elements of the Zbus are referred to as driving-point impedances of the buses and the off-diagonal elements are called transfer impedances.
+One reason the Ybus is so much more popular in calculation is the matrix becomes sparse for large systems; that is, many elements go to zero as the admittance between two far away buses is very small. In the Zbus, however, the impedance between two far away buses becomes very large, so there are no zero elements, making computation much harder.
+The operations to modify an existing Zbus are straightforward, and outlined in Table 1.
+To create a Zbus matrix from scratch, we
+start by listing the equation for one branch:
+
+  
+    
+      
+        [
+        
+          V
+          
+            1
+          
+        
+        ]
+        =
+        [
+        
+          Z
+          
+            a
+          
+        
+        ]
+        [
+        
+          I
+          
+            1
+          
+        
+        ]
+      
+    
+    {\displaystyle [V_{1}]=[Z_{a}][I_{1}]}
+  
+
+Then we add additional branches according
+to Table 1 until each bus is expressed in the matrix:
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  
+                    V
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  
+                    V
+                    
+                      2
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    Z
+                    
+                      a
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    Z
+                    
+                      b
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        
+          
+            [
+            
+              
+                
+                  
+                    I
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  
+                    I
+                    
+                      2
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle {\begin{bmatrix}V_{1}\\V_{2}\end{bmatrix}}={\begin{bmatrix}Z_{a}&0\\0&Z_{b}\end{bmatrix}}{\begin{bmatrix}I_{1}\\I_{2}\end{bmatrix}}}

@@ -1,0 +1,56 @@
+{
+  "format": "llm_pretraining_dataset",
+  "format_version": 1,
+  "tokenizer": {
+    "vocab_size": 24000,
+    "state_sha256": "927963b1241d92e464088b9eb6fd54f51e5c1d68de75e7ef3c0d6ae8bdfcd9bb"
+  },
+  "split_policy": {
+    "method": "seeded_sha256_group_prefix_by_normalized_utf8_bytes",
+    "validation_fraction": 0.01,
+    "seed": 2026,
+    "split_before_tokenization": true,
+    "group_safe": true
+  },
+  "training_geometry": {
+    "context_length": 2048,
+    "window_tokens": 2049,
+    "window_stride": 2048,
+    "incomplete_final_tail_padded": false
+  },
+  "storage": {
+    "dtype": "uint16",
+    "byte_order": "little",
+    "tokens_per_shard": 10000000
+  },
+  "splits": {
+    "train": {
+      "document_count": 9792,
+      "split_group_count": 9792,
+      "normalized_characters": 42920701,
+      "normalized_utf8_bytes": 43263434,
+      "document_identity_sha256": "2f903c866b4e5a174c0652ecabe0d016c62015d530db1b965d36fe713db49fe9",
+      "total_tokens": 9353865,
+      "shard_count": 1,
+      "complete_examples": 4567,
+      "prediction_tokens": 9353216,
+      "tail_tokens": 649,
+      "manifest": "train/manifest.json",
+      "stream_sha256": "6fa4839757775b04d49a9d0b0896c6fb7344365af1ed87fba63c2bd48e73d137"
+    },
+    "validation": {
+      "document_count": 73,
+      "split_group_count": 73,
+      "normalized_characters": 434343,
+      "normalized_utf8_bytes": 436272,
+      "document_identity_sha256": "817a3888880c601e719b1eb5903d9b8cb9435a6220dc0351e115ac5de27e782d",
+      "total_tokens": 95355,
+      "shard_count": 1,
+      "complete_examples": 46,
+      "prediction_tokens": 94208,
+      "tail_tokens": 1147,
+      "manifest": "validation/manifest.json",
+      "stream_sha256": "b7a539b366c9ddc3dda2b44d4bdc5612070b63d9d0eb6d6f51dfdde6b1e46ba7"
+    }
+  }
+}

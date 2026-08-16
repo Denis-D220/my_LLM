@@ -1,0 +1,1755 @@
+In computability theory, hyperarithmetic theory is a generalization of Turing computability.  It has close connections with definability in second-order arithmetic and with weak systems of set theory such as Kripke–Platek set theory.  It is an important tool in effective descriptive set theory.
+The central focus of hyperarithmetic theory is the sets of natural numbers known as hyperarithmetic sets.  There are three equivalent ways of defining this class of sets; the study of the relationships between these different definitions is one motivation for the study of hyperarithmetical theory.
+
+Hyperarithmetical sets and definability
+The first definition of the hyperarithmetic sets uses the analytical hierarchy. 
+A set of natural numbers is classified at level 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{1}}
+  
+ of this hierarchy if it is definable by a formula of second-order arithmetic with only existential set quantifiers and no other set quantifiers.  A set is classified at level 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ of the analytical hierarchy if it is definable by a formula of second-order arithmetic with only universal set quantifiers and no other set quantifiers.  A set is 
+  
+    
+      
+        
+          Δ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Delta _{1}^{1}}
+  
+ if it is both 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{1}}
+  
+ and 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+.  The hyperarithmetical sets are exactly the 
+  
+    
+      
+        
+          Δ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Delta _{1}^{1}}
+  
+ sets. 
+
+Hyperarithmetical sets and iterated Turing jumps: the hyperarithmetical hierarchy
+The definition of hyperarithmetical sets as 
+  
+    
+      
+        
+          Δ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Delta _{1}^{1}}
+  
+ does not directly depend on computability results.  A second, equivalent, definition shows that the hyperarithmetical sets can be defined using infinitely iterated Turing jumps.  This second definition also shows that the hyperarithmetical sets can be classified into a hierarchy extending the arithmetical hierarchy; the hyperarithmetical sets are exactly the sets that are assigned a rank in this hierarchy.
+Each level of the hyperarithmetical hierarchy is indexed by a countable ordinal number (ordinal), but not all countable ordinals correspond to a level of the hierarchy. The ordinals used by the hierarchy are those with an ordinal notation, which is a concrete, effective description of the ordinal.
+An ordinal notation is an effective description of a countable ordinal by a natural number. A system of ordinal notations is required in order to define the hyperarithmetic hierarchy. The fundamental property an ordinal notation must have is that it describes the ordinal in terms of smaller ordinals in an effective way. The following inductive definition is typical; it uses a pairing function 
+  
+    
+      
+        ⟨
+        ⋅
+        ,
+        ⋅
+        ⟩
+      
+    
+    {\displaystyle \langle \cdot ,\cdot \rangle }
+  
+.
+
+The number 0 is a notation for the ordinal 0.
+If n is a notation for an ordinal λ then 
+  
+    
+      
+        ⟨
+        1
+        ,
+        n
+        ⟩
+      
+    
+    {\displaystyle \langle 1,n\rangle }
+  
+ is a notation for λ + 1;
+Suppose that δ is a limit ordinal. A notation for δ is a number of the form 
+  
+    
+      
+        ⟨
+        2
+        ,
+        e
+        ⟩
+      
+    
+    {\displaystyle \langle 2,e\rangle }
+  
+, where e is the index of a total computable function 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \phi _{e}}
+  
+ such that for each n, 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle \phi _{e}(n)}
+  
+ is a notation for an ordinal λn less than δ and δ is the sup of the set 
+  
+    
+      
+        {
+        
+          λ
+          
+            n
+          
+        
+        ∣
+        n
+        ∈
+        
+          N
+        
+        }
+      
+    
+    {\displaystyle \{\lambda _{n}\mid n\in \mathbb {N} \}}
+  
+.
+This may also be defined by taking effective joins at all levels instead of only notations for limit ordinals.
+There are only countably many ordinal notations, since each notation is a natural number; thus there is a countable ordinal that is the supremum of all ordinals that have a notation. This ordinal is known as the Church–Kleene ordinal and is denoted 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{CK}}
+  
+.  Note that this ordinal is still countable, the symbol being only an analogy with the first uncountable ordinal, 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \omega _{1}}
+  
+.  The set of all natural numbers that are ordinal notations is denoted 
+  
+    
+      
+        
+          
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}}
+  
+ and called Kleene's 
+  
+    
+      
+        
+          
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}}
+  
+.
+Ordinal notations are used to define iterated Turing jumps. The sets of natural numbers used to define the hierarchy are 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ for each 
+  
+    
+      
+        δ
+        <
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \delta <\omega _{1}^{CK}}
+  
+. 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ is sometimes also denoted 
+  
+    
+      
+        H
+        (
+        δ
+        )
+      
+    
+    {\displaystyle H(\delta )}
+  
+, or 
+  
+    
+      
+        
+          H
+          
+            e
+          
+        
+      
+    
+    {\displaystyle H_{e}}
+  
+ for a notation 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ for 
+  
+    
+      
+        δ
+      
+    
+    {\displaystyle \delta }
+  
+. Suppose that δ has notation e. These sets were first defined by Davis (1950) and Mostowski (1951). The set 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ is defined using e as follows.
+
+If δ = 0 then 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle 0^{(\delta )}=0}
+  
+ is the empty set.
+If δ = λ + 1 then 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ is the Turing jump of 
+  
+    
+      
+        
+          0
+          
+            (
+            λ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\lambda )}}
+  
+. The sets 
+  
+    
+      
+        
+          0
+          
+            (
+            1
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(1)}}
+  
+ and 
+  
+    
+      
+        
+          0
+          
+            (
+            2
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(2)}}
+  
+ are 
+  
+    
+      
+        
+          0
+          ′
+        
+      
+    
+    {\displaystyle 0'}
+  
+ and 
+  
+    
+      
+        
+          0
+          ″
+        
+      
+    
+    {\displaystyle 0''}
+  
+, respectively.
+If δ is a limit ordinal, let 
+  
+    
+      
+        ⟨
+        
+          λ
+          
+            n
+          
+        
+        ∣
+        n
+        ∈
+        
+          N
+        
+        ⟩
+      
+    
+    {\displaystyle \langle \lambda _{n}\mid n\in \mathbb {N} \rangle }
+  
+ be the sequence of ordinals less than δ given by the notation e. The set 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ is given by the rule 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+        =
+        {
+        ⟨
+        n
+        ,
+        i
+        ⟩
+        ∣
+        i
+        ∈
+        
+          0
+          
+            (
+            
+              λ
+              
+                n
+              
+            
+            )
+          
+        
+        }
+      
+    
+    {\displaystyle 0^{(\delta )}=\{\langle n,i\rangle \mid i\in 0^{(\lambda _{n})}\}}
+  
+. This is the effective join of the sets 
+  
+    
+      
+        
+          0
+          
+            (
+            
+              λ
+              
+                n
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\lambda _{n})}}
+  
+.
+Although the construction of 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ depends on having a fixed notation for δ, and each infinite ordinal has many notations, a theorem of Clifford Spector shows that the Turing degree of 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ depends only on δ, not on the particular notation used, and thus 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ is well defined up to Turing degree.
+The hyperarithmetical hierarchy is defined from these iterated Turing jumps. A set X of natural numbers is classified at level δ of the hyperarithmetical hierarchy, for 
+  
+    
+      
+        δ
+        <
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \delta <\omega _{1}^{CK}}
+  
+, if X is Turing reducible to 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+. There will always be a least such δ if there is any; it is this least δ that measures the level of uncomputability of X.
+
+Hyperarithmetical sets and constructibility
+Let 
+  
+    
+      
+        
+          L
+          
+            α
+          
+        
+      
+    
+    {\displaystyle L_{\alpha }}
+  
+ denote the 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+th level of the constructible hierarchy, and let 
+  
+    
+      
+        n
+        :
+        
+          
+            O
+          
+        
+        →
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle n:{\mathcal {O}}\to \omega _{1}^{CK}}
+  
+ be the map from a member of Kleene's O to the ordinal it represents. A subset of 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ is hyperarithmetical if and only if it is a member of 
+  
+    
+      
+        
+          L
+          
+            
+              ω
+              
+                1
+              
+              
+                C
+                K
+              
+            
+          
+        
+      
+    
+    {\displaystyle L_{\omega _{1}^{CK}}}
+  
+. A subset of 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ is definable by a 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ formula if and only if its image under 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+-definable on 
+  
+    
+      
+        
+          L
+          
+            
+              ω
+              
+                1
+              
+              
+                C
+                K
+              
+            
+          
+        
+      
+    
+    {\displaystyle L_{\omega _{1}^{CK}}}
+  
+, where 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+ is from the Lévy hierarchy of formulae.
+The Spector-Gandy theorem states that a subset 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ of 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ is definable by a 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ formula if and only if there is a 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+ formula 
+  
+    
+      
+        ϕ
+        (
+        u
+        )
+      
+    
+    {\displaystyle \phi (u)}
+  
+ such that 
+  
+    
+      
+        n
+        ∈
+        x
+      
+    
+    {\displaystyle n\in x}
+  
+ iff 
+  
+    
+      
+        
+          L
+          
+            
+              ω
+              
+                1
+              
+              
+                C
+                K
+              
+            
+          
+        
+        ⊨
+        ϕ
+        (
+        n
+        )
+      
+    
+    {\displaystyle L_{\omega _{1}^{CK}}\vDash \phi (n)}
+  
+.Theorem 3.7.1
+
+Hyperarithmetical sets and recursion in higher types
+A third characterization of the hyperarithmetical sets, due to Kleene, uses higher-type computable functionals. The type-2 functional 
+  
+    
+      
+        
+          
+
+          
+          
+            2
+          
+        
+        E
+        :
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle {}^{2}E\colon \mathbb {N} ^{\mathbb {N} }\to \mathbb {N} }
+  
+ is defined by the following rules:
+
+  
+    
+      
+        
+          
+
+          
+          
+            2
+          
+        
+        E
+        (
+        f
+        )
+        =
+        1
+        
+      
+    
+    {\displaystyle {}^{2}E(f)=1\quad }
+  
+ if there is an i such that f(i) > 0,
+
+  
+    
+      
+        
+          
+
+          
+          
+            2
+          
+        
+        E
+        (
+        f
+        )
+        =
+        0
+        
+      
+    
+    {\displaystyle {}^{2}E(f)=0\quad }
+  
+ if there is no i such that f(i) > 0.
+Using a precise definition of computability relative to a type-2 functional, Kleene showed that a set of natural numbers is hyperarithmetical if and only if it is computable relative to 
+  
+    
+      
+        
+          
+
+          
+          
+            2
+          
+        
+        E
+      
+    
+    {\displaystyle {}^{2}E}
+  
+.
+
+Example: the truth set of arithmetic
+Every arithmetical set is hyperarithmetical, but there are many other hyperarithmetical sets. One example of a hyperarithmetical, nonarithmetical set is the set T of Gödel numbers of formulas of Peano arithmetic that are true in the standard natural numbers 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+. The set T is Turing equivalent to the set 
+  
+    
+      
+        
+          0
+          
+            (
+            ω
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\omega )}}
+  
+, and so is not high in the hyperarithmetical hierarchy, although it is not arithmetically definable by Tarski's indefinability theorem.
+
+Fundamental results
+
+The fundamental results of hyperarithmetic theory show that the three definitions above define the same collection of sets of natural numbers. These equivalences are due to Kleene. Another characterization is given by the Suslin–Kleene theorem.
+Completeness results are also fundamental to the theory. A set of natural numbers is 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ complete if it is at level 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ of the analytical hierarchy and every 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ set of natural numbers is many-one reducible to it. The definition of a 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ complete subset of Baire space (
+  
+    
+      
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \mathbb {N} ^{\mathbb {N} }}
+  
+) is similar.   Several sets associated with hyperarithmetic theory are 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{1}}
+  
+ complete:
+
+Kleene's 
+  
+    
+      
+        
+          
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}}
+  
+, the set of natural numbers that are notations for ordinal numbers
+The set of natural numbers e such that the computable function 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        :
+        
+          
+            N
+          
+          
+            2
+          
+        
+        →
+        2
+      
+    
+    {\displaystyle \phi _{e}\colon \mathbb {N} ^{2}\to 2}
+  
+ computes the characteristic function of a well ordering of the natural numbers. These are the indices of recursive ordinals.
+The set of elements of Baire space that are the characteristic functions of a well ordering of the natural numbers (using an effective isomorphism 
+  
+    
+      
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+        ≅
+        
+          
+            N
+          
+          
+            
+              N
+            
+            ×
+            
+              N
+            
+          
+        
+        )
+      
+    
+    {\displaystyle \mathbb {N} ^{\mathbb {N} }\cong \mathbb {N} ^{\mathbb {N} \times \mathbb {N} })}
+  
+.
+Results known as 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{1}}
+  
+ bounding follow from these completeness results.  For any 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{1}}
+  
+ set S of ordinal notations, there is an 
+  
+    
+      
+        α
+        <
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \alpha <\omega _{1}^{CK}}
+  
+ such that every element of S is a notation for an ordinal less than 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.  For any 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{1}}
+  
+ subset T of Baire space consisting only of characteristic functions of well orderings, there is an 
+  
+    
+      
+        α
+        <
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \alpha <\omega _{1}^{CK}}
+  
+ such that each ordinal represented in T is less than 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.
+
+Relativized hyperarithmeticity and hyperdegrees
+The definition of 
+  
+    
+      
+        
+          
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}}
+  
+ can be relativized to a set X of natural numbers: in the definition of an ordinal notation, the clause for limit ordinals is changed so that the computable enumeration of a sequence of ordinal notations is allowed to use X as an oracle. The set of numbers that are ordinal notations relative to X is denoted 
+  
+    
+      
+        
+          
+            
+              O
+            
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}^{X}}
+  
+. The supremum of ordinals represented in 
+  
+    
+      
+        
+          
+            
+              O
+            
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}^{X}}
+  
+ is denoted 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{X}}
+  
+; this is a countable ordinal no smaller than 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{CK}}
+  
+.
+The definition of 
+  
+    
+      
+        
+          0
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle 0^{(\delta )}}
+  
+ can also be relativized to an arbitrary set 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ of natural numbers. The only change in the definition is that 
+  
+    
+      
+        
+          X
+          
+            (
+            0
+            )
+          
+        
+      
+    
+    {\displaystyle X^{(0)}}
+  
+ is defined to be X rather than the empty set, so that 
+  
+    
+      
+        
+          X
+          
+            (
+            1
+            )
+          
+        
+        =
+        
+          X
+          ′
+        
+      
+    
+    {\displaystyle X^{(1)}=X'}
+  
+ is the Turing jump of X, and so on.  Rather than terminating at 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{CK}}
+  
+ the hierarchy relative to X runs through all ordinals less than 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{X}}
+  
+.
+The relativized hyperarithmetical hierarchy is used to define hyperarithmetical reducibility. Given sets X and Y, we say 
+  
+    
+      
+        X
+        
+          ≤
+          
+            HYP
+          
+        
+        Y
+      
+    
+    {\displaystyle X\leq _{\text{HYP}}Y}
+  
+ if and only if there is a 
+  
+    
+      
+        δ
+        <
+        
+          ω
+          
+            1
+          
+          
+            Y
+          
+        
+      
+    
+    {\displaystyle \delta <\omega _{1}^{Y}}
+  
+ such that X is Turing reducible to 
+  
+    
+      
+        
+          Y
+          
+            (
+            δ
+            )
+          
+        
+      
+    
+    {\displaystyle Y^{(\delta )}}
+  
+. If 
+  
+    
+      
+        X
+        
+          ≤
+          
+            HYP
+          
+        
+        Y
+      
+    
+    {\displaystyle X\leq _{\text{HYP}}Y}
+  
+ and 
+  
+    
+      
+        Y
+        
+          ≤
+          
+            HYP
+          
+        
+        X
+      
+    
+    {\displaystyle Y\leq _{\text{HYP}}X}
+  
+ then the notation 
+  
+    
+      
+        X
+        
+          ≡
+          
+            HYP
+          
+        
+        Y
+      
+    
+    {\displaystyle X\equiv _{\text{HYP}}Y}
+  
+ is used to indicate X and Y are hyperarithmetically equivalent.  This is a coarser equivalence relation than Turing equivalence; for example, every set of natural numbers is hyperarithmetically equivalent to its Turing jump but not Turing equivalent to its Turing jump.  The equivalence classes of hyperarithmetical equivalence are known as hyperdegrees.
+The function that takes a set X to 
+  
+    
+      
+        
+          
+            
+              O
+            
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}^{X}}
+  
+ is known as the hyperjump by analogy with the Turing jump. Many properties of the hyperjump and hyperdegrees have been established.  In particular, it is known that Post's problem for hyperdegrees has a positive answer: for every set X  of natural numbers there is a set Y of natural numbers such that 
+  
+    
+      
+        X
+        
+          <
+          
+            HYP
+          
+        
+        Y
+        
+          <
+          
+            HYP
+          
+        
+        
+          
+            
+              O
+            
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle X<_{\text{HYP}}Y<_{\text{HYP}}{\mathcal {O}}^{X}}
+  
+.
+
+Generalizations
+Hyperarithmetical theory is generalized by α-recursion theory, which is the study of definable subsets of admissible ordinals. Hyperarithmetical theory is the special case in which α is 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            C
+            K
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{CK}}
+  
+.
+
+Relation to other hierarchies

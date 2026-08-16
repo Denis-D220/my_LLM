@@ -1,0 +1,129 @@
+GridRPC in distributed computing, is Remote Procedure Call over a grid. This paradigm has been proposed by the  GridRPC working group  of the Open Grid Forum (OGF), and an API has been defined in order for clients to access remote servers as simply as a function call. It is used among numerous Grid middleware for its simplicity of implementation, and has been standardized by the OGF in 2007.
+For interoperability reasons between the different existing middleware, the API has been followed by a document describing good use and behavior of the different GridRPC API implementations. Works have then been conducted on the GridRPC Data Management, which has been standardized in 2011.
+
+Scope
+The scope of this standard is to offer recommendations for the implementation of middleware. It deals with the following topics:
+
+Definition of a specific data structure for arguments in GridRPC middleware.
+Definition of the data type to be used in conjunction with the arguments' data structure.
+Definition of the creation, destruction, lifetime and copy semantics for the arguments' data structure.
+Definition of possible introspection capabilities for call arguments and attributes of remote functions (e.g. data types, counts).
+Definition of mechanisms for handling persistent data, e.g., definition and use of a concept such as "data handles" (which might be the same as or similar to a grpc_data_t data type). This may also involve concepts such as lazy copy semantics, and data leases or time-outs.
+Definition of API mechanisms to enable workflow management.
+Evaluate the compatibility and interoperability with other systems, e.g., Web Services Resource Framework.
+Desirable Properties—the Proposed Recommendation will not necessarily specify any properties, such as thread safety, security, and fault tolerance, but it should not be incompatible with any such useful properties.
+Demonstrate implementability of all parts of the API.
+Demonstrate and evaluate at least two implementations of the complete GridRPC middleware recommendation.
+
+Context
+Among existing middleware and application programming approaches, one simple, powerful, and
+flexible approach consists in using servers available in different administrative domains through the classical
+client-server or Remote Procedure Call (RPC) paradigm. Network Enabled Servers (NES) implement this model,
+which is also called GridRPC. Clients submit computation requests to a resource broker whose goal is to find a
+server available on the Grid.  Scheduling is frequently applied to balance the work among the servers and a list of
+available servers is sent back to the client; the client is then able to send the data and the request to one of the
+suggested servers to solve its problem. Thanks to the growth of network bandwidth and the reduction of network latency,
+small computation requests can now be sent to servers available on the Grid. To make effective use of today's scalable
+resource platforms, it is important to ensure scalability in the middleware layers as well. This service-oriented
+approach is not new.
+Several research projects have targeted this paradigm in the past. The main middleware implementing the API are DIET, NetSolve/GridSolve, Ninf, but some other environments use it like the SAGA interface from the OGF, and without the standardized API calls, like OmmiRPC, XtremWeb. The RPC model over the internet has
+also been used for several applications. Transparently through the Internet, large optimization problems can be solved
+using different approaches by simply filling a web page for remote image processing computations, the use of mathematical libraries or studies on heuristics and resolution methods for sparse linear algebra like GridTLSE. This approach of providing computation services through the Internet is also highly close to the Service Oriented Computing (SOA)
+paradigm, and is the core of the Cloud computing.
+
+Standardization and GridRPC API presentation
+One simple, yet effective, mean to execute jobs on a computing grid is
+to use a GridRPC middleware, which relies on the GridRPC
+paradigm. For each request, the GridRPC middleware manages the management of the
+submission, of the input and output data, of the execution of the job
+on the remote resource, etc. To make available a service, a programmer
+must implement two codes: a client, where data are defined and which
+is run by the user when requesting the service, and a server, which
+contains the implementation of the service which is executed on the
+remote resource.
+One step to ease the development of such codes conducted to define a
+GridRPC API, which has been proposed as a draft in November 2002  and which is an Open Grid Forum (OGF) standard since
+September 2007. Thus a GridRPC source code which does not involve specific middleware data can be compiled and
+executed with any GridRPC compliant middleware.
+Due to the difference in the choice of implementation of the GridRPC
+API, a document describing the interoperability between GridRPC
+middleware has also been written. Its main
+goals are to describe the difference in behaviour of the GridRPC
+middleware and to propose a common test that all GridRPC middleware
+must pass.
+Discussions have then been undertaken on the data management within
+GridRPC middleware. A draft of an API has been proposed during the
+OGF'21 in October 2007. The motivation for this document is to provide
+explicit functions to manipulate the data exchange between a
+GridRPC platform and a client since (1) the size of the data used in
+grid applications may be large and useless data transfers must be
+avoided; (2) data are not always stored on the client side but may be
+made available either on a storage resource or within the GridRPC
+platform. Hence, a side effect is that a fully GridRPC-compliant code can be written and compiled with any GridRPC middleware implementing the GridRPC Data Management API.
+
+GridRPC Paradigm
+
+The GridRPC model is pictured in the following figure. Here is how communications are handled: (1) servers register their services to a registry; (2) when a client needs the execution of a service, it contacts the registry and (3) the registry returns a handle to the client; (4) then the client uses the handle to invoke the service on the server and (5) eventually receives back the results.
+
+GridRPC API
+Mechanisms involved in the API must provide means to make synchronous
+and/or asynchronous calls to a service. If the latter, clients must
+also be able to wait in a blocking or non-blocking manner after the
+completion of a given service. This naturally involves some data
+structures and conducts to a rigorous definition of the functions of
+the API.
+GridRPC Data Types
+Three main data types are needed to implement the API: (1) grpc_function_handle_t is the type of variables representing a
+remote function bound to a given server. Once allocated by the client,
+such a variable can be used to launch the service as many times as
+desired. It is explicitly invalidated by the user when not needed
+anymore; (2) grpc_session_t is the type of variables used to
+identify a specific non-blocking GridRPC call. Such a variable is
+mandatory to obtain information on the status of a job, in order for a
+client to wait after, cancel or know the error status of a call; (3)
+grpc_error_t groups all kind of errors and returns status
+codes involved in the GridRPC API.
+GridRPC Functions
+grpc_initialize() and grpc_finalize() functions are
+similar to the MPI initialize and finalize calls. It is mandatory that
+any GridRPC call is performed in between these two calls. They read
+configuration files, make the GridRPC environment ready and finish it.
+In order to initialize and destruct a function handle, grpc_function_handle_init() and grpc_function_handle_destruct() functions have to be
+called. Because a function handle can be dynamically associated to a
+server, because of resource discovery mechanisms for example, a call
+to grpc_function_handle_default() let to postpone the server
+selection until the actual call is made on the handle.
+grpc_get_handle() let the client retrieve the function handle
+corresponding to a session ID (e.g., to a non-blocking call) that has
+been previously performed.
+Depending on the type of the call, blocking or non-blocking, the
+client can use the grpc_call() and grpc_call_async()
+function. If the latter, the client possesses after the call a session
+ID which can be used to respectively probe or wait for completion,
+cancel the call and check the error status of a non-blocking call.
+After issuing a unique or numerous non-blocking calls, a client can
+use: grpc_probe() to know if the execution of the service has
+completed; grpc_probe_or() to know if one of the previous
+non-blocking calls has completed; grpc_cancel() to cancel a
+call; grpc_wait() to block until the completion of the
+requested service; grpc_wait_and() to block until all services
+corresponding to session IDs used as parameters are finished; grpc_wait_or() to block until any of the service corresponding to
+session IDs used as parameters has finished; grpc_wait_all() to
+block until all non-blocking calls have completed; and grpc_wait_any() to wait until any previously issued non-blocking
+request has completed.
+
+GridRPC Compliant Code
+Talk about the lib (+link) against which a code must compile and give a basic example
+
+GridRPC documents
+GridRPC Model and API for End-User Applications. OGF reference: GFD-R.52 (2007)
+Interoperability Testing for The GridRPC API Specification. OGF reference: GFD.102 (2007)
+Data Management API within the GridRPC. OGF reference: GFD-R-P.186 (2011)
+
+GridRPC implementations
+DIET
+Netsolve/GridSolve
+Ninf
+OmniRPC
+XtremWeb
+Simple API for Grid Applications

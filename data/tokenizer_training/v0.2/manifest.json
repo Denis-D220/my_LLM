@@ -1,0 +1,156 @@
+{
+  "format": "llm_tokenizer_training_corpus",
+  "format_version": 1,
+  "created_at_utc": "2026-08-13T01:53:39.673549+00:00",
+  "corpus_file": "tokenizer_corpus.jsonl",
+  "corpus_sha256": "2a2fd3331a52dad8940aa3e425d3b52435265c1d9c59b1b03f57288dd400f850",
+  "normalization": {
+    "encoding": "UTF-8",
+    "unicode_form": "NFC",
+    "preserve_case": true,
+    "case_folding": false,
+    "line_endings": "LF"
+  },
+  "settings": {
+    "target_bytes": 8000000,
+    "max_documents": null,
+    "min_chars": 100,
+    "max_chars": 100000,
+    "chunk_target_chars": 75000,
+    "min_tail_chars": 10000,
+    "seed": 42,
+    "text_field": "text",
+    "allow_special_token_text": false
+  },
+  "sources": [
+    {
+      "category": "general",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\general",
+      "normalized_weight": 0.3
+    },
+    {
+      "category": "logical",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\logical",
+      "normalized_weight": 0.12
+    },
+    {
+      "category": "mathematics",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\mathematics",
+      "normalized_weight": 0.1
+    },
+    {
+      "category": "science",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\science",
+      "normalized_weight": 0.12
+    },
+    {
+      "category": "engineering",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\engineering",
+      "normalized_weight": 0.1
+    },
+    {
+      "category": "software",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\software",
+      "normalized_weight": 0.08
+    },
+    {
+      "category": "code",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\code",
+      "normalized_weight": 0.05
+    },
+    {
+      "category": "networking",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\networking",
+      "normalized_weight": 0.04
+    },
+    {
+      "category": "business_finance",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\business_finance",
+      "normalized_weight": 0.04
+    },
+    {
+      "category": "humanities",
+      "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\humanities",
+      "normalized_weight": 0.05
+    }
+  ],
+  "special_tokens_reserved": [
+    "<|pad|>",
+    "<|bos|>",
+    "<|eos|>",
+    "<|system|>",
+    "<|user|>",
+    "<|assistant|>",
+    "<|end_turn|>",
+    "<|tool|>",
+    "<|tool_result|>"
+  ],
+  "result": {
+    "documents": 139,
+    "characters": 8156061,
+    "utf8_bytes": 8195738,
+    "lines": 182417,
+    "category_distribution": {
+      "business_finance": {
+        "documents": 8,
+        "utf8_bytes": 372263,
+        "document_fraction": 0.05755395683453238,
+        "byte_fraction": 0.04542153494901863
+      },
+      "code": {
+        "documents": 10,
+        "utf8_bytes": 405927,
+        "document_fraction": 0.07194244604316546,
+        "byte_fraction": 0.049529035701238865
+      },
+      "engineering": {
+        "documents": 14,
+        "utf8_bytes": 850721,
+        "document_fraction": 0.10071942446043165,
+        "byte_fraction": 0.10380041431290263
+      },
+      "general": {
+        "documents": 36,
+        "utf8_bytes": 2401435,
+        "document_fraction": 0.2589928057553957,
+        "byte_fraction": 0.29301022067811344
+      },
+      "humanities": {
+        "documents": 7,
+        "utf8_bytes": 378962,
+        "document_fraction": 0.050359712230215826,
+        "byte_fraction": 0.04623891100471977
+      },
+      "logical": {
+        "documents": 15,
+        "utf8_bytes": 979739,
+        "document_fraction": 0.1079136690647482,
+        "byte_fraction": 0.1195424987963256
+      },
+      "mathematics": {
+        "documents": 14,
+        "utf8_bytes": 851697,
+        "document_fraction": 0.10071942446043165,
+        "byte_fraction": 0.10391950059896986
+      },
+      "networking": {
+        "documents": 7,
+        "utf8_bytes": 266018,
+        "document_fraction": 0.050359712230215826,
+        "byte_fraction": 0.03245808980228504
+      },
+      "science": {
+        "documents": 16,
+        "utf8_bytes": 1020249,
+        "document_fraction": 0.11510791366906475,
+        "byte_fraction": 0.12448531175593949
+      },
+      "software": {
+        "documents": 12,
+        "utf8_bytes": 668727,
+        "document_fraction": 0.08633093525179857,
+        "byte_fraction": 0.0815944824004867
+      }
+    }
+  }
+}

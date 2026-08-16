@@ -1,0 +1,39 @@
+Text over IP (or ToIP) is a means of providing a real-time text (RTT) service that operates over IP-based networks. It complements Voice over IP (VoIP) and Video over IP.
+Real-time text is streaming text that is transmitted as it is produced, allowing text to be used conversationally. Real-time text is defined in ITU-T Multimedia Recommendation F.700 2.1.2.1 . Real-time text is designed for conversational use where people interactively converse with each other. To achieve this, particular user requirements have been specified for the delay of each character and the character loss rate (see F.700 Annex A.3).
+Real-time Text over IP can be used:
+
+in conjunction with voice or video in a multimedia communication or on its own, on fixed or mobile access,
+by people who want a fast and really interactive means of conversing,
+in noisy environments where it may be hard to hear,
+in environments where other people are nearby but where communications privacy is required,
+to transfer information (e.g., numbers, addresses, etc.) where exactness is necessary,
+by people with hearing loss or speech impairments to communicate with non-disabled and deaf or hard of hearing or speech impaired people.
+to provide real-time captioning of a voice conversation for people with a hearing loss. See also captioned telephony in Telecommunications Relay Service
+to provide all voice callers with a convenient means to accurately pass numbers, addresses and other detailed information in text.
+
+Features
+ToIP is designed around the ITU-T T.140 real-time text presentation layer protocol (defined for H.32x multimedia services).  T.140 allows real-time editing of text e.g. by using 'backspace' and retyping. T.140 is based on the ISO 10646-1 character set that is used by most IP text specifications and uses the UTF-8 format.
+Transport of ToIP uses the same Real-time Transport Protocol (RTP) as VoIP and Video-over-IP. The text is encoded according to IETF RFC 4103 "RTP Payload for Text Conversation".
+RFC 4103 supports an optional forward error correction scheme based on redundant transmission (using RFC 2198). This results in a very low end-to-end packet loss across IP transmission links that have moderately high packet loss. To improve efficiency, text can be buffered for 0.3–0.5 seconds before it is sent whilst still meeting the delay requirements.
+RTP is usually transported over the User Datagram Protocol (UDP). However, because 2.5G mobile networks supported the Transmission Control Protocol (TCP) but did not consistently support UDP, some implementations of ToIP over mobile networks use TCP internally. 3G mobile networks can support UDP.
+The protocol stack for a ToIP medium is: 
+
+Very fast typing (30 characters per second) results in a two kilobit per second traffic load (including overheads for RFC 4103 with the maximum level of redundancy, RTP, UDP and IP).
+Control of ToIP sessions has been defined using the standard Session Initiation Protocol (SIP) (RFC 3261) and the Session Description Protocol (SDP) (RFC 4566) protocols.
+
+SIP is used without any alteration.
+Real-time text encoding is identified by using the SDP media definition 'm=text'.
+The 3GPP IMS defines the features of SDP that ToIP uses in 3GPP TS 26.114 v7.4.0 A5
+See IETF RFC 5194 "Framework for real-time text over IP using the Session Initiation Protocol (SIP)" and IETF RFC 4504 "SIP Telephony Device Requirements and Configuration" Section 2.9 for more information.
+
+Deployment
+Next Generation Networking (NGNs) is a concept developed by telecommunication service providers and their suppliers. It aims to create a true multi-service network based on IP technology.
+ToIP has been specified for inclusion in the 3GPP IP Multimedia Subsystem (IMS) (in 3GPP TS 26.114 v2.0.0 "IMS, Multimedia Telephony, Media handling and interaction"). IMS is being used to implement NGNs in many fixed and mobile networks. 
+Support of ToIP is being considered in multimedia Emergency Public-safety answering point (PSAPs) in Europe and the USA. The ECRIT IETF working group defines ToIP as one form of access to Emergency Services.
+ToIP can provide a 'low impact' solution to meeting national regulatory requirements to provide 'equivalent service' to the telephone service for people who have hearing or speech impairments.
+A typical terminal on a fixed-line access is a home computer that supports multimedia communications - Voice and Video and real-time Text over IP. See External links for information about ToIP equipment and software.
+
+Use by deaf and hard-of-hearing people
+Telecommunications device for the deaf (TDD) or TTYs (also called Textphone or minicoms) were designed to transport real-time text over the PSTN. TDDs use a range of modem technologies.
+Text-over-IP has been designed as a replacement for TDDs when using the IP-based networks but also to be of use to mainstream voice call users. It has fewer service restrictions compared with TDDs, is designed to be used as a mainstream service and can be used on standard computers or mobile terminals. Proper alerting systems for incoming calls need to be included as well as user interfaces, both hardware and software, that meet the needs of deaf people and people with hearing or speech impairments. This can best be achieved with input from end-users in the development stages.
+Interworking between TDDs and ToIP has been implemented using gateways by T-Meeting, Omnitor, Trace R& D, RNID, Center, Voiceriver, and AnnieS. RFC 5194 "Framework for real-time text over IP using the Session Initiation Protocol (SIP)" provides an overview of interworking issues. Work is being proposed in the IETF SIPPING work group on more detailed interworking based on a range of call scenarios.

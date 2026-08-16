@@ -1,0 +1,17 @@
+Iddq testing is a method for testing CMOS integrated circuits for the presence of manufacturing faults. It relies on measuring the supply current (Idd) in the quiescent state (when the circuit is not switching and inputs are held at static values). The current consumed in this state is commonly called Iddq for Idd (quiescent) and hence the name.
+Iddq testing uses the principle that in a correctly operating quiescent CMOS digital circuit, there is no static current path between the power supply and ground, except for a small amount of leakage. Many common semiconductor manufacturing faults will cause the current to increase by orders of magnitude, which can be easily detected. This has the advantage of checking the chip for many possible faults with one measurement. Another advantage is that it may catch faults that are not found by conventional stuck-at fault test vectors.
+Iddq testing is somewhat more complex than just measuring the supply current. If a line is shorted to Vdd, for example, it will still draw no extra current if the gate driving the signal is attempting to set it to '1'. However, a different input that attempts to set the signal to 0 will show a large increase in quiescent current, signalling a bad part. Typical Iddq tests may use 20 or so inputs. Note that Iddq test inputs require only controllability, and not observability. This is because the observability is through the shared power supply connection.
+
+Advantages and disadvantages
+Iddq testing has many advantages:
+
+It is a simple and direct test that can identify physical defects.
+The area and design time overhead are very low.
+Test generation is fast.
+Test application time is fast since the vector sets are small.
+It catches some defects that other tests, particularly stuck-at logic tests, do not.
+Drawback:
+Compared to scan chain testing, Iddq testing is time consuming, and thus more expensive, as is achieved by current measurements that take much more time than reading digital pins in mass production.
+
+Future of Iddq testing
+As device geometry shrinks, i.e transistors and gates become smaller resulting in larger and more complex processors and SoCs (see Moore's law), the leakage current becomes much higher and less predictable.  This makes it difficult to tell a low leakage part with a defect from a naturally high leakage part.  Also, increasing circuit size means a single fault will have a lower percentage effect, making it harder for the test to detect.  However, Iddq is so useful that designers are taking steps to keep it working.  One particular technique that helps is power gating, where the entire power supply to each block can be switched off using a low leakage switch.  This allows each block to be tested individually or in combination, which makes the tests much easier when compared to testing the whole chip.

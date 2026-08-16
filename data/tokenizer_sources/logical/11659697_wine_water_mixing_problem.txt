@@ -1,0 +1,13 @@
+In the wine/water mixing problem, one starts with two barrels, one holding wine and the other an equal volume of water. A cup of wine is taken from the wine barrel and added to the water. A cup of the wine/water mixture is then returned to the wine barrel, so that the volumes in the barrels are again equal. The question is then posed—which of the two mixtures is purer? (We ignore the fact that in practice, a mixture of water and
+alcohol is a trifle less than the sum of the volumes of the two
+liquids before they are mixed) The answer is that the mixtures will be of equal purity. The solution still applies no matter how many cups of any sizes and compositions are exchanged, or how little or much stirring at any point in time is done to any barrel, as long as at the end each barrel has the same amount of liquid.
+The problem can be solved with logic and without resorting to computation. It is not necessary to state the volumes of wine and water, as long as they are equal. The volume of the cup is irrelevant, as is any stirring of the mixtures.
+
+Solution
+The supposed additivity of volumes implies that the volume of wine in the barrel holding mostly water has to be equal to the volume of water in the barrel holding mostly wine.
+The mixtures can be visualised as separated into their water and wine components:
+
+To help in grasping this, the wine and water may be represented by, say, 100 red and 100 white marbles, respectively. If 25, say, red marbles are mixed in with the white marbles, and 25 marbles of any color are returned to the red container, then there will again be 100 marbles in each container.  If there are now x white marbles in the red container, then there must be x red marbles in the white container.  The mixtures will therefore be of equal purity.  An example is shown below.
+
+History
+This puzzle was mentioned by W. W. Rouse Ball in the third, 1896, edition of his book Mathematical Recreations And Problems Of Past And Present Times, and is said to have been a favorite problem of Lewis Carroll.

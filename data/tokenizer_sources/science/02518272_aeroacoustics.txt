@@ -1,0 +1,1116 @@
+Aeroacoustics is a branch of acoustics that studies noise generation via either turbulent fluid motion or aerodynamic forces interacting with surfaces. Noise generation can also be associated with periodically varying flows.  A notable example of this phenomenon is the Aeolian tones produced by wind blowing over fixed objects.
+Although no complete scientific theory of the generation of noise by aerodynamic flows has been established, most practical aeroacoustic analysis relies upon the so-called aeroacoustic analogy, proposed by Sir James Lighthill in the 1950s while at the University of Manchester. whereby the governing equations of motion of the fluid are coerced into a form reminiscent of the wave equation of "classical" (i.e. linear) acoustics in the left-hand side with the remaining terms as sources in the right-hand side.
+
+History
+The modern discipline of aeroacoustics can be said to have originated with the first publication of  Lighthill in the early 1950s, when noise generation associated with the jet engine was beginning to be placed under scientific scrutiny.
+
+Lighthill's equation
+Lighthill rearranged the Navier–Stokes equations, which govern the flow of a compressible viscous fluid, into an inhomogeneous wave equation, thereby making a connection between fluid mechanics and acoustics. This is often called "Lighthill's analogy" because it presents a model for the acoustic field that is not, strictly speaking, based on the physics of flow-induced/generated noise, but rather on the analogy of how they might be represented through the governing equations of a compressible fluid.
+The continuity and the momentum equations are given by
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      ∂
+                      ρ
+                    
+                    
+                      ∂
+                      t
+                    
+                  
+                
+                +
+                ∇
+                ⋅
+                
+                  (
+                  
+                    ρ
+                    
+                      v
+                    
+                  
+                  )
+                
+              
+              
+                
+                =
+                0
+                ,
+              
+            
+            
+              
+                
+                  
+                    ∂
+                    
+                      ∂
+                      t
+                    
+                  
+                
+                
+                  (
+                  
+                    ρ
+                    
+                      v
+                    
+                  
+                  )
+                
+                +
+                ∇
+                ⋅
+                (
+                ρ
+                
+                  v
+                
+                
+                  v
+                
+                )
+              
+              
+                
+                =
+                −
+                ∇
+                p
+                +
+                ∇
+                ⋅
+                
+                  τ
+                
+                ,
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{\frac {\partial \rho }{\partial t}}+\nabla \cdot \left(\rho \mathbf {v} \right)&=0,\\{\frac {\partial }{\partial t}}\left(\rho \mathbf {v} \right)+\nabla \cdot (\rho \mathbf {v} \mathbf {v} )&=-\nabla p+\nabla \cdot {\boldsymbol {\tau }},\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is the fluid density, 
+  
+    
+      
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {v} }
+  
+ is the velocity field, 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is the fluid pressure and 
+  
+    
+      
+        
+          τ
+        
+      
+    
+    {\displaystyle {\boldsymbol {\tau }}}
+  
+ is the viscous stress tensor. Note that 
+  
+    
+      
+        
+          v
+        
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {v} \mathbf {v} }
+  
+ is a tensor (see also tensor product). Differentiating the conservation of mass equation with respect to time, taking the divergence of the last equation and subtracting the latter from the former, we arrive at
+
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              ρ
+            
+            
+              ∂
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        ∇
+        ⋅
+        
+          [
+          
+            ∇
+            ⋅
+            (
+            ρ
+            
+              v
+            
+            
+              v
+            
+            )
+            +
+            ∇
+            p
+            −
+            ∇
+            ⋅
+            
+              τ
+            
+          
+          ]
+        
+        .
+      
+    
+    {\displaystyle {\frac {\partial ^{2}\rho }{\partial t^{2}}}=\nabla \cdot \left[\nabla \cdot (\rho \mathbf {v} \mathbf {v} )+\nabla p-\nabla \cdot {\boldsymbol {\tau }}\right].}
+  
+
+Subtracting 
+  
+    
+      
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        
+          ∇
+          
+            2
+          
+        
+        ρ
+      
+    
+    {\displaystyle c_{0}^{2}\nabla ^{2}\rho }
+  
+, where 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+      
+    
+    {\displaystyle c_{0}}
+  
+ is the speed of sound in the medium in its equilibrium (or quiescent) state, from both sides of the last equation results in celebrated Lighthill equation of aeroacoustics,
+
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              ρ
+            
+            
+              ∂
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+        −
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        
+          ∇
+          
+            2
+          
+        
+        ρ
+        =
+        ∇
+        ∇
+        :
+        
+          T
+        
+        ,
+        
+        
+          T
+        
+        =
+        ρ
+        
+          v
+        
+        
+          v
+        
+        +
+        (
+        p
+        −
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        ρ
+        )
+        
+          I
+        
+        −
+        
+          τ
+        
+        ,
+      
+    
+    {\displaystyle {\frac {\partial ^{2}\rho }{\partial t^{2}}}-c_{0}^{2}\nabla ^{2}\rho =\nabla \nabla :\mathbf {T} ,\quad \mathbf {T} =\rho \mathbf {v} \mathbf {v} +(p-c_{0}^{2}\rho )\mathbf {I} -{\boldsymbol {\tau }},}
+  
+
+where 
+  
+    
+      
+        ∇
+        ∇
+      
+    
+    {\displaystyle \nabla \nabla }
+  
+ is the Hessian and 
+  
+    
+      
+        
+          T
+        
+      
+    
+    {\displaystyle \mathbf {T} }
+  
+ is the so-called Lighthill turbulence stress tensor for the acoustic field. The Lighthill equation is an inhomogenous wave equation. Using Einstein notation, Lighthill’s equation can be written as
+
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              ρ
+            
+            
+              ∂
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+        −
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        
+          ∇
+          
+            2
+          
+        
+        ρ
+        =
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              
+                T
+                
+                  i
+                  j
+                
+              
+            
+            
+              ∂
+              
+                x
+                
+                  i
+                
+              
+              ∂
+              
+                x
+                
+                  j
+                
+              
+            
+          
+        
+        ,
+        
+        
+          T
+          
+            i
+            j
+          
+        
+        =
+        ρ
+        
+          v
+          
+            i
+          
+        
+        
+          v
+          
+            j
+          
+        
+        +
+        (
+        p
+        −
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        ρ
+        )
+        
+          δ
+          
+            i
+            j
+          
+        
+        −
+        
+          τ
+          
+            i
+            j
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {\partial ^{2}\rho }{\partial t^{2}}}-c_{0}^{2}\nabla ^{2}\rho ={\frac {\partial ^{2}T_{ij}}{\partial x_{i}\partial x_{j}}},\quad T_{ij}=\rho v_{i}v_{j}+(p-c_{0}^{2}\rho )\delta _{ij}-\tau _{ij}.}
+  
+
+Each of the acoustic source terms, i.e. terms in 
+  
+    
+      
+        
+          T
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle T_{ij}}
+  
+, may play a significant role in the generation of noise depending upon flow conditions considered. The first term 
+  
+    
+      
+        ρ
+        
+          v
+          
+            i
+          
+        
+        
+          v
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \rho v_{i}v_{j}}
+  
+ describes inertial effect of the flow (or Reynolds' Stress, developed by Osborne Reynolds) whereas the second term 
+  
+    
+      
+        (
+        p
+        −
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        ρ
+        )
+        
+          δ
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle (p-c_{0}^{2}\rho )\delta _{ij}}
+  
+ describes non-linear acoustic generation processes and finally the last term 
+  
+    
+      
+        
+          τ
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle \tau _{ij}}
+  
+ corresponds to sound generation/attenuation due to viscous forces.
+In practice, it is customary to neglect the effects of viscosity on the fluid as it effects are small in turbulent noise generation problems such as the jet noise. Lighthill provides an in-depth discussion of this matter.
+In aeroacoustic studies, both theoretical and computational efforts are made to solve for the acoustic source terms in Lighthill's equation in order to make statements regarding the relevant aerodynamic noise generation mechanisms present. Finally, it is important to realize that Lighthill's equation is exact in the sense that no approximations of any kind have been made in its derivation.
+
+Landau–Lifshitz aeroacoustic equation
+In their classical text on fluid mechanics, Landau and Lifshitz derive an aeroacoustic equation analogous to Lighthill's (i.e., an equation for sound generated by "turbulent" fluid motion), but for the incompressible flow of an inviscid fluid. The inhomogeneous wave equation that they obtain is for the pressure 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ rather than for the density 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ of the fluid. Furthermore, unlike Lighthill's equation, Landau and Lifshitz's equation is not exact; it is an approximation.
+If one is to allow for approximations to be made, a simpler way (without necessarily assuming the fluid is incompressible) to obtain an approximation to Lighthill's equation is to assume that 
+  
+    
+      
+        p
+        −
+        
+          p
+          
+            0
+          
+        
+        =
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        (
+        ρ
+        −
+        
+          ρ
+          
+            0
+          
+        
+        )
+      
+    
+    {\displaystyle p-p_{0}=c_{0}^{2}(\rho -\rho _{0})}
+  
+, where 
+  
+    
+      
+        
+          ρ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \rho _{0}}
+  
+ and 
+  
+    
+      
+        
+          p
+          
+            0
+          
+        
+      
+    
+    {\displaystyle p_{0}}
+  
+ are the (characteristic) density and pressure of the fluid in its equilibrium state. Then, upon substitution the assumed relation between pressure and density into 
+  
+    
+      
+        (
+        ∗
+        )
+        
+      
+    
+    {\displaystyle (*)\,}
+  
+ we obtain the equation (for an inviscid fluid, σ = 0)
+
+  
+    
+      
+        
+          
+            1
+            
+              c
+              
+                0
+              
+              
+                2
+              
+            
+          
+        
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              p
+            
+            
+              ∂
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+        −
+        
+          ∇
+          
+            2
+          
+        
+        p
+        =
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              
+                
+                  
+                    
+                      T
+                      ~
+                    
+                  
+                
+                
+                  i
+                  j
+                
+              
+            
+            
+              ∂
+              
+                x
+                
+                  i
+                
+              
+              ∂
+              
+                x
+                
+                  j
+                
+              
+            
+          
+        
+        ,
+        
+        
+          where
+        
+        
+        
+          
+            
+              
+                T
+                ~
+              
+            
+          
+          
+            i
+            j
+          
+        
+        =
+        ρ
+        
+          v
+          
+            i
+          
+        
+        
+          v
+          
+            j
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {1}{c_{0}^{2}}}{\frac {\partial ^{2}p}{\partial t^{2}}}-\nabla ^{2}p={\frac {\partial ^{2}{\tilde {T}}_{ij}}{\partial x_{i}\partial x_{j}}},\quad {\text{where}}\quad {\tilde {T}}_{ij}=\rho v_{i}v_{j}.}
+  
+
+And for the case when the fluid is indeed incompressible, i.e. 
+  
+    
+      
+        ρ
+        =
+        
+          ρ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \rho =\rho _{0}}
+  
+ (for some positive constant 
+  
+    
+      
+        
+          ρ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \rho _{0}}
+  
+) everywhere, then we obtain exactly the equation given in Landau and Lifshitz, namely
+
+  
+    
+      
+        
+          
+            1
+            
+              c
+              
+                0
+              
+              
+                2
+              
+            
+          
+        
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              p
+            
+            
+              ∂
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+        −
+        
+          ∇
+          
+            2
+          
+        
+        p
+        =
+        
+          ρ
+          
+            0
+          
+        
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              
+                
+                  
+                    
+                      T
+                      ^
+                    
+                  
+                
+                
+                  i
+                  j
+                
+              
+            
+            
+              ∂
+              
+                x
+                
+                  i
+                
+              
+              ∂
+              
+                x
+                
+                  j
+                
+              
+            
+          
+        
+        ,
+        
+        
+          where
+        
+        
+        
+          
+            
+              
+                T
+                ^
+              
+            
+          
+          
+            i
+            j
+          
+        
+        =
+        
+          v
+          
+            i
+          
+        
+        
+          v
+          
+            j
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {1}{c_{0}^{2}}}{\frac {\partial ^{2}p}{\partial t^{2}}}-\nabla ^{2}p=\rho _{0}{\frac {\partial ^{2}{\hat {T}}_{ij}}{\partial x_{i}\partial x_{j}}},\quad {\text{where}}\quad {\hat {T}}_{ij}=v_{i}v_{j}.}
+  
+
+A similar approximation [in the context of equation 
+  
+    
+      
+        (
+        ∗
+        )
+        
+      
+    
+    {\displaystyle (*)\,}
+  
+], namely 
+  
+    
+      
+        T
+        ≈
+        
+          ρ
+          
+            0
+          
+        
+        
+          
+            
+              T
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle T\approx \rho _{0}{\hat {T}}}
+  
+, is suggested by Lighthill [see Eq. (7) in the latter paper].
+Of course, one might wonder whether we are justified in assuming that 
+  
+    
+      
+        p
+        −
+        
+          p
+          
+            0
+          
+        
+        =
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        (
+        ρ
+        −
+        
+          ρ
+          
+            0
+          
+        
+        )
+      
+    
+    {\displaystyle p-p_{0}=c_{0}^{2}(\rho -\rho _{0})}
+  
+. The answer is affirmative, if the flow satisfies certain basic assumptions. In particular, if 
+  
+    
+      
+        ρ
+        ≪
+        
+          ρ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \rho \ll \rho _{0}}
+  
+ and 
+  
+    
+      
+        p
+        ≪
+        
+          p
+          
+            0
+          
+        
+      
+    
+    {\displaystyle p\ll p_{0}}
+  
+, then the assumed relation follows directly from the linear theory of sound waves (see, e.g., the linearized Euler equations and the acoustic wave equation). In fact, the approximate relation between 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ and 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ that we assumed is just a linear approximation to the generic barotropic equation of state of the fluid.
+However, even after the above deliberations, it is still not clear whether one is justified in using an inherently linear relation to simplify a nonlinear wave equation. Nevertheless, it is a very common practice in nonlinear acoustics as the textbooks on the subject show: e.g., Naugolnykh and Ostrovsky and Hamilton and Morfey.

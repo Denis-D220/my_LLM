@@ -1,0 +1,140 @@
+Four-wave mixing (FWM) is an intermodulation phenomenon in nonlinear optics, whereby interactions between two or three wavelengths produce two or one new wavelengths. It is similar to the third-order intercept point in electrical systems. Four-wave mixing can be compared to the intermodulation distortion in standard electrical systems. It is a parametric nonlinear process, in that the energy of the incoming photons is conserved. FWM is a phase-sensitive process, in that the efficiency of the process is strongly affected by phase matching conditions.
+
+Mechanism
+
+When three frequencies (f1, f2, and f3) interact in a nonlinear medium, they give rise to a fourth frequency (f4) which is formed by the scattering of the incident photons, producing the fourth photon.
+Given inputs f1, f2, and f3, the nonlinear system will produce
+
+  
+    
+      
+        ±
+        
+          f
+          
+            1
+          
+        
+        ±
+        
+          f
+          
+            2
+          
+        
+        ±
+        
+          f
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \pm f_{1}\pm f_{2}\pm f_{3}}
+  
+
+From calculations with the three input signals, it is found that 12 interfering frequencies are produced, three of which lie on one of the original incoming frequencies. Note that these three frequencies which lie at the original incoming frequencies are typically attributed to self-phase modulation and cross-phase modulation, and are naturally phase-matched unlike FWM.
+
+Sum- and difference-frequency generation
+Two common forms of four-wave mixing are dubbed sum-frequency generation and difference-frequency generation.  In sum-frequency generation three fields are input and the output is a new high frequency field at the sum of the three input frequencies.  In difference-frequency generation, the typical output is the sum of two minus the third.
+A condition for efficient generation of FWM is phase matching: the associated k-vectors of the four components must add to zero when they are plane waves.  This becomes significant since sum- and difference-frequency generation are often enhanced when resonance in the mixing media is exploited.  In many configurations the sum of the first two photons will be tuned close to a resonant state.  However, close to resonances the index of refraction changes rapidly and makes addition four co-linear k-vectors fail to add exactly to zero—thus long mixing path lengths are not always possible as the four component lose phase lock.  Consequently, beams are often focused both for intensity but also to shorten the mixing zone.
+In gaseous media an often overlooked complication is that light beams are rarely plane waves but are often focused for extra intensity, this can add an addition pi-phase shift to each k-vector in the phase matching condition.  It is often very hard to satisfy this in the sum-frequency configuration but it is more easily satisfied in the difference-frequency configuration (where the pi phase shifts cancel out). As a result, difference-frequency is usually more broadly tunable and easier to set up than sum-frequency generation, making it preferable as a light source even though it's less quantum efficient than sum-frequency generation.
+The special case of sum-frequency generation where all the input photons have the same frequency (and wavelength) is Third-Harmonic Generation (THG).
+
+Degenerate four-wave mixing
+Four-wave mixing is also present if only two components interact. In this case the term
+
+  
+    
+      
+        
+          f
+          
+            0
+          
+        
+        =
+        
+          f
+          
+            1
+          
+        
+        +
+        
+          f
+          
+            1
+          
+        
+        −
+        
+          f
+          
+            2
+          
+        
+      
+    
+    {\displaystyle f_{0}=f_{1}+f_{1}-f_{2}}
+  
+
+couples three components, thus generating so-called degenerate four-wave mixing, showing identical properties to the case of three interacting waves.
+
+Adverse effects of FWM in fiber-optic communications
+FWM is a fiber-optic characteristic that affects wavelength-division multiplexing (WDM) systems, where multiple optical wavelengths are spaced at equal intervals or channel spacing. The effects of FWM are pronounced with decreased channel spacing of wavelengths (such as in dense WDM systems) and at high signal power levels. High chromatic dispersion decreases FWM effects, as the signals lose coherence, or in other words, the phase mismatch between the signals increases. The interference FWM caused in WDM systems is known as interchannel crosstalk. FWM can be mitigated by using uneven channel spacing or fiber that increases dispersion.  For the special case where the three frequencies are close to degenerate, then optical separation of the difference frequency can be technically challenging.
+
+  
+    
+      
+        
+          f
+          
+            i
+            j
+            k
+          
+        
+        =
+        
+          f
+          
+            i
+          
+        
+        +
+        
+          f
+          
+            j
+          
+        
+        −
+        
+          f
+          
+            k
+          
+        
+        ,
+        
+          w
+          h
+          e
+          r
+          e
+        
+        
+        i
+        ,
+        j
+        ≠
+        k
+      
+    
+    {\displaystyle f_{ijk}=f_{i}+f_{j}-f_{k},\mathrm {where} \,i,j\neq k}
+  
+
+Applications
+FWM finds applications in optical phase conjugation, parametric amplification, supercontinuum generation, Vacuum Ultraviolet light generation, modulation transfer spectroscopy, and in microresonator based frequency comb generation. Parametric amplifiers and oscillators based on four-wave mixing use the third order nonlinearity, as opposed to most typical parametric oscillators which use the second-order nonlinearity. Apart from these classical applications, four-wave mixing has shown promise in the quantum optical regime for generating single photons, correlated photon pairs, squeezed light and entangled photons.

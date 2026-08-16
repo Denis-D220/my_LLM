@@ -1,0 +1,25 @@
+A software blueprint is the final product of a software blueprinting process.  Its name derives from an analogy with the term blueprint as used within the traditional construction industry.  Therefore, a true software blueprint should share a number of key properties with its building-blueprint counterpart. Software blueprinting relies on achieving a clean separation between logically orthogonal aspects of the software. Once that is achieved, it facilitates the localization of related logic and use of an optimal description medium for each of the logically independent components (for each blueprint).
+
+Properties
+Software blueprints focus on one application aspect, for clarity of presentation and to ensure that all of the relevant logic is localized. The localization of aspect logic  is intended to improve navigability, and this is based on the assumption that the application programmer most commonly wishes to browse application aspects independently.
+The single-aspect focus of a software blueprint means that an optimal description medium can be selected.  For example, algorithmic code may be best represented using textual code, whereas a graphical user interface may be best represented using a form design. Selection of an intuitive description medium, i.e., one that matches well with mental models and designs for a particular aspect, may improve:
+
+Ease of navigation
+Ease of understanding
+Fault detection rate
+Ability to manage complexity
+Ease to develop errors
+
+Examples
+
+GUI form design
+The GUI form design (see GUI toolkit) is widely adopted across the software industry and allows the programmer to specify a prescriptive description of the appearance of GUI widgets within a window.  This description can be translated directly to the code that draws the GUI (because it is prescriptive).
+
+Machine translatable co-ordination languages (e.g. CDL)
+Languages such as the Concurrent Description Language (CDL) separate an application's macroscopic logic (communication, synchronization and arbitration) from complex multi-threaded and/or multi-process applications into a single contiguous visual representation.  The prescriptive nature of this description means that it can be machine translated into an executable framework that may be tested for structural integrity (detection of race conditions, deadlocks etc.) before the microscopic logic is available.
+
+Class designers
+Class designers allow the specification of arbitrarily complex data structures in a convenient form and the prescriptive nature of this description allows generation of executable code to perform list management, format translation, endian swapping and so on.
+
+Software designers
+Classes are used as building blocks by software designers to model more complex structures. In software architecture the Unified Modeling Language (UML) is an industry standard used for modeling the blueprint of software. UML represents structure, associations and interactions between various software elements, like classes, objects or components. It helps the software designer to design, analyze and communicate ideas to other members of the software community.

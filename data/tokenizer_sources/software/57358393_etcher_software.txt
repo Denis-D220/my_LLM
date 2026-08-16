@@ -1,0 +1,13 @@
+balenaEtcher (commonly referred to and formerly known as Etcher) is a free and open-source utility for writing image files such as .iso and .img files, as well as zipped folders onto storage media to create live SD cards and USB flash drives. It is developed by Balena and licensed under Apache License 2.0. Etcher allows users to write images to portable storage media such as USB flash drives and SD cards. Etcher was developed using the Electron framework and supports Windows, macOS and Linux operating systems. balenaEtcher was originally called Etcher, but its name was changed on October 29, 2018, when Resin.io changed its name to Balena.
+In 2025, Tails,  a privacy-focused Linux distribution and part of The Tor Project, removed Etcher from its installation guides following the addition of advertisements and the discovery that it shared the file name of the image and the model of the USB stick with Balena and possibly with third parties, creating a significant privacy risk, and recommended using tools such as Rufus and the Raspberry Pi Installer instead.
+
+Features
+
+Etcher is primarily used through a graphical user interface, but there is also a command-line interface available for download on GitHub.
+
+Automatic detection of USB storage media and SD memory cards.
+Protection against hard-disk selection. This prevents accidental destruction of data on a hard disk.
+Allows preparing a bootable USB drive with a Windows 10 image larger than the capacity of a DVD.
+Allows installing Raspbian for Raspberry Pi on a microSD memory card.
+When the recording is complete, Etcher offers to record a new medium with the same image or a new one. This is convenient for teachers who want to record the same image on the SD memory cards of all the Raspberry Pi computers in their school.
+Future planned features include support for persistent storage allowing live SD card or USB flash drive to be used as a hard drive, as well as support for flashing multiple boot partitions to a single SD card or USB flash drive.

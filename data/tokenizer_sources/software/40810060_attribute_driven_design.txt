@@ -1,0 +1,34 @@
+Attribute-driven design (also called ADD or Attribute-driven design method) is a methodology to create software architectures that takes into account the quality attributes of the software. It was previously known as the Architecture Based Design Method (or ABD), but due to trademark issues the name was changed to Attribute-driven design around 2001.
+
+The attribute-driven design method
+In the book Software architecture in practice the authors describe ADD as an iterative method that, at each iteration, helps the architect to do the following steps:
+
+Choose a part of the system to design.
+Marshal all the architecturally significant requirements for the selected part. This means that you select all quality attributes and business goals that could affect the architecture of this phase.
+Create an architecture for the selected part that meets the selected architecturally significant requirements and test this design.
+
+Required input
+ADD can only be started successfully when the following resources are already available:
+
+functional requirements
+quality requirements
+constraints
+Of course, we cannot wait until all these requirements are finalized since this can take a while. The ADD process can start once a set of ASRs (architecturally significant requirements, which are the three resources listed above) are available.
+
+Process steps
+Choose an element of the system to design
+Select an element of the system that is not yet designed. In the first iteration this will be the system itself. Later on, a choice will need to be made between several elements. This choice can be based on personnel availability, input resources availability, risk mitigation, etc. In case you do not have any of these limitations, it is suggested to go for a breadth-first strategy.
+Identify the Architecturally Significant Requirements (ASR) for the chosen element
+Identify the ASRs that are most important for this selected element. You should prioritize these requirements to make sure that your design reflects the most important ASRs.
+Generate a design solution for the chosen element
+This step is the heart of ADD since the architecture will be created in this step. The architecture you create should reflect the selected ASRs. You can do this by making use of architectural patterns or tactics. Most of the times you will have to make a trade-off between several tactics and ASRs.
+Inventory remaining requirements and select the input for the next iteration
+Take a look at the listed ASRs and see whether they are already fulfilled with the design you have at the moment. For each ASR you will have to check whether it is satisfied, delegated to one of the children, distributed among the children or whether it can not be satisfied. In the last case you will need to change your architecture.
+Repeat steps 1-4 until all the ASRs have been satisfied
+Repeat!
+
+Output
+A set of sketches of architectural views, not a full-blown detailed architecture.
+
+ADD 3.0
+In recent years, ADD has been updated substantially to include platform-specific design, e.g. technology and framework choices via design concept catalogs, and to emphasize the making and documentation of architectural decisions.

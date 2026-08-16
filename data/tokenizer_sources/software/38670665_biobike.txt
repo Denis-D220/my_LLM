@@ -1,0 +1,18 @@
+BioBike(nee. BioLingua ) is a cloud-based, through-the-web programmable (Paas) symbolic biocomputing and bioinformatics platform that aims to make computational biology, and especially intelligent biocomputing (that is, the application of Artificial Intelligence to computational biology) accessible to research scientists who are not expert programmers.
+
+Unique capabilities
+BioBIKE is an integrated symbolic biocomputing and bioinformatics platform, built from the start as an entirely (what is now called) cloud-based architecture where all computing is done in remote servers, and all user access is accomplished through web browsers.
+BioBIKE has a built-in frame system in which all objects, data, and knowledge are represented. This enables code written either in the native Lisp, in the visual programming language, or systems of rules expressed in the SNARK theorem prover to access the whole of biological knowledge in an integrated manner.
+For its time (released in 2002) it was unique in permitting users to create fully functional biocomputing programs that run on the back-end servers entirely through the web browser UI. (In modern terms it was one of the first PaaS (Platform as a Service) systems, predating even Salesforce in this capability.) Initially this programming was carried out in raw Lisp, but Jeff Elhai's team at VCU, with NSF funding, created an entirely graphical programming environment on top of BioBIKE based upon the Boxer-style programming environments.
+
+Being a multi-headed, multi-threaded, multi-user, multi-tenancy cloud-based system, BioBIKE users were able to directly work together through their web browsers, remotely sharing the same listener and memory space. This permitted a unique sort of collaboration, discussed in Shrager (2007).
+A specialized offshoot of BioBIKE called "BioDeducta" includes SRI's SNARK theorem prover, offering unique "deductive biocomputing" capabilities.
+
+Implementation
+BioBIKE is open-source software implemented using the Lisp programming language.  Continuing development takes place by the BioBIKE team centered at Virginia Commonwealth University .
+
+History
+BioBIKE was originally called "BioLingua", and was developed by Jeff Shrager at The Carnegie Inst. of Washington Dept. of Plant Biology, and JP Massar with funding from NASA's Astrobiology Division. Shrager and Massar wanted to create a web-based, multi-user Lisp Machine, specialized for bioinformatics. Other early contributors to the project included Mike Travers, and Jeff Elhai of VCU. Elhai obtained continuing funding from the National Science Foundation for the project, which was renamed BioBIKE. Elhai and colleagues added BioBIKE's unique visual programming language. Shrager, meanwhile, collaborated with Richard Waldinger at SRI to build SRI's (SNARK) theorem prover into BioBIKE, creating a deductive biocomputing system, called BioDeducta.
+
+Instances
+There used to be a number of BioBIKE verticals in different biological domains, including viral pathogens, cyanobacteria and other bacteria, Arabidopsis thaliana, and several others described in the references.

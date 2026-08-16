@@ -1,0 +1,6055 @@
+In quantum mechanics, the Wigner's 3-j symbols, also called 3-jm symbols, are an alternative to Clebsch–Gordan coefficients for the purpose of adding angular momenta. While the two approaches address exactly the same physical problem, the 3-j symbols do so more symmetrically.
+
+Mathematical relation to Clebsch–Gordan coefficients
+The 3-j symbols are given in terms of the Clebsch–Gordan coefficients by
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        ≡
+        
+          
+            
+              (
+              −
+              1
+              
+                )
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                  −
+                  
+                    j
+                    
+                      2
+                    
+                  
+                  −
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            
+              2
+              
+                j
+                
+                  3
+                
+              
+              +
+              1
+            
+          
+        
+        ⟨
+        
+          j
+          
+            1
+          
+        
+        
+        
+          m
+          
+            1
+          
+        
+        
+        
+          j
+          
+            2
+          
+        
+        
+        
+          m
+          
+            2
+          
+        
+        
+          |
+        
+        
+          j
+          
+            3
+          
+        
+        
+        (
+        −
+        
+          m
+          
+            3
+          
+        
+        )
+        ⟩
+        .
+      
+    
+    {\displaystyle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}\equiv {\frac {(-1)^{j_{1}-j_{2}-m_{3}}}{\sqrt {2j_{3}+1}}}\langle j_{1}\,m_{1}\,j_{2}\,m_{2}|j_{3}\,(-m_{3})\rangle .}
+  
+
+The j and m components are angular-momentum quantum numbers, i.e., every j (and every corresponding m) is either a nonnegative integer or half-odd-integer. The exponent of the sign factor is always an integer, so it remains the same when transposed to the left, and the inverse relation follows upon making the substitution m3 → −m3:
+
+  
+    
+      
+        ⟨
+        
+          j
+          
+            1
+          
+        
+        
+        
+          m
+          
+            1
+          
+        
+        
+        
+          j
+          
+            2
+          
+        
+        
+        
+          m
+          
+            2
+          
+        
+        
+          |
+        
+        
+          j
+          
+            3
+          
+        
+        
+        
+          m
+          
+            3
+          
+        
+        ⟩
+        =
+        (
+        −
+        1
+        
+          )
+          
+            −
+            
+              j
+              
+                1
+              
+            
+            +
+            
+              j
+              
+                2
+              
+            
+            −
+            
+              m
+              
+                3
+              
+            
+          
+        
+        
+          
+            2
+            
+              j
+              
+                3
+              
+            
+            +
+            1
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  −
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle \langle j_{1}\,m_{1}\,j_{2}\,m_{2}|j_{3}\,m_{3}\rangle =(-1)^{-j_{1}+j_{2}-m_{3}}{\sqrt {2j_{3}+1}}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&-m_{3}\end{pmatrix}}.}
+  
+
+Explicit expression
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            j
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            j
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            j
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            m
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            m
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            m
+                            
+                              3
+                            
+                          
+                        
+                      
+                    
+                    )
+                  
+                
+              
+              
+                
+                ≡
+                δ
+                (
+                
+                  m
+                  
+                    1
+                  
+                
+                +
+                
+                  m
+                  
+                    2
+                  
+                
+                +
+                
+                  m
+                  
+                    3
+                  
+                
+                ,
+                0
+                )
+                (
+                −
+                1
+                
+                  )
+                  
+                    
+                      j
+                      
+                        1
+                      
+                    
+                    −
+                    
+                      j
+                      
+                        2
+                      
+                    
+                    −
+                    
+                      m
+                      
+                        3
+                      
+                    
+                  
+                
+                
+
+                
+                
+                  
+                    
+                      
+                        (
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        )
+                        !
+                        (
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        −
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        )
+                        !
+                        (
+                        −
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        )
+                        !
+                      
+                      
+                        (
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        +
+                        1
+                        )
+                        !
+                      
+                    
+                  
+                
+                 
+                ×
+                
+
+                
+              
+            
+            
+              
+              
+                
+                ×
+                
+                  
+                    (
+                    
+                      j
+                      
+                        1
+                      
+                    
+                    −
+                    
+                      m
+                      
+                        1
+                      
+                    
+                    )
+                    !
+                    (
+                    
+                      j
+                      
+                        1
+                      
+                    
+                    +
+                    
+                      m
+                      
+                        1
+                      
+                    
+                    )
+                    !
+                    (
+                    
+                      j
+                      
+                        2
+                      
+                    
+                    −
+                    
+                      m
+                      
+                        2
+                      
+                    
+                    )
+                    !
+                    (
+                    
+                      j
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      m
+                      
+                        2
+                      
+                    
+                    )
+                    !
+                    (
+                    
+                      j
+                      
+                        3
+                      
+                    
+                    −
+                    
+                      m
+                      
+                        3
+                      
+                    
+                    )
+                    !
+                    (
+                    
+                      j
+                      
+                        3
+                      
+                    
+                    +
+                    
+                      m
+                      
+                        3
+                      
+                    
+                    )
+                    !
+                  
+                
+                 
+                ×
+                
+
+                
+              
+            
+            
+              
+              
+                
+                ×
+                
+                  ∑
+                  
+                    k
+                    =
+                    K
+                  
+                  
+                    N
+                  
+                
+                
+                  
+                    
+                      (
+                      −
+                      1
+                      
+                        )
+                        
+                          k
+                        
+                      
+                    
+                    
+                      k
+                      !
+                      (
+                      
+                        j
+                        
+                          1
+                        
+                      
+                      +
+                      
+                        j
+                        
+                          2
+                        
+                      
+                      −
+                      
+                        j
+                        
+                          3
+                        
+                      
+                      −
+                      k
+                      )
+                      !
+                      (
+                      
+                        j
+                        
+                          1
+                        
+                      
+                      −
+                      
+                        m
+                        
+                          1
+                        
+                      
+                      −
+                      k
+                      )
+                      !
+                      (
+                      
+                        j
+                        
+                          2
+                        
+                      
+                      +
+                      
+                        m
+                        
+                          2
+                        
+                      
+                      −
+                      k
+                      )
+                      !
+                      (
+                      
+                        j
+                        
+                          3
+                        
+                      
+                      −
+                      
+                        j
+                        
+                          2
+                        
+                      
+                      +
+                      
+                        m
+                        
+                          1
+                        
+                      
+                      +
+                      k
+                      )
+                      !
+                      (
+                      
+                        j
+                        
+                          3
+                        
+                      
+                      −
+                      
+                        j
+                        
+                          1
+                        
+                      
+                      −
+                      
+                        m
+                        
+                          2
+                        
+                      
+                      +
+                      k
+                      )
+                      !
+                    
+                  
+                
+                ,
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}&\equiv \delta (m_{1}+m_{2}+m_{3},0)(-1)^{j_{1}-j_{2}-m_{3}}{}{\sqrt {\frac {(j_{1}+j_{2}-j_{3})!(j_{1}-j_{2}+j_{3})!(-j_{1}+j_{2}+j_{3})!}{(j_{1}+j_{2}+j_{3}+1)!}}}\ \times {}\\[6pt]&\times {\sqrt {(j_{1}-m_{1})!(j_{1}+m_{1})!(j_{2}-m_{2})!(j_{2}+m_{2})!(j_{3}-m_{3})!(j_{3}+m_{3})!}}\ \times {}\\[6pt]&\times \sum _{k=K}^{N}{\frac {(-1)^{k}}{k!(j_{1}+j_{2}-j_{3}-k)!(j_{1}-m_{1}-k)!(j_{2}+m_{2}-k)!(j_{3}-j_{2}+m_{1}+k)!(j_{3}-j_{1}-m_{2}+k)!}},\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        δ
+        (
+        i
+        ,
+        j
+        )
+      
+    
+    {\displaystyle \delta (i,j)}
+  
+ is the Kronecker delta.
+The summation is performed over those integer values k for which the argument of each factorial in the denominator is non-negative, i.e. summation limits K and N are taken equal: the lower one 
+  
+    
+      
+        K
+        =
+        max
+        (
+        0
+        ,
+        
+          j
+          
+            2
+          
+        
+        −
+        
+          j
+          
+            3
+          
+        
+        −
+        
+          m
+          
+            1
+          
+        
+        ,
+        
+          j
+          
+            1
+          
+        
+        −
+        
+          j
+          
+            3
+          
+        
+        +
+        
+          m
+          
+            2
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle K=\max(0,j_{2}-j_{3}-m_{1},j_{1}-j_{3}+m_{2}),}
+  
+ the upper one 
+  
+    
+      
+        N
+        =
+        min
+        (
+        
+          j
+          
+            1
+          
+        
+        +
+        
+          j
+          
+            2
+          
+        
+        −
+        
+          j
+          
+            3
+          
+        
+        ,
+        
+          j
+          
+            1
+          
+        
+        −
+        
+          m
+          
+            1
+          
+        
+        ,
+        
+          j
+          
+            2
+          
+        
+        +
+        
+          m
+          
+            2
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle N=\min(j_{1}+j_{2}-j_{3},j_{1}-m_{1},j_{2}+m_{2}).}
+  
+ Factorials of negative numbers are conventionally taken equal to zero, so that the values of the 3j symbol at, for example, 
+  
+    
+      
+        
+          j
+          
+            3
+          
+        
+        >
+        
+          j
+          
+            1
+          
+        
+        +
+        
+          j
+          
+            2
+          
+        
+      
+    
+    {\displaystyle j_{3}>j_{1}+j_{2}}
+  
+ or 
+  
+    
+      
+        
+          j
+          
+            1
+          
+        
+        <
+        
+          m
+          
+            1
+          
+        
+      
+    
+    {\displaystyle j_{1}<m_{1}}
+  
+ are automatically set to zero.
+
+Definitional relation to Clebsch–Gordan coefficients
+The CG coefficients are defined so as to express the addition of two angular momenta in terms of a third:
+
+  
+    
+      
+        
+          |
+        
+        
+          j
+          
+            3
+          
+        
+        
+        
+          m
+          
+            3
+          
+        
+        ⟩
+        =
+        
+          ∑
+          
+            
+              m
+              
+                1
+              
+            
+            =
+            −
+            
+              j
+              
+                1
+              
+            
+          
+          
+            
+              j
+              
+                1
+              
+            
+          
+        
+        
+          ∑
+          
+            
+              m
+              
+                2
+              
+            
+            =
+            −
+            
+              j
+              
+                2
+              
+            
+          
+          
+            
+              j
+              
+                2
+              
+            
+          
+        
+        ⟨
+        
+          j
+          
+            1
+          
+        
+        
+        
+          m
+          
+            1
+          
+        
+        
+        
+          j
+          
+            2
+          
+        
+        
+        
+          m
+          
+            2
+          
+        
+        
+          |
+        
+        
+          j
+          
+            3
+          
+        
+        
+        
+          m
+          
+            3
+          
+        
+        ⟩
+        
+          |
+        
+        
+          j
+          
+            1
+          
+        
+        
+        
+          m
+          
+            1
+          
+        
+        
+        
+          j
+          
+            2
+          
+        
+        
+        
+          m
+          
+            2
+          
+        
+        ⟩
+        .
+      
+    
+    {\displaystyle |j_{3}\,m_{3}\rangle =\sum _{m_{1}=-j_{1}}^{j_{1}}\sum _{m_{2}=-j_{2}}^{j_{2}}\langle j_{1}\,m_{1}\,j_{2}\,m_{2}|j_{3}\,m_{3}\rangle |j_{1}\,m_{1}\,j_{2}\,m_{2}\rangle .}
+  
+
+The 3-j symbols, on the other hand, are the coefficients with which three angular momenta must be added so that the resultant is zero:
+
+  
+    
+      
+        
+          ∑
+          
+            
+              m
+              
+                1
+              
+            
+            =
+            −
+            
+              j
+              
+                1
+              
+            
+          
+          
+            
+              j
+              
+                1
+              
+            
+          
+        
+        
+          ∑
+          
+            
+              m
+              
+                2
+              
+            
+            =
+            −
+            
+              j
+              
+                2
+              
+            
+          
+          
+            
+              j
+              
+                2
+              
+            
+          
+        
+        
+          ∑
+          
+            
+              m
+              
+                3
+              
+            
+            =
+            −
+            
+              j
+              
+                3
+              
+            
+          
+          
+            
+              j
+              
+                3
+              
+            
+          
+        
+        
+          |
+        
+        
+          j
+          
+            1
+          
+        
+        
+          m
+          
+            1
+          
+        
+        ⟩
+        
+          |
+        
+        
+          j
+          
+            2
+          
+        
+        
+          m
+          
+            2
+          
+        
+        ⟩
+        
+          |
+        
+        
+          j
+          
+            3
+          
+        
+        
+          m
+          
+            3
+          
+        
+        ⟩
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        
+          |
+        
+        0
+        
+        0
+        ⟩
+        .
+      
+    
+    {\displaystyle \sum _{m_{1}=-j_{1}}^{j_{1}}\sum _{m_{2}=-j_{2}}^{j_{2}}\sum _{m_{3}=-j_{3}}^{j_{3}}|j_{1}m_{1}\rangle |j_{2}m_{2}\rangle |j_{3}m_{3}\rangle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}=|0\,0\rangle .}
+  
+
+Here 
+  
+    
+      
+        
+          |
+        
+        0
+        
+        0
+        ⟩
+      
+    
+    {\displaystyle |0\,0\rangle }
+  
+ is the zero-angular-momentum state (
+  
+    
+      
+        j
+        =
+        m
+        =
+        0
+      
+    
+    {\displaystyle j=m=0}
+  
+). It is apparent that the 3-j symbol treats all three angular momenta involved in the addition problem on an equal footing and is therefore more symmetrical than the CG coefficient.
+Since the state 
+  
+    
+      
+        
+          |
+        
+        0
+        
+        0
+        ⟩
+      
+    
+    {\displaystyle |0\,0\rangle }
+  
+ is unchanged by rotation, one also says that the contraction of the product of three rotational states with a 3-j symbol is invariant under rotations.
+
+Selection rules
+The Wigner 3-j symbol is zero unless all these conditions are satisfied:
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                  m
+                  
+                    i
+                  
+                
+                ∈
+                {
+                −
+                
+                  j
+                  
+                    i
+                  
+                
+                ,
+                −
+                
+                  j
+                  
+                    i
+                  
+                
+                +
+                1
+                ,
+                −
+                
+                  j
+                  
+                    i
+                  
+                
+                +
+                2
+                ,
+                …
+                ,
+                
+                  j
+                  
+                    i
+                  
+                
+                }
+                
+                (
+                i
+                =
+                1
+                ,
+                2
+                ,
+                3
+                )
+                ,
+              
+            
+            
+              
+              
+                
+                  m
+                  
+                    1
+                  
+                
+                +
+                
+                  m
+                  
+                    2
+                  
+                
+                +
+                
+                  m
+                  
+                    3
+                  
+                
+                =
+                0
+                ,
+              
+            
+            
+              
+              
+                
+                
+                  |
+                
+                
+                  j
+                  
+                    1
+                  
+                
+                −
+                
+                  j
+                  
+                    2
+                  
+                
+                
+                  |
+                
+                ≤
+                
+                  j
+                  
+                    3
+                  
+                
+                ≤
+                
+                  j
+                  
+                    1
+                  
+                
+                +
+                
+                  j
+                  
+                    2
+                  
+                
+                ,
+              
+            
+            
+              
+              
+                
+                (
+                
+                  j
+                  
+                    1
+                  
+                
+                +
+                
+                  j
+                  
+                    2
+                  
+                
+                +
+                
+                  j
+                  
+                    3
+                  
+                
+                )
+                
+                   is an integer (and, moreover, an even integer if 
+                
+                
+                  m
+                  
+                    1
+                  
+                
+                =
+                
+                  m
+                  
+                    2
+                  
+                
+                =
+                
+                  m
+                  
+                    3
+                  
+                
+                =
+                0
+                
+                  )
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&m_{i}\in \{-j_{i},-j_{i}+1,-j_{i}+2,\ldots ,j_{i}\}\quad (i=1,2,3),\\&m_{1}+m_{2}+m_{3}=0,\\&|j_{1}-j_{2}|\leq j_{3}\leq j_{1}+j_{2},\\&(j_{1}+j_{2}+j_{3}){\text{ is an integer (and, moreover, an even integer if }}m_{1}=m_{2}=m_{3}=0{\text{)}}.\\\end{aligned}}}
+  
+
+Symmetry properties
+A 3-j symbol is invariant under an even permutation of its columns:
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}={\begin{pmatrix}j_{2}&j_{3}&j_{1}\\m_{2}&m_{3}&m_{1}\end{pmatrix}}={\begin{pmatrix}j_{3}&j_{1}&j_{2}\\m_{3}&m_{1}&m_{2}\end{pmatrix}}.}
+  
+
+An odd permutation of the columns gives a phase factor:
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              j
+              
+                1
+              
+            
+            +
+            
+              j
+              
+                2
+              
+            
+            +
+            
+              j
+              
+                3
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}=(-1)^{j_{1}+j_{2}+j_{3}}{\begin{pmatrix}j_{2}&j_{1}&j_{3}\\m_{2}&m_{1}&m_{3}\end{pmatrix}}}
+  
+
+  
+    
+      
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              j
+              
+                1
+              
+            
+            +
+            
+              j
+              
+                2
+              
+            
+            +
+            
+              j
+              
+                3
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              j
+              
+                1
+              
+            
+            +
+            
+              j
+              
+                2
+              
+            
+            +
+            
+              j
+              
+                3
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle =(-1)^{j_{1}+j_{2}+j_{3}}{\begin{pmatrix}j_{1}&j_{3}&j_{2}\\m_{1}&m_{3}&m_{2}\end{pmatrix}}=(-1)^{j_{1}+j_{2}+j_{3}}{\begin{pmatrix}j_{3}&j_{2}&j_{1}\\m_{3}&m_{2}&m_{1}\end{pmatrix}}.}
+  
+
+Changing the sign of the 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ quantum numbers (time reversal) also gives a phase:
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  −
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  −
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  −
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              j
+              
+                1
+              
+            
+            +
+            
+              j
+              
+                2
+              
+            
+            +
+            
+              j
+              
+                3
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\-m_{1}&-m_{2}&-m_{3}\end{pmatrix}}=(-1)^{j_{1}+j_{2}+j_{3}}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}.}
+  
+
+The 3-j symbols also have so-called Regge symmetries, which are not due to permutations or time reversal. These symmetries are:
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        −
+                        
+                          m
+                          
+                            1
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        +
+                        
+                          m
+                          
+                            1
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+              
+              
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                  −
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        −
+                        
+                          m
+                          
+                            1
+                          
+                        
+                      
+                      2
+                    
+                  
+                  −
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        +
+                        
+                          m
+                          
+                            1
+                          
+                        
+                      
+                      2
+                    
+                  
+                  +
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        ,
+      
+    
+    {\displaystyle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}={\begin{pmatrix}j_{1}&{\frac {j_{2}+j_{3}-m_{1}}{2}}&{\frac {j_{2}+j_{3}+m_{1}}{2}}\\j_{3}-j_{2}&{\frac {j_{2}-j_{3}-m_{1}}{2}}-m_{3}&{\frac {j_{2}-j_{3}+m_{1}}{2}}+m_{3}\end{pmatrix}},}
+  
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              j
+              
+                1
+              
+            
+            +
+            
+              j
+              
+                2
+              
+            
+            +
+            
+              j
+              
+                3
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    
+                      
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        +
+                        
+                          m
+                          
+                            1
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        +
+                        
+                          m
+                          
+                            2
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          m
+                          
+                            3
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+              
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                  −
+                  
+                    
+                      
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        −
+                        
+                          m
+                          
+                            1
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                  −
+                  
+                    
+                      
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        −
+                        
+                          m
+                          
+                            2
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                  −
+                  
+                    
+                      
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          m
+                          
+                            3
+                          
+                        
+                      
+                      2
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}=(-1)^{j_{1}+j_{2}+j_{3}}{\begin{pmatrix}{\frac {j_{2}+j_{3}+m_{1}}{2}}&{\frac {j_{1}+j_{3}+m_{2}}{2}}&{\frac {j_{1}+j_{2}+m_{3}}{2}}\\j_{1}-{\frac {j_{2}+j_{3}-m_{1}}{2}}&j_{2}-{\frac {j_{1}+j_{3}-m_{2}}{2}}&j_{3}-{\frac {j_{1}+j_{2}-m_{3}}{2}}\end{pmatrix}}.}
+  
+
+With the Regge symmetries, the 3-j symbol has a total of 72 symmetries. These are best displayed by the definition of a Regge symbol, which is a one-to-one correspondence between it and a 3-j symbol and assumes the properties of a semi-magic square:
+
+  
+    
+      
+        R
+        =
+        
+          
+            
+              
+                −
+                
+                  j
+                  
+                    1
+                  
+                
+                +
+                
+                  j
+                  
+                    2
+                  
+                
+                +
+                
+                  j
+                  
+                    3
+                  
+                
+              
+              
+                
+                  j
+                  
+                    1
+                  
+                
+                −
+                
+                  j
+                  
+                    2
+                  
+                
+                +
+                
+                  j
+                  
+                    3
+                  
+                
+              
+              
+                
+                  j
+                  
+                    1
+                  
+                
+                +
+                
+                  j
+                  
+                    2
+                  
+                
+                −
+                
+                  j
+                  
+                    3
+                  
+                
+              
+            
+            
+              
+                
+                  j
+                  
+                    1
+                  
+                
+                −
+                
+                  m
+                  
+                    1
+                  
+                
+              
+              
+                
+                  j
+                  
+                    2
+                  
+                
+                −
+                
+                  m
+                  
+                    2
+                  
+                
+              
+              
+                
+                  j
+                  
+                    3
+                  
+                
+                −
+                
+                  m
+                  
+                    3
+                  
+                
+              
+            
+            
+              
+                
+                  j
+                  
+                    1
+                  
+                
+                +
+                
+                  m
+                  
+                    1
+                  
+                
+              
+              
+                
+                  j
+                  
+                    2
+                  
+                
+                +
+                
+                  m
+                  
+                    2
+                  
+                
+              
+              
+                
+                  j
+                  
+                    3
+                  
+                
+                +
+                
+                  m
+                  
+                    3
+                  
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle R={\begin{array}{|ccc|}\hline -j_{1}+j_{2}+j_{3}&j_{1}-j_{2}+j_{3}&j_{1}+j_{2}-j_{3}\\j_{1}-m_{1}&j_{2}-m_{2}&j_{3}-m_{3}\\j_{1}+m_{1}&j_{2}+m_{2}&j_{3}+m_{3}\\\hline \end{array}},}
+  
+
+whereby the 72 symmetries now correspond to 3! row and 3! column interchanges plus a transposition of the matrix. These facts can be used to devise an effective storage scheme.
+
+Orthogonality relations
+A system of two angular momenta with magnitudes j1 and j2 can be described either in terms of the uncoupled basis states (labeled by the quantum numbers m1 and m2), or the coupled basis states (labeled by j3 and m3). The 3-j symbols constitute a unitary transformation between these two bases, and this unitarity implies the orthogonality relations
+
+  
+    
+      
+        (
+        2
+        
+          j
+          
+            3
+          
+        
+        +
+        1
+        )
+        
+          ∑
+          
+            
+              m
+              
+                1
+              
+            
+            
+              m
+              
+                2
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                    ′
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                    ′
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        
+          δ
+          
+            
+              j
+              
+                3
+              
+            
+            ,
+            
+              j
+              
+                3
+              
+              ′
+            
+          
+        
+        
+          δ
+          
+            
+              m
+              
+                3
+              
+            
+            ,
+            
+              m
+              
+                3
+              
+              ′
+            
+          
+        
+        
+          
+            {
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+            
+            }
+          
+        
+        ,
+      
+    
+    {\displaystyle (2j_{3}+1)\sum _{m_{1}m_{2}}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}{\begin{pmatrix}j_{1}&j_{2}&j'_{3}\\m_{1}&m_{2}&m'_{3}\end{pmatrix}}=\delta _{j_{3},j'_{3}}\delta _{m_{3},m'_{3}}{\begin{Bmatrix}j_{1}&j_{2}&j_{3}\end{Bmatrix}},}
+  
+
+  
+    
+      
+        
+          ∑
+          
+            
+              j
+              
+                3
+              
+            
+            
+              m
+              
+                3
+              
+            
+          
+        
+        (
+        2
+        
+          j
+          
+            3
+          
+        
+        +
+        1
+        )
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                    ′
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                    ′
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        
+          δ
+          
+            
+              m
+              
+                1
+              
+            
+            ,
+            
+              m
+              
+                1
+              
+              ′
+            
+          
+        
+        
+          δ
+          
+            
+              m
+              
+                2
+              
+            
+            ,
+            
+              m
+              
+                2
+              
+              ′
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \sum _{j_{3}m_{3}}(2j_{3}+1){\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}'&m_{2}'&m_{3}\end{pmatrix}}=\delta _{m_{1},m_{1}'}\delta _{m_{2},m_{2}'}.}
+  
+
+The triangular delta {j1 j2 j3} is equal to 1 when the triad (j1, j2, j3) satisfies the triangle conditions, and is zero otherwise. The triangular delta itself is sometimes confusingly called a "3-j symbol" (without the m) in analogy to 6-j and 9-j symbols, all of which are irreducible summations of 3-jm symbols where no m variables remain.
+
+Relation to spherical harmonics; Gaunt coefficients
+The 3-jm symbols give the integral of the products of three spherical harmonics 
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                ∫
+                
+                  Y
+                  
+                    
+                      l
+                      
+                        1
+                      
+                    
+                    
+                      m
+                      
+                        1
+                      
+                    
+                  
+                
+                (
+                θ
+                ,
+                φ
+                )
+                
+                  Y
+                  
+                    
+                      l
+                      
+                        2
+                      
+                    
+                    
+                      m
+                      
+                        2
+                      
+                    
+                  
+                
+                (
+                θ
+                ,
+                φ
+                )
+                
+                  Y
+                  
+                    
+                      l
+                      
+                        3
+                      
+                    
+                    
+                      m
+                      
+                        3
+                      
+                    
+                  
+                
+                (
+                θ
+                ,
+                φ
+                )
+                
+                sin
+                ⁡
+                θ
+                
+                
+                  d
+                
+                θ
+                
+                
+                  d
+                
+                φ
+              
+            
+            
+              
+              
+                
+                
+                =
+                
+                  
+                    
+                      
+                        (
+                        2
+                        
+                          l
+                          
+                            1
+                          
+                        
+                        +
+                        1
+                        )
+                        (
+                        2
+                        
+                          l
+                          
+                            2
+                          
+                        
+                        +
+                        1
+                        )
+                        (
+                        2
+                        
+                          l
+                          
+                            3
+                          
+                        
+                        +
+                        1
+                        )
+                      
+                      
+                        4
+                        π
+                      
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            l
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            l
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            m
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            m
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            m
+                            
+                              3
+                            
+                          
+                        
+                      
+                    
+                    )
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\int Y_{l_{1}m_{1}}(\theta ,\varphi )Y_{l_{2}m_{2}}(\theta ,\varphi )Y_{l_{3}m_{3}}(\theta ,\varphi )\,\sin \theta \,\mathrm {d} \theta \,\mathrm {d} \varphi \\&\quad ={\sqrt {\frac {(2l_{1}+1)(2l_{2}+1)(2l_{3}+1)}{4\pi }}}{\begin{pmatrix}l_{1}&l_{2}&l_{3}\\0&0&0\end{pmatrix}}{\begin{pmatrix}l_{1}&l_{2}&l_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}\end{aligned}}}
+  
+
+with 
+  
+    
+      
+        
+          l
+          
+            1
+          
+        
+      
+    
+    {\displaystyle l_{1}}
+  
+, 
+  
+    
+      
+        
+          l
+          
+            2
+          
+        
+      
+    
+    {\displaystyle l_{2}}
+  
+ and 
+  
+    
+      
+        
+          l
+          
+            3
+          
+        
+      
+    
+    {\displaystyle l_{3}}
+  
+ integers. These integrals are called Gaunt coefficients.
+
+Relation to integrals of spin-weighted spherical harmonics
+Similar relations exist for the spin-weighted spherical harmonics if 
+  
+    
+      
+        
+          s
+          
+            1
+          
+        
+        +
+        
+          s
+          
+            2
+          
+        
+        +
+        
+          s
+          
+            3
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle s_{1}+s_{2}+s_{3}=0}
+  
+:
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                ∫
+                d
+                
+                  
+                    
+                      n
+                      ^
+                    
+                  
+                
+                
+                  
+                  
+                    
+                      s
+                      
+                        1
+                      
+                    
+                  
+                
+                
+                
+                  Y
+                  
+                    
+                      j
+                      
+                        1
+                      
+                    
+                    
+                      m
+                      
+                        1
+                      
+                    
+                  
+                
+                (
+                
+                  
+                    
+                      n
+                      ^
+                    
+                  
+                
+                )
+                
+                  
+                  
+                    
+                      s
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                
+                  Y
+                  
+                    
+                      j
+                      
+                        2
+                      
+                    
+                    
+                      m
+                      
+                        2
+                      
+                    
+                  
+                
+                (
+                
+                  
+                    
+                      n
+                      ^
+                    
+                  
+                
+                )
+                
+                  
+                  
+                    
+                      s
+                      
+                        3
+                      
+                    
+                  
+                
+                
+                
+                  Y
+                  
+                    
+                      j
+                      
+                        3
+                      
+                    
+                    
+                      m
+                      
+                        3
+                      
+                    
+                  
+                
+                (
+                
+                  
+                    
+                      n
+                      ^
+                    
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                
+                =
+                
+                  
+                    
+                      
+                        (
+                        2
+                        
+                          j
+                          
+                            1
+                          
+                        
+                        +
+                        1
+                        )
+                        (
+                        2
+                        
+                          j
+                          
+                            2
+                          
+                        
+                        +
+                        1
+                        )
+                        (
+                        2
+                        
+                          j
+                          
+                            3
+                          
+                        
+                        +
+                        1
+                        )
+                      
+                      
+                        4
+                        π
+                      
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            j
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            j
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            j
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            m
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            m
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            m
+                            
+                              3
+                            
+                          
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            j
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            j
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            j
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          −
+                          
+                            s
+                            
+                              1
+                            
+                          
+                        
+                        
+                          −
+                          
+                            s
+                            
+                              2
+                            
+                          
+                        
+                        
+                          −
+                          
+                            s
+                            
+                              3
+                            
+                          
+                        
+                      
+                    
+                    )
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\int d\mathbf {\hat {n}} \,_{s_{1}}\!Y_{j_{1}m_{1}}(\mathbf {\hat {n}} )\,_{s_{2}}\!Y_{j_{2}m_{2}}(\mathbf {\hat {n}} )\,_{s_{3}}\!Y_{j_{3}m_{3}}(\mathbf {\hat {n}} )\\&\quad ={\sqrt {\frac {(2j_{1}+1)(2j_{2}+1)(2j_{3}+1)}{4\pi }}}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\-s_{1}&-s_{2}&-s_{3}\end{pmatrix}}.\end{aligned}}}
+  
+
+Recursion relations
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                
+                  −
+                
+                
+                  
+                    (
+                    
+                      l
+                      
+                        3
+                      
+                    
+                    ∓
+                    
+                      s
+                      
+                        3
+                      
+                    
+                    )
+                    (
+                    
+                      l
+                      
+                        3
+                      
+                    
+                    ±
+                    
+                      s
+                      
+                        3
+                      
+                    
+                    +
+                    1
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            l
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            s
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            s
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            s
+                            
+                              3
+                            
+                          
+                          ±
+                          1
+                        
+                      
+                    
+                    )
+                  
+                
+                =
+              
+            
+            
+              
+              
+                
+                
+                =
+                
+                  
+                    (
+                    
+                      l
+                      
+                        1
+                      
+                    
+                    ∓
+                    
+                      s
+                      
+                        1
+                      
+                    
+                    )
+                    (
+                    
+                      l
+                      
+                        1
+                      
+                    
+                    ±
+                    
+                      s
+                      
+                        1
+                      
+                    
+                    +
+                    1
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            l
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            s
+                            
+                              1
+                            
+                          
+                          ±
+                          1
+                        
+                        
+                          
+                            s
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            s
+                            
+                              3
+                            
+                          
+                        
+                      
+                    
+                    )
+                  
+                
+                +
+                
+                  
+                    (
+                    
+                      l
+                      
+                        2
+                      
+                    
+                    ∓
+                    
+                      s
+                      
+                        2
+                      
+                    
+                    )
+                    (
+                    
+                      l
+                      
+                        2
+                      
+                    
+                    ±
+                    
+                      s
+                      
+                        2
+                      
+                    
+                    +
+                    1
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            l
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              2
+                            
+                          
+                        
+                        
+                          
+                            l
+                            
+                              3
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            s
+                            
+                              1
+                            
+                          
+                        
+                        
+                          
+                            s
+                            
+                              2
+                            
+                          
+                          ±
+                          1
+                        
+                        
+                          
+                            s
+                            
+                              3
+                            
+                          
+                        
+                      
+                    
+                    )
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&{-}{\sqrt {(l_{3}\mp s_{3})(l_{3}\pm s_{3}+1)}}{\begin{pmatrix}l_{1}&l_{2}&l_{3}\\s_{1}&s_{2}&s_{3}\pm 1\end{pmatrix}}=\\&\quad ={\sqrt {(l_{1}\mp s_{1})(l_{1}\pm s_{1}+1)}}{\begin{pmatrix}l_{1}&l_{2}&l_{3}\\s_{1}\pm 1&s_{2}&s_{3}\end{pmatrix}}+{\sqrt {(l_{2}\mp s_{2})(l_{2}\pm s_{2}+1)}}{\begin{pmatrix}l_{1}&l_{2}&l_{3}\\s_{1}&s_{2}\pm 1&s_{3}\end{pmatrix}}.\end{aligned}}}
+  
+
+Asymptotic expressions
+For 
+  
+    
+      
+        
+          l
+          
+            1
+          
+        
+        ≪
+        
+          l
+          
+            2
+          
+        
+        ,
+        
+          l
+          
+            3
+          
+        
+      
+    
+    {\displaystyle l_{1}\ll l_{2},l_{3}}
+  
+ a non-zero 3-j symbol is
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    l
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    l
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    l
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        ≈
+        (
+        −
+        1
+        
+          )
+          
+            
+              l
+              
+                3
+              
+            
+            +
+            
+              m
+              
+                3
+              
+            
+          
+        
+        
+          
+            
+              
+                d
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                  ,
+                  
+                    l
+                    
+                      3
+                    
+                  
+                  −
+                  
+                    l
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    l
+                    
+                      1
+                    
+                  
+                
+              
+              (
+              θ
+              )
+            
+            
+              2
+              
+                l
+                
+                  3
+                
+              
+              +
+              1
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\begin{pmatrix}l_{1}&l_{2}&l_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}\approx (-1)^{l_{3}+m_{3}}{\frac {d_{m_{1},l_{3}-l_{2}}^{l_{1}}(\theta )}{\sqrt {2l_{3}+1}}},}
+  
+
+where 
+  
+    
+      
+        cos
+        ⁡
+        (
+        θ
+        )
+        =
+        −
+        2
+        
+          m
+          
+            3
+          
+        
+        
+          /
+        
+        (
+        2
+        
+          l
+          
+            3
+          
+        
+        +
+        1
+        )
+      
+    
+    {\displaystyle \cos(\theta )=-2m_{3}/(2l_{3}+1)}
+  
+, and 
+  
+    
+      
+        
+          d
+          
+            m
+            n
+          
+          
+            l
+          
+        
+      
+    
+    {\displaystyle d_{mn}^{l}}
+  
+ is a Wigner function. Generally a better approximation obeying the Regge symmetry is given by 
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    l
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    l
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    l
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        ≈
+        (
+        −
+        1
+        
+          )
+          
+            
+              l
+              
+                3
+              
+            
+            +
+            
+              m
+              
+                3
+              
+            
+          
+        
+        
+          
+            
+              
+                d
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                  ,
+                  
+                    l
+                    
+                      3
+                    
+                  
+                  −
+                  
+                    l
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    l
+                    
+                      1
+                    
+                  
+                
+              
+              (
+              θ
+              )
+            
+            
+              
+                l
+                
+                  2
+                
+              
+              +
+              
+                l
+                
+                  3
+                
+              
+              +
+              1
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\begin{pmatrix}l_{1}&l_{2}&l_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}\approx (-1)^{l_{3}+m_{3}}{\frac {d_{m_{1},l_{3}-l_{2}}^{l_{1}}(\theta )}{\sqrt {l_{2}+l_{3}+1}}},}
+  
+
+where 
+  
+    
+      
+        cos
+        ⁡
+        (
+        θ
+        )
+        =
+        (
+        
+          m
+          
+            2
+          
+        
+        −
+        
+          m
+          
+            3
+          
+        
+        )
+        
+          /
+        
+        (
+        
+          l
+          
+            2
+          
+        
+        +
+        
+          l
+          
+            3
+          
+        
+        +
+        1
+        )
+      
+    
+    {\displaystyle \cos(\theta )=(m_{2}-m_{3})/(l_{2}+l_{3}+1)}
+  
+.
+
+Metric tensor
+The following quantity acts as a metric tensor in angular-momentum theory and is also known as a Wigner 1-jm symbol:
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  j
+                
+              
+              
+                
+                  m
+                  
+                  
+                    m
+                    ′
+                  
+                
+              
+            
+            )
+          
+        
+        :=
+        
+          
+            2
+            j
+            +
+            1
+          
+        
+        
+          
+            (
+            
+              
+                
+                  j
+                
+                
+                  0
+                
+                
+                  j
+                
+              
+              
+                
+                  m
+                
+                
+                  0
+                
+                
+                  
+                    m
+                    ′
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        (
+        −
+        1
+        
+          )
+          
+            j
+            −
+            
+              m
+              ′
+            
+          
+        
+        
+          δ
+          
+            m
+            ,
+            −
+            
+              m
+              ′
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\begin{pmatrix}j\\m\quad m'\end{pmatrix}}:={\sqrt {2j+1}}{\begin{pmatrix}j&0&j\\m&0&m'\end{pmatrix}}=(-1)^{j-m'}\delta _{m,-m'}.}
+  
+
+It can be used to perform time reversal on angular momenta.
+
+Special cases and other properties
+
+  
+    
+      
+        
+          ∑
+          
+            m
+          
+        
+        (
+        −
+        1
+        
+          )
+          
+            j
+            −
+            m
+          
+        
+        
+          
+            (
+            
+              
+                
+                  j
+                
+                
+                  j
+                
+                
+                  J
+                
+              
+              
+                
+                  m
+                
+                
+                  −
+                  m
+                
+                
+                  0
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            2
+            j
+            +
+            1
+          
+        
+        
+        
+          δ
+          
+            J
+            ,
+            0
+          
+        
+        .
+      
+    
+    {\displaystyle \sum _{m}(-1)^{j-m}{\begin{pmatrix}j&j&J\\m&-m&0\end{pmatrix}}={\sqrt {2j+1}}\,\delta _{J,0}.}
+  
+
+From equation (3.7.9) in 
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  j
+                
+                
+                  j
+                
+                
+                  0
+                
+              
+              
+                
+                  m
+                
+                
+                  −
+                  m
+                
+                
+                  0
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            1
+            
+              2
+              j
+              +
+              1
+            
+          
+        
+        (
+        −
+        1
+        
+          )
+          
+            j
+            −
+            m
+          
+        
+        .
+      
+    
+    {\displaystyle {\begin{pmatrix}j&j&0\\m&-m&0\end{pmatrix}}={\frac {1}{\sqrt {2j+1}}}(-1)^{j-m}.}
+  
+
+  
+    
+      
+        
+          
+            1
+            2
+          
+        
+        
+          ∫
+          
+            −
+            1
+          
+          
+            1
+          
+        
+        
+          P
+          
+            
+              l
+              
+                1
+              
+            
+          
+        
+        (
+        x
+        )
+        
+          P
+          
+            
+              l
+              
+                2
+              
+            
+          
+        
+        (
+        x
+        )
+        
+          P
+          
+            l
+          
+        
+        (
+        x
+        )
+        
+        d
+        x
+        =
+        
+          
+            
+              (
+              
+                
+                  
+                    l
+                  
+                  
+                    
+                      l
+                      
+                        1
+                      
+                    
+                  
+                  
+                    
+                      l
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  
+                    0
+                  
+                  
+                    0
+                  
+                  
+                    0
+                  
+                
+              
+              )
+            
+          
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {1}{2}}\int _{-1}^{1}P_{l_{1}}(x)P_{l_{2}}(x)P_{l}(x)\,dx={\begin{pmatrix}l&l_{1}&l_{2}\\0&0&0\end{pmatrix}}^{2},}
+  
+
+where P are Legendre polynomials.
+
+Relation to Racah V-coefficients
+Wigner 3-j symbols are related to Racah V-coefficients by a simple phase:
+
+  
+    
+      
+        V
+        (
+        
+          j
+          
+            1
+          
+        
+        
+        
+          j
+          
+            2
+          
+        
+        
+        
+          j
+          
+            3
+          
+        
+        ;
+        
+          m
+          
+            1
+          
+        
+        
+        
+          m
+          
+            2
+          
+        
+        
+        
+          m
+          
+            3
+          
+        
+        )
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              j
+              
+                1
+              
+            
+            −
+            
+              j
+              
+                2
+              
+            
+            −
+            
+              j
+              
+                3
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle V(j_{1}\,j_{2}\,j_{3};m_{1}\,m_{2}\,m_{3})=(-1)^{j_{1}-j_{2}-j_{3}}{\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}.}
+  
+
+Relation to group theory
+This section essentially recasts the definitional relation
+in the language of group theory.
+A group representation of a group is a homomorphism of the group into
+a group of linear transformations over some vector space. The linear
+transformations can be given by a group of matrices with respect to some basis of the vector space.
+The group of transformations leaving angular momenta invariant is the three dimensional rotation group SO(3). 
+When "spin" angular momenta are included, the group is its double covering group,   SU(2).
+A reducible representation is one where a change of basis can be applied to bring all the matrices into block diagonal form. A representation
+is irreducible (irrep) if no such transformation exists.
+For each value of j, the 2j+1 kets form a basis for an irreducible representation (irrep)     
+of SO(3)/SU(2) over the complex numbers. Given two
+irreps, the tensor direct product  can be reduced to a
+sum of irreps, giving rise to the Clebsch-Gordon coefficients, or by reduction of the triple product 
+of three irreps to the trivial irrep 1 giving rise to the 3j symbols.
+
+3j symbols for other groups
+The 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol has been most intensely studied in the context of the 
+coupling of angular momentum. For this, it is strongly related to the
+group representation theory of the groups SU(2) and SO(3)
+as discussed above. However, many
+other groups are of importance in physics and 
+chemistry,
+and there has been much work on the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol for these other groups.
+In this section, some of that work is considered.
+
+Simply reducible groups
+The original paper by Wigner
+was not restricted to SO(3)/SU(2)
+but instead focussed on simply reducible (SR) groups.
+These are groups in which
+
+all classes are ambivalent i.e. if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a member of a class then so is 
+  
+    
+      
+        
+          X
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle X^{-1}}
+  
+
+the Kronecker product of two irreps is multiplicity free i.e. does not contain any irrep more than once.
+For SR groups, every irrep is equivalent to its complex conjugate,
+and under permutations of the columns the absolute value of the
+symbol is invariant and the phase of each can be chosen so that
+they at most change sign under odd permutations and remain
+unchanged under even permutations.
+
+General compact groups
+Compact groups form a wide class of groups with topological structure.
+They include the finite groups with added discrete topology
+and many of the Lie groups.
+General compact groups will neither be ambivalent nor multiplicity free.
+Derome and Sharp
+and Derome examined the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol
+for the general case using the relation to the Clebsch-Gordon coefficients of
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  
+                    j
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    j
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    m
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    m
+                    
+                      3
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        ≡
+        
+          
+            1
+            
+              [
+              
+                j
+                
+                  3
+                
+              
+              ]
+            
+          
+        
+        ⟨
+        
+          j
+          
+            1
+          
+        
+        
+        
+          m
+          
+            1
+          
+        
+        
+        
+          j
+          
+            2
+          
+        
+        
+        
+          m
+          
+            2
+          
+        
+        
+          |
+        
+        
+          j
+          
+            3
+          
+          
+            ∗
+          
+        
+        
+        
+          m
+          
+            3
+          
+        
+        ⟩
+        .
+      
+    
+    {\displaystyle {\begin{pmatrix}j_{1}&j_{2}&j_{3}\\m_{1}&m_{2}&m_{3}\end{pmatrix}}\equiv {\frac {1}{[j_{3}]}}\langle j_{1}\,m_{1}\,j_{2}\,m_{2}|j_{3}^{*}\,m_{3}\rangle .}
+  
+
+where 
+  
+    
+      
+        [
+        j
+        ]
+      
+    
+    {\displaystyle [j]}
+  
+ is the dimension of the representation space of 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+ and 
+  
+    
+      
+        
+          j
+          
+            3
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle j_{3}^{*}}
+  
+ is the complex conjugate
+representation to 
+  
+    
+      
+        
+          j
+          
+            3
+          
+        
+      
+    
+    {\displaystyle j_{3}}
+  
+.
+By examining permutations of columns of the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol, they showed three cases:
+
+if all of 
+  
+    
+      
+        
+          j
+          
+            1
+          
+        
+        ,
+        
+          j
+          
+            2
+          
+        
+        ,
+        
+          j
+          
+            3
+          
+        
+      
+    
+    {\displaystyle j_{1},j_{2},j_{3}}
+  
+ are inequivalent then the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol may be chosen to be invariant under any permutation of its columns
+if exactly two are equivalent, then transpositions of its columns may be chosen so that some symbols will be invariant while others will change sign.  An approach using a wreath product of the group with 
+  
+    
+      
+        
+          S
+          
+            3
+          
+        
+      
+    
+    {\displaystyle S_{3}}
+  
+ showed that these correspond to the representations 
+  
+    
+      
+        [
+        2
+        ]
+      
+    
+    {\displaystyle [2]}
+  
+ or 
+  
+    
+      
+        [
+        
+          1
+          
+            2
+          
+        
+        ]
+      
+    
+    {\displaystyle [1^{2}]}
+  
+ of the symmetric group 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+      
+    
+    {\displaystyle S_{2}}
+  
+. Cyclic permutations leave the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol invariant.
+if all three are equivalent, the behaviour is dependent on the representations of the symmetric group
+  
+    
+      
+        
+          S
+          
+            3
+          
+        
+      
+    
+    {\displaystyle S_{3}}
+  
+. Wreath group representations corresponding to 
+  
+    
+      
+        [
+        3
+        ]
+      
+    
+    {\displaystyle [3]}
+  
+ are invariant under transpositions of the columns, corresponding to 
+  
+    
+      
+        [
+        
+          1
+          
+            3
+          
+        
+        ]
+      
+    
+    {\displaystyle [1^{3}]}
+  
+ change sign under transpositions, while a pair corresponding to the two dimensional representation 
+  
+    
+      
+        [
+        21
+        ]
+      
+    
+    {\displaystyle [21]}
+  
+ transform according to that.
+Further research into 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbols for compact groups has been performed based on these principles.
+
+SU(n)
+The Special unitary group SU(n) is the Lie group of n × n unitary matrices with determinant 1.
+The group SU(3) is important in particle theory.
+There are many papers dealing with the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ or
+equivalent symbol
+
+The 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol for the group SU(4) has been studied
+
+while there is also work on the general SU(n) groups
+
+Crystallographic point groups
+There are many papers dealing with the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbols or Clebsch-Gordon coefficients for the finite crystallographic point groups
+and the double point groups
+The book by Butler
+
+references these and details the theory along with tables.
+
+Magnetic groups
+Magnetic groups include antilinear operators as well as linear operators. They need to be dealt with using
+Wigner's theory of corepresentations of unitary and antiunitary groups.
+A significant departure from standard representation theory is that the multiplicity of the irreducible corepresentation 
+  
+    
+      
+        
+          j
+          
+            3
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle j_{3}^{*}}
+  
+
+in the direct product of the irreducible corepresentations 
+  
+    
+      
+        
+          j
+          
+            1
+          
+        
+        ⊗
+        
+          j
+          
+            2
+          
+        
+      
+    
+    {\displaystyle j_{1}\otimes j_{2}}
+  
+
+is generally smaller than the multiplicity of the trivial corepresentation in the triple
+product 
+  
+    
+      
+        
+          j
+          
+            1
+          
+        
+        ⊗
+        
+          j
+          
+            2
+          
+        
+        ⊗
+        
+          j
+          
+            3
+          
+        
+      
+    
+    {\displaystyle j_{1}\otimes j_{2}\otimes j_{3}}
+  
+, leading to significant differences between the Clebsch-Gordon
+coefficients and the 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbol.
+The 
+  
+    
+      
+        3
+        j
+      
+    
+    {\displaystyle 3j}
+  
+ symbols have been examined for the grey groups
+
+and for the magnetic point groups

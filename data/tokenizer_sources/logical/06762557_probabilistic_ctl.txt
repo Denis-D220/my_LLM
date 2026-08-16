@@ -1,0 +1,818 @@
+Probabilistic Computation Tree Logic (PCTL) is an extension of computation tree logic (CTL) that allows for probabilistic quantification of described properties. It has been defined in the paper by Hansson and Jonsson.
+PCTL is a useful logic for stating soft deadline properties, e.g. "after a request for a service, there is at least a 98% probability that the service will be carried out within 2 seconds". Akin CTL suitability for model-checking PCTL extension is widely used as a property specification language for probabilistic model checkers.
+
+PCTL syntax
+A possible syntax of PCTL can be defined as follows:
+
+Therein, 
+  
+    
+      
+        a
+        ∈
+        A
+      
+    
+    {\displaystyle a\in A}
+  
+ for some finite set 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ of atomic propositions, 
+  
+    
+      
+        ∼∈
+        {
+        <
+        ,
+        ≤
+        ,
+        ≥
+        ,
+        >
+        }
+      
+    
+    {\displaystyle \sim \in \{<,\leq ,\geq ,>\}}
+  
+ is a comparison operator and 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ is a probability threshold.
+
+Formulas of PCTL are interpreted over discrete Markov chains. An interpretation structure
+is a quadruple 
+  
+    
+      
+        K
+        =
+        ⟨
+        S
+        ,
+        
+          s
+          
+            i
+          
+        
+        ,
+        
+          
+            T
+          
+        
+        ,
+        L
+        ⟩
+      
+    
+    {\displaystyle K=\langle S,s^{i},{\mathcal {T}},L\rangle }
+  
+, where 
+
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is a finite set of states,
+
+  
+    
+      
+        
+          s
+          
+            i
+          
+        
+        ∈
+        S
+      
+    
+    {\displaystyle s^{i}\in S}
+  
+ is an initial state,
+
+  
+    
+      
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {T}}}
+  
+ is a transition probability function, 
+  
+    
+      
+        
+          
+            T
+          
+        
+        :
+        S
+        ×
+        S
+        →
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle {\mathcal {T}}:S\times S\to [0,1]}
+  
+, such that for all 
+  
+    
+      
+        s
+        ∈
+        S
+      
+    
+    {\displaystyle s\in S}
+  
+ we have 
+  
+    
+      
+        
+          ∑
+          
+            
+              s
+              ′
+            
+            ∈
+            S
+          
+        
+        
+          
+            T
+          
+        
+        (
+        s
+        ,
+        
+          s
+          ′
+        
+        )
+        =
+        1
+      
+    
+    {\displaystyle \sum _{s'\in S}{\mathcal {T}}(s,s')=1}
+  
+, and
+
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ is a labeling function, 
+  
+    
+      
+        L
+        :
+        S
+        →
+        
+          2
+          
+            A
+          
+        
+      
+    
+    {\displaystyle L:S\to 2^{A}}
+  
+, assigning atomic propositions to states.
+
+A path 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+ from a state 
+  
+    
+      
+        
+          s
+          
+            0
+          
+        
+      
+    
+    {\displaystyle s_{0}}
+  
+ is an infinite sequence of states 
+
+  
+    
+      
+        
+          s
+          
+            0
+          
+        
+        →
+        
+          s
+          
+            1
+          
+        
+        →
+        ⋯
+        →
+        
+          s
+          
+            n
+          
+        
+        →
+        …
+      
+    
+    {\displaystyle s_{0}\to s_{1}\to \dots \to s_{n}\to \dots }
+  
+. The n-th state of the path is denoted as 
+  
+    
+      
+        σ
+        [
+        n
+        ]
+      
+    
+    {\displaystyle \sigma [n]}
+  
+
+and the prefix of 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+ of length 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is denoted as 
+  
+    
+      
+        σ
+        ↑
+        n
+      
+    
+    {\displaystyle \sigma \uparrow n}
+  
+.
+
+Probability measure
+A probability measure 
+  
+    
+      
+        
+          μ
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \mu _{m}}
+  
+ on the set of paths with a common prefix of length 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is given by the product of transition probabilities along the prefix of the path:
+
+For 
+  
+    
+      
+        n
+        =
+        0
+      
+    
+    {\displaystyle n=0}
+  
+ the probability measure is equal to 
+  
+    
+      
+        
+          μ
+          
+            m
+          
+        
+        (
+        {
+        σ
+        ∈
+        X
+        :
+        σ
+        ↑
+        0
+        =
+        
+          s
+          
+            0
+          
+        
+        }
+        )
+        =
+        1
+      
+    
+    {\displaystyle \mu _{m}(\{\sigma \in X:\sigma \uparrow 0=s_{0}\})=1}
+  
+.
+
+Satisfaction relation
+The satisfaction relation 
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        f
+      
+    
+    {\displaystyle s\models _{K}f}
+  
+ is inductively defined as follows:
+
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        a
+      
+    
+    {\displaystyle s\models _{K}a}
+  
+ if and only if 
+  
+    
+      
+        a
+        ∈
+        L
+        (
+        s
+        )
+      
+    
+    {\displaystyle a\in L(s)}
+  
+,
+
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        ¬
+        f
+      
+    
+    {\displaystyle s\models _{K}\neg f}
+  
+ if and only if not 
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        f
+      
+    
+    {\displaystyle s\models _{K}f}
+  
+,
+
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            1
+          
+        
+        ∨
+        
+          f
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s\models _{K}f_{1}\lor f_{2}}
+  
+ if and only if 
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            1
+          
+        
+      
+    
+    {\displaystyle s\models _{K}f_{1}}
+  
+ or 
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s\models _{K}f_{2}}
+  
+,
+
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            1
+          
+        
+        ∧
+        
+          f
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s\models _{K}f_{1}\land f_{2}}
+  
+ if and only if 
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            1
+          
+        
+      
+    
+    {\displaystyle s\models _{K}f_{1}}
+  
+ and 
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s\models _{K}f_{2}}
+  
+,
+
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          
+            
+              P
+            
+          
+          
+            ∼
+            λ
+          
+        
+        (
+        
+          f
+          
+            1
+          
+        
+        
+          
+            U
+          
+        
+        
+          f
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle s\models _{K}{\mathcal {P}}_{\sim \lambda }(f_{1}{\mathcal {U}}f_{2})}
+  
+ if and only if 
+  
+    
+      
+        
+          μ
+          
+            m
+          
+        
+        (
+        {
+        σ
+        :
+        σ
+        [
+        0
+        ]
+        =
+        s
+        ∧
+        (
+        ∃
+        i
+        )
+        σ
+        [
+        i
+        ]
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            2
+          
+        
+        ∧
+        (
+        ∀
+        0
+        ≤
+        j
+        <
+        i
+        )
+        σ
+        [
+        j
+        ]
+        
+          ⊨
+          
+            K
+          
+        
+        
+          f
+          
+            1
+          
+        
+        }
+        )
+        ∼
+        λ
+      
+    
+    {\displaystyle \mu _{m}(\{\sigma :\sigma [0]=s\land (\exists i)\sigma [i]\models _{K}f_{2}\land (\forall 0\leq j<i)\sigma [j]\models _{K}f_{1}\})\sim \lambda }
+  
+, and
+
+  
+    
+      
+        s
+        
+          ⊨
+          
+            K
+          
+        
+        
+          
+            
+              P
+            
+          
+          
+            ∼
+            λ
+          
+        
+        (
+        ◻
+        f
+        )
+      
+    
+    {\displaystyle s\models _{K}{\mathcal {P}}_{\sim \lambda }(\square f)}
+  
+ if and only if 
+  
+    
+      
+        
+          μ
+          
+            m
+          
+        
+        (
+        {
+        σ
+        :
+        σ
+        [
+        0
+        ]
+        =
+        s
+        ∧
+        (
+        ∀
+        i
+        ≥
+        0
+        )
+        σ
+        [
+        i
+        ]
+        
+          ⊨
+          
+            K
+          
+        
+        f
+        }
+        )
+        ∼
+        λ
+      
+    
+    {\displaystyle \mu _{m}(\{\sigma :\sigma [0]=s\land (\forall i\geq 0)\sigma [i]\models _{K}f\})\sim \lambda }
+  
+.

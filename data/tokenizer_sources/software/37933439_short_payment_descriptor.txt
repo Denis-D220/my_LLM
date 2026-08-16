@@ -1,0 +1,29 @@
+Short Payment Descriptor (SPAYD, SPD) is a compact data format for an easy exchange of payment information using modern electronic channels, such as smart phones or NFC devices. 
+
+Usage
+Practically, the format is being deployed in the Czech Republic (where the format is an accepted unique standard for QR code payments) and the Slovak Republic, but the format can be technically used with any bank using IBAN account numbers. That includes currently the majority of European countries, some in the Middle East and a few others.
+
+History
+Development of the format started in May 2012 during the development of the mobile banking app for Raiffeisenbank a.s. (Czech branch of Raiffeisen Bank International) in cooperation with a technology company Inmite s.r.o. Originally, the format was intended for use for P2P Payments via a QR Code. Later, it was generalized for many other usages, such as NFC payments or online payments.
+The format was created as an open effort from the very beginning and all specification, documentation, source codes, libraries and APIs were open sourced under the Apache 2.0 license. Therefore, Short Payment Descriptor can be implemented by any subject without any legal concerns or fees. Due to this approach, the format was quickly recognized and accepted by many Czech invoice software companies and adopted by Czech banks. Československá obchodní banka (together with Zentity s.r.o.) was very active during the format development and it proposed the brand name for the communication to the users.
+On 14 November 2012, the format was accepted by the Czech Banking Association and submitted to all Czech banks as the official local standard for QR code payments.
+
+Format information
+Short Payment Descriptor uses the ideas from the vCard (by the structure) and SEPA payment (semantics). It is designed to be compact, human readable and therefore, easy to implement. The format is based on defined key-value pairs and it can be extended by proprietary attributes (using the "X-" prefix). The string may contain any ASCII printable characters, any other characters must be encoded using the percent encoding.
+
+Example of SPAYD payload
+SPD*1.0*ACC:CZ5855000000001265098001*AM:480.50*CC:CZK*MSG:Payment for the goods
+
+Default SPAYD keys
+The default keys that are used in the SPAYD format are:
+
+Integration with applications
+The file type extension is:
+*.spayd.
+MIME type of the format is:
+application/x-shortpaymentdescriptor.
+
+Examples of format usage
+QR Codes with payment information (to be printed on invoices or displayed on the web) that can be scanned using either the mobile phone or a special automated teller machine (ATM)
+sending the payment information using the NFC technology
+sharing the payment information via the web or e-mail (via a downloadable file or and e-mail attachment)

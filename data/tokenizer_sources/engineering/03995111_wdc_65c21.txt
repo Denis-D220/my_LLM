@@ -1,0 +1,16 @@
+The W65C21S is a very flexible Peripheral Interface Adapter (PIA) for use with WDC's 65xx and other 8-bit microprocessor families. It is produced by Western Design Center (WDC).
+The W65C21S provides programmed microprocessor control of up to two peripheral devices (Port A and Port B). Peripheral device control is accomplished through two 8-bit bidirectional I/O Ports, with individually designed Data Direction Registers. The Data Direction Registers provide selection of data flow direction (input or output) at each respective I/O Port. Data flow direction may be selected on a line-by-line basis with intermixed input and output lines within the same port. The "handshake" interrupt control feature is provided by four peripheral control lines. This capability provides enhanced control over data transfer functions between the microprocessor and peripheral devices, as well as bidirectional data transfer between W65C21S Peripheral Interface Adapters in multiprocessor systems.
+The PIA interfaces to the 65xx microprocessor family with a reset line, a Φ2 clock line, a read/write line, two interrupt request lines, two register select lines, three chip select lines and an 8-bit bidirectional data bus. The PIA interfaces to the peripheral devices with four interrupt/control lines and two 8-bit bidirectional buses.
+The W65C21S PIA is organized into two independent sections referred to as the A Side and the B Side. Each section consists of Control Register (CRA, CRB), Data Direction Register (DDRA, DDRB), Output Register (ORA, ORB), Interrupt Status Control (ISCA, ISCB) and the buffers necessary to drive the Peripheral Interface buses. Data Bus Buffers (DBB) interface data from the two sections to the data bus, while the Date Input Register (DIR) interfaces data from the DBB to the PIA registers. Chip Select and RWB control circuitry interface to the processor bus control lines.
+
+Features of the W65C21S
+Low power CMOS N-well silicon gate technology
+High speed/Low power replacement for Motorola / Rockwell / AMI / *MOS Technology / MOSTEK / Hitachi / ST Microelectronics / GTE / CMD 6520, 6521, 6820, 6821 PIA's
+Two 8-bit bidirectional I/O ports with individual data direction control.
+Automatic "Handshake" control of data transfers
+Two interrupts (one for each port) with program control
+Static to 14 MHz operation, with high speed Port A, CA2 outputs.
+Industrial temperature range
+40 Pin Plastic Dip and 44 Pin Plastic PLCC versions
+5 volt ± 10% supply requirements
+Compatible with the 65xx and 68xx family of microprocessors

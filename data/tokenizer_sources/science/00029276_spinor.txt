@@ -1,0 +1,4463 @@
+In geometry and physics, spinors (pronounced "spinner"; ) are elements of a complex vector space that can be associated with Euclidean space. Spinors can be thought of as companion geometric objects to Euclidean space that, like Euclidean vectors, respond when the Euclidean space is subjected to a rotation.  A spinor transforms linearly when the Euclidean space is subjected to a slight (infinitesimal) rotation, but unlike geometric vectors and tensors, a spinor transforms to its negative when the space rotates through 360° (see picture). It takes a rotation of 720° for a spinor to go back to its original state. Spinors are therefore often described heuristically as "square roots" of (geometric) vectors, and a geometric vector can be constructed quadratically from a spinor.
+Spinors were introduced in geometry by Élie Cartan in 1913. In the 1920s physicists discovered that spinors are essential to describe the intrinsic angular momentum, or "spin", of the electron and other subatomic particles. Mathematically, spinors are elements of spaces carrying representations of the spin group or of the associated Clifford algebra. After choosing a matrix realization of the Clifford algebra, spinors may be represented concretely as column vectors on which the corresponding gamma matrices act.
+
+Introduction
+
+What characterizes spinors and distinguishes them from geometric vectors and other tensors is a subtle difference in how they respond to rotations: briefly, spinors respond to rotations in a path-dependent way, while vectors respond without seeing the path through which a rotation was achieved. Consider applying a rotation to the coordinates of a system. No object in the system itself has moved, only the coordinates have, so there will always be a compensating change in those coordinate values when applied to any object of the system. Geometrical vectors, for example, have components that will undergo the same rotation as the coordinates. More broadly, any tensor associated with the system (for instance, the stress of some medium) also has coordinate descriptions that adjust to compensate for changes to the coordinate system itself.
+Spinors do not appear at this level of the description of a physical system, when one is concerned only with the properties of a single isolated rotation of the coordinates. Rather, spinors appear when we imagine that instead of a single rotation, the coordinate system is gradually (continuously) rotated between some initial and final configuration. For any of the familiar and intuitive ("tensorial") quantities associated with the system, the transformation law does not depend on the precise details of how the coordinates arrived at their final configuration. Spinors, on the other hand, are constructed in such a way that makes them sensitive to how the gradual rotation of the coordinates arrived there: They exhibit path-dependence. It turns out that, for any final configuration of the coordinates, there are actually two ("topologically") inequivalent gradual (continuous) rotations of the coordinate system that result in this same configuration. This ambiguity is called the homotopy class of the gradual rotation. The belt trick (shown, in which both ends of the rotated object are physically tethered to an external reference) demonstrates two different rotations, one through an angle of 2π and the other through an angle of 4π, having the same final configurations but different classes. Spinors actually exhibit a sign-reversal that genuinely depends on this homotopy class. This distinguishes them from vectors and other tensors, none of which can feel the class.
+To see how this might work in practice, we consider the set 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+ of 
+  
+    
+      
+        2
+        ×
+        2
+      
+    
+    {\displaystyle 2\times 2}
+  
+ Hermitian matrices, with complex entries, whose traces are zero. Any such matrix can be written as
+
+  
+    
+      
+        X
+        =
+        
+          
+            [
+            
+              
+                
+                  x
+                
+                
+                  z
+                
+              
+              
+                
+                  
+                    
+                      
+                        z
+                        ¯
+                      
+                    
+                  
+                
+                
+                  −
+                  x
+                
+              
+            
+            ]
+          
+        
+        ,
+      
+    
+    {\displaystyle X={\begin{bmatrix}x&z\\{\bar {z}}&-x\end{bmatrix}},}
+  
+
+where 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ is real, 
+  
+    
+      
+        z
+        =
+        u
+        +
+        i
+        v
+      
+    
+    {\displaystyle z=u+iv}
+  
+ is complex, and 
+  
+    
+      
+        
+          
+            
+              z
+              ¯
+            
+          
+        
+        =
+        u
+        −
+        i
+        v
+      
+    
+    {\displaystyle {\bar {z}}=u-iv}
+  
+ is the complex conjugate of 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+. Then 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+ is a three-dimensional vector space over the real field. The negative determinant of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is 
+  
+    
+      
+        −
+        det
+        X
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          |
+        
+        z
+        
+          
+            |
+          
+          
+            2
+          
+        
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          u
+          
+            2
+          
+        
+        +
+        
+          v
+          
+            2
+          
+        
+      
+    
+    {\displaystyle -\det X=x^{2}+|z|^{2}=x^{2}+u^{2}+v^{2}}
+  
+, which is the sum of the squares of the three real coordinates 
+  
+    
+      
+        (
+        x
+        ,
+        u
+        ,
+        v
+        )
+      
+    
+    {\displaystyle (x,u,v)}
+  
+. Thus, 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+, equipped with this form, is a real Euclidean three-space (like 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{3}}
+  
+ equipped with its dot product). To describe rotations of this Euclidean space, consider all 
+  
+    
+      
+        2
+        ×
+        2
+      
+    
+    {\displaystyle 2\times 2}
+  
+ complex matrices
+
+  
+    
+      
+        U
+        =
+        
+          
+            [
+            
+              
+                
+                  α
+                
+                
+                  β
+                
+              
+              
+                
+                  −
+                  
+                    
+                      
+                        β
+                        ¯
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        α
+                        ¯
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle U={\begin{bmatrix}\alpha &\beta \\-{\bar {\beta }}&{\bar {\alpha }}\end{bmatrix}}}
+  
+
+satisfying 
+  
+    
+      
+        det
+        U
+        =
+        
+          |
+        
+        α
+        
+          
+            |
+          
+          
+            2
+          
+        
+        +
+        
+          |
+        
+        β
+        
+          
+            |
+          
+          
+            2
+          
+        
+        =
+        1.
+      
+    
+    {\displaystyle \det U=|\alpha |^{2}+|\beta |^{2}=1.}
+  
+ One has that 
+  
+    
+      
+        
+          U
+          
+            ∗
+          
+        
+        U
+        =
+        U
+        
+          U
+          
+            ∗
+          
+        
+        =
+        
+          I
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle U^{*}U=UU^{*}=I_{2},}
+  
+ the 
+  
+    
+      
+        2
+        ×
+        2
+      
+    
+    {\displaystyle 2\times 2}
+  
+ identity matrix, where the star denotes the Hermitian conjugate:
+
+  
+    
+      
+        
+          U
+          
+            ∗
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    
+                      
+                        α
+                        ¯
+                      
+                    
+                  
+                
+                
+                  −
+                  β
+                
+              
+              
+                
+                  
+                    
+                      
+                        β
+                        ¯
+                      
+                    
+                  
+                
+                
+                  α
+                
+              
+            
+            ]
+          
+        
+        .
+      
+    
+    {\displaystyle U^{*}={\begin{bmatrix}{\bar {\alpha }}&-\beta \\{\bar {\beta }}&\alpha \end{bmatrix}}.}
+  
+
+The set of such matrices is the special unitary group 
+  
+    
+      
+        SU
+        ⁡
+        (
+        2
+        )
+        .
+      
+    
+    {\displaystyle \operatorname {SU} (2).}
+  
+ Since 
+  
+    
+      
+        
+          U
+          
+            ∗
+          
+        
+        =
+        
+          U
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle U^{*}=U^{-1}}
+  
+, the operation 
+  
+    
+      
+        
+          R
+          
+            U
+          
+        
+        ,
+      
+    
+    {\displaystyle R_{U},}
+  
+ given by 
+  
+    
+      
+        
+          R
+          
+            U
+          
+        
+        (
+        X
+        )
+        =
+        U
+        X
+        
+          U
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle R_{U}(X)=UXU^{*}}
+  
+ for all 
+  
+    
+      
+        X
+        ∈
+        
+          H
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle X\in H_{2},}
+  
+ preserves the determinant.  That is, 
+  
+    
+      
+        
+          R
+          
+            U
+          
+        
+      
+    
+    {\displaystyle R_{U}}
+  
+ is a rotation of the Euclidean space 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle H_{2}.}
+  
+ Thus, rotations of 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+ can be described by special unitary matrices 
+  
+    
+      
+        U
+        .
+      
+    
+    {\displaystyle U.}
+  
+ But, for each 
+  
+    
+      
+        U
+        ∈
+        SU
+        ⁡
+        (
+        2
+        )
+        ,
+      
+    
+    {\displaystyle U\in \operatorname {SU} (2),}
+  
+ the pair of unitary maps 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        −
+        U
+      
+    
+    {\displaystyle -U}
+  
+ induce the same rotation on 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+: 
+  
+    
+      
+        
+          R
+          
+            U
+          
+        
+        (
+        X
+        )
+        =
+        U
+        X
+        
+          U
+          
+            ∗
+          
+        
+        =
+        (
+        −
+        U
+        )
+        X
+        (
+        −
+        U
+        
+          )
+          
+            ∗
+          
+        
+        =
+        
+          R
+          
+            −
+            U
+          
+        
+        (
+        X
+        )
+        .
+      
+    
+    {\displaystyle R_{U}(X)=UXU^{*}=(-U)X(-U)^{*}=R_{-U}(X).}
+  
+ So 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ does not feel the difference between the distinct unitary matrices 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        −
+        U
+        .
+      
+    
+    {\displaystyle -U.}
+  
+
+In this example, the spinors are by definition the complex column vectors on which the special unitary matrices 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ act. These do feel the difference between the matrices 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        −
+        U
+      
+    
+    {\displaystyle -U}
+  
+.  In particular, if we take a path 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ in 
+  
+    
+      
+        SU
+        ⁡
+        (
+        2
+        )
+      
+    
+    {\displaystyle \operatorname {SU} (2)}
+  
+ from the identity 
+  
+    
+      
+        
+          I
+          
+            2
+          
+        
+      
+    
+    {\displaystyle I_{2}}
+  
+ to its negative 
+  
+    
+      
+        −
+        
+          I
+          
+            2
+          
+        
+      
+    
+    {\displaystyle -I_{2}}
+  
+ (such as 
+  
+    
+      
+        γ
+        (
+        t
+        )
+        =
+        
+          
+            [
+            
+              
+                
+                  cos
+                  ⁡
+                  (
+                  t
+                  
+                    /
+                  
+                  2
+                  )
+                
+                
+                  sin
+                  ⁡
+                  (
+                  t
+                  
+                    /
+                  
+                  2
+                  )
+                
+              
+              
+                
+                  −
+                  sin
+                  ⁡
+                  (
+                  t
+                  
+                    /
+                  
+                  2
+                  )
+                
+                
+                  cos
+                  ⁡
+                  (
+                  t
+                  
+                    /
+                  
+                  2
+                  )
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle \gamma (t)={\begin{bmatrix}\cos(t/2)&\sin(t/2)\\-\sin(t/2)&\cos(t/2)\end{bmatrix}}}
+  
+ for all 
+  
+    
+      
+        t
+        ∈
+        [
+        0
+        ,
+        2
+        π
+        ]
+      
+    
+    {\displaystyle t\in [0,2\pi ]}
+  
+, which induces a rotation through the angle 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ on 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+), the associated rotations 
+  
+    
+      
+        
+          R
+          
+            γ
+            (
+            t
+            )
+          
+        
+      
+    
+    {\displaystyle R_{\gamma (t)}}
+  
+ start and end at the identity, and the space 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+ feels no change, whereas a column vector will be transformed to its negative.
+The association of the rotation 
+  
+    
+      
+        
+          R
+          
+            U
+          
+        
+      
+    
+    {\displaystyle R_{U}}
+  
+ to each 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is two-to-one, and the kernel is the group 
+  
+    
+      
+        {
+        ±
+        
+          I
+          
+            2
+          
+        
+        }
+      
+    
+    {\displaystyle \{\pm I_{2}\}}
+  
+. This exhibits the double cover of the rotation group, and 
+  
+    
+      
+        SU
+        ⁡
+        (
+        2
+        )
+      
+    
+    {\displaystyle \operatorname {SU} (2)}
+  
+ as its spin group. In this setting, the Euclidean space (of "physical vectors") is the real vector space 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+, while the space of spinors is the complex two-dimensional vector space of column vectors on which 
+  
+    
+      
+        SU
+        ⁡
+        (
+        2
+        )
+      
+    
+    {\displaystyle \operatorname {SU} (2)}
+  
+ acts.  Given a single spinor 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+, a real vector in 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{2}}
+  
+ can be formed as 
+  
+    
+      
+        v
+        
+          v
+          
+            ∗
+          
+        
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          v
+          
+            ∗
+          
+        
+        v
+        
+          I
+          
+            2
+          
+        
+      
+    
+    {\displaystyle vv^{*}-{\frac {1}{2}}v^{*}vI_{2}}
+  
+. Thus "vectors" are quadratic in the spinors.
+Thus, in the case of three-dimensional rotations, spinors can be defined as follows: A spinor is a complex 2-component column vector 
+  
+    
+      
+        v
+        ∈
+        
+          
+            C
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle v\in \mathbb {C} ^{2}}
+  
+ transforming under the natural action of 
+  
+    
+      
+        SU
+        ⁡
+        (
+        2
+        )
+      
+    
+    {\displaystyle \operatorname {SU} (2)}
+  
+. The associated geometric vectors are the traceless Hermitian 
+  
+    
+      
+        2
+        ×
+        2
+      
+    
+    {\displaystyle 2\times 2}
+  
+ matrices, transforming by conjugation 
+  
+    
+      
+        X
+        ↦
+        U
+        X
+        
+          U
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle X\mapsto UXU^{*}}
+  
+. Thus the spinors are the column vectors themselves, while the ordinary vectors are the objects derived from them that transform under the corresponding rotation action.
+Exhibiting spinors as concrete objects in higher dimensions, as in this three-dimensional example, generally requires constructions that depend on the dimension and on the signature of the quadratic form (for example, in Minkowski space). In general, spinors are described using the Clifford algebra or, equivalently, as representations of the spin group. After choosing a matrix realization of the Clifford algebra, the spinors may be represented concretely as column vectors on which the corresponding gamma matrices act.
+
+Mathematical definition
+
+A space of spinors is formally defined as an irreducible module of the Clifford algebra. Over the real or complex numbers, the Clifford algebra is a semisimple algebra, and therefore decomposes as a direct sum of full matrix algebras over a division ring, by the Artin–Wedderburn theorem. Spinor spaces are the irreducible spaces on which these components act. Thus a spinor is a "column vector" on which one of these matrix algebras acts. The space of spinors may also be defined as a spin representation of the orthogonal Lie algebra. These spin representations are also characterized as the finite-dimensional projective representations of the special orthogonal group that do not factor through linear representations. Equivalently, a spinor is an element of a finite-dimensional group representation of the spin group on which the center acts non-trivially.
+
+Overview
+There are essentially two frameworks for viewing the notion of a spinor: the representation theoretic point of view and the geometric point of view.
+
+Representation theoretic point of view
+From a representation theoretic point of view, one knows beforehand that there are some representations of the Lie algebra of the orthogonal group that cannot be formed by the usual tensor constructions. These missing representations are then labeled the spin representations, and their constituents spinors. From this view, a spinor must belong to a representation of the double cover of the rotation group 
+  
+    
+      
+        SO
+        ⁡
+        (
+        n
+        ,
+        
+          R
+        
+        )
+      
+    
+    {\displaystyle \operatorname {SO} (n,\mathbb {R} )}
+  
+, or more generally of a double cover of the generalized special orthogonal group 
+  
+    
+      
+        
+          SO
+          
+            +
+          
+        
+        ⁡
+        (
+        p
+        ,
+        q
+        ,
+        
+          R
+        
+        )
+      
+    
+    {\displaystyle \operatorname {SO} ^{+}(p,q,\mathbb {R} )}
+  
+ on spaces with a metric signature of (p, q). These double covers are Lie groups, called the spin groups Spin(n) or Spin(p, q). All the properties of spinors, and their applications and derived objects, are manifested first in the spin group. Representations of the double covers of these groups yield double-valued projective representations of the groups themselves. (This means that the action of a particular rotation on vectors in the quantum Hilbert space is only defined up to a sign.)
+In summary, given a representation specified by the data 
+  
+    
+      
+        (
+        V
+        ,
+        
+          Spin
+        
+        (
+        p
+        ,
+        q
+        )
+        ,
+        ρ
+        )
+      
+    
+    {\displaystyle (V,{\text{Spin}}(p,q),\rho )}
+  
+ where 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ is a vector space over 
+  
+    
+      
+        K
+        =
+        
+          R
+        
+      
+    
+    {\displaystyle K=\mathbb {R} }
+  
+ or 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+ and 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is a homomorphism 
+  
+    
+      
+        ρ
+        :
+        
+          Spin
+        
+        (
+        p
+        ,
+        q
+        )
+        →
+        
+          GL
+        
+        (
+        V
+        )
+      
+    
+    {\displaystyle \rho :{\text{Spin}}(p,q)\rightarrow {\text{GL}}(V)}
+  
+, a spinor is an element of the vector space 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+.
+
+Geometric point of view
+From a geometrical point of view, one can explicitly construct the spinors and then examine how they behave under the action of the relevant Lie groups. This latter approach has the advantage of providing a concrete and elementary description of what a spinor is. However, such a description becomes unwieldy when complicated properties of the spinors, such as Fierz identities, are needed.
+
+Clifford algebras
+
+The language of Clifford algebras (sometimes called geometric algebras) provides a complete picture of the spin representations of all the spin groups, and the various relationships between those representations, via the classification of Clifford algebras. It largely removes the need for ad hoc constructions.
+In detail, let V be a finite-dimensional complex vector space with nondegenerate symmetric bilinear form g. The Clifford algebra Cℓ(V, g) is the algebra generated by V subject to the anticommutation relation xy + yx = 2g(x, y). It is an abstract version of the algebra generated by the gamma or Pauli matrices. If V = ℂn with the standard form g(x, y) = xTy = x1y1 + ... + xnyn, one writes Cℓn(ℂ) for this Clifford algebra; since every nondegenerate symmetric bilinear form on a complex vector space is equivalent to the standard one, this notation is often used whenever dimℂ(V) = n. If n = 2k is even, then Cℓn(ℂ) is isomorphic, noncanonically, to Mat(2k, ℂ), so it has a unique irreducible module Δ of dimension 2k. If n = 2k + 1 is odd, then Cℓn(ℂ) is isomorphic to Mat(2k, ℂ) ⊕ Mat(2k, ℂ), and therefore has two inequivalent irreducible modules, each of dimension 2k. The Lie algebra so(V, g) embeds in the even part of the Clifford algebra, equipped with the commutator bracket, and hence acts on these modules. When n is odd, the two irreducible Clifford modules restrict to isomorphic irreducible representations of so(V, g); this representation is called the spin representation and is often denoted Δ. When n is even, the unique irreducible Clifford module Δ remains irreducible for the full Clifford algebra, but on restriction to the even Clifford algebra, or equivalently to the spin group, it splits as
+
+  
+    
+      
+        Δ
+        =
+        
+          Δ
+          
+            +
+          
+        
+        ⊕
+        
+          Δ
+          
+            −
+          
+        
+        ,
+      
+    
+    {\displaystyle \Delta =\Delta _{+}\oplus \Delta _{-},}
+  
+
+where Δ+ and Δ− are the Weyl, or half-spin, representations.
+Irreducible representations over the reals in the case when V is a real vector space are much more intricate, and the reader is referred to the Clifford algebra article for more details.
+
+Spin groups
+
+Spinors form a vector space, usually over the complex numbers, equipped with a linear group representation of the spin group that does not factor through a representation of the group of rotations (see diagram). The spin group is the group of rotations keeping track of the homotopy class. Spinors are needed to encode basic information about the topology of the group of rotations because that group is not simply connected, but the simply connected spin group is its double cover. So for every rotation there are two elements of the spin group that represent it. Geometric vectors and other tensors cannot feel the difference between these two elements, but they produce opposite signs when they affect any spinor under the representation. Thinking of the elements of the spin group as homotopy classes of one-parameter families of rotations, each rotation is represented by two distinct homotopy classes of paths to the identity. If a one-parameter family of rotations is visualized as a ribbon in space, with the arc length parameter of that ribbon being the parameter (its tangent, normal, binormal frame actually gives the rotation), then these two distinct homotopy classes are visualized in the two states of the belt trick puzzle (above). The space of spinors is an auxiliary vector space that can be constructed explicitly in coordinates, but ultimately only exists up to isomorphism in that there is no "natural" construction of them that does not rely on arbitrary choices such as coordinate systems. A notion of spinors can be associated, as such an auxiliary mathematical object, with any vector space equipped with a quadratic form such as Euclidean space with its standard dot product, or Minkowski space with its Lorentz metric. In the latter case, the "rotations" include the Lorentz boosts, but otherwise the theory is substantially similar.
+
+Spinor fields in physics
+In physics, a spinor field is a field whose values lie in a spinor representation. On Minkowski space, or more generally on a spacetime manifold that admits a spin structure, one forms a spinor bundle associated to the principal spin bundle and a chosen spin representation; spinor fields are sections of this bundle. In flat spacetime this bundle may be trivialized, so spinor fields are often written simply as spinor-valued functions on spacetime.
+The most common spinor fields in relativistic physics are Dirac, Weyl, and Majorana spinor fields. A Dirac spinor is a section of the full complex spinor bundle. In even dimensions, when the spin representation splits into chiral halves, sections of the two summands are called Weyl spinors. A Majorana spinor is a spinor satisfying a reality condition, when the relevant spin representation admits one.
+Spinor fields enter physics through equations such as the Dirac equation and the Weyl equation, which are first-order differential equations on the spinor bundle. These equations describe relativistic fields of spin 1⁄2 and play a central role in quantum field theory and differential geometry. For further details, see Dirac spinor, Weyl spinor, Majorana spinor, and spinor bundle.
+
+Spinors in representation theory
+
+One major mathematical application of the construction of spinors is to make possible the explicit construction of linear representations of the Lie algebras of the special orthogonal groups, and consequently spinor representations of the groups themselves. At a more profound level, spinors have been found to be at the heart of approaches to the Atiyah–Singer index theorem, and to provide constructions in particular for discrete series representations of semisimple groups.
+The spin representations of the special orthogonal Lie algebras are distinguished from the tensor representations given by Weyl's construction by the weights. Whereas the weights of the tensor representations are integer linear combinations of the roots of the Lie algebra, those of the spin representations are half-integer linear combinations thereof. Explicit details can be found in the spin representation article.
+
+Attempts at intuitive understanding
+The spinor can be described, in simple terms, as "vectors of a space the transformations of which are related in a particular way to rotations in physical space". Stated differently:
+
+Several ways of illustrating everyday analogies have been formulated in terms of the plate trick, tangloids and other examples of orientation entanglement.
+Nonetheless, the concept is generally considered notoriously difficult to understand, as illustrated by Michael Atiyah's statement that is recounted by Dirac's biographer Graham Farmelo:
+
+No one fully understands spinors. Their algebra is formally understood but their general significance is mysterious. In some sense they describe the "square root" of geometry and, just as understanding the square root of −1 took centuries, the same might be true of spinors.
+
+History
+The most general mathematical form of spinors was discovered by Élie Cartan in 1913. The word "spinor" was coined by Paul Ehrenfest in his work on quantum physics.
+Spinors were first applied to mathematical physics by Wolfgang Pauli in 1927, when he introduced his spin matrices. The following year, Paul Dirac discovered the fully relativistic theory of electron spin by showing the connection between spinors and the Lorentz group. By the 1930s, Dirac, Piet Hein and others at the Niels Bohr Institute (then known as the Institute for Theoretical Physics of the University of Copenhagen) created toys such as Tangloids to teach and model the calculus of spinors.
+Spinor spaces were represented as left ideals of a matrix algebra in 1930, by Gustave Juvett and by Fritz Sauter. More specifically, instead of representing spinors as complex-valued 2D column vectors as Pauli had done, they represented them as complex-valued 2 × 2 matrices in which only the elements of the left column are non-zero. In this manner the spinor space became a minimal left ideal in Mat(2, ℂ).
+In 1947 Marcel Riesz constructed spinor spaces as elements of a minimal left ideal of Clifford algebras. In 1966/1967, David Hestenes replaced spinor spaces by the even subalgebra Cℓ01,3(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+) of the spacetime algebra Cℓ1,3(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+). As of the 1980s, the theoretical physics group at Birkbeck College around David Bohm and Basil Hiley has been developing algebraic approaches to quantum theory that build on Sauter and Riesz' identification of spinors with minimal left ideals.
+
+Examples
+Some simple examples of spinors in low dimensions arise from considering the even-graded subalgebras of the Clifford algebra Cℓp, q(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+). This is an algebra built up from an orthonormal basis of n = p + q mutually orthogonal vectors under addition and multiplication, p of which have norm +1 and q of which have norm −1, with the product rule for the basis vectors
+
+  
+    
+      
+        
+          e
+          
+            i
+          
+        
+        
+          e
+          
+            j
+          
+        
+        =
+        
+          
+            {
+            
+              
+                
+                  +
+                  1
+                
+                
+                  i
+                  =
+                  j
+                  ,
+                  
+                  i
+                  ∈
+                  (
+                  1
+                  ,
+                  …
+                  ,
+                  p
+                  )
+                
+              
+              
+                
+                  −
+                  1
+                
+                
+                  i
+                  =
+                  j
+                  ,
+                  
+                  i
+                  ∈
+                  (
+                  p
+                  +
+                  1
+                  ,
+                  …
+                  ,
+                  n
+                  )
+                
+              
+              
+                
+                  −
+                  
+                    e
+                    
+                      j
+                    
+                  
+                  
+                    e
+                    
+                      i
+                    
+                  
+                
+                
+                  i
+                  ≠
+                  j
+                  .
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle e_{i}e_{j}={\begin{cases}+1&i=j,\,i\in (1,\ldots ,p)\\-1&i=j,\,i\in (p+1,\ldots ,n)\\-e_{j}e_{i}&i\neq j.\end{cases}}}
+  
+
+Two dimensions
+The Clifford algebra Cℓ2,0(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+) is built up from a basis of one unit scalar, 1, two orthogonal unit vectors, σ1 and σ2, and one unit pseudoscalar i = σ1σ2. From the definitions above, it is evident that (σ1)2 = (σ2)2 = 1, and (σ1σ2)(σ1σ2) = −σ1σ1σ2σ2 = −1.
+The even subalgebra Cℓ02,0(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+), spanned by even-graded basis elements of Cℓ2,0(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+), determines the space of spinors via its representations. It is made up of real linear combinations of 1 and σ1σ2. As a real algebra, Cℓ02,0(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+) is isomorphic to the field of complex numbers 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+. As a result, it admits a conjugation operation (analogous to complex conjugation), sometimes called the reverse of a Clifford element, defined by
+
+  
+    
+      
+        (
+        a
+        +
+        b
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        
+          )
+          
+            ∗
+          
+        
+        =
+        a
+        +
+        b
+        
+          σ
+          
+            2
+          
+        
+        
+          σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle (a+b\sigma _{1}\sigma _{2})^{*}=a+b\sigma _{2}\sigma _{1}}
+  
+
+which, by the Clifford relations, can be written
+
+  
+    
+      
+        (
+        a
+        +
+        b
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        
+          )
+          
+            ∗
+          
+        
+        =
+        a
+        +
+        b
+        
+          σ
+          
+            2
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        =
+        a
+        −
+        b
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle (a+b\sigma _{1}\sigma _{2})^{*}=a+b\sigma _{2}\sigma _{1}=a-b\sigma _{1}\sigma _{2}.}
+  
+
+The action of an even Clifford element γ ∈ Cℓ02,0(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+) on vectors, regarded as 1-graded elements of Cℓ2,0(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+), is determined by mapping a general vector u = a1σ1 + a2σ2 to the vector
+
+  
+    
+      
+        γ
+        (
+        u
+        )
+        =
+        γ
+        u
+        
+          γ
+          
+            ∗
+          
+        
+        ,
+      
+    
+    {\displaystyle \gamma (u)=\gamma u\gamma ^{*},}
+  
+
+where 
+  
+    
+      
+        
+          γ
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \gamma ^{*}}
+  
+ is the conjugate of 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+, and the product is Clifford multiplication. In this situation, a spinor is an ordinary complex number. The action of 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ on a spinor 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ is given by ordinary complex multiplication:
+
+  
+    
+      
+        γ
+        (
+        ϕ
+        )
+        =
+        γ
+        ϕ
+        .
+      
+    
+    {\displaystyle \gamma (\phi )=\gamma \phi .}
+  
+
+An important feature of this definition is the distinction between ordinary vectors and spinors, manifested in how the even-graded elements act on each of them in different ways. In general, a quick check of the Clifford relations reveals that even-graded elements conjugate-commute with ordinary vectors:
+
+  
+    
+      
+        γ
+        (
+        u
+        )
+        =
+        γ
+        u
+        
+          γ
+          
+            ∗
+          
+        
+        =
+        
+          γ
+          
+            2
+          
+        
+        u
+        .
+      
+    
+    {\displaystyle \gamma (u)=\gamma u\gamma ^{*}=\gamma ^{2}u.}
+  
+
+On the other hand, in comparison with its action on spinors 
+  
+    
+      
+        γ
+        (
+        ϕ
+        )
+        =
+        γ
+        ϕ
+      
+    
+    {\displaystyle \gamma (\phi )=\gamma \phi }
+  
+, the action of 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ on ordinary vectors appears as the square of its action on spinors.
+Consider, for example, the implication this has for plane rotations. Rotating a vector through an angle of θ corresponds to γ2 = exp(θ σ1σ2), so that the corresponding action on spinors is via γ = ± exp(θ σ1σ2/2). In general, because of logarithmic branching, it is impossible to choose a sign in a consistent way. Thus the representation of plane rotations on spinors is two-valued.
+In applications of spinors in two dimensions, it is common to exploit the fact that the algebra of even-graded elements (that is just the ring of complex numbers) is identical to the space of spinors. So, by abuse of language, the two are often conflated. One may then talk about "the action of a spinor on a vector". In a general setting, such statements are meaningless. But in dimensions 2 and 3 (as applied, for example, to computer graphics) they make sense.
+
+Examples
+The even-graded element 
+  
+    
+      
+        γ
+        =
+        
+          
+            
+              1
+              
+                2
+              
+            
+          
+        
+        (
+        1
+        −
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle \gamma ={\tfrac {1}{\sqrt {2}}}(1-\sigma _{1}\sigma _{2})}
+  
+ corresponds to a vector rotation of 90° from σ1 around towards σ2, which can be checked by confirming that 
+  
+    
+      
+        
+          
+            
+              1
+              2
+            
+          
+        
+        (
+        1
+        −
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        )
+        {
+        
+          a
+          
+            1
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        }
+        (
+        1
+        −
+        
+          σ
+          
+            2
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        )
+        =
+        
+          a
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        −
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle {\tfrac {1}{2}}(1-\sigma _{1}\sigma _{2})\{a_{1}\sigma _{1}+a_{2}\sigma _{2}\}(1-\sigma _{2}\sigma _{1})=a_{1}\sigma _{2}-a_{2}\sigma _{1}}
+  
+ It corresponds to a spinor rotation of only 45°, however: 
+  
+    
+      
+        
+          
+            
+              1
+              
+                2
+              
+            
+          
+        
+        (
+        1
+        −
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        )
+        {
+        
+          a
+          
+            1
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        }
+        =
+        
+          
+            
+              
+                a
+                
+                  1
+                
+              
+              +
+              
+                a
+                
+                  2
+                
+              
+            
+            
+              2
+            
+          
+        
+        +
+        
+          
+            
+              −
+              
+                a
+                
+                  1
+                
+              
+              +
+              
+                a
+                
+                  2
+                
+              
+            
+            
+              2
+            
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {\tfrac {1}{\sqrt {2}}}(1-\sigma _{1}\sigma _{2})\{a_{1}+a_{2}\sigma _{1}\sigma _{2}\}={\frac {a_{1}+a_{2}}{\sqrt {2}}}+{\frac {-a_{1}+a_{2}}{\sqrt {2}}}\sigma _{1}\sigma _{2}}
+  
+
+Similarly the even-graded element γ = −σ1σ2 corresponds to a vector rotation of 180°: 
+  
+    
+      
+        (
+        −
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        )
+        {
+        
+          a
+          
+            1
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        }
+        (
+        −
+        
+          σ
+          
+            2
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        )
+        =
+        −
+        
+          a
+          
+            1
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        −
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle (-\sigma _{1}\sigma _{2})\{a_{1}\sigma _{1}+a_{2}\sigma _{2}\}(-\sigma _{2}\sigma _{1})=-a_{1}\sigma _{1}-a_{2}\sigma _{2}}
+  
+ but a spinor rotation of only 90°:
+  
+    
+      
+        (
+        −
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        )
+        {
+        
+          a
+          
+            1
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        }
+        =
+        
+          a
+          
+            2
+          
+        
+        −
+        
+          a
+          
+            1
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        
+          σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle (-\sigma _{1}\sigma _{2})\{a_{1}+a_{2}\sigma _{1}\sigma _{2}\}=a_{2}-a_{1}\sigma _{1}\sigma _{2}}
+  
+
+Continuing on further, the even-graded element γ = −1 corresponds to a vector rotation of 360°: 
+  
+    
+      
+        (
+        −
+        1
+        )
+        {
+        
+          a
+          
+            1
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            2
+          
+        
+        }
+        
+        (
+        −
+        1
+        )
+        =
+        
+          a
+          
+            1
+          
+        
+        
+          σ
+          
+            1
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle (-1)\{a_{1}\sigma _{1}+a_{2}\sigma _{2}\}\,(-1)=a_{1}\sigma _{1}+a_{2}\sigma _{2}}
+  
+ but a spinor rotation of 180°.
+
+Three dimensions
+
+The Clifford algebra Cℓ3,0(
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+) is built up from a basis of one unit scalar, 1, three orthogonal unit vectors, σ1, σ2 and σ3, the three unit bivectors σ1σ2, σ2σ3, σ3σ1 and the pseudoscalar i = σ1σ2σ3. It is straightforward to show that (σ1)2 = (σ2)2 = (σ3)2 = 1, and (σ1σ2)2 = (σ2σ3)2 = (σ3σ1)2 = (σ1σ2σ3)2 = −1.
+The sub-algebra of even-graded elements is made up of scalar dilations,
+
+  
+    
+      
+        
+          u
+          ′
+        
+        =
+        
+          ρ
+          
+            
+              (
+              
+                
+                  1
+                  2
+                
+              
+              )
+            
+          
+        
+        u
+        
+          ρ
+          
+            
+              (
+              
+                
+                  1
+                  2
+                
+              
+              )
+            
+          
+        
+        =
+        ρ
+        u
+        ,
+      
+    
+    {\displaystyle u'=\rho ^{\left({\frac {1}{2}}\right)}u\rho ^{\left({\frac {1}{2}}\right)}=\rho u,}
+  
+
+and vector rotations
+
+  
+    
+      
+        
+          u
+          ′
+        
+        =
+        γ
+        u
+        
+          γ
+          
+            ∗
+          
+        
+        ,
+      
+    
+    {\displaystyle u'=\gamma u\gamma ^{*},}
+  
+
+where
+
+corresponds to a vector rotation through an angle θ about an axis defined by a unit vector v = a1σ1 + a2σ2 + a3σ3.
+As a special case, it is easy to see that, if v = σ3, this reproduces the σ1σ2 rotation considered in the previous section; and that such rotation leaves the coefficients of vectors in the σ3 direction invariant, since
+
+  
+    
+      
+        
+          [
+          
+            cos
+            ⁡
+            
+              (
+              
+                
+                  θ
+                  2
+                
+              
+              )
+            
+            −
+            i
+            
+              σ
+              
+                3
+              
+            
+            sin
+            ⁡
+            
+              (
+              
+                
+                  θ
+                  2
+                
+              
+              )
+            
+          
+          ]
+        
+        
+          σ
+          
+            3
+          
+        
+        
+          [
+          
+            cos
+            ⁡
+            
+              (
+              
+                
+                  θ
+                  2
+                
+              
+              )
+            
+            +
+            i
+            
+              σ
+              
+                3
+              
+            
+            sin
+            ⁡
+            
+              (
+              
+                
+                  θ
+                  2
+                
+              
+              )
+            
+          
+          ]
+        
+        =
+        
+          [
+          
+            
+              cos
+              
+                2
+              
+            
+            ⁡
+            
+              (
+              
+                
+                  θ
+                  2
+                
+              
+              )
+            
+            +
+            
+              sin
+              
+                2
+              
+            
+            ⁡
+            
+              (
+              
+                
+                  θ
+                  2
+                
+              
+              )
+            
+          
+          ]
+        
+        
+          σ
+          
+            3
+          
+        
+        =
+        
+          σ
+          
+            3
+          
+        
+        .
+      
+    
+    {\displaystyle \left[\cos \left({\frac {\theta }{2}}\right)-i\sigma _{3}\sin \left({\frac {\theta }{2}}\right)\right]\sigma _{3}\left[\cos \left({\frac {\theta }{2}}\right)+i\sigma _{3}\sin \left({\frac {\theta }{2}}\right)\right]=\left[\cos ^{2}\left({\frac {\theta }{2}}\right)+\sin ^{2}\left({\frac {\theta }{2}}\right)\right]\sigma _{3}=\sigma _{3}.}
+  
+
+The bivectors σ2σ3, σ3σ1 and σ1σ2 are in fact Hamilton's quaternions i, j, and k, discovered in 1843:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  i
+                
+              
+              
+                
+                =
+                −
+                
+                  σ
+                  
+                    2
+                  
+                
+                
+                  σ
+                  
+                    3
+                  
+                
+                =
+                −
+                i
+                
+                  σ
+                  
+                    1
+                  
+                
+              
+            
+            
+              
+                
+                  j
+                
+              
+              
+                
+                =
+                −
+                
+                  σ
+                  
+                    3
+                  
+                
+                
+                  σ
+                  
+                    1
+                  
+                
+                =
+                −
+                i
+                
+                  σ
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+                
+                  k
+                
+              
+              
+                
+                =
+                −
+                
+                  σ
+                  
+                    1
+                  
+                
+                
+                  σ
+                  
+                    2
+                  
+                
+                =
+                −
+                i
+                
+                  σ
+                  
+                    3
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbf {i} &=-\sigma _{2}\sigma _{3}=-i\sigma _{1}\\\mathbf {j} &=-\sigma _{3}\sigma _{1}=-i\sigma _{2}\\\mathbf {k} &=-\sigma _{1}\sigma _{2}=-i\sigma _{3}\end{aligned}}}
+  
+
+With the identification of the even-graded elements with the algebra 
+  
+    
+      
+        
+          H
+        
+      
+    
+    {\displaystyle \mathbb {H} }
+  
+ of quaternions, as in the case of two dimensions the only representation of the algebra of even-graded elements is on itself. Thus the (real) spinors in three-dimensions are quaternions, and the action of an even-graded element on a spinor is given by ordinary quaternionic multiplication.
+Note that the expression (1) for a vector rotation through an angle θ, the angle appearing in γ was halved. Thus the spinor rotation γ(ψ) = γψ (ordinary quaternionic multiplication) will rotate the spinor ψ through an angle one-half the measure of the angle of the corresponding vector rotation. Once again, the problem of lifting a vector rotation to a spinor rotation is two-valued: the expression (1) with (180° + θ/2) in place of θ/2 will produce the same vector rotation, but the negative of the spinor rotation.
+The spinor/quaternion representation of rotations in 3D is becoming increasingly prevalent in computer geometry and other applications, because of the notable brevity of the corresponding spin matrix, and the simplicity with which they can be multiplied together to calculate the combined effect of successive rotations about different axes.
+
+Explicit constructions
+A space of spinors can be constructed explicitly with concrete and abstract constructions. The
+equivalence of these constructions is a consequence of the uniqueness of the spinor representation of the complex Clifford algebra. For a complete example in dimension 3, see spinors in three dimensions.
+
+Component spinors
+Given a vector space V and a quadratic form g an explicit matrix representation of the Clifford algebra Cℓ(V, g) can be defined as follows. Choose an orthonormal basis e1 ... en for V i.e. g(eμeν) = ημν where ημμ = ±1 and ημν = 0 for μ ≠ ν. Let k = ⌊n/2⌋. Fix a set of 2k × 2k matrices γ1 ... γn such that γμγν + γνγμ = 2ημν1 (i.e. fix a convention for the gamma matrices). Then the assignment eμ → γμ extends uniquely to an algebra homomorphism Cℓ(V, g) → Mat(2k, ℂ) by sending the monomial eμ1 ⋅⋅⋅ eμk in the Clifford algebra to the product γμ1 ⋅⋅⋅ γμk of matrices and extending linearly. The space 
+  
+    
+      
+        Δ
+        =
+        
+          
+            C
+          
+          
+            
+              2
+              
+                k
+              
+            
+          
+        
+      
+    
+    {\displaystyle \Delta =\mathbb {C} ^{2^{k}}}
+  
+ on which the gamma matrices act is now a space of spinors. One needs to construct such matrices explicitly, however. In dimension 3, defining the gamma matrices to be the Pauli sigma matrices gives rise to the familiar two component spinors used in non relativistic quantum mechanics. Likewise using the 4 × 4 Dirac gamma matrices gives rise to the 4 component Dirac spinors used in 3+1 dimensional relativistic quantum field theory. In general, in order to define gamma matrices of the required kind, one can use the Weyl–Brauer matrices.
+In this construction the representation of the Clifford algebra Cℓ(V, g), the Lie algebra so(V, g), and the Spin group Spin(V, g), all depend on the choice of the orthonormal basis and the choice of the gamma matrices. This can cause confusion over conventions, but invariants like traces are independent of choices. In particular, all physically observable quantities must be independent of such choices. In this construction a spinor can be represented as a vector of 2k complex numbers and is denoted with spinor indices (usually α, β, γ). In the physics literature, such indices are often used to denote spinors even when an abstract spinor construction is used.
+
+Abstract spinors
+There are at least two different, but essentially equivalent, ways to define spinors abstractly. One approach seeks to identify the minimal ideals for the left action of Cℓ(V, g) on itself. These are subspaces of the Clifford algebra of the form Cℓ(V, g)ω, admitting the evident action of Cℓ(V, g) by left-multiplication: c : xω → cxω. There are two variations on this theme: one can either find a primitive element ω that is a nilpotent element of the Clifford algebra, or one that is an idempotent. The construction via nilpotent elements is more fundamental in the sense that an idempotent may then be produced from it. In this way, the spinor representations are identified with certain subspaces of the Clifford algebra itself. The second approach is to construct a vector space using a distinguished subspace of V, and then specify the action of the Clifford algebra externally to that vector space.
+In either approach, the fundamental notion is that of an isotropic subspace W. Each construction depends on an initial freedom in choosing this subspace. In physical terms, this corresponds to the fact that there is no measurement protocol that can specify a basis of the spin space, even if a preferred basis of V is given.
+As above, we let (V, g) be an n-dimensional complex vector space equipped with a nondegenerate bilinear form. If V is a real vector space, then we replace V by its complexification 
+  
+    
+      
+        V
+        
+          ⊗
+          
+            
+              R
+            
+          
+        
+        
+          C
+        
+      
+    
+    {\displaystyle V\otimes _{\mathbb {R} }\mathbb {C} }
+  
+ and let g denote the induced bilinear form on 
+  
+    
+      
+        V
+        
+          ⊗
+          
+            
+              R
+            
+          
+        
+        
+          C
+        
+      
+    
+    {\displaystyle V\otimes _{\mathbb {R} }\mathbb {C} }
+  
+. Let W be a maximal isotropic subspace, i.e. a maximal subspace of V such that g|W = 0. If n =  2k is even, then let W′ be an isotropic subspace complementary to W. If n =  2k + 1 is odd, let W′ be a maximal isotropic subspace with W ∩ W′ = 0, and let U be the orthogonal complement of W ⊕ W′. In both the even- and odd-dimensional cases W and W′ have dimension k. In the odd-dimensional case, U is one-dimensional, spanned by a unit vector u.
+
+Minimal ideals
+Since W′ is isotropic, multiplication of elements of W′ inside Cℓ(V, g) is skew. Hence vectors in W′ anti-commute, and Cℓ(W′, g|W′) = Cℓ(W′, 0) is just the exterior algebra Λ∗W′. Consequently, the k-fold product of W′ with itself, W′k, is one-dimensional. Let ω be a generator of W′k. In terms of a basis w′1, ..., w′k of W′, one possibility is to set
+
+  
+    
+      
+        ω
+        =
+        
+          w
+          
+            1
+          
+          ′
+        
+        
+          w
+          
+            2
+          
+          ′
+        
+        ⋯
+        
+          w
+          
+            k
+          
+          ′
+        
+        .
+      
+    
+    {\displaystyle \omega =w'_{1}w'_{2}\cdots w'_{k}.}
+  
+
+Note that ω2 = 0 (i.e., ω is nilpotent of order 2), and moreover, w′ω = 0 for all w′ ∈ W′. The following facts can be proven easily:
+
+If n = 2k, then the left ideal Δ = Cℓ(V, g)ω is a minimal left ideal. Furthermore, this splits into the two spin spaces Δ+ = Cℓevenω and Δ− = Cℓoddω on restriction to the action of the even Clifford algebra.
+If n = 2k + 1, then the action of the unit vector u on the left ideal Cℓ(V, g)ω decomposes the space into a pair of isomorphic irreducible eigenspaces (both denoted by Δ), corresponding to the respective eigenvalues +1 and −1.
+In detail, suppose for instance that n is even. Suppose that I is a non-zero left ideal contained in Cℓ(V, g)ω. We shall show that I must be equal to Cℓ(V, g)ω by proving that it contains a nonzero scalar multiple of ω.
+Fix a basis wi of W and a complementary basis wi′ of W′ so that
+
+Note that any element of I must have the form αω, by virtue of our assumption that I ⊂ Cℓ(V, g) ω. Let αω ∈ I be any such element. Using the chosen basis, we may write
+
+  
+    
+      
+        α
+        =
+        
+          ∑
+          
+            
+              i
+              
+                1
+              
+            
+            <
+            
+              i
+              
+                2
+              
+            
+            <
+            ⋯
+            <
+            
+              i
+              
+                p
+              
+            
+          
+        
+        
+          a
+          
+            
+              i
+              
+                1
+              
+            
+            …
+            
+              i
+              
+                p
+              
+            
+          
+        
+        
+          w
+          
+            
+              i
+              
+                1
+              
+            
+          
+        
+        ⋯
+        
+          w
+          
+            
+              i
+              
+                p
+              
+            
+          
+        
+        +
+        
+          ∑
+          
+            j
+          
+        
+        
+          B
+          
+            j
+          
+        
+        
+          w
+          
+            j
+          
+          ′
+        
+      
+    
+    {\displaystyle \alpha =\sum _{i_{1}<i_{2}<\cdots <i_{p}}a_{i_{1}\dots i_{p}}w_{i_{1}}\cdots w_{i_{p}}+\sum _{j}B_{j}w'_{j}}
+  
+
+where the ai1...ip are scalars, and the Bj are auxiliary elements of the Clifford algebra. Observe now that the product
+
+  
+    
+      
+        α
+        ω
+        =
+        
+          ∑
+          
+            
+              i
+              
+                1
+              
+            
+            <
+            
+              i
+              
+                2
+              
+            
+            <
+            ⋯
+            <
+            
+              i
+              
+                p
+              
+            
+          
+        
+        
+          a
+          
+            
+              i
+              
+                1
+              
+            
+            …
+            
+              i
+              
+                p
+              
+            
+          
+        
+        
+          w
+          
+            
+              i
+              
+                1
+              
+            
+          
+        
+        ⋯
+        
+          w
+          
+            
+              i
+              
+                p
+              
+            
+          
+        
+        ω
+        .
+      
+    
+    {\displaystyle \alpha \omega =\sum _{i_{1}<i_{2}<\cdots <i_{p}}a_{i_{1}\dots i_{p}}w_{i_{1}}\cdots w_{i_{p}}\omega .}
+  
+
+Pick any nonzero monomial a in the expansion of α with maximal homogeneous degree in the elements wi:
+
+  
+    
+      
+        a
+        =
+        
+          a
+          
+            
+              i
+              
+                1
+              
+            
+            …
+            
+              i
+              
+                max
+              
+            
+          
+        
+        
+          w
+          
+            
+              i
+              
+                1
+              
+            
+          
+        
+        …
+        
+          w
+          
+            
+              i
+              
+                max
+              
+            
+          
+        
+      
+    
+    {\displaystyle a=a_{i_{1}\dots i_{\text{max}}}w_{i_{1}}\dots w_{i_{\text{max}}}}
+  
+ (no summation implied),
+then
+
+  
+    
+      
+        
+          w
+          
+            
+              i
+              
+                max
+              
+            
+          
+          ′
+        
+        ⋯
+        
+          w
+          
+            
+              i
+              
+                1
+              
+            
+          
+          ′
+        
+        α
+        ω
+        =
+        
+          a
+          
+            
+              i
+              
+                1
+              
+            
+            …
+            
+              i
+              
+                max
+              
+            
+          
+        
+        ω
+      
+    
+    {\displaystyle w'_{i_{\text{max}}}\cdots w'_{i_{1}}\alpha \omega =a_{i_{1}\dots i_{\text{max}}}\omega }
+  
+
+is a nonzero scalar multiple of ω, as required.
+Note that for n even, this computation also shows that
+
+  
+    
+      
+        Δ
+        =
+        
+          C
+        
+        ℓ
+        (
+        W
+        )
+        ω
+        =
+        
+          (
+          
+            
+              Λ
+              
+                ∗
+              
+            
+            W
+          
+          )
+        
+        ω
+      
+    
+    {\displaystyle \Delta =\mathrm {C} \ell (W)\omega =\left(\Lambda ^{*}W\right)\omega }
+  
+
+as a vector space. In the last equality we again used that W is isotropic. In physics terms, this shows that Δ is built up like a Fock space by creating spinors using anti-commuting creation operators in W acting on a vacuum ω.
+
+Exterior algebra construction
+The computations with the minimal ideal construction suggest that a spinor representation can
+also be defined directly using the exterior algebra Λ∗ W = ⊕j Λj W of the isotropic subspace W.
+Let Δ = Λ∗ W denote the exterior algebra of W considered as vector space only. This will be the spin representation, and its elements will be referred to as spinors.
+The action of the Clifford algebra on Δ is defined first by giving the action of an element of V on Δ, and then showing that this action respects the Clifford relation and so extends to a homomorphism of the full Clifford algebra into the endomorphism ring End(Δ) by the universal property of Clifford algebras. The details differ slightly according to whether the dimension of V is even or odd.
+When dim(V) is even, V = W ⊕ W′ where W′ is the chosen isotropic complement. Hence any v ∈ V decomposes uniquely as v = w + w′ with w ∈ W and w′ ∈ W′. The action of v on a spinor is given by
+
+  
+    
+      
+        c
+        (
+        v
+        )
+        
+          w
+          
+            1
+          
+        
+        ∧
+        ⋯
+        ∧
+        
+          w
+          
+            n
+          
+        
+        =
+        
+          (
+          
+            ϵ
+            (
+            w
+            )
+            +
+            i
+            
+              (
+              
+                w
+                ′
+              
+              )
+            
+          
+          )
+        
+        
+          (
+          
+            
+              w
+              
+                1
+              
+            
+            ∧
+            ⋯
+            ∧
+            
+              w
+              
+                n
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle c(v)w_{1}\wedge \cdots \wedge w_{n}=\left(\epsilon (w)+i\left(w'\right)\right)\left(w_{1}\wedge \cdots \wedge w_{n}\right)}
+  
+
+where i(w′) is interior product with w′ using the nondegenerate quadratic form to identify V with V∗, and ε(w) denotes the exterior product. This action is sometimes called the Clifford product. It may be verified that
+
+  
+    
+      
+        c
+        (
+        u
+        )
+        
+        c
+        (
+        v
+        )
+        +
+        c
+        (
+        v
+        )
+        
+        c
+        (
+        u
+        )
+        =
+        2
+        
+        g
+        (
+        u
+        ,
+        v
+        )
+        
+        ,
+      
+    
+    {\displaystyle c(u)\,c(v)+c(v)\,c(u)=2\,g(u,v)\,,}
+  
+
+and so c respects the Clifford relations and extends to a homomorphism from the Clifford algebra to End(Δ).
+The spin representation Δ further decomposes into a pair of irreducible complex representations of the Spin group (the half-spin representations, or Weyl spinors) via
+
+  
+    
+      
+        
+          Δ
+          
+            +
+          
+        
+        =
+        
+          Λ
+          
+            even
+          
+        
+        W
+        ,
+        
+        
+          Δ
+          
+            −
+          
+        
+        =
+        
+          Λ
+          
+            odd
+          
+        
+        W
+        .
+      
+    
+    {\displaystyle \Delta _{+}=\Lambda ^{\text{even}}W,\,\Delta _{-}=\Lambda ^{\text{odd}}W.}
+  
+
+When dim(V) is odd, V = W ⊕ U ⊕ W′, where U is spanned by a unit vector u orthogonal to W. The Clifford action c is defined as before on W ⊕ W′, while the Clifford action of (multiples of) u is defined by
+
+  
+    
+      
+        c
+        (
+        u
+        )
+        α
+        =
+        
+          
+            {
+            
+              
+                
+                  α
+                
+                
+                  
+                    
+                      if 
+                    
+                  
+                  α
+                  ∈
+                  
+                    Λ
+                    
+                      even
+                    
+                  
+                  W
+                
+              
+              
+                
+                  −
+                  α
+                
+                
+                  
+                    
+                      if 
+                    
+                  
+                  α
+                  ∈
+                  
+                    Λ
+                    
+                      odd
+                    
+                  
+                  W
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle c(u)\alpha ={\begin{cases}\alpha &{\hbox{if }}\alpha \in \Lambda ^{\text{even}}W\\-\alpha &{\hbox{if }}\alpha \in \Lambda ^{\text{odd}}W\end{cases}}}
+  
+
+As before, one verifies that c respects the Clifford relations, and so induces a homomorphism.
+
+Hermitian vector spaces and spinors
+If the vector space V has extra structure that provides a decomposition of its complexification into two maximal isotropic subspaces, then the definition of spinors (by either method) becomes natural.
+The main example is the case that the real vector space V is a hermitian vector space (V, g), i.e., V is equipped with a complex structure J that is an orthogonal transformation with respect to the inner product g on V. Then 
+  
+    
+      
+        V
+        
+          ⊗
+          
+            
+              R
+            
+          
+        
+        
+          C
+        
+      
+    
+    {\displaystyle V\otimes _{\mathbb {R} }\mathbb {C} }
+  
+ splits in the ±i eigenspaces of J. These eigenspaces are isotropic for the complexification of g and can be identified with the complex vector space (V, J) and its complex conjugate (V, −J). Therefore, for a hermitian vector space (V, g) the vector space 
+  
+    
+      
+        
+          Λ
+          
+            
+              C
+            
+          
+          
+            ⋅
+          
+        
+        
+          
+            
+              V
+              ¯
+            
+          
+        
+      
+    
+    {\displaystyle \Lambda _{\mathbb {C} }^{\cdot }{\bar {V}}}
+  
+ (as well as its complex conjugate 
+  
+    
+      
+        
+          Λ
+          
+            
+              C
+            
+          
+          
+            ⋅
+          
+        
+        V
+      
+    
+    {\displaystyle \Lambda _{\mathbb {C} }^{\cdot }V}
+  
+) is a spinor space for the underlying real euclidean vector space.
+With the Clifford action as above but with contraction using the hermitian form, this construction gives a spinor space at every point of an almost Hermitian manifold and is the reason why every almost complex manifold (in particular every symplectic manifold) has a Spinc structure. Likewise, every complex vector bundle on a manifold carries a Spinc structure.
+
+Clebsch–Gordan decomposition
+A number of Clebsch–Gordan decompositions are possible on the tensor product of one spin representation with another. These decompositions express the tensor product in terms of the alternating representations of the orthogonal group.
+For the real or complex case, the alternating representations are
+
+Γr = ΛrV, the representation of the orthogonal group on skew tensors of rank r.
+In addition, for the real orthogonal groups, there are three characters (one-dimensional representations)
+
+σ+ : O(p, q) → {−1, +1} given by σ+(R) = −1, if R reverses the spatial orientation of V, +1, if R preserves the spatial orientation of V. (The spatial character.)
+σ− : O(p, q) → {−1, +1} given by σ−(R) = −1, if R reverses the temporal orientation of V, +1, if R preserves the temporal orientation of V. (The temporal character.)
+σ = σ+σ− . (The orientation character.)
+The Clebsch–Gordan decomposition allows one to define, among other things:
+
+An action of spinors on vectors.
+A Hermitian metric on the complex representations of the real spin groups.
+A Dirac operator on each spin representation.
+
+Even dimensions
+If n = 2k is even, then the tensor product of Δ with the contragredient representation decomposes as
+
+  
+    
+      
+        Δ
+        ⊗
+        
+          Δ
+          
+            ∗
+          
+        
+        ≅
+        
+          ⨁
+          
+            p
+            =
+            0
+          
+          
+            n
+          
+        
+        
+          Γ
+          
+            p
+          
+        
+        ≅
+        
+          ⨁
+          
+            p
+            =
+            0
+          
+          
+            k
+            −
+            1
+          
+        
+        
+          (
+          
+            
+              Γ
+              
+                p
+              
+            
+            ⊕
+            σ
+            
+              Γ
+              
+                p
+              
+            
+          
+          )
+        
+        ⊕
+        
+          Γ
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Delta \otimes \Delta ^{*}\cong \bigoplus _{p=0}^{n}\Gamma _{p}\cong \bigoplus _{p=0}^{k-1}\left(\Gamma _{p}\oplus \sigma \Gamma _{p}\right)\oplus \Gamma _{k}}
+  
+
+which can be seen explicitly by considering (in the Explicit construction) the action of the Clifford algebra on decomposable elements αω ⊗ βω′. The rightmost formulation follows from the transformation properties of the Hodge star operator. Note that on restriction to the even Clifford algebra, the paired summands Γp ⊕ σΓp are isomorphic, but under the full Clifford algebra they are not.
+There is a natural identification of Δ with its contragredient representation via the conjugation in the Clifford algebra:
+
+  
+    
+      
+        (
+        α
+        ω
+        
+          )
+          
+            ∗
+          
+        
+        =
+        ω
+        
+          (
+          
+            α
+            
+              ∗
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle (\alpha \omega )^{*}=\omega \left(\alpha ^{*}\right).}
+  
+
+So Δ ⊗ Δ also decomposes in the above manner. Furthermore, under the even Clifford algebra, the half-spin representations decompose
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  Δ
+                  
+                    +
+                  
+                
+                ⊗
+                
+                  Δ
+                  
+                    +
+                  
+                  
+                    ∗
+                  
+                
+                ≅
+                
+                  Δ
+                  
+                    −
+                  
+                
+                ⊗
+                
+                  Δ
+                  
+                    −
+                  
+                  
+                    ∗
+                  
+                
+              
+              
+                
+                ≅
+                
+                  ⨁
+                  
+                    p
+                    =
+                    0
+                  
+                  
+                    k
+                  
+                
+                
+                  Γ
+                  
+                    2
+                    p
+                  
+                
+              
+            
+            
+              
+                
+                  Δ
+                  
+                    +
+                  
+                
+                ⊗
+                
+                  Δ
+                  
+                    −
+                  
+                  
+                    ∗
+                  
+                
+                ≅
+                
+                  Δ
+                  
+                    −
+                  
+                
+                ⊗
+                
+                  Δ
+                  
+                    +
+                  
+                  
+                    ∗
+                  
+                
+              
+              
+                
+                ≅
+                
+                  ⨁
+                  
+                    p
+                    =
+                    0
+                  
+                  
+                    k
+                    −
+                    1
+                  
+                
+                
+                  Γ
+                  
+                    2
+                    p
+                    +
+                    1
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\Delta _{+}\otimes \Delta _{+}^{*}\cong \Delta _{-}\otimes \Delta _{-}^{*}&\cong \bigoplus _{p=0}^{k}\Gamma _{2p}\\\Delta _{+}\otimes \Delta _{-}^{*}\cong \Delta _{-}\otimes \Delta _{+}^{*}&\cong \bigoplus _{p=0}^{k-1}\Gamma _{2p+1}\end{aligned}}}
+  
+
+For the complex representations of the real Clifford algebras, the associated reality structure on the complex Clifford algebra descends to the space of spinors (via the explicit construction in terms of minimal ideals, for instance). In this way, we obtain the complex conjugate Δ of the representation Δ, and the following isomorphism is seen to hold:
+
+  
+    
+      
+        
+          
+            
+              Δ
+              ¯
+            
+          
+        
+        ≅
+        
+          σ
+          
+            −
+          
+        
+        
+          Δ
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle {\bar {\Delta }}\cong \sigma _{-}\Delta ^{*}}
+  
+
+In particular, note that the representation Δ of the orthochronous spin group is a unitary representation. In general, there are Clebsch–Gordan decompositions
+
+  
+    
+      
+        Δ
+        ⊗
+        
+          
+            
+              Δ
+              ¯
+            
+          
+        
+        ≅
+        
+          ⨁
+          
+            p
+            =
+            0
+          
+          
+            k
+          
+        
+        
+          (
+          
+            
+              σ
+              
+                −
+              
+            
+            
+              Γ
+              
+                p
+              
+            
+            ⊕
+            
+              σ
+              
+                +
+              
+            
+            
+              Γ
+              
+                p
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle \Delta \otimes {\bar {\Delta }}\cong \bigoplus _{p=0}^{k}\left(\sigma _{-}\Gamma _{p}\oplus \sigma _{+}\Gamma _{p}\right).}
+  
+
+In metric signature (p, q), the following isomorphisms hold for the conjugate half-spin representations
+
+If q is even, then 
+  
+    
+      
+        
+          
+            
+              
+                Δ
+                ¯
+              
+            
+          
+          
+            +
+          
+        
+        ≅
+        
+          σ
+          
+            −
+          
+        
+        ⊗
+        
+          Δ
+          
+            +
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle {\bar {\Delta }}_{+}\cong \sigma _{-}\otimes \Delta _{+}^{*}}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              
+                Δ
+                ¯
+              
+            
+          
+          
+            −
+          
+        
+        ≅
+        
+          σ
+          
+            −
+          
+        
+        ⊗
+        
+          Δ
+          
+            −
+          
+          
+            ∗
+          
+        
+        .
+      
+    
+    {\displaystyle {\bar {\Delta }}_{-}\cong \sigma _{-}\otimes \Delta _{-}^{*}.}
+  
+
+If q is odd, then 
+  
+    
+      
+        
+          
+            
+              
+                Δ
+                ¯
+              
+            
+          
+          
+            +
+          
+        
+        ≅
+        
+          σ
+          
+            −
+          
+        
+        ⊗
+        
+          Δ
+          
+            −
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle {\bar {\Delta }}_{+}\cong \sigma _{-}\otimes \Delta _{-}^{*}}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              
+                Δ
+                ¯
+              
+            
+          
+          
+            −
+          
+        
+        ≅
+        
+          σ
+          
+            −
+          
+        
+        ⊗
+        
+          Δ
+          
+            +
+          
+          
+            ∗
+          
+        
+        .
+      
+    
+    {\displaystyle {\bar {\Delta }}_{-}\cong \sigma _{-}\otimes \Delta _{+}^{*}.}
+  
+
+Using these isomorphisms, one can deduce analogous decompositions for the tensor products of the half-spin representations Δ± ⊗ Δ±.
+
+Odd dimensions
+If n = 2k + 1 is odd, then
+
+  
+    
+      
+        Δ
+        ⊗
+        
+          Δ
+          
+            ∗
+          
+        
+        ≅
+        
+          ⨁
+          
+            p
+            =
+            0
+          
+          
+            k
+          
+        
+        
+          Γ
+          
+            2
+            p
+          
+        
+        .
+      
+    
+    {\displaystyle \Delta \otimes \Delta ^{*}\cong \bigoplus _{p=0}^{k}\Gamma _{2p}.}
+  
+
+In the real case, once again the isomorphism holds
+
+  
+    
+      
+        
+          
+            
+              Δ
+              ¯
+            
+          
+        
+        ≅
+        
+          σ
+          
+            −
+          
+        
+        
+          Δ
+          
+            ∗
+          
+        
+        .
+      
+    
+    {\displaystyle {\bar {\Delta }}\cong \sigma _{-}\Delta ^{*}.}
+  
+
+Hence there is a Clebsch–Gordan decomposition (again using the Hodge star to dualize) given by
+
+  
+    
+      
+        Δ
+        ⊗
+        
+          
+            
+              Δ
+              ¯
+            
+          
+        
+        ≅
+        
+          σ
+          
+            −
+          
+        
+        
+          Γ
+          
+            0
+          
+        
+        ⊕
+        
+          σ
+          
+            +
+          
+        
+        
+          Γ
+          
+            1
+          
+        
+        ⊕
+        ⋯
+        ⊕
+        
+          σ
+          
+            ±
+          
+        
+        
+          Γ
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Delta \otimes {\bar {\Delta }}\cong \sigma _{-}\Gamma _{0}\oplus \sigma _{+}\Gamma _{1}\oplus \dots \oplus \sigma _{\pm }\Gamma _{k}}
+  
+
+Consequences
+There are many far-reaching consequences of the Clebsch–Gordan decompositions of the spinor spaces. The most fundamental of these pertain to Dirac's theory of the electron, among whose basic requirements are
+
+A manner of regarding the product of two spinors ϕψ as a scalar. In physical terms, a spinor should determine a probability amplitude for the quantum state.
+A manner of regarding the product ψϕ as a vector. This is an essential feature of Dirac's theory, which ties the spinor formalism to the geometry of physical space.
+A manner of regarding a spinor as acting upon a vector, by an expression such as ψvψ. In physical terms, this represents an electric current of Maxwell's electromagnetic theory, or more generally a probability current.
+
+Summary in low dimensions
+In 1 dimension (a trivial example), the single spinor representation is formally Majorana, a real 1-dimensional representation that does not transform.
+In 2 Euclidean dimensions, the left-handed and the right-handed Weyl spinor are 1-component complex representations, i.e. complex numbers that get multiplied by e±iφ/2 under a rotation by angle φ.
+In 3 Euclidean dimensions, the single spinor representation is 2-dimensional and quaternionic. The existence of spinors in 3 dimensions follows from the isomorphism of the groups SU(2) ≅ Spin(3) that allows us to define the action of Spin(3) on a complex 2-component column (a spinor); the generators of SU(2) can be written as Pauli matrices.
+In 4 Euclidean dimensions, the corresponding isomorphism is Spin(4) ≅ SU(2) × SU(2). There are two inequivalent quaternionic 2-component Weyl spinors and each of them transforms under one of the SU(2) factors only.
+In 5 Euclidean dimensions, the relevant isomorphism is Spin(5) ≅ USp(4) ≅ Sp(2) that implies that the single spinor representation is 4-dimensional and quaternionic.
+In 6 Euclidean dimensions, the isomorphism Spin(6) ≅ SU(4) guarantees that there are two 4-dimensional complex Weyl representations that are complex conjugates of one another.
+In 7 Euclidean dimensions, the single spinor representation is 8-dimensional and real; no isomorphisms to a Lie algebra from another series (A or C) exist from this dimension on.
+In 8 Euclidean dimensions, there are two Weyl–Majorana real 8-dimensional representations that are related to the 8-dimensional real vector representation by a special property of Spin(8) called triality.
+In d + 8 dimensions, the number of distinct irreducible spinor representations and their reality (whether they are real, pseudoreal, or complex) mimics the structure in d dimensions, but their dimensions are 16 times larger; this allows one to understand all remaining cases. See Bott periodicity.
+In spacetimes with p spatial and q time-like directions, the dimensions viewed as dimensions over the complex numbers coincide with the case of the (p + q)-dimensional Euclidean space, but the reality projections mimic the structure in |p − q| Euclidean dimensions. For example, in 3 + 1 dimensions there are two non-equivalent Weyl complex (like in 2 dimensions) 2-component (like in 4 dimensions) spinors, which follows from the isomorphism SL(2, ℂ) ≅ Spin(3,1).
+
+Reality type and signature
+One source of confusion is that the words real, complex, and quaternionic are used in two closely related but not identical senses: they may refer to the ground field of a chosen Clifford module, or to the type (also called the Schur type) of an irreducible spin representation. For the spin group, the second notion is the useful one.
+Let 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ be an irreducible complex spin representation of 
+  
+    
+      
+        Spin
+        ⁡
+        (
+        p
+        ,
+        q
+        )
+      
+    
+    {\displaystyle \operatorname {Spin} (p,q)}
+  
+. Then 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is said to be
+
+of real type if there is a 
+  
+    
+      
+        Spin
+        ⁡
+        (
+        p
+        ,
+        q
+        )
+      
+    
+    {\displaystyle \operatorname {Spin} (p,q)}
+  
+-equivariant antilinear map 
+  
+    
+      
+        J
+        :
+        S
+        →
+        S
+      
+    
+    {\displaystyle J:S\to S}
+  
+ with 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+        =
+        +
+        1
+      
+    
+    {\displaystyle J^{2}=+1}
+  
+;
+of quaternionic type (or pseudoreal) if there is such a map with 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+        =
+        −
+        1
+      
+    
+    {\displaystyle J^{2}=-1}
+  
+;
+of complex type if no such equivariant antilinear map exists, equivalently if 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ and its complex conjugate 
+  
+    
+      
+        
+          
+            S
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {S}}}
+  
+ are inequivalent.
+When 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is of real type, the fixed-point set of 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+  
+ gives a real form of the representation; this is the algebraic origin of Majorana conditions. When 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is of quaternionic type, the representation carries an invariant quaternionic structure but no invariant real structure on an irreducible complex module.
+The reason for the mod-8 pattern is that spinors are naturally modules for the even Clifford algebra 
+  
+    
+      
+        
+          C
+        
+        
+          ℓ
+          
+            p
+            ,
+            q
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \mathrm {C} \ell _{p,q}^{0}}
+  
+. If 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is an irreducible real 
+  
+    
+      
+        
+          C
+        
+        
+          ℓ
+          
+            p
+            ,
+            q
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \mathrm {C} \ell _{p,q}^{0}}
+  
+-module, then by Schur's lemma its commuting algebra
+
+  
+    
+      
+        
+          End
+          
+            
+              C
+            
+            
+              ℓ
+              
+                p
+                ,
+                q
+              
+              
+                0
+              
+            
+          
+        
+        ⁡
+        (
+        S
+        )
+      
+    
+    {\displaystyle \operatorname {End} _{\mathrm {C} \ell _{p,q}^{0}}(S)}
+  
+
+is a finite-dimensional real division algebra. By the Frobenius theorem, it is therefore isomorphic to exactly one of
+
+  
+    
+      
+        
+          R
+        
+        ,
+        
+        
+          C
+        
+        ,
+        
+        
+          H
+        
+        .
+      
+    
+    {\displaystyle \mathbb {R} ,\qquad \mathbb {C} ,\qquad \mathbb {H} .}
+  
+
+These three possibilities are precisely the real, complex, and quaternionic types. Using the standard identification of even Clifford algebras with Clifford algebras in one lower dimension, together with Bott periodicity, one finds that the type depends only on 
+  
+    
+      
+        p
+        −
+        q
+        
+          
+          (
+          mod
+          
+          8
+          )
+        
+      
+    
+    {\displaystyle p-q{\pmod {8}}}
+  
+.
+
+Thus, for example, spinors in 3-dimensional Euclidean space are quaternionic, Weyl spinors in 4-dimensional Euclidean space are quaternionic, Weyl spinors in Lorentzian signature 
+  
+    
+      
+        (
+        3
+        ,
+        1
+        )
+      
+    
+    {\displaystyle (3,1)}
+  
+ are complex conjugates of one another, Weyl spinors in split signature 
+  
+    
+      
+        (
+        1
+        ,
+        1
+        )
+      
+    
+    {\displaystyle (1,1)}
+  
+ are real, and 8-dimensional Euclidean Weyl spinors are real.
+A common source of apparent disagreement between tables in the literature is that some authors classify irreducible modules for the full real Clifford algebra 
+  
+    
+      
+        
+          C
+        
+        
+          ℓ
+          
+            p
+            ,
+            q
+          
+        
+      
+    
+    {\displaystyle \mathrm {C} \ell _{p,q}}
+  
+, while others classify spin representations of 
+  
+    
+      
+        Spin
+        ⁡
+        (
+        p
+        ,
+        q
+        )
+      
+    
+    {\displaystyle \operatorname {Spin} (p,q)}
+  
+. Since the spin group sits in the even Clifford algebra, these two tables differ by a shift of one step in the mod-8 pattern.

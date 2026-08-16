@@ -1,0 +1,52 @@
+Fiber to the office (FTTO) is an alternative cabling concept for local area network (LAN) network office environments. It combines passive elements (fibre optic cabling, patch panels, splice boxes, connectors and standard copper 8P8C patch cords) and active mini-switches (called FTTO switches) to provide end devices with Gigabit Ethernet. FTTO involves centralised optical fibre cabling techniques to create a combined backbone/horizontal channel; this channel is provided from the work areas to the centralised cross-connect or interconnect by allowing the use of pull-through cables or splices in the telecommunications room.
+
+History
+FTTO Technology emerged in Germany at the start of the 1980s when fibre based connectivity was extensively explored. FTTO appeared as a response to the growing network complexity.
+The aim was to meet the following requirements: 
+
+Ethernet based Network
+Long life cycle
+Scalability, flexibility, sustainability
+High reliability and robustness
+Redundancy
+Security
+Low maintenance cost/simple administration
+Quick and simple realization
+Improved energy efficiency
+Less network hierarchy
+
+Technology
+
+FTTO is a hybrid network involving fibre optic cabling (pre-terminated or extractable cables) and copper twisted pair patch cords with 8P8C connectors. In an FTTO environment, fibre is laid up vertically from the central distribution switch right to the office floor, where it runs horizontally to active FTTO switches at the users' workplaces. The final distance of 3–5 m to the end user desk is bridged using standard 8P8C twisted pair patch cords. There are only two network levels: the core and the access with no aggregation or distribution level in between compared to traditional structured cabling networks.
+The FTTO switch provides a connection between optical uplinks and electrical downlinks. Typically, the switch has up to five twisted pair ports supporting Power over Ethernet (IEEE 802.3af, 15.4W per Port) and Power over Ethernet Plus (IEEE 802.3at, 30W per Port). Modern FTTO Switches offer speeds of 1 Gbit/s per user port (Gigabit Ethernet). Link aggregation may also be supported. Thus, PCs, laptops, IP Phones, wireless access points, cameras, access control units, building automation devices (including lights control, electricity meters, cooling and HVAC units), and other devices with network interfaces may be connected to the backbone network with Gigabit speeds.
+FTTO should not be confused with fibre to the desk (FTTD), which is a concept for structured cabling that is found mostly in military environments as a secure communication technology.
+
+Benefits
+Due to the signal transfer qualities of fibre and its electromagnetic interference (EMI) resilience, signals can be transferred over distances longer than 100 m (100 m is the channel limit in traditional structured cabling networks).
+Multi-mode fibre cabling covers distances of up to 550 m and single-mode of up to 10 km for Gigabit Ethernet and more. This is ideal for large, spatially distributed facilities typically found in public administration, universities, hospitals, airports, shopping malls and military.
+FTTO is characterized by an absence of network hierarchy which may make an installation easier to deploy and manage.
+In FTTO designs there is no need for floor distributors, and no investment in cooling, power supply and security equipment (i.e. access control, fire protection, sensors, UPS) for the floor distribution room is required. Floor distribution rooms hosting technical equipments (usually measuring 6–18 m2 each) are not required and the room saved can be used alternatively.
+Another advantage of FTTO infrastructures is their flexibility. New users, services or applications can be easily accommodated into the network. Moreover, network adjustments, upgrades and physical changes are seamlessly integrated into the existing network without operation stops. Also, FTTO installations can be realised on average by 60% quicker than their traditional counterparts. Research shows that using EEE-enabled switches can save up to 70% power consumption compared to traditional non-EEE network designs.. On top of that, most advanced FTTO infrastructures help to save up to 40% TCO.
+Among the more advanced features of FTTO switches are precise link diagnostics (on the uplinks and TP ports), programmable function contacts, hardened management against hacking attacks, intelligent power budget management, easy reboot with memory cards, and extended durability. Many products have a mean time between failures (MTBF) of over 60 years (based on Siemens calculation procedure) and interoperability certificates with the leading manufacturers of core equipment (i.e. Cisco, HP, Alcatel).
+
+Advantages of fibre-based infrastructures
+Fibre infrastructures need less cabling than traditional copper twisted pair networks. The volume of fibre optics cabling is considerably reduced.  This is due to a very small fibre optic cable diameter of 9–50 mm. Typically, one FO-link replaces four twisted pair cables with no loss in bandwidth. This renders advanced redundancy concepts financially feasible.
+FO-cabling knows no earthing problems.
+Fibre is a very safe medium. There are no problems with frayed or damaged insulation, incorrect or insufficient circuit protection, short circuits and overvoltage.
+The fire load of fibre optic cables is extremely low, which is good for historical buildings with special needs regarding fire protection and safety.
+
+Advantages of FTTO
+No limit of 100 m for links as in traditional twisted-pair Ethernet cabling
+Neither floor distributors nor special cabling needed
+More usable space due to less technical space
+
+Disadvantages of FTTO
+FTTO is not suitable for small and middle size installations with a small number of network components and users.
+FTTO requires a high port count in central distribution, rather than using fewer ports with higher bandwidth for vertical distribution.
+FTTO switches are managed, which requires professional skills for their configuration and management.
+Managed FTTO switches can never beat unmanaged SOHO switches in terms of simplicity and price.
+FTTO projects require an extensive knowledge of and routine with optical fibre cabling technology.
+An additional power supply unit may be needed to power an FTTO switch. Direct connection to the main powerline might reduce functionalities or require extra adjustments.
+Since FTTO relies on Ethernet transport, additional cabling may still be required for applications that could be transported over structured cabling, but not over an Ethernet network, e.g. USB, HDMI, traditional analog or ISDN telephony.
+FTTO projects are not low cost infrastructure projects, though they enable cost-efficient solutions for large and middle size network infrastructure projects.
+FTTO is mostly used in larger professional infrastructure projects, with campus architecture, large number of users and advanced redundancy needs.

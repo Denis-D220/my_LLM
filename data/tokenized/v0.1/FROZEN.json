@@ -1,0 +1,37 @@
+{
+  "format": "llm_tokenized_dataset_freeze",
+  "format_version": 1,
+  "frozen_at_utc": "2026-08-15T15:36:04.704054+00:00",
+  "dataset_version": "v0.1",
+  "status": "FROZEN",
+  "policy": "This tokenized dataset is immutable. Retokenization, a different tokenizer, or a different split produces a new dataset version; it never modifies this one.",
+  "tokenizer": {
+    "artifact": "tokenizer-E011",
+    "path": "artifacts\\tokenizer-E011\\tokenizer.json",
+    "vocab_size": 24000,
+    "state_sha256": "927963b1241d92e464088b9eb6fd54f51e5c1d68de75e7ef3c0d6ae8bdfcd9bb",
+    "file_sha256": "6a0a07e08659aa070831ea6058d3588c8a2a312043c19dce8a0dc41d2ce35b96"
+  },
+  "context_length": 2048,
+  "train_documents": 1148751,
+  "validation_documents": 11854,
+  "train_tokens": 1083858263,
+  "validation_tokens": 10870996,
+  "total_tokens": 1094729259,
+  "train_windows": 529227,
+  "validation_windows": 5308,
+  "train_shards": 109,
+  "validation_shards": 2,
+  "train_stream_sha256": "13b4df3d958a2485782c1b68a951b5b0e449ecde98fe5828e74d7330973ae897",
+  "validation_stream_sha256": "cf18ef97501edbd9b92df3bdcdd8ce9323092066d52db161aeb2b314d6ebda64",
+  "train_document_identity_sha256": "58c9923ec7afa4e4ef4498e9bc02c3ec1538bd3fd537605ac79a9775fe82bf42",
+  "validation_document_identity_sha256": "a5d2426457611791dd6a278bff6559fc504f80b63e4d53aee88411a5d1f48a55",
+  "dataset_manifest_sha256": "25b34c751b97765537fb07e89dd9ca544458c984da8159ba6816a4087ea7a361",
+  "split_manifest_sha256": {
+    "train": "1ce3ac2a63666fb4e85e66c4fa0e5a2292cb688202afe0298ef12d1a0c36de39",
+    "validation": "7838b9d128ae5f6f259711e5e4d6c1b0cc4b8e0ed87ed0add925301876f1a802"
+  },
+  "validation_report": {
+    "sha256": "f05bcd60eb01e9b9bb011201d6c03eb86ff7e690adb50b3abff3a8ee679717f4"
+  }
+}

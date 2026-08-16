@@ -1,0 +1,71 @@
+Extended Enterprise Modeling Language (EEML) in software engineering is a modelling language used for enterprise modelling across a number of layers.
+
+Overview
+Extended Enterprise Modeling Language (EEML) is a modelling language which combines structural modelling, business process modelling, goal modelling with goal hierarchies and resource modelling. It was intended to bridge the gap between goal modelling and other modelling approaches. According to Johannesson and Söderström (2008) "the process logic in EEML is mainly expressed through nested structures of tasks and decision points. The sequencing of tasks is expressed by the flow relation between decision points. Each task has an input port and the output port being decision points for modeling process logic".
+EEML was designed as a simple language, making it easy to update models. In addition to capturing tasks and their interdependencies, models show which roles perform each task, and the tools, services and information they apply.
+
+History
+Extended Enterprise Modeling Language (EEML) is from the late 1990s, developed in the EU project EXTERNAL as extension of the Action Port Model (APM) by S. Carlsen (1998). The EXTERNAL project  aimed to "facilitate inter-organisational cooperation in knowledge intensive industries. The project worked on the hypothesis that interactive process models form a suitable framework for tools and methodologies for dynamically networked organisations. In the project EEML (Extended Enterprise Modelling Language) was first constructed as a common metamodel, designed to enable syntactic and semantic interoperability".
+It was further developed in the EU projects Unified Enterprise Modelling Language (UEML) from 2002 to 2003 and the ongoing ATHENA project.
+The objectives of the UEML Working group were to "define, to validate and to disseminate a set of core language constructs to support a Unified Language for Enterprise Modelling, named UEML, to serve as a basis for interoperability within a smart organisation or a network of enterprises".
+
+Topics
+
+Modeling domains
+The EEML-language is divided into 4 sub-languages, with well-defined links across these languages:
+
+Process modelling
+Data modelling
+Resource modelling
+Goal modelling
+Process modelling in EEML, according to Krogstie (2006) "supports the modeling of process logic which is mainly expressed through nested structures of tasks and decision points. The sequencing of the tasks is expressed by the flow relation between decision points. Each task has minimum an input port and an output port being decision points for modeling process logic, Resource roles are used to connect resources of various kinds (persons, organisations, information, material objects, software tools and manual tools) to the tasks. In addition, data modeling (using UML class diagrams), goal modeling and competency modeling (skill requirements and skills possessed) can be integrated with the process models".
+
+Layers
+EEML has four layers of interest:
+
+Generic Task Type: This layer identifies the constituent tasks of generic, repetitive processes and the logical dependencies between these tasks.
+Specific Task Type: At this layer, we deal with process modelling in another scale, which is more linked to the concretisation, decomposition and specialisation phases. Here process models are expanded and elaborated to facilitate business solutions. From an integration viewpoint, this layer aims at uncovering more efficiently the dependencies between the sub-activities, with regards for the resources required for actual performance.
+Manage Task Instances: The purpose of this layer consists in providing constraints but also useful resources (in the form of process templates) to the planning and performance of an enterprise process. The performance of organisational, information, and tool resources in their environment are highlighted through concrete resources allocation management.
+Perform Task Instances: Here is covered the actual execution of tasks with regards to issues of empowerment and decentralisation. At this layer, resources are utilised or consumed in an exclusive or shared manner.
+These tasks are tied together through another layer called Manage Task Knowledge which allows to achieve a global interaction through the different layers by performing a real consistency between them. According to EEML 2005 Guide, this Manage Task Knowledge can be defined as the collection of processes necessary for innovation, dissemination, and exploitation of knowledge in a co-operating ensemble where interact knowledge seekers and knowledge sources by the means of a shared knowledge base.
+
+Goal modelling
+
+Goal modelling is one of the four EEML modelling domains age. A goal expresses the wanted (or unwanted) state of affairs (either current or future) in a certain context. Example of the goal model is depicted below. It shows goals and relationships between them. It is possible to model advanced goal-relationships in EEML by using goal connectors. A goal connector is used when one need to link several goals.
+
+In goal modelling to fulfil Goal1, one must achieve to other goals: both Goal2 and Goal3 (goal-connector with “and” as the logical relation going out). If Goal2 and Goal3 are two different ways of achieving Goal1, then it should be “xor” logical relationship. It can be an opposite situation when both Goal2 and Goal3 need to be fulfilled and to achieve them one must fulfil Goal1. In this case Goal2 and Goal3 are linked to goal connector and this goal connector has a link to Goal1 with ”and”-logical relationship.
+The table indicates different types of connecting relationships in EEML goal modelling. Goal model can also be interlinked with a process model.
+
+Goal and process oriented modelling
+We can describe process model as models that comprise a set of activities and an activity can be decomposed into sub-activities. These activities have relationship amongst themselves. A goal describes the expected state of operation in a business enterprise and it can be linked to whole process model or to a process model fragment with each level activity in a process model can be considered as a goal.
+Goals are related in a hierarchical format where you find some goals are dependent on other sub goals for them to be complete which means all the sub goals must be achieved for the main goal to be achieved. There is other goals where only one of the goals need to be fulfilled for the main goal to be achieved. In goal modelling, there is use of deontic operator which falls in between the context and achieved state. Goals apply to tasks, milestones, resource roles and resources as well and can be considered as action rule for at task. EEML rules were also possible to although the goal modelling requires much more consultation in finding the connections between rules on the different levels. Goal-oriented analysis focuses on the description and evaluation of alternatives and their relationship to the organisational objectives.
+
+Resource modeling
+Resources have specific roles during the execution of various processes in an organisation. The following icons represent the various resources required in modelling.
+The relations of these resources can be of different types:
+
+a.	Is Filled By – this is the assignment relation between roles and resources. It has a cardinality of one-to-many relationship.
+b.	Is Candidate For – candidate indicates the possible filling of the role by a resource.
+c.	Has Member – this is a kind of relations between organisation and person by denoting that a certain person has membership in the organisation. Has a cardinality of many-to-many relation.
+d.	Provide Support To – support pattern between resources and roles.
+e.	Communicates With – Communication pattern between resources and roles.
+f.	Has Supervision Over – shows which role resource supervises another role or resource.
+g.	Is Rating Of – describes the relation between  skill and a person or organisation.
+h.	Is required By – this is the primary skill required for this role
+i.	Has Access to – creating of models with the access rights.
+
+Benefits
+From a general point of view, EEML can be used like any other modelling languages in numerous cases. However we can highlight the virtual enterprise example, which can be considered as a direct field of application for EEML with regard to Extended Enterprise planning, operation, and management.
+
+Knowledge sharing: Create and maintain a shared understanding of the scope and purpose of the enterprise, as well as viewpoints on how to fulfil the purpose.
+Dynamically networked organisations: Make knowledge as available as possible within the organisation.
+Heterogeneous infrastructures: Achieve a relevant knowledge sharing process through heterogeneous infrastructures.
+Process knowledge management: Integrate the different business processes levels of abstraction.
+Motivation: creates enthusiasm and commitment among members of an organisation to follow up on the various actions that are necessary to restructure the enterprise.
+EEML can help organisations meet these challenges by modelling all the manufacturing and logistics processes in the extended enterprise. This model allows capturing a rich set of relationships between the organisation, people, processes and resources of the virtual enterprise. It also aims at making people understand, communicate, develop and cultivate solutions to business problems
+According to J. Krogstie (2008), enterprise models can be created to serve various purposes which include:
+
+Human sense making and communication – the main purpose of enterprise modelling is to make sense of the real world aspects of an enterprise in order to facilitate communicate with parties involved.
+Computer assisted analysis – the main purpose of enterprise modelling is to gain knowledge about the enterprise through simulation and computation of various parameters.
+Model deployment and activation – the main purpose of enterprise modelling is to integrate the model in an enterprise-wide information system and enabling on-line information retrieval and direct work process guidance.
+EEML enables Extended Enterprises to build up their operation based on standard processes through allowing modelling of all actors, processes and tasks in the Extended Enterprise and thereby have clear description of the Extended Enterprise. Finally, models developed will be used to measure and evaluate the Extended Enterprise.

@@ -1,0 +1,172 @@
+# Conditional and Constraint Logic
+
+### If-Then Structures, Necessity and Sufficiency, and Constrained Search
+
+---
+
+## I. The Conditional as an Object
+
+The conditional `if P then Q` is the most-used and most-misused structure in reasoning. In classical logic it is **material implication**, defined by a truth table: false when `P` is true and `Q` is false, true otherwise.
+
+| P | Q | P → Q |
+|---|---|-------|
+| T | T | T |
+| T | F | F |
+| F | T | T |
+| F | F | T |
+
+The last two rows generate most of the confusion. A conditional with a false antecedent is **vacuously true**: "if this triangle has four sides, then I am the King of Spain" is true, because nothing about a four-sided triangle is available to falsify it. This offends intuition, but any alternative convention breaks the algebra, since the equivalence `P → Q ≡ ¬P ∨ Q` is what allows conditionals to be manipulated mechanically.
+
+The material conditional is a poor model of ordinary conditional speech, which usually carries a relevance claim the truth table omits. "If it rains, the match is cancelled" asserts a connection, not merely that one of the four rows obtains.
+
+---
+
+## II. The Four Related Forms
+
+From `if P then Q` three other statements can be built, and only one is equivalent.
+
+- **Original:** if P then Q
+- **Converse:** if Q then P — *not equivalent*
+- **Inverse:** if not P then not Q — *not equivalent*
+- **Contrapositive:** if not Q then not P — *equivalent*
+
+Take "if a number is divisible by 4, then it is even." True. The converse, "if a number is even, it is divisible by 4," is false — 6 refutes it. The inverse, "if a number is not divisible by 4, it is not even," is likewise refuted by 6. The contrapositive, "if a number is not even, it is not divisible by 4," is true and says exactly what the original said.
+
+Converse and inverse are equivalent *to each other*, which is why someone who accepts one usually accepts the other, and why both fail together. The contrapositive's equivalence, by contrast, is the workhorse of mathematics: proving "if n² is even then n is even" directly is awkward, while proving "if n is odd then n² is odd" takes one line, since `n = 2k+1` gives `n² = 4k² + 4k + 1`.
+
+---
+
+## III. Necessary and Sufficient Conditions
+
+`P → Q` says two things in two vocabularies:
+
+- **P is sufficient for Q.** P's presence guarantees Q.
+- **Q is necessary for P.** Without Q, P cannot hold.
+
+Oxygen is necessary for fire but not sufficient — a room full of air is not burning. When a condition is both, the relationship is a **biconditional**, `P ↔ Q`, "P if and only if Q," equivalent to `(P → Q) ∧ (Q → P)`.
+
+Definitions are biconditionals: "a number is prime if and only if it is an integer greater than 1 whose only positive divisors are 1 and itself." Stating a definition as a one-way conditional is a common drafting error that creates loopholes in specifications: "if a request is authenticated it shall be logged" does not prohibit logging unauthenticated requests, nor does it require authentication.
+
+The words map to the arrows in a way worth memorizing, because natural language reverses them:
+
+- "P only if Q" means `P → Q` — Q is necessary.
+- "P if Q" means `Q → P` — Q is sufficient.
+
+"You may enter only if you have a pass" makes the pass necessary. "You may enter if you have a pass" makes it sufficient. These are different rules, and swapping them changes who gets in.
+
+---
+
+## IV. Valid and Invalid Conditional Inferences
+
+Two forms are valid:
+
+**Modus ponens.** If P then Q. P. Therefore Q.
+**Modus tollens.** If P then Q. Not Q. Therefore not P.
+
+Two closely resembling forms are invalid:
+
+**Affirming the consequent.** If P then Q. Q. Therefore P. — Invalid, because Q may arise from other causes. "If the server crashed, the page is down. The page is down. Therefore the server crashed." The page may be down from a DNS failure or a bad deploy.
+
+**Denying the antecedent.** If P then Q. Not P. Therefore not Q. — Invalid for the same reason: "the server didn't crash, therefore the page is up" ignores every other failure mode.
+
+Both invalid forms are attempts to reason from the converse, and this is the structure of most diagnostic error: a symptom is observed, one cause that would produce it is recalled, and that cause is inferred. The correct move is to enumerate the alternative sufficient conditions and find evidence discriminating among them.
+
+Chained conditionals compose by **hypothetical syllogism**: from `P → Q` and `Q → R`, conclude `P → R`. Long chains are valid but fragile, since one weak link leaves the conclusion unsupported.
+
+---
+
+## V. The Wason Selection Task
+
+Four cards show `A`, `K`, `4`, `7`. Each has a letter on one side and a number on the other. Which cards must be turned over to test the rule "if a card has a vowel on one side, it has an even number on the other"?
+
+The rule is `vowel → even`. Falsifying it requires finding a vowel with an odd number.
+
+- `A` — a vowel. Must be checked; an odd number on the back refutes the rule.
+- `K` — not a vowel. Irrelevant; the rule says nothing about consonants.
+- `4` — even. Irrelevant. A consonant behind it violates nothing, and a vowel merely confirms.
+- `7` — odd. **Must be checked**; a vowel on the back refutes the rule. This is the contrapositive test, `¬even → ¬vowel`.
+
+The answer is `A` and `7`. Fewer than a quarter of educated adults get this right, and the dominant error is selecting `4` — turning over the card that could confirm rather than the one that could refute.
+
+Performance improves dramatically when the same abstract structure is given social content: "if a person is drinking alcohol, they must be over 18," with cards reading *beer*, *soda*, *25*, *16*. Nearly everyone correctly checks *beer* and *16*, though the logic is identical. The lesson is not that people are illogical but that conditional reasoning is applied through content-specific schemas, particularly those concerning permission and cheating detection.
+
+---
+
+## VI. Constraint Satisfaction: The Structure
+
+A **constraint satisfaction problem** has three components:
+
+- **Variables** `X₁ … Xₙ`
+- **Domains** `D₁ … Dₙ`, the values each variable may take
+- **Constraints**, restrictions on which combinations are permitted
+
+A solution assigns every variable a value from its domain such that all constraints hold. Map colouring, timetabling, Sudoku, register allocation, and staff rostering are instances of the same abstract problem, which is why one solver serves all of them.
+
+Constraints are **unary** (`X ≠ 3`), **binary** (`X ≠ Y`), or **higher-order** (`alldifferent(X, Y, Z)`), and any constraint can in principle be reduced to binary form, which is why the theory concentrates there.
+
+Naive search is hopeless: nine-by-nine Sudoku has 81 cells with 9 candidates each, giving 9⁸¹ assignments. What makes these problems tractable is that constraints prune enormously, and the discipline is to prune before searching rather than after.
+
+---
+
+## VII. Propagation and Consistency
+
+**Node consistency** enforces unary constraints by removing impossible values from domains directly.
+
+**Arc consistency** is the workhorse. An arc from `X` to `Y` is consistent if, for every value in `X`'s domain, some value in `Y`'s domain satisfies the constraint between them. Values in `X` with no supporting partner are removed. Removal shrinks `X`'s domain, which may break consistency of arcs pointing *into* X, so the process repeats until nothing changes — the AC-3 algorithm.
+
+Propagation cascades. In Sudoku, placing a 5 removes 5 from every cell in that row, column, and box; if one of those cells is left with a single candidate, that value is forced, triggering further removals. Easy puzzles are solved entirely by propagation, with no search whatsoever.
+
+Two rules solve most human-level Sudoku:
+
+- **Naked single** — a cell with exactly one remaining candidate must take it.
+- **Hidden single** — if a value can appear in only one cell of a unit, it goes there, even if that cell has other candidates.
+
+When propagation stalls, search resumes with a much smaller space.
+
+---
+
+## VIII. Backtracking and Heuristics
+
+Backtracking assigns a variable, propagates, and recurses; on contradiction it undoes the assignment and tries the next value. Three heuristics change its performance by orders of magnitude.
+
+**Minimum remaining values** selects the variable with the smallest domain next — the most constrained variable. It forces failures to surface immediately rather than after a deep fruitless descent. This is the formal version of a familiar habit: in a logic puzzle, fill in the cell with only two possibilities before the one with seven.
+
+**Degree heuristic** breaks ties by choosing the variable involved in the most constraints on unassigned variables, maximizing propagation. **Least constraining value** then chooses, among values for that variable, the one ruling out the fewest options elsewhere.
+
+The asymmetry is deliberate: choose the variable that fails *fastest*, then the value that fails *least*. Variables must all be assigned, so early failure is information; values need only one success, so preserving options is worth more.
+
+**Forward checking** is limited propagation — after assigning `X`, remove inconsistent values from neighbours only, and backtrack immediately if any domain empties. Full arc consistency prunes more per node at greater cost per node, and the right tradeoff is problem-dependent.
+
+---
+
+## IX. A Worked Constraint Problem
+
+Three people — Ana, Ben, Carla — live in three houses numbered 1, 2, 3, one each.
+
+1. Ana does not live in house 1.
+2. Ben lives in a house numbered lower than Carla's.
+3. Carla does not live in house 2.
+
+**Variables:** Ana, Ben, Carla. **Domains:** {1,2,3}. **Constraints:** alldifferent, plus the three above.
+
+Apply unary constraints first. Constraint 1 gives Ana ∈ {2,3}. Constraint 3 gives Carla ∈ {1,3}.
+
+Now propagate constraint 2, `Ben < Carla`. If Carla = 1, no value of Ben is lower, so Carla = 1 is eliminated. Therefore **Carla = 3**.
+
+Alldifferent removes 3 from Ana and Ben. Ana ∈ {2}, so **Ana = 2**. Ben takes the remaining value, **Ben = 1**, which satisfies `1 < 3`.
+
+The solution is unique and required no search at all — pure propagation. Note that the decisive step was eliminating a *value* by showing it left another variable with an empty domain, which is arc consistency operating exactly as specified.
+
+---
+
+## X. Over- and Under-Constrained Problems
+
+A problem with no solution is **over-constrained**. The useful response is not to report failure but to identify a minimal unsatisfiable core — the smallest subset of constraints that cannot be jointly satisfied, which tells the user what to relax. A scheduler reporting "no valid timetable" is useless; one reporting "rooms 3 and 7 are both required at 09:00 by constraints 12 and 19" is actionable. **Constraint optimization** softens this by weighting constraints and maximizing satisfied weight, which is how most real scheduling works.
+
+---
+
+## XI. The Common Thread
+
+Conditional reasoning and constraint reasoning are the same activity at different scales. A constraint *is* a conditional: `alldifferent` says that if one variable takes a value, the others do not. Propagation *is* repeated modus ponens and modus tollens — an eliminated possibility triggers the contrapositive elsewhere, and the chain continues until it stops.
+
+The recurring discipline in both is to attend to what is *ruled out* rather than what is merely *consistent*. In the Wason task, the productive card is the one that could refute. In constraint solving, the productive move is the elimination that empties a domain. Confirmation is cheap and mostly uninformative; the constraint that forbids something is what carries the information, and reasoning improves markedly once attention shifts from what a hypothesis permits to what it excludes.

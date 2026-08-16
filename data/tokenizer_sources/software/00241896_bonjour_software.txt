@@ -1,0 +1,58 @@
+Bonjour is Apple's implementation of zero-configuration networking (zeroconf), a group of technologies that includes service discovery, address assignment, and hostname resolution. Bonjour locates devices such as printers, other computers, and the services that those devices offer on a local network using multicast Domain Name System (mDNS) service records.
+The software comes built-in with Apple's macOS and iOS operating systems. Bonjour can also be installed onto computers running Microsoft Windows. Bonjour components may also be included within other software such as iTunes and Safari.
+It was originally introduced in 2002 with Mac OS X 10.2 with the name Rendezvous. It was renamed in 2005 to Bonjour following an out-of-court trademark dispute settlement.
+
+Overview
+Bonjour provides a general method to discover services on a local area network. The software is widely used throughout macOS and allows users to set up a network without any configuration. As of 2010 it is used to find printers and file-sharing servers.
+Notable applications using Bonjour include:
+
+iTunes to find shared music
+iPhoto to find shared photos
+Adium, Pidgin implementing a local version of XMPP also called "Bonjour", originally from the Mac OS X Messages app but since removed
+Vine Server and Elgato EyeTV to communicate with multiple clients
+SubEthaEdit to find document collaborators
+Solidworks and PhotoView 360 to manage licenses
+Things and OmniFocus to synchronize projects and tasks across the Mac desktop and the iPad, iPhone or iPod touch
+Safari to find local web servers and configuration pages for local devices
+Software such as Bonjour Browser or iStumbler, both for macOS, can be used to view all services declared by these applications. Apple's "Remote" application for iPhone and iPod Touch also uses Bonjour to establish a connection to iTunes libraries via Wi-Fi.
+Bonjour only works within a single broadcast domain, which is usually a small area, without special DNS configuration. macOS, Bonjour for Windows and AirPort Base Stations may be configured to use Wide Area Bonjour, which allows for wide area service discovery via an appropriately configured DNS server.
+Applications generally implement Bonjour services using standard TCP/IP calls, rather than in the operating system. Although macOS provides various Bonjour services, Bonjour also works on other operating systems. Apple has made the source code of the Bonjour multicast DNS responder, the core component of service discovery, available as a Darwin open source project. The project provides source code to build the responder daemon for a wide range of platforms, including Mac OS 9, macOS, Linux, *BSD, Solaris, VxWorks, and Windows. Apple also provides a user-installable set of services called Bonjour for Windows and Java libraries.
+
+Licensing
+Bonjour is released under a terms-of-limited-use license by Apple. It is freeware for clients, though developers and software companies who wish to redistribute it as part of a software package or use the Bonjour logo may need a licensing agreement. The source code for mDNSResponder is available under the Apache License.
+
+Naming
+Apple originally introduced the Bonjour software in August 2002 as part of Mac OS X 10.2 under the name "Rendezvous". On August 27, 2003, TIBCO Software announced that it had filed a lawsuit for trademark infringement.
+TIBCO had an enterprise application integration product called TIBCO Rendezvous on the market since 1994 and stated that it had tried to come to an agreement with Apple Computer. In July 2004, Apple and TIBCO reached an out-of-court settlement; specifics of the settlement were not released to the public. On April 12, 2005, Apple announced the renaming of Rendezvous to "Bonjour".
+The current name Bonjour is French for "hello". 
+The previous name Rendezvous is French for "meeting", "appointment" or "date".
+
+Other implementations
+Bonjour version 2.0, released on February 24, 2010, works with Microsoft Windows 2000, 2003, XP, Vista, 7, 8, 8.1, 10, and 11. Systems use it primarily to facilitate the installation, configuration, and use of network printers, and thus it runs from startup. When Bonjour is fully implemented on Windows, some features—such as iChat—allow for communication between Windows and Mac OS. Bonjour for Windows also adds zeroconf capabilities to Internet Explorer, and provides a zeroconf implementation to Java VMs.
+Some third-party applications, such as Adobe's Photoshop CS3 suite,
+also come bundled with Bonjour to take advantage of zeroconf technology.
+Installers on Windows systems normally place Bonjour files in a folder called "Bonjour" within the "Program Files" folder. It modifies Windows system-registry entries related to internal network configuration and operation. Bonjour runs as mDNSResponder.exe. Communications across the network take place over UDP port 5353, which may require reconfiguring some personal or corporate firewalls that block Bonjour packets. A full installation of Bonjour for Windows will include a plug-in for Internet Explorer, a printer wizard, and the network communication services. Not all components are included when installed as part of a third-party application or as a component of other Apple software, such as iTunes.
+Some VPN clients are configured so that local network services are unavailable to a computer when VPN software is active and connected. In such a case, no local zeroconf services are available to Bonjour or any other zeroconf implementation.
+In September 2008, two security vulnerabilities were found in Bonjour for Windows.
+Certain installations of Bonjour for Windows lack an uninstaller and do not display a human-readable entry in the Windows services listing.
+In 32- and 64-bit releases of Windows 7, some older but still available versions of Bonjour services can disable all network connectivity by adding an entry of 0.0.0.0 as the default gateway. This was a bug reported in 2013.
+The open-source IM clients Pidgin, Kopete and Adium support the Bonjour IM protocol, as does the closed-source Trillian client.
+
+Browsers
+A number of browsers allow an end-user to graphically explore the devices found using Bonjour.
+
+Discovery / Bonjour Browser
+Discovery is a Creative Commons-licensed macOS application that displays all services declared using Bonjour. The program was originally called Rendezvous Browser, but changed its name in version 1.5.4 after Apple changed the protocol's name to Bonjour; since version 2.0, it has been renamed again, to Discovery. For certain protocols, double-clicking a list item will launch the associated helper. Version 1.5.6 was the first universal binary release.
+Future versions will allow users to completely define a service, instead of relying on the author to do so.
+Bonjour Browser was recommended for service discovery in MacAddict #123.
+Discovery is available on the Apple App Store.
+
+JBonjourBrowser
+A student research project at Columbia University produced a Java-based system to match the functionality of Bonjour Browser, called JBonjourBrowser. JBonjourBrowser is open-source and available under the GPL.
+JBonjourBrowser was built to emulate the functionality of Bonjour Browser, and at the same time work on multiple platforms. It requires Apple's Bonjour Java library to run.
+
+Bonjour Browser for Windows
+A native Windows application offers similar functions to Bonjour Browser for Mac OS. Bonjour Browser for Windows is offered for free by Hobbyist Software and HandyDev Software.
+
+mDNSBrowser
+A commercial implementation called mDNSBrowser is offered by Netputing Systems Inc.

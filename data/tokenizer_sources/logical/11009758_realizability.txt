@@ -1,0 +1,63 @@
+In mathematical logic, realizability is a collection of methods in proof theory used to study constructive proofs and extract additional information from them. Formulas from a formal theory are "realized" by objects, known as "realizers", in a way that knowledge of the realizer gives knowledge about the truth of the formula. There are many variations of realizability; exactly which class of formulas is studied and which objects are realizers differ from one variation to another.
+Realizability can be seen as a formalization of the Brouwer–Heyting–Kolmogorov (BHK) interpretation of intuitionistic logic. In realizability the notion of "proof" (which is left undefined in the BHK interpretation) is replaced with a formal notion of "realizer". Most variants of realizability begin with a theorem that any statement that is provable in the formal system being studied is realizable. The realizer, however, usually gives more information about the formula than a formal proof would directly provide.
+Beyond giving insight into intuitionistic provability, realizability can be applied to prove the disjunction and existence properties for intuitionistic theories and to extract programs from proofs, as in proof mining. It is also related to topos theory via realizability topoi.
+
+Example: Kleene's 1945-realizability
+Kleene's original version of realizability uses natural numbers as realizers for formulas in Heyting arithmetic. A few pieces of notation are required: first, an ordered pair (n,m) is treated as a single number using a fixed primitive recursive pairing function; second, for each natural number n, φn is the computable function with index n. The following clauses are used to define a relation "n realizes A" between natural numbers n and formulas A in the language of Heyting arithmetic, known as Kleene's 1945-realizability relation:
+
+Any number n realizes an atomic formula s=t if and only if s=t is true. Thus every number realizes a true equation, and no number realizes a false equation.
+A pair (n,m) realizes a formula A∧B if and only if n realizes A and m realizes B. Thus a realizer for a conjunction is a pair of realizers for the conjuncts.
+A pair (n,m) realizes a formula A∨B if and only if the following hold: n is 0 or 1; and if n is 0 then m realizes A; and if n is 1 then m realizes B.  Thus a realizer for a disjunction explicitly picks one of the disjuncts (with n) and provides a realizer for it (with m).
+A number n realizes a formula A→B if and only if, for every m that realizes A, φn(m) realizes B. Thus a realizer for an implication corresponds to a computable function that takes any realizer for the hypothesis and produces a realizer for the conclusion.
+A pair (n,m) realizes a formula (∃ x)A(x) if and only if m is a realizer for A(n). Thus a realizer for an existential formula produces an explicit witness for the quantifier along with a realizer for the formula instantiated with that witness.
+A number n realizes a formula (∀ x)A(x) if and only if, for all m, φn(m) is defined and realizes A(m). Thus a realizer for a universal statement is a computable function that produces, for each m, a realizer for the formula instantiated with m.
+With this definition, the following theorem is obtained:
+
+Let A be a sentence of Heyting arithmetic (HA). If HA proves A then there is an n such that n realizes A.
+On the other hand, there are classical theorems (even propositional formula schemas) that are realized but which are not provable in HA, a fact first established by Rose. So realizability does not exactly mirror intuitionistic reasoning.
+Further analysis of the method can be used to prove that HA has the "disjunction and existence properties":
+
+If HA proves a sentence (∃ x)A(x), then there is an n such that HA proves A(n)
+If HA proves  a sentence A∨B, then HA proves A or HA proves B.
+More such properties are obtained involving Harrop formulas.
+
+Later developments
+Kreisel introduced modified realizability, which uses typed lambda calculus as the language of realizers. Modified realizability is one way to show that Markov's principle is not derivable in intuitionistic logic. On the contrary, it allows to constructively justify the principle of independence of premise: 
+
+  
+    
+      
+        (
+        A
+        →
+        ∃
+        x
+        
+        P
+        (
+        x
+        )
+        )
+        →
+        ∃
+        x
+        
+        (
+        A
+        →
+        P
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle (A\rightarrow \exists x\;P(x))\rightarrow \exists x\;(A\rightarrow P(x))}
+  
+.
+Relative realizability is an intuitionist analysis of computable or computably enumerable elements of data structures that are not necessarily computable, such as computable operations on all real numbers when reals can be only approximated on digital computer systems.
+Classical realizability was introduced by Krivine and extends realizability to classical logic. It furthermore realizes axioms of Zermelo–Fraenkel set theory. Understood as a generalization of Cohen’s forcing, it was used to provide new models of set theory.
+Linear realizability extends realizability techniques to linear logic. The term was coined by Seiller to encompass several constructions, such as geometry of interaction models, ludics, and interaction graphs models.
+
+Use in proof mining
+Realizability is one of the methods used in proof mining to extract concrete "programs" from seemingly non-constructive mathematical proofs. Program extraction using realizability is implemented in some proof assistants such as Rocq.

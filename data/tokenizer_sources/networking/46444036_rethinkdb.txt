@@ -1,0 +1,21 @@
+RethinkDB is a free and open-source, distributed document-oriented database originally created by the company of the same name. The database stores JSON documents with dynamic schemas, and is designed to facilitate pushing real-time updates for query results to applications. Initially seed funded by Y Combinator in June 2009, the company announced in October 2016 that it had been unable to build a sustainable business and its products would be entirely open-sourced without commercial support.
+The CNCF (Cloud Native Computing Foundation) then purchased the rights to the RethinkDB source code and contributed it to the Linux Foundation.
+
+History
+RethinkDB was founded in 2009, and open-sourced at version 1.2 in 2012.  In 2015, RethinkDB released version 2.0, announcing that it was production-ready. On October 5, 2016, the company announced it was shutting down, transitioning members of its engineering team to Stripe, and would no longer offer production support. On February 6, 2017, The Cloud Native Computing Foundation purchased the rights to the source code and relicensed it under the Apache License 2.0.
+
+ReQL
+RethinkDB uses the ReQL query language, an internal (embedded) domain-specific language officially available for Ruby, Python, Java and JavaScript (including Node.js).
+It has support for table joins, groupings, aggregations and functions.
+There are also unofficial, community-supported drivers for other languages, including C#, Clojure, Erlang, Go, Haskell, Lua, and PHP.
+
+Popularity
+According to the DB-Engines ranking, as of June 2025, it was the 105th most popular database.
+
+Comparison with other document databases
+A distinguishing feature of RethinkDB is the first class support for real-time change feeds. A change query returns a cursor which allows blocking or non-blocking requests to keep track of a potentially infinite stream of real-time changes.
+
+Fork
+Due to seeming stagnation, RethinkDB was forked by members of the community on May 17, 2018.
+
+The new project, called RebirthDB, is also hosted on GitHub. The project later merged back with the original repository.

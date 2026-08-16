@@ -1,0 +1,16 @@
+Codename One is an open-source cross-platform framework aiming to provide write once, run anywhere code for various mobile and desktop operating systems (like Android, iOS, Windows, MacOS, and others). It was created by the co-founders of the Lightweight User Interface Toolkit (LWUIT) project, Chen Fishbein and Shai Almog, and was first announced on January 13, 2012. 
+Codename One built upon the LWUIT platform abstraction by adding a simulator and a set of cloud-based build servers that build native applications from the Java bytecode.
+
+Architecture
+Developers using Codename One build their app using various Java IDEs like Eclipse, NetBeans or IntelliJ IDEA; they need the Codename One plugin to be installed on either IDE. Applications can be created either via the GUI builder tool or via code using standard Java. Running/debugging the application is possible via the standard IDE tools and the Codename One simulator.
+To build a native application, developers sign in and register with the Codename One build server. They then send builds to the cloud based build server. Then they can download the native app from the build server to run on the device or submit it to the store.  Since the build server performs static translation of the code into a native application, it is no longer required after the application has been compiled.
+Codename One also supports the ability to use an offline "in-house" build cloud, which removes the use of Codename One build servers completely. 
+
+Native
+The developers of Codename One define the platform as a native code generator but clarify that native widgets are usually not used to render the user interfaces of Codename One applications. This allows for great portability but has also come under fire from some critics of the lightweight approach.
+
+Open source
+The Codename One project is a combination of open source and software as a service. Most of the client-side code is open source, including the iOS, Android, Windows, JavaScript, RIM and J2ME ports. The server build code and the Codename One LIVE! Tool are proprietary.
+
+Community
+Codename One claimed 200,000 downloads of its SDK as of release 1.1 on May 20, 2013. It has since released version 3.0 and claims 180 million applications installed on devices and 40,000 developers using the tool.

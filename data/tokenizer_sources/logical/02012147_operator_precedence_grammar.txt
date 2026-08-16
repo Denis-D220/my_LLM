@@ -1,0 +1,731 @@
+An operator precedence grammar is a kind of grammar for formal languages.
+Technically, an operator precedence grammar is a context-free grammar that has the property (among others)
+that no production has either an empty right-hand side or two adjacent nonterminals in its
+right-hand side. These properties allow precedence relations to be
+defined between the terminals of the grammar. A parser that exploits these relations is considerably simpler than more general-purpose parsers, such as LALR parsers. Operator-precedence parsers can be constructed for a large class of context-free grammars.
+
+Precedence relations
+Operator precedence grammars rely on the following three precedence relations between the terminals:
+
+These operator precedence relations allow to delimit the handles in the right sentential forms: 
+  
+    
+      
+        ⋖
+      
+    
+    {\displaystyle \lessdot }
+  
+ marks the left end, 
+  
+    
+      
+        ≐
+      
+    
+    {\displaystyle \doteq }
+  
+ appears in the interior of the handle, and 
+  
+    
+      
+        ⋗
+      
+    
+    {\displaystyle \gtrdot }
+  
+ marks the right end. Contrary to other shift-reduce parsers, all nonterminals are considered equal for the purpose of identifying handles.
+The relations do not have the same properties as their un-dotted counterparts;
+e. g. 
+  
+    
+      
+        a
+        ≐
+        b
+      
+    
+    {\displaystyle a\doteq b}
+  
+ does not generally imply 
+  
+    
+      
+        b
+        ≐
+        a
+      
+    
+    {\displaystyle b\doteq a}
+  
+, and 
+  
+    
+      
+        b
+        ⋗
+        a
+      
+    
+    {\displaystyle b\gtrdot a}
+  
+ does not follow
+from 
+  
+    
+      
+        a
+        ⋖
+        b
+      
+    
+    {\displaystyle a\lessdot b}
+  
+. Furthermore, 
+  
+    
+      
+        a
+        ≐
+        a
+      
+    
+    {\displaystyle a\doteq a}
+  
+ does not generally hold, and 
+  
+    
+      
+        a
+        ⋗
+        a
+      
+    
+    {\displaystyle a\gtrdot a}
+  
+ is possible.
+Let us assume that between the terminals ai and ai+1 there is always exactly one precedence relation. Suppose that $ is the end of the string.
+Then for all terminals b we define:  
+  
+    
+      
+        $
+        ⋖
+        b
+      
+    
+    {\displaystyle \$\lessdot b}
+  
+ and 
+  
+    
+      
+        b
+        ⋗
+        $
+      
+    
+    {\displaystyle b\gtrdot \$}
+  
+. If we remove all nonterminals and place the correct precedence relation:
+
+  
+    
+      
+        ⋖
+      
+    
+    {\displaystyle \lessdot }
+  
+, 
+  
+    
+      
+        ≐
+      
+    
+    {\displaystyle \doteq }
+  
+, 
+  
+    
+      
+        ⋗
+      
+    
+    {\displaystyle \gtrdot }
+  
+ between the remaining terminals, there remain strings that can be analyzed by an easily developed bottom-up parser.
+
+Example
+For example, the following operator precedence relations can
+be introduced for simple expressions:
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                  i
+                  d
+                
+              
+              
+                +
+              
+              
+                ∗
+              
+              
+                $
+              
+            
+            
+              
+                
+                  i
+                  d
+                
+              
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+            
+            
+              
+                +
+              
+              
+                ⋖
+              
+              
+                ⋗
+              
+              
+                ⋖
+              
+              
+                ⋗
+              
+            
+            
+              
+                ∗
+              
+              
+                ⋖
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+            
+            
+              
+                $
+              
+              
+                ⋖
+              
+              
+                ⋖
+              
+              
+                ⋖
+              
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{array}{c|cccc}&\mathrm {id} &+&*&\$\\\hline \mathrm {id} &&\gtrdot &\gtrdot &\gtrdot \\+&\lessdot &\gtrdot &\lessdot &\gtrdot \\*&\lessdot &\gtrdot &\gtrdot &\gtrdot \\\$&\lessdot &\lessdot &\lessdot &\end{array}}}
+  
+
+They follow from the following facts:
+
++ has lower precedence than * (hence 
+  
+    
+      
+        +
+        ⋖
+        ∗
+      
+    
+    {\displaystyle +\lessdot *}
+  
+ and 
+  
+    
+      
+        ∗
+        ⋗
+        +
+      
+    
+    {\displaystyle *\gtrdot +}
+  
+).
+Both + and * are left-associative (hence 
+  
+    
+      
+        +
+        ⋗
+        +
+      
+    
+    {\displaystyle +\gtrdot +}
+  
+ and 
+  
+    
+      
+        ∗
+        ⋗
+        ∗
+      
+    
+    {\displaystyle *\gtrdot *}
+  
+).
+The input string
+
+  
+    
+      
+        
+          
+            i
+            d
+          
+          
+            1
+          
+        
+        +
+        
+          
+            i
+            d
+          
+          
+            2
+          
+        
+        ∗
+        
+          
+            i
+            d
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathrm {id} _{1}+\mathrm {id} _{2}*\mathrm {id} _{3}}
+  
+
+after adding end markers and inserting precedence relations becomes
+
+  
+    
+      
+        $
+        ⋖
+        
+          
+            i
+            d
+          
+          
+            1
+          
+        
+        ⋗
+        +
+        ⋖
+        
+          
+            i
+            d
+          
+          
+            2
+          
+        
+        ⋗
+        ∗
+        ⋖
+        
+          
+            i
+            d
+          
+          
+            3
+          
+        
+        ⋗
+        $
+      
+    
+    {\displaystyle \$\lessdot \mathrm {id} _{1}\gtrdot +\lessdot \mathrm {id} _{2}\gtrdot *\lessdot \mathrm {id} _{3}\gtrdot \$}
+  
+
+Operator precedence parsing
+Having precedence relations allows to identify handles as follows:
+
+scan the string from left until seeing 
+  
+    
+      
+        ⋗
+      
+    
+    {\displaystyle \gtrdot }
+  
+
+scan backwards (from right to left) over any 
+  
+    
+      
+        ≐
+      
+    
+    {\displaystyle \doteq }
+  
+ until seeing 
+  
+    
+      
+        ⋖
+      
+    
+    {\displaystyle \lessdot }
+  
+
+everything between the two relations 
+  
+    
+      
+        ⋖
+      
+    
+    {\displaystyle \lessdot }
+  
+ and 
+  
+    
+      
+        ⋗
+      
+    
+    {\displaystyle \gtrdot }
+  
+, including any intervening or surrounding nonterminals, forms the handle
+It is generally not necessary to scan the entire sentential form to find the handle.
+
+Operator precedence parsing algorithm
+The algorithm below is from Aho et al.:
+
+If $ is on the top of the stack and ip points to $ then return
+else
+    Let a be the top terminal on the stack, and b the symbol pointed to by ip
+    if a 
+  
+    
+      
+        ⋖
+      
+    
+    {\displaystyle \lessdot }
+  
+ b or a 
+  
+    
+      
+        ≐
+      
+    
+    {\displaystyle \doteq }
+  
+ b then
+        push b onto the stack
+        advance ip to the next input symbol
+    else if a 
+  
+    
+      
+        ⋗
+      
+    
+    {\displaystyle \gtrdot }
+  
+ b then
+        repeat
+            pop the stack
+        until the top stack terminal is related by 
+  
+    
+      
+        ⋖
+      
+    
+    {\displaystyle \lessdot }
+  
+ to the terminal most recently popped
+    else error()
+end
+
+Precedence functions
+An operator precedence parser usually does not store the precedence table with the relations, which can get rather large. Instead, precedence functions f and g are defined.
+They map terminal symbols to integers, and so the precedence relations between the symbols are implemented by numerical comparison:
+⁠
+  
+    
+      
+        f
+        (
+        a
+        )
+        <
+        g
+        (
+        b
+        )
+      
+    
+    {\displaystyle f(a)<g(b)}
+  
+⁠ must hold if 
+  
+    
+      
+        a
+        ⋖
+        b
+      
+    
+    {\displaystyle a\lessdot b}
+  
+ holds, etc.
+Not every table of precedence relations has precedence functions, but in practice for most grammars such functions can be designed.
+
+Algorithm for constructing precedence functions
+The below algorithm is from Aho et al.:
+
+Create symbols fa and ga for each grammar terminal a and for the end of string symbol;
+Partition the created symbols in groups so that fa and gb are in the same group if 
+  
+    
+      
+        a
+        ≐
+        b
+      
+    
+    {\displaystyle a\doteq b}
+  
+ (there can be symbols in the same group even if their terminals are not connected by this relation);
+Create a directed graph whose nodes are the groups. For each pair ⁠
+  
+    
+      
+        (
+        a
+        ,
+        b
+        )
+      
+    
+    {\displaystyle (a,b)}
+  
+⁠ of terminals do: place an edge from the group of gb to the group of fa if 
+  
+    
+      
+        a
+        ⋖
+        b
+      
+    
+    {\displaystyle a\lessdot b}
+  
+, otherwise if 
+  
+    
+      
+        a
+        ⋗
+        b
+      
+    
+    {\displaystyle a\gtrdot b}
+  
+ place an edge from the group of fa to that of gb;
+If the constructed graph has a cycle then no precedence functions exist. When there are no cycles, let ⁠
+  
+    
+      
+        f
+        (
+        a
+        )
+      
+    
+    {\displaystyle f(a)}
+  
+⁠ be the length of the longest path from the group of fa and let ⁠
+  
+    
+      
+        g
+        (
+        a
+        )
+      
+    
+    {\displaystyle g(a)}
+  
+⁠ be the length of the longest path from the group of ga.
+
+Example
+Consider the following table (repeated from above):
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                  i
+                  d
+                
+              
+              
+                +
+              
+              
+                ∗
+              
+              
+                $
+              
+            
+            
+              
+                
+                  i
+                  d
+                
+              
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+            
+            
+              
+                +
+              
+              
+                ⋖
+              
+              
+                ⋗
+              
+              
+                ⋖
+              
+              
+                ⋗
+              
+            
+            
+              
+                ∗
+              
+              
+                ⋖
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+              
+                ⋗
+              
+            
+            
+              
+                $
+              
+              
+                ⋖
+              
+              
+                ⋖
+              
+              
+                ⋖
+              
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{array}{c|cccc}&\mathrm {id} &+&*&\$\\\hline \mathrm {id} &&\gtrdot &\gtrdot &\gtrdot \\+&\lessdot &\gtrdot &\lessdot &\gtrdot \\*&\lessdot &\gtrdot &\gtrdot &\gtrdot \\\$&\lessdot &\lessdot &\lessdot &\end{array}}}
+  
+
+Using the algorithm leads to the following graph:
+
+    gid
+      \
+ fid   f*
+    \  /
+     g*
+    /
+  f+  
+   | \
+   |  g+
+   |  |
+  g$  f$
+
+from which we extract the following precedence functions from the maximum heights in the directed acyclic graph:
+
+Operator-precedence languages
+The class of languages described by operator-precedence grammars, i.e., operator-precedence languages, is strictly contained in the class of deterministic context-free languages, and strictly contains visibly pushdown languages.
+Operator-precedence languages enjoy many closure properties: union, intersection, complementation, concatenation, and they are the largest known class closed under all these operations and for which the emptiness problem is decidable. Another peculiar feature of operator-precedence languages is their local parsability, that enables efficient parallel parsing.
+There are also characterizations based on an equivalent form of automata and monadic second-order logic.

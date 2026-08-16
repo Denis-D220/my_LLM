@@ -1,0 +1,255 @@
+Thermophotovoltaic (TPV) energy conversion is a direct conversion process from heat to electricity via photons. A basic thermophotovoltaic system consists of a hot object emitting thermal radiation and a photovoltaic cell similar to a solar cell but tuned to the spectrum being emitted from the hot object.
+As TPV systems generally work at lower temperatures than solar cells, their efficiencies tend to be low. Offsetting this through the use of multi-junction cells based on non-silicon materials is common, but generally very expensive. This currently limits TPV to niche roles like spacecraft power and waste heat collection from larger systems like steam turbines.
+
+General concept
+
+PV
+Typical photovoltaics work by creating a p–n junction near the front surface of a thin semiconductor material. When photons above the bandgap energy of the material hit atoms within the bulk lower layer, below the junction, an electron is photoexcited and becomes free of its atom. The junction creates an electric field that accelerates the electron forward within the cell until it passes the junction and is free to move to the thin electrodes patterned on the surface. Connecting a wire from the front to the rear allows the electrons to flow back into the bulk and complete the circuit.
+Photons with less energy than the bandgap do not eject electrons. Photons with energy above the bandgap will eject higher-energy electrons which tend to thermalize within the material and lose their extra energy as heat. If the cell's bandgap is raised, the electrons that are emitted will have higher energy when they reach the junction and thus result in a higher voltage, but this will reduce the number of electrons emitted as more photons will be below the bandgap energy and thus generate a lower current. As electrical power is the product of voltage and current, there is a sweet spot where the total output is maximized.
+Terrestrial solar radiation is typically characterized by a standard known as Air Mass 1.5, or AM1.5. This is very close to 1,000 W of energy per square meter at an apparent temperature of 5780 K. At this temperature, about half of all the energy reaching the surface is in the infrared. Based on this temperature, energy production is maximized when the bandgap is about 1.4 eV, in the near infrared. This just happens to be very close to the bandgap in doped silicon, at 1.1 eV, which makes solar PV inexpensive to produce.
+This means that all of the energy in the infrared and lower, about half of AM1.5, goes to waste. There has been continuing research into cells that are made of several different layers, each with a different bandgap, and thus tuned to a different part of the solar spectrum. As of 2022, cells with overall efficiencies in the range of 40% are commercially available, although they are extremely expensive and have not seen widespread use outside of specific roles like powering spacecraft, where cost is not a significant consideration.
+
+TPV
+
+The same process of photoemission can be used to produce electricity from any spectrum, although the number of semiconductor materials that will have just the right bandgap for an arbitrary hot object is limited. Instead, semiconductors that have tuneable bandgaps are needed. It is also difficult to produce solar-like thermal output; an oxyacetylene torch is about 3400 K (~3126 °C), and more common commercial heat sources like coal and natural gas burn at much lower temperatures around 900 °C to about 1300 °C. This further limits the suitable materials. In the case of TPV most research has focused on gallium antimonide (GaSb), although germanium (Ge) is also suitable.
+Another problem with lower-temperature sources is that their energy is more spread out, according to Wien's displacement law. While one can make a practical solar cell with a single bandgap tuned to the peak of the spectrum and just ignore the losses in the IR region, doing the same with a lower temperature source will lose much more of the potential energy and result in very low overall efficiency. This means TPV systems almost always use multi-junction cells in order to reach reasonable double-digit efficiencies. Current research in the area aims at increasing system efficiencies while keeping the system cost low, but even then their roles tend to be niches similar to those of multi-junction solar cells.
+
+Actual designs
+TPV systems generally consist of a heat source, an emitter, and a waste heat rejection system. The TPV cells are placed between the emitter, often a block of metal or similar, and the cooling system, often a passive radiator. PV systems in general operate at lower efficiency as the temperature increases, and in TPV systems, keeping the photovoltaic cool is a significant challenge.
+This contrasts with a somewhat related concept, the "thermoradiative" or "negative emission" cells, in which the photodiode is on the hot side of the heat engine. Systems have also been proposed that use a thermoradiative device as an emitter in a TPV system, theoretically allowing power to be extracted from both a hot photodiode and a cold photodiode.
+
+Applications
+
+RTGs
+Conventional radioisotope thermoelectric generators (RTGs) used to power spacecraft use a radioactive material whose radiation is used to heat a block of material and then converted to electricity using a thermocouple. Thermocouples are very inefficient and their replacement with TPV could offer significant improvements in efficiency and thus require a smaller and lighter RTG for any given mission. Experimental systems developed by Emcore (a multi-junction solar cell provider), Creare, Oak Ridge and NASA's Glenn Research Center demonstrated 15 to 20% efficiency. A similar concept was developed by the University of Houston which reached 30% efficiency, a 3 to 4-fold improvement over existing systems.
+
+Thermoelectric storage
+Another area of active research is using TPV as the basis of a thermal storage system. In this concept, electricity being generated in off-peak times is used to heat a large block of material, typically carbon or a phase-change material. The material is surrounded by TPV cells which are in turn backed by a reflector and insulation. During storage, the TPV cells are turned off and the photons pass through them and reflect back into the high-temperature source. When power is needed, the TPV is connected to a load.
+
+Waste heat collection
+TPV cells have been proposed as auxiliary power conversion devices for capture of otherwise lost heat in other power generation systems, such as steam turbine systems or solar cells.
+
+History
+Henry Kolm constructed an elementary TPV system at MIT in 1956. However, Pierre Aigrain is widely cited as the inventor based on lectures he gave at MIT between 1960–1961 which, unlike Kolm's system, led to research and development.
+In the 1980s, efficiency reached close to 30%.
+In 1997 a prototype TPV hybrid car was built, the "Viking 29" (TPV) powered automobile, designed and built by the Vehicle Research Institute (VRI) at Western Washington University.
+In 2022, MIT/NREL announced a device with 41% efficiency. The absorber employed multiple III-V semiconductor layers tuned to absorb variously, ultraviolet, visible, and infrared photons. A gold reflector recycled unabsorbed photons. The device operated at 2400 °C, at which temperature the tungsten emitter reaches maximum brightness.
+In May 2024, researchers announced a device that achieved 44% efficiency when using silicon-carbide (SiC) as the heat storage material (emitter). At 1,435 °C (2,615 °F) the device radiates thermal photons at various energy levels. The semiconductor captures 20 to 30% of the photons. Additional layers include air and a gold reflector layer.
+
+Details
+
+Efficiency
+The upper limit for efficiency in TPVs (and all systems that convert heat energy to work) is the Carnot efficiency, that of an ideal heat engine. This efficiency is given by:
+
+  
+    
+      
+        η
+        =
+        1
+        −
+        
+          
+            
+              T
+              
+                c
+                e
+                l
+                l
+              
+            
+            
+              T
+              
+                e
+                m
+                i
+                t
+              
+            
+          
+        
+      
+    
+    {\displaystyle \eta =1-{\frac {T_{cell}}{T_{emit}}}}
+  
+
+where Tcell is the temperature of the PV converter. Practical systems can achieve Tcell= ~300 K and Temit= ~1800 K, giving a maximum possible efficiency of ~83%. This assumes the PV converts the radiation into electrical energy without losses, such as thermalization or Joule heating, though in reality the photovoltaic inefficiency is quite significant. In real devices, as of 2021, the maximum demonstrated efficiency in the laboratory was 35% with an emitter temperature of 1,773 K. This is the efficiency in terms of heat input being converted to electrical power. In complete TPV systems, a necessarily lower total system efficiency may be cited including the source of heat, so for example, fuel-based TPV systems may report efficiencies in terms of fuel-energy to electrical energy, in which case 5% is considered a "world record" level of efficiency. Real-world efficiencies are reduced by such effects as heat transfer losses, electrical conversion efficiency (TPV voltage outputs are often quite low), and losses due to active cooling of the PV cell.
+
+Emitters
+Deviations from perfect absorption and perfect black body behavior lead to light losses. For selective emitters, any light emitted at wavelengths not matched to the bandgap energy of the photovoltaic may not be efficiently converted, reducing efficiency. In particular, emissions associated with phonon resonances are difficult to avoid for wavelengths in the deep infrared, which cannot be practically converted. An ideal emitter would emit no light at wavelengths other than at the bandgap energy, and much TPV research is devoted to developing emitters that better approximate this narrow emission spectrum.
+
+Filters
+For black body emitters or imperfect selective emitters, filters reflect non-ideal wavelengths back to the emitter. These filters are imperfect. Any light that is absorbed or scattered and not redirected to the emitter or the converter is lost, generally as heat. Conversely, practical filters often reflect a small percentage of light in desired wavelength ranges. Both are inefficiencies. The absorption of suboptimal wavelengths by the photovoltaic device also contributes inefficiency and has the added effect of heating it, which also decreases efficiency.
+
+Converters
+Even for systems where only light of optimal wavelengths is passed to the photovoltaic converter, inefficiencies associated with non-radiative recombination and Ohmic losses exist. There are also losses from Fresnel reflections at the PV surface, optimal-wavelength light that passes through the cell unabsorbed, and the energy difference between higher-energy photons and the bandgap energy (though this tends to be less significant than with solar PVs). Non-radiative recombination losses tend to become less significant as the light intensity increases, while they increase with increasing temperature, so real systems must consider the intensity produced by a given design and operating temperature.
+
+Geometry
+In an ideal system, the emitter is surrounded by converters so no light is lost. Realistically, geometries must accommodate the input energy (fuel injection or input light) used to heat the emitter. Additionally, costs have prohibited surrounding the filter with converters. When the emitter reemits light, anything that does not travel to the converters is lost. Mirrors can be used to redirect some of this light back to the emitter; however, the mirrors may have their own losses.
+
+Black body radiation
+For black body emitters where photon recirculation is achieved via filters, Planck's law states that a black body emits light with a spectrum given by:
+
+  
+    
+      
+        
+          I
+          ′
+        
+        (
+        λ
+        ,
+        T
+        )
+        =
+        
+          
+            
+              2
+              h
+              
+                c
+                
+                  2
+                
+              
+            
+            
+              λ
+              
+                5
+              
+            
+          
+        
+        
+          
+            1
+            
+              
+                e
+                
+                  
+                    
+                      h
+                      c
+                    
+                    
+                      λ
+                      k
+                      T
+                    
+                  
+                
+              
+              −
+              1
+            
+          
+        
+      
+    
+    {\displaystyle I'(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{\frac {hc}{\lambda kT}}-1}}}
+  
+
+where I′ is the light flux of a specific wavelength, λ, given in units of 1 m–3⋅s–1. h is the Planck constant, k is the Boltzmann constant, c is the speed of light, and Temit is the emitter temperature. Thus, the light flux with wavelengths in a specific range can be found by integrating over the range. The peak wavelength is determined by the temperature, Temit based on Wien's displacement law:
+
+  
+    
+      
+        
+          λ
+          
+            
+              m
+              a
+              x
+            
+          
+        
+        =
+        
+          
+            b
+            T
+          
+        
+        ,
+      
+    
+    {\displaystyle \lambda _{\mathrm {max} }={\frac {b}{T}},}
+  
+
+where b is Wien's displacement constant. For most materials, the maximum temperature an emitter can stably operate at is about 1800 °C. This corresponds to an intensity that peaks at λ ≅ 1600 nm or an energy of ~0.75 eV. For more reasonable operating temperatures of 1200 °C, this drops to ~0.5 eV. These energies dictate the range of bandgaps that are needed for practical TPV converters (though the peak spectral power is slightly higher). Traditional PV materials such as Si (1.1 eV) and GaAs (1.4 eV) are substantially less practical for TPV systems, as the intensity of the black body spectrum is low at these energies for emitters at realistic temperatures.
+
+Active components and materials selection
+
+Emitters
+Efficiency, temperature resistance and cost are the three major factors for choosing a TPV emitter. Efficiency is determined by energy absorbed relative to incoming radiation. High temperature operation is crucial because efficiency increases with operating temperature. As emitter temperature increases, black-body radiation shifts to shorter wavelengths, allowing for more efficient absorption by photovoltaic cells.
+
+Polycrystalline silicon carbide
+Polycrystalline silicon carbide (SiC) is the most commonly used emitter for burner TPVs. SiC is thermally stable to ~1700 °C. However, SiC radiates much of its energy in the long wavelength regime, far lower in energy than even the narrowest bandgap photovoltaic. Such radiation is not converted into electrical energy. However, non-absorbing selective filters in front of the PV, or mirrors deposited on the back side of the PV can be used to reflect the long wavelengths back to the emitter, thereby recycling the unconverted energy. In addition, polycrystalline SiC is inexpensive.
+
+Tungsten
+Tungsten is the most common refractory metal that can be used as a selective emitter. It has higher emissivity in the visible and near-IR range of 0.45 to 0.47 and a low emissivity of 0.1 to 0.2 in the IR region. The emitter is usually in the shape of a cylinder with a sealed bottom, which can be considered a cavity. The emitter is attached to the back of a thermal absorber such as SiC and maintains the same temperature. Emission occurs in the visible and near IR range, which can be readily converted by the PV to electrical energy. However, compared to other metals, tungsten oxidizes more easily. 
+
+Rare-earth oxides
+Rare-earth oxides such as ytterbium oxide (Yb2O3) and erbium oxide (Er2O3) are the most commonly used selective emitters. These oxides emit a narrow band of wavelengths in the near-infrared region, allowing the emission spectra to be tailored to better fit the absorbance characteristics of a particular PV material. The peak of the emission spectrum occurs at 1.29 eV for Yb2O3 and 0.827 eV for Er2O3. As a result, Yb2O3 can be used a selective emitter for silicon cells and Er2O3, for GaSb or InGaAs. However, the slight mismatch between the emission peaks and band gap of the absorber costs significant efficiency. Selective emission only becomes significant at 1100 °C and increases with temperature. Below 1700 °C, selective emission of rare-earth oxides is fairly low, further decreasing efficiency. Currently, 13% efficiency has been achieved with Yb2O3 and silicon PV cells. In general selective emitters have had limited success. More often filters are used with black body emitters to pass wavelengths matched to the bandgap of the PV and reflect mismatched wavelengths back to the emitter.
+
+Photonic crystals
+Photonic crystals allow precise control of electromagnetic wave properties. These materials give rise to the photonic bandgap (PBG). In the spectral range of the PBG, electromagnetic waves cannot propagate. Engineering these materials allows some ability to tailor their emission and absorption properties, allowing for more effective emitter design. Selective emitters with peaks at higher energy than the black body peak (for practical TPV temperatures) allow for wider bandgap converters. These converters are traditionally cheaper to manufacture and less temperature sensitive. Researchers at Sandia Labs predicted a high-efficiency (34% of light emitted converted to electricity) based on TPV emitter demonstrated using tungsten photonic crystals. However, manufacturing of these devices is difficult and not commercially feasible.
+
+Photovoltaic cells
+
+Silicon
+Early TPV work focused on the use of silicon. Silicon's commercial availability, low cost, scalability and ease of manufacture makes this material an appealing candidate. However, the relatively wide bandgap of Si (1.1eV) is not ideal for use with a black body emitter at lower operating temperatures. Calculations indicate that Si PVs are only feasible at temperatures much higher than 2000 K. No emitter has been demonstrated that can operate at these temperatures. These engineering difficulties led to the pursuit of lower-bandgap semiconductor PVs.
+Using selective radiators with Si PVs is still a possibility. Selective radiators would eliminate high and low energy photons, reducing heat generated. Ideally, selective radiators would emit no radiation beyond the band edge of the PV converter, increasing conversion efficiency significantly. No efficient TPVs have been realized using Si PVs.
+
+Germanium
+Early investigations into low bandgap semiconductors focused on germanium (Ge). Ge has a bandgap of 0.66 eV, allowing for conversion of a much higher fraction of incoming radiation. However, poor performance was observed due to the high effective electron mass of Ge. Compared to III-V semiconductors, Ge's high electron effective mass leads to a high density of states in the conduction band and therefore a high intrinsic carrier concentration. As a result, Ge diodes have fast decaying "dark" current and therefore, a low open-circuit voltage. In addition, surface passivation of germanium has proven difficult.
+
+Gallium antimonide
+The gallium antimonide (GaSb) PV cell, invented in 1989, is the basis of most PV cells in modern TPV systems. GaSb is a III-V semiconductor with the zinc blende crystal structure. The GaSb cell is a key development owing to its narrow bandgap of 0.72 eV. This allows GaSb to respond to light at longer wavelengths than silicon solar cell, enabling higher power densities in conjunction with manmade emission sources. A solar cell with 35% efficiency was demonstrated using a bilayer PV with GaAs and GaSb, setting the solar cell efficiency record.
+Manufacturing a GaSb PV cell is quite simple. Czochralski tellurium-doped n-type GaSb wafers are commercially available. Vapor-based zinc diffusion is carried out at elevated temperatures (~450 °C) to allow for p-type doping. Front and back electrical contacts are patterned using traditional photolithography techniques and an anti-reflective coating is deposited. Efficiencies are estimated at ~20% using a 1000 °C black body spectrum. The radiative limit for efficiency of the GaSb cell in this setup is 52%.
+
+Indium gallium arsenide antimonide
+Indium gallium arsenide antimonide (InGaAsSb) is a compound III-V semiconductor. (InxGa1−xAsySb1−y) The addition of GaAs allows for a narrower bandgap (0.5 to 0.6 eV), and therefore better absorption of long wavelengths. Specifically, the bandgap was engineered to 0.55 eV. With this bandgap, the compound achieved a photon-weighted internal quantum efficiency of 79% with a fill factor of 65% for a black body at 1100 °C. This was for a device grown on a GaSb substrate by organometallic vapour phase epitaxy (OMVPE). Devices have been grown by molecular beam epitaxy (MBE) and liquid phase epitaxy (LPE). The internal quantum efficiencies (IQE) of these devices approach 90%, while devices grown by the other two techniques exceed 95%. The largest problem with InGaAsSb cells is phase separation. Compositional inconsistencies throughout the device degrade its performance. When phase separation can be avoided, the IQE and fill factor of InGaAsSb approach theoretical limits in wavelength ranges near the bandgap energy. However, the Voc/Eg ratio is far from the ideal. Current methods to manufacture InGaAsSb PVs are expensive and not commercially viable.
+
+Indium gallium arsenide
+Indium gallium arsenide (InGaAs) is a compound III-V semiconductor. It can be applied in two ways for use in TPVs. When lattice-matched to an InP substrate, InGaAs has a bandgap of 0.74 eV, no better than GaSb. Devices of this configuration have been produced with a fill factor of 69% and an efficiency of 15%. However, to absorb higher wavelength photons, the bandgap may be engineered by changing the ratio of In to Ga. The range of bandgaps for this system is from about 0.4 to 1.4 eV. However, these different structures cause strain with the InP substrate. This can be controlled with graded layers of InGaAs with different compositions. This was done to develop of device with a quantum efficiency of 68% and a fill factor of 68%, grown by MBE. This device had a bandgap of 0.55 eV, achieved in the compound In0.68Ga0.33As. It is a well-developed material. InGaAs can be made to lattice match perfectly with Ge resulting in low defect densities. Ge as a substrate is a significant advantage over more expensive or harder-to-produce substrates.
+
+Indium phosphide arsenide antimonide
+The InPAsSb quaternary alloy has been grown by both OMVPE and LPE. When lattice-matched to InAs, it has a bandgap in the range 0.3–0.55 eV. The benefits of such a low band gap have not been studied in depth. Therefore, cells incorporating InPAsSb have not been optimized and do not yet have competitive performance. The longest spectral response from an InPAsSb cell studied was 4.3 μm with a maximum response at 3 μm. For this and other low-bandgap materials, high IQE for long wavelengths is hard to achieve due to an increase in Auger recombination.
+
+Lead tin selenide/Lead strontium selenide quantum wells
+PbSnSe/PbSrSe quantum well materials, which can be grown by MBE on silicon substrates, have been proposed for low cost TPV device fabrication. These IV-VI semiconductor materials can have bandgaps between 0.3 and 0.6 eV.  Their symmetric band structure and lack of valence band degeneracy result in low Auger recombination rates, typically more than an order of magnitude smaller than those of comparable bandgap III-V semiconductor materials.
+
+Applications
+TPVs promise efficient and economically viable power systems for both military and commercial applications. Compared to traditional nonrenewable energy sources, burner TPVs have little NOx emissions and are virtually silent. Solar TPVs are a source of emission-free renewable energy. TPVs can be more efficient than PV systems owing to recycling of unabsorbed photons. However, losses at each energy conversion step lower efficiency. When TPVs are used with a burner source, they provide on-demand energy. As a result, energy storage may not be needed. In addition, owing to the PV's proximity to the radiative source, TPVs can generate current densities 300 times that of conventional PVs.
+
+Energy storage
+
+Man-portable power
+Battlefield dynamics require portable power. Conventional diesel generators are too heavy for use in the field. Scalability allows TPVs to be smaller and lighter than conventional generators. Also, TPVs have few emissions and are silent. Multifuel operation is another potential benefit.
+Investigations in the 1970s failed due to PV limitations. However, the GaSb photocell led to a renewed effort in the 1990s with improved results. In early 2001, JX Crystals delivered a TPV based battery charger to the US Army that produced 230 W fueled by propane. This prototype utilized an SiC emitter operating at 1250 °C and GaSb photocells and was approximately 0.5 m tall. The power source had an efficiency of 2.5%, calculated as the ratio of the power generated to the thermal energy of the fuel burned. This is too low for practical battlefield use. No portable TPV power sources have reached troop testing.
+
+Grid storage
+Converting spare electricity into heat for high-volume, long-term storage is under research at various companies, who claim that costs could be much lower than lithium-ion batteries. Graphite may be used as a storage medium, with molten tin as heat transfer, at temperatures around 2000°. See LaPotin, A., Schulte, K.L., Steiner, M.A. et al. Thermophotovoltaic efficiency of 40%. Nature 604, 287–291 (2022).
+
+Spacecraft
+Space power generation systems must provide consistent and reliable power without large amounts of fuel. As a result, solar and radioisotope fuels (extremely high power density and long lifetime) are ideal. TPVs have been proposed for each. In the case of solar energy, orbital spacecraft may be better locations for the large and potentially cumbersome concentrators required for practical TPVs. However, weight considerations and inefficiencies associated with the more complicated design of TPVs, protected conventional PVs continue to dominate.
+The output of isotopes is thermal energy. In the past thermoelectricity (direct thermal to electrical conversion with no moving parts) has been used because TPV efficiency is less than the ~10% of thermoelectric converters. Stirling engines have been deemed too unreliable, despite conversion efficiencies >20%. However, with the recent advances in small-bandgap PVs, TPVs are becoming more promising. A TPV radioisotope converter with 20% efficiency was demonstrated that uses a tungsten emitter heated to 1350 K, with tandem filters and a 0.6 eV bandgap InGaAs PV converter (cooled to room temperature). About 30% of the lost energy was due to the optical cavity and filters. The remainder was due to the efficiency of the PV converter.
+Low-temperature operation of the converter is critical to the efficiency of TPV. Heating PV converters increases their dark current, thereby reducing efficiency. The converter is heated by the radiation from the emitter. In terrestrial systems it is reasonable to dissipate this heat without using additional energy with a heat sink. However, space is an isolated system, where heat sinks are impractical. Therefore, it is critical to develop innovative solutions to efficiently remove that heat. Both represent substantial challenges.
+
+Commercial applications
+
+Off-grid generators
+TPVs can provide continuous power to off-grid homes. Traditional PVs do not provide power during winter months and nighttime, while TPVs can utilize alternative fuels to augment solar-only production.
+The greatest advantage for TPV generators is cogeneration of heat and power. In cold climates, it can function as both a heater/stove and a power generator. JX Crystals developed a prototype TPV heating stove/generator that burns natural gas and uses a SiC source emitter operating at 1250 °C and GaSb photocell to output 25,000 BTU/hr (7.3kW of heat) simultaneously generating 100W (1.4% efficiency). However, costs render it impractical.
+Combining a heater and a generator is called combined heat and power (CHP). Many TPV CHP scenarios have been theorized, but a  study found that generator using boiling coolant was most cost efficient. The proposed CHP would utilize a SiC IR emitter operating at 1425 °C and GaSb photocells cooled by boiling coolant. The TPV CHP would output 85,000 BTU/hr (25kW of heat) and generate 1.5 kW. The estimated efficiency would be 12.3% (?)(1.5kW/25kW = 0.06 = 6%) requiring investment or 0.08 €/kWh assuming a 20 year lifetime. The estimated cost of other non-TPV CHPs are 0.12 €/kWh for gas engine CHP and 0.16 €/kWh for fuel cell CHP. This furnace was not commercialized  because the market was not thought to be large enough.
+
+Recreational vehicles
+TPVs have been proposed for use in recreational vehicles. Their ability to use multiple fuel sources makes them interesting as more sustainable fuels emerge. TPVs silent operation allows them to replace noisy conventional generators (i.e. during "quiet hours" in national park campgrounds). However, the emitter temperatures required for practical efficiencies make TPVs on this scale unlikely.

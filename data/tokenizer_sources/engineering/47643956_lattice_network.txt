@@ -1,0 +1,5873 @@
+A symmetrical lattice is a two-port electrical wave filter in which diagonally-crossed shunt elements are present – a configuration which sets it apart from ladder networks. The component arrangement of the lattice is shown in the diagram below. The filter properties of this circuit were first developed using image impedance concepts, but later the more general techniques of network analysis were applied to it.
+There is a duplication of components in the lattice network as the "series impedances" (instances of Za) and "shunt impedances" (instances of Zb) both occur twice, an arrangement that offers increased flexibility to the circuit designer with a variety of responses achievable. It is possible for the lattice network to have the characteristics of: a delay network, an amplitude or phase correcting network, a dispersive network or as a linear phase filter, according to the choice of components for the lattice elements.
+
+Configuration
+The basic configuration of the symmetrical lattice is shown in the left-hand diagram. A commonly used short-hand version is shown on the right, with dotted lines indicating the presence the second pair of matching impedances.
+
+It is possible with this circuit to have the characteristic impedance specified independently of its transmission properties, a feature not available to ladder filter structures. In addition, it is possible to design the circuit to be a constant-resistance network for a range of circuit characteristics.
+The lattice structure can be converted to an unbalanced form (see below), for insertion in circuits with a ground plane. Such conversions also reduce the component count and relax component tolerances.
+It is possible to redraw the lattice in the Wheatstone bridge configuration (as shown in the article Zobel network). However, this is not a convenient format in which to investigate the properties of lattice filters, especially their behavior in cascade.
+
+Basic properties
+
+Results from image theory
+Filter theory was initially developed from earlier studies of transmission lines. In this theory, a filter section is specified in terms of its propagation constant and image impedance (or characteristic impedance).
+Specifically for the lattice, the propagation function, γ, and characteristic impedance, Zo, are defined by,
+
+  
+    
+      
+        γ
+        =
+        ln
+        ⁡
+        
+          (
+          
+             
+            
+              
+                
+                   
+                  
+                    
+                      
+                        
+                          
+                             
+                            
+                              Z
+                              
+                                
+                                  a
+                                
+                              
+                            
+                             
+                          
+                          
+                            Z
+                            
+                              
+                                b
+                              
+                            
+                          
+                        
+                      
+                      +
+                      1
+                       
+                    
+                  
+                   
+                
+                
+                   
+                  
+                    
+                       
+                      
+                        
+                          
+                             
+                            
+                              Z
+                              
+                                
+                                  a
+                                
+                              
+                            
+                             
+                          
+                          
+                            Z
+                            
+                              
+                                b
+                              
+                            
+                          
+                        
+                      
+                      −
+                      1
+                       
+                    
+                  
+                   
+                
+              
+            
+             
+          
+          )
+        
+        =
+        2
+         
+        artanh
+        ⁡
+        
+          
+            
+              
+                
+                   
+                  
+                    Z
+                    
+                      
+                        a
+                      
+                    
+                  
+                   
+                
+                
+                  Z
+                  
+                    
+                      b
+                    
+                  
+                
+              
+            
+             
+          
+        
+        
+        
+      
+    
+    {\displaystyle \gamma =\ln \left(\ {\frac {\ {\sqrt {{\frac {\ Z_{\mathsf {a}}\ }{Z_{\mathsf {b}}}}+1\ }}\ }{\ {\sqrt {\ {\frac {\ Z_{\mathsf {a}}\ }{Z_{\mathsf {b}}}}-1\ }}\ }}\ \right)=2\ \operatorname {artanh} {\sqrt {{\frac {\ Z_{\mathsf {a}}\ }{Z_{\mathsf {b}}}}\ }}\qquad \;}
+  
+  and  
+  
+    
+      
+        
+        
+        
+          Z
+          
+            
+              o
+            
+          
+        
+        =
+        
+          
+             
+            
+              Z
+              
+                
+                  a
+                
+              
+            
+            ⋅
+            
+              Z
+              
+                
+                  b
+                
+              
+            
+             
+          
+        
+      
+    
+    {\displaystyle \;\qquad Z_{\mathsf {o}}={\sqrt {\ Z_{\mathsf {a}}\cdot Z_{\mathsf {b}}\ }}}
+  
+
+Once γ and Zo have been chosen, solutions can be found for 
+  
+    
+      
+        
+        
+          
+            
+               
+              
+                Z
+                
+                  
+                    a
+                  
+                
+              
+               
+            
+            
+              Z
+              
+                
+                  b
+                
+              
+            
+          
+        
+        
+      
+    
+    {\displaystyle \;{\frac {\ Z_{\mathsf {a}}\ }{Z_{\mathsf {b}}}}\;}
+  
+  and  
+  
+    
+      
+        
+        
+          Z
+          
+            
+              a
+            
+          
+        
+        ⋅
+        
+          Z
+          
+            
+              b
+            
+          
+        
+        
+      
+    
+    {\displaystyle \;Z_{\mathsf {a}}\cdot Z_{\mathsf {b}}\;}
+  
+ from which the characteristics of  Za  and  Zb 
+can each be determined. (In practice, the choices for  γ  and  zo  are restricted to those which result in physically realisable impedances for Za and Zb .)
+Although a filter circuit may have one or more pass-bands and possibly several stop-bands (or attenuation regions), only networks with a single pass-band are considered here.
+In the pass-band of the circuit, the product  Za × Zb  is real (i.e. Zo is resistive) and may be equated to Ro, the terminating resistance of the filter. So
+
+  
+    
+      
+        
+          Z
+          
+            
+              a
+            
+          
+        
+         
+        
+          Z
+          
+            
+              b
+            
+          
+        
+        =
+        
+          R
+          
+            
+              o
+            
+          
+          
+            2
+          
+        
+        
+        
+      
+    
+    {\displaystyle Z_{\mathsf {a}}\ Z_{\mathsf {b}}=R_{\mathsf {o}}^{2}\qquad \;}
+  
+  or  
+  
+    
+      
+        
+        
+        
+          
+            
+               
+              
+                Z
+                
+                  
+                    a
+                  
+                
+              
+               
+            
+            
+              R
+              
+                
+                  o
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+               
+              
+                R
+                
+                  
+                    o
+                  
+                
+              
+               
+            
+            
+              Z
+              
+                
+                  b
+                
+              
+            
+          
+        
+        
+        
+      
+    
+    {\displaystyle \;\qquad {\frac {\ Z_{\mathsf {a}}\ }{R_{\mathsf {o}}}}={\frac {\ R_{\mathsf {o}}\ }{Z_{\mathsf {b}}}}\qquad \;}
+  
+  (for frequencies in the passband)
+That is, the impedances behave as duals of each other within this frequency range.
+In the attenuation range of the filter, the characteristic impedance of the filter is purely imaginary, and
+
+  
+    
+      
+        
+          Z
+          
+            
+              a
+            
+          
+        
+        =
+        
+          Z
+          
+            
+              b
+            
+          
+        
+        
+        
+        
+        
+      
+    
+    {\displaystyle Z_{\mathsf {a}}=Z_{\mathsf {b}}\qquad \qquad \qquad \;}
+  
+ (for frequencies in the attenuation band)
+Consequently, in order to achieve a specific characteristic, the reactances within  Za  and  Zb  are chosen so that their resonant and anti-resonant frequencies are duals of each other in the passband, and match one another in the stopband. The transition region of the filter, where a change from one set of conditions to another occurs, can be made as narrow as required by increasing the complexity of  Za  and  Zb . The phase response of the filter in the pass-band is governed by the locations (spacings) of the resonant and anti-resonant frequencies of Za and Zb .
+For convenience, the normalised parameters  yo  and  zo  are defined by
+
+  
+    
+      
+        
+          y
+          
+            
+              o
+            
+          
+        
+        =
+        
+          
+            
+              
+                
+                   
+                  
+                    Z
+                    
+                      
+                        b
+                      
+                    
+                  
+                   
+                
+                
+                  Z
+                  
+                    
+                      a
+                    
+                  
+                
+              
+            
+             
+          
+        
+        =
+        
+          
+            
+              
+                
+                   
+                  
+                    z
+                    
+                      
+                        b
+                      
+                    
+                  
+                   
+                
+                
+                  z
+                  
+                    
+                      a
+                    
+                  
+                
+              
+            
+             
+          
+        
+        
+        
+      
+    
+    {\displaystyle y_{\mathsf {o}}={\sqrt {{\frac {\ Z_{\mathsf {b}}\ }{Z_{\mathsf {a}}}}\ }}={\sqrt {{\frac {\ z_{\mathsf {b}}\ }{z_{\mathsf {a}}}}\ }}\qquad \;}
+  
+  and  
+  
+    
+      
+        
+        
+        
+          z
+          
+            
+              o
+            
+          
+        
+        =
+        
+          
+             
+            
+              z
+              
+                
+                  a
+                
+              
+            
+            ⋅
+            
+              z
+              
+                
+                  b
+                
+              
+            
+             
+          
+        
+        =
+        
+          
+            
+               
+              
+                Z
+                
+                  
+                    o
+                  
+                
+              
+               
+            
+            
+              R
+              
+                
+                  o
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \;\qquad z_{\mathsf {o}}={\sqrt {\ z_{\mathsf {a}}\cdot z_{\mathsf {b}}\ }}={\frac {\ Z_{\mathsf {o}}\ }{R_{\mathsf {o}}}}}
+  
+
+where normalised values 
+  
+    
+      
+        
+        
+          z
+          
+            
+              a
+            
+          
+        
+        =
+        
+          
+            
+               
+              
+                Z
+                
+                  
+                    a
+                  
+                
+              
+               
+            
+            
+              R
+              
+                
+                  o
+                
+              
+            
+          
+        
+        
+      
+    
+    {\displaystyle \;z_{\mathsf {a}}={\frac {\ Z_{\mathsf {a}}\ }{R_{\mathsf {o}}}}\;}
+  
+ and 
+  
+    
+      
+        
+        
+          z
+          
+            
+              b
+            
+          
+        
+        =
+        
+          
+            
+               
+              
+                Z
+                
+                  
+                    b
+                  
+                
+              
+               
+            
+            
+              R
+              
+                
+                  o
+                
+              
+            
+          
+        
+        
+      
+    
+    {\displaystyle \;z_{\mathsf {b}}={\frac {\ Z_{\mathsf {b}}\ }{R_{\mathsf {o}}}}\;}
+  
+ have been introduced. The parameter  yo  is termed the index function and  zo is the normalised characteristic impedance of the network. The parameter yo  is approximately 1 in the attenuation region;  zo  is approximately 1 in the transmission region.
+
+Cascaded lattices
+All high-order lattice networks can be replaced by a cascade of simpler lattices, provided their characteristic impedances are all equal to that of the original and the sum of their propagation functions equals the original. In the particular case of all-pass networks (networks which modify the phase characteristic only), any given network can always be replaced by a cascade of second-order lattices together with, possibly, one single first order lattice.
+Whatever the filter requirements being considered, the reduction process results in simpler filter structures, with less stringent demands on component tolerances.
+
+The shortcomings of image theory
+The filter characteristics predicted by image theory require a correctly terminated network. As the necessary terminations are often impossible to achieve, resistors are commonly used as the terminations, resulting in a mismatched filter. Consequently, the predicted amplitude and phase responses of the circuit will no longer be as image theory predicts. In the case of a low-pass filter, for example, where the mismatch is most severe near the cut-off frequency, the transition from pass-band to stop-band is far less sharp than expected.
+The figure below illustrates the issue: A lattice filter, equivalent to two sections of constant k low-pass filter, has been derived by image methods. (The network is normalised, with 
+  
+    
+      
+        
+        L
+        =
+        1
+        
+      
+    
+    {\displaystyle \;L=1\;}
+  
+ and 
+  
+    
+      
+        
+        C
+        =
+        1
+        
+        ,
+      
+    
+    {\displaystyle \;C=1\;,}
+  
+  so  
+  
+    
+      
+        
+        
+          R
+          
+            
+              o
+            
+          
+        
+        =
+        
+          
+             
+            
+              
+                
+                  
+                     
+                    L
+                     
+                  
+                  C
+                
+              
+            
+             
+          
+        
+        =
+        1
+        
+      
+    
+    {\displaystyle \;R_{\mathsf {o}}={\sqrt {\ {\tfrac {\ L\ }{C}}\ }}=1\;}
+  
+  and  
+  
+    
+      
+        
+        
+          ω
+          
+            
+              c
+            
+          
+        
+        =
+        2
+         
+        
+          
+             
+            L
+             
+            C
+             
+          
+        
+        =
+        2
+         
+        .
+      
+    
+    {\displaystyle \;\omega _{\mathsf {c}}=2\ {\sqrt {\ L\ C\ }}=2~.}
+  
+ The left-hand figure gives the lattice circuit and the right-hand figure gives the insertion loss with the network terminated (1) resistively, and (2) in its correct characteristic impedances.
+
+To minimise the mismatch problem, various forms of image filter end terminations were proposed by Zobel and others, but the inevitable compromises led to the method falling out of favour. It was replaced by the more exact methods of network analysis and network synthesis.
+
+Results derived by network analysis
+This diagram shows the general circuit for the symmetrical lattice:
+
+Through mesh analysis or nodal analysis of the circuit, its full transfer function can be found. That is,
+
+  
+    
+      
+        
+          
+            
+              v
+              
+                out
+              
+            
+            
+              v
+              
+                in
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                Z
+                
+                  L
+                
+              
+              (
+              
+                Z
+                
+                  b
+                
+              
+              −
+              
+                Z
+                
+                  a
+                
+              
+              )
+            
+            
+              (
+              
+                Z
+                
+                  a
+                
+              
+              +
+              
+                Z
+                
+                  b
+                
+              
+              )
+              (
+              
+                Z
+                
+                  S
+                
+              
+              +
+              
+                Z
+                
+                  L
+                
+              
+              )
+              +
+              2
+              (
+              
+                Z
+                
+                  a
+                
+              
+              
+                Z
+                
+                  b
+                
+              
+              +
+              
+                Z
+                
+                  S
+                
+              
+              
+                Z
+                
+                  L
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {v_{\text{out}}}{v_{\text{in}}}}={\frac {Z_{L}(Z_{b}-Z_{a})}{(Z_{a}+Z_{b})(Z_{S}+Z_{L})+2(Z_{a}Z_{b}+Z_{S}Z_{L})}}}
+  
+
+The input and output impedances (Zin and Zout) of the network are given by
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  Z
+                  
+                    in
+                  
+                
+                =
+                
+                  
+                    
+                      2
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          L
+                        
+                      
+                      (
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      )
+                    
+                    
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      +
+                      2
+                      
+                        Z
+                        
+                          L
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  Z
+                  
+                    out
+                  
+                
+                =
+                
+                  
+                    
+                      2
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          S
+                        
+                      
+                      (
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      )
+                    
+                    
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      +
+                      2
+                      
+                        Z
+                        
+                          S
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}Z_{\text{in}}={\frac {2Z_{a}Z_{b}+Z_{L}(Z_{a}+Z_{b})}{Z_{a}+Z_{b}+2Z_{L}}}\\[1ex]Z_{\text{out}}={\frac {2Z_{a}Z_{b}+Z_{S}(Z_{a}+Z_{b})}{Z_{a}+Z_{b}+2Z_{S}}}\end{aligned}}}
+  
+
+These equations are exact, for all realisable impedance values, unlike image theory where the propagation function only predicts performance accurately when ZS and ZL are the matching characteristic impedances of the network.
+The equations can be simplified by making a number of assumptions. Firstly, networks are often sourced and terminated by resistors of the same value R0 so that ZS = ZL = R0 and the equations become
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      v
+                      
+                        out
+                      
+                    
+                    
+                      v
+                      
+                        in
+                      
+                    
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        R
+                        
+                          0
+                        
+                      
+                      (
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      −
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      )
+                    
+                    
+                      2
+                      (
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      +
+                      
+                        R
+                        
+                          0
+                        
+                      
+                      )
+                      (
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      +
+                      
+                        R
+                        
+                          0
+                        
+                      
+                      )
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  Z
+                  
+                    in
+                  
+                
+                =
+                
+                  Z
+                  
+                    out
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      2
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      +
+                      
+                        R
+                        
+                          0
+                        
+                      
+                      (
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      )
+                    
+                    
+                      
+                        Z
+                        
+                          a
+                        
+                      
+                      +
+                      
+                        Z
+                        
+                          b
+                        
+                      
+                      +
+                      2
+                      
+                        R
+                        
+                          0
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{\frac {v_{\text{out}}}{v_{\text{in}}}}&={\frac {R_{0}(Z_{b}-Z_{a})}{2(Z_{a}+R_{0})(Z_{b}+R_{0})}}\\[1ex]Z_{\text{in}}=Z_{\text{out}}&={\frac {2Z_{a}\,Z_{b}+R_{0}(Z_{a}+Z_{b})}{Z_{a}+Z_{b}+2R_{0}}}\end{aligned}}}
+  
+
+Secondly, if the impedances Za and Zb are duals of one another, so that Za Zb = R02, then further simplification is possible:
+
+  
+    
+      
+        
+          
+            
+              v
+              
+                out
+              
+            
+            
+              v
+              
+                in
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                R
+                
+                  0
+                
+              
+              −
+              
+                Z
+                
+                  a
+                
+              
+            
+            
+              2
+              (
+              
+                R
+                
+                  0
+                
+              
+              +
+              
+                Z
+                
+                  a
+                
+              
+              )
+            
+          
+        
+        =
+        
+          
+            
+              
+                Z
+                
+                  b
+                
+              
+              −
+              
+                R
+                
+                  0
+                
+              
+            
+            
+              2
+              (
+              
+                R
+                
+                  0
+                
+              
+              +
+              
+                Z
+                
+                  b
+                
+              
+              )
+            
+          
+        
+        
+        
+          and
+        
+        
+        
+          Z
+          
+            in
+          
+        
+        =
+        
+          Z
+          
+            out
+          
+        
+        =
+        
+          R
+          
+            0
+          
+        
+      
+    
+    {\displaystyle {\frac {v_{\text{out}}}{v_{\text{in}}}}={\frac {R_{0}-Z_{a}}{2(R_{0}+Z_{a})}}={\frac {Z_{b}-R_{0}}{2(R_{0}+Z_{b})}}\qquad {\text{and}}\qquad Z_{\text{in}}=Z_{\text{out}}=R_{0}}
+  
+
+so such networks are constant-resistance networks.
+Finally, for normalised networks, with R0 = 1,
+
+  
+    
+      
+        
+          
+            
+              v
+              
+                out
+              
+            
+            
+              v
+              
+                in
+              
+            
+          
+        
+        =
+        
+          
+            
+              (
+              1
+              −
+              
+                z
+                
+                  a
+                
+              
+              )
+            
+            
+              2
+              (
+              1
+              +
+              
+                z
+                
+                  a
+                
+              
+              )
+            
+          
+        
+        =
+        
+          
+            
+              (
+              
+                z
+                
+                  b
+                
+              
+              −
+              1
+              )
+            
+            
+              2
+              (
+              1
+              +
+              
+                z
+                
+                  b
+                
+              
+              )
+            
+          
+        
+        
+        
+        
+          and
+        
+        
+        
+          z
+          
+            in
+          
+        
+        =
+        
+          z
+          
+            out
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle {\frac {v_{\text{out}}}{v_{\text{in}}}}={\frac {(1-z_{a})}{2(1+z_{a})}}={\frac {(z_{b}-1)}{2(1+z_{b})}}\qquad \qquad {\text{and}}\qquad z_{\text{in}}=z_{\text{out}}=1}
+  
+
+If the impedances Za and Zb (or the normalised impedances za and zb) are pure reactances, then the networks become all-pass, constant-resistance, with a flat frequency response but a variable phase response. This makes them ideal as delay networks and phase equalisers.
+When resistors are present within Za and Zb then, provided the duality condition still applies, a circuit will be constant-resistance but have a variable amplitude response. One application for such circuits is as amplitude equalisers.
+
+Conversions and equivalences
+(See references)
+
+T to lattice
+
+Pi to lattice
+
+Common series element
+
+Common parallel element
+
+Combining two lattices into one
+
+Lattice to T (see also the next section)
+
+This lattice-to-T conversion only gives a realisable circuit when the evaluation of (Zb − Za) / 2 gives positive valued components. For other situations, the bridged-T may provide a solution, as discussed in the next section.
+
+Unbalanced equivalents
+The lattice is a balanced configuration which is not suitable for some applications. In such cases it is necessary to convert the circuit to an electrically equivalent unbalanced form. This provides benefits, including reduced component count and relaxed circuit tolerances. The simple conversion procedure shown in the previous section can only be applied in a limited set of conditions – generally, some form of bridged-T circuit is necessary. Many of the conversions require the inclusion of a 1:1 ideal transformer, but there are some configurations which avoid this requirement, and one example is shown below.
+This conversion procedure starts by using the property of a lattice where a common series element in all arms can be taken outside the lattice as two series elements (as shown above). By repeatedly applying this property, components can be extracted from within the lattice structure. Finally, by means of Bartlett's bisection theorem, an unbalanced bridged-T circuit is achieved.
+In the left-hand figure, the Za arm has a shunt capacitor, Ca, and the Zb arm has a series capacitor, Cb. Consequently, Za consists of Ca in parallel with Za′, and Zb consists of Cb in series with Zb′. This can be developed into the unbalanced bridged-T shown, provided Ca > Cb.
+
+(An alternative version of this circuit has the T configuration of capacitors replaced by a Pi (or Delta) arrangement. For this T to Pi conversion, see the equations in Attenuator (electronics)).
+When Cb > Ca, an alternative procedure is necessary, where common inductors are first extracted from the lattice arms. As shown, an inductor La shunts Za′ and an inductor Lb is in series with Zb′. This leads to the alternative bridged-T circuit on the right.
+
+If La > Lb, then the negative-valued inductor can be achieved by means of mutually coupled coils. To achieve a negative mutual inductance, the two coupled inductors L1 and L2 are wound 'series-aiding'.
+
+So finally, the bridged-T circuit takes the form
+
+Bridged-T circuits like these may be used in delay and phase-correcting networks.
+Another lattice configuration, containing resistors, is shown below. It has shunt resistors Ro across the Za’s and series resistors Ro as part of the Zb's, as shown in the left hand figure. It is easily converted to an unbalanced bridged-T circuit, as shown on the right.
+
+When Z1Z2 = R02 it becomes a constant resistance network, which has an insertion loss given by 
+  
+    
+      
+        T
+        (
+        p
+        )
+        =
+        
+          
+            
+              R
+              
+                0
+              
+            
+            
+              
+                R
+                
+                  0
+                
+              
+              +
+              
+                Z
+                
+                  1
+                
+              
+              (
+              p
+              )
+            
+          
+        
+      
+    
+    {\displaystyle T(p)={\frac {R_{0}}{R_{0}+Z_{1}(p)}}}
+  
+
+When normalized to 1ohm, the source, load and R0 are all unity, so Z1.Z2 = 1, and the insertion loss becomes
+
+  
+    
+      
+        T
+        (
+        p
+        )
+        =
+        
+          
+            1
+            
+              1
+              +
+              
+                Z
+                
+                  1
+                
+              
+              (
+              p
+              )
+            
+          
+        
+      
+    
+    {\displaystyle T(p)={\frac {1}{1+Z_{1}(p)}}}
+  
+
+In the past, circuits configured in this way were very popular as amplitude equalisers. For example, they were used to correct for the high frequency losses in telephone cables and in long runs of coaxial cable for television installations.
+An example, showing the design procedure for a simple equaliser, is given in the section on synthesis, later.
+
+All-pass networks
+(See previously quoted references to Zobel, Darlington, Bode and Guillemin. Also see Stewart and Weinberg.)
+All-pass networks are an important sub-class of lattice networks. They have been used as passive lumped-element delays, as phase correctors for filter networks and in dispersive networks. They are constant-resistance networks so they can be cascaded with each other and with other circuits without introducing mismatch problems.
+In the case of all-pass networks, there is no attenuation region, so the impedances Za and Zb (of the lattice) are duals of each other at all frequencies and Z0 is always resistive, equal to R0.
+i.e.,
+
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        
+          Z
+          
+            b
+          
+        
+        =
+        
+          R
+          
+            0
+          
+          
+            2
+          
+        
+        
+        
+        
+          (at all frequencies)
+        
+      
+    
+    {\displaystyle Z_{a}Z_{b}=R_{0}^{2}\qquad \qquad {\text{(at all frequencies)}}}
+  
+
+For normalised networks, where R0 = 1, the transfer function T(p) can be written
+
+  
+    
+      
+        T
+        (
+        p
+        )
+        =
+        
+          
+            
+              1
+              −
+              
+                z
+                
+                  a
+                
+              
+              (
+              p
+              )
+            
+            
+              1
+              +
+              
+                z
+                
+                  a
+                
+              
+              (
+              p
+              )
+            
+          
+        
+        =
+        
+          
+            
+              
+                z
+                
+                  b
+                
+              
+              (
+              p
+              )
+              −
+              1
+            
+            
+              
+                z
+                
+                  b
+                
+              
+              (
+              p
+              )
+              +
+              1
+            
+          
+        
+      
+    
+    {\displaystyle T(p)={\frac {1-z_{a}(p)}{1+z_{a}(p)}}={\frac {z_{b}(p)-1}{z_{b}(p)+1}}}
+  
+
+and so
+
+  
+    
+      
+        
+          z
+          
+            a
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            
+              1
+              −
+              T
+              (
+              p
+              )
+            
+            
+              1
+              +
+              T
+              (
+              p
+              )
+            
+          
+        
+        
+        
+          and
+        
+        
+        
+          z
+          
+            b
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            
+              1
+              +
+              T
+              (
+              p
+              )
+            
+            
+              1
+              −
+              T
+              (
+              p
+              )
+            
+          
+        
+      
+    
+    {\displaystyle z_{a}(p)={\frac {1-T(p)}{1+T(p)}}\qquad {\text{and}}\qquad z_{b}(p)={\frac {1+T(p)}{1-T(p)}}}
+  
+
+In practice, T(p) can be expressed as a ratio of polynomials in p, and the impedances za and zb are also ratios of polynomials in p. For the impedances to be realisable, they must satisfy Foster's reactance theorem.
+The two simplest all-pass networks are the first and second order lattices. These are important circuits because, as Bode pointed out, all high order all-pass lattice networks can be replaced by a cascade of second order networks with, possibly, one first order network, to give the identical response.
+These two simple, normalised lattices have transfer impedances given by
+
+  
+    
+      
+        
+          T
+          
+            1
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            
+              −
+              p
+              +
+              c
+            
+            
+              p
+              +
+              c
+            
+          
+        
+        
+        
+        
+          and
+        
+        
+        
+          T
+          
+            2
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            
+              
+                p
+                
+                  2
+                
+              
+              −
+              a
+              p
+              +
+              b
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              a
+              p
+              +
+              b
+            
+          
+        
+      
+    
+    {\displaystyle T_{1}(p)={\frac {-p+c}{p+c}}\qquad \qquad {\text{and}}\qquad T_{2}(p)={\frac {p^{2}-ap+b}{p^{2}+ap+b}}}
+  
+
+The circuits are considered in more detail in the section on 'Synthesis'
+
+Lattice synthesis
+Network synthesis is the process of deriving a circuit to match a chosen transfer function. Not all transfer functions can be realized by physical networks, but for those that can, the lattice network is always a solution. In other words, if a symmetrical two-terminal pair network is realizable at all, it is realizable as a lattice network. This is because the lattice structure is the most general form of a network, with fewer constraints than, say, T, П or bridged-T networks.
+Once a lattice circuit has been developed, it is often desirable to convert the result into an unbalanced form, so that the circuit can be used in systems with an earth plane. Furthermore, there are other benefits to be gained from the conversion process, such as a reduced component count and less stringent component tolerances. Where a synthesis procedure results in several possible lattice solutions, the one that is easiest to convert is usually chosen. Often, the conversion process results in mutually coupled inductors, as shown earlier, but it is sometimes possible to avoid these altogether, if a high value of insertion loss can be tolerated, or if a combination of circuits in parallel is considered.
+
+Synthesis with z parameters
+z-parameters, or Impedance parameters, are one set from the family of parameters that define a two-port network, with input and output values defined by I1, I2, V1 and V2, as shown in the figure.
+
+Equations defining network behaviour in terms of z-parameters are
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  E
+                  
+                    1
+                  
+                
+                =
+                
+                  z
+                  
+                    11
+                  
+                
+                
+                  I
+                  
+                    1
+                  
+                
+                +
+                
+                  z
+                  
+                    12
+                  
+                
+                
+                  I
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+                
+                  E
+                  
+                    2
+                  
+                
+                =
+                
+                  z
+                  
+                    21
+                  
+                
+                
+                  I
+                  
+                    1
+                  
+                
+                +
+                
+                  z
+                  
+                    22
+                  
+                
+                
+                  I
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}E_{1}=z_{11}I_{1}+z_{12}I_{2}\\E_{2}=z_{21}I_{1}+z_{22}I_{2}\end{aligned}}}
+  
+
+where the z-parameters are defined under open circuit conditions (see Impedance parameters) so they are sometimes referred to as "open-circuit parameters".
+They are defined thus
+
+  
+    
+      
+        
+          z
+          
+            11
+          
+        
+        =
+        
+          [
+          
+            
+              
+                V
+                
+                  1
+                
+              
+              
+                I
+                
+                  1
+                
+              
+            
+          
+          ]
+        
+        
+           with 
+        
+        
+          I
+          
+            2
+          
+        
+        =
+        0
+        
+        
+        
+          z
+          
+            12
+          
+        
+        =
+        
+          [
+          
+            
+              
+                V
+                
+                  1
+                
+              
+              
+                I
+                
+                  2
+                
+              
+            
+          
+          ]
+        
+        
+           with 
+        
+        
+          I
+          
+            1
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle z_{11}=\left[{\frac {V_{1}}{I_{1}}}\right]{\text{ with }}I_{2}=0\qquad \qquad z_{12}=\left[{\frac {V_{1}}{I_{2}}}\right]{\text{ with }}I_{1}=0}
+  
+
+  
+    
+      
+        
+          z
+          
+            21
+          
+        
+        =
+        
+          [
+          
+            
+              
+                V
+                
+                  2
+                
+              
+              
+                I
+                
+                  1
+                
+              
+            
+          
+          ]
+        
+        
+           with 
+        
+        
+          I
+          
+            2
+          
+        
+        =
+        0
+        
+        
+        
+          z
+          
+            22
+          
+        
+        =
+        
+          [
+          
+            
+              
+                V
+                
+                  2
+                
+              
+              
+                I
+                
+                  2
+                
+              
+            
+          
+          ]
+        
+        
+           with 
+        
+        
+          I
+          
+            1
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle z_{21}=\left[{\frac {V_{2}}{I_{1}}}\right]{\text{ with }}I_{2}=0\qquad \qquad z_{22}=\left[{\frac {V_{2}}{I_{2}}}\right]{\text{ with }}I_{1}=0}
+  
+
+For the symmetrical lattice, the relationships between z-parameters and the lattice impedances are easily found, and they are
+
+  
+    
+      
+        
+          z
+          
+            11
+          
+        
+        =
+        
+          z
+          
+            22
+          
+        
+        =
+        
+          
+            
+              
+                Z
+                
+                  a
+                
+              
+              +
+              
+                Z
+                
+                  b
+                
+              
+            
+            2
+          
+        
+        
+        
+          z
+          
+            12
+          
+        
+        =
+        
+          z
+          
+            21
+          
+        
+        =
+        
+          
+            
+              
+                Z
+                
+                  b
+                
+              
+              −
+              
+                Z
+                
+                  a
+                
+              
+            
+            2
+          
+        
+      
+    
+    {\displaystyle z_{11}=z_{22}={\frac {Z_{a}+Z_{b}}{2}}\qquad z_{12}=z_{21}={\frac {Z_{b}-Z_{a}}{2}}}
+  
+
+  
+    
+      
+        
+          Z
+          
+            I
+          
+        
+        =
+        
+          
+            
+              Z
+              
+                a
+              
+            
+            
+              Z
+              
+                b
+              
+            
+          
+        
+      
+    
+    {\displaystyle Z_{I}={\sqrt {Z_{a}Z_{b}}}}
+  
+
+So, 
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        
+          z
+          
+            11
+          
+        
+        −
+        
+          z
+          
+            12
+          
+        
+        
+        ,
+        
+        
+          Z
+          
+            b
+          
+        
+        =
+        
+          z
+          
+            11
+          
+        
+        +
+        
+          z
+          
+            12
+          
+        
+      
+    
+    {\displaystyle Z_{a}=z_{11}-z_{12}\,,\quad Z_{b}=z_{11}+z_{12}}
+  
+
+Sometimes synthesis of a lattice can be achieved by simply apportioning parts of an expression in z12, or in z11 and z12, directly to the impedances Za and Zb, as in the following example.
+
+Example 1
+Consider z12 to be given by
+
+  
+    
+      
+        
+          z
+          
+            12
+          
+        
+        =
+        
+          
+            
+              p
+              
+                5
+              
+            
+            
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+              )
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              2
+              )
+            
+          
+        
+      
+    
+    {\displaystyle z_{12}={\frac {p^{5}}{(p^{2}+1)(p^{2}+2)}}}
+  
+
+This can be expanded into partial fractions, to give
+
+  
+    
+      
+        
+          z
+          
+            12
+          
+        
+        =
+        
+          
+            p
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+            
+          
+        
+        −
+        
+          
+            
+              4
+              p
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              2
+            
+          
+        
+        +
+        p
+      
+    
+    {\displaystyle z_{12}={\frac {p}{p^{2}+1}}-{\frac {4p}{p^{2}+2}}+p}
+  
+
+Allocate terms to Za and Zb, accordingly, so giving
+
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        
+          
+            
+              8
+              p
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              2
+            
+          
+        
+      
+    
+    {\displaystyle Z_{a}={\frac {8p}{p^{2}+2}}}
+  
+ and 
+  
+    
+      
+        
+          Z
+          
+            b
+          
+        
+        =
+        
+          
+            
+              2
+              p
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+            
+          
+        
+        +
+        2
+        p
+        =
+        
+          
+            
+              2
+              
+                p
+                
+                  3
+                
+              
+              +
+              4
+              p
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+            
+          
+        
+      
+    
+    {\displaystyle Z_{b}={\frac {2p}{p^{2}+1}}+2p={\frac {2p^{3}+4p}{p^{2}+1}}}
+  
+
+The lattice network which has these solutions for Za and Zb is shown in the left-hand circuit, below. It can be converted to an unbalanced form by, firstly, extracting the common parallel inductors and, secondly, by then extracting series common capacitors. This gives the ladder network shown in the right-hand circuit.
+
+Synthesis from the open-circuit transfer function
+The open-circuit voltage-ratio transfer function T can be obtained in terms of z11 and z12, since with I2 = 0
+
+  
+    
+      
+        T
+        =
+        
+          
+            
+              V
+              
+                2
+              
+            
+            
+              V
+              
+                1
+              
+            
+          
+        
+        =
+        
+          
+            
+              z
+              
+                12
+              
+            
+            
+              z
+              
+                11
+              
+            
+          
+        
+      
+    
+    {\displaystyle T={\frac {V_{2}}{V_{1}}}={\frac {z_{12}}{z_{11}}}}
+  
+
+so from an expression for T, which gives the ratio of z12, and z11, it may be possible to obtain circuits for Za and Zb.
+In practice, T may be expressed in the form
+
+  
+    
+      
+        T
+        (
+        p
+        )
+        =
+        K
+        ⋅
+        
+          
+            
+              N
+              (
+              p
+              )
+            
+            
+              D
+              
+                p
+              
+            
+          
+        
+      
+    
+    {\displaystyle T(p)=K\cdot {\frac {N(p)}{D{p}}}}
+  
+
+where N(p) and D(p) are polynomials in p, the complex frequency variable, and K is a constant factor less or equal to unity.
+For a given expression for T, it is often possible to find expressions (and hence circuits for Za and Zb), provided the value chosen for K is small enough.
+Now, for the lattice, 
+  
+    
+      
+        T
+        =
+        
+          
+            
+              z
+              
+                11
+              
+            
+            
+              z
+              
+                12
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                Z
+                
+                  b
+                
+              
+              −
+              
+                Z
+                
+                  a
+                
+              
+            
+            
+              
+                Z
+                
+                  b
+                
+              
+              +
+              
+                Z
+                
+                  a
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              1
+              −
+              
+                
+                  
+                    Z
+                    
+                      a
+                    
+                  
+                  
+                    Z
+                    
+                      b
+                    
+                  
+                
+              
+            
+            
+              1
+              +
+              
+                
+                  
+                    Z
+                    
+                      a
+                    
+                  
+                  
+                    Z
+                    
+                      b
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle T={\frac {z_{11}}{z_{12}}}={\frac {Z_{b}-Z_{a}}{Z_{b}+Z_{a}}}={\frac {1-{\frac {Z_{a}}{Z_{b}}}}{1+{\frac {Z_{a}}{Z_{b}}}}}}
+  
+
+Rearranging 
+  
+    
+      
+        
+          
+            
+              Z
+              
+                a
+              
+            
+            
+              Z
+              
+                b
+              
+            
+          
+        
+        =
+        
+          
+            
+              1
+              −
+              T
+            
+            
+              1
+              +
+              T
+            
+          
+        
+        =
+        
+          
+            
+              D
+              −
+              K
+              N
+            
+            
+              D
+              +
+              K
+              N
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {Z_{a}}{Z_{b}}}={\frac {1-T}{1+T}}={\frac {D-KN}{D+KN}}}
+  
+
+The procedure evaluates the numerator and denominator of the expression as polynomials in p and then apportions factors to Za and Zb. A loss term K, with K < 1, may be needed to aid realization.
+
+Example 2
+Derive a lattice network with voltage-ratio transfer function T2 given by
+
+  
+    
+      
+        
+          T
+          
+            2
+          
+        
+        =
+        K
+        ⋅
+        
+          
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              5
+              p
+              +
+              4
+            
+          
+        
+      
+    
+    {\displaystyle T_{2}=K\cdot {\frac {p^{2}+1}{p^{2}+5p+4}}}
+  
+
+with 
+  
+    
+      
+        K
+        =
+        1
+      
+    
+    {\displaystyle K=1}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              
+                D
+                −
+                K
+                N
+              
+              
+                
+                =
+                
+                  p
+                  
+                    2
+                  
+                
+                +
+                5
+                p
+                +
+                4
+                −
+                
+                  p
+                  
+                    2
+                  
+                
+                −
+                1
+                =
+                5
+                p
+                +
+                3
+              
+            
+            
+              
+                D
+                +
+                K
+                N
+              
+              
+                
+                =
+                
+                  p
+                  
+                    2
+                  
+                
+                +
+                5
+                p
+                +
+                4
+                +
+                
+                  p
+                  
+                    2
+                  
+                
+                +
+                1
+                =
+                2
+                
+                  p
+                  
+                    2
+                  
+                
+                +
+                5
+                p
+                +
+                5
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}D-KN&=p^{2}+5p+4-p^{2}-1=5p+3\\D+KN&=p^{2}+5p+4+p^{2}+1=2p^{2}+5p+5\end{aligned}}}
+  
+
+  
+    
+      
+        
+          
+            
+              Z
+              
+                a
+              
+            
+            
+              Z
+              
+                b
+              
+            
+          
+        
+        =
+        
+          
+            
+              5
+              p
+              +
+              3
+            
+            
+              2
+              
+                p
+                
+                  2
+                
+              
+              +
+              5
+              p
+              +
+              5
+            
+          
+        
+        =
+        
+          
+            
+              1
+              +
+              3
+              
+                /
+              
+              5
+              p
+            
+            
+              1
+              +
+              (
+              2
+              
+                p
+                
+                  2
+                
+              
+              +
+              5
+              )
+              
+                /
+              
+              5
+              p
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {Z_{a}}{Z_{b}}}={\frac {5p+3}{2p^{2}+5p+5}}={\frac {1+3/5p}{1+(2p^{2}+5)/5p}}}
+  
+
+Choose 
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        1
+        +
+        
+          
+            3
+            
+              5
+              p
+            
+          
+        
+      
+    
+    {\displaystyle Z_{a}=1+{\frac {3}{5p}}}
+  
+ and 
+  
+    
+      
+        
+          Z
+          
+            b
+          
+        
+        =
+        1
+        +
+        
+          
+            
+              2
+              p
+            
+            5
+          
+        
+        +
+        
+          
+            1
+            p
+          
+        
+      
+    
+    {\displaystyle Z_{b}=1+{\frac {2p}{5}}+{\frac {1}{p}}}
+  
+
+The lattice realization of T2 is shown below, on the left. The unbalanced network, on the right, is obtained by first extracting the common series resistors and then extracting capacitance.
+
+Example 3
+An L-C circuit has a transfer function T3 given by
+
+  
+    
+      
+        
+          T
+          
+            3
+          
+        
+        =
+        K
+        ⋅
+        
+          
+            
+              (
+              
+                p
+                
+                  4
+                
+              
+              +
+              1
+              )
+            
+            
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+              )
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              2
+              )
+            
+          
+        
+      
+    
+    {\displaystyle T_{3}=K\cdot {\frac {(p^{4}+1)}{(p^{2}+1)(p^{2}+2)}}}
+  
+
+This is realizable with K = 0.05, so
+
+  
+    
+      
+        
+          
+            
+              D
+              −
+              K
+              N
+            
+            
+              D
+              +
+              K
+              N
+            
+          
+        
+        =
+        
+          
+            
+              0.95
+              (
+              
+                p
+                
+                  4
+                
+              
+              +
+              3.1579
+              
+                p
+                
+                  2
+                
+              
+              +
+              2.0526
+            
+            
+              1.05
+              (
+              
+                p
+                
+                  4
+                
+              
+              +
+              2.8571
+              
+                p
+                
+                  2
+                
+              
+              +
+              1.9524
+            
+          
+        
+        =
+        
+          
+            
+              Z
+              
+                a
+              
+            
+            
+              Z
+              
+                b
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {D-KN}{D+KN}}={\frac {0.95(p^{4}+3.1579p^{2}+2.0526}{1.05(p^{4}+2.8571p^{2}+1.9524}}={\frac {Z_{a}}{Z_{b}}}}
+  
+
+Factorizing top and bottom gives
+
+  
+    
+      
+        
+          
+            
+              Z
+              
+                a
+              
+            
+            
+              Z
+              
+                b
+              
+            
+          
+        
+        =
+        
+          
+            
+              0.95
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              0.9153
+              )
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              2.2426
+              )
+            
+            
+              11.05
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              1.1312
+              )
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              1.7259
+              )
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {Z_{a}}{Z_{b}}}={\frac {0.95(p^{2}+0.9153)(p^{2}+2.2426)}{11.05(p^{2}+1.1312)(p^{2}+1.7259)}}}
+  
+
+Choose, say,
+
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        
+          
+            
+              0.9048
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              2.2426
+              )
+            
+            
+              (
+              
+                p
+                
+                  +
+                
+              
+              1.1312
+              )
+            
+          
+        
+        
+        
+          and
+        
+        
+        
+          Z
+          
+            b
+          
+        
+        =
+        
+          
+            
+              p
+              (
+              p
+              +
+              1.7259
+              )
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              0.9153
+            
+          
+        
+      
+    
+    {\displaystyle Z_{a}={\frac {0.9048(p^{2}+2.2426)}{(p^{+}1.1312)}}\qquad {\text{and}}\qquad Z_{b}={\frac {p(p+1.7259)}{p^{2}+0.9153}}}
+  
+
+Za and Zb can be realized as LC ladder networks, with Za having a shunt inductor as first element and Zb having a series inductor as first element, as shown in the left-hand figure. This lattice can be converted to unbalanced form, by the methods given earlier, to give the component values of the right-hand figure,
+
+Darlington synthesis
+The Darlington method forms the basis for synthesis of lossless two terminal-pair networks with resistive termination for prescribed transfer characteristics.
+
+The figure shows the basic network configuration. The associated transfer impedance is
+
+  
+    
+      
+        T
+        =
+        
+          
+            
+              E
+              
+                2
+              
+            
+            
+              I
+              
+                1
+              
+            
+          
+        
+      
+    
+    {\displaystyle T={\frac {E_{2}}{I_{1}}}}
+  
+
+The first step is to express the input impedance ZI of a terminated network in terms of its z-parameters. This is 
+
+  
+    
+      
+        
+          Z
+          
+            I
+          
+        
+        =
+        
+          
+            
+              (
+              
+                z
+                
+                  11
+                
+              
+              
+                z
+                
+                  22
+                
+              
+              −
+              
+                z
+                
+                  12
+                
+                
+                  2
+                
+              
+              )
+              +
+              
+                z
+                
+                  11
+                
+              
+              R
+            
+            
+              
+                z
+                
+                  22
+                
+              
+              +
+              R
+            
+          
+        
+      
+    
+    {\displaystyle Z_{I}={\frac {(z_{11}z_{22}-z_{12}^{2})+z_{11}R}{z_{22}+R}}}
+  
+
+in which z11, z22 and z12 are z-parameters of the network, as defined earlier.
+For a normalized network, put R = 1, and rearrange the expression thus:
+
+  
+    
+      
+        
+          Z
+          
+            I
+          
+        
+        =
+        
+          z
+          
+            11
+          
+        
+        ⋅
+        
+          
+            
+              (
+              
+                z
+                
+                  11
+                
+              
+              
+                z
+                
+                  22
+                
+              
+              −
+              
+                z
+                
+                  12
+                
+                
+                  2
+                
+              
+              )
+              
+                /
+              
+              
+                z
+                
+                  11
+                
+              
+              +
+              1
+            
+            
+              
+                z
+                
+                  22
+                
+              
+              +
+              1
+            
+          
+        
+      
+    
+    {\displaystyle Z_{I}=z_{11}\cdot {\frac {(z_{11}z_{22}-z_{12}^{2})/z_{11}+1}{z_{22}+1}}}
+  
+
+In practice, ZI consists of a ratio of two polynomials in p:
+
+  
+    
+      
+        
+          Z
+          
+            I
+          
+        
+        =
+        
+          
+            
+              N
+              (
+              p
+              )
+            
+            
+              D
+              (
+              p
+              )
+            
+          
+        
+        =
+        
+          
+            
+              
+                m
+                
+                  1
+                
+              
+              +
+              
+                n
+                
+                  1
+                
+              
+            
+            
+              
+                m
+                
+                  2
+                
+              
+              +
+              
+                n
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle Z_{I}={\frac {N(p)}{D(p)}}={\frac {m_{1}+n_{1}}{m_{2}+n_{2}}}}
+  
+
+where m1 and n1 are the even and odd parts of the numerator polynomial, respectively and m2 and n2 are the even and odd parts of the denominator polynomial, respectively.
+Rearranging 
+  
+    
+      
+        
+          Z
+          
+            I
+          
+        
+        =
+        
+          
+            
+              m
+              
+                1
+              
+            
+            
+              n
+              
+                2
+              
+            
+          
+        
+        ⋅
+        
+          
+            
+              (
+              
+                n
+                
+                  1
+                
+              
+              
+                /
+              
+              
+                m
+                
+                  1
+                
+              
+              )
+              +
+              1
+            
+            
+              (
+              
+                m
+                
+                  2
+                
+              
+              
+                /
+              
+              
+                n
+                
+                  2
+                
+              
+              )
+              +
+              1
+            
+          
+        
+      
+    
+    {\displaystyle Z_{I}={\frac {m_{1}}{n_{2}}}\cdot {\frac {(n_{1}/m_{1})+1}{(m_{2}/n_{2})+1}}}
+  
+
+By comparing the two expressions for ZI, the following relationships are suggested
+
+  
+    
+      
+        
+          z
+          
+            11
+          
+        
+        =
+        
+          
+            
+              m
+              
+                1
+              
+            
+            
+              n
+              
+                2
+              
+            
+          
+        
+        
+        
+        
+          z
+          
+            22
+          
+        
+        =
+        
+          
+            
+              m
+              
+                2
+              
+            
+            
+              n
+              
+                2
+              
+            
+          
+        
+        
+        
+        
+          z
+          
+            12
+          
+        
+        =
+        
+          
+            
+              
+                m
+                
+                  1
+                
+              
+              
+                m
+                
+                  2
+                
+              
+              −
+              
+                n
+                
+                  1
+                
+              
+              
+                n
+                
+                  2
+                
+              
+            
+            
+              n
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle z_{11}={\frac {m_{1}}{n_{2}}}\qquad \qquad z_{22}={\frac {m_{2}}{n_{2}}}\qquad \qquad z_{12}={\frac {\sqrt {m_{1}m_{2}-n_{1}n_{2}}}{n_{2}}}}
+  
+
+Example 4
+Consider a network with ZI given by
+
+  
+    
+      
+        
+          Z
+          
+            I
+          
+        
+        =
+        
+          
+            
+              2.1351
+              
+                p
+                
+                  3
+                
+              
+              +
+              1.915
+              
+                p
+                
+                  2
+                
+              
+              +
+              2.4969
+              p
+              +
+              1
+            
+            
+              1.327
+              
+                p
+                
+                  2
+                
+              
+              +
+              1.18
+              p
+              +
+              1
+            
+          
+        
+      
+    
+    {\displaystyle Z_{I}={\frac {2.1351p^{3}+1.915p^{2}+2.4969p+1}{1.327p^{2}+1.18p+1}}}
+  
+
+So, 
+  
+    
+      
+        
+          
+            
+              
+                
+                  m
+                  
+                    1
+                  
+                
+              
+              
+                
+                =
+                1.915
+                
+                  p
+                  
+                    2
+                  
+                
+                +
+                1
+              
+              
+                
+                  n
+                  
+                    1
+                  
+                
+              
+              
+                
+                =
+                2.1351
+                
+                  p
+                  
+                    3
+                  
+                
+                +
+                1
+              
+            
+            
+              
+                
+                  m
+                  
+                    2
+                  
+                
+              
+              
+                
+                =
+                1.327
+                
+                  p
+                  
+                    2
+                  
+                
+                +
+                1
+              
+              
+                
+                  n
+                  
+                    2
+                  
+                
+              
+              
+                
+                =
+                1.18
+                p
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}m_{1}&=1.915p^{2}+1&n_{1}&=2.1351p^{3}+1\\m_{2}&=1.327p^{2}+1&n_{2}&=1.18p\end{aligned}}}
+  
+
+So solutions for z11, z22 and z12 are
+
+  
+    
+      
+        
+          z
+          
+            11
+          
+        
+        =
+        
+          
+            
+              1.915
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+            
+            
+              1.18
+              p
+            
+          
+        
+        =
+        1.6229
+        p
+        +
+        
+          
+            1
+            
+              1.18
+              p
+            
+          
+        
+      
+    
+    {\displaystyle z_{11}={\frac {1.915p^{2}+1}{1.18p}}=1.6229p+{\frac {1}{1.18p}}}
+  
+
+i.e. z11 is an inductor of 1.6229H in series with a capacitor of 1.18F.
+
+  
+    
+      
+        
+          z
+          
+            22
+          
+        
+        =
+        
+          
+            
+              1.327
+              
+                p
+                
+                  2
+                
+              
+              +
+              1
+            
+            
+              1.18
+              p
+            
+          
+        
+        =
+        1.1246
+        p
+        +
+        
+          
+            1
+            1.18
+          
+        
+      
+    
+    {\displaystyle z_{22}={\frac {1.327p^{2}+1}{1.18p}}=1.1246p+{\frac {1}{1.18}}}
+  
+
+i.e. z22 is an inductor of 1.1246H in series with a capacitor of 1.18F
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  z
+                  
+                    12
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      (
+                      1.915
+                      
+                        p
+                        
+                          2
+                        
+                      
+                      +
+                      1
+                      )
+                      (
+                      1.327
+                      
+                        p
+                        
+                          2
+                        
+                      
+                      +
+                      1
+                      )
+                      −
+                      (
+                      2.1351
+                      
+                        p
+                        
+                          3
+                        
+                      
+                      +
+                      2.4969
+                      p
+                      )
+                    
+                    
+                      1.18
+                      p
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      0.0218
+                      
+                        p
+                        
+                          4
+                        
+                      
+                      +
+                      0.2957
+                      
+                        p
+                        
+                          2
+                        
+                      
+                      +
+                      1
+                    
+                    
+                      1.18
+                      p
+                    
+                  
+                
+                
+                =
+                
+                  
+                    
+                      0.1479
+                      
+                        p
+                        
+                          2
+                        
+                      
+                      +
+                      1
+                    
+                    
+                      1.18
+                      p
+                    
+                  
+                
+                
+                =
+                0.1253
+                p
+                +
+                
+                  
+                    1
+                    
+                      1.18
+                      p
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}z_{12}&={\frac {\sqrt {(1.915p^{2}+1)(1.327p^{2}+1)-(2.1351p^{3}+2.4969p)}}{1.18p}}\\&={\frac {\sqrt {0.0218p^{4}+0.2957p^{2}+1}}{1.18p}}\quad ={\frac {0.1479p^{2}+1}{1.18p}}\quad =0.1253p+{\frac {1}{1.18p}}\end{aligned}}}
+  
+
+By extracting a series inductance of 0.4983p = (1.6229p – 1.1246p) from z11, the remaining network becomes symmetrical with
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  z
+                  
+                    11
+                  
+                  
+                    (new)
+                  
+                
+                =
+                
+                  z
+                  
+                    22
+                  
+                
+                =
+                1.1246
+                p
+                +
+                
+                  
+                    1
+                    
+                      1.18
+                      p
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  z
+                  
+                    12
+                  
+                
+                =
+                0.1253
+                p
+                +
+                
+                  
+                    1
+                    
+                      1.18
+                      p
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}z_{11}^{\text{(new)}}=z_{22}=1.1246p+{\frac {1}{1.18p}}\\z_{12}=0.1253p+{\frac {1}{1.18p}}\end{aligned}}}
+  
+
+The components of a symmetrical lattice can be calculated from Za = z11 − z12 and Zb = z11 + z12.
+So 
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        1.1246
+        p
+        +
+        
+          
+            1
+            
+              1.18
+              p
+            
+          
+        
+        −
+        0.1253
+        p
+        −
+        
+          
+            1
+            
+              1.18
+              p
+            
+          
+        
+        =
+        0.9993
+        p
+        ,
+      
+    
+    {\displaystyle Z_{a}=1.1246p+{\frac {1}{1.18p}}-0.1253p-{\frac {1}{1.18p}}=0.9993p,}
+  
+ i.e. an inductor of 0.9993H.
+and 
+  
+    
+      
+        
+          Z
+          
+            b
+          
+        
+        =
+        1.1246
+        p
+        +
+        
+          
+            1
+            
+              1.18
+              p
+            
+          
+        
+        +
+        0.1253
+        p
+        +
+        
+          
+            1
+            
+              1.18
+              p
+            
+          
+        
+        =
+        1.2499
+        p
+        +
+        
+          
+            2
+            
+              1.18
+              p
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle Z_{b}=1.1246p+{\frac {1}{1.18p}}+0.1253p+{\frac {1}{1.18p}}=1.2499p+{\frac {2}{1.18p}},}
+  
+ i.e. an inductor of 1.2499H in series with a capacitor of 0.59F
+The circuit is shown in the left hand figure below. It can be easily converted into the unbalanced form shown in the right hand figure. It is a low-pass filter with pass-band ripple of 1.25 dB, with −3 dB at 0.169 Hz, a null in the stop band at 0.414 Hz, and stop-band attenuation beyond the null frequency below −40 dB.
+
+Synthesis of constant-resistance lattice networks
+If the impedances Za and Zb are duals, and normalised, so that
+
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        
+          Z
+          
+            b
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle Z_{a}Z_{b}=1}
+  
+
+then the image impedance ZI becomes a pure resistance. A symmetrical lattice fulfilling this condition is a "constant resistance lattice".
+Such a lattice, terminated in 1 ohm, is shown below.
+
+This has the transfer function
+
+  
+    
+      
+        
+          
+            
+              E
+              
+                2
+              
+            
+            
+              E
+              
+                1
+              
+            
+          
+        
+        =
+        
+          
+            
+              E
+              
+                2
+              
+            
+            
+              I
+              
+                1
+              
+            
+          
+        
+        =
+        T
+        =
+        
+          
+            
+              1
+              −
+              
+                Z
+                
+                  a
+                
+              
+            
+            
+              1
+              +
+              
+                Z
+                
+                  a
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {E_{2}}{E_{1}}}={\frac {E_{2}}{I_{1}}}=T={\frac {1-Z_{a}}{1+Z_{a}}}}
+  
+
+in which T is the transfer impedance with a 1-ohm load in contrast to the open-circuit transfer impedance z21. Rearranging this, gives
+
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        
+          
+            
+              1
+              −
+              T
+            
+            
+              1
+              +
+              T
+            
+          
+        
+      
+    
+    {\displaystyle Z_{a}={\frac {1-T}{1+T}}}
+  
+
+The constant resistance lattice is thus seen to offer a possible approach to the synthesis of transfer functions.
+It is the case that a constant resistance lattice is no less general than any other lattice, which means that any realizable transfer impedance can be realized in the form of a constant resistance lattice,. Such networks are very convenient, because there is no mismatch between sections or with resistive terminations. Consequently, the overall insertion loss of a cascade of constant resistance sections is simply to sum total of the individual sections. Conversely, a given complicated transfer impedance may be decomposed into multiplicative factors, whose individual lattice realizations, when connected in cascade, represent a synthesis of that transfer impedance. So, although it is possible to synthesize a single lattice with complicated impedances Za and Zb, it is practically easier to construct and align a cascade of simpler circuits.
+
+All-pass constant-resistance networks
+All-pass networks have a constant gain with frequency, but they have a phase response which varies in some chosen manner. For example, in the case of lattice delay networks, the phase response is linear with frequency over a specified frequency range, whereas in the case of Lattice phase equalisers, the phase response of the network deviates so as to compensate for the non-linear phase response of a filter network.
+The first and second order networks are the most important because, as Bode pointed out, these can be cascaded, as required, to give the same result as a complicated high order lattice.
+
+Example 5
+The all-pass response of the first order is
+
+  
+    
+      
+        
+          T
+          
+            5
+          
+        
+        =
+        
+          
+            
+              c
+              −
+              p
+            
+            
+              c
+              +
+              p
+            
+          
+        
+      
+    
+    {\displaystyle T_{5}={\frac {c-p}{c+p}}}
+  
+
+This has a zero located at +c and a pole at –c in the complex frequency plane. It has a response where the phase varies with frequency, but the magnitude of T5 is unity at all frequencies.
+Using the expression for Za as a function of T, from earlier, gives
+
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        
+          
+            
+              1
+              −
+              
+                T
+                
+                  5
+                
+              
+            
+            
+              1
+              +
+              
+                T
+                
+                  5
+                
+              
+            
+          
+        
+        =
+        
+          
+            p
+            c
+          
+        
+      
+    
+    {\displaystyle Z_{a}={\frac {1-T_{5}}{1+T_{5}}}={\frac {p}{c}}}
+  
+
+So Za is an inductance with value 1/c and, consequently, Zb is a capacitor of value 1/c. The network, normalised to 1 ohm, is shown in the left-hand figure below.
+
+Example 6
+The all-pass response of the second order is
+
+  
+    
+      
+        
+          T
+          
+            6
+          
+        
+        =
+        
+          
+            
+              
+                p
+                
+                  2
+                
+              
+              −
+              a
+              p
+              +
+              b
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              a
+              p
+              +
+              b
+            
+          
+        
+      
+    
+    {\displaystyle T_{6}={\frac {p^{2}-ap+b}{p^{2}+ap+b}}}
+  
+
+This has two zeroes located at 
+  
+    
+      
+        x
+        ±
+        y
+      
+    
+    {\displaystyle x\pm y}
+  
+ and two poles at 
+  
+    
+      
+        −
+        x
+        ±
+        y
+      
+    
+    {\displaystyle -x\pm y}
+  
+ where a = 2x and b = x2 + y2. For such a response, the phase varies with frequency, but the magnitude of T6 is unity at all frequencies.
+For this characteristic, Za is found from
+
+  
+    
+      
+        
+          Z
+          
+            a
+          
+        
+        =
+        
+          
+            
+              1
+              −
+              
+                T
+                
+                  6
+                
+              
+            
+            
+              1
+              +
+              
+                T
+                
+                  6
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              a
+              p
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              b
+            
+          
+        
+      
+    
+    {\displaystyle Z_{a}={\frac {1-T_{6}}{1+T_{6}}}={\frac {ap}{p^{2}+b}}}
+  
+
+So Za is a parallel combination of a capacitance 1/a and an inductance with value a/b.
+Similarly Zb is an inductor 1/a in series with a capacitor of value a/b and the network is shown at the right hand side below.
+
+The lattice networks can be converted to unbalanced circuits by using the properties of lattices with common elements in both Za and Zb, shown earlier, and Bartlett’s Bisection theorem.
+
+In the case of the second order network, when a2 > b (i.e. L1 > L2 or C2 > C1 or y > √3x), it is necessary to use the circuit containing mutually coupled coils for the second order all-pass network.
+A cascade of second order networks with, maybe, a single first order network, can be used to give a high order response. For example, the article Lattice delay network gives pole-zero locations for many all-pass transfer functions which approximate to a linear phase characteristic. That article also includes some examples.
+
+Synthesis of amplitude equalizers
+A typical transmission path has increasing loss with frequency and this can be corrected by cascading the system with an equalizing network that has a rising response with frequency. In this regard, one circuit configuration that is commonly used to provide the necessary equalization is shown in the figure labelled 'Lattice - basic equaliser circuit', given earlier (in the section on 'Unbalanced Equivalents').
+As stated there, the insertion loss of the normalized circuit is given by 
+  
+    
+      
+        T
+        =
+        
+          
+            1
+            
+              1
+              +
+              
+                Z
+                
+                  1
+                
+              
+              (
+              p
+              )
+            
+          
+        
+      
+    
+    {\displaystyle T={\frac {1}{1+Z_{1}(p)}}}
+  
+, so Z1 can be found from 
+  
+    
+      
+        
+          Z
+          
+            1
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            1
+            
+              T
+              (
+              p
+              )
+            
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle Z_{1}(p)={\frac {1}{T(p)}}-1}
+  
+
+If some residual ripple on the response is permitted, then a simple correcting network may suffice for Z1 and Z2, but this ripple may be reduced as much as desired by adopting more complicated correcting networks. Choosing locations for the poles and zeros for Z1 and Z2 may be aided by the straight line asymptotic method.
+
+Example 7
+A transfer function which has a rising response over a limited frequency range is
+
+  
+    
+      
+        
+          T
+          
+            7
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            
+              3.3333
+              +
+              10.3333
+              p
+              +
+              
+                p
+                
+                  2
+                
+              
+            
+            
+              30.003
+              +
+              31.003
+              p
+              +
+              
+                p
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              (
+              0.3333
+              +
+              p
+              )
+              (
+              10
+              +
+              p
+              )
+            
+            
+              (
+              1
+              +
+              p
+              )
+              (
+              30.003
+              +
+              p
+              )
+            
+          
+        
+      
+    
+    {\displaystyle T_{7}(p)={\frac {3.3333+10.3333p+p^{2}}{30.003+31.003p+p^{2}}}={\frac {(0.3333+p)(10+p)}{(1+p)(30.003+p)}}}
+  
+
+Note that the response approaches unity at high frequencies. It can be realized as a bridged-T or lattice in which Z1 is an R-C network.
+Z1 can be found from 
+  
+    
+      
+        
+          Z
+          
+            1
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            1
+            
+              T
+              (
+              p
+              )
+            
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle Z_{1}(p)={\frac {1}{T(p)}}-1}
+  
+.
+So 
+  
+    
+      
+        
+          Z
+          
+            1
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            
+              26.6697
+              +
+              20.6697
+              p
+            
+            
+              3.3333
+              +
+              10.3333
+              p
+              +
+              
+                p
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle Z_{1}(p)={\frac {26.6697+20.6697p}{3.3333+10.3333p+p^{2}}}}
+  
+
+The admittance Y1, where Y1 = 1/Z1 can be expressed as a continued fraction containing four terms, thus
+
+  
+    
+      
+        
+          Y
+          
+            1
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              10.333
+              p
+              +
+              3.3333
+            
+            
+              20.6697
+              p
+              +
+              26.6697
+            
+          
+        
+        =
+        0.04838
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  1
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  2.2857
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            1
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            0.4747
+                            p
+                            +
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      1
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      5.7153
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle Y_{1}(p)={\frac {p^{2}+10.333p+3.3333}{20.6697p+26.6697}}=0.04838+{\cfrac {1}{2.2857+{\cfrac {1}{0.4747p+{\cfrac {1}{5.7153}}}}}}}
+  
+
+So Z1 can be realized as an R-C ladder network, in the Cauer manner, and is shown as part of the bridged-T circuit below. Z2 is the dual of Z1, and so is an R-L circuit, as shown. The equivalent lattice circuit is shown on the right–hand side.
+
+Constant resistance low-pass filters
+High order low-pass filters can be obtained by cascading an appropriate number of simpler constant resistance low-pass sections.
+The first of these low-pass sections, with just a single pole, has the response
+
+  
+    
+      
+        
+          T
+          
+            1
+          
+        
+        =
+        
+          
+            
+              k
+              
+                1
+              
+            
+            
+              p
+              +
+              a
+            
+          
+        
+        
+        s
+        o
+        
+        
+          Z
+          
+            a
+            1
+          
+        
+        =
+        
+          
+            
+              1
+              −
+              
+                T
+                
+                  1
+                
+              
+            
+            
+              1
+              +
+              
+                T
+                
+                  1
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              p
+              +
+              (
+              a
+              −
+              
+                k
+                
+                  1
+                
+              
+              )
+            
+            
+              p
+              +
+              (
+              a
+              +
+              
+                k
+                
+                  1
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle T_{1}={\frac {k_{1}}{p+a}}\qquad so\qquad Z_{a1}={\frac {1-T_{1}}{1+T_{1}}}={\frac {p+(a-k_{1})}{p+(a+k_{1})}}}
+  
+
+Provided 
+  
+    
+      
+        
+          k
+          
+            1
+          
+        
+        ≤
+        a
+      
+    
+    {\displaystyle k_{1}\leq a}
+  
+ this is realizable impedance, where Za1 is a combination of two resistors and an inductor, as shown in the left-hand circuit below, and Zb1 is the dual of Za1.
+This is easily transformed into an unbalanced form, as shown on the right.
+
+The second of the filter sections, with two poles, has the response
+
+  
+    
+      
+        
+          T
+          
+            2
+          
+        
+        =
+        
+          k
+          
+            2
+          
+        
+        
+          
+            
+              (
+              p
+              +
+              a
+              )
+            
+            
+              (
+              
+                p
+                
+                  2
+                
+              
+              +
+              
+                b
+                
+                  1
+                
+              
+              p
+              +
+              
+                b
+                
+                  0
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle T_{2}=k_{2}{\frac {(p+a)}{(p^{2}+b_{1}p+b_{0})}}}
+  
+
+So the lattice impedance Za2 is given by:
+
+  
+    
+      
+        
+          Z
+          
+            a
+            2
+          
+        
+        =
+        
+          
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              (
+              
+                b
+                
+                  1
+                
+              
+              −
+              
+                k
+                
+                  2
+                
+              
+              )
+              p
+              +
+              (
+              
+                b
+                
+                  0
+                
+              
+              −
+              a
+              .
+              
+                k
+                
+                  2
+                
+              
+              )
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              (
+              
+                b
+                
+                  1
+                
+              
+              +
+              
+                k
+                
+                  2
+                
+              
+              )
+              p
+              +
+              (
+              
+                b
+                
+                  0
+                
+              
+              +
+              a
+              .
+              
+                k
+                
+                  2
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle Z_{a2}={\frac {p^{2}+(b_{1}-k_{2})p+(b_{0}-a.k_{2})}{p^{2}+(b_{1}+k_{2})p+(b_{0}+a.k_{2})}}}
+  
+
+Certain conditions have to be met to ensure this is a realizable network, which are
+
+  
+    
+      
+        a
+        ≥
+        0
+        ;
+        
+        
+          k
+          
+            2
+          
+        
+        ≤
+        
+          b
+          
+            1
+          
+        
+        ;
+        
+        
+          k
+          
+            2
+          
+        
+        ≤
+        
+          
+            
+              b
+              
+                0
+              
+            
+            a
+          
+        
+        .
+      
+    
+    {\displaystyle a\geq 0;\qquad k_{2}\leq b_{1};\qquad k_{2}\leq {\frac {b_{0}}{a}}.}
+  
+ Also 
+  
+    
+      
+        
+          b
+          
+            1
+          
+        
+        −
+        
+          k
+          
+            2
+          
+        
+        
+        ⟺
+        
+        
+          k
+          
+            2
+          
+        
+        ≤
+        
+          b
+          
+            1
+          
+        
+        −
+        a
+        .
+      
+    
+    {\displaystyle b_{1}-k_{2}\iff k_{2}\leq b_{1}-a.}
+  
+
+The conditions set limits on the value of the constant multiplier k2 in the expression for T2.
+The circuit for the lattice elements Za2 is shown on the left, below, and that for the dual elements Zb is shown on the right.
+
+ 
+Component values for Za are, 
+  
+    
+      
+        
+          
+            
+              
+                
+                  R
+                  
+                    1
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        b
+                        
+                          1
+                        
+                      
+                      −
+                      
+                        k
+                        
+                          2
+                        
+                      
+                      −
+                      a
+                    
+                    
+                      2
+                      
+                        k
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+              
+              
+                L
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      2
+                      
+                        k
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                C
+              
+              
+                
+                =
+                
+                  
+                    
+                      2
+                      
+                        k
+                        
+                          2
+                        
+                      
+                    
+                    
+                      
+                        b
+                        
+                          0
+                        
+                      
+                      −
+                      a
+                      
+                        b
+                        
+                          1
+                        
+                      
+                      +
+                      
+                        a
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+                
+                  2
+                  a
+                  
+                    k
+                    
+                      2
+                    
+                  
+                
+              
+              
+                
+                  R
+                  
+                    2
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        b
+                        
+                          0
+                        
+                      
+                      −
+                      a
+                      
+                        b
+                        
+                          1
+                        
+                      
+                      +
+                      
+                        a
+                        
+                          2
+                        
+                      
+                    
+                    
+                      2
+                      a
+                      k
+                      −
+                      2
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}R_{1}&={\frac {b_{1}-k_{2}-a}{2k_{2}}}&L&={\frac {1}{2k_{2}}}\\C&={\frac {2k_{2}}{b_{0}-ab_{1}+a^{2}}}{2ak_{2}}&R_{2}&={\frac {b_{0}-ab_{1}+a^{2}}{2ak-2}}\end{aligned}}}
+  
+
+and those for the impedances Zb2 are: 
+  
+    
+      
+        
+          
+            
+              
+                
+                  R
+                  
+                    3
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      R
+                      
+                        1
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  R
+                  
+                    4
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      R
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  C
+                  
+                    2
+                  
+                
+              
+              
+                
+                =
+                
+                  L
+                  
+                    1
+                  
+                
+                
+                
+                  and
+                
+                
+                
+                  L
+                  
+                    2
+                  
+                
+                +
+                
+                  C
+                  
+                    1
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}R_{3}&={\frac {1}{R_{1}}}\\R_{4}&={\frac {1}{R_{2}}}\\C_{2}&=L_{1}\quad {\text{and}}\quad L_{2}+C_{1}\end{aligned}}}
+  
+
+The unbalanced version of this lattice is as shown below:
+
+By cascading a number of the first and second order circuits, of the type just developed, it is possible to derive higher order low-pass networks of the type:
+
+  
+    
+      
+        
+          T
+          
+            n
+          
+        
+        (
+        p
+        )
+        =
+        
+          
+            k
+            
+              
+                p
+                
+                  n
+                
+              
+              +
+              
+                b
+                
+                  n
+                  −
+                  1
+                
+              
+              
+                p
+                
+                  n
+                  −
+                  1
+                
+              
+              +
+              ⋯
+              +
+              
+                b
+                
+                  2
+                
+              
+              
+                p
+                
+                  2
+                
+              
+              +
+              
+                b
+                
+                  1
+                
+              
+              p
+              +
+              
+                b
+                
+                  0
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle T_{n}(p)={\frac {k}{p^{n}+b_{n-1}p^{n-1}+\cdots +b_{2}p^{2}+b_{1}p+b_{0}}}}
+  
+
+The lattice networks so obtained can be converted to an unbalanced form, provided the value of k is sufficiently small.
+
+Example 8
+A maximally flat third-order normalized low pass filter has the transfer function
+
+  
+    
+      
+        
+          T
+          
+            8
+          
+        
+        =
+        
+          
+            k
+            
+              
+                p
+                
+                  3
+                
+              
+              +
+              2
+              
+                p
+                
+                  2
+                
+              
+              +
+              2
+              p
+              +
+              1
+            
+          
+        
+      
+    
+    {\displaystyle T_{8}={\frac {k}{p^{3}+2p^{2}+2p+1}}}
+  
+
+This can be expanded as
+
+  
+    
+      
+        
+          T
+          
+            8
+          
+        
+        =
+        
+          
+            
+              k
+              
+                1
+              
+            
+            
+              p
+              +
+              a
+            
+          
+        
+        ⋅
+        
+          
+            
+              
+                k
+                
+                  2
+                
+              
+              (
+              p
+              +
+              a
+              )
+            
+            
+              
+                p
+                
+                  2
+                
+              
+              +
+              p
+              +
+              1
+            
+          
+        
+        ⋅
+        
+          
+            1
+            
+              p
+              +
+              1
+            
+          
+        
+      
+    
+    {\displaystyle T_{8}={\frac {k_{1}}{p+a}}\cdot {\frac {k_{2}(p+a)}{p^{2}+p+1}}\cdot {\frac {1}{p+1}}}
+  
+
+So a cascade of three lattices will give the required result.
+If an unbalanced circuit is required, we have to accept some overall loss. By choosing k1 = k2 = a = 0.5, then the network shown below is obtained. This circuit has an overall loss of four times, whereas the conventional L-C ladder network has no loss (but is not a constant resistance network).
+
+Computer-aided design methods
+The development of mainframe and then personal computers, in the final quarter of the twentieth century, permitted the rapid development of numerical processing techniques. Initially, computers were used as an aid to network analysis then to optimization methods such as the minimax method, in the design of phase equalizers and filters), before being applied to network synthesis directly. Overviews of the software developments in the field of synthesis have been given in Taylor & Huang and Kuo.
+Only a few of the early synthesis programs have dealt with lattice networks, but S-Filsyn (a powerful synthesis and analysis program ) provides some coverage of lattice and bridged-T circuits.
+
+Early history
+The symmetrical lattice and the ladder networks (the constant k filter and m-derived filter), were the subject of much interest in the early part of the twentieth century. At that time, the rapidly growing telephone industry had a significant influence on the development of filter theory, while seeking to increase the signal carrying capacity of telephone transmission lines. George Ashley Campbell was a key contributor to this new filter theory, as was Otto Julius Zobel. They and many colleagues worked at the laboratories of Western Electric and the American Telephone and Telegraph Co., and their work was reported in the early editions of the Bell System Technical Journal.
+Campbell discussed lattice filters in his article of 1922, while other early workers with an interest in the lattice included Johnson and Bartlett. Zobel's article on filter theory and design, published at about this time, mentioned lattices only briefly, with his main emphasis on ladder networks. It was only later, when Zobel considered the simulation and equalisation of telephone transmission lines, that he gave the lattice configuration more attention. (The telephone transmission lines of the time had a balanced-pair configuration with a nominal characteristic impedance of 600 ohms, so the lattice equaliser, with its balanced structure, was particularly appropriate for use with them). Later workers, especially Hendrik Wade Bode, gave greater prominence to lattice networks in their filter designs.
+In those early days, filter theory was based on image impedance concepts, or image filter theory, which was a design approach developed from the well-established studies of transmission lines. The filter was considered to be a lumped component version of a section of transmission line, and was one of many within a cascade of similar sections. As mentioned above, the weakness of the image filter approach was that the frequency response of a network was often not as predicted when the network was terminated resistively, instead of by the required image impedances. This was essentially a mismatch issue and Zobel overcame it by means of matching end sections. (see: m-derived filter, mm'-type filter, General mn-type image filter, with later work by Payne and Bode.)
+Although lattice filters sometimes suffer from this same problem, a range of constant-resistance networks can avoid it altogether.
+During the 1930s, as techniques in network analysis and synthesis became better developed, designing ladder filters by image methods became less popular. Even so, the concepts still found relevance in some modern designs. On the other hand, lattice networks and their circuit equivalents continue to be used in many applications.

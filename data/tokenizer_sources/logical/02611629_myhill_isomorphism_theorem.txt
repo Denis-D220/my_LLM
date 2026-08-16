@@ -1,0 +1,381 @@
+In computability theory the Myhill isomorphism theorem, named after John Myhill, provides a characterization for two numberings to induce the same notion of computability on a set. It is reminiscent of the Schröder–Bernstein theorem in set theory and has been called a constructive version of it.
+
+Theorem
+A many-one reduction from a set 
+  
+    
+      
+        A
+        ⊆
+        
+          N
+        
+      
+    
+    {\displaystyle A\subseteq \mathbb {N} }
+  
+ to a set 
+  
+    
+      
+        B
+        ⊆
+        
+          N
+        
+      
+    
+    {\displaystyle B\subseteq \mathbb {N} }
+  
+ is a total computable function 
+  
+    
+      
+        f
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f:\mathbb {N} \to \mathbb {N} }
+  
+ such that 
+  
+    
+      
+        ∀
+        x
+        ∈
+        
+          N
+        
+        ,
+        x
+        ∈
+        A
+        
+        ⟺
+        
+        f
+        (
+        x
+        )
+        ∈
+        B
+      
+    
+    {\displaystyle \forall x\in \mathbb {N} ,x\in A\iff f(x)\in B}
+  
+. A one-one reduction is an injective reduction, and a computable isomorphism is a bijective reduction.
+Myhill's isomorphism theorem: Two sets 
+  
+    
+      
+        A
+        ,
+        B
+        ⊆
+        
+          N
+        
+      
+    
+    {\displaystyle A,B\subseteq \mathbb {N} }
+  
+ are computably isomorphic if and only if A is one-one reducible to B and B is one-one reducible to A.
+As a corollary, two total numberings are one-equivalent if and only if they are computably isomorphic.
+
+Proof outline
+Let 
+  
+    
+      
+        A
+        ,
+        B
+        ⊆
+        
+          N
+        
+      
+    
+    {\displaystyle A,B\subseteq \mathbb {N} }
+  
+ be two sets and assume that there are injective, total computable functions 
+  
+    
+      
+        f
+        ,
+        g
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f,g:\mathbb {N} \to \mathbb {N} }
+  
+ such that for all 
+  
+    
+      
+        x
+        ∈
+        
+          N
+        
+      
+    
+    {\displaystyle x\in \mathbb {N} }
+  
+, both 
+  
+    
+      
+        x
+        ∈
+        A
+        
+        ⟺
+        
+        f
+        (
+        x
+        )
+        ∈
+        B
+      
+    
+    {\displaystyle x\in A\iff f(x)\in B}
+  
+ and 
+  
+    
+      
+        x
+        ∈
+        B
+        
+        ⟺
+        
+        g
+        (
+        x
+        )
+        ∈
+        A
+      
+    
+    {\displaystyle x\in B\iff g(x)\in A}
+  
+. We want to construct 
+  
+    
+      
+        h
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle h:\mathbb {N} \to \mathbb {N} }
+  
+ total computable and bijective such that for all 
+  
+    
+      
+        x
+        ∈
+        
+          N
+        
+      
+    
+    {\displaystyle x\in \mathbb {N} }
+  
+, 
+  
+    
+      
+        x
+        ∈
+        A
+        
+        ⟺
+        
+        h
+        (
+        x
+        )
+        ∈
+        B
+      
+    
+    {\displaystyle x\in A\iff h(x)\in B}
+  
+.
+
+As in most proofs of the Schröder–Bernstein theorem, we use an analysis of the "chains" formed by successive applications of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+. Informally, we think of two "copies" of 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ between which we want to construct a bijection, and we consider a number in the first copy, which is sent by 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ to a number in the second copy, which is in turn sent by 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ to a number in the first copy, etc. (These copies are blue and green in the pictures opposite.) Because 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ are injective, these chains do not "overlap" (there cannot be a merge between two chains). Depending on what happens when starting from some element and walking back on the chain, there are three possible types of chains:
+
+One-sided chains, where this eventually stops on an element which has no preimage by 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ or 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+.
+Two-sided chains, where this continues indefinitely without looping back.
+Cycles, where this ultimately yields an element already seen.
+Notice that for each chain, either all blue elements are in A and all green elements in B or no blue elements are in A and no green elements are in B.
+To construct a bijection in the context of the Schröder–Bernstein theorem, it suffices to pair the elements along each chain: on a one-sided chain, use 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ or 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ depending on the color of the first element, and on a two-sided chain or cycle, either one can be used. For Myhill's theorem, this does not work since the constructed bijection need not be computable.
+Instead, we build the bijection by successively pairing elements. At each stage, we take the next unpaired element from the blue copy of 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ and pair it with some unpaired element of the green copy, then we do the same with the next unpaired element from the green copy. This ensures that every element of both copies is paired at some point.
+Suppose we want to pair some blue element (the case of a green element is symmetric). The idea is to apply 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ to get the next green element on the chain, and if this element is unpaired, use it to pair with our blue element. If it is paired, then apply 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ then 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ to advance to the next green element in the chain, and repeat until an un-paired green element is found.
+To compute this bijection effectively, an algorithm can compute the pairs until its input is paired, and return the other element of the pair.

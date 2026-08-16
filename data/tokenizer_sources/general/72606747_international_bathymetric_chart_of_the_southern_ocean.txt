@@ -1,0 +1,21 @@
+The International Bathymetric Chart of the Southern Ocean (IBCSO) is a regional mapping initiative of the General Bathymetric Chart of the Oceans (GEBCO). IBSCO receives support from the Nippon Foundation – GEBCO Seabed 2030 Project.
+
+Background
+IBCSO is a joint project by the International Hydrographic Organization, the Scientific Committee on Antarctic Research, the General Bathymetric Chart of the Oceans and the Seabed 2030 Project. The project aims to identify and pool all Bathymetry data in the Southern Ocean and use that data to produce gridded bathymetric maps of the seafloor.
+The extent of the project is bound by 50°S, stretching from the southern tip of South America to the coastal waters of Antarctica. The IBCSO project is currently hosted by the bathymetry department at the Alfred Wegener Institute for Polar and Marine Research in Bremerhaven.
+
+Description
+Bathymetric data from all data holders are reviewed and pooled at 1 meter resolution to form the basis of the bathymetric data set. This includes all seafloor mapping sources from modern echo sounding methods such as multibeam echosounders and singlebeam echosounders to historic lead line measurements. A weighted blockmedian filter is run across the pooled data set to create a spatial map of high and low quality data.
+The low quality data is processed using a spline interpolation algorithm and used as a background layer. The high quality data from e.g. modern multibeam echosounder data is then added on top and incorporated in the background surface using a bending algorithm. Regions with no data coverage are padded by bathymetric data from the  dataset collected by the Shuttle Radar Topography Mission.
+The gridded product is made available to the public at a 500m x 500m resolution in a polar stereographic projection (EPSG: 9354) with either bedrock data of the Antarctic continent based on BedMachine and data for the ice surface topography derived from various sources such as REMA. The most recent version is also incorporated into the annual release of the General Bathymetric Chart of the Oceans grid. 
+The first version of IBCSO was published in 2013, covering the Southern Ocean south of 60°S. More than 4,200 million ocean soundings of diverse types and quality were incorporated.
+IBCSO became associated with and is supported by the Nippon Foundation – Seabed 2030 Project since 2017. IBCSO version 2 was published in 2022 and increased the extent of the bathymetric map to 50°S, increasing the area covered by 2.5 compared to IBCSO version 1. 92.7% of map data originate from multibeam data, 6.7% originate from singlebeam data, and the remaining ~1% comes from mixed sources (seismic reflection, lidar, etc.).
+
+Versions
+
+IBCSO Version 1
+500x500 meter resolution
+coverage up to 60°S
+IBCSO version 2
+500x500 meter resolution
+coverage up to 50°S

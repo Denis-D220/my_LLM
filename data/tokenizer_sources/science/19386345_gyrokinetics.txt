@@ -1,0 +1,708 @@
+Gyrokinetics is a theoretical framework to study plasma behavior on perpendicular spatial scales comparable to the gyroradius and frequencies much lower than the particle cyclotron frequencies. 
+These particular scales have been experimentally shown to be appropriate for modeling plasma turbulence. The trajectory of charged particles in a magnetic field is a helix that winds around the field line. This trajectory can be decomposed into a relatively slow motion of the guiding center along the field line and a fast circular motion, called gyromotion. For most plasma behavior, this gyromotion is irrelevant. Averaging over this gyromotion reduces the equations to six dimensions (3 spatial, 2 velocity, and time) rather than the seven (3 spatial, 3 velocity, and time). Because of this simplification, gyrokinetics governs the evolution of charged rings with a guiding center position, instead of gyrating charged particles.
+
+Derivation of the gyrokinetic equation
+Fundamentally, the gyrokinetic model assumes the plasma is strongly magnetized (
+  
+    
+      
+        
+          ρ
+          
+            i
+          
+        
+        ≪
+        
+          L
+          
+            plasma
+          
+        
+      
+    
+    {\displaystyle \rho _{i}\ll L_{\text{plasma}}}
+  
+), the perpendicular spatial scales are comparable to the gyroradius (
+  
+    
+      
+        
+          k
+          
+            ⊥
+          
+        
+        
+          ρ
+          
+            i
+          
+        
+        ∼
+        1
+      
+    
+    {\displaystyle k_{\perp }\rho _{i}\sim 1}
+  
+), and the behavior of interest has low frequencies (
+  
+    
+      
+        ω
+        ≪
+        
+          Ω
+          
+            i
+          
+        
+        ≪
+        
+          Ω
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \omega \ll \Omega _{i}\ll \Omega _{e}}
+  
+). We must also expand the distribution function, 
+  
+    
+      
+        
+          f
+          
+            s
+          
+        
+        =
+        
+          f
+          
+            s
+            0
+          
+        
+        +
+        
+          f
+          
+            s
+            1
+          
+        
+        +
+        ⋯
+      
+    
+    {\displaystyle f_{s}=f_{s0}+f_{s1}+\cdots }
+  
+, and assume the perturbation is small compared to the background (
+  
+    
+      
+        
+          f
+          
+            s
+            1
+          
+        
+        ≪
+        
+          f
+          
+            s
+            0
+          
+        
+      
+    
+    {\displaystyle f_{s1}\ll f_{s0}}
+  
+). The starting point is the Fokker–Planck equation and Maxwell's equations. The first step is to change spatial variables from the particle position 
+  
+    
+      
+        
+          r
+        
+      
+    
+    {\displaystyle \mathbf {r} }
+  
+ to the guiding center position 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbf {R} }
+  
+. Then, we change velocity coordinates from 
+  
+    
+      
+        (
+        
+          v
+          
+            x
+          
+        
+        ,
+        
+          v
+          
+            y
+          
+        
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+      
+    
+    {\displaystyle (v_{x},v_{y},v_{z})}
+  
+ to the velocity parallel 
+  
+    
+      
+        
+          v
+          
+            ∥
+          
+        
+        ≡
+        
+          v
+        
+        ⋅
+        
+          
+            
+              
+                b
+              
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle v_{\parallel }\equiv \mathbf {v} \cdot {\hat {\mathbf {b} }}}
+  
+, the magnetic moment 
+  
+    
+      
+        μ
+        ≡
+        
+          
+            
+              
+                m
+                
+                  s
+                
+              
+              
+                v
+                
+                  ⊥
+                
+                
+                  2
+                
+              
+            
+            
+              2
+              B
+            
+          
+        
+      
+    
+    {\displaystyle \mu \equiv {\frac {m_{s}v_{\perp }^{2}}{2B}}}
+  
+, and the gyrophase angle 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+. Here parallel and perpendicular are relative to 
+  
+    
+      
+        
+          
+            
+              
+                b
+              
+              ^
+            
+          
+        
+        ≡
+        
+          B
+        
+        
+          /
+        
+        B
+      
+    
+    {\displaystyle {\hat {\mathbf {b} }}\equiv \mathbf {B} /B}
+  
+, the direction of the magnetic field, and 
+  
+    
+      
+        
+          m
+          
+            s
+          
+        
+      
+    
+    {\displaystyle m_{s}}
+  
+ is the mass of the particle. Now, we can average over the gyrophase angle at constant guiding center position, denoted by 
+  
+    
+      
+        
+          
+            ⟨
+            …
+            ⟩
+          
+          
+            φ
+          
+        
+      
+    
+    {\displaystyle \left\langle \ldots \right\rangle _{\varphi }}
+  
+, yielding the gyrokinetic equation.
+The electrostatic gyrokinetic equation, in the absence of large plasma flow, is given by
+
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                h
+                
+                  s
+                
+              
+            
+            
+              ∂
+              t
+            
+          
+        
+        +
+        
+          (
+          
+            
+              v
+              
+                ∥
+              
+            
+            
+              
+                
+                  
+                    b
+                  
+                  ^
+                
+              
+            
+            +
+            
+              
+                V
+              
+              
+                d
+                s
+              
+            
+            +
+            
+              
+                ⟨
+                
+                  
+                    V
+                  
+                  
+                    ϕ
+                  
+                
+                ⟩
+              
+              
+                φ
+              
+            
+          
+          )
+        
+        ⋅
+        
+          
+            ∇
+          
+          
+            
+              R
+            
+          
+        
+        
+          h
+          
+            s
+          
+        
+        −
+        
+          ∑
+          
+            
+              s
+              ′
+            
+          
+        
+        
+          
+            ⟨
+            
+              C
+              
+                [
+                
+                  
+                    h
+                    
+                      s
+                    
+                  
+                  ,
+                  
+                    h
+                    
+                      
+                        s
+                        ′
+                      
+                    
+                  
+                
+                ]
+              
+            
+            ⟩
+          
+          
+            φ
+          
+        
+        =
+        
+          
+            
+              
+                Z
+                
+                  s
+                
+              
+              e
+              
+                f
+                
+                  s
+                  0
+                
+              
+            
+            
+              T
+              
+                s
+              
+            
+          
+        
+        
+          
+            
+              ∂
+              
+                
+                  ⟨
+                  ϕ
+                  ⟩
+                
+                
+                  φ
+                
+              
+            
+            
+              ∂
+              t
+            
+          
+        
+        −
+        
+          
+            
+              ∂
+              
+                f
+                
+                  s
+                  0
+                
+              
+            
+            
+              ∂
+              ψ
+            
+          
+        
+        
+          
+            ⟨
+            
+              
+                V
+              
+              
+                ϕ
+              
+            
+            ⟩
+          
+          
+            φ
+          
+        
+        ⋅
+        
+          ∇
+        
+        ψ
+        .
+      
+    
+    {\displaystyle {\frac {\partial h_{s}}{\partial t}}+\left(v_{\parallel }{\hat {\mathbf {b} }}+\mathbf {V} _{ds}+\left\langle \mathbf {V} _{\phi }\right\rangle _{\varphi }\right)\cdot {\boldsymbol {\nabla }}_{\mathbf {R} }h_{s}-\sum _{s'}\left\langle C\left[h_{s},h_{s'}\right]\right\rangle _{\varphi }={\frac {Z_{s}ef_{s0}}{T_{s}}}{\frac {\partial \left\langle \phi \right\rangle _{\varphi }}{\partial t}}-{\frac {\partial f_{s0}}{\partial \psi }}\left\langle \mathbf {V} _{\phi }\right\rangle _{\varphi }\cdot {\boldsymbol {\nabla }}\psi .}
+  
+
+Here the first term represents the change in the perturbed distribution function, 
+  
+    
+      
+        
+          h
+          
+            s
+          
+        
+        ≡
+        
+          f
+          
+            s
+            1
+          
+        
+        +
+        
+          
+            
+              
+                Z
+                
+                  s
+                
+              
+              e
+              ϕ
+            
+            
+              T
+              
+                s
+              
+            
+          
+        
+        
+          f
+          
+            s
+            0
+          
+        
+      
+    
+    {\displaystyle h_{s}\equiv f_{s1}+{\frac {Z_{s}e\phi }{T_{s}}}f_{s0}}
+  
+, with time. The second term represents particle streaming along the magnetic field line. The third term contains the effects of cross-field particle drifts, including the curvature drift, the grad-B drift, and the lowest order E-cross-B drift. The fourth term represents the nonlinear effect of the perturbed 
+  
+    
+      
+        
+          E
+        
+        ×
+        
+          B
+        
+      
+    
+    {\displaystyle \mathbf {E} \times \mathbf {B} }
+  
+ drift interacting with the distribution function perturbation. The fifth term uses a collision operator to include the effects of collisions between particles. The sixth term represents the Maxwell–Boltzmann response to the perturbed electric potential. The last term includes temperature and density gradients of the background distribution function, which drive the perturbation. These gradients are only significant in the direction across flux surfaces, parameterized by 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+, the magnetic flux.
+The gyrokinetic equation, together with gyro-averaged Maxwell's equations, give the distribution function and the perturbed electric and magnetic fields. In the electrostatic case we only require Gauss's law (which takes the form of the quasineutrality condition), given by
+
+  
+    
+      
+        
+          ∑
+          
+            s
+          
+        
+        
+          Z
+          
+            s
+          
+        
+        e
+        B
+        ∫
+        d
+        
+          v
+          
+            ∥
+          
+        
+        
+        d
+        μ
+        
+        d
+        φ
+        
+        
+          h
+          
+            s
+          
+        
+        
+          (
+          
+            R
+          
+          )
+        
+        =
+        
+          ∑
+          
+            s
+          
+        
+        
+          
+            
+              
+                Z
+                
+                  s
+                
+                
+                  2
+                
+              
+              
+                e
+                
+                  2
+                
+              
+              
+                n
+                
+                  s
+                
+              
+              ϕ
+            
+            
+              T
+              
+                s
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \sum _{s}Z_{s}eB\int dv_{\parallel }\,d\mu \,d\varphi \,h_{s}\left(\mathbf {R} \right)=\sum _{s}{\frac {Z_{s}^{2}e^{2}n_{s}\phi }{T_{s}}}.}
+  
+
+Usually solutions are found numerically with the help of supercomputers, but in simplified situations analytic solutions are possible.

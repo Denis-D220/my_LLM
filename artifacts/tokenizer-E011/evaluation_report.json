@@ -1,0 +1,3958 @@
+{
+  "created_at_utc": "2026-08-14T03:58:22.169064+00:00",
+  "evaluator_version": "0.1",
+  "tokenizer": {
+    "path": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\artifacts\\tokenizer-E011\\tokenizer.json",
+    "vocab_size": 24000,
+    "learned_content_vocab_size": 23991,
+    "content_vocab_limit": 23991,
+    "special_token_count": 9,
+    "learned_merge_count": 23735,
+    "unused_content_ids": 0,
+    "special_tokens": [
+      {
+        "token": "<|pad|>",
+        "id": 23991
+      },
+      {
+        "token": "<|bos|>",
+        "id": 23992
+      },
+      {
+        "token": "<|eos|>",
+        "id": 23993
+      },
+      {
+        "token": "<|system|>",
+        "id": 23994
+      },
+      {
+        "token": "<|user|>",
+        "id": 23995
+      },
+      {
+        "token": "<|assistant|>",
+        "id": 23996
+      },
+      {
+        "token": "<|end_turn|>",
+        "id": 23997
+      },
+      {
+        "token": "<|tool|>",
+        "id": 23998
+      },
+      {
+        "token": "<|tool_result|>",
+        "id": 23999
+      }
+    ]
+  },
+  "evaluation_input": {
+    "files": [
+      "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\evaluation\\v0.2\\tokenizer_eval.jsonl"
+    ],
+    "documents_loaded": 63,
+    "text_field": "text",
+    "max_documents": null,
+    "max_bytes": null
+  },
+  "correctness": {
+    "held_out_roundtrip_ok": true,
+    "builtin_probes_roundtrip_ok": true,
+    "case_distinctions_ok": true
+  },
+  "held_out_corpus": {
+    "documents": 63,
+    "characters": 528794,
+    "utf8_bytes": 529477,
+    "lines": 5019,
+    "word_like_units": 77572,
+    "tokens": 98993,
+    "byte_tokens": 6842,
+    "bpe_tokens": 92151,
+    "special_tokens": 0,
+    "roundtrip_failures": 0,
+    "literal_special_token_occurrences": 0,
+    "tokens_per_document": 1571.31746,
+    "tokens_per_word_like_unit": 1.276143,
+    "characters_per_token": 5.341731,
+    "utf8_bytes_per_token": 5.348631,
+    "byte_token_ratio": 0.069116,
+    "bpe_token_ratio": 0.930884,
+    "distinct_token_ids_used": 13199,
+    "distinct_content_token_ids_used": 13199,
+    "content_vocabulary_utilization": 0.550165,
+    "distinct_learned_bpe_ids_used": 13087,
+    "token_byte_length_distribution": {
+      "1": 6842,
+      "2": 11658,
+      "3": 13041,
+      "4": 12615,
+      "5-8": 39557,
+      "9-16": 15158,
+      "17+": 122
+    },
+    "roundtrip_failure_examples": [],
+    "top_tokens": [
+      {
+        "id": 96,
+        "type": "byte",
+        "count": 886,
+        "bytes_hex": "60",
+        "byte_length": 1,
+        "utf8": "`",
+        "character_length": 1
+      },
+      {
+        "id": 396,
+        "type": "bpe",
+        "count": 503,
+        "bytes_hex": "2e0a0a",
+        "byte_length": 3,
+        "utf8": ".\n\n",
+        "character_length": 3
+      },
+      {
+        "id": 259,
+        "type": "bpe",
+        "count": 490,
+        "bytes_hex": "7320",
+        "byte_length": 2,
+        "utf8": "s ",
+        "character_length": 2
+      },
+      {
+        "id": 296,
+        "type": "bpe",
+        "count": 473,
+        "bytes_hex": "657320",
+        "byte_length": 3,
+        "utf8": "es ",
+        "character_length": 3
+      },
+      {
+        "id": 295,
+        "type": "bpe",
+        "count": 427,
+        "bytes_hex": "697320",
+        "byte_length": 3,
+        "utf8": "is ",
+        "character_length": 3
+      },
+      {
+        "id": 268,
+        "type": "bpe",
+        "count": 402,
+        "bytes_hex": "2c20",
+        "byte_length": 2,
+        "utf8": ", ",
+        "character_length": 2
+      },
+      {
+        "id": 349,
+        "type": "bpe",
+        "count": 383,
+        "bytes_hex": "732c20",
+        "byte_length": 3,
+        "utf8": "s, ",
+        "character_length": 3
+      },
+      {
+        "id": 418,
+        "type": "bpe",
+        "count": 347,
+        "bytes_hex": "2c20616e6420",
+        "byte_length": 6,
+        "utf8": ", and ",
+        "character_length": 6
+      },
+      {
+        "id": 292,
+        "type": "bpe",
+        "count": 343,
+        "bytes_hex": "696e6720",
+        "byte_length": 4,
+        "utf8": "ing ",
+        "character_length": 4
+      },
+      {
+        "id": 286,
+        "type": "bpe",
+        "count": 328,
+        "bytes_hex": "616e6420",
+        "byte_length": 4,
+        "utf8": "and ",
+        "character_length": 4
+      },
+      {
+        "id": 287,
+        "type": "bpe",
+        "count": 319,
+        "bytes_hex": "6120",
+        "byte_length": 2,
+        "utf8": "a ",
+        "character_length": 2
+      },
+      {
+        "id": 309,
+        "type": "bpe",
+        "count": 296,
+        "bytes_hex": "0a0a",
+        "byte_length": 2,
+        "utf8": "\n\n",
+        "character_length": 2
+      },
+      {
+        "id": 32,
+        "type": "byte",
+        "count": 279,
+        "bytes_hex": "20",
+        "byte_length": 1,
+        "utf8": " ",
+        "character_length": 1
+      },
+      {
+        "id": 280,
+        "type": "bpe",
+        "count": 272,
+        "bytes_hex": "656420",
+        "byte_length": 3,
+        "utf8": "ed ",
+        "character_length": 3
+      },
+      {
+        "id": 45,
+        "type": "byte",
+        "count": 258,
+        "bytes_hex": "2d",
+        "byte_length": 1,
+        "utf8": "-",
+        "character_length": 1
+      },
+      {
+        "id": 969,
+        "type": "bpe",
+        "count": 234,
+        "bytes_hex": "732e0a0a",
+        "byte_length": 4,
+        "utf8": "s.\n\n",
+        "character_length": 4
+      },
+      {
+        "id": 411,
+        "type": "bpe",
+        "count": 233,
+        "bytes_hex": "732e20",
+        "byte_length": 3,
+        "utf8": "s. ",
+        "character_length": 3
+      },
+      {
+        "id": 476,
+        "type": "bpe",
+        "count": 233,
+        "bytes_hex": "65732c20",
+        "byte_length": 4,
+        "utf8": "es, ",
+        "character_length": 4
+      },
+      {
+        "id": 876,
+        "type": "bpe",
+        "count": 232,
+        "bytes_hex": "732c20616e6420",
+        "byte_length": 7,
+        "utf8": "s, and ",
+        "character_length": 7
+      },
+      {
+        "id": 294,
+        "type": "bpe",
+        "count": 230,
+        "bytes_hex": "696e20",
+        "byte_length": 3,
+        "utf8": "in ",
+        "character_length": 3
+      },
+      {
+        "id": 10195,
+        "type": "bpe",
+        "count": 218,
+        "bytes_hex": "2a2a",
+        "byte_length": 2,
+        "utf8": "**",
+        "character_length": 2
+      },
+      {
+        "id": 350,
+        "type": "bpe",
+        "count": 210,
+        "bytes_hex": "7468617420",
+        "byte_length": 5,
+        "utf8": "that ",
+        "character_length": 5
+      },
+      {
+        "id": 293,
+        "type": "bpe",
+        "count": 199,
+        "bytes_hex": "746f20",
+        "byte_length": 3,
+        "utf8": "to ",
+        "character_length": 3
+      },
+      {
+        "id": 388,
+        "type": "bpe",
+        "count": 199,
+        "bytes_hex": "7769746820",
+        "byte_length": 5,
+        "utf8": "with ",
+        "character_length": 5
+      },
+      {
+        "id": 461,
+        "type": "bpe",
+        "count": 199,
+        "bytes_hex": "7320616e6420",
+        "byte_length": 6,
+        "utf8": "s and ",
+        "character_length": 6
+      }
+    ],
+    "longest_used_bpe_tokens": [
+      {
+        "id": 3621,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "0a2020202020202020202020202020202020202020202020202020202020202020",
+        "byte_length": 33,
+        "utf8": "\n                                ",
+        "character_length": 33
+      },
+      {
+        "id": 2626,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "0a20202020202020202020202020202020202020202020202020202020",
+        "byte_length": 29,
+        "utf8": "\n                            ",
+        "character_length": 29
+      },
+      {
+        "id": 20004,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "72656c6174696f6e73686970206265747765656e2074686520",
+        "byte_length": 25,
+        "utf8": "relationship between the ",
+        "character_length": 25
+      },
+      {
+        "id": 17227,
+        "type": "bpe",
+        "count": 2,
+        "bytes_hex": "646966666572656e7469616c206571756174696f6e7320",
+        "byte_length": 23,
+        "utf8": "differential equations ",
+        "character_length": 23
+      },
+      {
+        "id": 15185,
+        "type": "bpe",
+        "count": 4,
+        "bytes_hex": "72656c6174696f6e7368697073206265747765656e20",
+        "byte_length": 22,
+        "utf8": "relationships between ",
+        "character_length": 22
+      },
+      {
+        "id": 20561,
+        "type": "bpe",
+        "count": 3,
+        "bytes_hex": "646966666572656e7469616c206571756174696f6e20",
+        "byte_length": 22,
+        "utf8": "differential equation ",
+        "character_length": 22
+      },
+      {
+        "id": 9231,
+        "type": "bpe",
+        "count": 6,
+        "bytes_hex": "72656c6174696f6e73686970206265747765656e20",
+        "byte_length": 21,
+        "utf8": "relationship between ",
+        "character_length": 21
+      },
+      {
+        "id": 544,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "0a2020202020202020202020202020202020202020",
+        "byte_length": 21,
+        "utf8": "\n                    ",
+        "character_length": 21
+      },
+      {
+        "id": 15462,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "646966666572656e7469616c206571756174696f6e",
+        "byte_length": 21,
+        "utf8": "differential equation",
+        "character_length": 21
+      },
+      {
+        "id": 17634,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "677265656e20696e66726173747275637475726520",
+        "byte_length": 21,
+        "utf8": "green infrastructure ",
+        "character_length": 21
+      },
+      {
+        "id": 20286,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "6578706f6e656e7469616c2066756e6374696f6e20",
+        "byte_length": 21,
+        "utf8": "exponential function ",
+        "character_length": 21
+      },
+      {
+        "id": 11495,
+        "type": "bpe",
+        "count": 7,
+        "bytes_hex": "70726f706f7274696f6e616c20746f2074686520",
+        "byte_length": 20,
+        "utf8": "proportional to the ",
+        "character_length": 20
+      },
+      {
+        "id": 12383,
+        "type": "bpe",
+        "count": 2,
+        "bytes_hex": "64697374696e6374696f6e206265747765656e20",
+        "byte_length": 20,
+        "utf8": "distinction between ",
+        "character_length": 20
+      },
+      {
+        "id": 21900,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "646966666572656e636573206265747765656e20",
+        "byte_length": 20,
+        "utf8": "differences between ",
+        "character_length": 20
+      },
+      {
+        "id": 10625,
+        "type": "bpe",
+        "count": 3,
+        "bytes_hex": "646966666572656e6365206265747765656e20",
+        "byte_length": 19,
+        "utf8": "difference between ",
+        "character_length": 19
+      },
+      {
+        "id": 16814,
+        "type": "bpe",
+        "count": 2,
+        "bytes_hex": "636f6e747269627574656420746f2074686520",
+        "byte_length": 19,
+        "utf8": "contributed to the ",
+        "character_length": 19
+      },
+      {
+        "id": 21827,
+        "type": "bpe",
+        "count": 2,
+        "bytes_hex": "636f6e6e656374696f6e206265747765656e20",
+        "byte_length": 19,
+        "utf8": "connection between ",
+        "character_length": 19
+      },
+      {
+        "id": 6342,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "70726f6772616d6d696e67206c616e67756167",
+        "byte_length": 19,
+        "utf8": "programming languag",
+        "character_length": 19
+      },
+      {
+        "id": 14377,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "636861726163746572697374696373206f6620",
+        "byte_length": 19,
+        "utf8": "characteristics of ",
+        "character_length": 19
+      },
+      {
+        "id": 15735,
+        "type": "bpe",
+        "count": 1,
+        "bytes_hex": "646966666572656e74207479706573206f6620",
+        "byte_length": 19,
+        "utf8": "different types of ",
+        "character_length": 19
+      }
+    ]
+  },
+  "builtin_probe_categories": [
+    {
+      "category": "ai_ml",
+      "probes": 2,
+      "tokens": 51,
+      "word_like_units": 32,
+      "tokens_per_word_like_unit": 1.59375,
+      "characters_per_token": 4.333333,
+      "utf8_bytes_per_token": 4.333333,
+      "byte_token_ratio": 0.058824,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "case_sensitivity",
+      "probes": 1,
+      "tokens": 32,
+      "word_like_units": 14,
+      "tokens_per_word_like_unit": 2.285714,
+      "characters_per_token": 2.84375,
+      "utf8_bytes_per_token": 2.84375,
+      "byte_token_ratio": 0.3125,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "cpp",
+      "probes": 1,
+      "tokens": 53,
+      "word_like_units": 12,
+      "tokens_per_word_like_unit": 4.416667,
+      "characters_per_token": 2.132075,
+      "utf8_bytes_per_token": 2.132075,
+      "byte_token_ratio": 0.339623,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "electronics",
+      "probes": 2,
+      "tokens": 64,
+      "word_like_units": 38,
+      "tokens_per_word_like_unit": 1.684211,
+      "characters_per_token": 2.9375,
+      "utf8_bytes_per_token": 3.0,
+      "byte_token_ratio": 0.3125,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "general_english",
+      "probes": 1,
+      "tokens": 9,
+      "word_like_units": 12,
+      "tokens_per_word_like_unit": 0.75,
+      "characters_per_token": 8.222222,
+      "utf8_bytes_per_token": 8.222222,
+      "byte_token_ratio": 0.111111,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "math_unicode",
+      "probes": 1,
+      "tokens": 32,
+      "word_like_units": 13,
+      "tokens_per_word_like_unit": 2.461538,
+      "characters_per_token": 1.71875,
+      "utf8_bytes_per_token": 2.0625,
+      "byte_token_ratio": 0.28125,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "networking",
+      "probes": 1,
+      "tokens": 31,
+      "word_like_units": 19,
+      "tokens_per_word_like_unit": 1.631579,
+      "characters_per_token": 3.032258,
+      "utf8_bytes_per_token": 3.032258,
+      "byte_token_ratio": 0.225806,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "numbers",
+      "probes": 1,
+      "tokens": 42,
+      "word_like_units": 15,
+      "tokens_per_word_like_unit": 2.8,
+      "characters_per_token": 1.785714,
+      "utf8_bytes_per_token": 1.785714,
+      "byte_token_ratio": 0.333333,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "python",
+      "probes": 1,
+      "tokens": 24,
+      "word_like_units": 10,
+      "tokens_per_word_like_unit": 2.4,
+      "characters_per_token": 4.125,
+      "utf8_bytes_per_token": 4.125,
+      "byte_token_ratio": 0.208333,
+      "roundtrip_ok": true
+    },
+    {
+      "category": "structured_text",
+      "probes": 1,
+      "tokens": 40,
+      "word_like_units": 13,
+      "tokens_per_word_like_unit": 3.076923,
+      "characters_per_token": 2.2,
+      "utf8_bytes_per_token": 2.2,
+      "byte_token_ratio": 0.525,
+      "roundtrip_ok": true
+    }
+  ],
+  "builtin_probes": [
+    {
+      "category": "general_english",
+      "name": "plain_sentence",
+      "text": "The system processes information and returns a clear response to the user.",
+      "characters": 74,
+      "utf8_bytes": 74,
+      "word_like_units": 12,
+      "tokens": 9,
+      "tokens_per_word_like_unit": 0.75,
+      "characters_per_token": 8.222222,
+      "utf8_bytes_per_token": 8.222222,
+      "byte_tokens": 1,
+      "bpe_tokens": 8,
+      "byte_token_ratio": 0.111111,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 356,
+          "type": "bpe",
+          "bytes_hex": "54686520",
+          "byte_length": 4,
+          "utf8": "The ",
+          "character_length": 4
+        },
+        {
+          "id": 1083,
+          "type": "bpe",
+          "bytes_hex": "73797374656d20",
+          "byte_length": 7,
+          "utf8": "system ",
+          "character_length": 7
+        },
+        {
+          "id": 5367,
+          "type": "bpe",
+          "bytes_hex": "70726f63657373657320",
+          "byte_length": 10,
+          "utf8": "processes ",
+          "character_length": 10
+        },
+        {
+          "id": 13215,
+          "type": "bpe",
+          "bytes_hex": "696e666f726d6174696f6e20616e6420",
+          "byte_length": 16,
+          "utf8": "information and ",
+          "character_length": 16
+        },
+        {
+          "id": 19459,
+          "type": "bpe",
+          "bytes_hex": "72657475726e73206120",
+          "byte_length": 10,
+          "utf8": "returns a ",
+          "character_length": 10
+        },
+        {
+          "id": 5203,
+          "type": "bpe",
+          "bytes_hex": "636c65617220",
+          "byte_length": 6,
+          "utf8": "clear ",
+          "character_length": 6
+        },
+        {
+          "id": 22175,
+          "type": "bpe",
+          "bytes_hex": "726573706f6e736520746f2074686520",
+          "byte_length": 16,
+          "utf8": "response to the ",
+          "character_length": 16
+        },
+        {
+          "id": 7007,
+          "type": "bpe",
+          "bytes_hex": "75736572",
+          "byte_length": 4,
+          "utf8": "user",
+          "character_length": 4
+        },
+        {
+          "id": 46,
+          "type": "byte",
+          "bytes_hex": "2e",
+          "byte_length": 1,
+          "utf8": ".",
+          "character_length": 1
+        }
+      ]
+    },
+    {
+      "category": "electronics",
+      "name": "engineering_units",
+      "text": "A 10 µF decoupling capacitor is connected between VCC and GND near the MCU; R = 4.7 kΩ ± 5%.",
+      "characters": 92,
+      "utf8_bytes": 95,
+      "word_like_units": 19,
+      "tokens": 32,
+      "tokens_per_word_like_unit": 1.684211,
+      "characters_per_token": 2.875,
+      "utf8_bytes_per_token": 2.96875,
+      "byte_tokens": 10,
+      "bpe_tokens": 22,
+      "byte_token_ratio": 0.3125,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 537,
+          "type": "bpe",
+          "bytes_hex": "4120",
+          "byte_length": 2,
+          "utf8": "A ",
+          "character_length": 2
+        },
+        {
+          "id": 2452,
+          "type": "bpe",
+          "bytes_hex": "313020",
+          "byte_length": 3,
+          "utf8": "10 ",
+          "character_length": 3
+        },
+        {
+          "id": 194,
+          "type": "byte",
+          "bytes_hex": "c2",
+          "byte_length": 1,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 181,
+          "type": "byte",
+          "bytes_hex": "b5",
+          "byte_length": 1,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 2596,
+          "type": "bpe",
+          "bytes_hex": "4620",
+          "byte_length": 2,
+          "utf8": "F ",
+          "character_length": 2
+        },
+        {
+          "id": 23903,
+          "type": "bpe",
+          "bytes_hex": "6465636f75706c",
+          "byte_length": 7,
+          "utf8": "decoupl",
+          "character_length": 7
+        },
+        {
+          "id": 292,
+          "type": "bpe",
+          "bytes_hex": "696e6720",
+          "byte_length": 4,
+          "utf8": "ing ",
+          "character_length": 4
+        },
+        {
+          "id": 7755,
+          "type": "bpe",
+          "bytes_hex": "636170616369746f7220",
+          "byte_length": 10,
+          "utf8": "capacitor ",
+          "character_length": 10
+        },
+        {
+          "id": 295,
+          "type": "bpe",
+          "bytes_hex": "697320",
+          "byte_length": 3,
+          "utf8": "is ",
+          "character_length": 3
+        },
+        {
+          "id": 4724,
+          "type": "bpe",
+          "bytes_hex": "636f6e6e656374656420",
+          "byte_length": 10,
+          "utf8": "connected ",
+          "character_length": 10
+        },
+        {
+          "id": 708,
+          "type": "bpe",
+          "bytes_hex": "6265747765656e20",
+          "byte_length": 8,
+          "utf8": "between ",
+          "character_length": 8
+        },
+        {
+          "id": 86,
+          "type": "byte",
+          "bytes_hex": "56",
+          "byte_length": 1,
+          "utf8": "V",
+          "character_length": 1
+        },
+        {
+          "id": 8384,
+          "type": "bpe",
+          "bytes_hex": "4343",
+          "byte_length": 2,
+          "utf8": "CC",
+          "character_length": 2
+        },
+        {
+          "id": 489,
+          "type": "bpe",
+          "bytes_hex": "20616e6420",
+          "byte_length": 5,
+          "utf8": " and ",
+          "character_length": 5
+        },
+        {
+          "id": 5477,
+          "type": "bpe",
+          "bytes_hex": "474e",
+          "byte_length": 2,
+          "utf8": "GN",
+          "character_length": 2
+        },
+        {
+          "id": 1533,
+          "type": "bpe",
+          "bytes_hex": "4420",
+          "byte_length": 2,
+          "utf8": "D ",
+          "character_length": 2
+        },
+        {
+          "id": 6206,
+          "type": "bpe",
+          "bytes_hex": "6e6561722074686520",
+          "byte_length": 9,
+          "utf8": "near the ",
+          "character_length": 9
+        },
+        {
+          "id": 9695,
+          "type": "bpe",
+          "bytes_hex": "4d43",
+          "byte_length": 2,
+          "utf8": "MC",
+          "character_length": 2
+        },
+        {
+          "id": 85,
+          "type": "byte",
+          "bytes_hex": "55",
+          "byte_length": 1,
+          "utf8": "U",
+          "character_length": 1
+        },
+        {
+          "id": 586,
+          "type": "bpe",
+          "bytes_hex": "3b20",
+          "byte_length": 2,
+          "utf8": "; ",
+          "character_length": 2
+        },
+        {
+          "id": 1861,
+          "type": "bpe",
+          "bytes_hex": "5220",
+          "byte_length": 2,
+          "utf8": "R ",
+          "character_length": 2
+        },
+        {
+          "id": 665,
+          "type": "bpe",
+          "bytes_hex": "3d20",
+          "byte_length": 2,
+          "utf8": "= ",
+          "character_length": 2
+        },
+        {
+          "id": 3187,
+          "type": "bpe",
+          "bytes_hex": "342e",
+          "byte_length": 2,
+          "utf8": "4.",
+          "character_length": 2
+        },
+        {
+          "id": 1588,
+          "type": "bpe",
+          "bytes_hex": "3720",
+          "byte_length": 2,
+          "utf8": "7 ",
+          "character_length": 2
+        },
+        {
+          "id": 107,
+          "type": "byte",
+          "bytes_hex": "6b",
+          "byte_length": 1,
+          "utf8": "k",
+          "character_length": 1
+        },
+        {
+          "id": 11434,
+          "type": "bpe",
+          "bytes_hex": "cea9",
+          "byte_length": 2,
+          "utf8": "Ω",
+          "character_length": 1
+        },
+        {
+          "id": 32,
+          "type": "byte",
+          "bytes_hex": "20",
+          "byte_length": 1,
+          "utf8": " ",
+          "character_length": 1
+        },
+        {
+          "id": 9701,
+          "type": "bpe",
+          "bytes_hex": "c2b1",
+          "byte_length": 2,
+          "utf8": "±",
+          "character_length": 1
+        },
+        {
+          "id": 32,
+          "type": "byte",
+          "bytes_hex": "20",
+          "byte_length": 1,
+          "utf8": " ",
+          "character_length": 1
+        },
+        {
+          "id": 53,
+          "type": "byte",
+          "bytes_hex": "35",
+          "byte_length": 1,
+          "utf8": "5",
+          "character_length": 1
+        },
+        {
+          "id": 37,
+          "type": "byte",
+          "bytes_hex": "25",
+          "byte_length": 1,
+          "utf8": "%",
+          "character_length": 1
+        },
+        {
+          "id": 46,
+          "type": "byte",
+          "bytes_hex": "2e",
+          "byte_length": 1,
+          "utf8": ".",
+          "character_length": 1
+        }
+      ]
+    },
+    {
+      "category": "electronics",
+      "name": "embedded_system",
+      "text": "The STM32F411 communicates with the VL53L8CX over I²C at 400 kHz and operates from a 3.3 V rail.",
+      "characters": 96,
+      "utf8_bytes": 97,
+      "word_like_units": 19,
+      "tokens": 32,
+      "tokens_per_word_like_unit": 1.684211,
+      "characters_per_token": 3.0,
+      "utf8_bytes_per_token": 3.03125,
+      "byte_tokens": 10,
+      "bpe_tokens": 22,
+      "byte_token_ratio": 0.3125,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 356,
+          "type": "bpe",
+          "bytes_hex": "54686520",
+          "byte_length": 4,
+          "utf8": "The ",
+          "character_length": 4
+        },
+        {
+          "id": 4078,
+          "type": "bpe",
+          "bytes_hex": "5354",
+          "byte_length": 2,
+          "utf8": "ST",
+          "character_length": 2
+        },
+        {
+          "id": 77,
+          "type": "byte",
+          "bytes_hex": "4d",
+          "byte_length": 1,
+          "utf8": "M",
+          "character_length": 1
+        },
+        {
+          "id": 3929,
+          "type": "bpe",
+          "bytes_hex": "3332",
+          "byte_length": 2,
+          "utf8": "32",
+          "character_length": 2
+        },
+        {
+          "id": 70,
+          "type": "byte",
+          "bytes_hex": "46",
+          "byte_length": 1,
+          "utf8": "F",
+          "character_length": 1
+        },
+        {
+          "id": 52,
+          "type": "byte",
+          "bytes_hex": "34",
+          "byte_length": 1,
+          "utf8": "4",
+          "character_length": 1
+        },
+        {
+          "id": 5298,
+          "type": "bpe",
+          "bytes_hex": "313120",
+          "byte_length": 3,
+          "utf8": "11 ",
+          "character_length": 3
+        },
+        {
+          "id": 1824,
+          "type": "bpe",
+          "bytes_hex": "636f6d6d756e6963",
+          "byte_length": 8,
+          "utf8": "communic",
+          "character_length": 8
+        },
+        {
+          "id": 791,
+          "type": "bpe",
+          "bytes_hex": "6174657320",
+          "byte_length": 5,
+          "utf8": "ates ",
+          "character_length": 5
+        },
+        {
+          "id": 799,
+          "type": "bpe",
+          "bytes_hex": "776974682074686520",
+          "byte_length": 9,
+          "utf8": "with the ",
+          "character_length": 9
+        },
+        {
+          "id": 7823,
+          "type": "bpe",
+          "bytes_hex": "564c",
+          "byte_length": 2,
+          "utf8": "VL",
+          "character_length": 2
+        },
+        {
+          "id": 8382,
+          "type": "bpe",
+          "bytes_hex": "3533",
+          "byte_length": 2,
+          "utf8": "53",
+          "character_length": 2
+        },
+        {
+          "id": 76,
+          "type": "byte",
+          "bytes_hex": "4c",
+          "byte_length": 1,
+          "utf8": "L",
+          "character_length": 1
+        },
+        {
+          "id": 56,
+          "type": "byte",
+          "bytes_hex": "38",
+          "byte_length": 1,
+          "utf8": "8",
+          "character_length": 1
+        },
+        {
+          "id": 67,
+          "type": "byte",
+          "bytes_hex": "43",
+          "byte_length": 1,
+          "utf8": "C",
+          "character_length": 1
+        },
+        {
+          "id": 3045,
+          "type": "bpe",
+          "bytes_hex": "5820",
+          "byte_length": 2,
+          "utf8": "X ",
+          "character_length": 2
+        },
+        {
+          "id": 914,
+          "type": "bpe",
+          "bytes_hex": "6f76657220",
+          "byte_length": 5,
+          "utf8": "over ",
+          "character_length": 5
+        },
+        {
+          "id": 73,
+          "type": "byte",
+          "bytes_hex": "49",
+          "byte_length": 1,
+          "utf8": "I",
+          "character_length": 1
+        },
+        {
+          "id": 194,
+          "type": "byte",
+          "bytes_hex": "c2",
+          "byte_length": 1,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 178,
+          "type": "byte",
+          "bytes_hex": "b2",
+          "byte_length": 1,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 1069,
+          "type": "bpe",
+          "bytes_hex": "4320",
+          "byte_length": 2,
+          "utf8": "C ",
+          "character_length": 2
+        },
+        {
+          "id": 319,
+          "type": "bpe",
+          "bytes_hex": "617420",
+          "byte_length": 3,
+          "utf8": "at ",
+          "character_length": 3
+        },
+        {
+          "id": 8513,
+          "type": "bpe",
+          "bytes_hex": "34303020",
+          "byte_length": 4,
+          "utf8": "400 ",
+          "character_length": 4
+        },
+        {
+          "id": 22292,
+          "type": "bpe",
+          "bytes_hex": "6b487a",
+          "byte_length": 3,
+          "utf8": "kHz",
+          "character_length": 3
+        },
+        {
+          "id": 489,
+          "type": "bpe",
+          "bytes_hex": "20616e6420",
+          "byte_length": 5,
+          "utf8": " and ",
+          "character_length": 5
+        },
+        {
+          "id": 10603,
+          "type": "bpe",
+          "bytes_hex": "6f7065726174657320",
+          "byte_length": 9,
+          "utf8": "operates ",
+          "character_length": 9
+        },
+        {
+          "id": 2279,
+          "type": "bpe",
+          "bytes_hex": "66726f6d206120",
+          "byte_length": 7,
+          "utf8": "from a ",
+          "character_length": 7
+        },
+        {
+          "id": 2149,
+          "type": "bpe",
+          "bytes_hex": "332e",
+          "byte_length": 2,
+          "utf8": "3.",
+          "character_length": 2
+        },
+        {
+          "id": 1016,
+          "type": "bpe",
+          "bytes_hex": "3320",
+          "byte_length": 2,
+          "utf8": "3 ",
+          "character_length": 2
+        },
+        {
+          "id": 3157,
+          "type": "bpe",
+          "bytes_hex": "5620",
+          "byte_length": 2,
+          "utf8": "V ",
+          "character_length": 2
+        },
+        {
+          "id": 3805,
+          "type": "bpe",
+          "bytes_hex": "7261696c",
+          "byte_length": 4,
+          "utf8": "rail",
+          "character_length": 4
+        },
+        {
+          "id": 46,
+          "type": "byte",
+          "bytes_hex": "2e",
+          "byte_length": 1,
+          "utf8": ".",
+          "character_length": 1
+        }
+      ]
+    },
+    {
+      "category": "ai_ml",
+      "name": "transformer_terms",
+      "text": "A decoder-only Transformer uses causal self-attention, token embeddings, RMSNorm, RoPE, and SwiGLU feed-forward layers.",
+      "characters": 119,
+      "utf8_bytes": 119,
+      "word_like_units": 17,
+      "tokens": 31,
+      "tokens_per_word_like_unit": 1.823529,
+      "characters_per_token": 3.83871,
+      "utf8_bytes_per_token": 3.83871,
+      "byte_tokens": 2,
+      "bpe_tokens": 29,
+      "byte_token_ratio": 0.064516,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 537,
+          "type": "bpe",
+          "bytes_hex": "4120",
+          "byte_length": 2,
+          "utf8": "A ",
+          "character_length": 2
+        },
+        {
+          "id": 966,
+          "type": "bpe",
+          "bytes_hex": "646563",
+          "byte_length": 3,
+          "utf8": "dec",
+          "character_length": 3
+        },
+        {
+          "id": 402,
+          "type": "bpe",
+          "bytes_hex": "6f64",
+          "byte_length": 2,
+          "utf8": "od",
+          "character_length": 2
+        },
+        {
+          "id": 2458,
+          "type": "bpe",
+          "bytes_hex": "65722d",
+          "byte_length": 3,
+          "utf8": "er-",
+          "character_length": 3
+        },
+        {
+          "id": 696,
+          "type": "bpe",
+          "bytes_hex": "6f6e6c7920",
+          "byte_length": 5,
+          "utf8": "only ",
+          "character_length": 5
+        },
+        {
+          "id": 3334,
+          "type": "bpe",
+          "bytes_hex": "5472616e73",
+          "byte_length": 5,
+          "utf8": "Trans",
+          "character_length": 5
+        },
+        {
+          "id": 4907,
+          "type": "bpe",
+          "bytes_hex": "666f726d657220",
+          "byte_length": 7,
+          "utf8": "former ",
+          "character_length": 7
+        },
+        {
+          "id": 2285,
+          "type": "bpe",
+          "bytes_hex": "7573657320",
+          "byte_length": 5,
+          "utf8": "uses ",
+          "character_length": 5
+        },
+        {
+          "id": 9222,
+          "type": "bpe",
+          "bytes_hex": "63617573616c20",
+          "byte_length": 7,
+          "utf8": "causal ",
+          "character_length": 7
+        },
+        {
+          "id": 3713,
+          "type": "bpe",
+          "bytes_hex": "73656c662d",
+          "byte_length": 5,
+          "utf8": "self-",
+          "character_length": 5
+        },
+        {
+          "id": 4255,
+          "type": "bpe",
+          "bytes_hex": "617474656e",
+          "byte_length": 5,
+          "utf8": "atten",
+          "character_length": 5
+        },
+        {
+          "id": 1280,
+          "type": "bpe",
+          "bytes_hex": "74696f6e2c20",
+          "byte_length": 6,
+          "utf8": "tion, ",
+          "character_length": 6
+        },
+        {
+          "id": 22366,
+          "type": "bpe",
+          "bytes_hex": "746f6b656e20",
+          "byte_length": 6,
+          "utf8": "token ",
+          "character_length": 6
+        },
+        {
+          "id": 6151,
+          "type": "bpe",
+          "bytes_hex": "656d62656464",
+          "byte_length": 6,
+          "utf8": "embedd",
+          "character_length": 6
+        },
+        {
+          "id": 4502,
+          "type": "bpe",
+          "bytes_hex": "696e67732c20",
+          "byte_length": 6,
+          "utf8": "ings, ",
+          "character_length": 6
+        },
+        {
+          "id": 82,
+          "type": "byte",
+          "bytes_hex": "52",
+          "byte_length": 1,
+          "utf8": "R",
+          "character_length": 1
+        },
+        {
+          "id": 5736,
+          "type": "bpe",
+          "bytes_hex": "4d53",
+          "byte_length": 2,
+          "utf8": "MS",
+          "character_length": 2
+        },
+        {
+          "id": 1528,
+          "type": "bpe",
+          "bytes_hex": "4e6f72",
+          "byte_length": 3,
+          "utf8": "Nor",
+          "character_length": 3
+        },
+        {
+          "id": 7185,
+          "type": "bpe",
+          "bytes_hex": "6d2c20",
+          "byte_length": 3,
+          "utf8": "m, ",
+          "character_length": 3
+        },
+        {
+          "id": 3730,
+          "type": "bpe",
+          "bytes_hex": "526f",
+          "byte_length": 2,
+          "utf8": "Ro",
+          "character_length": 2
+        },
+        {
+          "id": 16896,
+          "type": "bpe",
+          "bytes_hex": "5045",
+          "byte_length": 2,
+          "utf8": "PE",
+          "character_length": 2
+        },
+        {
+          "id": 418,
+          "type": "bpe",
+          "bytes_hex": "2c20616e6420",
+          "byte_length": 6,
+          "utf8": ", and ",
+          "character_length": 6
+        },
+        {
+          "id": 83,
+          "type": "byte",
+          "bytes_hex": "53",
+          "byte_length": 1,
+          "utf8": "S",
+          "character_length": 1
+        },
+        {
+          "id": 347,
+          "type": "bpe",
+          "bytes_hex": "7769",
+          "byte_length": 2,
+          "utf8": "wi",
+          "character_length": 2
+        },
+        {
+          "id": 18797,
+          "type": "bpe",
+          "bytes_hex": "474c",
+          "byte_length": 2,
+          "utf8": "GL",
+          "character_length": 2
+        },
+        {
+          "id": 3019,
+          "type": "bpe",
+          "bytes_hex": "5520",
+          "byte_length": 2,
+          "utf8": "U ",
+          "character_length": 2
+        },
+        {
+          "id": 722,
+          "type": "bpe",
+          "bytes_hex": "6665",
+          "byte_length": 2,
+          "utf8": "fe",
+          "character_length": 2
+        },
+        {
+          "id": 4088,
+          "type": "bpe",
+          "bytes_hex": "65642d",
+          "byte_length": 3,
+          "utf8": "ed-",
+          "character_length": 3
+        },
+        {
+          "id": 5354,
+          "type": "bpe",
+          "bytes_hex": "666f727761726420",
+          "byte_length": 8,
+          "utf8": "forward ",
+          "character_length": 8
+        },
+        {
+          "id": 9512,
+          "type": "bpe",
+          "bytes_hex": "6c61796572",
+          "byte_length": 5,
+          "utf8": "layer",
+          "character_length": 5
+        },
+        {
+          "id": 1447,
+          "type": "bpe",
+          "bytes_hex": "732e",
+          "byte_length": 2,
+          "utf8": "s.",
+          "character_length": 2
+        }
+      ]
+    },
+    {
+      "category": "ai_ml",
+      "name": "training_terms",
+      "text": "Backpropagation computes gradients of the cross-entropy loss so AdamW can update the model parameters.",
+      "characters": 102,
+      "utf8_bytes": 102,
+      "word_like_units": 15,
+      "tokens": 20,
+      "tokens_per_word_like_unit": 1.333333,
+      "characters_per_token": 5.1,
+      "utf8_bytes_per_token": 5.1,
+      "byte_tokens": 1,
+      "bpe_tokens": 19,
+      "byte_token_ratio": 0.05,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 8759,
+          "type": "bpe",
+          "bytes_hex": "4261636b",
+          "byte_length": 4,
+          "utf8": "Back",
+          "character_length": 4
+        },
+        {
+          "id": 18744,
+          "type": "bpe",
+          "bytes_hex": "70726f7061676174696f6e20",
+          "byte_length": 12,
+          "utf8": "propagation ",
+          "character_length": 12
+        },
+        {
+          "id": 1047,
+          "type": "bpe",
+          "bytes_hex": "636f6d707574",
+          "byte_length": 6,
+          "utf8": "comput",
+          "character_length": 6
+        },
+        {
+          "id": 296,
+          "type": "bpe",
+          "bytes_hex": "657320",
+          "byte_length": 3,
+          "utf8": "es ",
+          "character_length": 3
+        },
+        {
+          "id": 21888,
+          "type": "bpe",
+          "bytes_hex": "6772616469656e74",
+          "byte_length": 8,
+          "utf8": "gradient",
+          "character_length": 8
+        },
+        {
+          "id": 1038,
+          "type": "bpe",
+          "bytes_hex": "73206f662074686520",
+          "byte_length": 9,
+          "utf8": "s of the ",
+          "character_length": 9
+        },
+        {
+          "id": 5718,
+          "type": "bpe",
+          "bytes_hex": "63726f73732d",
+          "byte_length": 6,
+          "utf8": "cross-",
+          "character_length": 6
+        },
+        {
+          "id": 13410,
+          "type": "bpe",
+          "bytes_hex": "656e74726f70",
+          "byte_length": 6,
+          "utf8": "entrop",
+          "character_length": 6
+        },
+        {
+          "id": 275,
+          "type": "bpe",
+          "bytes_hex": "7920",
+          "byte_length": 2,
+          "utf8": "y ",
+          "character_length": 2
+        },
+        {
+          "id": 11856,
+          "type": "bpe",
+          "bytes_hex": "6c6f737320",
+          "byte_length": 5,
+          "utf8": "loss ",
+          "character_length": 5
+        },
+        {
+          "id": 484,
+          "type": "bpe",
+          "bytes_hex": "736f20",
+          "byte_length": 3,
+          "utf8": "so ",
+          "character_length": 3
+        },
+        {
+          "id": 11977,
+          "type": "bpe",
+          "bytes_hex": "4164616d",
+          "byte_length": 4,
+          "utf8": "Adam",
+          "character_length": 4
+        },
+        {
+          "id": 5914,
+          "type": "bpe",
+          "bytes_hex": "5720",
+          "byte_length": 2,
+          "utf8": "W ",
+          "character_length": 2
+        },
+        {
+          "id": 444,
+          "type": "bpe",
+          "bytes_hex": "63616e20",
+          "byte_length": 4,
+          "utf8": "can ",
+          "character_length": 4
+        },
+        {
+          "id": 777,
+          "type": "bpe",
+          "bytes_hex": "7570",
+          "byte_length": 2,
+          "utf8": "up",
+          "character_length": 2
+        },
+        {
+          "id": 100,
+          "type": "byte",
+          "bytes_hex": "64",
+          "byte_length": 1,
+          "utf8": "d",
+          "character_length": 1
+        },
+        {
+          "id": 2083,
+          "type": "bpe",
+          "bytes_hex": "6174652074686520",
+          "byte_length": 8,
+          "utf8": "ate the ",
+          "character_length": 8
+        },
+        {
+          "id": 1982,
+          "type": "bpe",
+          "bytes_hex": "6d6f64656c20",
+          "byte_length": 6,
+          "utf8": "model ",
+          "character_length": 6
+        },
+        {
+          "id": 14895,
+          "type": "bpe",
+          "bytes_hex": "706172616d65746572",
+          "byte_length": 9,
+          "utf8": "parameter",
+          "character_length": 9
+        },
+        {
+          "id": 1447,
+          "type": "bpe",
+          "bytes_hex": "732e",
+          "byte_length": 2,
+          "utf8": "s.",
+          "character_length": 2
+        }
+      ]
+    },
+    {
+      "category": "python",
+      "name": "python_function",
+      "text": "def calculate_voltage(current: float, resistance: float) -> float:\n    return current * resistance\n",
+      "characters": 99,
+      "utf8_bytes": 99,
+      "word_like_units": 10,
+      "tokens": 24,
+      "tokens_per_word_like_unit": 2.4,
+      "characters_per_token": 4.125,
+      "utf8_bytes_per_token": 4.125,
+      "byte_tokens": 5,
+      "bpe_tokens": 19,
+      "byte_token_ratio": 0.208333,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 9620,
+          "type": "bpe",
+          "bytes_hex": "64656620",
+          "byte_length": 4,
+          "utf8": "def ",
+          "character_length": 4
+        },
+        {
+          "id": 1620,
+          "type": "bpe",
+          "bytes_hex": "63616c63756c",
+          "byte_length": 6,
+          "utf8": "calcul",
+          "character_length": 6
+        },
+        {
+          "id": 1590,
+          "type": "bpe",
+          "bytes_hex": "617465",
+          "byte_length": 3,
+          "utf8": "ate",
+          "character_length": 3
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 14596,
+          "type": "bpe",
+          "bytes_hex": "766f6c74616765",
+          "byte_length": 7,
+          "utf8": "voltage",
+          "character_length": 7
+        },
+        {
+          "id": 40,
+          "type": "byte",
+          "bytes_hex": "28",
+          "byte_length": 1,
+          "utf8": "(",
+          "character_length": 1
+        },
+        {
+          "id": 4360,
+          "type": "bpe",
+          "bytes_hex": "63757272656e74",
+          "byte_length": 7,
+          "utf8": "current",
+          "character_length": 7
+        },
+        {
+          "id": 494,
+          "type": "bpe",
+          "bytes_hex": "3a20",
+          "byte_length": 2,
+          "utf8": ": ",
+          "character_length": 2
+        },
+        {
+          "id": 10025,
+          "type": "bpe",
+          "bytes_hex": "666c6f6174",
+          "byte_length": 5,
+          "utf8": "float",
+          "character_length": 5
+        },
+        {
+          "id": 268,
+          "type": "bpe",
+          "bytes_hex": "2c20",
+          "byte_length": 2,
+          "utf8": ", ",
+          "character_length": 2
+        },
+        {
+          "id": 14477,
+          "type": "bpe",
+          "bytes_hex": "726573697374616e6365",
+          "byte_length": 10,
+          "utf8": "resistance",
+          "character_length": 10
+        },
+        {
+          "id": 494,
+          "type": "bpe",
+          "bytes_hex": "3a20",
+          "byte_length": 2,
+          "utf8": ": ",
+          "character_length": 2
+        },
+        {
+          "id": 10025,
+          "type": "bpe",
+          "bytes_hex": "666c6f6174",
+          "byte_length": 5,
+          "utf8": "float",
+          "character_length": 5
+        },
+        {
+          "id": 390,
+          "type": "bpe",
+          "bytes_hex": "2920",
+          "byte_length": 2,
+          "utf8": ") ",
+          "character_length": 2
+        },
+        {
+          "id": 45,
+          "type": "byte",
+          "bytes_hex": "2d",
+          "byte_length": 1,
+          "utf8": "-",
+          "character_length": 1
+        },
+        {
+          "id": 1636,
+          "type": "bpe",
+          "bytes_hex": "3e20",
+          "byte_length": 2,
+          "utf8": "> ",
+          "character_length": 2
+        },
+        {
+          "id": 10025,
+          "type": "bpe",
+          "bytes_hex": "666c6f6174",
+          "byte_length": 5,
+          "utf8": "float",
+          "character_length": 5
+        },
+        {
+          "id": 58,
+          "type": "byte",
+          "bytes_hex": "3a",
+          "byte_length": 1,
+          "utf8": ":",
+          "character_length": 1
+        },
+        {
+          "id": 305,
+          "type": "bpe",
+          "bytes_hex": "0a20202020",
+          "byte_length": 5,
+          "utf8": "\n    ",
+          "character_length": 5
+        },
+        {
+          "id": 2329,
+          "type": "bpe",
+          "bytes_hex": "72657475726e20",
+          "byte_length": 7,
+          "utf8": "return ",
+          "character_length": 7
+        },
+        {
+          "id": 1476,
+          "type": "bpe",
+          "bytes_hex": "63757272656e7420",
+          "byte_length": 8,
+          "utf8": "current ",
+          "character_length": 8
+        },
+        {
+          "id": 2590,
+          "type": "bpe",
+          "bytes_hex": "2a20",
+          "byte_length": 2,
+          "utf8": "* ",
+          "character_length": 2
+        },
+        {
+          "id": 14477,
+          "type": "bpe",
+          "bytes_hex": "726573697374616e6365",
+          "byte_length": 10,
+          "utf8": "resistance",
+          "character_length": 10
+        },
+        {
+          "id": 10,
+          "type": "byte",
+          "bytes_hex": "0a",
+          "byte_length": 1,
+          "utf8": "\n",
+          "character_length": 1
+        }
+      ]
+    },
+    {
+      "category": "cpp",
+      "name": "cpp_identifiers",
+      "text": "std::vector<std::string> values;\nuint32_t tick = HAL_GetTick();\nGPIO_WritePin(GPIOA, GPIO_PIN_13, GPIO_PIN_SET);\n",
+      "characters": 113,
+      "utf8_bytes": 113,
+      "word_like_units": 12,
+      "tokens": 53,
+      "tokens_per_word_like_unit": 4.416667,
+      "characters_per_token": 2.132075,
+      "utf8_bytes_per_token": 2.132075,
+      "byte_tokens": 18,
+      "bpe_tokens": 35,
+      "byte_token_ratio": 0.339623,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 10262,
+          "type": "bpe",
+          "bytes_hex": "737464",
+          "byte_length": 3,
+          "utf8": "std",
+          "character_length": 3
+        },
+        {
+          "id": 16326,
+          "type": "bpe",
+          "bytes_hex": "3a3a",
+          "byte_length": 2,
+          "utf8": "::",
+          "character_length": 2
+        },
+        {
+          "id": 4312,
+          "type": "bpe",
+          "bytes_hex": "766563746f72",
+          "byte_length": 6,
+          "utf8": "vector",
+          "character_length": 6
+        },
+        {
+          "id": 60,
+          "type": "byte",
+          "bytes_hex": "3c",
+          "byte_length": 1,
+          "utf8": "<",
+          "character_length": 1
+        },
+        {
+          "id": 10262,
+          "type": "bpe",
+          "bytes_hex": "737464",
+          "byte_length": 3,
+          "utf8": "std",
+          "character_length": 3
+        },
+        {
+          "id": 16326,
+          "type": "bpe",
+          "bytes_hex": "3a3a",
+          "byte_length": 2,
+          "utf8": "::",
+          "character_length": 2
+        },
+        {
+          "id": 5506,
+          "type": "bpe",
+          "bytes_hex": "737472696e67",
+          "byte_length": 6,
+          "utf8": "string",
+          "character_length": 6
+        },
+        {
+          "id": 1636,
+          "type": "bpe",
+          "bytes_hex": "3e20",
+          "byte_length": 2,
+          "utf8": "> ",
+          "character_length": 2
+        },
+        {
+          "id": 5099,
+          "type": "bpe",
+          "bytes_hex": "76616c756573",
+          "byte_length": 6,
+          "utf8": "values",
+          "character_length": 6
+        },
+        {
+          "id": 1302,
+          "type": "bpe",
+          "bytes_hex": "3b0a",
+          "byte_length": 2,
+          "utf8": ";\n",
+          "character_length": 2
+        },
+        {
+          "id": 117,
+          "type": "byte",
+          "bytes_hex": "75",
+          "byte_length": 1,
+          "utf8": "u",
+          "character_length": 1
+        },
+        {
+          "id": 468,
+          "type": "bpe",
+          "bytes_hex": "696e74",
+          "byte_length": 3,
+          "utf8": "int",
+          "character_length": 3
+        },
+        {
+          "id": 3929,
+          "type": "bpe",
+          "bytes_hex": "3332",
+          "byte_length": 2,
+          "utf8": "32",
+          "character_length": 2
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 267,
+          "type": "bpe",
+          "bytes_hex": "7420",
+          "byte_length": 2,
+          "utf8": "t ",
+          "character_length": 2
+        },
+        {
+          "id": 374,
+          "type": "bpe",
+          "bytes_hex": "746963",
+          "byte_length": 3,
+          "utf8": "tic",
+          "character_length": 3
+        },
+        {
+          "id": 404,
+          "type": "bpe",
+          "bytes_hex": "6b20",
+          "byte_length": 2,
+          "utf8": "k ",
+          "character_length": 2
+        },
+        {
+          "id": 665,
+          "type": "bpe",
+          "bytes_hex": "3d20",
+          "byte_length": 2,
+          "utf8": "= ",
+          "character_length": 2
+        },
+        {
+          "id": 72,
+          "type": "byte",
+          "bytes_hex": "48",
+          "byte_length": 1,
+          "utf8": "H",
+          "character_length": 1
+        },
+        {
+          "id": 4421,
+          "type": "bpe",
+          "bytes_hex": "414c",
+          "byte_length": 2,
+          "utf8": "AL",
+          "character_length": 2
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 71,
+          "type": "byte",
+          "bytes_hex": "47",
+          "byte_length": 1,
+          "utf8": "G",
+          "character_length": 1
+        },
+        {
+          "id": 332,
+          "type": "bpe",
+          "bytes_hex": "6574",
+          "byte_length": 2,
+          "utf8": "et",
+          "character_length": 2
+        },
+        {
+          "id": 84,
+          "type": "byte",
+          "bytes_hex": "54",
+          "byte_length": 1,
+          "utf8": "T",
+          "character_length": 1
+        },
+        {
+          "id": 1817,
+          "type": "bpe",
+          "bytes_hex": "69636b",
+          "byte_length": 3,
+          "utf8": "ick",
+          "character_length": 3
+        },
+        {
+          "id": 13052,
+          "type": "bpe",
+          "bytes_hex": "28293b0a",
+          "byte_length": 4,
+          "utf8": "();\n",
+          "character_length": 4
+        },
+        {
+          "id": 4245,
+          "type": "bpe",
+          "bytes_hex": "4750",
+          "byte_length": 2,
+          "utf8": "GP",
+          "character_length": 2
+        },
+        {
+          "id": 12389,
+          "type": "bpe",
+          "bytes_hex": "494f",
+          "byte_length": 2,
+          "utf8": "IO",
+          "character_length": 2
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 15846,
+          "type": "bpe",
+          "bytes_hex": "57726974",
+          "byte_length": 4,
+          "utf8": "Writ",
+          "character_length": 4
+        },
+        {
+          "id": 101,
+          "type": "byte",
+          "bytes_hex": "65",
+          "byte_length": 1,
+          "utf8": "e",
+          "character_length": 1
+        },
+        {
+          "id": 80,
+          "type": "byte",
+          "bytes_hex": "50",
+          "byte_length": 1,
+          "utf8": "P",
+          "character_length": 1
+        },
+        {
+          "id": 262,
+          "type": "bpe",
+          "bytes_hex": "696e",
+          "byte_length": 2,
+          "utf8": "in",
+          "character_length": 2
+        },
+        {
+          "id": 40,
+          "type": "byte",
+          "bytes_hex": "28",
+          "byte_length": 1,
+          "utf8": "(",
+          "character_length": 1
+        },
+        {
+          "id": 4245,
+          "type": "bpe",
+          "bytes_hex": "4750",
+          "byte_length": 2,
+          "utf8": "GP",
+          "character_length": 2
+        },
+        {
+          "id": 12389,
+          "type": "bpe",
+          "bytes_hex": "494f",
+          "byte_length": 2,
+          "utf8": "IO",
+          "character_length": 2
+        },
+        {
+          "id": 6824,
+          "type": "bpe",
+          "bytes_hex": "412c20",
+          "byte_length": 3,
+          "utf8": "A, ",
+          "character_length": 3
+        },
+        {
+          "id": 4245,
+          "type": "bpe",
+          "bytes_hex": "4750",
+          "byte_length": 2,
+          "utf8": "GP",
+          "character_length": 2
+        },
+        {
+          "id": 12389,
+          "type": "bpe",
+          "bytes_hex": "494f",
+          "byte_length": 2,
+          "utf8": "IO",
+          "character_length": 2
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 80,
+          "type": "byte",
+          "bytes_hex": "50",
+          "byte_length": 1,
+          "utf8": "P",
+          "character_length": 1
+        },
+        {
+          "id": 2525,
+          "type": "bpe",
+          "bytes_hex": "494e",
+          "byte_length": 2,
+          "utf8": "IN",
+          "character_length": 2
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 13442,
+          "type": "bpe",
+          "bytes_hex": "31332c20",
+          "byte_length": 4,
+          "utf8": "13, ",
+          "character_length": 4
+        },
+        {
+          "id": 4245,
+          "type": "bpe",
+          "bytes_hex": "4750",
+          "byte_length": 2,
+          "utf8": "GP",
+          "character_length": 2
+        },
+        {
+          "id": 12389,
+          "type": "bpe",
+          "bytes_hex": "494f",
+          "byte_length": 2,
+          "utf8": "IO",
+          "character_length": 2
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 80,
+          "type": "byte",
+          "bytes_hex": "50",
+          "byte_length": 1,
+          "utf8": "P",
+          "character_length": 1
+        },
+        {
+          "id": 2525,
+          "type": "bpe",
+          "bytes_hex": "494e",
+          "byte_length": 2,
+          "utf8": "IN",
+          "character_length": 2
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 83,
+          "type": "byte",
+          "bytes_hex": "53",
+          "byte_length": 1,
+          "utf8": "S",
+          "character_length": 1
+        },
+        {
+          "id": 4689,
+          "type": "bpe",
+          "bytes_hex": "4554",
+          "byte_length": 2,
+          "utf8": "ET",
+          "character_length": 2
+        },
+        {
+          "id": 2735,
+          "type": "bpe",
+          "bytes_hex": "293b0a",
+          "byte_length": 3,
+          "utf8": ");\n",
+          "character_length": 3
+        }
+      ]
+    },
+    {
+      "category": "networking",
+      "name": "protocols_and_url",
+      "text": "HTTPClient sends a GET request to https://example.com/api/v1/devices?id=42 from 192.168.1.100.",
+      "characters": 94,
+      "utf8_bytes": 94,
+      "word_like_units": 19,
+      "tokens": 31,
+      "tokens_per_word_like_unit": 1.631579,
+      "characters_per_token": 3.032258,
+      "utf8_bytes_per_token": 3.032258,
+      "byte_tokens": 7,
+      "bpe_tokens": 24,
+      "byte_token_ratio": 0.225806,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 5557,
+          "type": "bpe",
+          "bytes_hex": "48545450",
+          "byte_length": 4,
+          "utf8": "HTTP",
+          "character_length": 4
+        },
+        {
+          "id": 15986,
+          "type": "bpe",
+          "bytes_hex": "436c69",
+          "byte_length": 3,
+          "utf8": "Cli",
+          "character_length": 3
+        },
+        {
+          "id": 354,
+          "type": "bpe",
+          "bytes_hex": "656e7420",
+          "byte_length": 4,
+          "utf8": "ent ",
+          "character_length": 4
+        },
+        {
+          "id": 5467,
+          "type": "bpe",
+          "bytes_hex": "73656e64",
+          "byte_length": 4,
+          "utf8": "send",
+          "character_length": 4
+        },
+        {
+          "id": 1250,
+          "type": "bpe",
+          "bytes_hex": "73206120",
+          "byte_length": 4,
+          "utf8": "s a ",
+          "character_length": 4
+        },
+        {
+          "id": 71,
+          "type": "byte",
+          "bytes_hex": "47",
+          "byte_length": 1,
+          "utf8": "G",
+          "character_length": 1
+        },
+        {
+          "id": 6550,
+          "type": "bpe",
+          "bytes_hex": "455420",
+          "byte_length": 3,
+          "utf8": "ET ",
+          "character_length": 3
+        },
+        {
+          "id": 6538,
+          "type": "bpe",
+          "bytes_hex": "7265717565737420",
+          "byte_length": 8,
+          "utf8": "request ",
+          "character_length": 8
+        },
+        {
+          "id": 293,
+          "type": "bpe",
+          "bytes_hex": "746f20",
+          "byte_length": 3,
+          "utf8": "to ",
+          "character_length": 3
+        },
+        {
+          "id": 7722,
+          "type": "bpe",
+          "bytes_hex": "68747470733a2f2f",
+          "byte_length": 8,
+          "utf8": "https://",
+          "character_length": 8
+        },
+        {
+          "id": 714,
+          "type": "bpe",
+          "bytes_hex": "6578616d706c",
+          "byte_length": 6,
+          "utf8": "exampl",
+          "character_length": 6
+        },
+        {
+          "id": 1266,
+          "type": "bpe",
+          "bytes_hex": "652e",
+          "byte_length": 2,
+          "utf8": "e.",
+          "character_length": 2
+        },
+        {
+          "id": 357,
+          "type": "bpe",
+          "bytes_hex": "636f6d",
+          "byte_length": 3,
+          "utf8": "com",
+          "character_length": 3
+        },
+        {
+          "id": 47,
+          "type": "byte",
+          "bytes_hex": "2f",
+          "byte_length": 1,
+          "utf8": "/",
+          "character_length": 1
+        },
+        {
+          "id": 22016,
+          "type": "bpe",
+          "bytes_hex": "617069",
+          "byte_length": 3,
+          "utf8": "api",
+          "character_length": 3
+        },
+        {
+          "id": 47,
+          "type": "byte",
+          "bytes_hex": "2f",
+          "byte_length": 1,
+          "utf8": "/",
+          "character_length": 1
+        },
+        {
+          "id": 118,
+          "type": "byte",
+          "bytes_hex": "76",
+          "byte_length": 1,
+          "utf8": "v",
+          "character_length": 1
+        },
+        {
+          "id": 4420,
+          "type": "bpe",
+          "bytes_hex": "312f",
+          "byte_length": 2,
+          "utf8": "1/",
+          "character_length": 2
+        },
+        {
+          "id": 1948,
+          "type": "bpe",
+          "bytes_hex": "6465766963",
+          "byte_length": 5,
+          "utf8": "devic",
+          "character_length": 5
+        },
+        {
+          "id": 291,
+          "type": "bpe",
+          "bytes_hex": "6573",
+          "byte_length": 2,
+          "utf8": "es",
+          "character_length": 2
+        },
+        {
+          "id": 63,
+          "type": "byte",
+          "bytes_hex": "3f",
+          "byte_length": 1,
+          "utf8": "?",
+          "character_length": 1
+        },
+        {
+          "id": 499,
+          "type": "bpe",
+          "bytes_hex": "6964",
+          "byte_length": 2,
+          "utf8": "id",
+          "character_length": 2
+        },
+        {
+          "id": 61,
+          "type": "byte",
+          "bytes_hex": "3d",
+          "byte_length": 1,
+          "utf8": "=",
+          "character_length": 1
+        },
+        {
+          "id": 20074,
+          "type": "bpe",
+          "bytes_hex": "343220",
+          "byte_length": 3,
+          "utf8": "42 ",
+          "character_length": 3
+        },
+        {
+          "id": 423,
+          "type": "bpe",
+          "bytes_hex": "66726f6d20",
+          "byte_length": 5,
+          "utf8": "from ",
+          "character_length": 5
+        },
+        {
+          "id": 18860,
+          "type": "bpe",
+          "bytes_hex": "3139322e",
+          "byte_length": 4,
+          "utf8": "192.",
+          "character_length": 4
+        },
+        {
+          "id": 1046,
+          "type": "bpe",
+          "bytes_hex": "3136",
+          "byte_length": 2,
+          "utf8": "16",
+          "character_length": 2
+        },
+        {
+          "id": 5398,
+          "type": "bpe",
+          "bytes_hex": "382e",
+          "byte_length": 2,
+          "utf8": "8.",
+          "character_length": 2
+        },
+        {
+          "id": 1355,
+          "type": "bpe",
+          "bytes_hex": "312e",
+          "byte_length": 2,
+          "utf8": "1.",
+          "character_length": 2
+        },
+        {
+          "id": 2532,
+          "type": "bpe",
+          "bytes_hex": "313030",
+          "byte_length": 3,
+          "utf8": "100",
+          "character_length": 3
+        },
+        {
+          "id": 46,
+          "type": "byte",
+          "bytes_hex": "2e",
+          "byte_length": 1,
+          "utf8": ".",
+          "character_length": 1
+        }
+      ]
+    },
+    {
+      "category": "math_unicode",
+      "name": "technical_unicode",
+      "text": "ΔV = I × R; A = πr²; x ≤ y; √2 ≈ 1.41421356; T = 25 °C.",
+      "characters": 55,
+      "utf8_bytes": 66,
+      "word_like_units": 13,
+      "tokens": 32,
+      "tokens_per_word_like_unit": 2.461538,
+      "characters_per_token": 1.71875,
+      "utf8_bytes_per_token": 2.0625,
+      "byte_tokens": 9,
+      "bpe_tokens": 23,
+      "byte_token_ratio": 0.28125,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 5987,
+          "type": "bpe",
+          "bytes_hex": "ce94",
+          "byte_length": 2,
+          "utf8": "Δ",
+          "character_length": 1
+        },
+        {
+          "id": 86,
+          "type": "byte",
+          "bytes_hex": "56",
+          "byte_length": 1,
+          "utf8": "V",
+          "character_length": 1
+        },
+        {
+          "id": 2046,
+          "type": "bpe",
+          "bytes_hex": "203d20",
+          "byte_length": 3,
+          "utf8": " = ",
+          "character_length": 3
+        },
+        {
+          "id": 1119,
+          "type": "bpe",
+          "bytes_hex": "4920",
+          "byte_length": 2,
+          "utf8": "I ",
+          "character_length": 2
+        },
+        {
+          "id": 6820,
+          "type": "bpe",
+          "bytes_hex": "c39720",
+          "byte_length": 3,
+          "utf8": "× ",
+          "character_length": 2
+        },
+        {
+          "id": 82,
+          "type": "byte",
+          "bytes_hex": "52",
+          "byte_length": 1,
+          "utf8": "R",
+          "character_length": 1
+        },
+        {
+          "id": 586,
+          "type": "bpe",
+          "bytes_hex": "3b20",
+          "byte_length": 2,
+          "utf8": "; ",
+          "character_length": 2
+        },
+        {
+          "id": 19368,
+          "type": "bpe",
+          "bytes_hex": "41203d20",
+          "byte_length": 4,
+          "utf8": "A = ",
+          "character_length": 4
+        },
+        {
+          "id": 3286,
+          "type": "bpe",
+          "bytes_hex": "cf80",
+          "byte_length": 2,
+          "utf8": "π",
+          "character_length": 1
+        },
+        {
+          "id": 114,
+          "type": "byte",
+          "bytes_hex": "72",
+          "byte_length": 1,
+          "utf8": "r",
+          "character_length": 1
+        },
+        {
+          "id": 194,
+          "type": "byte",
+          "bytes_hex": "c2",
+          "byte_length": 1,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 178,
+          "type": "byte",
+          "bytes_hex": "b2",
+          "byte_length": 1,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 586,
+          "type": "bpe",
+          "bytes_hex": "3b20",
+          "byte_length": 2,
+          "utf8": "; ",
+          "character_length": 2
+        },
+        {
+          "id": 736,
+          "type": "bpe",
+          "bytes_hex": "7820",
+          "byte_length": 2,
+          "utf8": "x ",
+          "character_length": 2
+        },
+        {
+          "id": 11566,
+          "type": "bpe",
+          "bytes_hex": "e289a420",
+          "byte_length": 4,
+          "utf8": "≤ ",
+          "character_length": 2
+        },
+        {
+          "id": 11176,
+          "type": "bpe",
+          "bytes_hex": "793b20",
+          "byte_length": 3,
+          "utf8": "y; ",
+          "character_length": 3
+        },
+        {
+          "id": 538,
+          "type": "bpe",
+          "bytes_hex": "e288",
+          "byte_length": 2,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 154,
+          "type": "byte",
+          "bytes_hex": "9a",
+          "byte_length": 1,
+          "utf8": null,
+          "character_length": null
+        },
+        {
+          "id": 735,
+          "type": "bpe",
+          "bytes_hex": "3220",
+          "byte_length": 2,
+          "utf8": "2 ",
+          "character_length": 2
+        },
+        {
+          "id": 23310,
+          "type": "bpe",
+          "bytes_hex": "e2898820",
+          "byte_length": 4,
+          "utf8": "≈ ",
+          "character_length": 2
+        },
+        {
+          "id": 1355,
+          "type": "bpe",
+          "bytes_hex": "312e",
+          "byte_length": 2,
+          "utf8": "1.",
+          "character_length": 2
+        },
+        {
+          "id": 52,
+          "type": "byte",
+          "bytes_hex": "34",
+          "byte_length": 1,
+          "utf8": "4",
+          "character_length": 1
+        },
+        {
+          "id": 1310,
+          "type": "bpe",
+          "bytes_hex": "3134",
+          "byte_length": 2,
+          "utf8": "14",
+          "character_length": 2
+        },
+        {
+          "id": 50,
+          "type": "byte",
+          "bytes_hex": "32",
+          "byte_length": 1,
+          "utf8": "2",
+          "character_length": 1
+        },
+        {
+          "id": 1299,
+          "type": "bpe",
+          "bytes_hex": "3133",
+          "byte_length": 2,
+          "utf8": "13",
+          "character_length": 2
+        },
+        {
+          "id": 6707,
+          "type": "bpe",
+          "bytes_hex": "3536",
+          "byte_length": 2,
+          "utf8": "56",
+          "character_length": 2
+        },
+        {
+          "id": 586,
+          "type": "bpe",
+          "bytes_hex": "3b20",
+          "byte_length": 2,
+          "utf8": "; ",
+          "character_length": 2
+        },
+        {
+          "id": 1413,
+          "type": "bpe",
+          "bytes_hex": "5420",
+          "byte_length": 2,
+          "utf8": "T ",
+          "character_length": 2
+        },
+        {
+          "id": 665,
+          "type": "bpe",
+          "bytes_hex": "3d20",
+          "byte_length": 2,
+          "utf8": "= ",
+          "character_length": 2
+        },
+        {
+          "id": 5234,
+          "type": "bpe",
+          "bytes_hex": "323520",
+          "byte_length": 3,
+          "utf8": "25 ",
+          "character_length": 3
+        },
+        {
+          "id": 6053,
+          "type": "bpe",
+          "bytes_hex": "c2b043",
+          "byte_length": 3,
+          "utf8": "°C",
+          "character_length": 2
+        },
+        {
+          "id": 46,
+          "type": "byte",
+          "bytes_hex": "2e",
+          "byte_length": 1,
+          "utf8": ".",
+          "character_length": 1
+        }
+      ]
+    },
+    {
+      "category": "case_sensitivity",
+      "name": "case_distinctions",
+      "text": "HTTP http GET get RAM ram Python python MHz mHz ClassName className MAX_CURRENT max_current",
+      "characters": 91,
+      "utf8_bytes": 91,
+      "word_like_units": 14,
+      "tokens": 32,
+      "tokens_per_word_like_unit": 2.285714,
+      "characters_per_token": 2.84375,
+      "utf8_bytes_per_token": 2.84375,
+      "byte_tokens": 10,
+      "bpe_tokens": 22,
+      "byte_token_ratio": 0.3125,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 8412,
+          "type": "bpe",
+          "bytes_hex": "4854545020",
+          "byte_length": 5,
+          "utf8": "HTTP ",
+          "character_length": 5
+        },
+        {
+          "id": 1328,
+          "type": "bpe",
+          "bytes_hex": "6874",
+          "byte_length": 2,
+          "utf8": "ht",
+          "character_length": 2
+        },
+        {
+          "id": 116,
+          "type": "byte",
+          "bytes_hex": "74",
+          "byte_length": 1,
+          "utf8": "t",
+          "character_length": 1
+        },
+        {
+          "id": 512,
+          "type": "bpe",
+          "bytes_hex": "7020",
+          "byte_length": 2,
+          "utf8": "p ",
+          "character_length": 2
+        },
+        {
+          "id": 71,
+          "type": "byte",
+          "bytes_hex": "47",
+          "byte_length": 1,
+          "utf8": "G",
+          "character_length": 1
+        },
+        {
+          "id": 6550,
+          "type": "bpe",
+          "bytes_hex": "455420",
+          "byte_length": 3,
+          "utf8": "ET ",
+          "character_length": 3
+        },
+        {
+          "id": 2936,
+          "type": "bpe",
+          "bytes_hex": "67657420",
+          "byte_length": 4,
+          "utf8": "get ",
+          "character_length": 4
+        },
+        {
+          "id": 13940,
+          "type": "bpe",
+          "bytes_hex": "52414d20",
+          "byte_length": 4,
+          "utf8": "RAM ",
+          "character_length": 4
+        },
+        {
+          "id": 6412,
+          "type": "bpe",
+          "bytes_hex": "72616d20",
+          "byte_length": 4,
+          "utf8": "ram ",
+          "character_length": 4
+        },
+        {
+          "id": 4272,
+          "type": "bpe",
+          "bytes_hex": "507974686f6e20",
+          "byte_length": 7,
+          "utf8": "Python ",
+          "character_length": 7
+        },
+        {
+          "id": 8257,
+          "type": "bpe",
+          "bytes_hex": "70797468",
+          "byte_length": 4,
+          "utf8": "pyth",
+          "character_length": 4
+        },
+        {
+          "id": 326,
+          "type": "bpe",
+          "bytes_hex": "6f6e20",
+          "byte_length": 3,
+          "utf8": "on ",
+          "character_length": 3
+        },
+        {
+          "id": 15667,
+          "type": "bpe",
+          "bytes_hex": "4d487a20",
+          "byte_length": 4,
+          "utf8": "MHz ",
+          "character_length": 4
+        },
+        {
+          "id": 109,
+          "type": "byte",
+          "bytes_hex": "6d",
+          "byte_length": 1,
+          "utf8": "m",
+          "character_length": 1
+        },
+        {
+          "id": 8724,
+          "type": "bpe",
+          "bytes_hex": "487a20",
+          "byte_length": 3,
+          "utf8": "Hz ",
+          "character_length": 3
+        },
+        {
+          "id": 6641,
+          "type": "bpe",
+          "bytes_hex": "436c617373",
+          "byte_length": 5,
+          "utf8": "Class",
+          "character_length": 5
+        },
+        {
+          "id": 78,
+          "type": "byte",
+          "bytes_hex": "4e",
+          "byte_length": 1,
+          "utf8": "N",
+          "character_length": 1
+        },
+        {
+          "id": 614,
+          "type": "bpe",
+          "bytes_hex": "616d6520",
+          "byte_length": 4,
+          "utf8": "ame ",
+          "character_length": 4
+        },
+        {
+          "id": 1615,
+          "type": "bpe",
+          "bytes_hex": "636c617373",
+          "byte_length": 5,
+          "utf8": "class",
+          "character_length": 5
+        },
+        {
+          "id": 78,
+          "type": "byte",
+          "bytes_hex": "4e",
+          "byte_length": 1,
+          "utf8": "N",
+          "character_length": 1
+        },
+        {
+          "id": 614,
+          "type": "bpe",
+          "bytes_hex": "616d6520",
+          "byte_length": 4,
+          "utf8": "ame ",
+          "character_length": 4
+        },
+        {
+          "id": 8386,
+          "type": "bpe",
+          "bytes_hex": "4d41",
+          "byte_length": 2,
+          "utf8": "MA",
+          "character_length": 2
+        },
+        {
+          "id": 88,
+          "type": "byte",
+          "bytes_hex": "58",
+          "byte_length": 1,
+          "utf8": "X",
+          "character_length": 1
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 67,
+          "type": "byte",
+          "bytes_hex": "43",
+          "byte_length": 1,
+          "utf8": "C",
+          "character_length": 1
+        },
+        {
+          "id": 6963,
+          "type": "bpe",
+          "bytes_hex": "5552",
+          "byte_length": 2,
+          "utf8": "UR",
+          "character_length": 2
+        },
+        {
+          "id": 82,
+          "type": "byte",
+          "bytes_hex": "52",
+          "byte_length": 1,
+          "utf8": "R",
+          "character_length": 1
+        },
+        {
+          "id": 4030,
+          "type": "bpe",
+          "bytes_hex": "454e",
+          "byte_length": 2,
+          "utf8": "EN",
+          "character_length": 2
+        },
+        {
+          "id": 1413,
+          "type": "bpe",
+          "bytes_hex": "5420",
+          "byte_length": 2,
+          "utf8": "T ",
+          "character_length": 2
+        },
+        {
+          "id": 7959,
+          "type": "bpe",
+          "bytes_hex": "6d6178",
+          "byte_length": 3,
+          "utf8": "max",
+          "character_length": 3
+        },
+        {
+          "id": 95,
+          "type": "byte",
+          "bytes_hex": "5f",
+          "byte_length": 1,
+          "utf8": "_",
+          "character_length": 1
+        },
+        {
+          "id": 4360,
+          "type": "bpe",
+          "bytes_hex": "63757272656e74",
+          "byte_length": 7,
+          "utf8": "current",
+          "character_length": 7
+        }
+      ]
+    },
+    {
+      "category": "numbers",
+      "name": "technical_numbers",
+      "text": "0xDEADBEEF 0b10101010 1.25e-6 6.022e23 2026-08-08 v1.2.3 STM32F411 VL53L8CX",
+      "characters": 75,
+      "utf8_bytes": 75,
+      "word_like_units": 15,
+      "tokens": 42,
+      "tokens_per_word_like_unit": 2.8,
+      "characters_per_token": 1.785714,
+      "utf8_bytes_per_token": 1.785714,
+      "byte_tokens": 14,
+      "bpe_tokens": 28,
+      "byte_token_ratio": 0.333333,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 11234,
+          "type": "bpe",
+          "bytes_hex": "3078",
+          "byte_length": 2,
+          "utf8": "0x",
+          "character_length": 2
+        },
+        {
+          "id": 15987,
+          "type": "bpe",
+          "bytes_hex": "4445",
+          "byte_length": 2,
+          "utf8": "DE",
+          "character_length": 2
+        },
+        {
+          "id": 3478,
+          "type": "bpe",
+          "bytes_hex": "4144",
+          "byte_length": 2,
+          "utf8": "AD",
+          "character_length": 2
+        },
+        {
+          "id": 10524,
+          "type": "bpe",
+          "bytes_hex": "4245",
+          "byte_length": 2,
+          "utf8": "BE",
+          "character_length": 2
+        },
+        {
+          "id": 69,
+          "type": "byte",
+          "bytes_hex": "45",
+          "byte_length": 1,
+          "utf8": "E",
+          "character_length": 1
+        },
+        {
+          "id": 2596,
+          "type": "bpe",
+          "bytes_hex": "4620",
+          "byte_length": 2,
+          "utf8": "F ",
+          "character_length": 2
+        },
+        {
+          "id": 48,
+          "type": "byte",
+          "bytes_hex": "30",
+          "byte_length": 1,
+          "utf8": "0",
+          "character_length": 1
+        },
+        {
+          "id": 98,
+          "type": "byte",
+          "bytes_hex": "62",
+          "byte_length": 1,
+          "utf8": "b",
+          "character_length": 1
+        },
+        {
+          "id": 939,
+          "type": "bpe",
+          "bytes_hex": "3130",
+          "byte_length": 2,
+          "utf8": "10",
+          "character_length": 2
+        },
+        {
+          "id": 939,
+          "type": "bpe",
+          "bytes_hex": "3130",
+          "byte_length": 2,
+          "utf8": "10",
+          "character_length": 2
+        },
+        {
+          "id": 939,
+          "type": "bpe",
+          "bytes_hex": "3130",
+          "byte_length": 2,
+          "utf8": "10",
+          "character_length": 2
+        },
+        {
+          "id": 2452,
+          "type": "bpe",
+          "bytes_hex": "313020",
+          "byte_length": 3,
+          "utf8": "10 ",
+          "character_length": 3
+        },
+        {
+          "id": 1355,
+          "type": "bpe",
+          "bytes_hex": "312e",
+          "byte_length": 2,
+          "utf8": "1.",
+          "character_length": 2
+        },
+        {
+          "id": 1825,
+          "type": "bpe",
+          "bytes_hex": "3235",
+          "byte_length": 2,
+          "utf8": "25",
+          "character_length": 2
+        },
+        {
+          "id": 982,
+          "type": "bpe",
+          "bytes_hex": "652d",
+          "byte_length": 2,
+          "utf8": "e-",
+          "character_length": 2
+        },
+        {
+          "id": 1370,
+          "type": "bpe",
+          "bytes_hex": "3620",
+          "byte_length": 2,
+          "utf8": "6 ",
+          "character_length": 2
+        },
+        {
+          "id": 4509,
+          "type": "bpe",
+          "bytes_hex": "362e",
+          "byte_length": 2,
+          "utf8": "6.",
+          "character_length": 2
+        },
+        {
+          "id": 48,
+          "type": "byte",
+          "bytes_hex": "30",
+          "byte_length": 1,
+          "utf8": "0",
+          "character_length": 1
+        },
+        {
+          "id": 3577,
+          "type": "bpe",
+          "bytes_hex": "3232",
+          "byte_length": 2,
+          "utf8": "22",
+          "character_length": 2
+        },
+        {
+          "id": 101,
+          "type": "byte",
+          "bytes_hex": "65",
+          "byte_length": 1,
+          "utf8": "e",
+          "character_length": 1
+        },
+        {
+          "id": 8108,
+          "type": "bpe",
+          "bytes_hex": "323320",
+          "byte_length": 3,
+          "utf8": "23 ",
+          "character_length": 3
+        },
+        {
+          "id": 18912,
+          "type": "bpe",
+          "bytes_hex": "32303236",
+          "byte_length": 4,
+          "utf8": "2026",
+          "character_length": 4
+        },
+        {
+          "id": 12160,
+          "type": "bpe",
+          "bytes_hex": "2d30",
+          "byte_length": 2,
+          "utf8": "-0",
+          "character_length": 2
+        },
+        {
+          "id": 7433,
+          "type": "bpe",
+          "bytes_hex": "382d",
+          "byte_length": 2,
+          "utf8": "8-",
+          "character_length": 2
+        },
+        {
+          "id": 48,
+          "type": "byte",
+          "bytes_hex": "30",
+          "byte_length": 1,
+          "utf8": "0",
+          "character_length": 1
+        },
+        {
+          "id": 1503,
+          "type": "bpe",
+          "bytes_hex": "3820",
+          "byte_length": 2,
+          "utf8": "8 ",
+          "character_length": 2
+        },
+        {
+          "id": 118,
+          "type": "byte",
+          "bytes_hex": "76",
+          "byte_length": 1,
+          "utf8": "v",
+          "character_length": 1
+        },
+        {
+          "id": 1355,
+          "type": "bpe",
+          "bytes_hex": "312e",
+          "byte_length": 2,
+          "utf8": "1.",
+          "character_length": 2
+        },
+        {
+          "id": 1614,
+          "type": "bpe",
+          "bytes_hex": "322e",
+          "byte_length": 2,
+          "utf8": "2.",
+          "character_length": 2
+        },
+        {
+          "id": 1016,
+          "type": "bpe",
+          "bytes_hex": "3320",
+          "byte_length": 2,
+          "utf8": "3 ",
+          "character_length": 2
+        },
+        {
+          "id": 4078,
+          "type": "bpe",
+          "bytes_hex": "5354",
+          "byte_length": 2,
+          "utf8": "ST",
+          "character_length": 2
+        },
+        {
+          "id": 77,
+          "type": "byte",
+          "bytes_hex": "4d",
+          "byte_length": 1,
+          "utf8": "M",
+          "character_length": 1
+        },
+        {
+          "id": 3929,
+          "type": "bpe",
+          "bytes_hex": "3332",
+          "byte_length": 2,
+          "utf8": "32",
+          "character_length": 2
+        },
+        {
+          "id": 70,
+          "type": "byte",
+          "bytes_hex": "46",
+          "byte_length": 1,
+          "utf8": "F",
+          "character_length": 1
+        },
+        {
+          "id": 52,
+          "type": "byte",
+          "bytes_hex": "34",
+          "byte_length": 1,
+          "utf8": "4",
+          "character_length": 1
+        },
+        {
+          "id": 5298,
+          "type": "bpe",
+          "bytes_hex": "313120",
+          "byte_length": 3,
+          "utf8": "11 ",
+          "character_length": 3
+        },
+        {
+          "id": 7823,
+          "type": "bpe",
+          "bytes_hex": "564c",
+          "byte_length": 2,
+          "utf8": "VL",
+          "character_length": 2
+        },
+        {
+          "id": 8382,
+          "type": "bpe",
+          "bytes_hex": "3533",
+          "byte_length": 2,
+          "utf8": "53",
+          "character_length": 2
+        },
+        {
+          "id": 76,
+          "type": "byte",
+          "bytes_hex": "4c",
+          "byte_length": 1,
+          "utf8": "L",
+          "character_length": 1
+        },
+        {
+          "id": 56,
+          "type": "byte",
+          "bytes_hex": "38",
+          "byte_length": 1,
+          "utf8": "8",
+          "character_length": 1
+        },
+        {
+          "id": 67,
+          "type": "byte",
+          "bytes_hex": "43",
+          "byte_length": 1,
+          "utf8": "C",
+          "character_length": 1
+        },
+        {
+          "id": 88,
+          "type": "byte",
+          "bytes_hex": "58",
+          "byte_length": 1,
+          "utf8": "X",
+          "character_length": 1
+        }
+      ]
+    },
+    {
+      "category": "structured_text",
+      "name": "json_and_path",
+      "text": "{\"device\":\"STM32F411\",\"temperature\":23.5,\"enabled\":true}\n/home/user/project/src/main.py\n",
+      "characters": 88,
+      "utf8_bytes": 88,
+      "word_like_units": 13,
+      "tokens": 40,
+      "tokens_per_word_like_unit": 3.076923,
+      "characters_per_token": 2.2,
+      "utf8_bytes_per_token": 2.2,
+      "byte_tokens": 21,
+      "bpe_tokens": 19,
+      "byte_token_ratio": 0.525,
+      "roundtrip_ok": true,
+      "segmentation": [
+        {
+          "id": 123,
+          "type": "byte",
+          "bytes_hex": "7b",
+          "byte_length": 1,
+          "utf8": "{",
+          "character_length": 1
+        },
+        {
+          "id": 34,
+          "type": "byte",
+          "bytes_hex": "22",
+          "byte_length": 1,
+          "utf8": "\"",
+          "character_length": 1
+        },
+        {
+          "id": 1948,
+          "type": "bpe",
+          "bytes_hex": "6465766963",
+          "byte_length": 5,
+          "utf8": "devic",
+          "character_length": 5
+        },
+        {
+          "id": 11309,
+          "type": "bpe",
+          "bytes_hex": "6522",
+          "byte_length": 2,
+          "utf8": "e\"",
+          "character_length": 2
+        },
+        {
+          "id": 58,
+          "type": "byte",
+          "bytes_hex": "3a",
+          "byte_length": 1,
+          "utf8": ":",
+          "character_length": 1
+        },
+        {
+          "id": 34,
+          "type": "byte",
+          "bytes_hex": "22",
+          "byte_length": 1,
+          "utf8": "\"",
+          "character_length": 1
+        },
+        {
+          "id": 4078,
+          "type": "bpe",
+          "bytes_hex": "5354",
+          "byte_length": 2,
+          "utf8": "ST",
+          "character_length": 2
+        },
+        {
+          "id": 77,
+          "type": "byte",
+          "bytes_hex": "4d",
+          "byte_length": 1,
+          "utf8": "M",
+          "character_length": 1
+        },
+        {
+          "id": 3929,
+          "type": "bpe",
+          "bytes_hex": "3332",
+          "byte_length": 2,
+          "utf8": "32",
+          "character_length": 2
+        },
+        {
+          "id": 70,
+          "type": "byte",
+          "bytes_hex": "46",
+          "byte_length": 1,
+          "utf8": "F",
+          "character_length": 1
+        },
+        {
+          "id": 52,
+          "type": "byte",
+          "bytes_hex": "34",
+          "byte_length": 1,
+          "utf8": "4",
+          "character_length": 1
+        },
+        {
+          "id": 1941,
+          "type": "bpe",
+          "bytes_hex": "3131",
+          "byte_length": 2,
+          "utf8": "11",
+          "character_length": 2
+        },
+        {
+          "id": 23704,
+          "type": "bpe",
+          "bytes_hex": "222c22",
+          "byte_length": 3,
+          "utf8": "\",\"",
+          "character_length": 3
+        },
+        {
+          "id": 3195,
+          "type": "bpe",
+          "bytes_hex": "74656d7065726174757265",
+          "byte_length": 11,
+          "utf8": "temperature",
+          "character_length": 11
+        },
+        {
+          "id": 34,
+          "type": "byte",
+          "bytes_hex": "22",
+          "byte_length": 1,
+          "utf8": "\"",
+          "character_length": 1
+        },
+        {
+          "id": 58,
+          "type": "byte",
+          "bytes_hex": "3a",
+          "byte_length": 1,
+          "utf8": ":",
+          "character_length": 1
+        },
+        {
+          "id": 50,
+          "type": "byte",
+          "bytes_hex": "32",
+          "byte_length": 1,
+          "utf8": "2",
+          "character_length": 1
+        },
+        {
+          "id": 2149,
+          "type": "bpe",
+          "bytes_hex": "332e",
+          "byte_length": 2,
+          "utf8": "3.",
+          "character_length": 2
+        },
+        {
+          "id": 12161,
+          "type": "bpe",
+          "bytes_hex": "352c",
+          "byte_length": 2,
+          "utf8": "5,",
+          "character_length": 2
+        },
+        {
+          "id": 34,
+          "type": "byte",
+          "bytes_hex": "22",
+          "byte_length": 1,
+          "utf8": "\"",
+          "character_length": 1
+        },
+        {
+          "id": 3725,
+          "type": "bpe",
+          "bytes_hex": "656e61626c",
+          "byte_length": 5,
+          "utf8": "enabl",
+          "character_length": 5
+        },
+        {
+          "id": 379,
+          "type": "bpe",
+          "bytes_hex": "6564",
+          "byte_length": 2,
+          "utf8": "ed",
+          "character_length": 2
+        },
+        {
+          "id": 34,
+          "type": "byte",
+          "bytes_hex": "22",
+          "byte_length": 1,
+          "utf8": "\"",
+          "character_length": 1
+        },
+        {
+          "id": 58,
+          "type": "byte",
+          "bytes_hex": "3a",
+          "byte_length": 1,
+          "utf8": ":",
+          "character_length": 1
+        },
+        {
+          "id": 6321,
+          "type": "bpe",
+          "bytes_hex": "74727565",
+          "byte_length": 4,
+          "utf8": "true",
+          "character_length": 4
+        },
+        {
+          "id": 3858,
+          "type": "bpe",
+          "bytes_hex": "7d0a",
+          "byte_length": 2,
+          "utf8": "}\n",
+          "character_length": 2
+        },
+        {
+          "id": 47,
+          "type": "byte",
+          "bytes_hex": "2f",
+          "byte_length": 1,
+          "utf8": "/",
+          "character_length": 1
+        },
+        {
+          "id": 13283,
+          "type": "bpe",
+          "bytes_hex": "686f6d65",
+          "byte_length": 4,
+          "utf8": "home",
+          "character_length": 4
+        },
+        {
+          "id": 47,
+          "type": "byte",
+          "bytes_hex": "2f",
+          "byte_length": 1,
+          "utf8": "/",
+          "character_length": 1
+        },
+        {
+          "id": 7007,
+          "type": "bpe",
+          "bytes_hex": "75736572",
+          "byte_length": 4,
+          "utf8": "user",
+          "character_length": 4
+        },
+        {
+          "id": 47,
+          "type": "byte",
+          "bytes_hex": "2f",
+          "byte_length": 1,
+          "utf8": "/",
+          "character_length": 1
+        },
+        {
+          "id": 2527,
+          "type": "bpe",
+          "bytes_hex": "70726f6a656374",
+          "byte_length": 7,
+          "utf8": "project",
+          "character_length": 7
+        },
+        {
+          "id": 47,
+          "type": "byte",
+          "bytes_hex": "2f",
+          "byte_length": 1,
+          "utf8": "/",
+          "character_length": 1
+        },
+        {
+          "id": 115,
+          "type": "byte",
+          "bytes_hex": "73",
+          "byte_length": 1,
+          "utf8": "s",
+          "character_length": 1
+        },
+        {
+          "id": 114,
+          "type": "byte",
+          "bytes_hex": "72",
+          "byte_length": 1,
+          "utf8": "r",
+          "character_length": 1
+        },
+        {
+          "id": 99,
+          "type": "byte",
+          "bytes_hex": "63",
+          "byte_length": 1,
+          "utf8": "c",
+          "character_length": 1
+        },
+        {
+          "id": 47,
+          "type": "byte",
+          "bytes_hex": "2f",
+          "byte_length": 1,
+          "utf8": "/",
+          "character_length": 1
+        },
+        {
+          "id": 1520,
+          "type": "bpe",
+          "bytes_hex": "6d61696e",
+          "byte_length": 4,
+          "utf8": "main",
+          "character_length": 4
+        },
+        {
+          "id": 14180,
+          "type": "bpe",
+          "bytes_hex": "2e70",
+          "byte_length": 2,
+          "utf8": ".p",
+          "character_length": 2
+        },
+        {
+          "id": 1121,
+          "type": "bpe",
+          "bytes_hex": "790a",
+          "byte_length": 2,
+          "utf8": "y\n",
+          "character_length": 2
+        }
+      ]
+    }
+  ],
+  "case_distinction_checks": [
+    {
+      "left": "HTTP",
+      "right": "http",
+      "left_ids": [
+        5557
+      ],
+      "right_ids": [
+        1458
+      ],
+      "distinct": true
+    },
+    {
+      "left": "RAM",
+      "right": "ram",
+      "left_ids": [
+        9613
+      ],
+      "right_ids": [
+        2243
+      ],
+      "distinct": true
+    },
+    {
+      "left": "GET",
+      "right": "get",
+      "left_ids": [
+        71,
+        4689
+      ],
+      "right_ids": [
+        3488
+      ],
+      "distinct": true
+    },
+    {
+      "left": "Python",
+      "right": "python",
+      "left_ids": [
+        10855
+      ],
+      "right_ids": [
+        11300
+      ],
+      "distinct": true
+    },
+    {
+      "left": "MHz",
+      "right": "mHz",
+      "left_ids": [
+        14419
+      ],
+      "right_ids": [
+        109,
+        6689
+      ],
+      "distinct": true
+    },
+    {
+      "left": "ClassName",
+      "right": "classname",
+      "left_ids": [
+        6641,
+        23354
+      ],
+      "right_ids": [
+        1615,
+        9907
+      ],
+      "distinct": true
+    },
+    {
+      "left": "MAX_CURRENT",
+      "right": "max_current",
+      "left_ids": [
+        8386,
+        88,
+        95,
+        67,
+        6963,
+        82,
+        11012
+      ],
+      "right_ids": [
+        7959,
+        95,
+        4360
+      ],
+      "distinct": true
+    }
+  ],
+  "metric_notes": {
+    "word_like_unit": "Unicode regex \\w+; code identifiers such as calculate_voltage and STM32F411 count as one unit.",
+    "byte_token_ratio": "Fraction of emitted content tokens that are raw IDs 0..255. Lower is generally better on in-domain text, but there is no universal pass/fail threshold.",
+    "utf8_bytes_per_token": "Average normalized UTF-8 bytes represented by one emitted token. Higher means stronger compression, but quality must also be checked across domains and technical notation.",
+    "content_vocabulary_utilization": "Distinct usable content token IDs observed in the held-out corpus divided by learned_content_vocab_size. This depends strongly on evaluation corpus size."
+  }
+}

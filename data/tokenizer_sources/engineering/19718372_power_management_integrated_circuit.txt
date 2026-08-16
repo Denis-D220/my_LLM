@@ -1,0 +1,21 @@
+A power management integrated circuit (PMIC) is a multi-function integrated circuit that is used to perform power conversion and control power distribution in an electronic device.
+A PMIC reduces the number of components that would otherwise be necessary for the functions it provides, thus reducing the required circuit board space and improving reliability. For example, a PMIC typically includes several DC/DC converters or their control mechanisms.
+PMICs are widely used in computers, battery-powered devices (e.g., mobile phones, tablet computers) and embedded devices. 
+
+Overview
+Many electronic circuits require multiple power supply voltages (e.g., 5 V, 3.3 V, 1.8 V). PMICs are used to control the delivery of electrical power to such circuits.
+A PMIC integrates various functions related to producing or conveying power supply voltages to external circuitry. Typically, the specific functions provided by any particular PMIC are unique to that PMIC model. Commonly provided functions include:
+
+DC-to-DC conversion
+Voltage regulation
+Power sequencing
+Battery charging
+Power switching
+Voltage scaling
+In conjunction with these functions, a PMIC often will perform functions such as voltage supervision and undervoltage lockout. Integrating these functions into one IC makes for better conversion efficiency, smaller circuit size, and better heat dissipation.
+
+Features
+A PMIC may include a DC to DC converter to allow dynamic voltage scaling. Some models have up to 95% power conversion efficiency. Some models integrate with dynamic frequency scaling to support dynamic voltage and frequency scaling (DVFS).
+Some models can be configured via an I²C or SPI serial communication bus.
+Some models feature a low-dropout regulator (LDO), and a real-time clock (RTC) co-operating with a backup battery.
+A PMIC can use pulse-frequency modulation (PFM) and pulse-width modulation (PWM).

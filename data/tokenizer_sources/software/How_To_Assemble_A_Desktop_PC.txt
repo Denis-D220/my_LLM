@@ -1,0 +1,3265 @@
+
+Chapter 1
+
+Choosing the parts
+The first step to building a computer is acquiring the parts. This guide will
+start with a quick explanation of essential parts and elaborate on them further
+on.
+A computer is made up of a case, also called a chassis, which houses several
+internal components, and the external components, including peripherals.
+Inside the case go the following internal parts:
+• Power Supply/PSU power supply unit, converts outlet power, which
+is alternating current (AC), to direct current (DC), which is what the
+internal components require, as well as providing appropriate voltages
+and currents for the various internal components.
+• Motherboard/mainboard As the name indicates, this is the electronic
+centerpiece of the computer, everything else connects to the motherboard.
+• Processor/CPU central processing unit, the “brain” of the computer,
+most actual computation takes place here.
+• RAM random access memory, the “short-term memory” of a computer,
+used by the CPU to store program instructions and data upon which it is
+currently operating. Data in RAM is lost when the computer is powered
+off, thus necessitating a hard drive.
+• Hard Drive/Hard Disk the “long-term memory” of the computer, used
+for persistent storage i.e. the things stored on it remain even when the
+computer is powered down. The operating system, and all your programs
+and data are stored here.
+• Optical Drive device for reading/writing optical disks. May read CDs,
+DVDs, or other optical media, depending on the type. It is essential for
+installing many operating systems and programs. It may be able to write
+some of these discs, as well. Some people like to have two such drives for
+copying disks.
+3
+
+• live version
+• discussion
+• edit
+• comment
+• report an error
+
+4
+
+CHAPTER 1. CHOOSING THE PARTS
+• Video Card/Graphics Card/GPU does processing relating to video
+output. Some motherboards have an “onboard” GPU built in so you dont
+need (but may add) a separate video card. Otherwise, you will need a
+video card. These plug into a slot on the motherboard and provide a
+place to connect a monitor to your computer.
+
+On top of the internal components listed above, you will also need these
+external components:
+• Keyboard for typing on. Many motherboards won’t even boot without
+a keyboard attached.
+• Mouse for pointing and clicking. Unless you chose a text-based operating
+system, you will likely want one of these.
+• Monitor This is where the pretty pictures go. They come in many forms,
+the most common being CRT and LCD.
+These are the parts that a standard PC will use. We are not considering
+such esoterica as headless, touchscreen, or voice-controlled systems. You might
+want to make a check list (perhaps using a spreadsheet) of parts to use as you go
+about your process of research and selection. That way you wont find yourself
+sitting down with a pile of brand new hardware only to find that you forgot an
+essential component.
+Before you jump onto the web and start spending lots of money on expensive
+computer parts, there are three important questions you should answer which
+will guide your purchases:
+1. What will be the main function of the computer?
+2. What useful parts do you have on hand, from an old computer or otherwise?
+3. How much can you afford to spend on the system?
+
+What operating system am I going to use?
+Before you buy components, be sure that they are supported by the operating
+system you plan to use. Almost all current, commonly available PC devices have
+drivers available for current versions of Windows (generally, anything 2000, XP,
+Vista, or newer); if you want to run an alternative operating system, you’ll have
+to do some research; many alternatives have extensive ’Hardware Compatibility
+Lists’ as well as software comaptibility.
+
+WHAT WILL BE THE MAIN FUNCTION OF THE COMPUTER?
+
+5
+
+Windows hardware support lists
+Windows XP supports most processors and motherboards based on the i386
+(x86; 32-bit) or x86 64 (AMD64/EM64T; 64-bit) architectures. Put simply, all
+available consumer processors (especially from AMD or Intel) will work with
+the Windows XP operating system.
+For other hardware, see Microsoft’s compatibility list.
+
+Linux hardware support lists
+As one of the most popular free operating systems, Linux is a very good alternative. It has versions for many different architectures, including i386, x64 and
+PowerPC, though i386 versions are much more common. It will also support all
+kinds of processors, enabling it to be used on Palm PCs and even iPods. There
+are many different versions of Linux, produced by different companies. These
+are called ’distributions’ or ’distros’ for short. For a desktop PC, you should
+make sure to pick a desktop distro, one where the company/organisation has
+desktop users in mind, e.g. Ubuntu, SimplyMEPIS or Mandriva. SUSE is also a
+good choice, and has tools that make it easy to use as a server. Ubuntu has won
+many awards from PC magazines and is noted for being particularly easy to use
+(for basic tasks, e.g. web, email, word processing). It should be noted, however,
+that many popular programs, especially games, are not available for Linux, and
+the only way to run them is with special compatibility layers or programs like
+Wine, which may or may not work with a specific program.
+All this is important to bear in mind as different distros will support different
+hardware (generally more ’bleeding-edge’ distros will support newer hardware
+look at Fedora, SuSE, Ubuntu, but not the stable release of Debian). A good
+rule of thumb is to buy hardware that is 12 to 18 months old, as it most likely
+has Linux support with most distros, but won’t be too old.
+
+BSDs hardware support lists
+• DesktopBSD, see FreeBSD 5.4/i386 and FreeBSD 5.4/amd64
+• Dragonfly BSD
+• FreeBSD
+• NetBSD
+• OpenBSD
+• PC-BSD, see FreeBSD 6.0/i386
+
+What will be the main function of the computer?
+If you’re going to build a computer from scratch for a specific purpose, you’ll
+want to keep that purpose in mind when choosing your components; don’t just
+
+6
+
+CHAPTER 1. CHOOSING THE PARTS
+
+go to the store or an online shop and start buying. Consider what you want to
+use the computer for, you may be able to save money by specifying expensive,
+premium parts only where needed.
+Any reasonably configured computer built from current components will
+offer adequate Internet browsing and word-processing capabilities. For an office
+computer, this is often all that is needed. As long as you provide enough RAM
+for your chosen operating system (256 MB to 1 GB for XP or Linux, 2 GB for
+Vista) any processor you can buy new will provide acceptable performance. If
+the computer is for gaming, a fast processor, the addition of a high-end graphics
+accelerator card (or two) and extra RAM will provide a more satisfactory gaming
+experience. Besides gaming, computers intended for video editing, serious audio
+work, CAD/CAM, or animation will benefit from beefier components.
+Here are some general system categories. Your own needs will probably not
+fit neatly into one of these, but they are a good way to start thinking about
+what you are going to use your computer for. With each weve indicated the
+components you should emphasize when building the system.
+
+Simple web surfer
+To provide basic functionality to a user who just needs web surfing, a little
+word processing, and the occasional game of solitaire, its important not to go
+overboard. Such a user has no need for a top of the line processor or 3D graphics
+card. A modestly configured system with an adequate internet connection will
+suit this user best and can be assembled quite cheaply.
+This usage pattern is not going to stress any particular component, you
+should be looking at a mid- to low-level processor (historically, and currently,
+at about the 110 ($200 approx.) price point or less), enough RAM for the OS
+and a mother board with built in Ethernet, video and audio. You can use a
+mid-level case/power supply combo (these components are often sold as a pair).
+If you have a little extra money, spend it on a better monitor, mouse/keyboard, and case/power supply in that order.
+
+Office computer
+An office computer can be expected to do word processing, spreadsheet and
+database work, internet and intranet access (including e-mail) and a little light
+development of spreadsheets, databases, and presentations. It might also be
+called on to do page layout work, some 2D graphic creation, and/or terminal
+emulation.
+None of this stresses any particular component either, but since office workers
+often run several applications at the same time, and because time is money in
+this space, a strong mid-level processor is suggested. Typically this would be the
+processor one or two places from the top of the line, the Intel Core 2 Duo 6600
+or 6700 would be a good current example. Plenty of RAM will also facilitate
+multitasking and save time.
+
+WHAT WILL BE THE MAIN FUNCTION OF THE COMPUTER?
+
+7
+
+You will not need much in the way of 3D graphics but youll want to make sure
+that the video subsystem has its own memory rather than using system RAM.
+Many integrated video systems do this and it can really slow things down. A
+cheap (sub $100) (for this and other prices in US dollars see www.xe.com/ucc/ or
+other currency converter of your choice for conversion into your local currency)
+video card with 64 meg or more can be a good investment.
+Youll want a sturdy case (computers kept under desks get kicked by users
+and poked by cleaning staff) with a reliable power supply but nothing fancy. If
+you plan on keeping the system running nearly all the time, look for a power
+supply with a good reliability record. Any extra budget after the above should
+focus on a better monitor, better/more ergonomic mouse/keyboard and more
+RAM.
+
+Server
+A server these days can be anything from a home unit serving MP3’s and homework files to the kids, to a machine running a business-critical system for a small
+business, to a 3u rack mount unit serving up millions of hits a day on the internet.
+The thing that most servers have in common is that they are always on and
+therefore reliability is a key characteristic. Also they serve more than one user
+while storing and processing important information. For this reason servers are
+often equipped with redundant systems such as dual power supplies, RAID 5
+arrays of four or more hard disks, special server grade processors that require
+error-correcting memory, multiple high-speed Ethernet connections, etc.
+All of this is a little beyond the scope of the current work, but, in general,
+servers need lots of RAM, fast redundant hard drives, and the most reliable
+components your budget will allow. On the other hand, since nobody is usually sitting at them, you can get away with the cheapest possible keyboard,
+mouse and monitor (in fact many servers run “headless” with no monitor at
+all). Graphics are also a very low priority on these machines, and a read only
+CD/DVD-ROM optical drive (used, infrequently, for installing software and
+updates) will do just fine.
+
+Gaming system
+Were not talking here about the occasional game of solitaire or a secret late
+night Zuma obsession. Were talking about cutting edge 3D gaming first-person
+shooters or real-time strategy games with thousands of troops on the screen
+at the same time, with anisotropic filtering and anti-aliasing and mip-mapped
+specular reflections and a lot of other confusing terminology that describes visual
+effects designed to make your system fall down on its knees and cry like a little
+girl.
+So you’re going to need the fastest processor you can afford and plenty of
+RAM, as well as a motherboard to match, since the speed of the motherboard
+buses can limit high-end components. But even that won’t be enough, so youll
+
+8
+
+CHAPTER 1. CHOOSING THE PARTS
+
+need to offload as much of the work from the processor as you can. The first way
+you can do this is by adding a video card (or cards) with cutting edge GPU’s
+(Graphic Processing Units). ATI and NVIDIA have been competing for “king
+of the graphics card” honours for years and the competition is so keen that new
+cards running on new GPU’s are released, it seems, twice a month. So do your
+research and buy the best current cards you can afford.
+The other component which can offload some of the burden from your CPU
+is a good audio card. The DSP’s (Digital Signal Processors) on the audio card
+can take over a lot of the sound processing and free up the CPU for other
+tasks. Currently Creative Labs pretty much owns this space, but again do your
+research (partly by reading on) and get the best audio card you can afford.
+Finally all of these components are going to require a pretty hefty power
+supply, particularly if you decide to run two graphics cards in Crossfire (ATI)
+or SLI (NVIDIA) mode, in which case make sure the power supply is rated
+for the dual-graphics card mode you choose. Generally a serious gaming rig
+will require at least a 500 watt supply; units are available up to 1000 watts (1
+Kilowatt) and two Kilowatt supplies have been announced. Keep in mind that
+having a higher-rated power supply will not actually increase the power your
+computer draws. The rating is the maximum that the power supply is designed
+to provide. Get the best you can afford.
+As you may have noticed, pretty much every component inside the computer
+needs to be top of the line; the same is true outside the case. Youll want a big
+monitor, and a high resolution mouse. There are even gaming keyboards with
+the keys specially arranged, not to mention joysticks, throttle controllers, driving
+wheels, etc.
+So, given that your budget is not bottomless, how do you prioritize? Well,
+the processor and video card are the components that will have the most effect
+on your gaming performance. Next comes the motherboard and RAM. If you
+use one instead of two video cards, you can also use a less expensive power
+supply. One of the advantages to building your own computer is that you can
+get the components you can afford now and plan to upgrade them later.
+A note on cases for gaming rigs it is not necessary to get a case with a
+side window that reveals glowing blue fans and revolving animated heatsinks.
+A well-built plain case will do just as well and let you spend more money on the
+components that matter. But if you have the cash, and thats your taste, there
+is lots of bling available these days, so go crazy.
+
+Entertainment system/media center
+This is a computer designed to sit in the living room with the rest of your
+A/V gear. The idea is that it will record and serve audio and video files for
+replay via your existing television and stereo. The current notion is that this
+computer should be built in a special case that makes it look more like a stereo
+component, the size of which can present a challenge when it comes to getting
+all the necessary parts fitted.
+
+WHAT WILL BE THE MAIN FUNCTION OF THE COMPUTER?
+
+9
+
+For this system a mid-range processor will be fine, along with a generous
+amount of RAM. A fast Ethernet connection will facilitate sharing large files.
+Youll also want a TV tuner card (or two) to get video in and out of the machine.
+Many of these also provide DVR (digital video recorder) functionality, often
+without the monthly subscription fees and DRM (digital rights management)
+restrictions required by companies like Tivo. A wireless keyboard and mouse
+provide for couch-based use and a separate monitor may be unnecessary as your
+TV will fill that role.
+All components should be as quiet as possible since you’ll likely be watching/listening in the same room. For this application it makes sense to trade a
+little power for passively-cooled (without fans) parts.
+
+Workstation
+A workstation was, originally, a single-user computer with more muscle than a
+PC, intended to support a demanding technical application, like CAD or complicated array-based simulations of real world phenomena. The niche that these
+computers filled between high end PCs and low end minicomputers has essentially evaporated. The serious scientific applications have migrated to clusters
+of PC’s with near super-computer speeds, and end-user applications, like video
+editing, music production and CAD, run well on high-end PC’s. One sector
+that still uses large workstation farms from Sun or Silicon Graphics is serious,
+Pixar-style animation.
+For any of the following uses, you will need the fastest processor and the
+most RAM you can manage.
+Video editing
+Big and fast hard drives are key. 10000 RPM Raptors in Raid 0 as working
+space with multiple 750 GB drives or 1 terabyte drives for storage is a good
+target. SATA/300 is highly recommended and SCSI subsystems should also
+be considered. A large amount of memory (2GB, 3GB, even 4GB) would be
+beneficial.
+Music production
+Plenty of disk space is important, but a music production (recording and mixing)
+workstation is chiefly distinguished by specialized external components studio
+reference monitors instead of speakers, mixing consoles, microphones, etc. One
+piece of advice, if you have extra money, get better microphones, even if you
+have to trade the Bluesmobile.
+CAD/CAM
+More than most, a CAD/CAM workstation tends to be a machine that runs a
+single application, so choose your software and build the computer to support
+
+10
+
+CHAPTER 1. CHOOSING THE PARTS
+
+that. Youre spending a lot of money, usually, for your key app, so get advice
+from the people who wrote it.
+
+Other components
+A worthwhile addition to any computer is a basic printer; printed webpages
+are portable and can be used when the computer is turned off, whether it be a
+recipe for use in the kitchen or road directions for use in the car. Also, almost
+everyone will need to print and send letters at times.
+These days, a dial-up (56kbps) modem is no longer adequate for web browsing, since so many sites now have Active-X, Flash, and other content which
+demands a fast connection (if the user is not to spend a lot of time waiting for
+pages to download). For anyone who will be using the Internet often, a faster
+connection (at least 1Mbits per second) is a must.
+
+Do I plan on overclocking my computer?
+Overclocking consists of running components at faster internal speeds than they
+are rated for. If you are serious about overclocking your computer, you need
+to do extensive research into the components you select, as some parts respond
+to overclocking better than others. Processors that respond well to heavy overclocking are generally not very expensive (though overclockable memory is), but
+the price of a component is by no means a guarantee of its overclocking potential. Overclocking usually voids your warranty and is risky (you can destroy
+your entire computer), so be warned! You need to think hard about cooling the
+computer as overclocking generates heat. Anything from a few extra fans to a
+liquid-cooled system may be necessary depending on the nature of your system.
+
+Do I plan on underclocking my computer?
+This can be ideal for always-on entertainment systems. Underclocked parts run
+cooler, often enabling passive cooling options to be used, which leads to a much
+quieter system.
+The risk here is not destroying your computer, as with overclocking, but
+possible problems with hard-disk data integrity. It is a good idea to back up
+your disk data periodically on a non-volatile medium, such as DVD’s or tape.
+
+Can I use any of the parts from my old computer?
+This depends on your situation; if your computer is more than four years old,
+chances are that most of the parts will be too old, slow or incompatible for
+your new machine. On the other hand, if you are upgrading from a fairly new
+machine, you may be able to use many of the parts. All of this assumes the old
+
+WHERE DO I FIND THE PARTS?
+
+11
+
+computer will no longer be used. If you, or someone else, is going to continue
+using your old computer, it’s probably best just to leave it intact.
+One important point if you are selling your old computer it’s a good idea
+to erase the hard drive before giving it to it’s new owner. Special precautions
+must be taken to ensure that you are not giving away your sensitive or personal
+information. Don’t forget that a simple ’delete’ command does not actually
+erase the data on your hard drive. The original data will still be present and can
+later be recovered by someone else using special programs and/or equipment. To
+avoid this, programs are available that will effectively ’shred’ your data, making
+it unrecoverable. Driver floppies or CD’s that come with some hard drives may
+also have programs to do this, that write 0s or 1s (either way, “blankness”)
+to the whole drive. Lower-tech approaches include running a speaker magnet
+around the hard drive a few times or drilling a few holes in the drive. Obviously,
+the latter prevents it from being used again.
+Since monitor technology moves quite slowly, you can probably keep your
+current monitor and use it on the new computer if it’s of sufficient size and
+clarity for your work. The same can go for keyboards, as well as mice, printers,
+scanners, and possibly speaker sets. On the inside, you may be able to take out
+the floppy drive, CD-ROM drive, and possibly the sound card and hard drive
+(depending on how good they are, of course). Sometimes so much is used from
+the old computer, that the line between an upgrade and a new computer can
+become blurred.
+Reusing a hard drive is an easy way to keep data from your old computer.
+With most Windows operating systems moving a boot drive from one motherboard to another will entail a series of reboots and installation of new drivers.
+In the case of newer Windows systems, like 2000 and XP, an entire ’refresh install’ may be necessary to allow Windows to install a new Hardware Abstraction
+Layer. Back up your data before trying this.
+
+Where do I find the parts?
+Once you have decided what youre going to use your computer for, and have
+reviewed which parts are available for reuse, you should make a list of what
+components you will need to buy. A few hours of research can save you years
+of regret, so make sure that the computer you build will do what you need it to
+do.
+Computer terminology can be confusing, so if there are terms you dont
+understand, be sure to look them up. Wikipedia is an excellent place to start
+if, for example, youre not clear on the difference between, say, DDR and DDR2
+memory.
+There are several places to buy parts:
+• Internet retailers generally offer the best price for new parts. If a part
+needs to be returned, you may be stuck for the shipping; check return
+policies before you purchase.
+
+12
+
+CHAPTER 1. CHOOSING THE PARTS
+• Auction sites like eBay and several others offer very good prices for used
+parts. This is especially useful for parts which do not wear out. Returns
+can be problematic or impossible. Some auctions may not be legitimate.
+Always check the shipping cost before you bid.
+• Local PC shops—Their prices are often higher, but they may make up
+for this by providing a lot of expertise. Get opinions from other sources,
+however, as they may be eager to sell you parts you don’t need.
+• Big local retailers often lack technical expertise and higher prices, but
+can be useful because they usually handle returns quickly. Also good if
+you need something right then.
+• Trade shows that occur from time to time also provide a good place to
+shop, as the prices are often significantly reduced.
+
+Also, your local town dump may have a special section for computers &
+monitors that others have got rid of. These can be more or less brand new
+computers with trivial problems such as a busted power supply or faulty cables.
+Of course if the dump does have such a section, you should ask permission of
+those in charge. They’re usually glad to let you go through it, but don’t leave
+a mess. Taking advantage of this can yield incredible finds, with a price tag of
+nothing or very little.
+
+OEM vs retail
+Many hardware manufacturers will sell the same components in both OEM and
+Retail versions. Retail hardware is intended to be sold to the end-user through
+retail channels, and will come fully packaged with manuals, accessories, software,
+etc. OEM stands for “original equipment manufacturer”; items labeled as such
+are intended to be sold in bulk for use by firms which integrate the components
+into their own products.
+However, many online stores will offer OEM hardware at cheaper prices
+than the corresponding retail versions. You will usually receive such an item
+by itself in an anti-static bag. It may or may not come with a manual or a
+CD containing drivers. Warranties on OEM parts may often be shorter, and
+sometimes require you to obtain support through your vendor, rather than the
+manufacturer. OEM components are also sometimes specified differently than
+their retail counterparts, parts may be clocked slower, and ports or features may
+be missing. Again, do your research.
+
+What should affect the choice of any part/peripheral?
+Many things should be taken into account when deciding what parts to buy.
+Below are some things to consider.
+
+WHAT SHOULD AFFECT THE CHOICE OF ANY PART/PERIPHERAL?13
+
+Compatibility
+Youll want to make sure that all the parts you buy work together without
+problems. The CPU, the motherboard, and the RAM in particular must be
+compatible with each other. Check the motherboard manufacturer’s web site;
+most will list compatible RAM and processors. Often quality RAM that is
+not on the approved list (but is of the proper type) will work anyway, but the
+manufacturers list of processors should be rigidly adhered to.
+Again, youll also want to make sure that your operating system supports
+the hardware you choose. Windows is supported by almost everything, though
+watch out for older components if you’re planning on using Vista. If you have
+any interest in running Linux or another operating system now or in the future,
+buy parts that are supported by that OS. It is also worth checking around the
+Internet to make sure there is no history of your chosen components clashing
+(e.g. certain combinations of hardware causing instability, crashing, etc.)
+
+Ergonomics
+Ergonomics is the science of designing things so that they work with the human
+body. This is obviously important when choosing peripherals such as a keyboard
+or mouse but should also be considered when selecting a monitor, and especially
+when setting up the computer for your use. If your wrist hurts or youre getting
+a crick in your neck, look at the physical setup of your computer, check your
+chair height and posture. An ounce of prevention here can avert troublesome
+repetitive strain injuries.
+
+Operating temperature
+Modern components, notably processors, GPU’s, RAM, and some elements on
+the motherboard, are very small and draw a lot of power. A small area doing
+a lot of work with a lot of power leads to high temperatures. Various factors
+can cause electronic parts to break down over time and all of these factors
+are exacerbated by heat. Very high temperatures can burn out chips almost
+instantly, while running hot can shorten the useful life of a part, so the cooler
+we can make these parts, the better.
+If you are not going to overclock your system, stock air cooling, when paired
+with a good case with adequate fans, should be enough to keep your system cool.
+If you want a quiet computer then components designed for passive (fanless)
+cooling can be paired with very low noise case fans (or a well-vented case). In
+general, high-end parts will require more attention to cooling.
+To keep your system at a proper operating temperature, you can monitor
+vital components with software (which usually comes with your motherboard).
+If you are seeing high temps, make sure the interior of your case is dust free, and
+remember that most cooling solutions can not reduce the temperature of your
+computer parts below room temperature. Of course, unless you happen to have
+
+14
+
+CHAPTER 1. CHOOSING THE PARTS
+
+your computer outdoors in a climate such as the Sahara, room temperature will
+be well within the thermal limits of any component on your computer.
+Which brings us to overclocking. It’s specialty cooling solutions that make
+overclocking possible, a processor that might run stable at a maximum of 3.3
+GHz at 60C could hit speeds as high as 5 GHz with specialized cooling systems.
+A sensible person wanting a 20% overclock could add a special fan/heatsink to
+his CPU and some extra case fans. An enthusiast seeking a major overclock
+might go with a water-cooling solution for the CPU and GPU and sometimes
+other chips. The real fanatics have been known to use liquid nitrogen or total
+immersion in pure water or oil. You should not try any of the more extreme
+solutions unless you ’really’ know what you are doing.
+
+Price
+Today, there are a wide array of hardware components and peripherals tailored
+to fit every home computing need and budget. With all these options to choose
+from, it can be a bit overwhelming if you’ve never bought computer parts before.
+Shop around and remember to factor in shipping and handling, and taxes. Some
+places may be priced a bit higher, but offer perks such as free shipping, limited
+warranties, or 24-hour tech support. Many websites, such as CNET and ZDNet
+offer comprehensive reviews, user ratings, and links to stores, including price
+comparisons.
+Since prices for any given part are always falling, its tempting to just wait
+until the part you want goes down in price. Unfortunately the reason prices
+decline is that better/faster parts are coming out all the time, so the part you
+want this year that costs $500 may well be $200 next year, but by that time you
+wont want it any more, youll want the new, better part that still costs $500.
+At some point youve got to get on the bus and ride, even if the prices are still
+falling.
+Usually the best bet is to buy just behind the bleeding edge, where, typically,
+you can get 90% of the performance of the top of the line part for 50% or 60%
+of the price. That last 10% is very expensive and if you dont need it, you can
+save a lot of money with the second-tier part.
+It may well pay you to think of future upgradeability when selecting some
+components. While the computer that you are building today may be fine
+for your current needs you will probably need to upgrade it later. So look
+for components that support the newest standards and have room for future
+expansion, like a motherboard that will allow you to fit more memory than you
+are planning to use, or a case that has room for extra hard drives. If your
+current machine is maxed out the only possible upgrade is often another new
+machine.
+You may also find that by overspecifing in some areas you can save money
+on others, e.g. if you don’t currently need fantastic sound but you do need
+IEEE1394 (Firewire, iLink) then you might want to purchase a sound card
+anyway as some of the higher end sound cards also have a IEEE1394 port.
+
+PRIMARY COMPONENTS
+
+15
+
+Power
+If money is no object, this is an easy question; just buy the most powerful
+components you can find. If, like most of us, there are limits to what you
+can/want to spend, then focus on those areas where more powerful parts will
+pay off for you and scrimp on others. Always look for that sweet spot on the
+price/performance curve where you get the most bang for your buck.
+
+Primary components
+These are the components that will be the core of your new computer. It is impractical to put together a PC compatible computer without these components
+and a bare set of peripherals.
+
+Chassis (case) & power supply
+In earlier eras most cases were beige, and since most components drew far less
+power than similar components do now, power supplies received little attention.
+Recently, however, cases for the home market have become considerably more
+elaborate, with lights, side windows, glow-in-the-dark cables and other shiny/glowing embellishments. Cases now come in a plethora of styles and colors
+to suit anyone’s taste. And as current components require much more power,
+power supply quality and size is an important issue
+If you are only building an office computer, the style of case will be of little
+concern to you. You might want a inexpensive ATX case (ATX is a specification
+which refers to the size of the motherboard. Any ATX motherboard, and the
+parts designed therefore, will fit in any ATX case), and an inexpensive power
+supply as you won’t be running a high-end processor or graphics card. As
+a guide, youll want a power supply with a rating of more than 300 watts;
+any less wont reliably power modern components. Most case/PSU bundles are
+adequate, but tend to feature a lower quality power supply than those that are
+sold separately from cases. If possible, avoid power supplies with sleeve bearing
+fans, as these are of considerably lesser quality.
+Before purchasing any PSU, make sure that the supplied wattage is sufficient
+for your components. Power requirements are usually listed in the manuals that
+came with your components. It is important to note a power supply’s total
+power, and the power at each voltage: 3.3, 5 and 12V. If any of these do not
+meet your requirements, the rest of the specifications don’t matter.
+Some companies have calculators to help you determine what your power
+supply needs are; if you are the type to just plug in the numbers without reading
+the details, you should buy a power supply that is 1.5 to 2 times the wattage
+that results from these calculators.
+For a quiet system, you can choose a fanless power supply – more expensive
+but well worth it if noise is a concern, but be sure to monitor system temperatures to make sure cooling is adequate.
+For cases and power supply here are some things to consider:
+
+16
+
+CHAPTER 1. CHOOSING THE PARTS
+
+Form factor
+Form factor is the specification that provides the physical measurements for the
+size of components and where mounting devices for them are located.
+• ATX is the most common form factor and is the de facto standard. In
+this form factor the motherboard is (usually) vertically mounted for more
+space and more efficient cooling than some other standards.
+• microATX, or ATX, is smaller than standard ATX, but at the cost of fewer
+expansion slots. Many cases that support ATX also allow microATX. Flex
+ATX is even smaller than microATX, but only allows 2 expansion slots.
+• WTX is intended for workstations and servers.
+• BTX is another formfactor designed for more efficient cooling.
+– PicoBTX 8“x10.5”
+– MicroBTX up to 10.4“x10.5”
+– BTX up to 12.8“x10.5”
+• Mini-ITX is even smaller than BTX, at 6.75” square.
+• NLX
+Many OEM computers use non-standard form factors. Be sure to choose a
+motherboard compatible with your case’s form factor.
+Number of storage drive spaces
+Internal hard drives/floppy drives (which go in the small 3.5“ bays) and internal
+CD/DVD drives (which go in the large 5.25” bays) take up space in the case, so
+make sure you consider how many drives you will need and what size slot they
+require. Note that optical drives and floppy drives will need what are called
+“external” slots (meaning they have a hole in the case through which their face
+can be accessed, while hard drives do not need to be manipulated manually
+often, so they can usually go into an “internal” slot. This is not to be confused
+with an external drive, which doesn’t go into the case at all.
+Note that it’s possible to buy adapters to fit items that go in small bays
+(usually hard drives) into large bays. It is, however, not possible to do the
+reverse.
+Power rating
+The power supply you choose needs to supply enough DC current to run your
+components. Beyond that it needs to supply stable, accurate voltages, i.e. the
+12 volt rail needs to supply 12 volts (within normal tolerances of 10% or so)
+steadily under any foreseeable load, likewise the 3 and 5v rails at their respective
+voltages. Cheap power supplies tend to fall down in these areas. There are
+
+PRIMARY COMPONENTS
+
+17
+
+several tech-heavy websites that actually throw a multimeter on the PSU in the
+course of a review, seek these out and make sure you select a quality PSU.
+In selecting a power supply, check carefully that it has the power feeds you
+need, e.g. six-pin PCI power, 20 vs. 24-pin motherboard connectors, etc. If you
+are planning on running two video cards in SLI (NVIDIA) or Crossfire (ATI)
+mode, make sure your power supply is approved for that. Both companies have
+certification programs.
+There are several calculators that try to help you select an adequate PSU
+for your system, such as:
+• http://web.aanet.com.au/SnooP/psucalc.php
+• http://www.extreme.outervision.com/psucalculator.jsp
+Choose an efficient PSU. Efficient PSU’s run cooler and more quietly and
+thus do not create as much noise (important if you plan to sleep (or think) in
+the same room with it or use it as a media center PC).
+More informations about this theme can be found in Silent PC Review,
+OCAU Wiki, among others.
+Fans
+Most cases mount one or more case fans, distinct from the fans that may be
+attached to the power supply, video card and CPU. The purpose of a case
+mounted fan is to move air through the system and carry excess heat out.
+This is why some cases may have two or more fans mounted in a push-pull
+configuration (one fan pulls cool outside air in, the other pushes hot interior air
+out). The more air these fans can move, the cooler things will generally be.
+Fans currently come in two basic sizes, 80mm and 120mm. Cases tend to
+support either one or the other; in that the case fan mounts can hold that size.
+The larger 120mm fans spin more slowly while moving a given volume of air,
+and slower fans are usually quieter fans, so the 120’s are generally preferred
+even though they cost a little more. Good 80mm fans can still be pretty quiet
+though, so while fan size is a factor, it shouldnt be a deal-breaker if the case
+has other features you like.
+Make sure the power plug on any case fans is supported by your mother
+board, 3 and 4-pin Molex connectors are common. Fans can also be powered
+directly by the PSU, but in that configuration, the motherboard cant control
+or report the fans speed.
+
+CPU (processor)
+The Central Processing Unit (CPU) is the heart of your computer. It performs
+nearly all the actual computation that takes place as the computer is used. The
+choice of a CPU will affect the ultimate speed of the computer more than any
+other single component.
+Before we can explain the differences between CPUs, you must first be familiar with certain CPU properties.
+
+18
+
+CHAPTER 1. CHOOSING THE PARTS
+
+Clock speed Clock speed, measured in Gigahertz (GHz), (or Megahertz (MHz);1
+GHz = 1000 MHz) is the number of calculation cycles that your CPU can
+perform per second. Therefore, a higher clock speed generally indicates a
+faster processor. But not all CPUs perform an equal quantity of work per
+cycle, meaning two CPUs at the same clock speed can potentially perform
+at very different levels.
+IPC IPC, or instructions per cycle, is the amount of work a CPU can do in a
+cycle. With modern processors this number is an average.
+Front side bus speed (FSB) Front side bus speed is the rate at which the
+CPU communicates with the northbridge chipset component on your motherboard, measured in MHz. A larger FSB value shows that your CPU is
+able to communicate with other components on the motherboard (and
+thus your system) faster.
+Interface (Socket/Slot) CPUs plug into a socket on the motherboard. It is
+very important that your CPU is a COMPLETE MATCH to your motherboard CPU socket. Plugging a CPU into the wrong socket will never
+work and will usually break either the CPU, the socket, or both.
+Bit width Modern processors are either 32-bit or 64-bit (this is a simplification; see http://en.wikipedia.org/wiki/64-bit for details). For our purposes a processor can be called 64-bit if it will support running a 64-bit
+operating system. The newer chips from Intel and AMD all support this
+for most 64-bit OSs. If you have any doubts, check the support materials
+for the 64-bit OS you are interested in running.
+Hyper-threading (HT) Hyper-threading is an Intel technology which allows
+a single core processor to simulate having two cores, giving a performance
+boost when running several programs at once. It requires motherboards
+and chipsets supporting Hyper-Threading technology. The advantages of
+the Hyper-Threading technology have never been breathtaking and Intel
+has gone back and forth on it’s support in multi-core processors.
+Cache Cache is memory implemented directly on the CPU. Data which is being
+used in computations is stored in the cache as much as possible and can be
+retrieved from there much faster than the same data can be pulled through
+the northbridge from main memory. Generally, the larger the cache, the
+faster the system will run. Cache comes in (usually) three varieties, L1,
+L2, and L3. L1 being the smallest and fastest, and L3 being the largest
+and slowest. Usually only the L2 cache size will be shown, as L3 is rarely
+used in processor design, and L1 will often stay the same size throughout
+an entire processor product line.
+Core The core of the CPU is the heart of the CPU. Often several cores will be
+marketed under the same name, so look at what core you are buying. Its
+a mistake to choose a processor based solely on its rated speed in hertz .
+
+PRIMARY COMPONENTS
+
+19
+
+This number, while easy to understand, does not tell the whole story. The
+number of cores and the way they communicate will have a big effect, as
+will the fundamental architecture of the core or cores themselves.
+Slower processors are generally preferred for overclocking, as they can often achieve higher overclocking percentages. Retail CPU’s come in a package
+containing a HSF (Heat Sink Fan), instructions, and a warranty, often 3 years.
+OEM CPUs do not include these.
+The current CPU speeds and advantages change frequently, so for up-to-date
+comparisons, you may want to check a website that specializes in Hardware
+reviews, such as Tom’s Hardware Guide or Anandtech. A current (as of 14
+February 2006) beginner’s explanation can be found at Behardware.
+Multiple cores
+Advantages Dual-core processors are a fairly new innovation built by both
+major processor manufacturers (Intel Core Duo / Core 2 Duo and AMD Athlon
+64 X2).
+• Multitasking: Each processor has two processing centres (cores) for a theoretical maximum of twice the operating power and for better multitasking.
+Major advantages of dual core processors are evident when doing heavy
+multitasking, such as encoding video and playing video games at the same
+time.
+• Application Support: Newer applications are being written to take advantage of this technology by using a technique known as Multithreading.
+• Power Saving: Dual core processors (especially Intel Core Duo) have the
+ability to turn off one of their cores when application demand is low to
+save power.
+Disadvantages
+• Support: Older programs (with certain notable exceptions) do not support
+multithreading and may run very slightly slower on dual core CPUs.
+Multi-core Future? Quad core technology is finally here, and more and more
+programs are being built to take advantage of multiple cores. The large chip
+makers are discussing CPU’s with eight, sixteen, even thirty two cores in the
+coming years. Only time and experience will tell how the advantages we are
+seeing with duo and quad core configurations will scale.
+Descriptions
+Often in advertisements (especially for prebuilt systems) a processor will be
+described briefly, like this:
+
+20
+
+CHAPTER 1. CHOOSING THE PARTS
+
+Pentium 4 at 3.2 GHz
+But theres more to it than that, a more detailed specification would read as
+follows:
+Intel Pentium 4 3.2GHz LGA775 FSB800 HT L2-2MB
+Which parses out to:
+Model: Intel Pentium 4
+Clock Speed: 3.2GHz (=3200MHz)
+Interface: Land Grid Array 775
+Frontside Bus: 800 Mhz
+Other Spec: HyperThreading technology
+L2-Cache: 2MB (=2048 kB)
+So we can see that while 3.2 GHz is a screaming fast clock speed, this
+processor might not be as fast as, say, a processor with a 4 megabyte L2 cache,
+a 1066 Mhz front side bus and two cores, even if that processor runs at a slower
+clock speed.
+Intel
+Intel classifies its CPUs using a series of numbers. 3xx, 4xx, 5xx, 6xx and
+7xx of which 7xx denominates the highest end products. Generally, the higher
+the number, the faster the CPU and the more expensive. Usually, models and
+ratings correspond.
+• 3xx Series: Intel Celeron (L2-128KB)
+• 4xx Series: Intel Celeron D (L2-512KB)
+• 5xx Series: Intel Pentium 4 / Celeron D (L2-1MB)
+• 6xx Series: Intel Pentium 4 / Pentium 4 XE (L2-2MB)
+• 7xx Series: Intel Pentium 4 XE
+• 8xx Series: Intel Pentium D
+• 9xx Series: Intel Pentium D
+The number followed by suffix J signifies XD technology.
+E.g. Intel Pentium 4 3.0GHz L2-1MB with HT –¿ Intel Pentium 4 530J
+There is also the Core 2 Duo range out at the moment—it’s naming scheme
+is relatively normal, except for the models ending with 50, they have 1333mhz
+FSB.
+• E6300/E6320: 1.86Ghz, 2MB L2 Cache (E6320 has 4MB), 1066MHz FSB
+• E6400/E6420: 2.13Ghz, same as above
+• (new) E6540: 2.33Ghz, 4MB L2 Cache, 1333MHZ FSB
+• (new) E6550: 2.33Ghz, same as above
+
+PRIMARY COMPONENTS
+
+21
+
+• E6600: 2.4Ghz, 4MB L2 Cache, 1066MHZ FSB
+• E6700: 2.66Ghz, same as above
+• (new) E6750: 2.66Ghz, 4MB L2 Cache, 1333MHZ FSB
+• (new) E6850: 3.0Ghz, same as above
+• X6800: 2.93Ghz, same as above except multiplier unlocked
+AMD
+AMD CPUs are even more confusing in classification. The AMD Athlon CPU
+rating are not of the actual clock speed but rather the equivalence bench mark
+performance corresponding to a comparison to the AMD Athlon Thunderbird
+1.0Ghz. The conversion Table is as follows:
+• AMD Athlon 1500+ = Actually runs at 1.33 GHz
+• AMD Athlon 1600+ = Actually runs at 1.40 GHz
+• AMD Athlon 1700+ = Actually runs at 1.47 GHz
+• AMD Athlon 1800+ = Actually runs at 1.53 GHz
+• AMD Athlon 1900+ = Actually runs at 1.60 GHz
+• AMD Athlon 2000+ = Actually runs at 1.67 GHz
+• AMD Athlon 2100+ = Actually runs at 1.73 GHz
+• AMD Athlon 2200+ = Actually runs at 1.80 GHz
+• AMD Athlon 2400+ = Actually runs at 1.93 GHz
+• AMD Athlon 2500+ = Actually runs at 1.833 GHz
+• AMD Athlon 2600+ = Actually runs at 2.133 GHz
+• AMD Athlon 2700+ = Actually runs at 2.17 GHz
+• AMD Athlon 2800+ = Actually runs at 2.083 GHz
+• AMD Athlon 3000+ = Actually runs at 2.167 GHz
+• AMD Athlon 3200+ = Actually runs at 2.20 GHz
+You may wish to purchase a high end AMD64/EM64T (AMD and Intel,
+respectively) processor, which provides support for 64-bit operating systems
+(eg. Windows XP Professional 64-bit Edition). Most 64-bit processors are
+backwards-compatible with 32-bit operating systems and applications.. Given
+the huge expansion in addressable memory afforded by the transition from 32bit to 64-bit (a 32-bit address space tops out at 4 Gigabytes while a 64-bit space
+
+22
+
+CHAPTER 1. CHOOSING THE PARTS
+
+encompasses 17,179,869,184 Gigabytes) 64 bit operating systems are the wave
+of the future. For the time being though, given the enormous quantity of 32-bit
+software out there, and the limited advantages of 64-bit as of yet, the move is
+likely to be a slow one.
+CPU cooling
+CPU cooling is very important, a less than average CPU temperature prolongs
+CPU life (up to more than 10 years). On the other hand, high CPU temperatures can cause unreliable operation, such as computer freezes, or slow operation.
+Extremely high temperatures can cause immediate CPU destruction by melting the materials in the chip and changing the physical shape of the sensitive
+transistors on the CPU. Because of this, never switch on the computer if your
+CPU has no cooling at all. It is an extremely stupid thing to do. Turn your
+computer on “just to test whether my CPU works” and you’ll likely find that
+the CPU fries in less than 5 seconds and you will be off to buy a new one.
+Most CPU installations use forced-air cooling, but convection cooling and
+water cooling are also options. For traditional forced-air cooling, the heat sink
+and fan (HSF) included with most retail CPUs is usually sufficient to cool the
+CPU at stock speed. Overclockers might want to use a more powerful aftermarket fan, or even try water cooling to combat the increased heat engendered by
+overclocking.
+Many retail HSF units have a thermal pad installed. These transfer heat
+from the CPU to the fan, helping to diffuse the heat created by the CPU. This
+pad is usable only once. If you wish to remove the fan from another CPU so
+that you can use it on your new one, or need to take it off for some reason,
+you will need to remove the pad and apply a thermal paste or another thermal
+pad. Note that some of the cheaper pads can melt in unexpected heat and may
+cause problems and potentially even damage if you are overclocking. In either
+case, thermal paste is usually more effective, just harder to apply. If you plan
+to do any high performance computing, or remove and replace the HSF often,
+thermal paste is suggested. If you are planning on a long term installation a
+thermal pad is often best.
+Non-conductive thermal pastes made up of silicon are the cheapest and
+safest, but silver-based thermal pastes sometimes perform better and carbonbased ones perform better still. When applied improperly both can be conductive, causing electrical shorts upon contact with the motherboard. A thin
+properly-applied layer will usually prevent this problem, although some pastes
+can become runny when they get hot. Users should also beware that many
+“silver” thermal pastes do not actually contain any silver metal.
+For quiet operation, start with a low-heat (low wattage) CPU. Processors
+made by VIA, such as the VIA C3, tend to produce low amounts of heat, though
+you will trade off a considerable amount of computing speed. The current
+generation of duo core processors are more efficient than their predecessors, but
+give off more heat than the Via processors. You can also underclock your CPU,
+giving up some unneeded performance for some peace and quiet. Another option
+
+PRIMARY COMPONENTS
+
+23
+
+is to choose a large copper heat sink with an open fin pattern. However, true
+fanless operation is difficult to achieve in most case designs. You can position
+a case fan to blow across the heat sink, or mount a fan on the heat sink. With
+either choice, a large and slow fan will give better airflow and less noise than a
+small and fast fan.
+Some low-noise CPU cooling fans require special mounting hardware on the
+motherboard. Be sure that the cooling fan you choose is compatible with your
+motherboard.
+
+Motherboard
+It cannot be over stressed that the motherboard is the MOST important part
+of your computer. It is worth investing in a decent motherboard rather than
+a CPU (although if financially acceptable, both) as your motherboard is what
+connects different parts of the computer together. In addition, the difference
+between a cheap and a quality motherboard is typically around $100. A good
+motherboard allows a modest CPU and RAM to run at maximum efficiency
+whereas a bad motherboard restricts high-end products to run only at modest
+levels. A high quality motherboard can go for UKS100/USD$200 or more.
+There are six things one must consider in choosing a motherboard: CPU
+interface, Chipset, IDE or SATA support, Expansion slot interfaces, and other
+connectors. One must also make sure that the motherboard is of a form factor
+compatible with the case.
+CPU interface
+The CPU interface is the “plug” that your processor goes into. For your processor to physically fit in the motherboard, the interface must be an exact match
+to your processor. Intel currently has two mainstream formats, the older Socket
+478 (which is gradually being phased out) and the newer Land Grid Array 775.
+AMD currently uses three sockets, AM2, 754 and 939. The new AM2 sockets
+are faster (compatible with DDR II RAM) and more efficient than the older two.
+Socket 754 was aimed at the value market, while Socket 939 was for performance
+applications.
+Check with the motherboard manufacturer to ensure that the slot on the
+motherboard will support the CPU you want to use. It is important to know
+whether the motherboard’s bus can support the exact CPU you plan on using.
+If the motherboard, CPU, and heatsink/fan are not compatible and installed
+correctly, you can destroy the CPU and/or the motherboard in a matter of
+seconds. Most modern processors come with a stock cooling fan which will
+work well at stock speeds, stick with this if you have any doubts.
+Chipset
+Chipsets are also important as they determine the efficiency of RAM and Expansion slots
+
+24
+
+CHAPTER 1. CHOOSING THE PARTS
+• Intel 915 supports up to 533MHz PC4200 DDRII RAM
+• Intel 925 supports up to 600MHz PC4800 DDRII RAM
+
+All current and popular AMD formats use DDR RAM, with the standard
+400MHz PC3200 being most common. Most Intel socket 478 processors also use
+the older DDR RAM
+The function of BIOS is highly important. Some BIOS features crash proof
+functions essential for updating the firmware. Other motherboards allow BIOS
+control of overclocking of CPU, RAM and Graphics card which are much more
+stable and safer for overclocking. Newer BIOS have temperature controls, and
+functions that shut down the computer if the temperature gets too high.
+IDE (ATA) or SATA interface
+Most motherboards have two parallel , 44 pin IDE interface connectors. These
+are used for connecting hard drives (though these PATA (parallel ATA) connections are rapidly being replaced by SATA (Serial ATA) connections for HDs)
+and optical drives, like CD and DVD drives. Up to two devices can be connected to each IDE port, in a Master/Slave configuration.. A 44 wire ribbon
+cable is used for this connection with three connectors, one on each end and
+one in the middle (actually a few inches from one end). One end is plugged
+into the motherboard connection and the other end is plugged into the first (or
+only) device. If two devices are connected the second is connected to the middle
+connection. The device plugged into the end must be configured as a master
+(usually via a jumper on a set of pins on the device) while the second must be
+configured as a slave OR both must be configured as cable select.
+Two devices connected on the same IDE port will contend for access to the
+bus, this causes a compromise in the speed of the drives. The newer serial ATA
+(SATA) interface has four separate slots that allow independent access and this
+increases the speed at which hard drives work, though, as of yet, there are few
+SATA optical drives available. The cables are also narrower, improving the flow
+of air inside the case.
+The support for older (PATA) IDE drives is starting to disappear. The
+new G/Q/P 965 chipset series from Intel completely dropped support for such
+devices. Nevertheless, all motherboard makers are still including an additional
+IDE controller on their boards, and it will remain possible to buy an extra PCI
+IDE controller.
+Expansion slot interfaces
+Old motherboards may have one or more the following slots:
+• AGP—for graphics cards (ranging from AGP 1x, 2x, 4x and 8x)
+• PCI—for expansion cards and low end graphics cards
+
+PRIMARY COMPONENTS
+
+25
+
+ATI still manufactures PCI graphics cards, but for better performance try a
+card supporting PCI-Express. AGP is not a good idea, becuase it is a standard
+that is on it’s way out. You may come upon ancient motherboards with neither
+AGP nor PCI, but please don’t waste your time trying to reuse them.
+Due to the evolution of new graphics cards on the serial PCI-Express Technology, current newer motherboards have the following connections:
+• PCI-Express 16x for mainstream graphics cards (4 times speed of AGP
+8x)
+• PCI-Express 1x for faster expansion cards (replacing older PCI)
+• PCI for use of old expansion cards (will eventually be phased out)
+Older AGP 8x graphics cards are generally being discontinued in favor of
+PCI-Express 16x, as the speed and efficiency is about 4 times that of the AGP 8x
+technology. Old PCI cards are either now built into the motherboard (for sound
+cards, LAN cards, IEEE 1394 firewire and USB 2.0 interfaces) or becoming PCIExpress variants.
+Other connectors
+USB In addition to the USB 2.0 ports provided on the back panel, most motherboards will have connectors for additional ports, either on the front of
+the case or in a panel that fits where a PCI card might otherwise be
+connected. USB 2.0 ports (and be sure that your chosen motherboard
+supports the faster 2.0 standard) are used for connecting various peripherals such as printers, external hard drives etc. USB connectors are also
+used for connecting MP3 players, some cameras and an assortment of less
+serious devices like fans, nerf missile launchers and drink warmers. Given
+the growing popularity of USB devices, the more ports your motherboard
+supports the better.
+Serial (COM) or parallel (printer) ports Traditional 9-pin serial and parallel ports are much less used than they used to be. Many motherboards
+have dropped the parallel port (formerly used almost exclusively for connecting printers) altogether, while serial ports, which once numbered as
+many as four, are now usually solitary. The principal use for serial ports
+was once connection to either a mouse or an external modem, both of these
+devices now connect via USB. Unless you are connecting some seriously
+old peripheral hardware, these ports will be of minimal importance
+IEEE 1394 firewire Firewire ports are principally used for connecting DV
+(Digital Video) cameras and external hard drives. This technology got a
+foothold because it was much faster than USB 1.0 and 1.1. With the near
+ubiquity of USB 2.0, however, the original (and still the most common)
+IEE1394 implementation, firewire 400, was actually a little slower. For this
+reason, and in spite of the existence of a faster but seldom implemented
+
+26
+
+CHAPTER 1. CHOOSING THE PARTS
+specification, firewire 800, firewire is not as popular as USB. Like USB,
+most motherboards that support firewire will have one or more external
+ports on the back panel and the ability to connect one or more additional
+ports. One or two firewire ports will suffice for most users.
+
+Note that, regardless of the motherboards native support, additional ports
+of all kinds can always be added via a PCI or PCI-E 1 card
+
+RAM (random access memory)
+The amount of RAM you use has become a fairly simple choice. Unless you are
+building on a very restricted budget, you just have to choose between installing
+one gig or two. One gig of RAM is plenty for most modern operating systems
+but all of them will run a little faster with two, it really comes down to a
+financial decision. You might also choose to get one gig of high quality RAM
+over two gig of lesser quality, especially if you plan to overclock. Some specialized
+applications may profit from more than two gig of RAM, if you are planning
+on using such, make sure you check that both your operating system and your
+motherboard will accommodate the amount of RAM you have in mind.
+Another thing to consider when choosing the amount of RAM for your system is your graphics card. Most motherboard-integrated graphics chips and
+PCI Express graphics cards marketed with the “Turbo Cache” feature will use
+system memory to store information related to rendering graphics; this system
+memory is generally not available at all to the operating system. On average,
+these graphics processors will use between 64MB and 512MB of system memory
+for rendering purposes.
+The actual type of RAM you will need depends on the motherboard and
+chipset you get. Some current motherboards use DDR (Double Data Rate)
+RAM but the industry is increasingly turning towards DDR2 RAM. Chipsets
+that use dual-channel memory require you to use two identical (in terms of size
+and speed) sticks of RAM. Your RAM should usually operate at the same clock
+speed as the CPU’s Front Side Bus (FSB). Your motherboard may not be able
+to run RAM slower than the FSB, and using RAM faster than the FSB will
+simply have it run at the same speed as your FSB. Buying low-latency RAM
+will help with overclocking your FSB, which can be of use to people who want
+to get more speed from their system.
+If you are upgrading from an existing computer, it’s best to check if your machine requires specific kinds of RAM. Many computer OEMs, such as Gateway
+and HP, require custom RAM, and generic RAM available from most computer
+stores may cause compatibility problems in such systems.
+RAM has different bandwidths, ie 400, 533, 600, 733, 800, the current trend
+is moving from DDR2-400 RAM to DDR2-533 RAM as it is faster. Higher end
+models are very expensive.
+Labeling of RAM
+RAM is labeled by its Memory Size (In MB) and clock speed (or bandwidth).
+
+PRIMARY COMPONENTS
+
+27
+
+SDRAM (Synchronous Dynamic RAM) is labeled by its clock speed in megahertz (MHz). For example, PC133 RAM runs at 133MHz. SDRAM is nearly
+obsolete as nearly all motherboards have withdrawn support for SDRAM. It is
+now superseded by the more efficient DDR RAM.
+• 128MB SD-133 = 128MB PC133 RAM
+DDR RAM can be labeled in two different ways. It can be labeled by
+approximate bandwidth; as an example, 400MHz-effective DDR RAM has approximately 3.2GB/s of bandwidth, so it is commonly labeled as PC3200. It
+can also be labeled by its effective clock speed; 400MHz effective DDR RAM
+is also known as DDR-400. There is also DDR and DDR2 labeled as PC and
+PC2.
+• 256MB DDR-400 = 256MB PC 3200 RAM
+• 256MB DDR2-400 = 256MB PC2 3200 RAM
+DDR RAM has two versions: DDR (also DDRI) and DDR2 (or DDRII)
+• DDR supports DDR-200, DDR-266, DDR-333, DDR-400 (mainstream)
+and DDR-533 (rare)
+• DDR2 supports DDR-400, DDR-533 (mainstream) and rare/expensive
+DDR-667, DDR-800, DDR-1066
+
+Hard drive
+Things to consider when shopping for a hard drive:
+Cache The cache of a Hard drive is a faster media than the hard drive itself,
+which is normally 2MB (in low-end), 8MB (standard), or 16MB (large
+disks only) large. The existence of a cache increases the speeds of retrieving short bursts of information, and also allows prefetching of data. Most
+modern hard drives have 8MB cache, which gives better performance when
+compared to 2MB.
+Form factor 3.5 inch drives are usually used in desktops; 2.5 inch drives are
+usually used in laptops.
+Capacity The smallest desktop drives that are widely available hold about 160
+gig of data, although the largest drives available on the market can contain
+1TB (1000GB). Few people will need disks this large—for most people,
+somewhere in the range of 160-300GB will be sufficient. The amount
+of space you will need can depend on many factors, such as how many
+high-end games and programs you want to install, how many media files
+you wish to store, or how many high-quality videos you want to render.
+It is usually better to get a hard drive with a capacity larger than you
+anticipate using, in case you need more in the future. If you run out of
+
+28
+
+CHAPTER 1. CHOOSING THE PARTS
+space, you can always add an additional hard drive using any free IDE or
+Serial ATA connector, or through an external interface, such as USB or
+FireWire.
+
+Rotational Speed The speed at which the hard drives platters spin. Most
+laptop (2.5 inch) drives spin at 5400 RPM, while common desktop drives
+come in at 7200. There are PATA and SATA drives that spin at 10,000
+RPM and some SCSI drives hit 15,000. However drives above 7,200 RPM
+usually have limited capacity, and a much higher price than comparable
+7,200RPM drives, making drives above 7,200 RPM advisable only when
+the fastest possible speeds are required.
+Noise and Heat Modern hard drives are fairly quiet in operation though some
+people are sensitive to the faint hum and occasional buzz they do make.
+If your HD is loud, its time to think about replacing it.. Some hard drives
+can also throw a lot of heat and additional cooling may be needed. If your
+case is not very well ventilated, this is something to be concerned about.
+There is software available that will allow you to monitor both the health
+and temperature of your hard drive(s), its a good idea to check from time
+to time.
+Warranty Many manufactures offer warranties ranging from 30 days (typically
+OEM) up to five years. It is well worth spending an extra few dollars to
+get the drive that carries a longer warranty.
+Interface
+The interface of a drive is how the hard drive comunicates with the rest of the
+computer. The following hard drive interfaces are avalible:
+• Parrallel IDE drives(PATA) use cables that can be distinguished by
+their wide 40-pin connector, coloured first-pin wire, and usually gray “ribbon” style cables. This technology is losing popularity because SATA uses
+thinner cables, eliminates contention for the IDE bus that can occur when
+two PATA drives are attached to the same connector, and promises faster
+drive access.
+• SATA drives have the advantages outlined above. If you want Serial
+ATA, you will either need to purchase a motherboard that supports it, or
+purchase a PCI card that will allow you to connect your hard drive. Note
+that some older motherboards will not allow you to install Windows XP
+to a Serial ATA hard drive.
+• SCSI, although more expensive and less user friendly, is usually worthwile on high performance workstations and servers. Few consumer desktop
+motherboards built today support SCSI, and for building a new computer,
+the work needed to implement it may be outweighed by the relative simplicity and performance of IDE and SATA. SCSI hard drives can reach
+
+SECONDARY COMPONENTS
+
+29
+
+rotational speeds of up to 15,000 RPM, though these are generaly prohibitively expensive.
+• USB or IEEE1394 can be used for connecting external drives. An external drive enclosure can convert an internal drive to an external drive.
+
+Secondary components
+These components are important to your computer, but are not as central and
+necessary as the Core Components.
+
+Video output
+For a computer to use a display for monitoring it will need some form of video
+card into which a display can be plugged. The majority of home and office
+computers, which predominatly use 2D graphics for office applications and web
+surfing can use an ’onboard’ or integrated graphic processor which will be included on most low to mid range motherboards. For gaming, or 3D modelling,
+a good quality graphics card will be needed.
+Currently, two companies dominate the 3D graphics accelerator market;
+nVIDIA and ATI. nVIDIA and ATI build their own graphics products, and
+license their technologies to other companies. Both companies make a complete
+line of cards with entries at every price/performance level, and each brand has
+its own supporters. Video cards have their own RAM, and many of the same
+rules that dominate the motherboard RAM field apply here: to a point, the more
+RAM, and the faster it is, the better the performance will be. Most applications
+require at least 32MB of video RAM, although 256MB is rapidly becoming the
+new standard. On the other end, 512MB video cards top the consumer end of
+the video card market. As a rule of thumb, if you want a high end video card,
+you need a minimum of 128MB of video memory – preferably 256MB. Don’t
+be fooled, though; memory is only part of the card and the actual video processor is more important than the memory. It is important to understand that
+an integrated graphics card uses the system’s RAM, and relies heavily on your
+system’s CPU. This will mean slow performance for graphic-intensive software,
+such as games.
+It is generally better to choose your video card based on your own research,
+as everyone has slightly different needs. Many video card and chip makers are
+known to measure their products’ performances in ways that you may not find
+practical. A good video card is often much more than a robust 3D renderer; be
+sure to examine what you want and need your card to do, such as digital (DVI)
+output, TV output, multiple-monitor support, built-in TV tuners and video
+input. Another reason you need to carefully research is that manufacturers will
+often use confusing model numbers designed to make a card sound better than
+it is to sell it better. For example, the Geforce 4 MX series of cards claim to be
+a “Geforce 4,” however, the actual processor is closer to a Geforce 2, only more
+powerful, meaning that these cards actually lack many features available even
+
+30
+
+CHAPTER 1. CHOOSING THE PARTS
+
+to the Geforce 3 series. However, when these cards were first produced, they
+were considerably cheaper than a real Geforce 4 (the TI series) making them
+an ideal choice if you were more interested in working on a spreadsheet than
+in playing games. For this sort of reason, you have to carefully pick your card
+depending on your needs. TV outputs can easily be adapted to your computer
+by using a DVI—Component Video cable.
+Newer technologies such as SLI and Crossfire allow the use of two video
+cards to render the same video scene, similar to using two CPUs or a dual-core
+CPU. These systems tend to be expensive, as only some video cards offer this
+option, and you’ll need two of them. However, it can be a useful upgrade path
+to consider. A SLI-capable motherboard is usually not much more expensive
+than the regular model, and will work fine with a single video card. You can use
+it with one card now, and buy another one in the future (which will probably be
+much cheaper by then), which means you will take advantage of your old video
+card too.
+Interface
+There are four different current graphics card interfaces: integrated, PCI, AGP
+and PCI-Express.
+Most retail computers will ship with an integrated graphics card. This means
+that if you want to play new 3-D games you will need to upgrade. Most motherboards that have integrated graphics will also have one of the other three slot
+interfaces available so it isn’t hard to place a new card to suit your needs if the
+need ever arises.
+Older video cards use the standard PCI slots that are now growing obsolete
+due to limited speed and memory. These cards are needed for a few rare systems
+lacking an AGP or PCI-E slot (usually low end desktop systems designed to be
+cheap.) They are also useful for adding aditonal video cards to a system.
+Although the AGP standard has now, by and large, been superseded by PCIE, the cards are still available as are a few motherboards that support them.
+There are 4 different speed and bandwidths of AGP, 1x, 2x, 4x and 8x. While
+8x is the fastest and most common for high end products, the true performance
+of your AGP card is limited by the lower AGP value of your graphics card and
+motherboard. For example, an AGP 8x card on a 4x motherboard can only run
+at up to 4x. AGP has mostly been phased out and there will not be an AGP
+16x due to technical limitations.
+The newest trend in graphics card is the PCI-Express (not to be confused
+with PCI-X) system that supports up to 16x speeds. Some graphics cards still
+come in both AGP and PCI-E 16x models but the newest models of graphics
+cards are often PCI-E 16x only. While most motherboards have only one PCI-E
+16x slot, those with two such slots can combine the power of two video cards
+using technologies known as SLI for NVidia, and CrossFire for ATI. However,
+you will have to match the video cards to a motherboard supporting the multiple
+card technology of choice, and use two similar video cards that both support
+dual video cards.
+
+SECONDARY COMPONENTS
+
+31
+
+Keep in mind that to provide best picture quality your graphics card must
+be capable of displaying the same resolution as your LCD display’s native resolution.
+
+CD/DVD
+Optical drives have progressed a long way in the past few years, and you can
+now easily purchase DVD writers that are capable of burning 9GB of data to a
+disk for an insignificant amount of money. Even if you don’t plan on watching
+or copying DVDs on your computer, it is still worth purchasing a burner for
+their superior backup capabilities.
+When purchasing a DVD writer, you will want one that is capable of burning
+both the ’+’ and ’-’ standards, and it should also be Dual Layer compatible.
+This will ensure that you can burn to almost all recordable DVDs currently on
+the market (the other major format, DVD-RAM is almost unused, for the most
+part, so don’t worry about it).
+
+Floppy drive
+Though Floppy drives have been made largely obsolete in recent years by devices
+such as USB “Thumb Drives” and CD writers, they are often installed anyway
+because they are sometimes required for BIOS updates and exchanging small
+files with older computers. Floppy drives block air movement with wide cables,
+and can make computers set to check the drive take longer to start (most have an
+option in their bios to disable this.). One option to overcome the cable problem
+and to make it easier to install is to buy an external USB floppy drive, these are
+potentially a little bit faster and can be plugged into a different system (such
+as a laptop without a floppy drive.) However, not all systems support booting
+from a USB floppy drive – most notably older motherboards.
+It should be noted that floppy disks are not suitable for long term storage
+of data, even in a backup role. Never keep your only copy of an important file
+on a floppy disk.
+
+Sound card
+Most motherboards have built-in sound features. These are often adequate
+for most users. However, you can purchase a good sound card and speakers
+at relatively low cost—a few dollars at the low end can make an enormous
+difference in the range and clarity of sound. Also, these onboard systems tend
+to use more system resources, so you are better off with a real soundcard for
+gaming.
+Sound card quality depends on a few factors. The digital-analog conversion
+(DAC) is generally the most important stage for general clarity, but this is
+hard to measure. Reviews, especially those from audiophile sources, are worth
+consulting for this; but don’t go purely by specifications, as many different
+models with similar specs can produce completely different results. Cards may
+
+32
+
+CHAPTER 1. CHOOSING THE PARTS
+
+offer digital (S/PDIF) output, in which case the DAC process is moved from
+your sound card either to a dedicated receiver or to one built into your speakers.
+Sound cards made for gaming or professional music tend to do outstandingly well for their particular purpose. In games various effects are oftentimes
+applied to the sound in real-time, and a gaming sound card will be able to do
+this processing on-board, instead of using your CPU for the task. Professional
+music cards tend to be built both for maximum sound quality and low latency
+(transmission delay) input and output, and include more and/or different kinds
+of inputs than those of consumer cards.
+
+Modem
+A modem is needed in order to connect to a dial up internet connection. A
+modem can also be used for faxing. Modems can attach to the computer in
+different ways, and can have built-in processing or use the computer’s CPU for
+processing.
+Modems with built-in processing generally include all modems that connect
+via a standard serial port, as well as any modems that refer to themselves as
+“Hardware Modems”. Software Modems, or modems that rely on the CPU generally include both Internal and USB modems, or have packaging that mentions
+drivers or requiring a specific CPU to work.
+Modems that rely on the CPU are often designed specifically for the current
+version of Windows only, and will require drivers that are incompatible with
+future Windows versions, and may be difficult to upgrade. Software Modems
+are also very difficult to find drivers for non-Windows operating systems. The
+manufacturer is unlikely to support the hardware with new drivers after it is
+discontinued, forcing you to buy new hardware. Most such modems are internal
+or external USB, but this is not always the case.
+Modems can be attached via USB, a traditional serial port, or an internal
+card slot. Internal and USB modems are more easily autodetected by the operating system and less likely to have problems with setup. USB and serial port
+modems often require an extra power supply block.
+Gaming modems are normal modems that default to having a low compression setting to reduce lag, but are generally no longer used by gamers, who
+prefer broadband connections.
+
+Ethernet card
+An ethernet card is required in order to connect to a local area network or a
+cable or DSL modem. These typically come in speeds of 10Mbps, 100Mbps, or
+1000Mbps (gigabit); these are designated as 10Mbps, 10/100Mbps, or 10/100/1000Mbps
+products. The 10/100 and 10/100/1000 parts are most commonly in use today.
+In many cases, one or two ethernet adapters will be built into a motherboard.
+If there are none, you will have to purchase one—these typically are inserted
+into a PCI slot. To get the full speed of 10/100/1000Mbps ethernet, it’s best to
+get a motherboard with that connector built in.
+
+PERIPHERALS
+
+33
+
+Peripherals
+Anything outside the case that connects to your computer is considered a peripheral. The keyboard, mouse and monitor are pretty much the bare minimum
+you can go with and still be able to interact with your computer. Your choice
+in peripherals depends on personal preference and what you intend to do with
+your computer.
+
+Mouse and keyboard
+There are, broadly, two types of mouse: optical and mechanical. Mechanical
+mice use a rubber coated ball bearing that contacts the mousepad or other
+surface and actually rolls around. Optical mice use a bright light and a sensor
+to track the movement of the mouse.
+When choosing a mouse, there is generally no reason not to choose an optical
+mouse. They are considerably lighter (and as such, reduce RSI) as they have no
+moving parts, they are much better at smoothly tracking movement, and they
+dont require constant cleaning like ball mice (though it may be wise to brush
+off the lens with a q-tip or other soft tool on occasion). Make sure that you
+spend money on a decent-quality mouse made by companies such as Microsoft
+or Logitech, as lower-end optical mice will skip if moved too fast. Mice of
+medium-to-high quality will track your movement almost flawlessly.
+Although three buttons are generally enough for operating a computer in
+normal circumstances, extra buttons can come in handy, as you can add set
+actions to each button, and they can come in handy for playing various video
+games. One thing to note is that with some mice those extra buttons are not
+actually seen by the computer itself as extra buttons and will not work properly
+in games. These buttons use software provided by the manufacturer to function.
+However, it is sometimes possible to configure the software to map the button
+to act like a certain keyboard key so that it will be possible to use it in games
+in this manner.
+Wireless keyboards and mice do not now display the sort of noticeable delay that they once did, and now also have considerably improved battery life.
+However, gamers may still want to avoid wireless input devices because the very
+slight delay may impact gaming activities, though some of the higher end models have less trouble with this. The extra weight of the batteries can also be an
+inconvenience.
+
+Printer and scanner
+For most purposes, a mid-range inkjet printer will work well for most people.
+If you plan on printing photos, you will want one that is capable of printing at
+around 4800dpi. Also, you will want to compare the speed of various printers,
+which is usually listed in ppm (pages per minute). When choosing a printer, always check how much new cartridges cost, as replacement cartridges can quickly
+outweigh the actual printer’s cost. Be aware of other possible quirks as well.
+
+34
+
+CHAPTER 1. CHOOSING THE PARTS
+
+For example, Epson has protection measures that make refilling your own ink
+cartridges more difficult because an embedded microchip that keeps track of
+how much ink has been used keeps the printer from seeing the cartridge as full
+once it has been emptied.
+For office users that plan to do quite a bit of black and white printing buying
+a black and white laser printer is now an affordable option, and the savings and
+speed can quickly add up for home office users printing more than 500 pages a
+month.
+Scanners are useful, especially in office settings, they can function with your
+printer as a photocopier, and with software can also interact with your modem
+to send Faxes. When purchasing a Scanner, check to see how “accessible” it is
+(does it have one-touch buttons), and check how good the scanning quality is,
+before you leave the store if possible.
+Finally, “Multi-Function Centres” (also called “Printer-Scanner-Copiers”)
+are often a cost-effective solution to purchasing both, as they take up only one
+port on your computer, and one power point, but remember that they can be a
+liability, since if one component breaks down, both may need to be replaced.
+
+Display
+When choosing a display for your computer, you have two choices: a Cathode
+Ray Tube (CRT) screen, or a Liquid Crystal Display (LCD) screen. Both technologies have their advantages and disadvantages: CRTs have been preferred
+by gamers and graphic artists, for their generally superior response times and
+color gamut, but this is offset by the added size and weight that a large screen
+requires. CRTs are still somewhat cheaper in sizes of 17 inches or less but LCDs
+are generally less expensive than CRTs in sizes above 17 inches. In sizes above
+21 inches LCDs are far cheaper, and much easier to find. High-end LCD models
+are generally preferred for tasks which need higher definition, such as movie
+editing, and are also popular amongst people with little-to-no desk space, as
+they do not need as much space as a similarly-sized CRT.
+LCD panels
+Liquid Crystal Displays (LCDs) have the advantage of being a completely digital
+setup, when used with the DVI-D or HDMI digital connectors. When running
+at the screen’s native resolution, this can result in the most stable and sharp
+image available on current monitors. Many LCD panel displays are sold with an
+analog 15-pin VGA connector or, rarely, with an analog DVI-I connector. Such
+displays will be a bit fuzzier than their digital counterparts, and are generally
+not preferred over a similarly-sized CRT. If you want an LCD display, be sure
+to choose a digital setup if you can; however, manufacturers have chosen to
+use this feature for price differentiation. The prime disadvantage of LCDs is
+“dead pixels”, which are small failing areas on your monitor, which can be
+very annoying, but generally aren’t covered under warranty—this can make
+purchasing LCD displays a financial risk. LCDs are generally okay for fast-paced
+
+PERIPHERALS
+
+35
+
+gaming, but you should be sure that your screen has a fairly fast response time
+(of 12 ms or lower) if you want to play fast games. Nearly all flat panels sold
+today meet this requirement, some by a factor of 3. When picking an LCD, keep
+in mind that they are designed to display at one resolution only, so, to reap the
+benefits of your screen, your graphics card must be capable of displaying at that
+resolution. That in mind, they can display lower resolutions with a black frame
+around the outside (which means your entire screen isn’t filled), or by stretching
+the image (which leads to much lower quality). Running at a higher resolution
+than your monitor can handle will either make everything on the screen smaller,
+at a significant quality drop, or will display only a part of the screen at a time.
+CRT (cathode ray tube) displays
+The other key type of display is the CRT or Cathode Ray Tube display. While
+CRT technology is older it often outperforms LCD technology in terms of response times, color reproduction, and brightness levels, although LCD displays
+are quickly catching up. CRTs are becoming increasingly difficult to find and
+have almost vanished from mass-market retail. High end CRT’s are still available, though they are rapidly being discontinued, and now cost the moon. Used
+CRT’s on the other hand, can often be had for a song as people change over to
+LCD screens, this won’t last forever though.
+There are two types of CRT displays, shadow mask and aperture grill. An
+aperture grill display is brighter and perfectly flat in the vertical direction, but
+is more fragile and has one or two mostly-unnoticeable thin black lines (support
+wires) running across the screen. CRTs are generally 2-4 times as deep as
+similarly-sized LCDs, and can weigh around 10 times as much. If you purchase
+a CRT display over the internet, shipping is much more expensive than an LCD,
+due to the significantly increased weight.
+The response times of CRTs are often quicker than LCDs, which is good
+for gaming, however, CRT’s can cause headaches in some people when run at
+lower frequencies, so it may be ideal to pick a screen offering higher update
+frequencies at whichever resolutions you intend to use. Most people who have
+problems with low frequencies (60Hz) find it preferable to have at least 80Hz at
+the intended resolution. Many won’t be bothered by this at all however.
+Note that sometimes CRTs with a flat screen instead of a curved one are
+called “flat screens”, this is not to be confused with the term “flat panel” used
+to refer to LCDs.
+
+Speakers
+Computer speaker sets come in two general varieties; 2/2.1 sets(over a wide
+range of quality), and “surround”, “theater”, or “gaming” with four or more
+speakers, which tend to be somewhat more expensive. Low-end speakers can
+suffer from low bass response or inadequate amplification, both of which compromise sound quality. Powered speakers with separate sub-woofers usually cost
+only a few dollars more and can sound much better. At the higher end, one
+
+36
+
+CHAPTER 1. CHOOSING THE PARTS
+
+should start to see features like standard audio cables (instead of manufacturerspecific ones), built in DACs, and a separate control box.
+The surround sets include a sub-woofer, and two or more sets of smaller
+speakers. These support 5.1 or 7.1 standards that allow sound to be mixed not
+only left and right, as with standard stereo speakers, but front and back and
+even behind the listener. Movies and video games make use of this technology
+to provide a more immersive experience. Make sure your sound hardware will
+support 5.1 or 7.1 before buying such a speaker system.. If your budget allows,
+you can avoid the computer speaker market entirely and look into piecing together a set of higher-end parts. If you are buying a speaker system designed
+for PCs, research the systems beforehand so you can be certain of getting one
+that promises clarity rather than just simple wattage. (Note: speaker power is
+usually measured in RMS Watts. However, some cheap speakers use a different
+measure, PMPO which appears much higher.)
+Headphones can offer good sound much more cheaply than speakers, so if you
+are on a limited budget but want maximum quality they should be considered
+first. There are even headphones which promise surround-sound, though these
+have not been favorably reviewed.
+
+External links
+• Power supply calculators
+– The JourneySystems Power Supply Calculator
+– The eXtreme Power Supply Calculator
+
+Chapter 2
+
+Assembly
+Now that you have selected your parts, you get to what is arguably the most
+fun part of the process: putting the parts together.
+
+• live version
+• discussion
+• edit
+
+Tools and equipment
+
+• comment
+
+You wont need many tools to assemble your computer, in fact the only must
+have is the screwdriver, but if you can get most of the following together, youll
+find things go a little easier.
+
+Basic tools
+Before you begin building or refitting a computer, you will need some basic
+tools:
+1. 2 phillips-head (cross-shaped) screwdriver
+2. Needlenose pliers
+3. Anti-static Wrist Strap
+4. A large level working space
+
+Optional, but useful tools
+Some other tools and equipment can come in handy as well, such as:
+1. Grounding Mat or anti-static carpet
+2. Spring action parts grabber.
+3. Electrical tape
+4. Flashlight
+37
+
+• report an error
+
+38
+
+CHAPTER 2. ASSEMBLY
+5. A second, working computer to swap parts, look for tips, ask for help
+online, download drivers and patches, etc.—very useful
+6. A can of compressed air—useful when working with older parts that have
+collected dust. A better alternative but also more costly, is a vacuum
+cleaner designed for cleaning electronics.
+
+If you do not have access to an anti-static mat or wrist-band, when working
+on a table rubber or leather-soled shoes can help prevent static charges obtained
+from walking around, although if you move your hands upon the ground, say
+picking up a dropped screw, your static charge WILL stay with you until you
+touch something metal. Therefore, after doing anything that might have potentially caused you to pick up a static charge, ground yourself on an unpainted
+surface of the computer case before touching anything electronic.
+
+Preparation
+Proper preparation is the key to a successful build. Before you begin, make
+sure you have all the tools you will need, and secure a clear, well-lit workspace.
+Gather all the components youll be using and unpack them one at a time,
+verifying that everything that is supposed to be there is actually present. At
+this point you should leave the parts themselves in their protective anti-static
+bags, and assemble all the accompanying manuals. Now I know you want to
+get started, but trust me, read the manuals, check the diagrams, make sure you
+understand where each part goes and how it attaches. If there is anything you
+dont understand, now is the time to do a little extra internet research or call
+the manufacturer with your questions.
+Find a dry, well-ventilated place to do your work. You should have plenty
+of light to see your components with, and if possible, you should choose an area
+without carpet on the floor, as carpet tends to generate a lot of static, and this
+can be ameliorated by choosing a nonconductive floor surface. An unfurnished
+basement is a good work location.
+
+Safety precautions
+1. Static electricity is the biggest danger to the expensive parts you are about
+assemble, even a tiny shock, much too small for you to feel, can damage
+or ruin the delicate electronic traces, many times smaller than a human
+hair, that make up your CPU, RAM and other chips. Its important to use
+your anti-static wrist strap. Once you have the powersupply installed in
+the case, clip the end of the wrist strap to the outside of the powersupply.
+(Never plug your computer in while you are connected to it by a wrist
+strap.) This will ensure that you, the case and the power supply are all
+connected to a common ground, in other words there will be no inequality
+of charge that will allow a spark to jump from you to the case. Its also
+helpful to have an antistatic mat to set the case and other components on.
+
+CONSTRUCTION
+
+39
+
+2. Nobody but you is at fault if you shock your components with static electricity. Make sure that you take the precautions in the previous paragraph
+to ground yourself from static electricity. (Note: if you really must work
+on a computer and haven’t got proper anti-static equipment, it is usually
+OK if you make sure that you don’t move about much; are not wearing
+any static-prone clothing; handle components by the edges; and regularly
+(once a minute or so), touch a grounded object.). The case metal of your
+PC’s power supply will usually be a suitable grounded object. As noted
+above, touch it every few minutes while you are working on your PC if
+you havent got a wrist strap.
+3. Turn off your computer and unplug your Power Supply before installing
+or removing any components—if power is flowing to components as they
+are installed or removed, they can be seriously damaged.
+4. Never cut the grounding pin off your power cord. This “safety ground”
+stands between you and potentially lethal voltages inside the power supply.
+5. Be wary of sharp edges! Many lower-end PC cases have sharp, unfinished
+edges. This is especially so on interior surfaces, and where the case has
+been cut or punched-out. Use care and take your time to avoid cutting
+your hands.If your case has this problem, a little time with some sandpaper
+before you begin construction can spare you a lot of pain.
+6. Dismantling discrete electronic components such as your Power Supply or
+Monitor is dangerous. They contain high voltage capacitors, which can
+cause a severe electric shock if you touch them. These hold a charge even
+when the unit is not plugged in and are capable of delivering a fatal shock.
+
+Construction
+Start by putting your case down on your work surface, with the case door facing
+up, and open the case.
+
+Motherboard
+Find the motherboard standoffs that should have come with the case. They are
+screws, usually brass, with large hexagonal heads that are tapped so you can
+fasten screws into the top.
+Remove the I/O Shield from the back of the case where the ports on the
+back of the motherboard will fit, and put in the I/O Shield that came with your
+motherboard. There may be small metal tabs on the inside of this face plate, if
+so you may have to adjust them to accommodate the ports on the back of the
+motherboard.
+Some case styles make it difficult to install the motherboard or the CPU
+with the power supply installed. If the power supply is in your way, take it out
+and set it aside (we’ll put it back in later).
+
+40
+
+CHAPTER 2. ASSEMBLY
+
+Now locate the screw holes on your motherboard and find the corresponding
+holes on the motherboard plate (or tray) in the case. Put a standoff in each of
+these holes on the tray and position the motherboard so that you can see the
+holes in the top of the standoffs through the screw holes in the motherboard.
+Now is the time to make sure the ports on the motherboard are mating
+with the backplate you just installed, and make any necessary adjustments.
+The small metal tabs are intended to make contact with the metal parts of the
+connections on the back of the motherboard and ground them, but you may
+have to bend these tabs a bit to get the ports all properly mounted, this is
+where those needlenose pliers may come in handy.
+If you have trouble lining up the screw holes, double check that you have
+the standoffs in the proper holes on the tray. With lower quality cases there are
+sometimes alignment problems and you may have to forgo one or two screws.
+If this is the case, make sure you remove the corresponding standoffs.
+Now fasten a screw through each of the motherboard screw holes into the
+standoffs underneath. These screws should be snug but not tight, there is no
+reason to torque down on them, hand tight is fine, otherwise you can damage
+the motherboard.
+There, the motherboard is in, now it’s time to plug the other components
+into it.
+
+CPU
+Installing the CPU, and the CPUs
+heatsink and fan, are by far the most
+difficult steps youll have to complete
+during your build. Here, more than
+anywhere else, it will pay to read
+the instructions carefully, look at the
+parts, study the diagrams that came
+with your CPU and/or third party
+cooling solution, and make sure you
+thoroughly understand what you are
+going to do before you try to do
+it. During the process, if anything
+does not seem to fit or make sense,
+put the parts down and look things
+over carefully before you proceed.
+Some operations, especially installing
+the heatsink/fan combination, can re- Figure 2.1: An example of a CPU
+quire pretty firm pressure, so dont be socket, Socket A (GFDL, by Lzur)
+afraid to push a little harder if youre
+sure everything is set up correctly.
+The details of the installation process differ in slight but important ways
+for each manufacturers processors, and even within a manufacturers product
+
+CONSTRUCTION
+
+41
+
+line. Therefore, for these details, you should rely on the instructions that are
+provided with the CPU.
+The two things that go wrong the most often and most expensively (minimum of a killed CPU, sometimes more) in building one’s own computer are
+both related to the CPU and its cooler:
+1. Switching the computer on “just to see if it works” before adding any
+CPU cooling unit. Without cooling, CPUs heat up at extreme rates (a
+CPU heats up anywhere between ten times and a thousand times as fast
+as a cooking area on your stove!) By the time you see the first display on
+the screen, your CPU will already be severely overheating and might be
+damaged beyond repair.
+2. Mounting the CPU cooler improperly. Read the instructions that came
+with your CPU and cooler very carefully and ensure you are using all
+components in the correct order and correct place.
+If you buy a third party cooling solution for your CPU make sure you get
+one that is compatible with the CPU you have. Most brands come with multiple
+mounting brackets that will suit many different chipsets, but it’s best to check
+for compatibility just in case.
+If using thermal paste, apply it only to the CPU die (the square piece of
+silicon in the middle of the CPU) and do so sparingly – most modern CPUs
+take no more than a grain of rice sized dab of thermal paste. Some people do
+like to wipe some onto the heatsink’s surface and then wipe it smoothly off so
+that bits of it may get into tiny holes for better heat transfer. See Arctic Silver
+Instructions for more info on how to apply and remove thermal paste/grease.
+(It was written to be specifically for Arctic Silver paste, but the same techniques
+can be applied to other brands of thermal paste.)
+If using a thermal pad supplied with your cooler, make sure you remove any
+protective tape from the die just before installing and do not get it dirty—and
+do not combine thermal pads with thermal paste, it’s either one or the other.
+Then, check that you install the cooler in the right orientation and that you
+set it flat on the CPU die without exerting undue pressure on any edges or
+corners—the latter can make small pieces of the die break off, killing the CPU.
+One option you may consider, before installing the heatsink, is to “lap”
+the heatsink, which means to smooth out the bottom surface. To do this, you
+will need a very flat surface; a piece of thick window glass will work. Fasten
+your sandpaper on the flat surface, invert the heatsink on the sandpaper and
+sand in small circles, applying minimum pressure. Check frequently and when
+you see a uniform pattern of scratches, switch to finer grained sandpaper (the
+numbers go up as the sandpaper is finer, so something such as 220 is coarse
+while 2000 will be very fine.) Remember that you are not trying to remove any
+material, just polish out surface irregularities. If you get it right, you should
+have a surface which feels completely smooth to the touch (but dont touch it,
+the oil in your fingers can cause corrosion of the fresh surface) with a mirror
+finish. Some companies producing heatsinks lap the surface themselves, so if
+
+42
+
+CHAPTER 2. ASSEMBLY
+
+the surface already looks like a perfect mirror, leave it alone. A lapped heatsink
+is more effective as it will have better surface contact with the chip.
+Tighten the cooler using only the specified holding devices—if you did everything right, they will fit. If they don’t fit, check your setup—most likely
+something is wrong. After mounting the cooler, connect any power cables for
+the fan that is attached onto the cooler.
+As an aside to the instructions above, it has been my personal experience that
+fitting the CPU and heat sink is best done on a supportive surface (a telephone
+directory on a table in my case) prior to installation, to avoid excessive flexing
+of the motherboard.
+If you’ve got the CPU and its cooler installed, and the motherboard in the
+case, youre over the hump, there just a few more easy pieces to go before that
+momentous first power-up.
+
+RAM
+
+Next, you will need to install your RAM (random access memory). Find
+the RAM slots on your motherboard; they will look something like the picture
+above. To install the RAM modules, first push on the levers (white plastic in
+the picture) on either side of the DIMM socket, so that they move to the sides.
+Do not force them, they should move fairly easily.
+Put the RAM module in the socket. Line up the notch in the center of the
+module with the small bump in the center of the RAM socket, making sure to
+insert it the right way. Push down on the module until both levers move up into
+the notches on the sides of the module. There should be a small “snap” when
+the module is fully seated. Although this does require a fair bit of force, don’t
+over do it or you may break the RAM module.
+Take a good look at your seated RAM, if one side seems to be higher than
+the other, odds are it’s improperly seated—take it out and try again. As you
+handle the RAM, try not to touch the copper stripes you can see along the
+bottom edge, as doing so is the best way to damage the part.
+Start adding RAM at the slot labeled “Bank 0” or “DIMM 1”. If you don’t
+have a stick in “Bank 0” or “DIMM 1” the system will think there is no RAM
+and won’t boot.
+
+CONSTRUCTION
+
+43
+
+On newer motherboards with 4 slots, you’ll see alternating colours. For
+example, slot 1 is blue, slot 2 is black, slot 3 is blue, slot 4 is black.
+If you were to put 1 gigabyte of RAM in your PC, it’s best to use dual
+channel 512MBx2 sticks. Put the first 512MB stick in slot 1, and put the 2nd
+stick in slot 3 (the two slots that are blue)—leaving slot 2 empty. This will
+give you better performance, vs. putting 1GB in slot 1, or two 512MB sticks in
+slot 1 and 2.
+
+Power supply
+Installing your power supply is pretty straightforward, if it came with your case
+it was preinstalled and if you took it out earlier to get the motherboard in, now
+is the time to put it back. Otherwise a few moments of screwdriver work will
+get the job done. Generally there will be a bracket on the top of the case where
+the power supply is mounted and a few screws used to fix it in place. Some
+cases place the PS differently, see the documentation that came with yours.
+Some power supplies come with modular cables, so you can plug in only
+those youll be using, now is a good time to figure out what youll need and plug
+them in. Other power supplies have all the cables hardwired in, youll want to
+separate out the ones youll need and neatly coil the remainder somewhere out
+of the way.
+If your power supply has a switch to select 115v or 220v make sure it is
+set properly, this is important. Many newer power supplies can automatically
+select and dont have such a switch.
+Once you get the power supply installed you should plug the main power, a
+20 or 24 pin plug, into the motherboard. There may also be an additional four
+or eight pin power lead on the motherboard that needs to be plugged in, this is
+usually located near the processor socket. Make sure you check the motherboard
+documentation carefully for the location of the power sockets.
+
+Video card
+If your motherboard has a built-in video adapter you want to use, skip this
+section.
+If you have an AGP video card, install the video card into the AGP socket.
+This is always the top expansion slot near the back of the computer. AGP
+slots are often brown, but can also be strange colours such as fluorescent green.
+Check the motherboard for levers (or similar devices) that are part of the AGP
+slot to help hold the card in place. These must be retracted before insertion of
+the card. Check the motherboard’s manual for information on how to use these
+devices (if your motherboard has one.) Push the card into the socket (AGP
+slots are often pretty tight, don’t be afraid to push it until it’s well inserted),
+then screw it in at the top of the metal bracket. If it has a power connector,
+connect it to a 4-pin molex connector. If it has a pass through, do not connect
+it to a hard drive.
+
+44
+
+CHAPTER 2. ASSEMBLY
+
+If you have a PCI Express video card, install it the same way as an AGP
+video card, however the slot where it goes looks a little different having an extra
+spot on the slot as opposed to the 2 slot parts on an AGP slot. PCI Express
+slots used for video cards are commonly 16x as opposed to AGP 8x.
+When your card is properly installed the line formed by the top of the card
+will be exactly parallel to the motherboard, if one side seems to be higher than
+the other, chances are that it’s not fully inserted, press a little harder on the
+high side or pull it out and try again.
+
+Installing drive jumpers
+If you are using SATA drives there is no need to adjust jumpers – you can skip
+this section.
+Before you install IDE/ATA (PATA) drives, you will need to set the drives
+jumpers. Each IDE/ATA channel can handle two drives, a master and a slave.
+Consult your drive’s instructions on how to set the jumpers. The jumper configurations are usually either printed on the back, or on the top of the drive.
+Drives can be configured in 2 ways: Drive Select or Cable Select.
+• “Cable select”: Use this if you have 80-pin cables. Cable select automatically assigns slave/master based on the plug on the IDE cable the drive
+is plugged into. Put the jumper on CS.
+• “Drive select”: If you are using a 40 pin cable, you must use “drive select”.
+Master/slave status is determined by the jumper. In this mode, configure
+the drive on the end connector the master, and drive connected to the
+middle connector the slave. If the IDE channel has only one drive, check
+your motherboard documentation for the appropriate setting, which is
+usually master.
+Note that Drive Select will always work, while Cable Select will only work
+if you have the proper cable.
+
+Installing drives
+Next install the hard drive and optical drives.
+How a drive is physically installed will depend on the case.
+When using an IDE cable, plug the two connectors that are closer together
+into the 2 drives, and the third to the controller or motherboard. The connector
+furthest from the board should be attached to the drive set as Master. Make
+sure the drive that you will install your OS on is the primary master. This is
+the master drive on the Primary IDE bus which is usually the IDE 40 pin port
+on the motherboard labeled Primary or IDE 1..
+Note: IDE connectors are keyed, so it should be impossible to insert them
+backwards. However, it doesn’t require very much force to do this and it can
+destroy your motherboard . Look carefully at the drive and the cable connection
+before you try to connect them. You should see a “missing” pin on the drive,
+
+CONSTRUCTION
+
+45
+
+and a corresponding blocked socket on the connector. If you break a pin on the
+drive, you will probably have a worthless drive.
+Note: most parallel IDE cables have a colored stripe down one side. That
+coloured stripe signifies “pin 1”—and usually will line up next to the molex
+power connection on your drive. Use this rule of thumb if your connectors
+aren’t keyed.
+Next, plug a 4 pin molex power connector into each hard drive and optical
+drive. If you are installing the power connector to a SATA drive, some drives
+have the option of using either the SATA power connector (a flat about 1” wide
+connector) or the standard molex connector; use one or the other, not both.
+Connecting both can break your hard drive. For better data transfer, you can
+purchase heat-protected high-end data cables at your nearest electronics store.
+If you install a floppy disk drive,
+the cable is very similar to the IDE
+cable, but with fewer wires, and
+a strange little twist in the middle. Floppy drives do not have master/slave configurations. The floppy
+disk connector is not usually keyed,
+making it all too easy to plug it
+in the wrong way! One wire in
+the IDE cable will be colored differently: this is pin 1. There is usually some indication on the floppy
+drive as to which side this is. The
+power plug for a floppy is 4 pins
+in a line, but rather smaller than
+the standard hard drive power connector. Plug the end of the cable
+with the twist into the floppy drive
+Figure 2.2: Floppy Disk Drive Cable
+(“drive A:”). Plug the other end
+(GFDL, by Shakespeare)
+of the floppy ribbon cable into the
+motherboard. If you install a second floppy drives, plug the middle connector into “drive B:”. The twist between
+drive A: (on the end) and drive B (in the middle) helps the computer distinguish
+between them.1
+
+Other connections
+In order to turn the computer on, youll need to connect the power button and
+while you’re at it, you might as well do the reset buttons and front panel lights
+as well. There will be a set of pins, usually near the front of the motherboard
+to which you will attach the cables that should have been supplied with the
+motherboard. (Sometimes there are cables already connected to the case, use
+1 PC Guide
+
+46
+
+CHAPTER 2. ASSEMBLY
+
+them if they are there). These will plug into the front of the case. The plugs
+in the front of the case will be labeled. The pins on the motherboard may
+be labeled as well, but they can be difficult to read because the print is very
+small. The documentation that came with your case and motherboard should
+tell where these connectors are. The front panel LEDs are polarized: usually
+the positive wire is white.
+In addition, you can connect any case-specific ports if they are supported by
+the motherboard. Many cases have front mounted USB, firewire and/or sound
+ports.
+
+Prepare for power up
+Some people will put power to a system several times during assembly and
+for experienced builders this may serve some purpose. For first timers though,
+its best to assemble a minimal complete system before powering up. Minimal
+because that way there are comparatively few potential sources of trouble, complete so that you can test everything at once and because the fewer times you
+have to put power to an open machine, the better..
+If youve been working along with us you should now have such a minimal
+system put together. Briefly this includes a case with a motherboard in it, a
+processor (and its cooling unit) and some RAM plugged into the motherboard,
+hard and floppy drives installed, and some kind of video available. If your
+motherboard has built-in video, you might want to use that for this first try,
+even if you are going to install a video card later.
+For this test, youll want to have the computer open, so that you can see all
+of the fans, and youll need to connect a monitor and a keyboard and a mouse
+(OK, you dont really need the mouse . . .)
+Monitors will either have a VGA or a newer DVI plug (see picture, as they
+are a lot less apparent than PS/2 / USB comparision). Most monitors use VGA
+connectors, and so most graphics cards have VGA output. If you have one type
+of plug and the graphics card has another, you can easily buy an adapter.
+There are two standard connectors for mice and keyboards; PS/2 connectors
+and the more modern USB connectors. Plug the mouse and keyboard in the
+appropriate slot.
+Note: If you intend to install an operating system from a boot CD or floppy,
+or modify bios settings you will need to use either a PS/2 keyboard, a USB to
+PS/2 converter, or a motherboard that supports USB devices. Otherwise your
+keyboard will not work until the operating system has loaded USB drivers.
+Once you have this all set up, its time to double check, then triple check
+that you have made all the necessary connections and that you havent left any
+foreign objects (wheres that screwdriver?) in the case.
+
+POWER UP
+
+47
+
+Power up
+The moment of truth now approaches, time to take a deep breath, exhale slowly,
+then take a moment to check one more time that everything is as it should be.
+Make sure you’ve removed your wrist strap, turn on the monitor, then press the
+power button, and observe the inside of the open machine. (Do not touch any
+part of the inside of the machine while it is powered up you will die and more
+importantly your computer will break.) The first thing to look for is that the
+CPU cooler fan spins up, if it does not, cut the power immediately. This fan
+should start up right away; something is wrong if it doesnt and your CPU is in
+danger of overheating so stop now and troubleshoot.
+If the CPU fan spins up, check that all the other fans that should be spinning
+case fans and fans on the power supply and video card (if installed) are also
+spinning. Some of these fans may not spin up until a temperature threshold is
+passed, check your documentation if anything is not spinning.
+If the fans spin, you can turn your attention to the monitor, what you are
+hoping to see is the motherboards splashscreen, usually featuring the manufacturers logo. If you see this, take a moment to bask in the glow, youve built a
+computer!
+If this happy event does not occur, if smoke appears, or if the computer
+doesn’t do anything, unplug the power cord immediately and check the steps
+above to make sure you haven’t missed anything. Give special attention to
+the cables and power connections. If the computer does appear to come on,
+but, you hear beeps, listen carefully to the beeps, turn the computer off, and
+refer to your motherboard’s manual for the meaning of the beeps. Some boards
+have an optional diagnostic device, usually a collection of LEDs, which when
+properly plugged in will inform you of the nature of the problem. Instructions
+for installing this as well as the meaning of its display should be in the manual
+for the motherboard. If the computer turns on but the only thing that comes
+on is your power supply, turn it off. This probably means something is shorted,
+and leaving it on could damage the parts.
+If all is well it’s time to turn the computer off, and close it up. Then you
+may want to turn it on again and set certain options in the Computer’s BIOS
+(usually by pressing ’F1’ or ’Del’ a few seconds after boot.) These options will
+be explained in the motherboard manual. In general, the default options are
+OK, but you may wish to set the computer’s hardware clock to the correct time
+and date. The BIOS is also where you determine the default boot order of the
+system, typically Floppy, then CD-ROM, then Hard Disc.
+If you want a further quick test, before you install an operating system, you
+may find a bootable CD-ROM such as Knoppix extremely useful.
+
+Additional hardware and peripherals
+Now that you have a working system its time to think about installing an
+operating system, which is covered in the next section. Its best to leave the
+
+48
+
+CHAPTER 2. ASSEMBLY
+
+installation of additional components (like soundcards, modems, and second
+video cards) and peripherals (printers, joysticks, nerf missile launchers et. al.)
+until after the OS install in order to allow the plug n play features of the OS to
+do their stuff.
+
+Chapter 3
+
+Software
+• live version
+Now that youve got a functioning computer, youll need to install some software
+if youre going to do anything with it. An operating system or two must come
+first, then hardware drivers (so that the operating system can address your
+hardware) followed by security software and utilities. And thats as far as were
+going to go with you, but youll also want to install some application software
+games, word processors, databases, programming languages whatever floats
+your boat... Thats pretty much the point of this whole computer business after
+all, though I hope youve found the journey of building it yourself has been
+worthwhile in its own way.
+In this section well consider what software youll want to install and how you
+might go about doing so.
+
+Operating system(s)
+The first thing to do after you have a working PC is install an operating system
+(OS). You can select from several available on the internet or from your local
+computer store. The first option, and the one taken by most people, is to install
+Microsoft Windows, of which the current version is Windows Vista. Another
+option is to install a GNU/Linux distribution (a Free Software operating system). There are many other operating systems to choose from as well, notably
+the very famous Linux but let us not forget other free operating systems, such as
+BSDs. Note that you also have the option of installing more than one operating
+system in what is called a multiboot setup.
+If you are going to install both, install Windows XP first. This is because
+Windows overwrites the software that GNU/Linux requires to start up, even
+if something’s already there. If you install Windows before all of your other
+systems, you will be able to easily boot into all of them.
+Choosing between Microsoft Windows, GNU/Linux, or one of the other operating systems is largely depependent on what software you need to run. Simply
+put, can you accomplish your day to day tasks with the software that will run
+49
+
+• discussion
+• edit
+• comment
+• report an error
+
+50
+
+CHAPTER 3. SOFTWARE
+
+under the operating system in question? Microsoft Windows is better in terms
+of software availability, hardware compatability and support, but GNU/Linux
+wins in terms of stability, ability to run on older equipment, and cost. Both
+systems have a range of software, but determine your needs before installing
+either operating system.
+Note that, having installed Windows, you can always install GNU/Linux
+later and, conversely, if you install GNU/Linux first, there is no throwaway cost
+to regret if it turns out later that you need Windows.
+
+Installing Windows
+The installation of Windows is relatively easy. Push the power button on the
+front of the PC, put the CD-ROM in your optical drive, and follow the on-screen
+instructions (you may have to restart with the CD in place). If you are doing
+a Windows-only install, just allocate all of the hard drive to XP. Again, for a
+Windows only install, the NTFS file system is faster and more efficient.
+Some people find that it’s useful to create separate partitions for the operating system and data. This means that if something goes wrong with the
+operating system, the partition can be formatted and the operating system can
+be reinstalled possibly without losing data.
+If you are installing Windows on a RAID drive, or a SATA drive in some
+cases, you are going to have to provide drivers to the Windows installer so that
+it can access the hard drive on the raid controller. To do this during the Windows install wait for “Press F6 to install any third party SCSI or RAID drivers.”
+to appear at the bottom of the screen and duly hit F6. Then you will see a
+screen that says “Setup could not determine the type of one or more mass storage devices installed in your system, or you have chosen to manually specify an
+adapter.” At this screen you are going to want to hit ’S’ to “Specify Additional
+Device,” another screen will pop up asking you to insert the floppy disk containing the drivers, followed by a screen asking you to choose the appropriate
+driver out of the set contained
+
+Installing Windows to dual-boot with GNU/Linux
+If you are dual-booting, some extra factors must be considered. NTFS, which
+is the default file system that Windows uses, is not very well supported outside
+of Windows. Only recently has NFTS-3g reached a usable stage, with users
+reporting no data corruption or loss during ordinary use of the latest versions
+of the driver, providing GNU/Linux users with a reliable way to read and write
+NTFS partitions. Previously only read support was safe, and this may still be
+the case for many distributions. However, NTFS does have some advantages
+over FAT32, in that a 4GB file size limit no longer exists. Likewise, Windows
+has no support for any of the standard GNU/Linux file systems. If you are
+going to be switching between the two frequently, then it might still be in your
+best interest to create a FAT32 partition for both operating systems to use.
+
+OPERATING SYSTEM(S)
+
+51
+
+When it comes the time to partition the hard disk(s), remember to leave
+space for GNU/Linux (a good amount is on the order of a third of your total
+hard disk space). You may want to have a spare FAT32 partition (of around
+1 third of your disk space) on which to share documents between Windows
+and GNU/Linux. You should also modify the partition table as necessary—
+you may not need as much space for Windows or you may need more in your
+FAT32 transfer area. But you must ensure that you leave at least 3GB for
+your Windows installation, since the standard installation of Windows takes up
+about 2 GB of hard drive space, and it is always wise to leave a bit extra on, to
+allow for any changes that may occur.
+
+Installing GNU/Linux
+See also: Linux Guide
+The primary problem faced in installing GNU/Linux is choosing between distri- See also: List of Linux disbutions. Of the many variants of GNU/Linux, Fedora, SuSE, and Ubuntu are tributions
+generally recommended, as they are updated regularly and compatible with a See also: Comparison of
+broad range of hardware:
+Linux distributions
+• Fedora, currently at version 7. Used to be the de facto-standard GNU/Linux.
+• SuSE, currently at version 10.2.
+• Ubuntu, currently at version 7.04. Increasingly gaining popularity as an
+easy to use desktop GNU/Linux.
+Some GNU/Linux variants may support hardware that these do not. If you
+have obscure or old hardware, you may want to search bulletin board sites for
+various GNU/Linux variants to ensure compatibility.
+For example, lets consider Ubuntu. It’s a variant of Debian, and is the
+current standard for easy-to-use GNU/Linux distributions. One can download
+the .iso image or order a CD set (containing the installation CD and LiveCD)
+from its website. Most distros are available in these two ways. An .iso is
+nothing more than a special file format that your CD drive burning software
+uses to create a copy of the software, in this case a copy of Ubuntu GNU/Linux.
+The installation of GNU/Linux is relatively easy. Push the button on the
+front of the PC, put the CD-ROM in your optical drive, and follow the on-screen
+instructions. By default, the installation version of Ubuntu will erase all files on
+the hard drive and partition 1.8 GB for the OS. If you want to customize, follow
+the on-screen instructions carefully. The LiveCd version does not erase your
+hard drive and is intended solely for a user to test drive Ubuntu GNU/Linux.
+When installing a GNU/Linux distro, you may be asked to choose between
+alternatives whether to run KDE or Gnome, for instance, or to install vi or
+Emacs. If the terms are unfamiliar a quick Google will usually bring enlightenment. Also, as in these two examples, most such choices are a matter of
+preference and either choice will work.
+
+52
+
+CHAPTER 3. SOFTWARE
+
+Security
+After installation, security should be your priority.
+
+Updates
+From time to time, software companies and independent programers release new
+and improved versions to their software; these are known as updates. Updates
+usually install new features or fix problems. Usually, you should download
+the latest updates to improve system performance though it’s sometimes wise
+to wait a little while to be sure the update itself does not cause problems.
+Many programs update themselves and this process is know as an automatic
+update. If you have to manually update your software, do so through the
+software developer’s site, not through a secondary source. This approach will
+reduce the chance of contracting a virus or other piece of malicious software.
+Windows
+A newly installed Windows XP computer using a broadband connection can be
+attacked within moments of being connected to the Internet. In severe cases,
+the attacks can render a system unbootable or make a second reinstallation
+faster or easier than manually removing the malicious programs causing the
+problems. The SANS Institute provides a PDF guide called Windows XP:
+Surviving the First Day, which explains how to update a new Windows XP box
+without immediately becoming infected by viruses and worms. To avoid having
+your new computer attacked, install a firewall, or activate the one that came
+with your OS. Both Windows and GNU/Linux have in-built firewalls: In some
+GNU/Linux distributions, it is enabled by default; in Windows XP Service Pack
+2, it can be found by going to the Start button and choosing “Control Panel”
+then double-clicking the “WIndows Firewall” icon.
+As soon as you are on the Internet, run your operating system’s update facility to fix any security flaws that have been found since your CD was printed.
+To do this under Windows, simply click on your Start Menu, click on ’All Programs’, and then click on Windows Update, and follow the instructions. If you
+use other Microsoft products, such as Microsoft Office, then it can be valuable
+to use Microsoft Update, which covers updates for all Microsoft products. For
+either of these, you can also switch on “Automatic Updates” from the Security
+Center program mentioned above.
+GNU/Linux
+The method of updating your GNU/Linux system varies greatly from distribution to distribution.
+For SuSE, there are two ways:
+1. YaST
+
+DRIVERS
+
+53
+
+2. ZENworks updater
+For Fedora, type
+yum update as the root user inside a terminal window.
+It is perhaps easiest to update the OS from Debian-based distributions such
+as Debian, Ubuntu and Linspire. For Debian and Linspire you type the following
+into a terminal window while running as the root user:
+apt-get update
+apt-get dist-upgrade
+Ubuntu has you run sudo to switch run a program as root. Type the following
+into a terminal:
+sudo apt-get update
+sudo apt-get dist-upgrade
+Automatic updates
+If your computer will be running overnight, it may be good to have your computer update itself.
+Debian based
+Windows
+
+cron-apt
+Windows Update
+
+Anti-nasty
+Programs such as Anti-Virus, Anti-Spam and Anti-Spyware of commercial quality or better can be found for free online quite easily: Windows programs are
+listed in the software section below. (Usually these are not needed for nonWindows OSes)
+Security software is important and should be set up first. The best procedure
+is not to connect to the internet at all until your choice of anti-virus, anti-spyware
+and firewall software is installed and activated, then connect to the internet and
+update each of these programs.
+If you are using software that must be downloaded from the internet for this
+purpose, you can use another computer to download and burn the installation
+files to a CD or thumb drive. If this is not possible, download, install and update
+your anti-virus solution of choice first, disconnect from the internet and run a
+complete system scan. Then you can reconnect and install your other security
+software and be reasonably confident that you are not infected.
+Once secured, your system should be safe for prudent internet browsing,
+remember to schedule regular scans and keep your security software up to date.
+
+Drivers
+Now that your computer is relatively secure, you will need to install software to
+control your various hardware components. This type of software is known as
+
+54
+
+CHAPTER 3. SOFTWARE
+
+a driver.
+Although, most of your hardware will come with a cd containing the necessary driver, consider downloading the driver straight from the company’s Internet site. This will insure you have the latest edition of the software. Knowing
+where to download the driver is also good in case you lose the cd that came
+with the device.
+If you do not have a fast internet connection (broadband), the company
+usually provides an option to receive the driver cd in the mail, in which case
+you’ll want to use the CD you have now and update the driver later. Even if
+something seems to be working fine, downloading new drivers may help increase
+computer efficiency, though there is always a risk that a brand new version may
+break something. Downloading drivers for your motherboard’s chipset can often
+help if you are having a problem. Finally, many monitors will not go above a
+certain refresh rate without the proper driver, which may be of great concerns
+to gamers.
+If you are using Microsoft Windows, you can generally find drivers for your
+selected hardware on the manufacturer’s website. Most GNU/Linux systems
+already have all of the drivers installed, with the exception of proprietary modem
+and graphics drivers. If you can’t find the driver you need, a simple Google
+search will often yield the best results.
+
+Software
+There is an abundance of useful software available for download gratis. From
+web browsers to word processors to graphic manipulation programs, there is
+plenty of software available online.
+Though most of what is available is safe and useful, its always a good idea
+to do a little research and make a backup before installing anything new. The
+following are some proven and reliable programs that are available, free (or
+gratis), for individual use (and sometimes more, check the license).
+
+Windows
+• Web Browser: Mozilla Firefox or Opera (Opera is usually faster on slower
+hardware and works better on older versions of Windows).
+• E-mail Client: Mozilla Thunderbird
+• Office Suite: OpenOffice.org
+• Disc Tools: CD Burner XP, Burn at Once
+• Instant Messenger: Gaim, Trillian, Miranda
+• Media Player: DivX Player, Nullsoft Winamp, iTunes, SnackAmp
+• Anti-virus: AVG Anti-Virus, Free Edition, avast!Antivirus Home edition,
+ClamWin
+
+SOFTWARE
+
+55
+
+• Security: Spybot: Search & Destroy, Ad-Aware Personal Edition, K9
+Anti-Spam,ZoneAlarm Free Edition
+• Compression: 7-Zip, IZArc, TUGZip
+• Desktop Search: Google Desktop
+
+GNU/Linux
+Unlike Windows, on a GNU/Linux system the majority of the software that
+you will want for everyday use of your computer is usually included. You will
+probably not need to download anything. Most GNU/Linux distributions have
+a package manager (Portage for Gentoo, APT for Debian-based distros like
+Debian and Ubuntu, etc.) For some distributions you can simply download
+RPM or DEB files from your distribution’s web site.
+If they aren’t already installed by your distribution:
+• Web Browser: Firefox or Opera (Opera is usually faster on lower-end
+hardware).
+• EMail Client: Mozilla Thunderbird.
+• Office Suite: OpenOffice.org or KOffice
+• Instant Messenger: Gaim or Kopete.
+• Media Players: Rhythmbox, mpd, amaroK (depending on what desktop
+environment you use), Beep Media Player or Video Lan Client.
+• Movie/DVD Player: Xine or MPlayer.
+• Windows Compatibility Layer: WINE.
+• x86 Emulator: QEMU.
+• PPC Emulator: PearPC.
+
+Additional Software
+For additional software some excellent sources of free and open-souce software
+are
+• Tucows a downloads site with freeware, shareware, open-source as well as
+commercial software. It has many mirrors all over the world for speedy
+downloads from local servers.
+• Download.com similar to tucows
+• SourceForge a site featuring many OpenSource projects. You can start
+your own, or get software for almost every need. Most projects have GNU
+and Windows versions. The mirror system isn’t as large as Tucows, but
+you can still usually get a mirror on the same continent.
+
+56
+
+CHAPTER 3. SOFTWARE
+• Table of equivalents can be useful if you want to know more about specific
+programs when changing from windows to GNU or vice-versa.
+
+Of course, it is also possible to buy copies of software, particularly for the
+Windows operating system. To be fair, the library of proprietary software
+available for Microsoft Windows is the largest and most comprehensive body
+of software in history, while that available from the open source community is
+increasingly varied and mature.
+
+See also
+• A Neutral Look at Operating Systems
+
+Chapter 4
+
+Overclocking
+Overclocking is the practice of making a component run at a higher clock speed
+than the manufacturer’s specification. The idea is to increase performance for
+free or to exceed current performance limits, but this may come at the cost of
+stability.
+Overclocking is like souping up a car, if you just want to get where you’re
+going, there’s no need for it. But it is fun and educational and can get you a
+machine that provides performance all out of proportion to its cost.
+Think of the 3GHz on your new 3GHz Pentium 4 as a speed limit asking to
+be broken. Some other components in your computer can also be overclocked,
+including RAM and your video card in many cases. Over clocking is possible
+because of the way electronic parts, especially VLSI (Very Large Scale Integration) chips are made and sold. All processors in a given line, the Pentium 4 for
+example, are made the same way, on a large die that is cut up into individual
+processors, those processors are then tested and graded as to speed, the best
+chips will be marked as 3.0 GHz the second best 2.8 etc. As time goes by and
+production processes and masks improve, even the lower rated chips may be capable of faster speeds, especially if vigorous cooling is implemented. Also many
+manufacturers will mark chips that test faster at slower speeds if there is higher
+demand for the lower end component.
+Its important to note that not every chip will be overclockable; its really the
+luck of the draw. Some companies that sell factory overclocked systems engage
+in a practice called binning where they buy a number of processors, test them
+for overclocking potential and throw the ones that dont overclock in a bin to
+be resold at their rated speed. Even with processors that have a reputation for
+overclocking well, some parts simply will not exceed their rating.
+That said, effective cooling can give a boost to a chips overclockability. With
+luck you will be able to get extra performance out of your components for free.
+With luck and skill you can get performance that is not possible even when
+using the top of the line components. Sometimes you can buy cheaper parts,
+and then OC them to the clock speed of the higher end component, though the
+cost of extra cooling can compromise any money you may be saving on the part,
+57
+
+• live version
+• discussion
+• edit
+• comment
+• report an error
+
+58
+
+CHAPTER 4. OVERCLOCKING
+
+not to mention warranty and part life issues.
+WARNING: OVERCLOCKING MAY VOID THE WARRANTY
+ON THE PARTS BEING OVERCLOCKED. DOING SO MAY ALSO
+CAUSE SYSTEM INSTABILITY, AND MAY ALSO CAUSE DAMAGE TO COMPONENTS AND DATA. REMEMBER THE 3 “C’S”
+WHEN OVERCLOCKING:CAREFUL, CONSERVATIVE, and CAUTIOUS .
+
+Things that can’t be overclocked
+Although it is possible to overclock many of the components of a computer (such
+as the CPU, FSB frequency and video card), it is not possible to overclock some
+components. For example, it is not possible to increase the read/write speed or
+access time of a hard disk or CD-ROM drive. The only solution to improving the
+performance of these components is to use faster components in the first place,
+or in some special cases of hard disks, change the configuration to a RAID.
+
+Components
+CPU
+The CPU’s clock speed is the FSB clock speed (base, not effective speed) times
+the CPU’s multiplier. On most newer CPUs, the multiplier is locked, so you will
+have to adjust the FSB clock speed (However, it might be possible to ’unlock’
+the chip’s multiplier on some older chips. See CPU Locking.) The FSB is not
+adjustable on some motherboards, and almost all OEM systems. The FSB and
+multiplier, if not locked, are adjustable from within the BIOS. Note that upping
+the FSB clock speed also increases the clock speed of many other components,
+including RAM.
+When increasing the FSB clock speed, do so in small increments of a few
+MHz at a time. After you do this, boot up your computer to make sure it works.
+If your computer successfully boots, increase the FSB some more. If it won’t
+boot, lower the FSB until your computer properly boots up. Repeat until you
+have the highest setting with which your computer will boot up. Next, test your
+OS to make sure it is stable by running a burn application, or any application
+that uses 100% CPU power. If a crash or reboot results, lower the FSB speed
+some more until it runs smoothly. On some motherboards you are also able to
+change the voltage of the CPU and other components in order to help stabilize
+the system. However, this increases the components’ heat output and can harm
+or shorten the life of your system instead.
+Notes: On AMD K8-based chips (Athlon 64, Opteron, Turion, and Socket
+754 and 939 Semprons), there is no FSB- there is an integrated memory controller (IMC) and a HyperTransport bus (HTT). The IMC has a base clock
+speed like a FSB does and for overclocking, it would be adjusted just like a
+FSB would. The HTT can also be overclocked like the CPU core can be. Its
+
+COMPONENTS
+
+59
+
+base clock speed is the exact same as the IMC’s and thus by default you will
+overclock the HTT bus as you overclock the CPU. Note that the HTT bus has
+a multiplier and it is adjustable. Many motherboards do not function well with
+the HTT bus frequency much over the stock frequency- that’s where the adjustible HTT multiplier comes in. (It should be noted that overclocked systems
+are most stable when the HTT is at or below 1000Mhz)
+Also, some newer desktop processors (AMD K8 series with Cool ’n Quiet,
+Intel Pentium 4 6xx series, Pentium D 830, 840, stepping C1 Pentium D 9xx series with Enhanced Intel Speed Step) and most mobile processors (exc. Celeron
+M) can vary their operating frequency while running by lowering the CPU multiplier. This results in multipliers below the highest one being unlocked. This
+allows for a very high FSB/base clock speed with a lower multiplier to use very
+fast RAM to its full potential without overclocking the CPU so much that it is
+not stable.
+
+How to choose the best CPU for overclocking
+Assuming that you have selected quality components like an excellent motherboard, high-quality RAM , an excellent thermal solution and an excellent power
+supply; you may wonder why your processor won’t exceed a certain speed limit.
+Lets assume that you have a memory chip that is capable of taking the maximum frequency the motherboard can throw at it and yet, when you exceed a
+certain speed limit you realize that your system becomes unstable.
+A PCI bus generally runs at 33 Mhz. When you exceed 35-36 Mhz, the
+hard disk and other IDE devices become unstable, because the IDE controller
+is controlled through the PCI bus. Oftentimes, you may encounter texture
+corruption, when your AGP bus exceeds a certain speed limit. This was often
+observed on older motherboards that wouldn’t allow you to lock the AGP and
+the PCI bus at stock speeds. The good news: regardless of the FSB speed,
+most motherboards nowadays automatically ensure that the frequency of the
+PCI, AGP and other buses always remain constant (in other words; their speeds
+are locked unless you deliberately change them). This implies that the other
+components connected to the motherboard don’t undergo stress when the FSB
+speed is raised. You have the fastest RAM you could find and the obscenely
+fast speed ratings on your ensure that you can extract the most performance by
+bumping up your FSB speed to the limits.
+The main culprit that plays the spoilsport is your CPU. Even if you have an
+exceptionally good thermal solution, your CPU won’t exceed a certain limit.
+Example: I had experimented with a Pentium III 700E Mhz processor and
+a Pentium III 800E MHz processor on an Asus CUBX-E motherboard using
+Kingston PC-133 SD-RAM. The reason I chose these 2 processors for experimentation was because they both used a FSB speed of 100MHz. This motherboard was really flexible, I was able to increment the FSB to 150Mhz. I was
+able to extract 1050 MHz from the stock 700Mhz. This is because the multiplier
+is 7, which unfortunately cannot be changed. So I bumped up the FSB from
+100Mhz to 150 Mhz; which gave me the resultant speed of:
+
+60
+
+CHAPTER 4. OVERCLOCKING
+
+7 (M ultiplier) × 150 (F rontSideBus) = 1050M Hz (resultantf requency)
+Simple arithmetic? Yes. Now, logically speaking, if I can extract 1050Mhz
+from a 700Mhz processor; I should be able to extract 1200Mhz from an 800
+MHz processor. This is not true. I tried doing exactly the same with the 800
+MHz processor and the Computer crashed. However, it was stable when I set
+the FSB speed to 133 MHz. When I set the FSB at 133 MHz ; this was the
+result:
+
+8 (M ultiplier) × 133 (F rontSideBus) = 1064 M Hz (resultantf requency)
+This simple experiment shows that a CPU gets saturated after a certain
+clock speed. Typical symptoms of an erratic CPU include instability and at
+times, you may not be able to boot up at all.
+This particular CPU die was manufactured using a 0.18u process. When
+Intel launched a similar CPU using a 0.13u process; they shipped those CPUs
+with the stock speed of up to 1.4Ghz. This CPU core was based on the P6
+Architecture and it used a 10 stage pipeline. Presently, Intel manufactures the
+Pentium-M CPU which is based on the P-6 architecture; the difference being
+that they manufacture it using a 0.09u process and they have increased the
+depth of the pipeline.
+These terms may seem cryptic and this concept may be difficult for some
+to grasp. It’s really very simple: To be a successful overclocker; you need to
+purchase the best CPU possible; not necessarily the fastest. Always go for a
+processor that uses the latest manufacturing process. A CPU rated at 3Ghz
+which is manufactured by using a 0.13u process won’t overclock as well as a
+CPU that is rated at 2.6Ghz using a 0.09u process.
+Deeper pipelines ensure that the CPU has the capability to scale higher
+in terms of speed. The disadvantage is that a CPU with a deeper pipeline is
+slower than a CPU that uses a smaller pipeline assuming that they are running
+at the same speed. AMD Athlon CPUs are famous for their relatively short
+pipelines. Thats why they perform better than the Pentium 4 CPUs at the
+same clock speed. Before purchasing the fastest processor, always keep this in
+mind. Choosing a processor smartly helps you extract the maximum speed out
+of your machine. You don’t need to know what a pipeline exactly does. Refer
+to the processor spec sheet, find out these basic details of the CPU core and its
+architecture and choose accordingly.
+To increase the computer’s stability, you may also disable the spread spectrum; set the PCI speed to 100MHz; set the voltage to the middle range, not
+too high; and disable any smart fan settings. and those settings works for all
+recommended boards.
+
+COMPONENTS
+
+61
+
+Video card
+Two different parts of a video card may be overclocked, the GPU (Graphics
+Processing Unit) and the RAM. In addition, disabled pipelines on a video card
+may also be enabled through third-party drivers, third-party software, or direct
+hardware modifications depending on your video card type. Overclocking a
+video card is usually done through third-party or proprietary software.
+Recent ATI proprietary Catalyst drivers feature an interface called Overdrive that allows for dynamic GPU frequency scaling based on its temperature
+and load. Increase the load, the clock rate increases for performance, but it’s
+balanced against the increasing temperature. Sufficient for simple increases in
+overall performance, this doesn’t allow for the best performance increase which
+requires overclocking the memory. For that you’ll need third-party applications
+or drivers.
+An application example is ATITool. This program has many options, including GPU and memory overclocking, temperature monitoring, and fan control,
+allowing for a much more complete solution to overclocking ATI based video
+cards. There are many third party drivers, omegadrivers.net, for example hosts
+ATI and nVidia drivers as well. Both of which include integrated overclocking
+and many unlocked features, including enhanced image quality for nVidia-based
+cards.
+nVidia video cards can also be OCed through a hidden feature in the driver
+called coolbits. Coolbits is a feature that can be unlocked by creating a DWORD
+in regedit for windows operating system. To use the coolbits feature, for windows just simply open the regedit then open the directory HKEY LOCAL MACHINE
+> Software > NVIDIA Corporation > NVTweak and create a new DWORD
+value in the NVTweak folder named coolbits then right-click it¿modify type 3
+for single card or 1A for SLI in the value name .It is a good a overclocking tool
+as it has a fairly conservative “optimal clock” once you have thus increased the
+core clock (not the memory clock!!) run a gpu intensive task like 3dmark, repeat until you have a sudden drop in the benchmark score. This is the thermal
+throttling kicking in; do not push it any harder as it will result in permanent
+damage to your gpu. Back off the clockspeed by about 20-30mhz
+The most important thing to remember about overclocking a video card is
+cooling. This can’t be stressed enough. Just as a CPU can be damaged or have
+a shortened lifespan by overclocking or excessive and prolonged heat, so can a
+video card. In the past year many inexpensive and easy to install options have
+surfaced for cooling a video card, from adhesive ram heatsinks which attach
+to un-cooled ram chips, to rather expensive water-cooling solutions. A good
+midpoint (both in cost and effectiveness) solution is to purchase and install a
+direct exhaust, “sandwich” cooling solution. Direct exhaust means all air from
+the cooling fan is blown across the video card and directly out of the computer
+case, usually using the open PCI slot below the AGP (or PCIe) slot. This allows
+for substantially lower GPU temperatures.
+A sandwich cooler is two aluminum or copper heatsinks, shape formed for a
+particular video card, that “sandwiches” the video card in between the two and
+
+62
+
+CHAPTER 4. OVERCLOCKING
+
+are usually connected by some kind of copper heat pipe which allows for the
+hotter side to convey heat to the cooler side for dissipation. The GPU should
+never surpass 60 degrees Celsius for optimal performance and to avoid damaging
+the card. Most of the latest video cards are rated to go up to 90c, but this is
+NOT recommended by anyone. The optimal temperature for a video card is
+40-55c for the card itself (the GPU’s temperature differs depending on which
+you have,) but the lower you can get it, the better.
+One important thing to note. Many think that the option which says “AGP
+voltage” in their BIOS can be used to “voltmod” a video card to get a bit more
+power out of it. In fact, it’s used for something else, and raising the AGP voltage
+can and probably will cause damage to a video card.
+
+Getting the few extra MHz out of a chip
+Cooling
+When increasing the speed of any computer components you are making the
+components work harder and by doing so they output more heat. Heat can
+cause system instability so cooling is necessary to help keep your components
+stable at higher speeds. Without good cooling you could harm or shorten the
+life of your system. CPU temperature can usually be checked from within the
+BIOS. However, these are inaccurate as your CPU is under almost no load in
+the bios. SiSoftware Sandra may be used within Windows to check temperature.
+This should be done when your CPU has been under a heavy load for a while
+for optimum results.
+There are three types of cooling that are generally accepted for overclocking:
+Air, water, and peltier.
+With both air cooling and water cooling some type of transfer material is
+needed to move the energy away from the sensitive electronics. The device used
+for this purpose is a heatsink. The two most popular heatsink materials are Aluminum and Copper. The heatsink that is stock on factory computers by major
+manufacturers (Dell, Gateway, IBM) is usually made of aluminum, which has
+satisfactory heat transfer characteristics. However when overclocking more heat
+is being produced from the increase in power consumption. In order to obtain
+lower temperatures a material with better heat transfer properties is important
+and copper is the material that offers the best ratio of price/performance.
+
+Power
+Chips at higher speeds may need more power. Raising the vcore voltage on a
+CPU might enable it to go at slightly faster speeds but by doing so you add
+a lot more heat output from the CPU. The vcore of a processor is the voltage
+at which a chip is set to run at with the stock speed. This voltage may need
+to be changed when the multiplier is raised because otherwise the transistors
+in the chip won’t switch fast enough—transistors switch faster the higher the
+
+EXTERNAL LINKS
+
+63
+
+supply voltage. If there is not enough voltage then the chip will begin to make
+mistakes and give bad data results. Good cooling is needed to keep the system
+stable at higher speeds. Raising the vcore too much may harm or shorten the
+life of your system. Raising the vcore can also greatly affect the stability of the
+system. This is where a high quality PSU will come into play. While many
+cheap, no-name brand PSU’s will crash and die with more vcore, a good quality
+one will live to serve you for a long time.
+Note: increasing the speed (multiplier or fsb) without changing the voltage
+will also increase heat output, but not as much as when also increasing voltage.
+Having said that, increasing the multiplier or FSB without adjusting the voltage
+may make your system unstable (undervolt).
+
+External links
+• BIOS settings
+• Free access
+• Book on BIOS optimization for PCs
+• Overclocking guide for Centrino notebooks
+• Overclocking guide for ATI Mobility Radeon 9700
+
+64
+
+CHAPTER 4. OVERCLOCKING
+
+Chapter 5
+
+Silencing
+In contrast to overclocking, you may prefer to silence your computer. Some
+high-performance PCs are very loud indeed, and it is possible to reduce the
+noise dramatically. The main sources of noise are: Fans (CPU, case, power
+supply, motherboard, Graphics card), and Hard disks. While total silence in
+a PC is possible, it is far cheaper and easier to aim for something ’virtually
+inaudible’.
+Note that quieter computers sometimes run slightly hotter—especially in
+small form factor (SFF) systems, so you need to monitor carefully what you
+do. Usually you can’t overclock and silence at the same time (although it is
+possible with the right CPU and cooling techniques). Sometimes CPUs are
+underclocked and fans are undervolted to achieve greater silence at the expense
+of performance.
+Designing a powerful and quiet machine requires careful consideration in
+selecting components, but need not be much more expensive than a normal, loud
+PC. If you are looking to quiet an existing PC, find the offending component
+that produces the loudest or most irritating noise to replace first, and work
+down from there.
+
+• live version
+• discussion
+• edit
+• comment
+• report an error
+
+Fans
+See also: Noise from cooling
+In general, large diameter (120 mm), high quality fans are much quieter than fans
+small diameter ones, because they can move the same amount of air as 80mm
+or 92mm fans, but at slower speeds. Temperature-regulated fans are also much
+quieter, as they will automatically spin at a reduced speed when you computer
+is not in heavy use. Wire mesh grills (or no grill at all) allow better airflow than
+the drilled holes used in many cases.
+CPU Modern CPUs can generate a lot of heat in a very small area—sometimes
+as much as 100-watt lightbulb! For the vast majority of processors, a
+dedicated fan will be a necessity. There are some, like VIA processors,
+that require only a heat sink, but you will not find passively cooled CPUs
+65
+
+66
+
+CHAPTER 5. SILENCING
+at nearly the same speeds allowed by active cooling. However, for modern
+computers, CPUs are not the limiting component for speed in daily tasks,
+so unless you do demanding 3D gaming or video editing, then a passively
+cooled processor may be just for you. They would also be very attractive
+in media-center PCs, or other specialized applications where computer
+noise would be more noticable.
+The noisiest fan is usually the CPU fan: the Intel-supplied fan-heatsinks
+are particularly loud, although they do provide good cooling. Some BIOSs
+allow you to slow the CPU fan down automatically when it is not too hot—
+if this option is available, turn it on. Also, you can get 3rd party coolers,
+which are designed to be less noisy: for example, those made by Zalman.
+
+Power Supply (PSU) Noisy power-supplies simply have to be replaced with
+quieter ones. The case fans can be slowed down by using fan-speed controllers, or resistors (but beware of insufficient cooling). Motherboard and
+lower-end graphics-card fans can usually be replaced with a small, passive
+heatsink.
+After a few weeks, dust and debris can accumulate on fan blades. Dust on
+PC components can act as an insulator, trapping in heat and forcing your fans
+to spin at higher speeds to keep everything cool. Keep your PC clean to reduce
+noise and increase efficiency.
+
+Water cooling
+An efficient, if expensive way to eliminate the need for most fans in ones computer system is the implementation of water cooling devices. Water cooling kits
+are available for beginners, and additional components or “water blocks” can be
+added to the system, allowing virtually any system needing cooling to be put
+“on water”.
+Other cooling fluids are possible in a sealed system, although plain water is
+generally preferred because it has higher heat capacity and thermal conductivity
+than oil, and it is easier to clean up if a leak ever occurs: turn off the computer,
+shake off most of the water, and use a hair dryer to evaporate the rest of the
+water.
+
+Oil cooling
+Transformer oil has been used to cool electrical equipment for decades.
+Some people are experimenting with oil cooling personal computers. Since
+oil is non-conductive, the motherboard and graphics card and power supply
+(but not the hard drives or optical drives!) will continue to run submerged in
+a “fishtank” filled with oil. Some people prefer colorless transparent “mineral
+oil” or cooking oil, but Frank Vlkel recommends motor oil.
+
+HARD DISK
+
+67
+
+Oil cooling is lower cost than water cooling, because it doesn’t require watertight “blocks” or hoses. Some people leave the fans running on the motherboard
+and power supply to “stir” the oil. Other people remove all the fans and add
+a (submerged) pump to “blow” a stream of oil onto the CPU hot spot. Some
+CPUs, if given a big enough metal heat sink, can be adequately cooled by passive
+convection currents in the oil (and the large surface area of the oil-to-case and
+case-to-air), without any fans or pumps.
+If any cable (the hard drive ribbon cable, the power cable, the monitor cable,
+etc.) exits the case below the oil line, it must have an oil-tight exit seal – consider
+making all cables exit the top of the case instead.
+Immersion in other cooling fluids has been attempted, such as fluorinert or
+liquid nitrogen.
+
+Hard disk
+A ’resting’ hard disk is generally quite quiet compared with any fan, but increases dramatically when it starts ’churning’, as when you open or save a file
+or perform a virus scan. As most hard drive manufacturers place capacity and
+performance ahead of noise, it is recommended that you look for a hard drive
+with good acoustics to start with. SilentPCreview.com does comprehensive testing, so picking any of their recommended drives will serve you well. There will
+usually be a compromise between performance and sound, so opting for a slower
+RPM or smaller capacity single-platter HDD may be necessary to reach very
+quiet levels. Also, 2.5“ notebook drives can be much quieter than any 3.5”
+desktop drive, but are more expensive and come in smaller capacities.
+After selecting a quiet drive, or if you want to reduce the noise coming from
+a loud drive, look into mounting options. Hard drives are usually mounted with
+four screws attaching them directly to the case, providing very stable support,
+some heat dissipation and a lot of direct transmission of HDD vibrations to the
+case. Reducing this transmission to almost nothing is possible, though it is not
+always easy.
+But do ensure sufficient cooling of the hard drive: running a hard drive moderately hot can reduce its lifespan to under a year! Some mounts are designed
+to provide both extra cooling and silencing, such as the heat-pipe coolers. Spinning the HDD down when not in use will also reduce noise, but it can reduce the
+life of the drive by increasing the number of landings and take-offs performed
+by the read/write heads.
+The best noise reductions come from suspending the hard drive with elastic,
+providing no direct route for sound transmission to the case. You can make
+your own from elastic in a fabric store, or buy kits that provide materials and
+instructions. (Rubber bands are not recommended, as they will become weak
+from the HDD heat and snap.)
+Foam can be used to dampen vibrations, but may trap more heat than is
+safe. Resting the hard drive on the floor of your case on a bed of foam can be
+very effective at reducing noise.
+
+68
+
+CHAPTER 5. SILENCING
+
+Using silicone or rubber screws instead of metal mounting screws will give
+you marginal sound reduction, but is easiest and cheapest to implement. You
+also won’t have to worry about shifting of the HDD if you move your computer.
+A software tool created by Maxtor exists which can adjust a hard disk’s
+noise/performance ratio to what your system requires. The technique is called
+acoustic management. However, only certain drives currently support this feature. You can read more from the “Definitive Maxtor Silent Store Guide” and
+get the tool from Maxtor.
+Completely silent computers will need to use solid state memory like flash
+drives or eeprom, which have no moving parts and make no noise. This is
+more expensive and has less capacity than a normal hard drive, so it can’t be
+considered a mainstream storage solution, yet could suffice for a web-browsing
+PC. At the moment, hard drives are the only practical storage solution except
+in very specialised circumstances, though this will likely soon change with the
+rapidly dropping price of flash memory.
+
+Other
+• Steel cases are quiter than aluminum ones, because the denser material
+vibrates less easily.
+• Quiet cases are available, containing noise-damping acoustic foam. There
+are 3rd-party acoustic foams that you may decide to add as well.
+• Experiment with rubber or foam washers when mounting drives and fans.
+These will dampen any vibration these devices cause.
+• Keep cables tied up and neat. Not only will this keep them clear of fans
+(which could quickly cause dangerous heat build-up), but the reduced
+impedence of airflow throughout your case will make things cooler. Flat,
+ribbon-shaped cables can safely be folded up to a fraction of their original
+width.
+• Make sure your case has rubber or foam feet if it rests on a hard surface.
+Placing it on carpeting will also reduce vibrations.
+• Underclocking will reduce system performance, but you can also then reduce the CPU voltage, and power consumption as a whole. Noisy fans may
+then also be operated at reduced speed or eliminated altogether, as the
+computer will produce less heat. The converse of the diminishing-returns
+law for overclocking is that underclocking can prove surprisingly effective.
+• The really obvious, but surprisingly effective: keep the computer under
+your desk or even in a closed cupboard, rather than under or beside your
+monitor.
+NOTE: No matter what technique you use to quiet the machine, be sure to
+keep a steady supply of fresh air over all components. Don’t put your machine
+
+SEE ALSO
+
+69
+
+in a closed cupboard unless you are sure heat will not be an issue. If you
+use acoustic foams, be sure they aren’t acting as insulators, too—and keeping
+components hot.
+
+See also
+• Noise from cooling fans
+
+External links
+• Silent PC review
+• Microchip AN771: Suppressing Acoustic Noise in PWM Fan Speed Control Systems
+• “The Buzz on Quieter Computers” article by Daniel Greenberg in The
+Washington Post, September 3, 2006.
+• Technorati “silent PC” blog posts
+• “A Plea for Silence” by Loyd Case (ExtremeTech)
+• “How to Quiet Your PC” by Jason Cross (ExtremeTech)
+• “a diskless, fanless, completely silent PC”
+• fit-PC: a fanless PC that runs Linux or WindowsXP
+• Koolu: a fanless PC that runs Linux; Koolu wiki
+• “Building a Silent PC: My Quest for Quiet” by Terry Gray
+• the oil-cooled computer wiki (in German) and oil-cooled computer discussion forum (in English)
+• “Quiet PCs shhh” by Thomas Ricker (oil-cooled computer)
+• “Aquarium Full of Oil For PC Cooling” on slashdot
+• “Want a Cool and Quiet PC? Dunk it in Oil” on slashdot
+• ”Xoxide Resource Center: Building a Quiet Computer
+
+70
+
+CHAPTER 5. SILENCING
+
+Conclusion
+• live version
+If you’re serious youve probably at least glanced over this book as you considered
+building your own computer, and I hope it has inspired you to go ahead with
+that project. Throughout weve tried to steer you clear of some of the pitfalls
+and alert you to some of the safety issues involved, and in so doing, we have
+undoubtedly overemphasized the dangers and difficulty. In sooth, its pretty
+hard to hurt yourself building a computer and most people get through their
+first build without burning up any parts. With a little planning, anyone who
+can use a screwdriver can build a computer.
+The computer you build will always mean a little bit more to you than
+one you buy, not least because you designed it yourself and will no doubt be
+upgrading it from time to time for years to come. You may find a little smile
+of satisfaction creeping onto your face each time you hit the power button, and
+I think youll find that smile is an ample return for your time and effort.
+Lastly, if you go through with it and build you own PC, youre bound to run
+into something we’ve missed here; a problem we didnt anticipate, something we
+forgot to mention, or something that has changed recently. If you do, please
+come back here and add to or change this book. You dont have to know everything to contribute, just one thing thats true. If this guide has helped you at
+all, think of it as payback.
+
+71
+
+• discussion
+• edit
+• comment
+• report an error
+
+72
+
+CONCLUSION
+
+Appendix A
+
+External links
+• live version
+
+Related Wikibooks
+
+• discussion
+
+• Computer Know How for tips on using your computer.
+
+• edit
+
+• Computer Hardware and A Plus Certification for technical details on what
+each part does.
+
+• comment
+
+• Buyers Guide For Building a Computer
+
+Related Wikipedia articles
+• Case modding
+• Personal computer
+• IBM PC compatible
+• Desktop computer
+
+discussion forums
+• Elephant Staircase wiki sometimes discussing computer case modding.
+• “build your own arcade” wiki
+• the overclocking wiki
+• overclocker’s club forum
+• case modding forum
+• lrechner-Wiki – a wiki about running computers submersed in oil as a
+silent way of cooling.
+73
+
+• report an error
+
+74
+
+APPENDIX A. EXTERNAL LINKS
+
+Operating systems
+Here are some links to Windows and Linux pages which might be useful when
+you have to choose an operating system. Be careful and do your research to
+make sure you get the OS that’s right for you. To download the CD images
+(*.iso) for making installment CDs, you will want to have a DSL connection or
+faster, since files are often around 700 MB (the size of one CD). Some distros
+are larger than one CD.
+
+Downloading tips
+1. Download each ISO file seperately. If you do them all at the same time,
+it will eat bandwidth and take lots of time to download.
+2. Do not use dialup! It takes 3 hours to download a 12 MB Internet Explorer
+install package on dialup. Dialup is also shared bandwidth, so if you
+download, everything for most other people goes extremely slow.
+3. Don’t download anything you think is unsafe. I recommend downloading
+items with proper names and the names of companies. Don’t download
+something like “WW32@Bugbear.3.E” or “timestamp maker”. Download
+stuff like “Adobe Acrobat 7.0.7” or “Macromedia Flash Professional”.
+4. Virus check, and validate with the file’s MD5 checksum before using. This
+ensures the download is not rigged or damaged.
+
+Linux
+Fedore Core Based on Redhat, this is the newest Redhat supported distro
+available. Has most of the features that Redhat once including a new
+“bleeding edge” interface. This has become about the second most powerful Linux distros on the web.
+The Mandriva Distribution A common one with multiple uses.
+The SUSE Distribution Comes in all shapes and sizes. The OSS or the
+“Open Source Editon” is a set of four downloadable isos with many opensource programs that are useful if you want a low cost office. The Novell
+Editon is the paid for edition including stuff like StarOffice, Mesa, commercial/proprietary software. So if you have a business, where you want
+quality and good tools for your money then buy that.
+The Ubuntu distros A very popular distribution, Ubuntu is an attempt at
+“user friendly” Linux. Canonical Ltd. started Ubuntu with a 10 million
+dollar grant, and in less than a year has become a major player in the Linux
+field. All these distros can be configured as servers as well as running on
+their own.
+
+OPERATING SYSTEMS
+
+75
+
+• Ubuntu The standard Ubuntu edition comes packaged with GNOME
+and lots of other open source software.
+• Kubuntu The same as the Ubuntu edition, except it runs KDE (K
+Desktop Environment) instead of GNOME.
+• Edubuntu Edubuntu in the educational release of Ubuntu running
+GNOME or KDE and having more than 100 educational pieces designed for use in the classroom. In fact, five school districts in the
+United States now use the Edubuntu product, but of its educational
+functionality.
+• Xubuntu Ubuntu with the Xfce desktop. Good for lower-end systems.
+Live CDs
+Live CD Linux Distros are some distros that you can use in kiosk mode or
+just for testing out the system. They are very useful for demonstrating the
+capabilities of Linux.
+• Knoppix
+• SlaX (Note: SlaX can run on a USB key)
+
+Advanced Linux distros
+Note: this section is only for pros. If you do not want to damage your newly built
+computer, stick with a Linux distibution above, or ask your nearest computer
+geek to help you. This is your final warning!
+Gentoo Gentoo is an advanced Linux distribution with one of a few nice features including Portage. When you connect to the Internet, there is a
+portage folder which has thousands of software, and software libraries at
+your disposal. Cons: Need a geek to set it up. Refer to the instruction
+manual on the Gentoo Documentation page before you commence installation.
+Slackware Good Distro, though not up to date with good graphical interfaces.
+If you want something newer, get a distro above. Cons: Requires a geek
+to install apps in Slackware.
+
+Microsoft Windows
+Microsoft Windows is an operating system started in the late 80s after Apple
+Computer created the Macintosh. This is the OS running on the majority of
+PCs. Unlike open source systems like Linux, Windows is proprietary, and so
+must be purchased with a license. It is relatively easy to use, and runs on all
+PCs (except for Apple PCs, which run Apple’s proprietary MacOS).
+
+76
+
+APPENDIX A. EXTERNAL LINKS
+
+Appendix B
+
+Document Information &
+History
+History
+This book was created on the Wikibooks project and developed on the project
+by the contributors listed in Appendix B, page 77. For convenience, this PDF
+was created for download from the project. The latest Wikibooks version may be
+found at http://en.wikibooks.org/wiki/How_To_Assemble_A_Desktop_PC.
+
+PDF Information & History
+This PDF was complied from LATEX on September 1, 2007, based on the September 1, 2007Wikibooks textbook. The latest version of the PDF may be found at
+http://en.wikibooks.org/wiki/Image:How_To_Assemble_A_Desktop_PC.pdf.
+
+Authors
+AlbertCahalan, Andreas Ipp, Az1568, B9 hummingbird hovering, BimBot, Bpogi,
+DavidCary, Derbeth, Easyas12c, Everlong, Gcprakashh, Geocachernemesis, Hagindaz, HenryLewis, Herbythyme, Hyperlink, I Hate My User Name, Jcarroll, Jguk,
+Joecool94, JoiseyBill, Jomegat, KunalThaggarse, Mann Ltd, Noogz, Pinky49,
+PurplePieman, Reub2000, Robert Horning, Scottmso, Slothrop, Titoxd, Tlaugle, Webaware, Whiteknight, Withinfocus, Wknight8111, Yayyak, and anonymous contributors.
+
+77
+
+78
+
+APPENDIX B. DOCUMENT INFORMATION
+
+Appendix C
+
+GNU Free Documentation
+License
+Version 1.2, November 2002
+Copyright c 2000,2001,2002 Free Software Foundation, Inc.
+51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+Everyone is permitted to copy and distribute verbatim copies of this license
+document, but changing it is not allowed.
+
+Preamble
+The purpose of this License is to make a manual, textbook, or other functional and useful document “free” in the sense of freedom: to assure everyone
+the effective freedom to copy and redistribute it, with or without modifying it,
+either commercially or noncommercially. Secondarily, this License preserves for
+the author and publisher a way to get credit for their work, while not being
+considered responsible for modifications made by others.
+This License is a kind of “copyleft”, which means that derivative works of the
+document must themselves be free in the same sense. It complements the GNU
+General Public License, which is a copyleft license designed for free software.
+We have designed this License in order to use it for manuals for free software,
+because free software needs free documentation: a free program should come
+with manuals providing the same freedoms that the software does. But this
+License is not limited to software manuals; it can be used for any textual work,
+regardless of subject matter or whether it is published as a printed book. We
+recommend this License principally for works whose purpose is instruction or
+reference.
+
+1. APPLICABILITY AND DEFINITIONS
+79
+
+80
+
+APPENDIX C. GNU FREE DOCUMENTATION LICENSE
+
+This License applies to any manual or other work, in any medium, that
+contains a notice placed by the copyright holder saying it can be distributed
+under the terms of this License. Such a notice grants a world-wide, royalty-free
+license, unlimited in duration, to use that work under the conditions stated
+herein. The “Document”, below, refers to any such manual or work. Any
+member of the public is a licensee, and is addressed as “you”. You accept the
+license if you copy, modify or distribute the work in a way requiring permission
+under copyright law.
+A “Modified Version” of the Document means any work containing the
+Document or a portion of it, either copied verbatim, or with modifications
+and/or translated into another language.
+A “Secondary Section” is a named appendix or a front-matter section
+of the Document that deals exclusively with the relationship of the publishers
+or authors of the Document to the Document’s overall subject (or to related
+matters) and contains nothing that could fall directly within that overall subject.
+(Thus, if the Document is in part a textbook of mathematics, a Secondary
+Section may not explain any mathematics.) The relationship could be a matter
+of historical connection with the subject or with related matters, or of legal,
+commercial, philosophical, ethical or political position regarding them.
+The “Invariant Sections” are certain Secondary Sections whose titles are
+designated, as being those of Invariant Sections, in the notice that says that
+the Document is released under this License. If a section does not fit the above
+definition of Secondary then it is not allowed to be designated as Invariant.
+The Document may contain zero Invariant Sections. If the Document does not
+identify any Invariant Sections then there are none.
+The “Cover Texts” are certain short passages of text that are listed, as
+Front-Cover Texts or Back-Cover Texts, in the notice that says that the Document is released under this License. A Front-Cover Text may be at most 5
+words, and a Back-Cover Text may be at most 25 words.
+A “Transparent” copy of the Document means a machine-readable copy,
+represented in a format whose specification is available to the general public,
+that is suitable for revising the document straightforwardly with generic text
+editors or (for images composed of pixels) generic paint programs or (for drawings) some widely available drawing editor, and that is suitable for input to
+text formatters or for automatic translation to a variety of formats suitable for
+input to text formatters. A copy made in an otherwise Transparent file format
+whose markup, or absence of markup, has been arranged to thwart or discourage subsequent modification by readers is not Transparent. An image format is
+not Transparent if used for any substantial amount of text. A copy that is not
+“Transparent” is called “Opaque”.
+Examples of suitable formats for Transparent copies include plain ASCII
+without markup, Texinfo input format, LaTeX input format, SGML or XML using a publicly available DTD, and standard-conforming simple HTML, PostScript
+or PDF designed for human modification. Examples of transparent image formats include PNG, XCF and JPG. Opaque formats include proprietary formats
+that can be read and edited only by proprietary word processors, SGML or
+
+81
+XML for which the DTD and/or processing tools are not generally available,
+and the machine-generated HTML, PostScript or PDF produced by some word
+processors for output purposes only.
+The “Title Page” means, for a printed book, the title page itself, plus such
+following pages as are needed to hold, legibly, the material this License requires
+to appear in the title page. For works in formats which do not have any title
+page as such, “Title Page” means the text near the most prominent appearance
+of the work’s title, preceding the beginning of the body of the text.
+A section “Entitled XYZ” means a named subunit of the Document whose
+title either is precisely XYZ or contains XYZ in parentheses following text
+that translates XYZ in another language. (Here XYZ stands for a specific section name mentioned below, such as “Acknowledgements”, “Dedications”,
+“Endorsements”, or “History”.) To “Preserve the Title” of such a section when you modify the Document means that it remains a section “Entitled
+XYZ” according to this definition.
+The Document may include Warranty Disclaimers next to the notice which
+states that this License applies to the Document. These Warranty Disclaimers
+are considered to be included by reference in this License, but only as regards
+disclaiming warranties: any other implication that these Warranty Disclaimers
+may have is void and has no effect on the meaning of this License.
+
+2. VERBATIM COPYING
+You may copy and distribute the Document in any medium, either commercially or noncommercially, provided that this License, the copyright notices, and
+the license notice saying this License applies to the Document are reproduced
+in all copies, and that you add no other conditions whatsoever to those of this
+License. You may not use technical measures to obstruct or control the reading
+or further copying of the copies you make or distribute. However, you may
+accept compensation in exchange for copies. If you distribute a large enough
+number of copies you must also follow the conditions in section 3.
+You may also lend copies, under the same conditions stated above, and you
+may publicly display copies.
+
+3. COPYING IN QUANTITY
+If you publish printed copies (or copies in media that commonly have printed
+covers) of the Document, numbering more than 100, and the Document’s license
+notice requires Cover Texts, you must enclose the copies in covers that carry,
+clearly and legibly, all these Cover Texts: Front-Cover Texts on the front cover,
+and Back-Cover Texts on the back cover. Both covers must also clearly and
+legibly identify you as the publisher of these copies. The front cover must
+present the full title with all words of the title equally prominent and visible.
+You may add other material on the covers in addition. Copying with changes
+limited to the covers, as long as they preserve the title of the Document and
+satisfy these conditions, can be treated as verbatim copying in other respects.
+
+82
+
+APPENDIX C. GNU FREE DOCUMENTATION LICENSE
+
+If the required texts for either cover are too voluminous to fit legibly, you
+should put the first ones listed (as many as fit reasonably) on the actual cover,
+and continue the rest onto adjacent pages.
+If you publish or distribute Opaque copies of the Document numbering more
+than 100, you must either include a machine-readable Transparent copy along
+with each Opaque copy, or state in or with each Opaque copy a computernetwork location from which the general network-using public has access to
+download using public-standard network protocols a complete Transparent copy
+of the Document, free of added material. If you use the latter option, you must
+take reasonably prudent steps, when you begin distribution of Opaque copies
+in quantity, to ensure that this Transparent copy will remain thus accessible at
+the stated location until at least one year after the last time you distribute an
+Opaque copy (directly or through your agents or retailers) of that edition to the
+public.
+It is requested, but not required, that you contact the authors of the Document well before redistributing any large number of copies, to give them a
+chance to provide you with an updated version of the Document.
+
+4. MODIFICATIONS
+You may copy and distribute a Modified Version of the Document under the
+conditions of sections 2 and 3 above, provided that you release the Modified
+Version under precisely this License, with the Modified Version filling the role
+of the Document, thus licensing distribution and modification of the Modified
+Version to whoever possesses a copy of it. In addition, you must do these things
+in the Modified Version:
+A. Use in the Title Page (and on the covers, if any) a title distinct from that
+of the Document, and from those of previous versions (which should, if
+there were any, be listed in the History section of the Document). You
+may use the same title as a previous version if the original publisher of
+that version gives permission.
+B. List on the Title Page, as authors, one or more persons or entities responsible for authorship of the modifications in the Modified Version, together
+with at least five of the principal authors of the Document (all of its principal authors, if it has fewer than five), unless they release you from this
+requirement.
+C. State on the Title page the name of the publisher of the Modified Version,
+as the publisher.
+D. Preserve all the copyright notices of the Document.
+E. Add an appropriate copyright notice for your modifications adjacent to
+the other copyright notices.
+
+83
+F. Include, immediately after the copyright notices, a license notice giving
+the public permission to use the Modified Version under the terms of this
+License, in the form shown in the Addendum below.
+G. Preserve in that license notice the full lists of Invariant Sections and required Cover Texts given in the Document’s license notice.
+H. Include an unaltered copy of this License.
+I. Preserve the section Entitled “History”, Preserve its Title, and add to it
+an item stating at least the title, year, new authors, and publisher of the
+Modified Version as given on the Title Page. If there is no section Entitled
+“History” in the Document, create one stating the title, year, authors, and
+publisher of the Document as given on its Title Page, then add an item
+describing the Modified Version as stated in the previous sentence.
+J. Preserve the network location, if any, given in the Document for public
+access to a Transparent copy of the Document, and likewise the network
+locations given in the Document for previous versions it was based on.
+These may be placed in the “History” section. You may omit a network
+location for a work that was published at least four years before the Document itself, or if the original publisher of the version it refers to gives
+permission.
+K. For any section Entitled “Acknowledgements” or “Dedications”, Preserve
+the Title of the section, and preserve in the section all the substance and
+tone of each of the contributor acknowledgements and/or dedications given
+therein.
+L. Preserve all the Invariant Sections of the Document, unaltered in their text
+and in their titles. Section numbers or the equivalent are not considered
+part of the section titles.
+M. Delete any section Entitled “Endorsements”. Such a section may not be
+included in the Modified Version.
+N. Do not retitle any existing section to be Entitled “Endorsements” or to
+conflict in title with any Invariant Section.
+O. Preserve any Warranty Disclaimers.
+If the Modified Version includes new front-matter sections or appendices
+that qualify as Secondary Sections and contain no material copied from the
+Document, you may at your option designate some or all of these sections as
+invariant. To do this, add their titles to the list of Invariant Sections in the
+Modified Version’s license notice. These titles must be distinct from any other
+section titles.
+You may add a section Entitled “Endorsements”, provided it contains nothing but endorsements of your Modified Version by various parties–for example,
+
+84
+
+APPENDIX C. GNU FREE DOCUMENTATION LICENSE
+
+statements of peer review or that the text has been approved by an organization
+as the authoritative definition of a standard.
+You may add a passage of up to five words as a Front-Cover Text, and a
+passage of up to 25 words as a Back-Cover Text, to the end of the list of Cover
+Texts in the Modified Version. Only one passage of Front-Cover Text and one
+of Back-Cover Text may be added by (or through arrangements made by) any
+one entity. If the Document already includes a cover text for the same cover,
+previously added by you or by arrangement made by the same entity you are
+acting on behalf of, you may not add another; but you may replace the old one,
+on explicit permission from the previous publisher that added the old one.
+The author(s) and publisher(s) of the Document do not by this License give
+permission to use their names for publicity for or to assert or imply endorsement
+of any Modified Version.
+
+5. COMBINING DOCUMENTS
+You may combine the Document with other documents released under this
+License, under the terms defined in section 4 above for modified versions, provided that you include in the combination all of the Invariant Sections of all
+of the original documents, unmodified, and list them all as Invariant Sections
+of your combined work in its license notice, and that you preserve all their
+Warranty Disclaimers.
+The combined work need only contain one copy of this License, and multiple
+identical Invariant Sections may be replaced with a single copy. If there are
+multiple Invariant Sections with the same name but different contents, make
+the title of each such section unique by adding at the end of it, in parentheses,
+the name of the original author or publisher of that section if known, or else a
+unique number. Make the same adjustment to the section titles in the list of
+Invariant Sections in the license notice of the combined work.
+In the combination, you must combine any sections Entitled “History” in
+the various original documents, forming one section Entitled “History”; likewise
+combine any sections Entitled “Acknowledgements”, and any sections Entitled
+“Dedications”. You must delete all sections Entitled “Endorsements”.
+
+6. COLLECTIONS OF DOCUMENTS
+You may make a collection consisting of the Document and other documents
+released under this License, and replace the individual copies of this License in
+the various documents with a single copy that is included in the collection,
+provided that you follow the rules of this License for verbatim copying of each
+of the documents in all other respects.
+You may extract a single document from such a collection, and distribute it
+individually under this License, provided you insert a copy of this License into
+the extracted document, and follow this License in all other respects regarding
+verbatim copying of that document.
+
+85
+
+7. AGGREGATION WITH INDEPENDENT
+WORKS
+A compilation of the Document or its derivatives with other separate and
+independent documents or works, in or on a volume of a storage or distribution
+medium, is called an “aggregate” if the copyright resulting from the compilation
+is not used to limit the legal rights of the compilation’s users beyond what the
+individual works permit. When the Document is included in an aggregate,
+this License does not apply to the other works in the aggregate which are not
+themselves derivative works of the Document.
+If the Cover Text requirement of section 3 is applicable to these copies of the
+Document, then if the Document is less than one half of the entire aggregate, the
+Document’s Cover Texts may be placed on covers that bracket the Document
+within the aggregate, or the electronic equivalent of covers if the Document is
+in electronic form. Otherwise they must appear on printed covers that bracket
+the whole aggregate.
+
+8. TRANSLATION
+Translation is considered a kind of modification, so you may distribute translations of the Document under the terms of section 4. Replacing Invariant Sections with translations requires special permission from their copyright holders,
+but you may include translations of some or all Invariant Sections in addition to
+the original versions of these Invariant Sections. You may include a translation
+of this License, and all the license notices in the Document, and any Warranty
+Disclaimers, provided that you also include the original English version of this
+License and the original versions of those notices and disclaimers. In case of a
+disagreement between the translation and the original version of this License or
+a notice or disclaimer, the original version will prevail.
+If a section in the Document is Entitled “Acknowledgements”, “Dedications”, or “History”, the requirement (section 4) to Preserve its Title (section 1)
+will typically require changing the actual title.
+
+9. TERMINATION
+You may not copy, modify, sublicense, or distribute the Document except as
+expressly provided for under this License. Any other attempt to copy, modify,
+sublicense or distribute the Document is void, and will automatically terminate
+your rights under this License. However, parties who have received copies, or
+rights, from you under this License will not have their licenses terminated so
+long as such parties remain in full compliance.
+
+10. FUTURE REVISIONS OF THIS LICENSE
+The Free Software Foundation may publish new, revised versions of the
+GNU Free Documentation License from time to time. Such new versions will be
+
+86
+
+APPENDIX C. GNU FREE DOCUMENTATION LICENSE
+
+similar in spirit to the present version, but may differ in detail to address new
+problems or concerns. See http://www.gnu.org/copyleft/.
+Each version of the License is given a distinguishing version number. If
+the Document specifies that a particular numbered version of this License “or
+any later version” applies to it, you have the option of following the terms and
+conditions either of that specified version or of any later version that has been
+published (not as a draft) by the Free Software Foundation. If the Document
+does not specify a version number of this License, you may choose any version
+ever published (not as a draft) by the Free Software Foundation.
+
+ADDENDUM: How to use this License for your
+documents
+To use this License in a document you have written, include a copy of the
+License in the document and put the following copyright and license notices just
+after the title page:
+Copyright c YEAR YOUR NAME. Permission is granted to copy,
+distribute and/or modify this document under the terms of the GNU
+Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections,
+no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled “GNU Free Documentation
+License”.
+
+If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
+replace the “with . . . Texts.” line with this:
+
+with the Invariant Sections being LIST THEIR TITLES, with the
+Front-Cover Texts being LIST, and with the Back-Cover Texts being
+LIST.
+
+If you have Invariant Sections without Cover Texts, or some other combination of the three, merge those two alternatives to suit the situation.
+If your document contains nontrivial examples of program code, we recommend releasing these examples in parallel under your choice of free software
+license, such as the GNU General Public License, to permit their use in free
+software.
+
+

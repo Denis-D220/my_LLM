@@ -1,0 +1,73 @@
+A sensor is often defined as a device that receives and responds to a signal or stimulus. The stimulus is the quantity, property, or condition that is sensed and converted into electrical signal.
+In the broadest definition, a sensor is a device, module, machine, or subsystem that detects events or changes in its environment and sends the information to other electronics, frequently a computer processor. 
+Sensors like PIR sensor or touch sensor are used in everyday objects such as touch-sensitive elevator buttons (tactile sensor) and lamps which dim or brighten by touching the base, and in innumerable applications of which most people are never aware. With advances in micromachinery and easy-to-use microcontroller platforms, the uses of sensors have expanded beyond the traditional fields of temperature, pressure and flow measurement, for example into MARG sensors.
+Analog sensors such as potentiometers and force-sensing resistors are still widely used. Their applications include manufacturing and machinery, airplanes and aerospace, cars, medicine, robotics and many other aspects of our day-to-day life. There is a wide range of other sensors that measure chemical and physical properties of materials, including optical sensors for refractive index measurement, vibrational sensors for fluid viscosity measurement, and electro-chemical sensors for monitoring pH of fluids.
+A sensor's sensitivity indicates how much its output changes when the input quantity it measures changes. For instance, if the mercury in a thermometer moves 1  cm when the temperature changes by 1 °C, its sensitivity is 1 cm/°C (it is basically the slope dy/dx assuming a linear characteristic). Some sensors can also affect what they measure; for instance, a room temperature thermometer inserted into a hot cup of liquid cools the liquid while the liquid heats the thermometer.  Sensors are usually designed to have a small effect on what is measured; making the sensor smaller often improves this and may introduce other advantages.
+Technological progress allows for sensors to be manufactured in bulk on a microscopic scale as microsensors using MEMS technology. In most cases, a microsensor reaches a significantly faster measurement time and higher sensitivity compared with macroscopic approaches. Demand has increased for disposable sensors for short‐term monitoring or single‐shot measurements, due to their low cost and simpiclity of use. Using this class of sensors, information can be obtained without the need for recalibration, and without potential contamination.
+
+Classification of measurement errors
+
+A good sensor obeys the following rules:
+
+it is sensitive to the measured property
+it is insensitive to any other property likely to be encountered in its application, and
+it does not influence the measured property.
+Most sensors have a linear transfer function.  The sensitivity is then defined as the ratio between the output signal and measured property. For example, if a sensor measures temperature and has a voltage output, the sensitivity is constant with the units [V/K].  The sensitivity is the slope of the transfer function.  Converting the sensor's electrical output (for example V) to the measured units (for example K) requires dividing the electrical output by the slope (or multiplying by its reciprocal).  In addition, an offset is frequently added or subtracted.  For example, −40 must be added to the output if 0 V output corresponds to −40 C input.
+For an analog sensor signal to be processed or used in digital equipment, it needs to be converted to a digital signal, using an analog-to-digital converter.
+
+Sensor deviations
+Since sensors cannot replicate an ideal transfer function, several types of deviations can occur which limit sensor accuracy:
+
+Since the range of the output signal is always limited, the output signal will eventually reach a minimum or maximum when the measured property exceeds the limits. The full scale range defines the maximum and minimum values of the measured property. 
+The sensitivity may in practice differ from the value specified. This is called a sensitivity error.  This is an error in the slope of a linear transfer function.
+If the output signal differs from the correct value by a constant, the sensor has an offset error or bias. This is an error in the y-intercept of a linear transfer function.
+Nonlinearity is deviation of a sensor's transfer function from a straight line transfer function. Usually, this is defined by the amount the output differs from ideal behavior over the full range of the sensor, often noted as a percentage of the full range.
+Deviation caused by rapid changes of the measured property over time is a dynamic error. Often, this behavior is described with a bode plot showing sensitivity error and phase shift as a function of the frequency of a periodic input signal.
+If the output signal slowly changes independent of the measured property, this is defined as drift. Long term drift over months or years is caused by physical changes in the sensor.
+Noise is a random deviation of the signal that varies in time.
+A hysteresis error causes the output value to vary depending on the previous input values.  If a sensor's output is different depending on whether a specific input value was reached by increasing vs. decreasing the input, then the sensor has a hysteresis error.
+If the sensor has a digital output, the output is essentially an approximation of the measured property. This error is also called quantization error.
+If the signal is monitored digitally, the sampling frequency can cause a dynamic error, or if the input variable or added noise changes periodically at a frequency near a multiple of the sampling rate, aliasing errors may occur.
+The sensor may to some extent be sensitive to properties other than the property being measured. For example, most sensors are influenced by the temperature of their environment.
+All these deviations can be classified as systematic errors or random errors. Systematic errors can sometimes be compensated for by means of some kind of calibration strategy. Noise is a random error that can be reduced by signal processing, such as filtering, usually at the expense of the dynamic behavior of the sensor.
+
+Resolution
+The sensor resolution or measurement resolution is the smallest change that can be detected in the quantity that is being measured. The resolution of a sensor with a digital output is usually the numerical resolution of the digital output. The resolution is related to the precision with which the measurement is made, but they are not the same thing. A sensor's accuracy may be considerably worse than its resolution.
+
+For example, the distance resolution is the minimum distance that can be accurately measured by any distance-measuring devices. In a time-of-flight camera, the distance resolution is usually equal to the standard deviation (total noise) of the signal expressed in unit of length.
+The sensor may to some extent be sensitive to properties other than the property being measured. For example, most sensors are influenced by the temperature of their environment.
+
+Chemical sensor
+A chemical sensor is a self-contained analytical device that can provide information about the chemical composition of its environment, that is, a liquid or a gas phase. The information is provided in the form of a measurable physical signal that is correlated with the concentration of a certain chemical species (termed as analyte). Two main steps are involved in the functioning of a chemical sensor, namely, recognition and transduction. In the recognition step, analyte molecules interact selectively with receptor molecules or sites included in the structure of the recognition element of the sensor. Consequently, a characteristic physical parameter varies and this variation is reported by means of an integrated transducer that generates the output signal.
+A chemical sensor based on recognition material of biological nature is a biosensor. However, as synthetic biomimetic materials are going to substitute to some extent recognition biomaterials, a sharp distinction between a biosensor and a standard chemical sensor is superfluous. Typical biomimetic materials used in sensor development are molecularly imprinted polymers and aptamers.
+
+Chemical sensor array
+
+Biosensor
+
+In biomedicine and biotechnology, sensors which detect analytes thanks to a biological component, such as cells, protein, nucleic acid or biomimetic polymers, are called biosensors.
+Whereas a non-biological sensor, even organic (carbon chemistry), for biological analytes is referred to as sensor or nanosensor. This terminology applies for both in-vitro and in vivo applications.
+The encapsulation of the biological component in biosensors, presents a slightly different problem that ordinary sensors; this can either be done by means of a semipermeable barrier, such as a dialysis membrane or a hydrogel, or a 3D polymer matrix, which either physically constrains the sensing macromolecule or chemically constrains the macromolecule by bounding it to the scaffold.
+
+Neuromorphic sensors
+Neuromorphic sensors are sensors that physically mimic structures and functions of biological neural entities. One example of this is the event camera.
+
+MOS sensors
+The MOSFET invented at Bell Labs between 1955 and 1960, MOSFET sensors (MOS sensors) were later developed, and they have since been widely used to measure physical, chemical, biological and environmental parameters.
+
+Biochemical sensors
+A number of MOSFET sensors have been developed, for measuring physical, chemical, biological, and environmental parameters. The earliest MOSFET sensors include the open-gate field-effect transistor (OGFET) introduced by Johannessen in 1970, the ion-sensitive field-effect transistor (ISFET) invented by Piet Bergveld in 1970, the adsorption FET (ADFET) patented by P.F. Cox in 1974, and a hydrogen-sensitive MOSFET demonstrated by I. Lundstrom, M.S. Shivaraman, C.S. Svenson and L. Lundkvist in 1975. The ISFET is a special type of MOSFET with a gate at a certain distance, and where the metal gate is replaced by an ion-sensitive membrane, electrolyte solution and reference electrode. The ISFET is widely used in biomedical applications, such as the detection of DNA hybridization, biomarker detection from blood, antibody detection, glucose measurement, pH sensing, and genetic technology.
+By the mid-1980s, numerous other MOSFET sensors had been developed, including the gas sensor FET (GASFET), surface accessible FET (SAFET), charge flow transistor (CFT), pressure sensor FET (PRESSFET), chemical field-effect transistor (ChemFET), reference ISFET (REFET), biosensor FET (BioFET), enzyme-modified FET (ENFET) and immunologically modified FET (IMFET). By the early 2000s, BioFET types such as the DNA field-effect transistor (DNAFET), gene-modified FET (GenFET) and cell-potential BioFET (CPFET) had been developed.
+
+Image sensors
+
+MOS technology is the basis for modern image sensors, including the charge-coupled device (CCD) and the CMOS active-pixel sensor (CMOS sensor), used in digital imaging and digital cameras. Willard Boyle and George E. Smith developed the CCD in 1969. While researching the MOS process, they realized that an electric charge was the analogy of the magnetic bubble and that it could be stored on a tiny MOS capacitor. As it was fairly straightforward to fabricate a series of MOS capacitors in a row, they connected a suitable voltage to them so that the charge could be stepped along from one to the next. The CCD is a semiconductor circuit that was later used in the first digital video cameras for television broadcasting.
+The MOS active-pixel sensor (APS) was developed by Tsutomu Nakamura at Olympus in 1985. The CMOS active-pixel sensor was later developed by Eric Fossum and his team in the early 1990s.
+MOS image sensors are widely used in optical mouse technology. The first optical mouse, invented by Richard F. Lyon at Xerox in 1980, used a 5 μm NMOS sensor chip. Since the first commercial optical mouse, the IntelliMouse introduced in 1999, most optical mouse devices use CMOS sensors.
+
+Monitoring sensors
+
+MOS monitoring sensors are used for house monitoring, office and agriculture monitoring, traffic monitoring (including car speed, traffic jams, and traffic accidents), weather monitoring (such as for rain, wind, lightning and storms), defense monitoring, and monitoring temperature, humidity, air pollution, fire, health, security and lighting. MOS gas detector sensors are used to detect carbon monoxide, sulfur dioxide, hydrogen sulfide, ammonia, and other gas substances. Other MOS sensors include intelligent sensors and wireless sensor network (WSN) technology.
+
+Electronics sensors
+The typical modern CPUs, GPUs and SoCs are usually integrated electric sensors to detect chip temperatures, voltages and powers.

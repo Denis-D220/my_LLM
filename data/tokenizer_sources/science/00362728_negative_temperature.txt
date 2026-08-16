@@ -1,0 +1,1206 @@
+Certain thermodynamic systems can achieve negative thermodynamic temperature; that is, their temperature can be expressed as a negative quantity on the Kelvin or Rankine scales. This should be distinguished from temperatures expressed as negative numbers on non-thermodynamic Celsius or Fahrenheit scales, which are nevertheless higher than absolute zero. 
+Temperature is related to how particles are distributed among the available energy states of a system. At ordinary positive temperatures, lower-energy states are more likely to be occupied than higher-energy states. At negative temperatures, this distribution is reversed, so higher-energy states become more populated than lower-energy ones. For this reason, a system with a truly negative temperature on the Kelvin scale is hotter than any system with a positive temperature. If a negative-temperature system and a positive-temperature system come in contact, heat will flow from the negative- to the positive-temperature system. A standard example of such a system is population inversion in laser physics.
+Temperature is also related to how a system's entropy changes as energy is added. Thermodynamic systems with no upper limit on their energy cannot achieve negative temperatures. This is the case for ordinary particles, such as atoms or dust, whose kinetic energy can increase without bound. In such systems, adding energy always increases the number of accessible states and therefore the entropy. Negative temperatures are only possible in systems that have a maximum energy they can hold. As such systems approach this maximum energy, the number of accessible states begins to decrease with further increases in energy, causing the entropy to fall and making the temperature negative. Examples of such systems include two-level systems and nuclear spin ensembles in an external magnetic field.
+
+History
+The possibility of negative temperatures was first predicted by Lars Onsager in 1949.
+Onsager was investigating 2D vortices confined within a finite area, and realized that since their positions are not independent degrees of freedom from their momenta, the resulting phase space must also be bounded by the finite area. Bounded phase space is the essential property that allows for negative temperatures, and can occur in both classical and quantum systems. As shown by Onsager, a system with bounded phase space necessarily has a peak in the entropy as energy is increased. For energies exceeding the value where the peak occurs, the entropy decreases as energy increases, and high-energy states necessarily have negative Boltzmann temperature.
+The limited range of states accessible to a system with negative temperature means that negative temperature is associated with emergent ordering of the system at high energies. For example in Onsager's point-vortex analysis negative temperature is associated with the emergence of large-scale clusters of vortices. This spontaneous ordering in equilibrium statistical mechanics goes against common physical intuition that increased energy leads to increased disorder.
+It seems negative temperatures were first found experimentally in 1951, when Purcell and Pound observed evidence for them in the nuclear spins of a lithium fluoride crystal placed in a magnetic field, and then removed from this field.  They wrote:
+
+A system in a negative temperature state is not cold, but very hot, giving up energy to any system at positive temperature put into contact with it. It decays to a normal state through infinite temperature.
+
+Definition of temperature
+The absolute temperature (Kelvin) scale can be loosely interpreted as the average kinetic energy of the system's particles. The existence of negative temperature, let alone negative temperature representing "hotter" systems than positive temperature, would seem paradoxical in this interpretation. The paradox is resolved by considering the more rigorous definition of thermodynamic temperature in terms of Boltzmann's entropy formula. This reveals the tradeoff between internal energy and entropy contained in the system, with "coldness", the reciprocal of temperature, being the more fundamental quantity. Systems with a positive temperature will increase in entropy as one adds energy to the system, while systems with a negative temperature will decrease in entropy as one adds energy to the system.
+The definition of thermodynamic temperature T is a function of the change in the system's entropy  S  under reversible heat transfer Qrev:
+
+  
+    
+      
+        T
+        =
+        
+          
+            
+              d
+              
+                Q
+                
+                  
+                    r
+                    e
+                    v
+                  
+                
+              
+            
+            
+              d
+              S
+            
+          
+        
+        .
+      
+    
+    {\displaystyle T={\frac {dQ_{\mathrm {rev} }}{dS}}.}
+  
+
+Entropy being a state function, the integral of dS over any cyclical process is zero. For a system in which the entropy is purely a function of the system's energy E, the temperature can be defined as:
+
+  
+    
+      
+        T
+        =
+        
+          
+            (
+            
+              
+                
+                  d
+                  S
+                
+                
+                  d
+                  E
+                
+              
+            
+            )
+          
+          
+            −
+            1
+          
+        
+        .
+      
+    
+    {\displaystyle T=\left({\frac {dS}{dE}}\right)^{-1}.}
+  
+
+Equivalently, thermodynamic beta, or "coldness", is defined as 
+
+  
+    
+      
+        β
+        =
+        
+          
+            1
+            
+              k
+              T
+            
+          
+        
+        =
+        
+          
+            1
+            k
+          
+        
+        
+          
+            
+              d
+              S
+            
+            
+              d
+              E
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \beta ={\frac {1}{kT}}={\frac {1}{k}}{\frac {dS}{dE}},}
+  
+
+where k is the Boltzmann constant.
+Note that in classical thermodynamics, S is defined in terms of temperature. This is reversed here, S is the statistical entropy, a function of the possible microstates of the system, and temperature conveys information on the distribution of energy levels among the possible microstates. For systems with many degrees of freedom, the statistical and thermodynamic definitions of entropy are generally consistent with each other.
+Some theorists have proposed using an alternative definition of entropy as a way to resolve perceived inconsistencies between statistical and thermodynamic entropy for small systems and systems where the number of states decreases with energy, and the temperatures derived from these entropies are different. It has been argued that the new definition would create other inconsistencies; its proponents have argued that this is only apparent.
+
+Heat and molecular energy distribution
+Negative temperatures can only exist in a system where there are a limited number of energy states (see below). In thermal equilibrium, the population of these states is governed by the Boltzmann distribution, which states that the probability 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ of a particle occupying a given energy state decreases exponentially as the energy 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ of that state increases:
+  
+    
+      
+        P
+        (
+        E
+        )
+        ∝
+        
+          e
+          
+            −
+            E
+            
+              /
+            
+            (
+            k
+            T
+            )
+          
+        
+      
+    
+    {\displaystyle P(E)\propto e^{-E/(kT)}}
+  
+As the temperature 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is increased on such a system, particles move into higher and higher energy states, so that the number of particles in the lower energy states and in the higher energy states approaches equality.  This is a consequence of the definition of temperature in statistical mechanics for systems with limited states. By injecting energy into these systems in the right fashion, it is possible to create a system in which there are more particles in the higher energy states than in the lower ones. The system can then be characterized as having a negative temperature.
+A substance with a negative temperature is not colder than absolute zero, but rather it is hotter than infinite temperature. As Kittel and Kroemer put it,
+
+The temperature scale from cold to hot runs +0 K,…, +300 K,…,+∞ K, −∞ K,…, −300 K,…, −0 K. Note that if a system at −300 K is brought into thermal contact with an identical system at 300 K, the final equilibrium temperature is not 0 K, but is ±∞ K.
+
+The corresponding inverse temperature scale, for the quantity β = ⁠1/kT⁠ (where k is the Boltzmann constant), runs continuously from low energy to high as +∞, …, 0, …, −∞. Because it avoids the abrupt jump from +∞ to −∞, β is considered more natural than T. Although a system can have multiple negative temperature regions and thus have −∞ to +∞ discontinuities.
+In many familiar physical systems, temperature is associated to the kinetic energy of atoms. Since there is no upper bound on the momentum of an atom, there is no upper bound to the number of energy states available when more energy is added, and therefore no way to get to a negative temperature. However, in statistical mechanics, temperature can correspond to other degrees of freedom than just kinetic energy (see below).
+
+Temperature and disorder
+
+The distribution of energy among the various translational, vibrational, rotational, electronic, and nuclear modes of a system determines the macroscopic temperature. In a "normal" system, thermal energy is constantly being exchanged between the various modes.
+However, in some situations, it is possible to isolate one or more of the modes. In practice, the isolated modes still exchange energy with the other modes, but the time scale of this exchange is much slower than for the exchanges within the isolated mode. One example is the case of nuclear spins in a strong external magnetic field. In this case, energy flows fairly rapidly among the spin states of interacting atoms, but energy transfer between the nuclear spins and other modes is relatively slow. Since the energy flow is predominantly within the spin system, it makes sense to think of a spin temperature that is distinct from the temperature associated to other modes.
+A definition of temperature can be based on the relationship:
+
+  
+    
+      
+        T
+        =
+        
+          
+            
+              d
+              
+                q
+                
+                  
+                    r
+                    e
+                    v
+                  
+                
+              
+            
+            
+              d
+              S
+            
+          
+        
+      
+    
+    {\displaystyle T={\frac {dq_{\mathrm {rev} }}{dS}}}
+  
+
+The relationship suggests that a positive temperature corresponds to the condition where entropy, S, increases as thermal energy, qrev, is added to the system. This is the "normal" condition in the macroscopic world, and is always the case for the translational, vibrational, rotational, and non-spin-related electronic and nuclear modes. The reason for this is that there are an infinite number of these types of modes, and adding more heat to the system increases the number of modes that are energetically accessible, and thus increases the entropy.
+
+Examples
+
+Noninteracting two-level particles
+
+The simplest example, albeit a rather nonphysical one, is to consider a system of N particles, each of which can take an energy of either +ε or −ε but are otherwise noninteracting.  This can be understood as a limit of the Ising model in which the interaction term becomes negligible.  The total energy of the system is
+
+  
+    
+      
+        E
+        =
+        ε
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            N
+          
+        
+        
+          σ
+          
+            i
+          
+        
+        =
+        ε
+        j
+      
+    
+    {\displaystyle E=\varepsilon \sum _{i=1}^{N}\sigma _{i}=\varepsilon j}
+  
+
+where σi is the sign of the ith particle and j is the number of particles with positive energy minus the number of particles with negative energy.  From elementary combinatorics, the total number of microstates with this amount of energy is a binomial coefficient:
+
+  
+    
+      
+        
+          Ω
+          
+            E
+          
+        
+        =
+        
+          
+            
+              (
+            
+            
+              N
+              
+                
+                  N
+                  +
+                  j
+                
+                2
+              
+            
+            
+              )
+            
+          
+        
+        =
+        
+          
+            
+              N
+              !
+            
+            
+              
+                (
+                
+                  
+                    
+                      N
+                      +
+                      j
+                    
+                    2
+                  
+                
+                )
+              
+              !
+              
+                (
+                
+                  
+                    
+                      N
+                      −
+                      j
+                    
+                    2
+                  
+                
+                )
+              
+              !
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \Omega _{E}={\binom {N}{\frac {N+j}{2}}}={\frac {N!}{\left({\frac {N+j}{2}}\right)!\left({\frac {N-j}{2}}\right)!}}.}
+  
+
+By the fundamental assumption of statistical mechanics, the entropy of this microcanonical ensemble is
+
+  
+    
+      
+        S
+        =
+        
+          k
+          
+            B
+          
+        
+        ln
+        ⁡
+        
+          Ω
+          
+            E
+          
+        
+      
+    
+    {\displaystyle S=k_{\text{B}}\ln \Omega _{E}}
+  
+
+We can solve for thermodynamic beta (β = ⁠1/kBT⁠) by considering it as a central difference without taking the continuum limit:
+
+  
+    
+      
+        
+          
+            
+              
+                β
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      k
+                      
+                        
+                          B
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        δ
+                        
+                          2
+                          ε
+                        
+                      
+                      [
+                      S
+                      ]
+                    
+                    
+                      2
+                      ε
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      2
+                      ε
+                    
+                  
+                
+                
+                  (
+                  
+                    ln
+                    ⁡
+                    
+                      Ω
+                      
+                        E
+                        +
+                        ε
+                      
+                    
+                    −
+                    ln
+                    ⁡
+                    
+                      Ω
+                      
+                        E
+                        −
+                        ε
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      2
+                      ε
+                    
+                  
+                
+                ln
+                ⁡
+                
+                  (
+                  
+                    
+                      
+                        
+                          (
+                          
+                            
+                              
+                                N
+                                +
+                                j
+                                −
+                                1
+                              
+                              2
+                            
+                          
+                          )
+                        
+                        !
+                        
+                          (
+                          
+                            
+                              
+                                N
+                                −
+                                j
+                                +
+                                1
+                              
+                              2
+                            
+                          
+                          )
+                        
+                        !
+                      
+                      
+                        
+                          (
+                          
+                            
+                              
+                                N
+                                +
+                                j
+                                +
+                                1
+                              
+                              2
+                            
+                          
+                          )
+                        
+                        !
+                        
+                          (
+                          
+                            
+                              
+                                N
+                                −
+                                j
+                                −
+                                1
+                              
+                              2
+                            
+                          
+                          )
+                        
+                        !
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      2
+                      ε
+                    
+                  
+                
+                ln
+                ⁡
+                
+                  (
+                  
+                    
+                      
+                        N
+                        −
+                        j
+                        +
+                        1
+                      
+                      
+                        N
+                        +
+                        j
+                        +
+                        1
+                      
+                    
+                  
+                  )
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\beta &={\frac {1}{k_{\mathrm {B} }}}{\frac {\delta _{2\varepsilon }[S]}{2\varepsilon }}\\[3pt]&={\frac {1}{2\varepsilon }}\left(\ln \Omega _{E+\varepsilon }-\ln \Omega _{E-\varepsilon }\right)\\[3pt]&={\frac {1}{2\varepsilon }}\ln \left({\frac {\left({\frac {N+j-1}{2}}\right)!\left({\frac {N-j+1}{2}}\right)!}{\left({\frac {N+j+1}{2}}\right)!\left({\frac {N-j-1}{2}}\right)!}}\right)\\[3pt]&={\frac {1}{2\varepsilon }}\ln \left({\frac {N-j+1}{N+j+1}}\right).\end{aligned}}}
+  
+
+hence the temperature
+
+  
+    
+      
+        T
+        (
+        E
+        )
+        =
+        
+          
+            
+              2
+              ε
+            
+            
+              k
+              
+                B
+              
+            
+          
+        
+        
+          
+            [
+            
+              ln
+              ⁡
+              
+                (
+                
+                  
+                    
+                      (
+                      N
+                      +
+                      1
+                      )
+                      ε
+                      −
+                      E
+                    
+                    
+                      (
+                      N
+                      +
+                      1
+                      )
+                      ε
+                      +
+                      E
+                    
+                  
+                
+                )
+              
+            
+            ]
+          
+          
+            −
+            1
+          
+        
+        .
+      
+    
+    {\displaystyle T(E)={\frac {2\varepsilon }{k_{\text{B}}}}\left[\ln \left({\frac {(N+1)\varepsilon -E}{(N+1)\varepsilon +E}}\right)\right]^{-1}.}
+  
+
+This entire proof assumes the microcanonical ensemble with energy fixed and temperature being the emergent property.  In the canonical ensemble, the temperature is fixed and energy is the emergent property.  This leads to (ε refers to microstates):
+
+  
+    
+      
+        
+          
+            
+              
+                Z
+                (
+                T
+                )
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    N
+                  
+                
+                
+                  e
+                  
+                    −
+                    
+                      ε
+                      
+                        i
+                      
+                    
+                    β
+                  
+                
+              
+            
+            
+              
+                E
+                (
+                T
+                )
+              
+              
+                
+                =
+                
+                  
+                    1
+                    Z
+                  
+                
+                
+                  ∑
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    N
+                  
+                
+                
+                  ε
+                  
+                    i
+                  
+                
+                
+                  e
+                  
+                    −
+                    
+                      ε
+                      
+                        i
+                      
+                    
+                    β
+                  
+                
+              
+            
+            
+              
+                S
+                (
+                T
+                )
+              
+              
+                
+                =
+                
+                  k
+                  
+                    B
+                  
+                
+                ln
+                ⁡
+                (
+                Z
+                )
+                +
+                
+                  
+                    E
+                    T
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}Z(T)&=\sum _{i=1}^{N}e^{-\varepsilon _{i}\beta }\\[6pt]E(T)&={\frac {1}{Z}}\sum _{i=1}^{N}\varepsilon _{i}e^{-\varepsilon _{i}\beta }\\[6pt]S(T)&=k_{\text{B}}\ln(Z)+{\frac {E}{T}}\end{aligned}}}
+  
+
+Following the previous example, we choose a state with two levels and two particles.  This leads to microstates ε1 = 0, ε2 = 1, ε3  = 1, and ε4 = 2.
+
+  
+    
+      
+        
+          
+            
+              
+                Z
+                (
+                T
+                )
+              
+              
+                
+                =
+                
+                  e
+                  
+                    −
+                    0
+                    β
+                  
+                
+                +
+                2
+                
+                  e
+                  
+                    −
+                    1
+                    β
+                  
+                
+                +
+                
+                  e
+                  
+                    −
+                    2
+                    β
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                1
+                +
+                2
+                
+                  e
+                  
+                    −
+                    β
+                  
+                
+                +
+                
+                  e
+                  
+                    −
+                    2
+                    β
+                  
+                
+              
+            
+            
+              
+                E
+                (
+                T
+                )
+              
+              
+                
+                =
+                
+                  
+                    
+                      0
+                      
+                        e
+                        
+                          −
+                          0
+                          β
+                        
+                      
+                      +
+                      2
+                      ×
+                      1
+                      
+                        e
+                        
+                          −
+                          1
+                          β
+                        
+                      
+                      +
+                      2
+                      
+                        e
+                        
+                          −
+                          2
+                          β
+                        
+                      
+                    
+                    Z
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      2
+                      
+                        e
+                        
+                          −
+                          β
+                        
+                      
+                      +
+                      2
+                      
+                        e
+                        
+                          −
+                          2
+                          β
+                        
+                      
+                    
+                    Z
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      2
+                      
+                        e
+                        
+                          −
+                          β
+                        
+                      
+                      +
+                      2
+                      
+                        e
+                        
+                          −
+                          2
+                          β
+                        
+                      
+                    
+                    
+                      1
+                      +
+                      2
+                      
+                        e
+                        
+                          −
+                          β
+                        
+                      
+                      +
+                      
+                        e
+                        
+                          −
+                          2
+                          β
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                S
+                (
+                T
+                )
+              
+              
+                
+                =
+                
+                  k
+                  
+                    B
+                  
+                
+                ln
+                ⁡
+                
+                  (
+                  
+                    1
+                    +
+                    2
+                    
+                      e
+                      
+                        −
+                        β
+                      
+                    
+                    +
+                    
+                      e
+                      
+                        −
+                        2
+                        β
+                      
+                    
+                  
+                  )
+                
+                +
+                
+                  
+                    
+                      2
+                      
+                        e
+                        
+                          −
+                          β
+                        
+                      
+                      +
+                      2
+                      
+                        e
+                        
+                          −
+                          2
+                          β
+                        
+                      
+                    
+                    
+                      
+                        (
+                        
+                          1
+                          +
+                          2
+                          
+                            e
+                            
+                              −
+                              β
+                            
+                          
+                          +
+                          
+                            e
+                            
+                              −
+                              2
+                              β
+                            
+                          
+                        
+                        )
+                      
+                      T
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}Z(T)&=e^{-0\beta }+2e^{-1\beta }+e^{-2\beta }\\[3pt]&=1+2e^{-\beta }+e^{-2\beta }\\[6pt]E(T)&={\frac {0e^{-0\beta }+2\times 1e^{-1\beta }+2e^{-2\beta }}{Z}}\\[3pt]&={\frac {2e^{-\beta }+2e^{-2\beta }}{Z}}\\[3pt]&={\frac {2e^{-\beta }+2e^{-2\beta }}{1+2e^{-\beta }+e^{-2\beta }}}\\[6pt]S(T)&=k_{\text{B}}\ln \left(1+2e^{-\beta }+e^{-2\beta }\right)+{\frac {2e^{-\beta }+2e^{-2\beta }}{\left(1+2e^{-\beta }+e^{-2\beta }\right)T}}\end{aligned}}}
+  
+
+The resulting values for S, E, and Z all increase with T and never need to enter a negative temperature regime.
+
+Nuclear spins
+The previous example is approximately realized by a system of nuclear spins in an external magnetic field. This allows the experiment to be run as a variation of nuclear magnetic resonance spectroscopy. In the case of electronic and nuclear spin systems, there are only a finite number of modes available, often just two, corresponding to spin up and spin down. In the absence of a magnetic field, these spin states are degenerate, meaning that they correspond to the same energy. When an external magnetic field is applied, the energy levels are split, since those spin states that are aligned with the magnetic field will have a different energy from those that are anti-parallel to it.
+In the absence of a magnetic field, such a two-spin system would have maximum entropy when half the atoms are in the spin-up state and half  are in the spin-down state, and so one would expect to find the system with close to an equal distribution of spins. Upon application of a magnetic field, some of the atoms will tend to align so as to minimize the energy of the system, thus slightly more atoms should be in the lower-energy state (for the purposes of this example we will assume the spin-down state is the lower-energy state).  It is possible to add energy to the spin system using radio frequency techniques. This causes atoms to flip from spin-down to spin-up.
+Since we started with over half the atoms in the spin-down state, this initially drives the system towards a 50/50 mixture, so the entropy is increasing, corresponding to a positive temperature. However, at some point, more than half of the spins are in the spin-up position. In this case, adding additional energy reduces the entropy, since it moves the system further from a 50/50 mixture. This reduction in entropy with the addition of energy corresponds to a negative temperature.
+In NMR spectroscopy, such spin flips correspond to pulses with pulse widths over 180° (for a given spin). While relaxation is fast in solids, it can take several seconds in solutions and even longer in gases and in ultracold systems; several hours were reported for silver and rhodium at picokelvin temperatures. It is still important to understand that the temperature is negative only with respect to nuclear spins. Other degrees of freedom, such as molecular vibrational, electronic and electron spin levels are at a positive temperature, so the object still has positive sensible heat. Relaxation actually happens by exchange of energy between the nuclear spin states and other states (e.g. through the nuclear Overhauser effect with other spins).
+
+Lasers
+This phenomenon can also be observed in many lasing systems, wherein a large fraction of the system's atoms (for chemical and gas lasers) or electrons (in semiconductor lasers) are in excited states. This is referred to as a population inversion.
+The Hamiltonian for a single mode of a luminescent radiation field at frequency ν is
+
+  
+    
+      
+        H
+        =
+        (
+        h
+        ν
+        −
+        μ
+        )
+        
+          a
+          
+            †
+          
+        
+        a
+        .
+      
+    
+    {\displaystyle H=(h\nu -\mu )a^{\dagger }a.}
+  
+
+The density operator in the grand canonical ensemble is
+
+  
+    
+      
+        ρ
+        =
+        
+          
+            
+              e
+              
+                −
+                β
+                H
+              
+            
+            
+              Tr
+              ⁡
+              
+                (
+                
+                  e
+                  
+                    −
+                    β
+                    H
+                  
+                
+                )
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \rho ={\frac {e^{-\beta H}}{\operatorname {Tr} \left(e^{-\beta H}\right)}}.}
+  
+
+For the system to have a ground state, the trace to converge, and the density operator to be generally meaningful, βH must be positive semidefinite. So if hν < μ, and H is negative semidefinite, then β must itself be negative, implying a negative temperature.
+
+Motional degrees of freedom
+Negative temperatures have also been achieved in motional degrees of freedom. Using an optical lattice, upper bounds were placed on the kinetic energy, interaction energy and potential energy of cold potassium-39 atoms. This was done by tuning the interactions of the atoms from repulsive to attractive using a Feshbach resonance and changing the overall harmonic potential from trapping to anti-trapping, thus transforming the Bose–Hubbard Hamiltonian from Ĥ → −Ĥ. Performing this transformation adiabatically while keeping the atoms in the Mott insulator regime, it is possible to go from a low entropy positive temperature state to a low entropy negative temperature state. In the negative temperature state, the atoms macroscopically occupy the maximum momentum state of the lattice. The negative temperature ensembles equilibrated and showed long lifetimes in an anti-trapping harmonic potential.
+
+Two-dimensional vortex motion
+The two-dimensional systems of vortices confined to a finite area can form thermal equilibrium states at negative temperature, and indeed negative temperature states were first predicted by Onsager in his analysis of classical point vortices. Onsager's prediction was confirmed experimentally for a system of quantum vortices in a Bose–Einstein condensate in 2019.

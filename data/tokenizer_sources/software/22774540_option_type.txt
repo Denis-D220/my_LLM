@@ -1,0 +1,117 @@
+In programming languages (especially functional programming languages) and type theory, an option type or maybe type is a polymorphic type that represents encapsulation of an optional value; e.g., it is used as the return type of functions which may or may not return a meaningful value when they are applied. It consists of a constructor which either is empty (often named None or Nothing), or which encapsulates the original data type A (often written Just A or Some A).
+A distinct, but related concept outside of functional programming, which is popular in object-oriented programming, is called nullable types (often expressed as A?). The core difference between option types and nullable types is that option types support nesting (e.g. Maybe (Maybe String) ≠ Maybe String), while nullable types do not (e.g. String?? = String?).
+
+Theoretical aspects
+In type theory, it may be written as: 
+  
+    
+      
+        
+          A
+          
+            ?
+          
+        
+        =
+        A
+        +
+        1
+      
+    
+    {\displaystyle A^{?}=A+1}
+  
+. This expresses the fact that for a given set of values in 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, an option type adds exactly one additional value (the empty value) to the set of valid values for 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+. This is reflected in programming by the fact that in languages having tagged unions, option types can be expressed as the tagged union of the encapsulated type plus a unit type. An option type is a particular case of a tagged union, where the Nothing is taken as (nullary constructor for a) singleton type. Tagged unions can generally be implemented by a combination of union types and record types using occurrence typing.
+The option type is also a monad where:
+
+The monadic nature of the option type is useful for efficiently tracking failure and errors.
+
+Examples
+
+Ada
+Ada does not implement option-types directly, however it provides discriminated types which can be used to parameterize a record. To implement an Option type, a Boolean type is used as the discriminant; the following example provides a generic to create an option type from any non-limited constrained type:
+
+Example usage:
+
+Agda
+
+In Agda, the option type is named Maybe with variants nothing and just a.
+
+ATS
+
+In ATS, the option type is defined as
+
+C++
+Since C++17, the option type is defined in the standard library as template <typename T> optional<T>.
+
+ 
+
+In C++23, support for monadic operations for std::optional<T> is available.
+
+Elm
+
+In Elm, the option type is defined as type Maybe a = Just a | Nothing.
+
+F#
+
+In F#, the option type is defined as type 'a option = None | Some of 'a.
+
+Haskell
+
+In Haskell, the option type is defined as data Maybe a = Nothing | Just a.
+
+Idris
+
+In Idris, the option type is defined as data Maybe a = Nothing | Just a.
+
+Java
+
+In Java, the option type is defined the standard library by the java.util.Optional<T> class.
+
+Nim
+
+OCaml
+
+In OCaml, the option type is defined as type 'a option = None | Some of 'a.
+
+Rocq
+
+In Rocq, the option type is defined as Inductive option (A:Type) : Type := | Some : A -> option A | None : option A..
+
+Rust
+
+In Rust, the option type is defined as enum Option<T> { None, Some(T) }.
+
+Scala
+
+In Scala, the option type is defined as sealed abstract class Option[+A], a type extended by final case class Some[+A](value: A) and case object None.
+
+Standard ML
+
+In Standard ML, the option type is defined as datatype 'a option = NONE | SOME of 'a.
+
+Swift
+
+In Swift, the option type is defined as enum Optional<T> { case none, some(T) } but is generally written as T?.
+
+Zig
+
+In Zig, add ? before the type name like ?i32 to make it an optional type.
+Payload n can be captured in an if or while statement, such as if (opt) |n| { ... } else { ... }, and an else clause is evaluated if it is null.

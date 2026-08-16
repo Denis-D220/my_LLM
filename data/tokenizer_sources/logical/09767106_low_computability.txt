@@ -1,0 +1,172 @@
+In computability theory, a Turing degree [X] is low if its Turing jump [X′] = 0′. A subset 
+  
+    
+      
+        S
+        ⊂
+        
+          N
+        
+      
+    
+    {\displaystyle S\subset \mathbb {N} }
+  
+ is low if its Turing degree is low.
+In other words, 
+  
+    
+      
+        X
+        ⊂
+        
+          N
+        
+      
+    
+    {\displaystyle X\subset \mathbb {N} }
+  
+ is low iff the halting problem for Turing machines equipped with an oracle for 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is exactly as difficult as the halting problem for Turing machines without any oracle. Thus, X being low says that its jump X′ has the least possible degree.
+Since every set is computable from its jump, all low set are in 0′, but the jump of sets computable in 0′ can bound any degree recursively enumerable in 0′ (Schoenfield Jump Inversion).  
+In general, "lowness properties" are properties of sets that can accurately describe how useless they are at being an oracle for Turing machines, usually meaning that its jumps are as low as logically possible. For example:
+
+A degree [X] is lown iff 
+  
+    
+      
+        [
+        X
+        
+          ]
+          
+            (
+            n
+            )
+          
+        
+        =
+        
+          0
+          
+            (
+            n
+            )
+          
+        
+      
+    
+    {\displaystyle [X]^{(n)}=0^{(n)}}
+  
+.
+A set X is generalized low if it satisfies 
+  
+    
+      
+        [
+        X
+        
+          ]
+          ′
+        
+        =
+        [
+        X
+        ]
+        ∨
+        
+          0
+          ′
+        
+      
+    
+    {\displaystyle [X]'=[X]\lor 0'}
+  
+, where 
+  
+    
+      
+        ∨
+      
+    
+    {\displaystyle \lor }
+  
+ is the join.
+A degree [X] is generalized lown iff 
+  
+    
+      
+        [
+        X
+        
+          ]
+          
+            (
+            n
+            )
+          
+        
+        =
+        (
+        [
+        X
+        ]
+        ∨
+        
+          0
+          ′
+        
+        
+          )
+          
+            (
+            n
+            −
+            1
+            )
+          
+        
+      
+    
+    {\displaystyle [X]^{(n)}=([X]\lor 0')^{(n-1)}}
+  
+.
+The low basis theorem states that any nonempty 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+ class in 
+  
+    
+      
+        
+          2
+          
+            ω
+          
+        
+      
+    
+    {\displaystyle 2^{\omega }}
+  
+ contains a set of low degree. This implies that, although low sets are computationally weak, they can still accomplish such feats as computing a completion of Peano Arithmetic. In practice, this allows a restriction on the computational power of objects needed for recursion theoretic constructions: for example, those used in the analyzing the proof-theoretic strength of Ramsey's theorem.

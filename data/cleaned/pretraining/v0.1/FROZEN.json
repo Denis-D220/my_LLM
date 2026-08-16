@@ -1,0 +1,389 @@
+{
+  "format": "llm_pretraining_corpus_freeze",
+  "format_version": 1,
+  "frozen_at_utc": "2026-08-15T07:08:58.460691+00:00",
+  "corpus": "v0.1",
+  "status": "FROZEN",
+  "policy": "This corpus is immutable. Any change to cleaning, filtering, deduplication, or decontamination produces a new corpus version; it never modifies this one.",
+  "documents": 1160605,
+  "characters": 5056851885,
+  "utf8_bytes": 5092495573,
+  "uncompressed_jsonl_bytes": 5533247251,
+  "manifest_sha256": "50ca9f341c2114a1867fafeb425500a0e2e663c6fefff5b33a6b7d36936dc580",
+  "evaluation_sha256": "6c994e255976ea692251cee0d0d43218dff52ae6f958d706e7a084c39dd75452",
+  "validation_report": {
+    "path": "data\\audits\\corpus-v0.1-validation.json",
+    "sha256": "80de8f07a00aeec55b272942ac9b8cbc8099dad879bc92a200ca6ba792bfbe98"
+  },
+  "shards": [
+    {
+      "name": "corpus-00000.jsonl.gz",
+      "compressed_bytes": 93246525,
+      "compressed_sha256": "ffa3854cd324aed29af8e8e26fa0fd64ec311061843e98aea24727fe429f4008",
+      "uncompressed_bytes": 256010676,
+      "documents": 55110,
+      "characters": 233350194,
+      "utf8_bytes": 235052206
+    },
+    {
+      "name": "corpus-00001.jsonl.gz",
+      "compressed_bytes": 7556816,
+      "compressed_sha256": "a6591c99534e51a8851a8908c8dc03a94a5350300dacbf88de9418e682f6c814",
+      "uncompressed_bytes": 20781549,
+      "documents": 4323,
+      "characters": 19012107,
+      "utf8_bytes": 19131230
+    },
+    {
+      "name": "corpus-00002.jsonl.gz",
+      "compressed_bytes": 93576555,
+      "compressed_sha256": "5825a22c202e98a2e6ed961c6d85e189b73de38232a56c6bfcc55a6a6f149e78",
+      "uncompressed_bytes": 256001989,
+      "documents": 54637,
+      "characters": 233650818,
+      "utf8_bytes": 235238268
+    },
+    {
+      "name": "corpus-00003.jsonl.gz",
+      "compressed_bytes": 5273001,
+      "compressed_sha256": "68238b1dcc2969fc03f1ee2f4b3f44464801d464d141c9de33f774b532167e24",
+      "uncompressed_bytes": 14490484,
+      "documents": 3041,
+      "characters": 13252186,
+      "utf8_bytes": 13334496
+    },
+    {
+      "name": "corpus-00004.jsonl.gz",
+      "compressed_bytes": 93500226,
+      "compressed_sha256": "f6e84352770391a9715d419deccad43825859019cfdc34383d3dc37c081721e9",
+      "uncompressed_bytes": 256003741,
+      "documents": 54232,
+      "characters": 233763607,
+      "utf8_bytes": 235405579
+    },
+    {
+      "name": "corpus-00005.jsonl.gz",
+      "compressed_bytes": 3947478,
+      "compressed_sha256": "4d7e04bc143463b6a17767a03995667a5a06baf42fc0bb3cc3c9d065fe4c4fb7",
+      "uncompressed_bytes": 10771186,
+      "documents": 2273,
+      "characters": 9842604,
+      "utf8_bytes": 9908378
+    },
+    {
+      "name": "corpus-00006.jsonl.gz",
+      "compressed_bytes": 93272183,
+      "compressed_sha256": "59d29a058d6c099472200fbecb99a34ab012c4169bca021e12981ce422ff811d",
+      "uncompressed_bytes": 256000516,
+      "documents": 52923,
+      "characters": 233955737,
+      "utf8_bytes": 235845076
+    },
+    {
+      "name": "corpus-00007.jsonl.gz",
+      "compressed_bytes": 7705568,
+      "compressed_sha256": "cb8fdee3c902baf6ae38d196180da4b704b2ec3c9c3d97555d618f57f47ee055",
+      "uncompressed_bytes": 21150553,
+      "documents": 4509,
+      "characters": 19305039,
+      "utf8_bytes": 19442343
+    },
+    {
+      "name": "corpus-00008.jsonl.gz",
+      "compressed_bytes": 93536039,
+      "compressed_sha256": "a9c2c2ca111c8aa4a8ccf617878131b269a992fb3ffb70fa12228f13597bb509",
+      "uncompressed_bytes": 256007062,
+      "documents": 54212,
+      "characters": 233888716,
+      "utf8_bytes": 235436149
+    },
+    {
+      "name": "corpus-00009.jsonl.gz",
+      "compressed_bytes": 4117306,
+      "compressed_sha256": "70f315d5e27e939d4db209734b9c7ecd9b7f3ca2c704b1bfcfe7295eb3a0d853",
+      "uncompressed_bytes": 11249545,
+      "documents": 2449,
+      "characters": 10254519,
+      "utf8_bytes": 10319432
+    },
+    {
+      "name": "corpus-00010.jsonl.gz",
+      "compressed_bytes": 93541031,
+      "compressed_sha256": "081630d31424e500015238f46216fb57dfc6855fb20c7327ab4bc0af20bff811",
+      "uncompressed_bytes": 256000071,
+      "documents": 53401,
+      "characters": 234038330,
+      "utf8_bytes": 235716183
+    },
+    {
+      "name": "corpus-00011.jsonl.gz",
+      "compressed_bytes": 4278521,
+      "compressed_sha256": "e8c399fe67c594022f0bf76651bfaa0edee9e0c859d6f32b350fb0a3f07bd285",
+      "uncompressed_bytes": 11694759,
+      "documents": 2595,
+      "characters": 10639677,
+      "utf8_bytes": 10706542
+    },
+    {
+      "name": "corpus-00012.jsonl.gz",
+      "compressed_bytes": 93401905,
+      "compressed_sha256": "cbbbaf136943493791e29acc5658ec25bea7e135329b6646b3d89e854910c752",
+      "uncompressed_bytes": 256000704,
+      "documents": 53825,
+      "characters": 234087712,
+      "utf8_bytes": 235576678
+    },
+    {
+      "name": "corpus-00013.jsonl.gz",
+      "compressed_bytes": 3602033,
+      "compressed_sha256": "e1864fe18c45aad080a485fa56e3a04b74cab5b6af83b29ba675d3c397a9c151",
+      "uncompressed_bytes": 9944801,
+      "documents": 2270,
+      "characters": 9026551,
+      "utf8_bytes": 9079887
+    },
+    {
+      "name": "corpus-00014.jsonl.gz",
+      "compressed_bytes": 93554980,
+      "compressed_sha256": "590ac34d4853d9cada7b67d6d4845ea62086a0b0e05b9191daaf10e5b85291ca",
+      "uncompressed_bytes": 256006433,
+      "documents": 54409,
+      "characters": 233778848,
+      "utf8_bytes": 235355633
+    },
+    {
+      "name": "corpus-00015.jsonl.gz",
+      "compressed_bytes": 1274810,
+      "compressed_sha256": "5d88fb32a885ad746dfa999c7aa174b0fbc69bd0ce201f02de56768139770d64",
+      "uncompressed_bytes": 3524875,
+      "documents": 751,
+      "characters": 3219802,
+      "utf8_bytes": 3237734
+    },
+    {
+      "name": "corpus-00016.jsonl.gz",
+      "compressed_bytes": 93731153,
+      "compressed_sha256": "16ae57f884eac6200b313f9282f120fbc6ec0708a3afd20fd538478f364f1c72",
+      "uncompressed_bytes": 256004585,
+      "documents": 53797,
+      "characters": 233961122,
+      "utf8_bytes": 235586405
+    },
+    {
+      "name": "corpus-00017.jsonl.gz",
+      "compressed_bytes": 8109685,
+      "compressed_sha256": "b932e5cad0b29aa4192a4320b9b11be9b11dad6d1bb56d9ba82a5d2581a20e3a",
+      "uncompressed_bytes": 22245064,
+      "documents": 4652,
+      "characters": 20336777,
+      "utf8_bytes": 20473863
+    },
+    {
+      "name": "corpus-00018.jsonl.gz",
+      "compressed_bytes": 93470812,
+      "compressed_sha256": "567594ddc96e5aa5676001f8dfb48e907065cc830882a15f573f34e7ff7e8654",
+      "uncompressed_bytes": 256015149,
+      "documents": 53965,
+      "characters": 233682733,
+      "utf8_bytes": 235538353
+    },
+    {
+      "name": "corpus-00019.jsonl.gz",
+      "compressed_bytes": 8865393,
+      "compressed_sha256": "6fec94994baaf9eb9793e944951d0a3c40d654006108bc9b2bfc0da4090df688",
+      "uncompressed_bytes": 24310305,
+      "documents": 5247,
+      "characters": 22127053,
+      "utf8_bytes": 22322531
+    },
+    {
+      "name": "corpus-00020.jsonl.gz",
+      "compressed_bytes": 93809907,
+      "compressed_sha256": "7f63b41b134b142fe82ca1fbfa8bc50a9a8487f02cdb3e33ebf9f1cf7b15efc9",
+      "uncompressed_bytes": 256001738,
+      "documents": 53932,
+      "characters": 233989587,
+      "utf8_bytes": 235529007
+    },
+    {
+      "name": "corpus-00021.jsonl.gz",
+      "compressed_bytes": 4524957,
+      "compressed_sha256": "1677811dad17a7555f5e80d059aabf05f8b3294ad465967f562a3bd69d03385e",
+      "uncompressed_bytes": 12548193,
+      "documents": 2726,
+      "characters": 11442988,
+      "utf8_bytes": 11514894
+    },
+    {
+      "name": "corpus-00022.jsonl.gz",
+      "compressed_bytes": 93520330,
+      "compressed_sha256": "9d143efcbec55ed086f816e85355baaea4931082919f5479f40b65ec4382e152",
+      "uncompressed_bytes": 256004205,
+      "documents": 53412,
+      "characters": 234182372,
+      "utf8_bytes": 235736795
+    },
+    {
+      "name": "corpus-00023.jsonl.gz",
+      "compressed_bytes": 8178692,
+      "compressed_sha256": "63411ad790c18ca9779939f58a01838383efa123ab07c9027ae96d509ff479d6",
+      "uncompressed_bytes": 22339766,
+      "documents": 4718,
+      "characters": 20415141,
+      "utf8_bytes": 20546931
+    },
+    {
+      "name": "corpus-00024.jsonl.gz",
+      "compressed_bytes": 93532723,
+      "compressed_sha256": "44160a8f473ded0f1ba96484047d78ecc8ea1b2d5125943d54eb6ca898d1762c",
+      "uncompressed_bytes": 256001336,
+      "documents": 53254,
+      "characters": 234022036,
+      "utf8_bytes": 235791475
+    },
+    {
+      "name": "corpus-00025.jsonl.gz",
+      "compressed_bytes": 10158324,
+      "compressed_sha256": "6e510cbc8ac3d64203a0a1e3de8375b3cbbe54cbbfb5932241e54118768fd16a",
+      "uncompressed_bytes": 27712918,
+      "documents": 5904,
+      "characters": 25283342,
+      "utf8_bytes": 25464140
+    },
+    {
+      "name": "corpus-00026.jsonl.gz",
+      "compressed_bytes": 93152129,
+      "compressed_sha256": "bd32f728eb56e1fdccc27b3e517b2c1d23db9e51fabed909e833ed9ac2aa0598",
+      "uncompressed_bytes": 256000884,
+      "documents": 52980,
+      "characters": 233892219,
+      "utf8_bytes": 235856198
+    },
+    {
+      "name": "corpus-00027.jsonl.gz",
+      "compressed_bytes": 8536948,
+      "compressed_sha256": "5c0240b22310076768cef623db84b810276cca5ec4884a4b51918146cf8bc2dd",
+      "uncompressed_bytes": 23564671,
+      "documents": 5016,
+      "characters": 21535310,
+      "utf8_bytes": 21661865
+    },
+    {
+      "name": "corpus-00028.jsonl.gz",
+      "compressed_bytes": 93489066,
+      "compressed_sha256": "218abf1cc281cb423280bbb636358e2f1931000acc8b355329ccd6a788021c5f",
+      "uncompressed_bytes": 256001425,
+      "documents": 53381,
+      "characters": 234211330,
+      "utf8_bytes": 235730425
+    },
+    {
+      "name": "corpus-00029.jsonl.gz",
+      "compressed_bytes": 2692151,
+      "compressed_sha256": "d75d3f811dad23ad4a0ec4091a272cd41aa96fb4aca6b2e75714e202b3962876",
+      "uncompressed_bytes": 7393851,
+      "documents": 1678,
+      "characters": 6713833,
+      "utf8_bytes": 6755362
+    },
+    {
+      "name": "corpus-00030.jsonl.gz",
+      "compressed_bytes": 93586347,
+      "compressed_sha256": "eda3bd520090f0e05c243ba5c89cb25ab9c790de449189db09e478e0c16b4627",
+      "uncompressed_bytes": 256005967,
+      "documents": 53258,
+      "characters": 234184950,
+      "utf8_bytes": 235775726
+    },
+    {
+      "name": "corpus-00031.jsonl.gz",
+      "compressed_bytes": 8627895,
+      "compressed_sha256": "fa80f6b0a5970bdfccef3697d5c83c1f237d9135ff6a1eb4c50d847097035138",
+      "uncompressed_bytes": 23548902,
+      "documents": 5073,
+      "characters": 21495802,
+      "utf8_bytes": 21625957
+    },
+    {
+      "name": "corpus-00032.jsonl.gz",
+      "compressed_bytes": 93584675,
+      "compressed_sha256": "c4d7eae26387f1e91768e9dbdeabbb22961ecf3baa69448b570206921dc82324",
+      "uncompressed_bytes": 256000215,
+      "documents": 53571,
+      "characters": 234113639,
+      "utf8_bytes": 235657232
+    },
+    {
+      "name": "corpus-00033.jsonl.gz",
+      "compressed_bytes": 1429559,
+      "compressed_sha256": "b91775dc0ec5ac063f2f18439de6304bfbb37878f485722846d2a0aace223e42",
+      "uncompressed_bytes": 3862092,
+      "documents": 864,
+      "characters": 3514794,
+      "utf8_bytes": 3533535
+    },
+    {
+      "name": "corpus-00034.jsonl.gz",
+      "compressed_bytes": 93407219,
+      "compressed_sha256": "98b4ec35fbf915b0a3776df9e1077df3ec92cb2690b4e8ada682cf8ee9eaa262",
+      "uncompressed_bytes": 256003585,
+      "documents": 52375,
+      "characters": 234349567,
+      "utf8_bytes": 236106226
+    },
+    {
+      "name": "corpus-00035.jsonl.gz",
+      "compressed_bytes": 9838290,
+      "compressed_sha256": "2f2bc006f698d031d8050932b5f7334a02010c505fe54fe4d2f1a2b166cb3820",
+      "uncompressed_bytes": 26872995,
+      "documents": 5877,
+      "characters": 24484621,
+      "utf8_bytes": 24640863
+    },
+    {
+      "name": "corpus-00036.jsonl.gz",
+      "compressed_bytes": 93446667,
+      "compressed_sha256": "cd168dc4bc40a6c5a1c93a1ffd144d90a39fb1f622ca7c1a35867f02c71b30f2",
+      "uncompressed_bytes": 256000449,
+      "documents": 52590,
+      "characters": 234466118,
+      "utf8_bytes": 236022934
+    },
+    {
+      "name": "corpus-00037.jsonl.gz",
+      "compressed_bytes": 7587085,
+      "compressed_sha256": "2a61136eb70d08ce4ea2851b8f18aefe9120242b77db9f0b54139318ad90771c",
+      "uncompressed_bytes": 20921290,
+      "documents": 4382,
+      "characters": 19137739,
+      "utf8_bytes": 19256660
+    },
+    {
+      "name": "corpus-00038.jsonl.gz",
+      "compressed_bytes": 93564926,
+      "compressed_sha256": "ac45824133f16abe737e83d95cf052cdd05ae29c322306c57f6b063116c2ffee",
+      "uncompressed_bytes": 256153987,
+      "documents": 53072,
+      "characters": 234321316,
+      "utf8_bytes": 236026176
+    },
+    {
+      "name": "corpus-00039.jsonl.gz",
+      "compressed_bytes": 3492001,
+      "compressed_sha256": "90726129082515d70dece84b9d35873a6b4db47e46bcda84f25153e7304976a1",
+      "uncompressed_bytes": 9490897,
+      "documents": 2176,
+      "characters": 8612128,
+      "utf8_bytes": 8668682
+    },
+    {
+      "name": "corpus-00040.jsonl.gz",
+      "compressed_bytes": 30887069,
+      "compressed_sha256": "b580925f018bb84fcb7e92b01a7a5c862cb6e83daa303b30ca16d34e4234fde0",
+      "uncompressed_bytes": 84603838,
+      "documents": 17745,
+      "characters": 77308921,
+      "utf8_bytes": 77887524
+    }
+  ]
+}

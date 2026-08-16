@@ -1,0 +1,101 @@
+{
+  "format": "llm_pretraining_corpus",
+  "format_version": 1,
+  "created_at_utc": "2026-08-15T03:51:10.775521+00:00",
+  "source": {
+    "path": "D:\\Common Crawl\\Data",
+    "pattern": "cc_text_*.jsonl.gz",
+    "shards": [
+      "cc_text_00000.jsonl.gz",
+      "cc_text_00001.jsonl.gz",
+      "cc_text_00002.jsonl.gz",
+      "cc_text_00003.jsonl.gz",
+      "cc_text_00004.jsonl.gz",
+      "cc_text_00005.jsonl.gz",
+      "cc_text_00006.jsonl.gz",
+      "cc_text_00007.jsonl.gz",
+      "cc_text_00008.jsonl.gz",
+      "cc_text_00009.jsonl.gz",
+      "cc_text_00010.jsonl.gz",
+      "cc_text_00011.jsonl.gz",
+      "cc_text_00012.jsonl.gz",
+      "cc_text_00013.jsonl.gz",
+      "cc_text_00014.jsonl.gz",
+      "cc_text_00015.jsonl.gz",
+      "cc_text_00016.jsonl.gz",
+      "cc_text_00017.jsonl.gz",
+      "cc_text_00018.jsonl.gz",
+      "cc_text_00019.jsonl.gz",
+      "cc_text_00020.jsonl.gz"
+    ],
+    "completed_shards": []
+  },
+  "normalization": {
+    "module": "llm.tokenizer.normalizer.normalize_text",
+    "encoding": "UTF-8",
+    "unicode_form": "NFC",
+    "preserve_case": true,
+    "line_endings": "LF"
+  },
+  "filters": {
+    "language": "eng",
+    "language_rule": "primary code of comma-separated lang field",
+    "script_sanity": {
+      "enabled": true,
+      "reason": "language_script_mismatch",
+      "thresholds": {
+        "min_alphabetic_characters": 100,
+        "min_latin_share": 0.5,
+        "min_dominant_non_latin_share": 0.7
+      }
+    },
+    "quality_thresholds": {
+      "min_characters": 300,
+      "min_words": 50,
+      "min_alphabetic_ratio": 0.4,
+      "max_control_ratio": 0.005,
+      "max_replacement_chars": 5,
+      "max_duplicate_line_ratio": 0.5,
+      "duplicate_line_min_lines": 4,
+      "nav_min_lines": 15,
+      "nav_max_mean_line_length": 30.0,
+      "nav_min_short_line_ratio": 0.8,
+      "nav_min_nav_line_ratio": 0.25,
+      "max_url_line_ratio": 0.5,
+      "keyword_wall_min_words": 200,
+      "keyword_wall_max_type_token_ratio": 0.1
+    },
+    "secret_filtering": true,
+    "exact_deduplication": true,
+    "near_deduplication": false,
+    "evaluation_decontamination": {
+      "enabled": true,
+      "evaluation_file": "data\\evaluation\\model\\v0.1\\pretraining_eval.jsonl",
+      "evaluation_items": 20,
+      "evaluation_items_indexed": 20,
+      "evaluation_items_skipped_short": [],
+      "evaluation_sha256": "6c994e255976ea692251cee0d0d43218dff52ae6f958d706e7a084c39dd75452",
+      "shingle_size": 8,
+      "min_containment": 0.8,
+      "min_evaluation_tokens": 50
+    }
+  },
+  "output": {
+    "shards": [
+      "corpus-00000.jsonl.gz"
+    ],
+    "documents": 9851,
+    "uncompressed_jsonl_bytes": 47334900,
+    "shard_max_bytes": 256000000
+  },
+  "dedup": {
+    "database": "dedup.sqlite",
+    "algorithm": "sha256-of-normalized-utf8",
+    "fingerprints": 9851
+  },
+  "result": {
+    "documents": 9851,
+    "characters": 43303326,
+    "utf8_bytes": 43604053
+  }
+}

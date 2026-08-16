@@ -1,0 +1,47 @@
+Apple Disk Image is a disk image format commonly used by the macOS operating system. When opened, an Apple Disk Image is mounted as a volume within the Finder.
+An Apple Disk Image can be structured according to one of several proprietary disk image formats, including the Universal Disk Image Format (UDIF) from Mac OS X and the New Disk Image Format (NDIF) from Mac OS 9. An Apple disk image file's name usually has ".dmg" as its extension. A disk image is a compressed copy of the contents of a disk or folder. To see the contents of a disk image, one must first open the disk image so it appears on the desktop or in a Finder window.
+
+Features
+Apple Disk Image files are published with a MIME type of application/x-apple-diskimage.
+Different file systems can be contained inside these disk images, and there is also support for creating hybrid optical media images that contain multiple file systems. Some of the file systems supported include Hierarchical File System (HFS), HFS Plus (HFS+), File Allocation Table (FAT), ISO 9660, and Universal Disk Format (UDF).
+Apple Disk Images can be created using utilities bundled with macOS, specifically Disk Copy in Mac OS X v10.2 and earlier and Disk Utility in Mac OS X v10.3 and later. These utilities can also use Apple disk image files as images for burning CDs and DVDs. Disk image files may also be managed via the command line interface using the hdiutil utility.
+In the 10.2.3 release of Jaguar, Apple introduced Compressed Disk Images and Internet-Enabled Disk Images for use with the Apple utility Disk Copy, which was later integrated into Disk Utility in 10.3. The Disk Copy application had the ability to display a multilingual software license agreement before mounting a disk image. The image will not be mounted unless the user indicates agreement with the license.
+An Apple Disk Image allows secure password protection as well as file compression, and hence serves both security and file distribution functions; such a disk image is most commonly used to distribute software over the Internet.
+
+History
+Apple originally created its disk image formats because the resource fork used by Mac applications could not easily be transferred over mixed networks such as those that make up the Internet. Even as the use of resource forks declined with Mac OS X, disk images remained the standard software distribution format. Disk images allow the distributor to control the Finder's presentation of the window, which is commonly used to instruct the user to copy the application to the correct folder.
+A previous version of the format, intended only for floppy disk images, is usually referred to as "Disk Copy 4.2" format, after the version of the Disk Copy utility that was used to handle these images. A similar format that supported compression of floppy disk images is called DART.
+New Disk Image Format (NDIF) was the previous default disk image format in Mac OS 9, and disk images with this format generally have a .img (not to be confused with raw .img disk image files) or .smi file extension. Files with the .smi extension are actually applications that mount an embedded disk image, thus a "Self Mounting Image", intended only for Mac OS 9 and earlier.
+Universal Disk Image Format (UDIF) is the native disk image format for Mac OS X. Disk images in this format typically have a .dmg extension.
+
+File format
+Apple has not released any documentation on the format, but attempts to reverse engineer parts of the format have been successful. The encrypted layer was reverse engineered in an implementation called VileFault (a spoonerism of FileVault).
+Apple disk image files are essentially raw disk images (i.e. contain block data) with some added metadata, optionally with one or two layers applied that provide compression and encryption. In hdiutil, these layers are called CUDIFEncoding and CEncryptedEncoding.
+UDIF supports ADC (an old proprietary compression format by Apple), zlib, bzip2 (as of Mac OS X v10.4), LZFSE (as of Mac OS X v10.11), and lzma (as of macOS v10.15) compression internally.
+
+Metadata
+The UDIF metadata is found at the end of the disk image following the data. This trailer can be described using the following C structure. All values are big-endian (PowerPC byte ordering)
+
+The XML plist contains a blkx (blocks) key, with information about how the preceding data fork is allocated. The main data is stored in a base64 block, using tables identified by the magic 'mish'. This 'mish' structure contains a table about blocks of data and the position and lengths of each "chunk" (usually only one chunk, but compression will create more). The data and resource fork information is probably inherited from NDIF.
+
+Encryption
+The encryption layer comes in two versions. Version 1 has a trailer at the end of the file, while version 2 (default since OS X 10.5) puts it at the beginning. Whether the encryption is a layer outside of or inside of the blkx metadata (UDIF) is unclear from reverse engineered documentation, but judging from the vfcrack demonstration it's probably outside.
+
+Utilities
+There are few options available to extract files or mount the proprietary Apple Disk Image format. Some cross-platform conversion utilities are:
+
+dmg2img was originally written in Perl; however, the Perl version is no longer maintained, and the project was rewritten in C. It extracts the raw disk image from a DMG, without handling the file system inside. UDIF ADC-compressed images (UDCO) have been supported since version 1.5.
+DMGEXtractor is written in Java with a graphical user interface (GUI), and it supports more advanced features of dmg including AES-128 encrypted images but not UDCO images.
+The Sleuth Kit. Only handles uncompressed DMG format, HFS+, and APFS.
+Most dmg files are unencrypted. Because the dmg metadata is found in the end, a program not understanding dmg files can nevertheless read it as if it was a normal disk image, as long as there is support for the file system inside. Tools with this sort of capacity include:
+
+Cross-platform: 7-zip (HFS/HFS+), PeaZip (HFS/HFS+).
+Windows: UltraISO, IsoBuster, MacDrive (HFS/HFS+).
+Unix-like: cdrecord and mount (e.g. mount -o loop,ro -t hfsplus imagefile.dmg /mnt/mountpoint).
+Tools with specific dmg support include:
+
+Windows:
+Transmac can handle both UDIF .dmg files and sparsebundles, as well as HFS/HFS+ and APFS. It is unknown whether it handles encryption. It can be used to create bootable macOS installers under Windows.
+A free Apple DMG Disk Image Viewer also exists, but it is unknown how much it actually supports.
+Unix-like:
+darling-dmg is a FUSE module enabling easy DMG file mounting on Linux. It supports UDIF and HFS/HFS+.

@@ -1,0 +1,188 @@
+In concurrent programming, an operation (or set of operations) is linearizable if it consists of an ordered list of invocation and response events, that may be extended by adding response events such that:
+
+The extended list can be re-expressed as a sequential history (is serializable).
+That sequential history is a subset of the original unextended list.
+Informally, this means that the unmodified list of events is linearizable if and only if its invocations were serializable, but some of the responses of the serial schedule have yet to return.
+In a concurrent system, processes can access a shared object at the same time. Because multiple processes are accessing a single object, a situation may arise in which while one process is accessing the object, another process changes its contents. Making a system linearizable is one solution to this problem. In a linearizable system, although operations overlap on a shared object, each operation appears to take place instantaneously. Linearizability is a strong correctness condition, which constrains what outputs are possible when an object is accessed by multiple processes concurrently. It is a safety property which ensures that operations do not complete unexpectedly or unpredictably. If a system is linearizable it allows a programmer to reason about the system.
+
+History
+Linearizability was first introduced as a consistency model by Herlihy and Wing in 1987. It encompassed more restrictive definitions of atomic, such as "an atomic operation is one which cannot be (or is not) interrupted by concurrent operations", which are usually vague about when an operation is considered to begin and end.
+An atomic object can be understood immediately and completely from its sequential definition, as a set of operations run in parallel which always appear to occur one after the other; no inconsistencies may emerge. Specifically, linearizability guarantees that the invariants of a system are observed and preserved by all operations: if all operations individually preserve an invariant, the system as a whole will.
+
+Definition
+A concurrent system consists of a collection of processes communicating through shared data structures or objects. Linearizability is important in these concurrent systems where objects may be accessed by multiple processes at the same time and a programmer needs to be able to reason about the expected results. An execution of a concurrent system results in a history, an ordered sequence of completed operations.
+A history is a sequence of invocations and responses made of an object by a set of threads or processes. An invocation can be thought of as the start of an operation, and the response being the signaled end of that operation. Each invocation of a function will have a subsequent response. This can be used to model any use of an object. Suppose, for example, that two threads, A and B, both attempt to grab a lock, backing off if it's already taken. This would be modeled as both threads invoking the lock operation, then both threads receiving a response, one successful, one not.
+
+A sequential history is one in which all invocations have immediate responses; that is the invocation and response are considered to take place instantaneously. A sequential history should be trivial to reason about, as it has no real concurrency; the previous example was not sequential, and thus is hard to reason about. This is where linearizability comes in.
+A history is linearizable if there is a linear order 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+ of the completed operations such that:
+
+For every completed operation in 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+, the operation returns the same result in the execution as the operation would return if every operation was completed one by one in order 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+.
+If an operation op1 completes (gets a response) before op2 begins (invokes), then op1 precedes op2 in 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+.
+In other words:
+
+its invocations and responses can be reordered to yield a sequential history;
+that sequential history is correct according to the sequential definition of the object;
+if a response preceded an invocation in the original history, it must still precede it in the sequential reordering.
+Note that the first two bullet points here match serializability: the operations appear to happen in some order. It is the last point which is unique to linearizability, and is thus the major contribution of Herlihy and Wing.
+Consider two ways of reordering the locking example above.
+
+Reordering B's invocation after A's response yields a sequential history. This is easy to reason about, as all operations now happen in an obvious order. However, it does not match the sequential definition of the object (it doesn't match the semantics of the program): A should have successfully obtained the lock, and B should have subsequently aborted.
+
+This is another correct sequential history. It is also a linearization since it matches the sequential definition. Note that the definition of linearizability only precludes responses that precede invocations from being reordered; since the original history had no responses before invocations, they can be reordered. Hence the original history is indeed linearizable.
+An object (as opposed to a history) is linearizable if all valid histories of its use can be linearized. This is a much harder assertion to prove.
+
+Linearizability versus serializability
+Consider the following history, again of two objects interacting with a lock:
+
+This history is not valid because there is a point at which both A and B hold the lock; moreover, it cannot be reordered to a valid sequential history without violating the ordering rule. Therefore, it is not linearizable. However, under serializability, B's unlock operation may be moved to before A's original lock, which is a valid history (assuming the object begins the history in a locked state):
+
+This reordering is sensible provided there is no alternative means of communicating between A and B. Linearizability is better when considering individual objects separately, as the reordering restrictions ensure that multiple linearizable objects are, considered as a whole, still linearizable.
+
+Linearization points
+This definition of linearizability is equivalent to the following:
+
+All function calls have a linearization point at some instant between their invocation and their response.
+All functions appear to occur instantly at their linearization point, behaving as specified by the sequential definition.
+This alternative is usually much easier to prove. It is also much easier to reason about as a user, largely due to its intuitiveness. This property of occurring instantaneously, or indivisibly, leads to the use of the term atomic as an alternative to the longer "linearizable".
+In the examples below, the linearization point of the counter built on compare-and-swap is the linearization point of the first (and only) successful compare-and-swap update. The counter built using locking can be considered to linearize at any moment while the locks are held, since any potentially conflicting operations are excluded from running during that period.
+
+Primitive atomic instructions
+Processors have instructions that can be used to implement locking and lock-free and wait-free algorithms. The ability to temporarily inhibit interrupts, ensuring that the currently running process cannot be context switched, also suffices on a uniprocessor. These instructions are used directly by compiler and operating system writers but are also abstracted and exposed as bytecodes and library functions in higher-level languages:
+
+atomic read-write;
+atomic swap (the RDLK instruction in some Burroughs mainframes, and the XCHG x86 instruction);
+test-and-set;
+fetch-and-add;
+compare-and-swap;
+load-link/store-conditional.
+Most processors include store operations that are not atomic with respect to memory. These include multiple-word stores and string operations. Should a high priority interrupt occur when a portion of the store is complete, the operation must be completed when the interrupt level is returned. The routine that processes the interrupt must not modify the memory being changed. It is important to take this into account when writing interrupt routines.
+When there are multiple instructions which must be completed without interruption, a CPU instruction which temporarily disables interrupts is used. This must be kept to only a few instructions and the interrupts must be re-enabled to avoid unacceptable response time to interrupts or even losing interrupts. This mechanism is not sufficient in a multi-processor environment since each CPU can interfere with the process regardless of whether interrupts occur or not. Further, in the presence of an instruction pipeline, uninterruptible operations present a security risk, as they can potentially be chained in an infinite loop to create a denial of service attack, as in the Cyrix coma bug.
+The C standard and SUSv3 provide sig_atomic_t for simple atomic reads and writes; incrementing or decrementing is not guaranteed to be atomic. More complex atomic operations are available in C11, which provides stdatomic.h. Compilers use the hardware features or more complex methods to implement the operations; an example is libatomic of GCC.
+The ARM instruction set provides LDREX and STREX instructions which can be used to implement atomic memory access by using exclusive monitors implemented in the processor to track memory accesses for a specific address. However, if a context switch occurs between calls to LDREX and STREX, the documentation notes that STREX will fail, indicating the operation should be retried. In the case of 64-bit ARMv8-A architecture, it provides LDXR and STXR instructions for byte, half-word, word, and double-word size.
+
+High-level atomic operations
+The easiest way to achieve linearizability is running groups of primitive operations in a critical section. Strictly, independent operations can then be carefully permitted to overlap their critical sections, provided this does not violate linearizability. Such an approach must balance the cost of large numbers of locks against the benefits of increased parallelism.
+Another approach, favoured by researchers (but not yet widely used in the software industry), is to design a linearizable object using the native atomic primitives provided by the hardware. This has the potential to maximise available parallelism and minimise synchronisation costs, but requires mathematical proofs which show that the objects behave correctly.
+A promising hybrid of these two is to provide a transactional memory abstraction. As with critical sections, the user marks sequential code that must be run in isolation from other threads. The implementation then ensures the code executes atomically. This style of abstraction is common when interacting with databases; for instance, when using the Spring Framework, annotating a method with @Transactional will ensure all enclosed database interactions occur in a single database transaction. Transactional memory goes a step further, ensuring that all memory interactions occur atomically. As with database transactions, issues arise regarding composition of transactions, especially database and in-memory transactions.
+A common theme when designing linearizable objects is to provide an all-or-nothing interface: either an operation succeeds completely, or it fails and does nothing. (ACID databases refer to this principle as atomicity.) If the operation fails (usually due to concurrent operations), the user must retry, usually performing a different operation. For example:
+
+Compare-and-swap writes a new value into a location only if the latter's contents matches a supplied old value. This is commonly used in a read–modify-CAS sequence: the user reads the location, computes a new value to write, and writes it with a CAS (compare-and-swap); if the value changes concurrently, the CAS will fail and the user tries again.
+Load-link/store-conditional encodes this pattern more directly: the user reads the location with load-link, computes a new value to write, and writes it with store-conditional; if the value has changed concurrently, the SC (store-conditional) will fail and the user tries again.
+In a database transaction, if the transaction cannot be completed due to a concurrent operation (e.g. in a deadlock), the transaction will be aborted and the user must try again.
+
+Examples
+
+Counters
+To demonstrate the power and necessity of linearizability we will consider a simple counter which different processes can increment.
+We would like to implement a counter object which multiple processes can access. Many common systems make use of counters to keep track of the number of times an event has occurred.
+The counter object can be accessed by multiple processes and has two available operations.
+
+Increment - adds 1 to the value stored in the counter, return acknowledgement
+Read - returns the current value stored in the counter without changing it.
+We will attempt to implement this counter object using shared registers.
+Our first attempt which we will see is non-linearizable has the following implementation using one shared register among the processes.
+
+Non-atomic
+The naive, non-atomic implementation:
+Increment:
+
+Read the value in the register R
+Add one to the value
+Writes the new value back into register R
+Read:
+Read register R
+This simple implementation is not linearizable, as is demonstrated by the following example.
+Imagine two processes are running accessing the single counter object initialized to have value 0:
+
+The first process reads the value in the register as 0.
+The first process adds one to the value, the counter's value should be 1, but before it has finished writing the new value back to the register it may become suspended, meanwhile the second process is running:
+The second process reads the value in the register, which is still equal to 0;
+The second process adds one to the value;
+The second process writes the new value into the register, the register now has value 1.
+The second process is finished running and the first process continues running from where it left off:
+
+The first process writes 1 into the register, unaware that the other process has already updated the value in the register to 1.
+In the above example, two processes invoked an increment command, however the value of the object only increased from 0 to 1, instead of 2 as it should have. One of the increment operations was lost as a result of the system not being linearizable.
+The above example shows the need for carefully thinking through implementations of data structures and how linearizability can have an effect on the correctness of the system.
+
+Atomic
+To implement a linearizable or atomic counter object we will modify our previous implementation so each process Pi will use its own register Ri. This is similar to how grow-only counter CRDTs work.
+Each process increments and reads according to the following algorithm:
+Increment:
+
+Read value in register Ri.
+Add one to the value.
+Write new value back into Ri
+Read:
+
+Read registers R1, R2, ... Rn.
+Return the sum of all registers.
+This implementation solves the problem with our original implementation. In this system the increment operations are linearized at the write step. The linearization point of an increment operation is when that operation writes the new value in its register Ri. The read operations are linearized to a point in the system when the value returned by the read is equal to the sum of all the values stored in each register Ri.
+This is a trivial example. In a real system, the operations can be more complex and the errors introduced extremely subtle. For example, reading a 64-bit value from memory may actually be implemented as two sequential reads of two 32-bit memory locations. If a process has only read the first 32 bits, and before it reads the second 32 bits the value in memory gets changed, it will have neither the original value nor the new value but a mixed-up value.
+Furthermore, the specific order in which the processes run can change the results, making such an error difficult to detect, reproduce and debug.
+
+Compare-and-swap
+
+Most systems provide an atomic compare-and-swap instruction that reads from a memory location, compares the value with an "expected" one provided by the user, and writes out a "new" value if the two match, returning whether the update succeeded. We can use this to fix the non-atomic counter algorithm as follows:
+
+Read the value in the memory location;
+add one to the value;
+use compare-and-swap to write the incremented value back;
+retry if the value read in by the compare-and-swap did not match the value we originally read.
+Since the compare-and-swap occurs (or appears to occur) instantaneously, if another process updates the location while we are in-progress, the compare-and-swap is guaranteed to fail.
+
+Fetch-and-increment
+
+Many systems provide an atomic fetch-and-increment instruction that reads from a memory location, unconditionally writes a new value (the old value plus one), and returns the old value.
+We can use this to fix the non-atomic counter algorithm as follows:
+
+Use fetch-and-increment to read the old value and write the incremented value back.
+Using fetch-and increment is always better (requires fewer memory references) for some algorithms—such as the one shown here—than compare-and-swap, even though Herlihy earlier proved that compare-and-swap is better for certain other algorithms that can't be implemented at all using only fetch-and-increment.
+So CPU designs with both fetch-and-increment and compare-and-swap (or equivalent instructions) may be a better choice than ones with only one or the other.
+
+Locking
+
+Another approach is to turn the naive algorithm into a critical section, preventing other threads from disrupting it, using a lock. Once again fixing the non-atomic counter algorithm:
+
+Acquire a lock, excluding other threads from running the critical section (steps 2–4) at the same time;
+read the value in the memory location;
+add one to the value;
+write the incremented value back to the memory location;
+release the lock.
+This strategy works as expected; the lock prevents other threads from updating the value until it is released. However, when compared with direct use of atomic operations, it can suffer from significant overhead due to lock contention. To improve program performance, it may therefore be a good idea to replace simple critical sections with atomic operations for non-blocking synchronization (as we have just done for the counter with compare-and-swap and fetch-and-increment), instead of the other way around, but unfortunately a significant improvement is not guaranteed and lock-free algorithms can easily become too complicated to be worth the effort.

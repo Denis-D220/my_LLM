@@ -1,0 +1,255 @@
+# SQL and the Shell
+
+### Declarative Queries and Pipeline Composition
+
+---
+
+## I. Two Declarative Traditions
+
+SQL and the Unix shell were designed two decades apart for unrelated purposes, yet both won by making composition cheap. SQL lets you describe the result you want and leaves the access path to a query planner. The shell lets you connect small programs through byte streams and leaves scheduling to the kernel. In both, the unit of reuse is a stage that can be recombined without modification.
+
+Both also share a failure mode: because composition is so easy, it is equally easy to build something correct on sample data and catastrophically wrong at scale — a query that scans a hundred million rows, a pipeline that loads a file into memory when it could have streamed.
+
+---
+
+## II. SQL Fundamentals
+
+A query is evaluated in a logical order different from how it is written: `FROM`, then `WHERE`, then `GROUP BY`, then `HAVING`, then `SELECT`, then `ORDER BY`, then `LIMIT`. This explains two persistent confusions — why a column alias defined in `SELECT` cannot be used in `WHERE`, and why `WHERE` filters rows while `HAVING` filters groups.
+
+```sql
+SELECT
+    c.country,
+    COUNT(*)              AS order_count,
+    SUM(o.total_cents)    AS revenue_cents,
+    AVG(o.total_cents)::numeric(12,2) AS avg_order
+FROM orders AS o
+JOIN customers AS c ON c.id = o.customer_id
+WHERE o.placed_at >= DATE '2025-01-01'
+  AND o.status <> 'cancelled'
+GROUP BY c.country
+HAVING COUNT(*) >= 50
+ORDER BY revenue_cents DESC
+LIMIT 20;
+```
+
+Joins determine which rows survive. `INNER JOIN` keeps only matching pairs. `LEFT JOIN` keeps all left rows, filling unmatched right columns with `NULL`. A frequent bug is filtering a left-joined table in `WHERE`, which discards the `NULL` rows and silently converts the outer join back into an inner one. The predicate belongs in the `ON` clause:
+
+```sql
+-- wrong: WHERE r.rating > 3 drops customers with no reviews
+SELECT c.id, r.rating
+FROM customers c
+LEFT JOIN reviews r ON r.customer_id = c.id AND r.rating > 3;
+```
+
+`NULL` is not a value but a marker for unknown, and it propagates. `NULL = NULL` is not true but `NULL`; comparisons must use `IS NULL` and `IS DISTINCT FROM`. Aggregates skip nulls, so `COUNT(col)` and `COUNT(*)` differ whenever `col` is nullable.
+
+---
+
+## III. Window Functions and CTEs
+
+Window functions compute across a set of rows without collapsing them, which is what separates them from `GROUP BY`.
+
+```sql
+SELECT
+    product_id,
+    sold_on,
+    units,
+    SUM(units) OVER (PARTITION BY product_id ORDER BY sold_on)
+        AS running_total,
+    AVG(units) OVER (PARTITION BY product_id ORDER BY sold_on
+                     ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+        AS moving_avg_7d,
+    units - LAG(units) OVER (PARTITION BY product_id ORDER BY sold_on)
+        AS day_over_day,
+    RANK() OVER (PARTITION BY sold_on ORDER BY units DESC)
+        AS daily_rank
+FROM daily_sales;
+```
+
+`ROW_NUMBER` assigns unique sequential numbers, `RANK` leaves gaps after ties, `DENSE_RANK` does not. The canonical "top N per group" uses a numbered subquery:
+
+```sql
+WITH ranked AS (
+    SELECT *, ROW_NUMBER() OVER (PARTITION BY category_id
+                                 ORDER BY revenue DESC) AS rn
+    FROM product_revenue
+)
+SELECT category_id, product_id, revenue
+FROM ranked
+WHERE rn <= 3;
+```
+
+Common table expressions name intermediate results and make long queries readable. Recursive CTEs walk hierarchies:
+
+```sql
+WITH RECURSIVE org AS (
+    SELECT id, manager_id, name, 1 AS depth
+    FROM employees WHERE manager_id IS NULL
+  UNION ALL
+    SELECT e.id, e.manager_id, e.name, org.depth + 1
+    FROM employees e
+    JOIN org ON e.manager_id = org.id
+    WHERE org.depth < 10
+)
+SELECT depth, name FROM org ORDER BY depth, name;
+```
+
+The depth guard is not optional; a cycle in the data produces an infinite loop otherwise.
+
+---
+
+## IV. Indexes and Query Plans
+
+An index is an ordered structure, usually a B-tree, that converts a full scan into a lookup. The rule that governs composite indexes is the **leftmost prefix**: an index on `(tenant_id, created_at)` serves queries filtering on `tenant_id` alone or on both, but not on `created_at` alone.
+
+```sql
+CREATE INDEX idx_orders_tenant_time ON orders (tenant_id, created_at DESC);
+CREATE INDEX idx_orders_active ON orders (customer_id) WHERE status = 'open';
+CREATE UNIQUE INDEX idx_users_email ON users (lower(email));
+```
+
+Indexes are defeated by wrapping the column in a function. `WHERE DATE(created_at) = '2025-06-01'` cannot use an index on `created_at`; the sargable rewrite is a range predicate:
+
+```sql
+WHERE created_at >= '2025-06-01' AND created_at < '2025-06-02'
+```
+
+`EXPLAIN ANALYZE` shows what the planner actually did, and the numbers that matter are estimated versus actual row counts. A large divergence means stale statistics, and the plan chosen from bad estimates is usually the real cause of a slow query:
+
+```sql
+EXPLAIN (ANALYZE, BUFFERS)
+SELECT * FROM orders WHERE tenant_id = 7 AND created_at > NOW() - INTERVAL '30 days';
+```
+
+Every index accelerates reads and slows writes, since each insert, update, and delete must maintain it. Indexes are a deliberate trade, not a default.
+
+---
+
+## V. Transactions and Isolation
+
+A transaction groups statements into an atomic unit with ACID properties. Isolation levels trade correctness against concurrency, and each permits specific anomalies: `READ COMMITTED` allows non-repeatable reads, `REPEATABLE READ` allows phantoms in some engines, and `SERIALIZABLE` allows none but can abort transactions that would violate serial equivalence.
+
+```sql
+BEGIN;
+UPDATE accounts SET balance = balance - 500 WHERE id = 1;
+UPDATE accounts SET balance = balance + 500 WHERE id = 2;
+COMMIT;
+```
+
+Read-modify-write across a round trip is a race. Either push the arithmetic into the database, or lock explicitly:
+
+```sql
+SELECT quantity FROM inventory WHERE sku = 'ABC-1' FOR UPDATE;
+```
+
+Deadlocks occur when transactions acquire the same locks in different orders. The standard prevention is a consistent ordering of resources, and the standard mitigation is retry with backoff, since the engine detects the cycle and aborts one participant.
+
+Upserts handle concurrent inserts of the same key without a lost-update race:
+
+```sql
+INSERT INTO counters (key, hits) VALUES ('page:home', 1)
+ON CONFLICT (key) DO UPDATE SET hits = counters.hits + 1;
+```
+
+---
+
+## VI. Shell Pipelines
+
+The shell composes processes through stdin and stdout. Each stage streams, so a pipeline over a hundred-gigabyte file uses constant memory.
+
+```bash
+# top 20 client IPs by request count from an access log
+awk '{print $1}' access.log \
+  | sort \
+  | uniq -c \
+  | sort -rn \
+  | head -20
+```
+
+`grep` filters lines, `sed` transforms them, `awk` handles field-oriented work, `cut` extracts columns, `tr` translates characters, `sort` and `uniq` group. `xargs` converts a stream into arguments, and the null-delimited form is the only safe one for arbitrary filenames:
+
+```bash
+find . -name '*.log' -mtime +30 -print0 | xargs -0 -P 4 -n 20 gzip -9
+```
+
+`-P 4` runs four compressions in parallel and `-n 20` batches filenames per invocation, which avoids the process-spawn overhead of one `gzip` per file.
+
+`awk` is a small language, not just a field extractor:
+
+```bash
+awk -F',' 'NR > 1 && $3 > 100 { sum += $3; n++ }
+           END { if (n) printf "avg=%.2f n=%d\n", sum/n, n }' sales.csv
+```
+
+---
+
+## VII. Writing Shell Scripts That Do Not Fail Silently
+
+Default shell behaviour ignores errors and continues, which turns a failed step into corrupted output. Every non-trivial script should begin with strict mode:
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+```
+
+`-e` exits on error, `-u` treats unset variables as errors, and `-o pipefail` makes a pipeline fail if any stage fails rather than only the last. Without `pipefail`, `curl bad-url | jq .` succeeds because `jq` succeeded.
+
+Quoting is the other perennial defect. Unquoted variables undergo word splitting and glob expansion:
+
+```bash
+rm -rf "$dir/"          # correct
+rm -rf $dir/            # catastrophic if $dir is empty or contains spaces
+```
+
+Cleanup belongs in a trap so it runs on every exit path:
+
+```bash
+tmpdir=$(mktemp -d)
+trap 'rm -rf "$tmpdir"' EXIT
+
+process_data() {
+    local input=$1 output=$2
+    if [[ ! -r $input ]]; then
+        printf 'error: cannot read %s\n' "$input" >&2
+        return 1
+    fi
+    jq -c '.records[] | select(.active)' "$input" > "$output"
+}
+```
+
+Diagnostics go to stderr so that stdout stays composable. `shellcheck` catches most quoting and portability defects statically and is worth running in CI.
+
+---
+
+## VIII. PowerShell: Objects Instead of Text
+
+PowerShell pipes structured objects rather than bytes, which removes the parsing step that dominates Unix pipelines.
+
+```powershell
+Get-ChildItem -Path . -Recurse -Filter *.log |
+    Where-Object { $_.Length -gt 10MB -and $_.LastWriteTime -lt (Get-Date).AddDays(-30) } |
+    Sort-Object Length -Descending |
+    Select-Object -First 10 FullName, @{Name='SizeMB'; Expression={[math]::Round($_.Length/1MB, 2)}}
+```
+
+No `awk` is needed because `Length` is already a typed property. The cost is verbosity and a startup time far higher than that of `grep`. The two models suit different work: text streams excel at ad hoc exploration of unknown formats, objects excel at scripting against systems with known schemas.
+
+---
+
+## IX. Where the Two Meet
+
+Data work routinely spans both. A query produces a result set, the shell moves and transforms it, and the loop repeats:
+
+```bash
+psql -qAt -F',' -d analytics -c "
+  SELECT tenant_id, COUNT(*) FROM events
+  WHERE ts >= NOW() - INTERVAL '1 day' GROUP BY 1" \
+  | awk -F',' '$2 > 1000 { print $1 }' \
+  | while IFS= read -r tenant; do
+        printf 'alerting tenant %s\n' "$tenant" >&2
+        ./notify.sh "$tenant"
+    done
+```
+
+The engineering discipline is identical in both halves. Push filtering as early as possible — into the `WHERE` clause, into `find`'s predicates — so later stages handle less data. Stream rather than materialize. Make failure loud. And measure before optimizing, because in both SQL and shell pipelines the bottleneck is almost never where intuition places it.

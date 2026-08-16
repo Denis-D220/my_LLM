@@ -1,0 +1,1036 @@
+In statistical mechanics of continuous systems, a potential for a many-body system is called H-stable (or simply stable) if the potential energy per particle is bounded below by a constant that is independent of the total number of particles. In many circumstances, if a potential is not H-stable, it is not possible to define a grand canonical partition function in finite volume, because of catastrophic configurations with infinite particles located in a finite space.
+
+Classical statistical mechanics
+
+Definition
+Consider a system of particles in positions 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        …
+        ∈
+        
+          R
+          
+            ν
+          
+        
+      
+    
+    {\displaystyle x_{1},x_{2},\ldots \in R^{\nu }}
+  
+; the interaction or potential between a particle in position 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+    {\displaystyle x_{i}}
+  
+ and a particle in position 
+  
+    
+      
+        
+          x
+          
+            j
+          
+        
+      
+    
+    {\displaystyle x_{j}}
+  
+ is 
+
+  
+    
+      
+        ϕ
+        (
+        
+          x
+          
+            i
+          
+        
+        −
+        
+          x
+          
+            j
+          
+        
+        )
+        
+      
+    
+    {\displaystyle \phi (x_{i}-x_{j})\,}
+  
+
+where 
+  
+    
+      
+        ϕ
+        (
+        x
+        )
+      
+    
+    {\displaystyle \phi (x)}
+  
+ is a real,  even (possibly unbounded)  function. Then 
+  
+    
+      
+        ϕ
+        (
+        x
+        )
+      
+    
+    {\displaystyle \phi (x)}
+  
+ is H-stable if there exists 
+  
+    
+      
+        B
+        >
+        0
+      
+    
+    {\displaystyle B>0}
+  
+ such that,  for any 
+  
+    
+      
+        n
+        ≥
+        1
+      
+    
+    {\displaystyle n\geq 1}
+  
+ and any 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            n
+          
+        
+        ∈
+        
+          R
+          
+            ν
+          
+        
+      
+    
+    {\displaystyle x_{1},x_{2},\ldots ,x_{n}\in R^{\nu }}
+  
+, 
+
+  
+    
+      
+        
+          V
+          
+            n
+          
+        
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        …
+        
+          x
+          
+            n
+          
+        
+        )
+        :=
+        
+          ∑
+          
+            i
+            <
+            j
+            =
+            1
+          
+          
+            n
+          
+        
+        ϕ
+        (
+        
+          x
+          
+            i
+          
+        
+        −
+        
+          x
+          
+            j
+          
+        
+        )
+        ≥
+        −
+        B
+        n
+        
+      
+    
+    {\displaystyle V_{n}(x_{1},x_{2},\ldots x_{n}):=\sum _{i<j=1}^{n}\phi (x_{i}-x_{j})\geq -Bn\,}
+  
+
+Applications
+If 
+  
+    
+      
+        ϕ
+        (
+        0
+        )
+        <
+        ∞
+      
+    
+    {\displaystyle \phi (0)<\infty }
+  
+ and, for every 
+  
+    
+      
+        n
+        ≥
+        1
+      
+    
+    {\displaystyle n\geq 1}
+  
+ and every 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        …
+        
+          x
+          
+            n
+          
+        
+        ∈
+        
+          R
+          
+            ν
+          
+        
+      
+    
+    {\displaystyle x_{1},x_{2},\ldots x_{n}\in R^{\nu }}
+  
+, it holds
+
+  
+    
+      
+        
+          ∑
+          
+            i
+            ,
+            j
+            =
+            1
+          
+          
+            n
+          
+        
+        ϕ
+        (
+        
+          x
+          
+            i
+          
+        
+        −
+        
+          x
+          
+            j
+          
+        
+        )
+        ≥
+        0
+      
+    
+    {\displaystyle \sum _{i,j=1}^{n}\phi (x_{i}-x_{j})\geq 0}
+  
+
+then the potential 
+  
+    
+      
+        ϕ
+        (
+        x
+        )
+      
+    
+    {\displaystyle \phi (x)}
+  
+ is stable (with the constant 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ given by 
+  
+    
+      
+        
+          
+            
+              ϕ
+              (
+              0
+              )
+            
+            2
+          
+        
+      
+    
+    {\displaystyle {\frac {\phi (0)}{2}}}
+  
+). This condition applies for example to potentials that are: a) positive functions; b) positive-definite functions.
+If the potential 
+  
+    
+      
+        ϕ
+        (
+        x
+        )
+      
+    
+    {\displaystyle \phi (x)}
+  
+ is  stable, then, for any bounded domain 
+  
+    
+      
+        Λ
+      
+    
+    {\displaystyle \Lambda }
+  
+, any 
+  
+    
+      
+        β
+        >
+        0
+      
+    
+    {\displaystyle \beta >0}
+  
+ and 
+  
+    
+      
+        z
+        >
+        0
+      
+    
+    {\displaystyle z>0}
+  
+, the series
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            ≥
+            1
+          
+        
+        
+          
+            
+              z
+              
+                n
+              
+            
+            
+              n
+              !
+            
+          
+        
+        
+          ∫
+          
+            
+              Λ
+              
+                n
+              
+            
+          
+        
+        
+        d
+        
+          x
+          
+            1
+          
+        
+        ⋯
+        d
+        
+          x
+          
+            n
+          
+        
+        
+        exp
+        ⁡
+        [
+        −
+        β
+        
+          V
+          
+            n
+          
+        
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        …
+        
+          x
+          
+            n
+          
+        
+        )
+        ]
+      
+    
+    {\displaystyle \sum _{n\geq 1}{\frac {z^{n}}{n!}}\int _{\Lambda ^{n}}\!dx_{1}\cdots dx_{n}\;\exp[-\beta V_{n}(x_{1},x_{2},\ldots x_{n})]}
+  
+
+is convergent. In fact, for bounded, upper-semi-continuous potentials the hypothesis is not only sufficient, but also necessary!
+The grand canonical partition function, in finite volume, is
+
+  
+    
+      
+        Ξ
+        (
+        β
+        ,
+        z
+        ,
+        Λ
+        )
+        :=
+        1
+        +
+        
+          ∑
+          
+            n
+            ≥
+            1
+          
+        
+        
+          
+            
+              z
+              
+                n
+              
+            
+            
+              n
+              !
+            
+          
+        
+        
+          ∫
+          
+            
+              Λ
+              
+                n
+              
+            
+          
+        
+        
+        d
+        
+          x
+          
+            1
+          
+        
+        ⋯
+        d
+        
+          x
+          
+            n
+          
+        
+        
+        exp
+        ⁡
+        [
+        −
+        β
+        
+          V
+          
+            n
+          
+        
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        …
+        
+          x
+          
+            n
+          
+        
+        )
+        ]
+      
+    
+    {\displaystyle \Xi (\beta ,z,\Lambda ):=1+\sum _{n\geq 1}{\frac {z^{n}}{n!}}\int _{\Lambda ^{n}}\!dx_{1}\cdots dx_{n}\;\exp[-\beta V_{n}(x_{1},x_{2},\ldots x_{n})]}
+  
+
+hence the H-stability is a sufficient condition for the partition function to exists in finite volume.
+H-stability doesn't  necessary imply the existence of the infinite volume pressure. For example, in a Coulomb system (in dimension three) the potential is
+
+  
+    
+      
+        ϕ
+        (
+        x
+        )
+        =
+        
+          
+            1
+            
+              4
+              π
+              
+                |
+              
+              x
+              
+                |
+              
+            
+          
+        
+      
+    
+    {\displaystyle \phi (x)={\frac {1}{4\pi |x|}}}
+  
+
+and, if the charges of all the particles are equal, then the potential energy is
+
+  
+    
+      
+        
+          V
+          
+            n
+          
+        
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            n
+          
+        
+        )
+        =
+        
+          ∑
+          
+            i
+            <
+            j
+          
+        
+        ϕ
+        (
+        
+          x
+          
+            i
+          
+        
+        −
+        
+          x
+          
+            j
+          
+        
+        )
+      
+    
+    {\displaystyle V_{n}(x_{1},\ldots ,x_{n})=\sum _{i<j}\phi (x_{i}-x_{j})}
+  
+
+and the system is H-stable with 
+  
+    
+      
+        B
+        =
+        0
+      
+    
+    {\displaystyle B=0}
+  
+; but the thermodynamic limit doesn't exist, because the potential is not tempered.
+If the potential is not bounded, H-stability is not a necessary condition for the existence of the grand canonical partition function in finite volume. For example, in the case  of Yukawa interaction in two dimensions,
+
+  
+    
+      
+        ϕ
+        (
+        x
+        )
+        ∼
+        −
+        
+          
+            1
+            
+              2
+              π
+            
+          
+        
+        ln
+        ⁡
+        
+          m
+          
+            |
+          
+          x
+          
+            |
+          
+        
+        
+        
+          
+            f
+            o
+            r
+          
+        
+        
+        x
+        ∼
+        0
+      
+    
+    {\displaystyle \phi (x)\sim -{\frac {1}{2\pi }}\ln {m|x|}\qquad {\rm {for}}\quad x\sim 0}
+  
+
+if the particles can have charges with different signs, the potential  energy is
+
+  
+    
+      
+        
+          H
+          
+            n
+          
+        
+        (
+        
+          
+            q
+            _
+          
+        
+        ,
+        
+          
+            x
+            _
+          
+        
+        )
+        =
+        
+          ∑
+          
+            i
+            <
+            j
+          
+        
+        
+          q
+          
+            i
+          
+        
+        
+          q
+          
+            j
+          
+        
+        ϕ
+        (
+        
+          x
+          
+            i
+          
+        
+        −
+        
+          x
+          
+            j
+          
+        
+        )
+      
+    
+    {\displaystyle H_{n}({\underline {q}},{\underline {x}})=\sum _{i<j}q_{i}q_{j}\phi (x_{i}-x_{j})}
+  
+
+where 
+  
+    
+      
+        
+          q
+          
+            j
+          
+        
+      
+    
+    {\displaystyle q_{j}}
+  
+ is the charge of the particle 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+. 
+  
+    
+      
+        
+          H
+          
+            n
+          
+        
+        (
+        
+          
+            q
+            _
+          
+        
+        ,
+        
+          
+            x
+            _
+          
+        
+        )
+      
+    
+    {\displaystyle H_{n}({\underline {q}},{\underline {x}})}
+  
+ in not bounded from below: for example,  when 
+  
+    
+      
+        n
+        =
+        2
+      
+    
+    {\displaystyle n=2}
+  
+ and 
+  
+    
+      
+        
+          q
+          
+            1
+          
+        
+        
+          q
+          
+            2
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle q_{1}q_{2}=1}
+  
+, the two body potential has infimum
+
+  
+    
+      
+        
+          inf
+          
+            
+              x
+              
+                1
+              
+            
+            ,
+            
+              x
+              
+                2
+              
+            
+          
+        
+        ϕ
+        (
+        
+          x
+          
+            1
+          
+        
+        −
+        
+          x
+          
+            2
+          
+        
+        )
+        =
+        −
+        ∞
+      
+    
+    {\displaystyle \inf _{x_{1},x_{2}}\phi (x_{1}-x_{2})=-\infty }
+  
+
+Yet, Frohlich  proved the existence of the thermodynamics limit for 
+  
+    
+      
+        β
+        <
+        4
+        π
+      
+    
+    {\displaystyle \beta <4\pi }
+  
+.
+
+Quantum statistical mechanics
+The notion of H-stability in quantum mechanics is more subtle. 
+While in the classical case the kinetic part of the Hamiltonian is not important as it can be zero independently of the position of the particles, in the quantum case the kinetic term plays an important role in the lower bound for the total energy because of the uncertainty principle. (In fact, stability of matter was the historical reason for introducing such a principle in mechanics.)
+The definition of stability is :
+
+  
+    
+      
+        ∃
+        B
+        :
+        
+          
+            
+              E
+              
+                0
+              
+            
+            N
+          
+        
+        >
+        −
+        B
+        ,
+        
+      
+    
+    {\displaystyle \exists B:{\frac {E_{0}}{N}}>-B,\,}
+  
+
+where E0 is the ground state energy.
+Classical H-stability implies quantum H-stability, but the converse is false.
+The criterion is especially useful in statistical mechanics, where H-stability is necessary to the existence of thermodynamics, i.e. if a system is not H-stable, the thermodynamic limit does not exist.

@@ -1,0 +1,56 @@
+In computer science, higher-order abstract syntax (abbreviated HOAS) is a technique for the representation of abstract syntax trees for languages with variable binders.
+
+Relation to first-order abstract syntax
+An abstract syntax is abstract because it is represented by mathematical objects that have certain structure by their very nature. For instance, in first-order abstract syntax (FOAS) trees, as commonly used in compilers, the tree structure implies the subexpression relation, meaning that no parentheses are required to disambiguate programs (as they are, in the concrete syntax). HOAS exposes additional structure: the relationship between variables and their binding sites. In FOAS representations, a variable is typically represented with an identifier, with the relation between binding site and use being indicated by using the same identifier. With HOAS, there is no name for the variable; each use of the variable refers directly to the binding site.
+There are a number of reasons why this technique is useful. First, it makes the binding structure of a program explicit: just as there is no need to explain operator precedence in a FOAS representation, there is no need to have the rules of binding and scope at hand to interpret a HOAS representation. Second, programs that are 
+alpha-equivalent (differing only in the names of bound variables) have identical representations in HOAS, which can make equivalence checking more efficient. 
+
+Implementation
+One mathematical object that could be used to implement HOAS is a graph where variables are associated with their binding sites via edges. Another popular way to implement HOAS (in, for example, compilers) is with de Bruijn indices.
+
+Use in logic programming
+The first programming language which directly supported
+λ-bindings in syntax was the higher-order logic programming
+language λProlog.
+The paper that introduced the term HOAS 
+used
+λProlog code to illustrate it. Unfortunately, when one transfers the
+term HOAS from the logic programming to the functional programming
+setting, that term implies the identification of bindings in syntax
+with functions over expressions. In this latter setting, HOAS has a
+different and problematic sense.  The term λ-tree syntax has been introduced to
+refer specifically to the style of representation available in the
+logic programming setting.
+While different in detail, the treatment of bindings in λProlog is similar
+to their treatment in logical frameworks, elaborated in the next section.
+
+Use in logical frameworks
+In the domain of logical frameworks, the term higher-order abstract syntax is usually used to refer to a specific representation that uses the binders of the meta-language to encode the binding structure of the object language.
+For instance, the logical framework LF has a λ-construct, which has arrow
+(→) type. As an example, consider we wanted to formalize a very primitive language with untyped expressions, a built-in set of variables, and a let construct (let <var> = <exp> in <exp'>), which allows to bind variables var with definition exp in expressions exp'.
+In Twelf syntax, we could do as follows:
+
+Here, exp is the type of all expressions and var the type of all built-in variables (implemented perhaps as natural numbers, which is not shown). The constant v acts as a casting function and witnesses the fact that variables are expressions. Finally, the constant let represents let constructs of the form let <var> = <exp> in <exp>: it accepts a variable, an expression (being bound by the variable), and another expression (that the variable is bound within).
+The canonical HOAS representation of the same object language would be:
+
+In this representation, object level variables do not appear explicitly. The constant let takes an expression (that is being bound) and a meta-level function exp → exp 
+(the body of the let). This function is the higher-order part: an expression with a free variable is
+represented as an expression with holes that are filled in by the meta-level function when applied. As a concrete example, we would construct the object level expression
+
+(assuming the natural constructors for numbers and addition) using the HOAS signature above as
+
+where [y] e is Twelf's syntax for the function 
+  
+    
+      
+        λ
+        y
+        .
+        e
+      
+    
+    {\displaystyle \lambda y.e}
+  
+.
+This specific representation has advantages beyond the ones above: for one, by reusing the meta-level notion of binding, the encoding enjoys properties such as type-preserving substitution without the need to define/prove them. In this way using HOAS can drastically reduce the amount of boilerplate code having to do with binding in an encoding.
+Higher-order abstract syntax is generally only applicable when object language variables can be understood as variables in the mathematical sense (that is, as stand-ins for arbitrary members of some domain). This is often, but not always, the case: for instance, there are no advantages to be gained from a HOAS encoding of dynamic scope as it appears in some dialects of Lisp because dynamically scoped variables do not act like mathematical variables.

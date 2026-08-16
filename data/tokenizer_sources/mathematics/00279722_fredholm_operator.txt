@@ -1,0 +1,1543 @@
+In mathematics, Fredholm operators are certain operators that arise in the Fredholm theory of integral equations. They are named in honour of Erik Ivar Fredholm. By definition, a Fredholm operator is a bounded linear operator T : X → Y between two Banach spaces with finite-dimensional kernel 
+  
+    
+      
+        ker
+        ⁡
+        T
+      
+    
+    {\displaystyle \ker T}
+  
+ and finite-dimensional (algebraic) cokernel 
+  
+    
+      
+        coker
+        ⁡
+        T
+        =
+        Y
+        
+          /
+        
+        ran
+        ⁡
+        T
+      
+    
+    {\displaystyle \operatorname {coker} T=Y/\operatorname {ran} T}
+  
+, and with closed range 
+  
+    
+      
+        ran
+        ⁡
+        T
+      
+    
+    {\displaystyle \operatorname {ran} T}
+  
+. The last condition is actually redundant.
+The index of a Fredholm operator is the integer
+
+  
+    
+      
+        ind
+        ⁡
+        T
+        :=
+        dim
+        ⁡
+        ker
+        ⁡
+        T
+        −
+        codim
+        ⁡
+        ran
+        ⁡
+        T
+      
+    
+    {\displaystyle \operatorname {ind} T:=\dim \ker T-\operatorname {codim} \operatorname {ran} T}
+  
+
+or in other words,
+
+  
+    
+      
+        ind
+        ⁡
+        T
+        :=
+        dim
+        ⁡
+        ker
+        ⁡
+        T
+        −
+        dim
+        ⁡
+        coker
+        ⁡
+        T
+        .
+      
+    
+    {\displaystyle \operatorname {ind} T:=\dim \ker T-\operatorname {dim} \operatorname {coker} T.}
+  
+
+Properties
+Intuitively, Fredholm operators are those operators that are invertible "if finite-dimensional effects are ignored." The formally correct statement follows. A bounded operator 
+  
+    
+      
+        T
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle T:X\to Y}
+  
+ between Banach spaces  
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is Fredholm if and only if it is invertible modulo compact operators, i.e., if there exists a bounded linear operator
+
+  
+    
+      
+        S
+        :
+        Y
+        →
+        X
+      
+    
+    {\displaystyle S:Y\to X}
+  
+
+such that
+
+  
+    
+      
+        
+          
+            I
+            d
+          
+          
+            X
+          
+        
+        −
+        S
+        T
+        
+        
+          and
+        
+        
+        
+          
+            I
+            d
+          
+          
+            Y
+          
+        
+        −
+        T
+        S
+      
+    
+    {\displaystyle \mathrm {Id} _{X}-ST\quad {\text{and}}\quad \mathrm {Id} _{Y}-TS}
+  
+
+are compact operators on 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ respectively.
+If a Fredholm operator is modified slightly, it stays Fredholm and its index remains the same. Formally: The set of Fredholm operators from 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is open in the Banach space 
+  
+    
+      
+        L
+        (
+        X
+        ,
+        Y
+        )
+      
+    
+    {\displaystyle L(X,Y)}
+  
+ of bounded linear operators, equipped with the operator norm, and the index is locally constant.  More precisely, if 
+  
+    
+      
+        
+          T
+          
+            0
+          
+        
+      
+    
+    {\displaystyle T_{0}}
+  
+ is Fredholm from 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+, there exists 
+  
+    
+      
+        ε
+        >
+        0
+      
+    
+    {\displaystyle \varepsilon >0}
+  
+ such that every 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ in 
+  
+    
+      
+        L
+        (
+        X
+        ,
+        Y
+        )
+      
+    
+    {\displaystyle L(X,Y)}
+  
+ with 
+  
+    
+      
+        
+          |
+        
+        
+          |
+        
+        T
+        −
+        
+          T
+          
+            0
+          
+        
+        
+          |
+        
+        
+          |
+        
+        <
+        ε
+      
+    
+    {\displaystyle ||T-T_{0}||<\varepsilon }
+  
+ is Fredholm, with the same index as that of 
+  
+    
+      
+        
+          T
+          
+            0
+          
+        
+      
+    
+    {\displaystyle T_{0}}
+  
+
+When 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is Fredholm from 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ and 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ Fredholm from 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ to 
+  
+    
+      
+        Z
+      
+    
+    {\displaystyle Z}
+  
+, then the composition 
+  
+    
+      
+        U
+        ∘
+        T
+      
+    
+    {\displaystyle U\circ T}
+  
+ is Fredholm from 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to 
+  
+    
+      
+        Z
+      
+    
+    {\displaystyle Z}
+  
+ and
+
+  
+    
+      
+        ind
+        ⁡
+        (
+        U
+        ∘
+        T
+        )
+        =
+        ind
+        ⁡
+        (
+        U
+        )
+        +
+        ind
+        ⁡
+        (
+        T
+        )
+        .
+      
+    
+    {\displaystyle \operatorname {ind} (U\circ T)=\operatorname {ind} (U)+\operatorname {ind} (T).}
+  
+
+When 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is Fredholm, the transpose (or adjoint) operator 
+  
+    
+      
+        
+          T
+          ′
+        
+      
+    
+    {\displaystyle T'}
+  
+ is Fredholm from 
+  
+    
+      
+        
+          Y
+          ′
+        
+      
+    
+    {\displaystyle Y'}
+  
+ to 
+  
+    
+      
+        
+          X
+          ′
+        
+      
+    
+    {\displaystyle X'}
+  
+, and 
+  
+    
+      
+        
+          ind
+        
+        (
+        
+          T
+          ′
+        
+        )
+        =
+        −
+        
+          ind
+        
+        (
+        T
+        )
+      
+    
+    {\displaystyle {\text{ind}}(T')=-{\text{ind}}(T)}
+  
+.  When 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are Hilbert spaces, the same conclusion holds for the Hermitian adjoint 
+  
+    
+      
+        
+          T
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle T^{*}}
+  
+.
+When 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is Fredholm and 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ a compact operator, then 
+  
+    
+      
+        T
+        +
+        K
+      
+    
+    {\displaystyle T+K}
+  
+ is Fredholm.  The index of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ remains unchanged under such a compact perturbation of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+.  This follows from the fact that the index 
+  
+    
+      
+        
+          ind
+        
+        (
+        T
+        +
+        s
+        K
+        )
+      
+    
+    {\displaystyle {\text{ind}}(T+sK)}
+  
+ is an integer defined for every 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ in 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle [0,1]}
+  
+, and 
+  
+    
+      
+        
+          ind
+        
+        (
+        T
+        +
+        s
+        K
+        )
+      
+    
+    {\displaystyle {\text{ind}}(T+sK)}
+  
+ is locally constant, hence 
+  
+    
+      
+        
+          ind
+        
+        (
+        T
+        )
+        =
+        
+          ind
+        
+        (
+        T
+        +
+        s
+        K
+        )
+      
+    
+    {\displaystyle {\text{ind}}(T)={\text{ind}}(T+sK)}
+  
+.
+Invariance by perturbation is true for larger classes than the class of compact operators.  For example, when 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is Fredholm and 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ a strictly singular operator, then 
+  
+    
+      
+        T
+        +
+        U
+      
+    
+    {\displaystyle T+U}
+  
+ is Fredholm with the same index.  The class of inessential operators, which properly contains the class of strictly singular operators, is the "perturbation class" for Fredholm operators.  This means an operator 
+  
+    
+      
+        T
+        ∈
+        B
+        (
+        X
+        ,
+        Y
+        )
+      
+    
+    {\displaystyle T\in B(X,Y)}
+  
+ is inessential if and only if 
+  
+    
+      
+        T
+        +
+        U
+      
+    
+    {\displaystyle T+U}
+  
+ is Fredholm for every Fredholm operator 
+  
+    
+      
+        U
+        ∈
+        B
+        (
+        X
+        ,
+        Y
+        )
+      
+    
+    {\displaystyle U\in B(X,Y)}
+  
+.
+
+Examples
+Let 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ be Hilbert spaces. If 
+  
+    
+      
+        T
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle T:X\to Y}
+  
+ is Fredholm, then we have a decomposition:
+  
+    
+      
+        X
+        =
+        ker
+        ⁡
+        T
+        ⊕
+        (
+        ker
+        ⁡
+        T
+        
+          )
+          
+            ⊥
+          
+        
+        ,
+        
+        Y
+        =
+        ran
+        ⁡
+        T
+        ⊕
+        (
+        ran
+        ⁡
+        T
+        
+          )
+          
+            ⊥
+          
+        
+      
+    
+    {\displaystyle X=\ker T\oplus (\ker T)^{\perp },\quad Y=\operatorname {ran} T\oplus (\operatorname {ran} T)^{\perp }}
+  
+
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is a bicontinuous bijection between 
+  
+    
+      
+        (
+        ker
+        ⁡
+        T
+        
+          )
+          
+            ⊥
+          
+        
+        ,
+        ran
+        ⁡
+        T
+      
+    
+    {\displaystyle (\ker T)^{\perp },\operatorname {ran} T}
+  
+, and for it to be Fredholm, both 
+  
+    
+      
+        ker
+        ⁡
+        T
+        ,
+        (
+        ran
+        ⁡
+        T
+        
+          )
+          
+            ⊥
+          
+        
+      
+    
+    {\displaystyle \ker T,(\operatorname {ran} T)^{\perp }}
+  
+ must be finite-dimensional. By picking an appropriate orthonormal basis, 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ has a matrix representation 
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  
+                    0
+                    
+                      dim
+                      ⁡
+                      coker
+                      ⁡
+                      T
+                      ×
+                      dim
+                      ⁡
+                      ker
+                      ⁡
+                      T
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  ⋱
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle {\begin{bmatrix}0_{\operatorname {dim} \operatorname {coker} T\times \dim \ker T}&0\\0&\ddots \end{bmatrix}}}
+  
+.
+Let 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ be a Hilbert space with an orthonormal basis 
+  
+    
+      
+        {
+        
+          e
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle \{e_{n}\}}
+  
+ indexed by the non negative integers.  The unilateral shift operator S on H is defined by
+
+  
+    
+      
+        S
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+        =
+        
+          e
+          
+            n
+            +
+            1
+          
+        
+        ,
+        
+        n
+        ≥
+        0.
+        
+      
+    
+    {\displaystyle S(e_{n})=e_{n+1},\quad n\geq 0.\,}
+  
+
+This operator S is injective (actually, isometric) and has a closed range of codimension 1, hence S is Fredholm with 
+  
+    
+      
+        ind
+        ⁡
+        (
+        S
+        )
+        =
+        −
+        1
+      
+    
+    {\displaystyle \operatorname {ind} (S)=-1}
+  
+.  The powers 
+  
+    
+      
+        
+          S
+          
+            k
+          
+        
+      
+    
+    {\displaystyle S^{k}}
+  
+, 
+  
+    
+      
+        k
+        ≥
+        0
+      
+    
+    {\displaystyle k\geq 0}
+  
+, are Fredholm with index 
+  
+    
+      
+        −
+        k
+      
+    
+    {\displaystyle -k}
+  
+.  The adjoint S* is the left shift,
+
+  
+    
+      
+        
+          S
+          
+            ∗
+          
+        
+        (
+        
+          e
+          
+            0
+          
+        
+        )
+        =
+        0
+        ,
+         
+         
+        
+          S
+          
+            ∗
+          
+        
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+        =
+        
+          e
+          
+            n
+            −
+            1
+          
+        
+        ,
+        
+        n
+        ≥
+        1.
+        
+      
+    
+    {\displaystyle S^{*}(e_{0})=0,\ \ S^{*}(e_{n})=e_{n-1},\quad n\geq 1.\,}
+  
+
+The left shift S* is Fredholm with index 1.
+If H is the classical Hardy space 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+        (
+        
+          T
+        
+        )
+      
+    
+    {\displaystyle H^{2}(\mathbf {T} )}
+  
+ on the unit circle T in the complex plane, then the shift operator with respect to the orthonormal basis of complex exponentials
+
+  
+    
+      
+        
+          e
+          
+            n
+          
+        
+        :
+        
+          
+            e
+          
+          
+            
+              i
+            
+            t
+          
+        
+        ∈
+        
+          T
+        
+        ↦
+        
+          
+            e
+          
+          
+            
+              i
+            
+            n
+            t
+          
+        
+        ,
+        
+        n
+        ≥
+        0
+        ,
+        
+      
+    
+    {\displaystyle e_{n}:\mathrm {e} ^{\mathrm {i} t}\in \mathbf {T} \mapsto \mathrm {e} ^{\mathrm {i} nt},\quad n\geq 0,\,}
+  
+
+is the multiplication operator Mφ with the function 
+  
+    
+      
+        φ
+        =
+        
+          e
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \varphi =e_{1}}
+  
+.  More generally, let φ be a complex continuous function on T that does not vanish on 
+  
+    
+      
+        
+          T
+        
+      
+    
+    {\displaystyle \mathbf {T} }
+  
+, and let Tφ denote the Toeplitz operator with symbol φ, equal to multiplication by φ followed by the orthogonal projection 
+  
+    
+      
+        P
+        :
+        
+          L
+          
+            2
+          
+        
+        (
+        
+          T
+        
+        )
+        →
+        
+          H
+          
+            2
+          
+        
+        (
+        
+          T
+        
+        )
+      
+    
+    {\displaystyle P:L^{2}(\mathbf {T} )\to H^{2}(\mathbf {T} )}
+  
+:
+
+  
+    
+      
+        
+          T
+          
+            φ
+          
+        
+        :
+        f
+        ∈
+        
+          H
+          
+            2
+          
+        
+        (
+        
+          T
+        
+        )
+        ↦
+        P
+        (
+        f
+        φ
+        )
+        ∈
+        
+          H
+          
+            2
+          
+        
+        (
+        
+          T
+        
+        )
+        .
+        
+      
+    
+    {\displaystyle T_{\varphi }:f\in H^{2}(\mathrm {T} )\mapsto P(f\varphi )\in H^{2}(\mathrm {T} ).\,}
+  
+
+Then Tφ is a Fredholm operator on 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+        (
+        
+          T
+        
+        )
+      
+    
+    {\displaystyle H^{2}(\mathbf {T} )}
+  
+, with index related to the winding number around 0 of the closed path 
+  
+    
+      
+        t
+        ∈
+        [
+        0
+        ,
+        2
+        π
+        ]
+        ↦
+        φ
+        (
+        
+          e
+          
+            i
+            t
+          
+        
+        )
+      
+    
+    {\displaystyle t\in [0,2\pi ]\mapsto \varphi (e^{it})}
+  
+:  the index of  Tφ, as defined in this article, is the opposite of this winding number.
+
+Applications
+Any elliptic operator on a closed manifold can be extended to a Fredholm operator. The use of Fredholm operators in partial differential equations is an abstract form of the parametrix method.
+The Atiyah-Singer index theorem gives a topological characterization of the index of certain operators on manifolds.
+The Atiyah-Jänich theorem identifies the K-theory K(X) of a compact topological space X with the set of homotopy classes of continuous maps from X to the space of Fredholm operators H→H, where H is the separable Hilbert space and the set of these operators carries the operator norm.
+
+Generalizations
+
+Semi-Fredholm operators
+A bounded linear operator T is called semi-Fredholm if its range is closed and at least one of 
+  
+    
+      
+        ker
+        ⁡
+        T
+      
+    
+    {\displaystyle \ker T}
+  
+, 
+  
+    
+      
+        coker
+        ⁡
+        T
+      
+    
+    {\displaystyle \operatorname {coker} T}
+  
+ is finite-dimensional. For a semi-Fredholm operator, the index is defined by
+
+  
+    
+      
+        ind
+        ⁡
+        T
+        =
+        
+          
+            {
+            
+              
+                
+                  +
+                  ∞
+                  ,
+                
+                
+                  dim
+                  ⁡
+                  ker
+                  ⁡
+                  T
+                  =
+                  ∞
+                  ;
+                
+              
+              
+                
+                  dim
+                  ⁡
+                  ker
+                  ⁡
+                  T
+                  −
+                  dim
+                  ⁡
+                  coker
+                  ⁡
+                  T
+                  ,
+                
+                
+                  dim
+                  ⁡
+                  ker
+                  ⁡
+                  T
+                  +
+                  dim
+                  ⁡
+                  coker
+                  ⁡
+                  T
+                  <
+                  ∞
+                  ;
+                
+              
+              
+                
+                  −
+                  ∞
+                  ,
+                
+                
+                  dim
+                  ⁡
+                  coker
+                  ⁡
+                  T
+                  =
+                  ∞
+                  .
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle \operatorname {ind} T={\begin{cases}+\infty ,&\dim \ker T=\infty ;\\\dim \ker T-\dim \operatorname {coker} T,&\dim \ker T+\dim \operatorname {coker} T<\infty ;\\-\infty ,&\dim \operatorname {coker} T=\infty .\end{cases}}}
+  
+
+Unbounded operators
+One may also define unbounded Fredholm operators. Let X and Y be two Banach spaces.
+
+The closed linear operator 
+  
+    
+      
+        T
+        :
+        
+        X
+        →
+        Y
+      
+    
+    {\displaystyle T:\,X\to Y}
+  
+ is called Fredholm if its domain 
+  
+    
+      
+        
+          
+            D
+          
+        
+        (
+        T
+        )
+      
+    
+    {\displaystyle {\mathfrak {D}}(T)}
+  
+ is dense in 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+, its range is closed, and both kernel and cokernel of T are finite-dimensional.
+
+  
+    
+      
+        T
+        :
+        
+        X
+        →
+        Y
+      
+    
+    {\displaystyle T:\,X\to Y}
+  
+ is called semi-Fredholm if its domain 
+  
+    
+      
+        
+          
+            D
+          
+        
+        (
+        T
+        )
+      
+    
+    {\displaystyle {\mathfrak {D}}(T)}
+  
+ is dense in 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+, its range is closed, and either kernel or cokernel of T (or both) is finite-dimensional.
+As it was noted above, the range of a closed operator is closed as long as the cokernel is finite-dimensional (Edmunds and Evans, Theorem I.3.2).

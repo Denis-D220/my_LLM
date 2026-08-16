@@ -1,0 +1,65 @@
+Offset binary, also referred to as excess-K, excess-N, excess-e, excess code or biased representation, is a method for signed number representation where a signed number n is represented by the bit pattern corresponding to the unsigned number n+K, K being the biasing value or offset. There is no standard for offset binary, but most often the K for an n-bit binary word is K = 2n−1 (for example, the offset for a four-digit binary number would be 23=8). This has the consequence that the minimal negative value is represented by all-zeros, the "zero" value is represented by a 1 in the most significant bit and zero in all other bits, and the maximal positive value is represented by all-ones (conveniently, this is the same as using two's complement but with the most significant bit inverted). It also has the consequence that in a logical comparison operation, one gets the same result as with a true form numerical comparison operation, whereas, in two's complement notation a logical comparison will agree with true form numerical comparison operation if and only if the numbers being compared have the same sign. Otherwise the sense of the comparison will be inverted, with all negative values being taken as being larger than all positive values. 
+The 5-bit Baudot code used in early synchronous multiplexing telegraphs can be seen as an offset-1 (excess-1) reflected binary (Gray) code.
+One historically prominent example of offset-64 (excess-64) notation was in the floating point (exponential) notation in the IBM System/360 and System/370 generations of computers. The "characteristic" (exponent) took the form of a seven-bit excess-64 number (The high-order bit of the same byte contained the sign of the significand).
+The 8-bit exponent in Microsoft Binary Format, a floating point format used in various programming languages (in particular BASIC) in the 1970s and 1980s, was encoded using an offset-129 notation (excess-129).
+The IEEE Standard for Floating-Point Arithmetic (IEEE 754) uses offset notation for the exponent part in each of its various formats of precision. Unusually however, instead of using "excess 2n−1" it uses "excess 2n−1 − 1" (i.e. excess-15, excess-127, excess-1023, excess-16383) which means that inverting the leading (high-order) bit of the exponent will not convert the exponent to correct two's complement notation. 
+Offset binary is often used in digital signal processing (DSP). Most analog to digital (A/D) and digital to analog (D/A) chips are unipolar, which means that they cannot handle bipolar signals (signals with both positive and negative values). A simple solution to this is to bias the analog signals with a DC offset equal to half of the A/D and D/A converter's range. The resulting digital data then ends up being in offset binary format.
+Most standard computer CPU chips cannot handle the offset binary format directly. CPU chips typically can only handle signed and unsigned integers, and floating point value formats. Offset binary values can be handled in several ways by these CPU chips. The data may just be treated as unsigned integers, requiring the programmer to deal with the zero offset in software. The data may also be converted to signed integer format (which the CPU can handle natively) by simply subtracting the zero offset. As a consequence of the most common offset for an n-bit word being 2n−1, which implies that the first bit is inverted relative to two's complement, there is no need for a separate subtraction step, but one simply can invert the first bit. This sometimes is a useful simplification in hardware, and can be convenient in software as well.
+Table of offset binary for four bits, with two's complement for comparison:
+
+Offset binary may be converted into two's complement by inverting the most significant bit.  For example, with 8-bit values, the offset binary value may be XORed with 0x80 in order to convert to two's complement. In specialised hardware it may be simpler to accept the bit as it stands, but to apply its value in inverted significance.
+
+Related codes
+
+  
+    
+      
+        z
+        =
+        
+          
+            1
+            q
+          
+        
+        
+          [
+          
+            
+              (
+              
+                
+                  ∑
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    n
+                  
+                
+                
+                  p
+                  
+                    i
+                  
+                
+                ×
+                
+                  b
+                  
+                    i
+                  
+                
+              
+              )
+            
+            −
+            k
+          
+          ]
+        
+      
+    
+    {\displaystyle z={\frac {1}{q}}\left[\left(\sum _{i=1}^{n}p_{i}\times b_{i}\right)-k\right]}

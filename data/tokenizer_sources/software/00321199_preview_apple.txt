@@ -1,0 +1,34 @@
+Preview is the built-in image and PDF viewer of the iOS, iPadOS & macOS operating system. In addition to viewing, and printing digital images and Portable Document Format (PDF) files, it can also edit and annotate these media types. It employs the Quartz graphics layer, and the ImageIO and Core Image frameworks.
+
+History
+Like macOS, Preview originated in the NeXTSTEP operating system by NeXT, where it was part of every release since 1989. Between 2003 and 2005, Apple claimed Preview was the "fastest PDF viewer on the planet."
+At WWDC 2025, Apple announced that a version of Preview would be coming to iPhone and iPad devices with the release of iOS 26 and iPadOS 26. In previous versions of these operating systems, the viewing and editing of PDF files and digital images could be done through the Files or Notes apps.
+
+Features
+
+Editing PDF documents
+
+Preview contains an "edit button", introduced in Version 7, which includes options to insert shapes, lines, and do cropping. 
+Preview can encrypt PDF documents, and restrict their use; for example, it is possible to save an encrypted PDF so that a password is required to copy data from the document, or to print it. However, encrypted PDFs cannot be edited further, so the original author should always keep an unencrypted version. 
+Some features which are otherwise only available in professional PDF editing software are provided by Preview: It is possible to extract single pages out of multi-page documents (e.g. PDF files), sort pages, and drag & drop single or multiple pages between several opened multi-page documents, or into other applications, such as attaching to an opened email message.
+In the iOS and iPadOS versions of Preview, users also have access to the devices markup tools. This allows signatures, sketches and handwriting to be drawn directly onto the document via touch or the Apple Pencil.
+
+Editing images
+Preview offers basic image correction tools using Core Image processing technology implemented in macOS, and other features like shape extraction, color extraction, cropping, and rotation tools. When annotating images, Preview uses vector shapes and text until the image is rasterized to JPEG, PNG or another bitmap format. PDF and image documents can also be supplied with keywords, and are then automatically indexed using macOS's system-wide Spotlight search engine.
+
+Text recognition
+Preview can recognize text contained in both text-based document files and bitmapped (non-vector) images like JPEG, PNG etc. It lets you select and copy text to paste into other applications, translate selected text into another language or read aloud using the 'Speak Selection' command of MacOS. 
+Text recognition was added 2021 in macOS Monterey. With Apple Intelligence, users can also use writing tools to proofread, rewrite, or summarise selected text.
+
+Import and export
+Preview can directly access image scanners supported by macOS and import images from the scanner. Preview can convert between image formats; it can export to BMP, JP2, JPEG, PDF, PICT, PNG, SGI, TGA, and TIFF. Using macOS's print engine (based on CUPS) it is also possible to "print into" a Postscript file, a PDF-X file or directly save the file in iPhoto, for example scanned photos.
+Beginning with Mac OS X 10.7 Lion, Preview restricts the Format option popup menu in the Save As dialog to commonly used types.  It is possible to access the full format list by holding down the Option key when clicking the Format popup menu. (GIF, ICNS, JPEG, JPEG-2000, Microsoft BMP, Microsoft Icon, OpenEXR, PDF, Photoshop, PNG, SGI, TGA, TIFF.)
+
+Scanning documents
+In the iOS and iPadOS versions of Preview, the app can directly scan printed documents using the device's camera. Preview is able to automatically detect and crop the borders of a physical document  and convert it into an editable PDF file.
+
+Supported file types
+Preview can open the following file types.
+
+In macOS Monterey and earlier, Preview supported the display of EPS and PostScript documents using on-the-fly conversion to PDF format. However, this functionality was removed in macOS Ventura, although users can continue to print .eps and .ps files by dragging them into the printer queue.
+The version of Preview included with OS X 10.3 (Panther) could play animated GIF images, for which an optional button could be added to the toolbar. As of OS X 10.4 (Tiger), Preview lost playback functionality and animated GIF files are displayed as individual frames in a numbered sequence.

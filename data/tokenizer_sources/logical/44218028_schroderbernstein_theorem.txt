@@ -1,0 +1,1170 @@
+In set theory, the Schröder–Bernstein theorem states that, if there exist injective functions f : A → B and g : B → A between the sets A and B, then there exists a bijective function h : A → B.
+In terms of the cardinality of the two sets, this classically implies that if |A| ≤ |B| and |B| ≤ |A|, then |A| = |B|; that is, A and B are equipotent. This is a useful feature in the ordering of cardinal numbers.
+The theorem is named after Ernst Schröder and Felix Bernstein. It is also known as the Cantor–Bernstein theorem or Cantor–Schröder–Bernstein theorem, after Georg Cantor, who first published it (albeit without proof).
+
+Proof
+
+The following proof is attributed to Julius König.
+Assume without loss of generality that A and B are disjoint. For any a in A or b in B we can form a unique two-sided sequence of elements that are alternately in A and B, by repeatedly applying 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        
+          g
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle g^{-1}}
+  
+ to go from A to B and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ and 
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle f^{-1}}
+  
+ to go from B to A (where defined; the inverses 
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle f^{-1}}
+  
+ and 
+  
+    
+      
+        
+          g
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle g^{-1}}
+  
+ are understood as partial functions.)
+
+  
+    
+      
+        ⋯
+        →
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        
+          g
+          
+            −
+            1
+          
+        
+        (
+        a
+        )
+        )
+        →
+        
+          g
+          
+            −
+            1
+          
+        
+        (
+        a
+        )
+        →
+        a
+        →
+        f
+        (
+        a
+        )
+        →
+        g
+        (
+        f
+        (
+        a
+        )
+        )
+        →
+        ⋯
+      
+    
+    {\displaystyle \cdots \rightarrow f^{-1}(g^{-1}(a))\rightarrow g^{-1}(a)\rightarrow a\rightarrow f(a)\rightarrow g(f(a))\rightarrow \cdots }
+  
+
+For any particular a, this sequence may terminate to the left or not, at a point where 
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle f^{-1}}
+  
+ or 
+  
+    
+      
+        
+          g
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle g^{-1}}
+  
+ is not defined.
+By the fact that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ are injective functions, each a in A and b in B is in exactly one such sequence to within identity: if an element occurs in two sequences, all elements to the left and to the right must be the same in both, by the definition of the sequences. Therefore, the sequences form a partition of the (disjoint) union of A and B. Hence it suffices to produce a bijection between the elements of A and B in each of the sequences separately, as follows:
+Call a sequence an A-stopper if it stops at an element of A, or a B-stopper if it stops at an element of B. Otherwise, call it doubly infinite if all the elements are distinct or cyclic if it repeats. See the picture for examples.
+
+For an A-stopper, the function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a bijection between its elements in A and its elements in B.
+For a B-stopper, the function 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is a bijection between its elements in B and its elements in A.
+For a doubly infinite sequence or a cyclic sequence, either 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ or 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ will do (
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is used in the picture).
+
+Corollary for surjective pair
+If we assume the axiom of choice, then a pair of surjective functions 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ also implies the existence of a bijection. We construct an injective function h : B → A from 
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle f^{-1}}
+  
+ by picking a single element from the inverse image of each point in 
+  
+    
+      
+        B
+        .
+      
+    
+    {\displaystyle B.}
+  
+ The surjectivity of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ guarantees the existence of at least one element in each such inverse image. We do the same to obtain an injective function k : A → B from 
+  
+    
+      
+        
+          g
+          
+            −
+            1
+          
+        
+        .
+      
+    
+    {\displaystyle g^{-1}.}
+  
+ The Schröder–Bernstein theorem then can be applied to the injections h and k.
+
+Examples
+Bijective function from 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+        →
+        [
+        0
+        ,
+        1
+        )
+      
+    
+    {\displaystyle [0,1]\to [0,1)}
+  
+
+Note: 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        )
+      
+    
+    {\displaystyle [0,1)}
+  
+ is the half open set from 0 to 1, including the boundary 0 and excluding the boundary 1.
+Let 
+  
+    
+      
+        f
+        :
+        [
+        0
+        ,
+        1
+        ]
+        →
+        [
+        0
+        ,
+        1
+        )
+      
+    
+    {\displaystyle f:[0,1]\to [0,1)}
+  
+ with 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        x
+        
+          /
+        
+        2
+      
+    
+    {\displaystyle f(x)=x/2}
+  
+; and 
+  
+    
+      
+        g
+        :
+        [
+        0
+        ,
+        1
+        )
+        →
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle g:[0,1)\to [0,1]}
+  
+ with 
+  
+    
+      
+        g
+        (
+        x
+        )
+        =
+        x
+      
+    
+    {\displaystyle g(x)=x}
+  
+; the two injective functions.
+In line with that procedure 
+  
+    
+      
+        
+          C
+          
+            0
+          
+        
+        =
+        {
+        1
+        }
+        ,
+        
+        
+          C
+          
+            k
+          
+        
+        =
+        {
+        
+          2
+          
+            −
+            k
+          
+        
+        }
+        ,
+        
+        C
+        =
+        
+          ⋃
+          
+            k
+            =
+            0
+          
+          
+            ∞
+          
+        
+        
+          C
+          
+            k
+          
+        
+        =
+        {
+        1
+        ,
+        
+          
+            
+              1
+              2
+            
+          
+        
+        ,
+        
+          
+            
+              1
+              4
+            
+          
+        
+        ,
+        
+          
+            
+              1
+              8
+            
+          
+        
+        ,
+        .
+        .
+        .
+        }
+      
+    
+    {\displaystyle C_{0}=\{1\},\;C_{k}=\{2^{-k}\},\;C=\bigcup _{k=0}^{\infty }C_{k}=\{1,{\tfrac {1}{2}},{\tfrac {1}{4}},{\tfrac {1}{8}},...\}}
+  
+
+Then 
+  
+    
+      
+        h
+        (
+        x
+        )
+        =
+        
+          
+            {
+            
+              
+                
+                  
+                    
+                      x
+                      2
+                    
+                  
+                  ,
+                
+                
+                  
+                    f
+                    o
+                    r
+                  
+                   
+                  x
+                  ∈
+                  C
+                
+              
+              
+                
+                  x
+                  ,
+                
+                
+                  
+                    f
+                    o
+                    r
+                  
+                   
+                  x
+                  ∈
+                  [
+                  0
+                  ,
+                  1
+                  ]
+                  ∖
+                  C
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle h(x)={\begin{cases}{\frac {x}{2}},&\mathrm {for} \ x\in C\\x,&\mathrm {for} \ x\in [0,1]\smallsetminus C\end{cases}}}
+  
+ is a bijective function from 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+        →
+        [
+        0
+        ,
+        1
+        )
+      
+    
+    {\displaystyle [0,1]\to [0,1)}
+  
+.
+Bijective function from 
+  
+    
+      
+        [
+        0
+        ,
+        2
+        )
+        →
+        [
+        0
+        ,
+        1
+        
+          )
+          
+            2
+          
+        
+      
+    
+    {\displaystyle [0,2)\to [0,1)^{2}}
+  
+
+Let 
+  
+    
+      
+        f
+        :
+        [
+        0
+        ,
+        2
+        )
+        →
+        [
+        0
+        ,
+        1
+        
+          )
+          
+            2
+          
+        
+      
+    
+    {\displaystyle f:[0,2)\to [0,1)^{2}}
+  
+ with 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        (
+        x
+        
+          /
+        
+        2
+        ;
+        0
+        )
+      
+    
+    {\displaystyle f(x)=(x/2;0)}
+  
+;
+Then for 
+  
+    
+      
+        (
+        x
+        ;
+        y
+        )
+        ∈
+        [
+        0
+        ,
+        1
+        
+          )
+          
+            2
+          
+        
+      
+    
+    {\displaystyle (x;y)\in [0,1)^{2}}
+  
+ one can use the expansions 
+  
+    
+      
+        x
+        =
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          a
+          
+            k
+          
+        
+        ⋅
+        
+          10
+          
+            −
+            k
+          
+        
+      
+    
+    {\displaystyle x=\sum _{k=1}^{\infty }a_{k}\cdot 10^{-k}}
+  
+ and 
+  
+    
+      
+        y
+        =
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          b
+          
+            k
+          
+        
+        ⋅
+        
+          10
+          
+            −
+            k
+          
+        
+      
+    
+    {\displaystyle y=\sum _{k=1}^{\infty }b_{k}\cdot 10^{-k}}
+  
+ with 
+  
+    
+      
+        
+          a
+          
+            k
+          
+        
+        ,
+        
+          b
+          
+            k
+          
+        
+        ∈
+        {
+        0
+        ,
+        1
+        ,
+        .
+        .
+        .
+        ,
+        9
+        }
+      
+    
+    {\displaystyle a_{k},b_{k}\in \{0,1,...,9\}}
+  
+
+and now one can set 
+  
+    
+      
+        g
+        (
+        x
+        ;
+        y
+        )
+        =
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            ∞
+          
+        
+        (
+        10
+        ⋅
+        
+          a
+          
+            k
+          
+        
+        +
+        
+          b
+          
+            k
+          
+        
+        )
+        ⋅
+        
+          10
+          
+            −
+            2
+            k
+          
+        
+      
+    
+    {\displaystyle g(x;y)=\sum _{k=1}^{\infty }(10\cdot a_{k}+b_{k})\cdot 10^{-2k}}
+  
+ which defines an injective function 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        
+          )
+          
+            2
+          
+        
+        →
+        [
+        0
+        ,
+        2
+        )
+      
+    
+    {\displaystyle [0,1)^{2}\to [0,2)}
+  
+. (Example: 
+  
+    
+      
+        g
+        (
+        
+          
+            
+              1
+              3
+            
+          
+        
+        ;
+        
+          
+            
+              2
+              3
+            
+          
+        
+        )
+        =
+        0.363636...
+        =
+        
+          
+            
+              4
+              11
+            
+          
+        
+      
+    
+    {\displaystyle g({\tfrac {1}{3}};{\tfrac {2}{3}})=0.363636...={\tfrac {4}{11}}}
+  
+)
+And therefore a bijective function 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ can be constructed with the use of 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+ and 
+  
+    
+      
+        
+          g
+          
+            −
+            1
+          
+        
+        (
+        x
+        )
+      
+    
+    {\displaystyle g^{-1}(x)}
+  
+.
+In this case 
+  
+    
+      
+        
+          C
+          
+            0
+          
+        
+        =
+        [
+        1
+        ,
+        2
+        )
+      
+    
+    {\displaystyle C_{0}=[1,2)}
+  
+ is still easy but already 
+  
+    
+      
+        
+          C
+          
+            1
+          
+        
+        =
+        g
+        (
+        f
+        (
+        
+          C
+          
+            0
+          
+        
+        )
+        )
+        =
+        g
+        (
+        {
+        (
+        x
+        ;
+        0
+        )
+        
+          |
+        
+        x
+        ∈
+        [
+        
+          
+            
+              1
+              2
+            
+          
+        
+        ,
+        1
+        )
+        
+        }
+        )
+      
+    
+    {\displaystyle C_{1}=g(f(C_{0}))=g(\{(x;0)|x\in [{\tfrac {1}{2}},1)\,\})}
+  
+ gets quite complicated.
+Note: Of course there's a more simple way by using the (already bijective) function definition 
+  
+    
+      
+        
+          g
+          
+            2
+          
+        
+        (
+        x
+        ;
+        y
+        )
+        =
+        2
+        ⋅
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            ∞
+          
+        
+        (
+        10
+        ⋅
+        
+          a
+          
+            k
+          
+        
+        +
+        
+          b
+          
+            k
+          
+        
+        )
+        ⋅
+        
+          10
+          
+            −
+            2
+            k
+          
+        
+      
+    
+    {\displaystyle g_{2}(x;y)=2\cdot \sum _{k=1}^{\infty }(10\cdot a_{k}+b_{k})\cdot 10^{-2k}}
+  
+. Then 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ would be the empty set and 
+  
+    
+      
+        h
+        (
+        x
+        )
+        =
+        
+          g
+          
+            2
+          
+          
+            −
+            1
+          
+        
+        (
+        x
+        )
+      
+    
+    {\displaystyle h(x)=g_{2}^{-1}(x)}
+  
+ for all x.
+
+History
+The traditional name "Schröder–Bernstein" is based on two proofs published independently in 1898.
+Cantor is often added because he first stated the theorem in 1887, while Schröder's name is often omitted because his proof turned out to be flawed while the name of Richard Dedekind, who first proved it, is not connected with the theorem. According to Bernstein, Cantor had suggested the name equivalence theorem (Äquivalenzsatz).
+
+1887 Cantor publishes the theorem, however without proof.
+1887 On July 11, Dedekind proves the theorem (not relying on the axiom of choice) but neither publishes his proof nor tells Cantor about it. Ernst Zermelo discovered Dedekind's proof and in 1908 he publishes his own proof based on the chain theory from Dedekind's paper Was sind und was sollen die Zahlen?
+1895 Cantor states the theorem in his first paper on set theory and transfinite numbers. He obtains it as an easy consequence of the linear order of cardinal numbers. However, he could not prove the latter theorem, which is shown in 1915 to be equivalent to the axiom of choice by Friedrich Moritz Hartogs.
+1896 Schröder announces a proof (as a corollary of a theorem by Jevons).
+1897 Bernstein, a 19-year-old student in Cantor's Seminar, presents his proof.
+1897 Almost simultaneously, but independently, Schröder finds a proof, subsequently shown to be flawed (see below).
+1897 After a visit by Bernstein, Dedekind independently proves the theorem a second time.
+1898 Bernstein's proof (not relying on the axiom of choice) is published by Émile Borel in his book on functions. (Communicated by Cantor at the 1897 International Congress of Mathematicians in Zürich.) In the same year, the proof also appears in Bernstein's dissertation.
+1898 Schröder publishes his proof which, however, is shown to be faulty by Alwin Reinhold Korselt in 1902 (just before Schröder's death), (confirmed by Schröder), but Korselt's paper is published only in 1911.
+Both proofs of Dedekind are based on his famous 1888 memoir Was sind und was sollen die Zahlen? and derive it as a corollary of a proposition equivalent to statement C in Cantor's paper, which reads A ⊆ B ⊆ C and |A| = |C| implies |A| = |B| = |C|. Cantor observed this property as early as 1882/83 during his studies in set theory and transfinite numbers and was therefore (implicitly) relying on the axiom of choice.
+
+Prerequisites
+The 1895 proof by Cantor relied, in effect, on the axiom of choice by inferring the result as a corollary of the well-ordering theorem. However, König's proof given above shows that the result can also be proved without using the axiom of choice.
+On the other hand, König's proof uses the principle of excluded middle to draw a conclusion through case analysis. As such, the above proof is not a constructive one. In fact, in a constructive set theory such as intuitionistic set theory 
+  
+    
+      
+        
+          
+            I
+            Z
+            F
+          
+        
+      
+    
+    {\displaystyle {\mathsf {IZF}}}
+  
+, which adopts the full axiom of separation but dispenses with the principle of excluded middle, assuming the Schröder–Bernstein theorem implies the latter. In turn, there is no proof of König's conclusion in this or weaker constructive theories. Thus, the theorem is not provable in intuitionistic set theory and is generally not accepted as constructively valid.
+There is also a proof which uses Tarski's fixed point theorem.

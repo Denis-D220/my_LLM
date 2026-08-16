@@ -1,0 +1,805 @@
+In mathematics, the geodesic equations are second-order non-linear differential equations, and are commonly presented in the form of Euler–Lagrange equations of motion. However, they can also be presented as a set of coupled first-order equations, in the form of Hamilton's equations. This latter formulation is developed in this article.
+This can be interpreted in contact geometry as well using Reeb vector flow. Reeb vector flow applies more generally to the geodesic flow on Finsler manifolds.
+
+Overview
+It is frequently said that geodesics are "straight lines in curved space". By using the Hamilton–Jacobi approach to the geodesic equation, this statement can be given a very intuitive meaning: geodesics describe the motions of particles that are not experiencing any forces. In flat space, it is well known that a particle moving in a straight line will continue to move in a straight line if it experiences no external forces; this is Newton's first law. The Hamiltonian describing such motion is well known to be 
+  
+    
+      
+        H
+        =
+        
+          p
+          
+            2
+          
+        
+        
+          /
+        
+        2
+        m
+      
+    
+    {\displaystyle H=p^{2}/2m}
+  
+ with p being the momentum. It is the conservation of momentum that leads to the straight motion of a particle. On a curved surface, exactly the same ideas are at play, except that, in order to measure distances correctly, one must use the Riemannian metric. To measure momenta correctly, one must use the inverse of the metric. The motion of a free particle on a curved surface still has exactly the same form as above, i.e. consisting entirely of a kinetic term. The resulting motion is still, in a sense, a "straight line", which is why it is sometimes said that geodesics are "straight lines in curved space". This idea is developed in greater detail below.
+
+Geodesics as an application of the principle of least action
+Given a (pseudo-)Riemannian manifold M, a geodesic may be defined as the curve that results from the application of the principle of least action. A differential equation describing their shape may be derived, using variational principles, by minimizing (or finding the extremum) of the energy of a curve. Given a smooth curve
+
+  
+    
+      
+        γ
+        :
+        I
+        →
+        M
+      
+    
+    {\displaystyle \gamma :I\to M}
+  
+
+that maps an interval I of the real number line to the manifold M, one writes the energy
+
+  
+    
+      
+        E
+        (
+        γ
+        )
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          ∫
+          
+            I
+          
+        
+        g
+        (
+        
+          
+            
+              γ
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        ,
+        
+          
+            
+              γ
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        )
+        
+        d
+        t
+        ,
+      
+    
+    {\displaystyle E(\gamma )={\frac {1}{2}}\int _{I}g({\dot {\gamma }}(t),{\dot {\gamma }}(t))\,dt,}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              γ
+              ˙
+            
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\dot {\gamma }}(t)}
+  
+ is the tangent vector to the curve 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ at point 
+  
+    
+      
+        t
+        ∈
+        I
+      
+    
+    {\displaystyle t\in I}
+  
+.
+Here, 
+  
+    
+      
+        g
+        (
+        ⋅
+        ,
+        ⋅
+        )
+      
+    
+    {\displaystyle g(\cdot ,\cdot )}
+  
+ is the metric tensor on the manifold M. 
+Using the energy given above as the action, one may choose to solve either the Euler–Lagrange equations or the Hamilton–Jacobi equations. Both methods give the geodesic equation as the solution; however, the Hamilton–Jacobi equations provide greater insight into the structure of the manifold, as shown below. In terms of the local coordinates on M, the (Euler–Lagrange) geodesic equation is
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  2
+                
+              
+              
+                x
+                
+                  a
+                
+              
+            
+            
+              d
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+        +
+        
+          Γ
+          
+            b
+            c
+          
+          
+            a
+          
+        
+        
+          
+            
+              d
+              
+                x
+                
+                  b
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              d
+              
+                x
+                
+                  c
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle {\frac {d^{2}x^{a}}{dt^{2}}}+\Gamma _{bc}^{a}{\frac {dx^{b}}{dt}}{\frac {dx^{c}}{dt}}=0}
+  
+
+where the xa(t) are the coordinates of the curve γ(t), 
+  
+    
+      
+        
+          Γ
+          
+            b
+            c
+          
+          
+            a
+          
+        
+      
+    
+    {\displaystyle \Gamma _{bc}^{a}}
+  
+ are the Christoffel symbols, and repeated indices imply the use of the summation convention.
+
+Hamiltonian approach to the geodesic equations
+Geodesics can be understood to be the Hamiltonian flows of a special Hamiltonian vector field defined on the cotangent space of the manifold. The Hamiltonian is constructed from the metric on the manifold, and is thus a quadratic form consisting entirely of the kinetic term.
+The geodesic equations are second-order differential equations; they can be re-expressed as first-order equations by introducing additional independent variables, as shown below.  Note that a coordinate neighborhood U with coordinates xa induces a local trivialization of 
+
+  
+    
+      
+        
+          T
+          
+            ∗
+          
+        
+        M
+        
+          
+            |
+          
+          
+            U
+          
+        
+        ≃
+        U
+        ×
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle T^{*}M|_{U}\simeq U\times \mathbb {R} ^{n}}
+  
+
+by the map which sends a point 
+
+  
+    
+      
+        η
+        ∈
+        
+          T
+          
+            x
+          
+          
+            ∗
+          
+        
+        M
+        
+          
+            |
+          
+          
+            U
+          
+        
+      
+    
+    {\displaystyle \eta \in T_{x}^{*}M|_{U}}
+  
+
+of the form 
+
+  
+    
+      
+        η
+        =
+        
+          p
+          
+            a
+          
+        
+        d
+        
+          x
+          
+            a
+          
+        
+      
+    
+    {\displaystyle \eta =p_{a}dx^{a}}
+  
+ to the point 
+  
+    
+      
+        (
+        x
+        ,
+        
+          p
+          
+            a
+          
+        
+        )
+        ∈
+        U
+        ×
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle (x,p_{a})\in U\times \mathbb {R} ^{n}}
+  
+.
+Then introduce the Hamiltonian as
+
+  
+    
+      
+        H
+        (
+        x
+        ,
+        p
+        )
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          g
+          
+            a
+            b
+          
+        
+        (
+        x
+        )
+        
+          p
+          
+            a
+          
+        
+        
+          p
+          
+            b
+          
+        
+        .
+      
+    
+    {\displaystyle H(x,p)={\frac {1}{2}}g^{ab}(x)p_{a}p_{b}.}
+  
+
+Here, gab(x) is the inverse of the metric tensor: gab(x)gbc(x) = 
+  
+    
+      
+        
+          δ
+          
+            c
+          
+          
+            a
+          
+        
+      
+    
+    {\displaystyle \delta _{c}^{a}}
+  
+.  The behavior of the metric tensor under coordinate transformations implies that H is invariant under a change of variable. The geodesic equations can then be written as
+
+  
+    
+      
+        
+          
+            
+              
+                x
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        =
+        
+          
+            
+              ∂
+              H
+            
+            
+              ∂
+              
+                p
+                
+                  a
+                
+              
+            
+          
+        
+        =
+        
+          g
+          
+            a
+            b
+          
+        
+        (
+        x
+        )
+        
+          p
+          
+            b
+          
+        
+      
+    
+    {\displaystyle {\dot {x}}^{a}={\frac {\partial H}{\partial p_{a}}}=g^{ab}(x)p_{b}}
+  
+
+and
+
+  
+    
+      
+        
+          
+            
+              
+                p
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        =
+        −
+        
+          
+            
+              ∂
+              H
+            
+            
+              ∂
+              
+                x
+                
+                  a
+                
+              
+            
+          
+        
+        =
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          
+            
+              ∂
+              
+                g
+                
+                  b
+                  c
+                
+              
+              (
+              x
+              )
+            
+            
+              ∂
+              
+                x
+                
+                  a
+                
+              
+            
+          
+        
+        
+          p
+          
+            b
+          
+        
+        
+          p
+          
+            c
+          
+        
+        .
+      
+    
+    {\displaystyle {\dot {p}}_{a}=-{\frac {\partial H}{\partial x^{a}}}=-{\frac {1}{2}}{\frac {\partial g^{bc}(x)}{\partial x^{a}}}p_{b}p_{c}.}
+  
+
+The flow determined by these equations is called the cogeodesic flow; a simple substitution of one into the other obtains the Euler–Lagrange equations, which give the geodesic flow on the tangent bundle TM.  The geodesic lines are the projections of integral curves of the geodesic flow onto the manifold M.  This is a Hamiltonian flow, and the Hamiltonian is constant along the geodesics:
+
+  
+    
+      
+        
+          
+            
+              d
+              H
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            
+              ∂
+              H
+            
+            
+              ∂
+              
+                x
+                
+                  a
+                
+              
+            
+          
+        
+        
+          
+            
+              
+                x
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        +
+        
+          
+            
+              ∂
+              H
+            
+            
+              ∂
+              
+                p
+                
+                  a
+                
+              
+            
+          
+        
+        
+          
+            
+              
+                p
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        =
+        −
+        
+          
+            
+              
+                p
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        
+          
+            
+              
+                x
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        +
+        
+          
+            
+              
+                x
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        
+          
+            
+              
+                p
+                ˙
+              
+            
+          
+          
+            a
+          
+        
+        =
+        0.
+      
+    
+    {\displaystyle {\frac {dH}{dt}}={\frac {\partial H}{\partial x^{a}}}{\dot {x}}^{a}+{\frac {\partial H}{\partial p_{a}}}{\dot {p}}_{a}=-{\dot {p}}_{a}{\dot {x}}^{a}+{\dot {x}}^{a}{\dot {p}}_{a}=0.}
+  
+
+Thus, the geodesic flow splits the cotangent bundle into level sets of constant energy 
+
+  
+    
+      
+        
+          M
+          
+            E
+          
+        
+        =
+        {
+        (
+        x
+        ,
+        p
+        )
+        ∈
+        
+          T
+          
+            ∗
+          
+        
+        M
+        :
+        H
+        (
+        x
+        ,
+        p
+        )
+        =
+        E
+        }
+      
+    
+    {\displaystyle M_{E}=\{(x,p)\in T^{*}M:H(x,p)=E\}}
+  
+
+for each energy E ≥ 0, so that 
+
+  
+    
+      
+        
+          T
+          
+            ∗
+          
+        
+        M
+        =
+        
+          ⋃
+          
+            E
+            ≥
+            0
+          
+        
+        
+          M
+          
+            E
+          
+        
+      
+    
+    {\displaystyle T^{*}M=\bigcup _{E\geq 0}M_{E}}
+  
+.

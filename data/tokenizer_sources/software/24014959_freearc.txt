@@ -1,0 +1,100 @@
+FreeArc is a free and open-source high-performance file archiver developed by Bulat Ziganshin. The project is presumably discontinued, since no information has been released by the developers since 2016 and the official website is down.
+A "FreeArc Next" version is under development, with version FA 0.11 released in October 2016. The "Next" version supports 32- and 64-bit Windows and Linux and includes Zstandard support.
+
+Algorithms
+FreeArc uses LZMA, prediction by partial matching, TrueAudio, Tornado and GRzip algorithms with automatic switching by file type. Additionally, it uses filters to further improve compression, including REP (finds repetitions at separations up to 1gb), DICT (dictionary replacements for text), DELTA (improves compression of tables in binary data), BCJ (executables preproccesor) and LZP (removes repetitions in text).
+
+Benchmarks
+
+Archive size
+In 2010 Tom's Hardware benchmarks comparing it to the other popular archivers, FreeArc narrowly outperformed WinZip, 7-Zip, and WinRAR in its "best compression" mode. In the "default compression" tests, it lost to 7-Zip's LZMA2, but still compressed better than WinRAR and WinZip.
+
+Speed
+In the same Tom's Hardware tests, FreeArc was outpaced at default settings by 7zip's LZMA2 default compression, and also by WinRAR, even at its best compression settings. FreeArc's compression at its best settings was slower than both 7zip and WinRAR, but still came ahead of WinZip.
+
+Efficiency
+In a metric devised by Werner Bergmans of Maximum Compression Benchmark, FreeArc compression is more efficient than programs for classic formats like .Z (LZW), .zip (Deflate), .gz or bzip2. (The scoring formula used in this non-public test,
+
+  
+    
+      
+        
+          
+            score
+          
+          
+            X
+          
+        
+        =
+        
+          
+            time
+          
+          
+            X
+          
+        
+        ×
+        
+          2
+          
+            10
+            ⋅
+            
+              (
+              
+                
+                  
+                    
+                      
+                        size
+                      
+                      
+                        X
+                      
+                    
+                    
+                      
+                        size
+                      
+                      
+                        TOP
+                      
+                    
+                  
+                
+                −
+                1
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle {\text{score}}_{X}={\text{time}}_{X}\times 2^{10\cdot \left({\frac {{\text{size}}_{X}}{{\text{size}}_{\text{TOP}}}}-1\right)}}
+  
+
+multiplies the sum of compression and decompression times by a factor that exponentially grades the ratio of archive sizes achieved by the program under test relative to the best known archive size for that data set.) As of November 2010, FreeArc is the top program in this benchmark, followed by NanoZip, bsc and WinRAR. It works faster than WinRAR and 7zip.
+
+Features
+
+Like RAR and ZIP it is an archiver, not just a data compressor like gzip or bzip2. Initially it supported only its own archive format, normally identified by the .arc file name extension, incompatible with others; there is no relationship with other .arc formats. More recently, decompression support for other archive types was added, including zip, rar, and 7z. FreeArc has both a command line interface and a GUI. Other features include:
+
+Solid compression with "smart updates" which avoid recompression when possible
+AES/Blowfish/Twofish/Serpent encryption, including chaining of encryption algorithms
+FAR and Total Commander plug-ins
+Ability to create self-extracting archives and installers
+Archive protection and recovery layer using Reed–Solomon error correction with user-defined size (for example, recovery over Internet being 0.1%, while default is autosize 1-4%).
+
+Supported platforms
+Windows binaries are available from the developer. There is no 64-bit variant of version 0.666, but FA 0.11 supported both 32- and 64-bit systems.
+
+FreeArc Next
+In October 2016 the first public release of FreeArc Next was released. It is currently available only as a CLI application for 32 and 64 bit Windows and Linux platforms. New features include:
+
+Full-archive deduplication similar to ZPAQ
+Support for the Zstandard compression algorithm
+Lua programming for the INI file
+Better files prefetching which increases compression speeds

@@ -1,0 +1,117 @@
+{
+  "created_at_utc": "2026-08-09T23:53:39.463682+00:00",
+  "corpus_sha256": "b000b0b18fddd4ae4909c23f8f06c0d313362edba9fcbfdd000be0bf6ba36379",
+  "stats": {
+    "files_discovered": 75,
+    "documents_seen": 75,
+    "documents_selected": 71,
+    "skipped_empty": 1,
+    "skipped_too_short": 0,
+    "skipped_too_long": 2,
+    "skipped_duplicate": 1,
+    "skipped_special_token_collision": 0,
+    "selected_characters": 2054797,
+    "selected_utf8_bytes": 2061318,
+    "selected_lines": 12025
+  },
+  "categories": {
+    "business_finance": {
+      "files_discovered": 4,
+      "documents_seen": 4,
+      "documents_accepted_before_sampling": 4,
+      "documents_selected": 4,
+      "bytes_accepted_before_sampling": 70375,
+      "bytes_selected": 70375
+    },
+    "code": {
+      "files_discovered": 9,
+      "documents_seen": 9,
+      "documents_accepted_before_sampling": 8,
+      "documents_selected": 8,
+      "bytes_accepted_before_sampling": 149093,
+      "bytes_selected": 149093
+    },
+    "engineering": {
+      "files_discovered": 8,
+      "documents_seen": 8,
+      "documents_accepted_before_sampling": 8,
+      "documents_selected": 8,
+      "bytes_accepted_before_sampling": 198749,
+      "bytes_selected": 198749
+    },
+    "general": {
+      "files_discovered": 10,
+      "documents_seen": 10,
+      "documents_accepted_before_sampling": 10,
+      "documents_selected": 10,
+      "bytes_accepted_before_sampling": 357287,
+      "bytes_selected": 357287
+    },
+    "humanities": {
+      "files_discovered": 8,
+      "documents_seen": 8,
+      "documents_accepted_before_sampling": 8,
+      "documents_selected": 8,
+      "bytes_accepted_before_sampling": 394077,
+      "bytes_selected": 394077
+    },
+    "logical": {
+      "files_discovered": 5,
+      "documents_seen": 5,
+      "documents_accepted_before_sampling": 4,
+      "documents_selected": 4,
+      "bytes_accepted_before_sampling": 166614,
+      "bytes_selected": 166614
+    },
+    "mathematics": {
+      "files_discovered": 12,
+      "documents_seen": 12,
+      "documents_accepted_before_sampling": 11,
+      "documents_selected": 11,
+      "bytes_accepted_before_sampling": 277228,
+      "bytes_selected": 277228
+    },
+    "networking": {
+      "files_discovered": 4,
+      "documents_seen": 4,
+      "documents_accepted_before_sampling": 4,
+      "documents_selected": 4,
+      "bytes_accepted_before_sampling": 47502,
+      "bytes_selected": 47502
+    },
+    "science": {
+      "files_discovered": 12,
+      "documents_seen": 12,
+      "documents_accepted_before_sampling": 11,
+      "documents_selected": 11,
+      "bytes_accepted_before_sampling": 364365,
+      "bytes_selected": 364365
+    },
+    "software": {
+      "files_discovered": 3,
+      "documents_seen": 3,
+      "documents_accepted_before_sampling": 3,
+      "documents_selected": 3,
+      "bytes_accepted_before_sampling": 36028,
+      "bytes_selected": 36028
+    }
+  },
+  "weights": {
+    "general": 0.3,
+    "logical": 0.12,
+    "mathematics": 0.1,
+    "science": 0.12,
+    "engineering": 0.1,
+    "software": 0.08,
+    "code": 0.05,
+    "networking": 0.04,
+    "business_finance": 0.04,
+    "humanities": 0.05
+  },
+  "filters": {
+    "min_chars": 100,
+    "max_chars": 100000,
+    "exact_deduplication": true,
+    "special_token_collision_rejected": true
+  }
+}

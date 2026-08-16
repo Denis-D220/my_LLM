@@ -1,0 +1,44 @@
+A software framework is software that provides reusable, generic functionality which developers can extend or customize to create complete solutions. It offers an abstraction layer over lower-level code and infrastructure, allowing developers to focus on implementing business logic rather than building common functionality from scratch. Generally, a framework is intended to enhance productivity by allowing developers to focus on satisfying business requirements rather than reimplementing generic functionality. Frameworks often include support programs, compilers, software development kits, code libraries, toolsets, and APIs that integrate various components within a larger software platform or environment.
+Unlike a library, where user code controls the program's control flow, a framework implements inversion of control by dictating the overall structure and calling user code at predefined extension points (e.g., through template methods or hooks). Frameworks also provide default behaviours that work out-of-the-box, structured mechanisms for extensibility, and a fixed core that accepts extensions (e.g., plugins or subclasses) without direct modification.
+A framework differs from an application that can be extended—such as a web browser via an extension or a video game via a mod—in that it is intentionally incomplete scaffolding designed to be completed through its extension points while following specific architectural patterns. For example, a team using a web framework to develop a banking website can focus on writing banking business logic rather than handling low-level details like web request processing or state management.
+
+Comparison with libraries
+Software frameworks differ from standard libraries in key ways:
+
+Inversion of control: In a library, user code controls the program's flow and calls library functions as needed. In a framework, the framework controls the flow and calls user code at specific points, often via the Template Method Pattern.
+Default behaviour: Frameworks provide pre-implemented functionality (e.g., standard features or workflows) that can be used as-is or customized within a predefined structure. Libraries, by contrast, require user code to assemble and configure functionality.
+Structured extensibility: Frameworks enable new features or altered behaviour through structured mechanisms such as hooks, callbacks, or APIs. Libraries allow extensibility but without predefined integration points, relying on user code for integration.
+Open-closed principle: The framework's core logic is generally fixed, allowing extensions (e.g., plugins or subclasses) but not modification of the framework itself.
+
+Pattern
+According to Pree, software frameworks consist of frozen spots and hot spots. Frozen spots define the overall architecture of a software system, that is to say its basic components and the relationships between them. These remain unchanged (frozen) in any instantiation of the application framework. Hot spots represent the parts where the programmers using the framework add their own code to add the functionality specific to their own project.
+The necessary functionality can be implemented by using the Template Method Pattern in which the frozen spots are known as invariant methods and the hot spots are known as variant or hook methods. The invariant methods in the superclass provide default behaviour while the hook methods in each subclass provide custom behaviour.
+When developing a concrete software system with a software framework, developers utilize the hot spots according to the specific needs and requirements of the system. Software frameworks rely on the Hollywood Principle: "Don't call us, we'll call you." This means that the user-defined classes (for example, new subclasses) receive messages from the predefined framework classes. Developers usually handle this by implementing superclass abstract methods.
+
+Tradeoffs
+
+One potential downside of using a framework is that it adds to the size of a program, a phenomenon termed code bloat. This can be exacerbated by using multiple, sometimes competing, frameworks in the same codebase.
+Learning how to use a framework can be substantial. The intended efficiencies of using the framework may be outweighed by the cost to learn it, especially for a framework that is new to the development staff. However, once a framework is learned, development team speed may increase for future work.
+Some claim that the most effective frameworks evolve from re-factoring an existing solution, such as a generic one-size-fits-all framework developed by third parties for general purposes, rather than from green-field development.
+
+Examples
+A framework generally focuses on a specific problem domain, including:
+
+Artistic drawing, music composition, and mechanical CAD
+Financial modeling applications
+Earth system modeling applications
+Decision support systems
+Media playback and authoring
+Web framework
+Middleware
+Application framework – General GUI applications
+Enterprise Architecture framework
+Some notable frameworks:
+
+Cactus Framework – High performance scientific computing
+Oracle Application Development Framework
+Laravel (PHP Framework)
+Pipedream
+Php4delphi
+Vue Native
+OpenSilver - enables legacy applications based on Microsoft Silverlight, WPF, and LightSwitch to be ported into WebAssembly applications

@@ -1,0 +1,23 @@
+Apache Pivot is an open-source platform for building rich web applications in Java or any JVM-compatible language. It is released under the Apache License version 2.0.
+The project was retired in January 2025.
+
+Architecture
+Its classes are divided in the following categories:
+
+Core classes that enable the classes in the other categories to function
+WTK classes that provide user interface elements such as buttons and lists. These are built according to the model-view-controller architecture. Most of Pivot's classes are included in the WTK category.
+Web classes that enable communication with remote computers
+Charts that allow the software engineer to build interactive charts
+Tools that provide utility functionality
+
+WTK
+WTK or widgets toolkit are the graphical components of Apache Pivot. There are more widgets than in other Java GUI libraries like JFC/Swing, SWT or JavaFX. The components are based on Java2D and are completely skinnable and support color schemes. The demos "Kitchen Sink" and "Component Explorer" give a complete overview and show the possibilities of interaction. Additionally, it is easy to add and use self-made components because of the open structure. Also part of WTK are the so-called decorators which add graphical effects and even animations to the components.
+
+BXML
+In Apache Pivot, the GUI usually is designed using BXML files. BXML is an XML-based markup language for simplifying the construction of Java object hierarchies. While it is most often used to define the user interface of an Apache Pivot application, it is not limited to user interface construction, and can actually be used to create hierarchies of any object type. In the case of Apache Pivot the designer can place the WTK-components and set their properties without writing a single line of Java code. In more complex projects there usually is one class file for each BXML file to hold the logic, though there are other possibilities.
+
+Scripting
+Apache Pivot supports all JSR 223 scripting languages to script the BXML files. It is even possible to create an entire Pivot application without any compiled code at all. The script fragments can either be placed inside certain tags directly inside a BXML file, or in external files which get included during runtime.
+
+Non-GUI features
+Pivot includes its own Collection API for synchronizing data to the GUI, and APIs for accessing REST web services and parsing RSS, JSON and XML.

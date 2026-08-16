@@ -1,0 +1,53 @@
+The Fredkin gate (also controlled-SWAP gate and conservative logic gate) is a computational circuit suitable for reversible computing, invented by Edward Fredkin. It is universal, which means that any logical or arithmetic operation can be constructed entirely of Fredkin gates. The Fredkin gate is a circuit or device with three inputs and three outputs with one control bit and two target bits that transmits the first bit unchanged and swaps the last two bits if, and only if, the first bit is 1.
+
+Background
+The Fredkin gate, conceptualized by Edward Fredkin and Tommaso Toffoli at the MIT Laboratory for Computer Science, was a pivotal advancement in the field of reversible computing and conservative logic.  Developed within the framework of conservative logic, the gate is designed to align computing processes with fundamental physical principles such as the reversibility of dynamical laws and the conservation of energy.  The technical rationale behind the Fredkin gate is rooted in addressing the inefficiencies of traditional computing, where irreversible operations typically result in significant energy dissipation.
+In contrast to conventional logic gates, which often erase information and thus dissipate heat as per Landauer's principle, the Fredkin gate maintains reversibility — a property that ensures no information is lost during the computation process.  Each output state of the gate uniquely determines its input state, which not only preserves information but also aligns with energy conservation principles.  This characteristic is particularly crucial as the demand for computational power grows, making energy efficiency a key consideration.
+The invention of the Fredkin gate was motivated by the quest to minimize the energy footprint of computational operations.  It allows for the construction of computing systems that are not only efficient in terms of processing speed and power consumption but also environmentally sustainable.  By embodying principles of reversible computing, the Fredkin gate offers a practical solution to reducing the energy costs associated with digital computations, marking a significant shift towards more sustainable computing technologies.
+
+Definition
+The basic Fredkin gate is a controlled swap gate (CSWAP gate) that maps three inputs (C, I1, I2) onto three outputs (C, O1, O2). The C input is mapped directly to the C output. If C = 0, no swap is performed; I1 maps to O1, and I2 maps to O2. Otherwise, the two outputs are swapped so that I1 maps to O2, and I2 maps to O1. It is easy to see that this circuit is reversible, i.e., "undoes" itself when run backwards. A generalized n × n Fredkin gate passes its first n − 2 inputs unchanged to the corresponding outputs and swaps its last two outputs if and only if the first n − 2 inputs are all 1.
+
+Controlled-swap logic: The Fredkin gate, a three-bit controlled-SWAP gate, operates by conditionally swapping two target bits based on the state of a control bit. If the control bit is 1, the gate swaps the target bits; if 0, the bits pass through unchanged.
+
+Reversible computing: The gate is reversible, meaning that no information is lost during computation. This property aligns with principles of conservative logic, preserving data and reducing energy dissipation. This corresponds nicely to the conservation of mass in physics and helps to show that the model is not wasteful.
+
+Truth functions with AND, OR, XOR, and NOT
+The Fredkin gate can be defined using truth functions with AND, OR, XOR, and NOT, as follows:
+
+O1 = I1 XOR S,
+O2 = I2 XOR S,
+Cout = Cin,
+where S = (I1 XOR I2) AND C.
+Alternatively:
+
+O1 = (NOT C AND I1) OR (C AND I2),
+O2 = (C AND I1) OR (NOT C AND I2),
+Cout = Cin.
+
+Completeness
+One way to see that the Fredkin gate is universal is to observe that it can be used to implement AND, NOT and OR:
+
+If I2 = 0, then O2 = C AND I1.
+If I2 = 1, then O1 = C OR I1.
+If I1 = 0 and I2 = 1, then O2 = NOT C.
+
+Hardware description
+We can encode the truth table in a hardware description language such as Verilog:
+
+Example
+Three-bit full adder (add with carry) using five Fredkin gates. The "garbage" output bit g is (p NOR q) if r = 0, and (p NAND q) if r = 1.
+Inputs on the left, including two constants, go through three gates to quickly determine the parity. The 0 and 1 bits swap places for each input bit that is set, resulting in parity bit on the 4th row and inverse of parity on 5th row.
+Then the carry row and the inverse parity row swap if the parity bit is set and swap again if one of the p or q input bits are set (it doesn't matter which is used) and the resulting carry output appears on the 3rd row. 
+The p and q inputs are only used as gate controls so they appear unchanged in the output.
+
+Applications
+
+Quantum photonic chip implementation
+Recent research has demonstrated the Fredkin gate on programmable silicon photonic chips. These chips use a network of Mach-Zehnder interferometers to route photons efficiently, creating a versatile and scalable platform that can handle multiple quantum gates. This approach allows for integrating Fredkin gates into large-scale quantum processors, allowing for future quantum computing advancements.
+
+Efficient controlled-SWAP operation
+In a photonic setup, the Fredkin gate serves to swap the target qubits conditionally. This is useful for generating high-fidelity Greenberger-Horne-Zeilinger states, which are often used for quantum communication and other protocols.
+
+Quantum Fredkin gate
+On March 25, 2016, researchers from Griffith University and the University of Queensland announced they had built a quantum Fredkin gate that uses the quantum entanglement of particles of light to swap qubits.  The availability of quantum Fredkin gates may facilitate the construction of quantum computers.

@@ -1,0 +1,4156 @@
+In mathematics, the exponential function is the unique real function which maps zero to one and has a derivative everywhere equal to its value. It is denoted ⁠
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+      
+    
+    {\displaystyle e^{x}}
+  
+⁠ or ⁠
+  
+    
+      
+        exp
+        ⁡
+        x
+      
+    
+    {\displaystyle \exp x}
+  
+⁠; the latter is preferred when the argument ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ is a complicated expression. It is called exponential because its argument can be seen as an exponent to which a constant number e ≈ 2.718, the base, is raised. There are several other definitions of the exponential function, which are all equivalent although being of very different nature.
+The exponential function converts sums to products: ⁠
+  
+    
+      
+        exp
+        ⁡
+        (
+        x
+        +
+        y
+        )
+        =
+        exp
+        ⁡
+        x
+        ⋅
+        exp
+        ⁡
+        y
+      
+    
+    {\displaystyle \exp(x+y)=\exp x\cdot \exp y}
+  
+⁠. Its inverse function, the natural logarithm, ⁠
+  
+    
+      
+        ln
+      
+    
+    {\displaystyle \ln }
+  
+⁠ or ⁠
+  
+    
+      
+        log
+      
+    
+    {\displaystyle \log }
+  
+⁠, converts products to sums: ⁠
+  
+    
+      
+        ln
+        ⁡
+        (
+        x
+        ⋅
+        y
+        )
+        =
+        ln
+        ⁡
+        x
+        +
+        ln
+        ⁡
+        y
+      
+    
+    {\displaystyle \ln(x\cdot y)=\ln x+\ln y}
+  
+⁠.
+The exponential function is occasionally called the natural exponential function, matching the name natural logarithm, for distinguishing it from some other functions that are also commonly called exponential functions. These functions include the functions of the form ⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle f(x)=b^{x}}
+  
+⁠, which is exponentiation with a fixed base ⁠
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+⁠. More generally, and especially in applications, functions of the general form ⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle f(x)=ab^{x}}
+  
+⁠ are also called exponential functions. They grow or decay exponentially in that the rate that ⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+⁠ changes when ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ is increased is proportional to the current value of ⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+⁠.
+The exponential function can be generalized to accept complex numbers as arguments. This reveals relations between multiplication of complex numbers, rotations in the complex plane, and trigonometry. Euler's formula ⁠
+  
+    
+      
+        
+          e
+          
+            i
+            θ
+          
+        
+        =
+        cos
+        ⁡
+        θ
+        +
+        i
+        sin
+        ⁡
+        θ
+      
+    
+    {\displaystyle e^{i\theta }=\cos \theta +i\sin \theta }
+  
+⁠ expresses and summarizes these relations.
+The exponential function can be even further generalized to accept other types of arguments, such as matrices and elements of Lie algebras.
+
+Graph
+The graph of 
+  
+    
+      
+        y
+        =
+        
+          e
+          
+            x
+          
+        
+      
+    
+    {\displaystyle y=e^{x}}
+  
+ is upward-sloping, and increases faster than every power of ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠. The graph always lies above the x-axis, but becomes arbitrarily close to it for large negative x; thus, the x-axis is a horizontal asymptote. The equation 
+  
+    
+      
+        
+          
+            
+              d
+              
+                d
+                x
+              
+            
+          
+        
+        
+          e
+          
+            x
+          
+        
+        =
+        
+          e
+          
+            x
+          
+        
+      
+    
+    {\displaystyle {\tfrac {d}{dx}}e^{x}=e^{x}}
+  
+ means that the slope of the tangent to the graph at each point is equal to its height (its y-coordinate) at that point.
+
+Definitions and fundamental properties
+
+There are several equivalent definitions of the exponential function, although of very different nature.
+
+Differential equation
+
+The exponential function is the unique differentiable function that equals its derivative, and takes the value 1 for the value 0 of its variable.
+This definition requires a uniqueness proof and an existence proof, but it allows an easy derivation of the main properties of the exponential function.
+
+Inverse of natural logarithm
+The exponential function is the inverse function of the natural logarithm. That is, 
+
+  
+    
+      
+        
+          
+            
+              
+                ln
+                ⁡
+                (
+                exp
+                ⁡
+                x
+                )
+              
+              
+                
+                =
+                x
+              
+            
+            
+              
+                exp
+                ⁡
+                (
+                ln
+                ⁡
+                y
+                )
+              
+              
+                
+                =
+                y
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\ln(\exp x)&=x\\\exp(\ln y)&=y\end{aligned}}}
+  
+
+for every real number 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and every positive real number 
+  
+    
+      
+        y
+        .
+      
+    
+    {\displaystyle y.}
+  
+
+Power series
+The exponential function is the sum of the power series 
+
+  
+    
+      
+        
+          
+            
+              
+                exp
+                ⁡
+                (
+                x
+                )
+              
+              
+                
+                =
+                1
+                +
+                x
+                +
+                
+                  
+                    
+                      x
+                      
+                        2
+                      
+                    
+                    
+                      2
+                      !
+                    
+                  
+                
+                +
+                
+                  
+                    
+                      x
+                      
+                        3
+                      
+                    
+                    
+                      3
+                      !
+                    
+                  
+                
+                +
+                ⋯
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    n
+                    =
+                    0
+                  
+                  
+                    ∞
+                  
+                
+                
+                  
+                    
+                      x
+                      
+                        n
+                      
+                    
+                    
+                      n
+                      !
+                    
+                  
+                
+                ,
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\exp(x)&=1+x+{\frac {x^{2}}{2!}}+{\frac {x^{3}}{3!}}+\cdots \\&=\sum _{n=0}^{\infty }{\frac {x^{n}}{n!}},\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        n
+        !
+      
+    
+    {\displaystyle n!}
+  
+ is the factorial of n (the product of the n first positive integers). This series is absolutely convergent for every 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+, by the ratio test. This shows that the exponential function is defined for every ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠, and is everywhere the sum of its Maclaurin series.
+
+Functional equation
+The exponential satisfies the functional equation
+
+  
+    
+      
+        exp
+        ⁡
+        (
+        x
+        +
+        y
+        )
+        =
+        exp
+        ⁡
+        (
+        x
+        )
+        ⋅
+        exp
+        ⁡
+        (
+        y
+        )
+      
+    
+    {\displaystyle \exp(x+y)=\exp(x)\cdot \exp(y)}
+  
+
+and maps the additive identity 0 to the multiplicative identity 1.
+The same equation is satisfied by other continuous functions 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle f(x)=b^{x}}
+  
+ that exponentiate their argument with an arbitrary base 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+. Among these functions, the exponential function is characterized by the property that its derivative at 0 is 1.
+
+Limit of integer powers
+The exponential function is the limit, as the integer n goes to infinity,
+
+  
+    
+      
+        exp
+        ⁡
+        (
+        x
+        )
+        =
+        
+          lim
+          
+            n
+            →
+            +
+            ∞
+          
+        
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  x
+                  n
+                
+              
+            
+            )
+          
+          
+            n
+          
+        
+        .
+      
+    
+    {\displaystyle \exp(x)=\lim _{n\to +\infty }\left(1+{\frac {x}{n}}\right)^{n}.}
+  
+
+Properties
+Reciprocal: The functional equation implies ⁠
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        
+          e
+          
+            −
+            x
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle e^{x}e^{-x}=1}
+  
+⁠. Therefore ⁠
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        ≠
+        0
+      
+    
+    {\displaystyle e^{x}\neq 0}
+  
+⁠ for every ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ and 
+
+  
+    
+      
+        
+          
+            1
+            
+              e
+              
+                x
+              
+            
+          
+        
+        =
+        
+          e
+          
+            −
+            x
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {1}{e^{x}}}=e^{-x}.}
+  
+
+Positiveness: ⁠
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        >
+        0
+      
+    
+    {\displaystyle e^{x}>0}
+  
+⁠ for every real number ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠. This results from the intermediate value theorem, since ⁠
+  
+    
+      
+        
+          e
+          
+            0
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle e^{0}=1}
+  
+⁠ and, if one would have ⁠
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        <
+        0
+      
+    
+    {\displaystyle e^{x}<0}
+  
+⁠ for some ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠, there would be an ⁠
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+⁠ such that ⁠
+  
+    
+      
+        
+          e
+          
+            y
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle e^{y}=0}
+  
+⁠ between ⁠
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+⁠ and ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠. Since the exponential function equals its derivative, this implies that the exponential function is monotonically increasing.
+Extension of exponentiation to positive real bases: Let b be a positive real number. The exponential function and the natural logarithm being the inverse each of the other, one has 
+  
+    
+      
+        b
+        =
+        exp
+        ⁡
+        (
+        ln
+        ⁡
+        b
+        )
+        .
+      
+    
+    {\displaystyle b=\exp(\ln b).}
+  
+ If n is an integer, the functional equation of the logarithm implies 
+
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+        =
+        exp
+        ⁡
+        (
+        ln
+        ⁡
+        
+          b
+          
+            n
+          
+        
+        )
+        =
+        exp
+        ⁡
+        (
+        n
+        ln
+        ⁡
+        b
+        )
+        .
+      
+    
+    {\displaystyle b^{n}=\exp(\ln b^{n})=\exp(n\ln b).}
+  
+
+Since the right-most expression is defined if n is any real number, this allows defining ⁠
+  
+    
+      
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle b^{x}}
+  
+⁠ for every positive real number b and every real number x:
+
+  
+    
+      
+        
+          b
+          
+            x
+          
+        
+        =
+        exp
+        ⁡
+        (
+        x
+        ln
+        ⁡
+        b
+        )
+        .
+      
+    
+    {\displaystyle b^{x}=\exp(x\ln b).}
+  
+
+In particular, if b is the Euler's number 
+  
+    
+      
+        e
+        =
+        exp
+        ⁡
+        (
+        1
+        )
+        ,
+      
+    
+    {\displaystyle e=\exp(1),}
+  
+ one has 
+  
+    
+      
+        ln
+        ⁡
+        e
+        =
+        1
+      
+    
+    {\displaystyle \ln e=1}
+  
+ (inverse function) and thus 
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        =
+        exp
+        ⁡
+        (
+        x
+        )
+        .
+      
+    
+    {\displaystyle e^{x}=\exp(x).}
+  
+ This shows the equivalence of the two notations for the exponential function.
+
+General exponential functions
+A function is commonly called an exponential function—with an indefinite article—if it has the form ⁠
+  
+    
+      
+        x
+        ↦
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle x\mapsto b^{x}}
+  
+⁠, that is, if it is obtained from exponentiation by fixing the base and letting the exponent vary.
+More generally and especially in applied contexts, the term exponential function is commonly used for functions of the form ⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle f(x)=ab^{x}}
+  
+⁠. This may be motivated by the fact that, if the values of the function represent quantities, a change of measurement unit changes the value of ⁠
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+⁠, and so, it is nonsensical to impose ⁠
+  
+    
+      
+        a
+        =
+        1
+      
+    
+    {\displaystyle a=1}
+  
+⁠.
+These most general exponential functions are the differentiable functions that satisfy the following equivalent characterizations.
+
+⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle f(x)=ab^{x}}
+  
+⁠ for every ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ and some constants ⁠
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+⁠ and ⁠
+  
+    
+      
+        b
+        >
+        0
+      
+    
+    {\displaystyle b>0}
+  
+⁠.
+⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        
+          e
+          
+            k
+            x
+          
+        
+      
+    
+    {\displaystyle f(x)=ae^{kx}}
+  
+⁠ for every ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ and some constants ⁠
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+⁠ and ⁠
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+⁠.
+The value of 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        x
+        )
+        
+          /
+        
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f'(x)/f(x)}
+  
+  is independent of 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+.
+For every 
+  
+    
+      
+        d
+        ,
+      
+    
+    {\displaystyle d,}
+  
+ the value of 
+  
+    
+      
+        f
+        (
+        x
+        +
+        d
+        )
+        
+          /
+        
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x+d)/f(x)}
+  
+ is independent of 
+  
+    
+      
+        x
+        ;
+      
+    
+    {\displaystyle x;}
+  
+ that is, 
+  
+    
+      
+        
+          
+            
+              f
+              (
+              x
+              +
+              d
+              )
+            
+            
+              f
+              (
+              x
+              )
+            
+          
+        
+        =
+        
+          
+            
+              f
+              (
+              y
+              +
+              d
+              )
+            
+            
+              f
+              (
+              y
+              )
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {f(x+d)}{f(x)}}={\frac {f(y+d)}{f(y)}}}
+  
+ for every x, y.
+
+The base of an exponential function is the base of the exponentiation that appears in it when written as ⁠
+  
+    
+      
+        x
+        →
+        a
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle x\to ab^{x}}
+  
+⁠, namely ⁠
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+⁠. The base is ⁠
+  
+    
+      
+        
+          e
+          
+            k
+          
+        
+      
+    
+    {\displaystyle e^{k}}
+  
+⁠ in the second characterization, 
+  
+    
+      
+        exp
+        ⁡
+        
+          
+            
+              
+                f
+                ′
+              
+              (
+              x
+              )
+            
+            
+              f
+              (
+              x
+              )
+            
+          
+        
+      
+    
+    {\textstyle \exp {\frac {f'(x)}{f(x)}}}
+  
+ in the third one, and 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  f
+                  (
+                  x
+                  +
+                  d
+                  )
+                
+                
+                  f
+                  (
+                  x
+                  )
+                
+              
+            
+            )
+          
+          
+            1
+            
+              /
+            
+            d
+          
+        
+      
+    
+    {\textstyle \left({\frac {f(x+d)}{f(x)}}\right)^{1/d}}
+  
+ in the last one.
+
+In applications
+The last characterization is important in empirical sciences, as allowing a direct experimental test whether a function is an exponential function.
+Exponential growth or exponential decay—where the variable change is proportional to the variable value—are thus modeled with exponential functions. Examples are unlimited population growth leading to Malthusian catastrophe, continuously compounded interest, and radioactive decay.
+If the modeling function has the form ⁠
+  
+    
+      
+        x
+        ↦
+        a
+        
+          e
+          
+            k
+            x
+          
+        
+        ,
+      
+    
+    {\displaystyle x\mapsto ae^{kx},}
+  
+⁠ or, equivalently, is a solution of the differential equation ⁠
+  
+    
+      
+        
+          y
+          ′
+        
+        =
+        k
+        y
+      
+    
+    {\displaystyle y'=ky}
+  
+⁠, the constant ⁠
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+⁠ is called, depending on the context, the decay constant, disintegration constant, rate constant, or transformation constant.
+
+Equivalence proof
+For proving the equivalence of the above properties, one can proceed as follows.
+The two first characterizations are equivalent, since, if ⁠
+  
+    
+      
+        b
+        =
+        
+          e
+          
+            k
+          
+        
+      
+    
+    {\displaystyle b=e^{k}}
+  
+⁠ and ⁠
+  
+    
+      
+        k
+        =
+        ln
+        ⁡
+        b
+      
+    
+    {\displaystyle k=\ln b}
+  
+⁠, one has 
+
+  
+    
+      
+        
+          e
+          
+            k
+            x
+          
+        
+        =
+        (
+        
+          e
+          
+            k
+          
+        
+        
+          )
+          
+            x
+          
+        
+        =
+        
+          b
+          
+            x
+          
+        
+        .
+      
+    
+    {\displaystyle e^{kx}=(e^{k})^{x}=b^{x}.}
+  
+
+The basic properties of the exponential function (derivative and functional equation) implies immediately the third and the last condition.
+Suppose that the third condition is verified, and let ⁠
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+⁠ be the constant value of 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        x
+        )
+        
+          /
+        
+        f
+        (
+        x
+        )
+        .
+      
+    
+    {\displaystyle f'(x)/f(x).}
+  
+ Since 
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                e
+                
+                  k
+                  x
+                
+              
+            
+            
+              ∂
+              x
+            
+          
+        
+        =
+        k
+        
+          e
+          
+            k
+            x
+          
+        
+        ,
+      
+    
+    {\textstyle {\frac {\partial e^{kx}}{\partial x}}=ke^{kx},}
+  
+ the quotient rule for derivation
+implies that
+
+  
+    
+      
+        
+          
+            ∂
+            
+              ∂
+              x
+            
+          
+        
+        
+        
+          
+            
+              f
+              (
+              x
+              )
+            
+            
+              e
+              
+                k
+                x
+              
+            
+          
+        
+        =
+        0
+        ,
+      
+    
+    {\displaystyle {\frac {\partial }{\partial x}}\,{\frac {f(x)}{e^{kx}}}=0,}
+  
+ and thus that there is a constant ⁠
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+⁠ such that 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        
+          e
+          
+            k
+            x
+          
+        
+        .
+      
+    
+    {\displaystyle f(x)=ae^{kx}.}
+  
+
+If the last condition is verified, let 
+  
+    
+      
+        φ
+        (
+        d
+        )
+        =
+        f
+        (
+        x
+        +
+        d
+        )
+        
+          /
+        
+        f
+        (
+        x
+        )
+        ,
+      
+    
+    {\textstyle \varphi (d)=f(x+d)/f(x),}
+  
+ which is independent of ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠. Using ⁠
+  
+    
+      
+        φ
+        (
+        0
+        )
+        =
+        1
+      
+    
+    {\displaystyle \varphi (0)=1}
+  
+⁠, one gets
+
+  
+    
+      
+        
+          
+            
+              f
+              (
+              x
+              +
+              d
+              )
+              −
+              f
+              (
+              x
+              )
+            
+            d
+          
+        
+        =
+        f
+        (
+        x
+        )
+        
+        
+          
+            
+              φ
+              (
+              d
+              )
+              −
+              φ
+              (
+              0
+              )
+            
+            d
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {f(x+d)-f(x)}{d}}=f(x)\,{\frac {\varphi (d)-\varphi (0)}{d}}.}
+  
+
+Taking the limit when ⁠
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+⁠ tends to zero, one gets that the third condition is verified with ⁠
+  
+    
+      
+        k
+        =
+        
+          φ
+          ′
+        
+        (
+        0
+        )
+      
+    
+    {\displaystyle k=\varphi '(0)}
+  
+⁠. It follows therefore that ⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        
+          e
+          
+            k
+            x
+          
+        
+      
+    
+    {\displaystyle f(x)=ae^{kx}}
+  
+⁠ for some ⁠
+  
+    
+      
+        a
+        ,
+      
+    
+    {\displaystyle a,}
+  
+⁠ and ⁠
+  
+    
+      
+        φ
+        (
+        d
+        )
+        =
+        
+          e
+          
+            k
+            d
+          
+        
+        .
+      
+    
+    {\displaystyle \varphi (d)=e^{kd}.}
+  
+⁠ As a byproduct, one gets that 
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  f
+                  (
+                  x
+                  +
+                  d
+                  )
+                
+                
+                  f
+                  (
+                  x
+                  )
+                
+              
+            
+            )
+          
+          
+            1
+            
+              /
+            
+            d
+          
+        
+        =
+        
+          e
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \left({\frac {f(x+d)}{f(x)}}\right)^{1/d}=e^{k}}
+  
+
+is independent of both ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ and ⁠
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+⁠.
+
+Compound interest
+The earliest occurrence of the exponential function was in Jacob Bernoulli's study of compound interests in 1683.
+This is this study that led Bernoulli to consider the number
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  1
+                  n
+                
+              
+            
+            )
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \lim _{n\to \infty }\left(1+{\frac {1}{n}}\right)^{n}}
+  
+
+now known as Euler's number and denoted ⁠
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+⁠.
+The exponential function is involved as follows in the computation of continuously compounded interests.
+If a principal amount of 1 earns interest at an annual rate of x compounded monthly, then the interest earned each month is ⁠x/12⁠ times the current value, so each month the total value is multiplied by (1 + ⁠x/12⁠), and the value at the end of the year is (1 + ⁠x/12⁠)12.  If instead interest is compounded daily, this becomes (1 + ⁠x/365⁠)365.  Letting the number of time intervals per year grow without bound leads to the limit definition of the exponential function,
+
+  
+    
+      
+        exp
+        ⁡
+        x
+        =
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  x
+                  n
+                
+              
+            
+            )
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \exp x=\lim _{n\to \infty }\left(1+{\frac {x}{n}}\right)^{n}}
+  
+
+first given by Leonhard Euler.
+
+Differential equations
+
+Exponential functions occur very often in solutions of differential equations.
+The exponential functions can be defined as solutions of differential equations. Indeed, the exponential function is a solution of the simplest possible differential equation, namely ⁠
+  
+    
+      
+        
+          y
+          ′
+        
+        =
+        y
+      
+    
+    {\displaystyle y'=y}
+  
+⁠. Every other exponential function, of the form ⁠
+  
+    
+      
+        y
+        =
+        a
+        
+          b
+          
+            x
+          
+        
+      
+    
+    {\displaystyle y=ab^{x}}
+  
+⁠, is a solution of the differential equation ⁠
+  
+    
+      
+        
+          y
+          ′
+        
+        =
+        k
+        y
+      
+    
+    {\displaystyle y'=ky}
+  
+⁠, and every solution of this differential equation has this form.
+The solutions of an equation of the form 
+
+  
+    
+      
+        
+          y
+          ′
+        
+        +
+        k
+        y
+        =
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle y'+ky=f(x)}
+  
+ 
+involve exponential functions in a more sophisticated way, since they have the form
+
+  
+    
+      
+        y
+        =
+        c
+        
+          e
+          
+            −
+            k
+            x
+          
+        
+        +
+        
+          e
+          
+            −
+            k
+            x
+          
+        
+        ∫
+        f
+        (
+        x
+        )
+        
+          e
+          
+            k
+            x
+          
+        
+        d
+        x
+        ,
+      
+    
+    {\displaystyle y=ce^{-kx}+e^{-kx}\int f(x)e^{kx}dx,}
+  
+ 
+where ⁠
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+⁠ is an arbitrary constant and the integral denotes any antiderivative of its argument.
+More generally, the solutions of every linear differential equation with constant coefficients can be expressed in terms of exponential functions and, when they are not homogeneous, antiderivatives. This holds true also for systems of linear differential equations with constant coefficients.
+
+Complex exponential
+
+The exponential function can be naturally extended to a complex function, which is a function with the complex numbers as domain and codomain, such that its restriction to the reals is the above-defined exponential function, called real exponential function in what follows. This function is also called the exponential function, and also denoted ⁠
+  
+    
+      
+        
+          e
+          
+            z
+          
+        
+      
+    
+    {\displaystyle e^{z}}
+  
+⁠ or ⁠
+  
+    
+      
+        exp
+        ⁡
+        (
+        z
+        )
+      
+    
+    {\displaystyle \exp(z)}
+  
+⁠. For distinguishing the complex case from the real one, the extended function is also called complex exponential function or simply complex exponential.
+Most of the definitions of the exponential function can be used verbatim for definiting the complex exponential function, and the proof of their equivalence is the same as in the real case.
+The complex exponential function can be defined in several equivalent ways that are the same as in the real case.
+The complex exponential is the unique complex function that equals its complex derivative and takes the value ⁠
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+⁠ for the argument ⁠
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+⁠:
+
+  
+    
+      
+        
+          
+            
+              d
+              
+                e
+                
+                  z
+                
+              
+            
+            
+              d
+              z
+            
+          
+        
+        =
+        
+          e
+          
+            z
+          
+        
+        
+        
+          and
+        
+        
+        
+          e
+          
+            0
+          
+        
+        =
+        1.
+      
+    
+    {\displaystyle {\frac {de^{z}}{dz}}=e^{z}\quad {\text{and}}\quad e^{0}=1.}
+  
+
+The complex exponential function is the sum of the series
+
+  
+    
+      
+        
+          e
+          
+            z
+          
+        
+        =
+        
+          ∑
+          
+            k
+            =
+            0
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              z
+              
+                k
+              
+            
+            
+              k
+              !
+            
+          
+        
+        .
+      
+    
+    {\displaystyle e^{z}=\sum _{k=0}^{\infty }{\frac {z^{k}}{k!}}.}
+  
+
+This series is absolutely convergent for every complex number ⁠
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+⁠. So, the complex exponential is an entire function.
+The complex exponential function is the limit
+
+  
+    
+      
+        
+          e
+          
+            z
+          
+        
+        =
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  z
+                  n
+                
+              
+            
+            )
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle e^{z}=\lim _{n\to \infty }\left(1+{\frac {z}{n}}\right)^{n}}
+  
+
+As with the real exponential function (see § Functional equation above), the complex exponential satisfies the functional equation
+
+  
+    
+      
+        exp
+        ⁡
+        (
+        z
+        +
+        w
+        )
+        =
+        exp
+        ⁡
+        (
+        z
+        )
+        ⋅
+        exp
+        ⁡
+        (
+        w
+        )
+        .
+      
+    
+    {\displaystyle \exp(z+w)=\exp(z)\cdot \exp(w).}
+  
+
+Among complex functions, it is the unique solution which is holomorphic at the point ⁠
+  
+    
+      
+        z
+        =
+        0
+      
+    
+    {\displaystyle z=0}
+  
+⁠ and takes the derivative ⁠
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+⁠ there.
+The complex logarithm is a right-inverse function of the complex exponential:
+
+  
+    
+      
+        
+          e
+          
+            log
+            ⁡
+            z
+          
+        
+        =
+        z
+        .
+      
+    
+    {\displaystyle e^{\log z}=z.}
+  
+
+However, since the complex logarithm is a multivalued function, one has
+
+  
+    
+      
+        log
+        ⁡
+        
+          e
+          
+            z
+          
+        
+        =
+        {
+        z
+        +
+        2
+        i
+        k
+        π
+        ∣
+        k
+        ∈
+        
+          Z
+        
+        }
+        ,
+      
+    
+    {\displaystyle \log e^{z}=\{z+2ik\pi \mid k\in \mathbb {Z} \},}
+  
+
+and it is difficult to define the complex exponential from the complex logarithm. On the opposite, this is the complex logarithm that is often defined from the complex exponential.
+The complex exponential has the following properties:
+
+  
+    
+      
+        
+          
+            1
+            
+              e
+              
+                z
+              
+            
+          
+        
+        =
+        
+          e
+          
+            −
+            z
+          
+        
+      
+    
+    {\displaystyle {\frac {1}{e^{z}}}=e^{-z}}
+  
+
+and
+
+  
+    
+      
+        
+          e
+          
+            z
+          
+        
+        ≠
+        0
+        
+        
+          for every 
+        
+        z
+        ∈
+        
+          C
+        
+        .
+      
+    
+    {\displaystyle e^{z}\neq 0\quad {\text{for every }}z\in \mathbb {C} .}
+  
+
+It is a periodic function of period ⁠
+  
+    
+      
+        2
+        i
+        π
+      
+    
+    {\displaystyle 2i\pi }
+  
+⁠; that is 
+
+  
+    
+      
+        
+          e
+          
+            z
+            +
+            2
+            i
+            k
+            π
+          
+        
+        =
+        
+          e
+          
+            z
+          
+        
+        
+        
+          for every 
+        
+        k
+        ∈
+        
+          Z
+        
+        .
+      
+    
+    {\displaystyle e^{z+2ik\pi }=e^{z}\quad {\text{for every }}k\in \mathbb {Z} .}
+  
+
+This results from Euler's identity ⁠
+  
+    
+      
+        
+          e
+          
+            i
+            π
+          
+        
+        =
+        −
+        1
+      
+    
+    {\displaystyle e^{i\pi }=-1}
+  
+⁠ and the functional identity.
+The complex conjugate of the complex exponential is 
+
+  
+    
+      
+        
+          
+            
+              e
+              
+                z
+              
+            
+            ¯
+          
+        
+        =
+        
+          e
+          
+            
+              z
+              ¯
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\overline {e^{z}}}=e^{\overline {z}}.}
+  
+
+Its modulus is
+
+  
+    
+      
+        
+          |
+        
+        
+          e
+          
+            z
+          
+        
+        
+          |
+        
+        =
+        
+          e
+          
+            ℜ
+            (
+            z
+            )
+          
+        
+        ,
+      
+    
+    {\displaystyle |e^{z}|=e^{\Re (z)},}
+  
+
+where ⁠
+  
+    
+      
+        ℜ
+        (
+        z
+        )
+      
+    
+    {\displaystyle \Re (z)}
+  
+⁠ denotes the real part of ⁠
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+⁠.
+
+Relationship with trigonometry
+Complex exponential and trigonometric functions are strongly related by Euler's formula:
+
+  
+    
+      
+        
+          e
+          
+            i
+            t
+          
+        
+        =
+        cos
+        ⁡
+        (
+        t
+        )
+        +
+        i
+        sin
+        ⁡
+        (
+        t
+        )
+        .
+      
+    
+    {\displaystyle e^{it}=\cos(t)+i\sin(t).}
+  
+
+This formula provides the decomposition of complex exponentials into real and imaginary parts:
+
+  
+    
+      
+        
+          e
+          
+            x
+            +
+            i
+            y
+          
+        
+        =
+        
+          e
+          
+            x
+          
+        
+        
+          e
+          
+            i
+            y
+          
+        
+        =
+        
+          e
+          
+            x
+          
+        
+        
+        cos
+        ⁡
+        y
+        +
+        i
+        
+          e
+          
+            x
+          
+        
+        
+        sin
+        ⁡
+        y
+        .
+      
+    
+    {\displaystyle e^{x+iy}=e^{x}e^{iy}=e^{x}\,\cos y+ie^{x}\,\sin y.}
+  
+
+The trigonometric functions can be expressed in terms of complex exponentials:
+
+  
+    
+      
+        
+          
+            
+              
+                cos
+                ⁡
+                x
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        e
+                        
+                          i
+                          x
+                        
+                      
+                      +
+                      
+                        e
+                        
+                          −
+                          i
+                          x
+                        
+                      
+                    
+                    2
+                  
+                
+              
+            
+            
+              
+                sin
+                ⁡
+                x
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        e
+                        
+                          i
+                          x
+                        
+                      
+                      −
+                      
+                        e
+                        
+                          −
+                          i
+                          x
+                        
+                      
+                    
+                    
+                      2
+                      i
+                    
+                  
+                
+              
+            
+            
+              
+                tan
+                ⁡
+                x
+              
+              
+                
+                =
+                i
+                
+                
+                  
+                    
+                      1
+                      −
+                      
+                        e
+                        
+                          2
+                          i
+                          x
+                        
+                      
+                    
+                    
+                      1
+                      +
+                      
+                        e
+                        
+                          2
+                          i
+                          x
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\cos x&={\frac {e^{ix}+e^{-ix}}{2}}\\\sin x&={\frac {e^{ix}-e^{-ix}}{2i}}\\\tan x&=i\,{\frac {1-e^{2ix}}{1+e^{2ix}}}\end{aligned}}}
+  
+
+In these formulas, ⁠
+  
+    
+      
+        x
+        ,
+        y
+        ,
+        t
+      
+    
+    {\displaystyle x,y,t}
+  
+⁠ are commonly interpreted as real variables, but the formulas remain valid if the variables are interpreted as complex variables. These formulas may be used to define trigonometric functions of a complex variable.
+
+Plots
+
+Considering the complex exponential function as a function involving four real variables:
+
+  
+    
+      
+        v
+        +
+        i
+        w
+        =
+        exp
+        ⁡
+        (
+        x
+        +
+        i
+        y
+        )
+      
+    
+    {\displaystyle v+iw=\exp(x+iy)}
+  
+
+the graph of the exponential function is a two-dimensional surface curving through four dimensions.
+Starting with a color-coded portion of the 
+  
+    
+      
+        x
+        y
+      
+    
+    {\displaystyle xy}
+  
+ domain, the following are depictions of the graph as variously projected into two or three dimensions.
+
+The second image shows how the domain complex plane is mapped into the range complex plane:
+
+zero is mapped to 1
+the real 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ axis is mapped to the positive real 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ axis
+the imaginary 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ axis is wrapped around the unit circle at a constant angular rate
+values with negative real parts are mapped inside the unit circle
+values with positive real parts are mapped outside of the unit circle
+values with a constant real part are mapped to circles centered at zero
+values with a constant imaginary part are mapped to rays extending from zero
+The third and fourth images show how the graph in the second image extends into one of the other two dimensions not shown in the second image.
+The third image shows the graph extended along the real 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ axis.  It shows the graph is a surface of revolution about the 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ axis of the graph of the real exponential function, producing a horn or funnel shape.
+The fourth image shows the graph extended along the imaginary 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ axis.  It shows that the graph's surface for positive and negative 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ values doesn't really meet along the negative real 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ axis, but instead forms a spiral surface about the 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ axis.  Because its 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ values have been extended to ±2π, this image also better depicts the 2π periodicity in the imaginary 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ value.
+
+Transcendency
+The function ez is a transcendental function, which means that it is not a root of a polynomial over the field of the rational fractions 
+  
+    
+      
+        
+          C
+        
+        (
+        z
+        )
+        ;
+      
+    
+    {\displaystyle \mathbb {C} (z);}
+  
+ in fact, this is true for any exponential function with a positive real base not equal to 1.
+This follows from the stronger statement that if a1, ..., an are distinct complex numbers, then ea1z, ..., eanz are linearly independent over 
+  
+    
+      
+        
+          C
+        
+        (
+        z
+        )
+      
+    
+    {\displaystyle \mathbb {C} (z)}
+  
+.
+A much more difficult result is that the base e of the natural exponential function is a transcendental number, see the Lindemann–Weierstrass theorem.
+
+Computation
+The Taylor series definition above is generally efficient for computing (an approximation of) 
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+      
+    
+    {\displaystyle e^{x}}
+  
+. However, when computing near the argument 
+  
+    
+      
+        x
+        =
+        0
+      
+    
+    {\displaystyle x=0}
+  
+, the result will be close to 1, and computing the value of the difference 
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle e^{x}-1}
+  
+ with floating-point arithmetic may lead to the loss of (possibly all) significant figures, producing a large relative error, possibly even a meaningless result.
+Following a proposal by William Kahan, it may thus be useful to have a dedicated routine, often called expm1, which computes  ex − 1 directly, bypassing computation of ex. For example,
+one may use the Taylor series:
+
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        −
+        1
+        =
+        x
+        +
+        
+          
+            
+              x
+              
+                2
+              
+            
+            2
+          
+        
+        +
+        
+          
+            
+              x
+              
+                3
+              
+            
+            6
+          
+        
+        +
+        ⋯
+        +
+        
+          
+            
+              x
+              
+                n
+              
+            
+            
+              n
+              !
+            
+          
+        
+        +
+        ⋯
+        .
+      
+    
+    {\displaystyle e^{x}-1=x+{\frac {x^{2}}{2}}+{\frac {x^{3}}{6}}+\cdots +{\frac {x^{n}}{n!}}+\cdots .}
+  
+
+This was first implemented in 1979 in the Hewlett-Packard HP-41C calculator, and provided by several calculators, operating systems (for example Berkeley UNIX 4.3BSD), computer algebra systems, and programming languages (for example C99).
+In addition to base e, the IEEE 754-2008 standard defines similar exponential functions near 0 for base 2 and 10: 
+  
+    
+      
+        
+          2
+          
+            x
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle 2^{x}-1}
+  
+ and 
+  
+    
+      
+        
+          10
+          
+            x
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle 10^{x}-1}
+  
+.
+A similar approach has been used for the logarithm; see log1p.
+An identity in terms of the hyperbolic tangent,
+
+  
+    
+      
+        expm1
+        ⁡
+        (
+        x
+        )
+        =
+        
+          e
+          
+            x
+          
+        
+        −
+        1
+        =
+        
+          
+            
+              2
+              tanh
+              ⁡
+              (
+              x
+              
+                /
+              
+              2
+              )
+            
+            
+              1
+              −
+              tanh
+              ⁡
+              (
+              x
+              
+                /
+              
+              2
+              )
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \operatorname {expm1} (x)=e^{x}-1={\frac {2\tanh(x/2)}{1-\tanh(x/2)}},}
+  
+
+gives a high-precision value for small values of x on systems that do not implement expm1(x).
+
+Continued fractions
+The exponential function can also be computed with continued fractions.
+A continued fraction for ex can be obtained via an identity of Euler:
+
+  
+    
+      
+        
+          e
+          
+            x
+          
+        
+        =
+        1
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  x
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  1
+                  −
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            x
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            x
+                            +
+                            2
+                            −
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      2
+                                      x
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      x
+                                      +
+                                      3
+                                      −
+                                      
+                                        
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                3
+                                                x
+                                              
+                                            
+                                          
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                x
+                                                +
+                                                4
+                                                −
+                                                ⋱
+                                              
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle e^{x}=1+{\cfrac {x}{1-{\cfrac {x}{x+2-{\cfrac {2x}{x+3-{\cfrac {3x}{x+4-\ddots }}}}}}}}}
+  
+
+The following generalized continued fraction for ez, also due to Euler,
+converges more quickly:
+
+  
+    
+      
+        
+          e
+          
+            z
+          
+        
+        =
+        1
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  2
+                  z
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  2
+                  −
+                  z
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            
+                              z
+                              
+                                2
+                              
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            6
+                            +
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      
+                                        z
+                                        
+                                          2
+                                        
+                                      
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      10
+                                      +
+                                      
+                                        
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                
+                                                  z
+                                                  
+                                                    2
+                                                  
+                                                
+                                              
+                                            
+                                          
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                14
+                                                +
+                                                ⋱
+                                              
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle e^{z}=1+{\cfrac {2z}{2-z+{\cfrac {z^{2}}{6+{\cfrac {z^{2}}{10+{\cfrac {z^{2}}{14+\ddots }}}}}}}}}
+  
+
+or, by applying the substitution z = ⁠x/y⁠:
+
+  
+    
+      
+        
+          e
+          
+            
+              x
+              y
+            
+          
+        
+        =
+        1
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  2
+                  x
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  2
+                  y
+                  −
+                  x
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            
+                              x
+                              
+                                2
+                              
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            6
+                            y
+                            +
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      
+                                        x
+                                        
+                                          2
+                                        
+                                      
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      10
+                                      y
+                                      +
+                                      
+                                        
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                
+                                                  x
+                                                  
+                                                    2
+                                                  
+                                                
+                                              
+                                            
+                                          
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                14
+                                                y
+                                                +
+                                                ⋱
+                                              
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle e^{\frac {x}{y}}=1+{\cfrac {2x}{2y-x+{\cfrac {x^{2}}{6y+{\cfrac {x^{2}}{10y+{\cfrac {x^{2}}{14y+\ddots }}}}}}}}}
+  
+
+with a special case for z = 2:
+
+  
+    
+      
+        
+          e
+          
+            2
+          
+        
+        =
+        1
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  4
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  0
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            
+                              2
+                              
+                                2
+                              
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            6
+                            +
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      
+                                        2
+                                        
+                                          2
+                                        
+                                      
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      10
+                                      +
+                                      
+                                        
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                
+                                                  2
+                                                  
+                                                    2
+                                                  
+                                                
+                                              
+                                            
+                                          
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                14
+                                                +
+                                                ⋱
+                                              
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+        =
+        7
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  2
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  5
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            1
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            7
+                            +
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      1
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      9
+                                      +
+                                      
+                                        
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                1
+                                              
+                                            
+                                          
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                11
+                                                +
+                                                ⋱
+                                              
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle e^{2}=1+{\cfrac {4}{0+{\cfrac {2^{2}}{6+{\cfrac {2^{2}}{10+{\cfrac {2^{2}}{14+\ddots }}}}}}}}=7+{\cfrac {2}{5+{\cfrac {1}{7+{\cfrac {1}{9+{\cfrac {1}{11+\ddots }}}}}}}}}
+  
+
+This formula also converges, though more slowly, for z > 2. For example:
+
+  
+    
+      
+        
+          e
+          
+            3
+          
+        
+        =
+        1
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  6
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  −
+                  1
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            
+                              3
+                              
+                                2
+                              
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            6
+                            +
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      
+                                        3
+                                        
+                                          2
+                                        
+                                      
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      10
+                                      +
+                                      
+                                        
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                
+                                                  3
+                                                  
+                                                    2
+                                                  
+                                                
+                                              
+                                            
+                                          
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                14
+                                                +
+                                                ⋱
+                                              
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+        =
+        13
+        +
+        
+          
+            
+              
+                
+              
+              
+                
+                  54
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  7
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            9
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            14
+                            +
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      9
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      18
+                                      +
+                                      
+                                        
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                9
+                                              
+                                            
+                                          
+                                          
+                                            
+                                              
+                                            
+                                            
+                                              
+                                                22
+                                                +
+                                                ⋱
+                                              
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle e^{3}=1+{\cfrac {6}{-1+{\cfrac {3^{2}}{6+{\cfrac {3^{2}}{10+{\cfrac {3^{2}}{14+\ddots }}}}}}}}=13+{\cfrac {54}{7+{\cfrac {9}{14+{\cfrac {9}{18+{\cfrac {9}{22+\ddots }}}}}}}}}
+  
+
+Generalizations
+
+Matrices and Banach algebras
+The power series definition of the exponential function makes sense for square matrices (for which the function is called the matrix exponential) and more generally in any unital Banach algebra B.  In this setting, e0 = 1, and ex is invertible with inverse e−x for any x in B.  If xy = yx, then ex + y = exey, but this identity can fail for noncommuting x and y.
+Some alternative definitions lead to the same function.  For instance, ex can be defined as
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  x
+                  n
+                
+              
+            
+            )
+          
+          
+            n
+          
+        
+        .
+      
+    
+    {\displaystyle \lim _{n\to \infty }\left(1+{\frac {x}{n}}\right)^{n}.}
+  
+
+Or ex can be defined as fx(1), where fx : R → B is the solution to the differential equation ⁠dfx/dt⁠(t) = x fx(t), with initial condition fx(0) = 1; it follows that fx(t) = etx for every t in R.
+
+Lie algebras
+Given a Lie group G and its associated Lie algebra 
+  
+    
+      
+        
+          
+            g
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {g}}}
+  
+, the exponential map is a map 
+  
+    
+      
+        
+          
+            g
+          
+        
+        →
+        G
+      
+    
+    {\displaystyle {\mathfrak {g}}\to G}
+  
+ satisfying similar properties. In fact, since R is the Lie algebra of the Lie group of all positive real numbers under multiplication, the ordinary exponential function for real arguments is a special case of the Lie algebra situation. Similarly, since the Lie group GL(n,R) of invertible n × n matrices has as Lie algebra M(n,R), the space of all n × n matrices, the exponential function for square matrices is a special case of the Lie algebra exponential map.
+The identity 
+  
+    
+      
+        exp
+        ⁡
+        (
+        x
+        +
+        y
+        )
+        =
+        exp
+        ⁡
+        (
+        x
+        )
+        exp
+        ⁡
+        (
+        y
+        )
+      
+    
+    {\displaystyle \exp(x+y)=\exp(x)\exp(y)}
+  
+ can fail for Lie algebra elements x and y that do not commute; the Baker–Campbell–Hausdorff formula supplies the necessary correction terms.

@@ -1,0 +1,70 @@
+XMC is a family of microcontroller ICs by Infineon.  The XMC microcontrollers use the 32-bit RISC ARM processor cores from ARM Holdings, such as Cortex-M4F and Cortex-M0. XMC stands for "cross-market microcontrollers", meaning that this family can cover due to compatibility and configuration options, a wide range in industrial applications. The family supports three essential trends in the industry: It increases the energy efficiency of the systems, supports a variety of communication standards and reduces software complexity in the development of the application's software environment with the parallel released eclipse-based software tool DAVE.
+
+XMC1000
+XMC1000 is a 32-bit microcontroller family with a Cortex-M0 core by ARM Holdings which was first introduced in early 2013 by Infineon.  The family consists of XMC1100, XMC1200, XMC1300, XMC1400 sub family groups.
+
+XMC4000
+XMC4000 is a 32-bit microcontroller family with a Cortex-M4 core by ARM Holdings which was first introduced in early 2012 by Infineon. This microcontroller family uses the Cortex-M4 processor core with DSP function which is represented in numerous applications. Target applications in the industrial sector and multi-market can be: Actuators, solar inverters, manufacturing and building-automation, renewable energy and transportation. The XMC4000 family is divided into further series covering the various service areas and price ranges.
+
+The XMC4000 family is specifically designed for the industrial sector and positioned in the Infineon microcontroller portfolio between the 16 - bit and 32-bit MCU technology. The focus is on target areas such as logistics, transportation, renewable energy, building control, and automation. Moreover, the ongoing trend of worldwide energy efficiency can also be found in this family. The goal is to reduce energy consumptions in controls of motors, solar inverters, SMPS I/O devices, without burdening this performance.
+XMC4000 uses an ARM Cortex-M4 core, including single cycle DSP MAC and floating point unit (FPU) covering a frequency range from 80 MHz to 180 MHz. It has up to 1 MB embedded Flash with built-in ECC hardware.
+
+XMC4500/XMC4400 series
+Both high-end family members have a 120 MHz CPU. Both XMC4500/XMC4400 are running on a 1 MB/512 kB flash and 160 kB/80 kB RAM.
+
+XMC4200/XMC4100 series
+Infineon expands in November 2012 the XMC4000 Microcontroller Family. Both families the XMC4200 and the XMC4100 run with an 80 MHz CPU using an ARM Cortex-M4 core architecture. The difference between those two members is that the XMC4200 has a 256 kB Flash, 40 kB and the XMC4100 a 128 kB Flash with 20 kB RAM.
+
+Development tools
+
+XMC4000 Application Kit
+The XMC4000 Application Kit is a modular, extensible application board consisting of a CPU board in the center and 3 satellites, the so-called extension boards. Due to this construction, the kit can be functionally extended to certain target applications and customized. The three satellites include the automation I/O Kit, an Ethernet / CAN / RS-485 Interface kit and a standard human interface kit. The Human Interface Board also (HMI), in addition to the OLED display plus audio, a touch and SD / MMC function. The COM board allows developers to create a kind of remote control over Ethernet. This board also supports MultiCAN and RS-485 interfaces. In addition to these three satellites, it allows developers to connect their own boards.
+
+XMC4500 Relax / Relax Lite Kit
+The Relax Kit and the Relax Lite Kit  are low budget evaluation boards for the XMC4000 microcontroller family. The board contains the XMC4500 microcontroller (XMC4500-F100F1024 AA, Package: PG-LQFP-100), an ARM Cortex-M4F CPU running at 120 MHz, 1 MB Flash and 160 kB RAM. Besides that the Relax and Relax Lite Kit have a detachable on-board debugger so developers can download and validate the code without additional hardware. The Relax Kit and the Relax Lite Kit offer a complete set of on-board devices and plugs to run USB-based applications and to develop human machine interfaces with buttons and LEDs. The Relax Kit extends the feature set with an Ethernet-enabled communication option. It also allows developers to explore mass storage and file systems using a microSD card. In addition, it comes with serial flash memory. DAVE 3 is a suitable free software for those kits to reduce software developing time by using so called DAVE apps. Dave apps are sw component blocks which easily can be combined and implemented from the DAVE3 library.
+
+DAVE - Auto code generation free software tool
+DAVE (Digital Application Virtual Engineer) is an Eclipse-based software platform designed especially to reduce the software development effort and development time required for this. DAVE includes a GNU - compiler, a Debugger, and a visualization utility for graphic presentation of data. Other standard compiler and debugger can be added to the development environment. With pre-defined, tested applications, DAVE also supports automatic code generation. Alternatively, developers are free to integrate their own applications. Apps can be easily configured and adjusted using the graphical user interface to different applications.
+
+Third Party Tools
+Following development tool vendors support the XMC4000 family:
+
+Compiler, Debugger, Flash Loader:
+Altium Tasking
+Atollic[link removed]
+ARM Keil MDK
+Hitex
+IAR Systems
+iSYSTEM
+Lauterbach
+PLS
+Segger
+Micro Consult
+Operating systems, middleware, stacks
+CMX
+Express Logic
+FreeRTOS
+HighTec
+Micrium
+SEVENSTAX
+THESYCON
+Wind River Diab Compiler
+
+Development tools
+
+Documentation
+The amount of documentation for all ARM chips is daunting, especially for newcomers.  The documentation for microcontrollers from past decades would easily be inclusive in a single document, but as chips have evolved so has the documentation grown.  The total documentation is especially hard to grasp for all ARM chips since it consists of documents from the IC manufacturer (Infineon) and documents from CPU core vendor (ARM Holdings).
+A typical top-down documentation tree is: manufacturer website, manufacturer marketing slides, manufacturer datasheet for the exact physical chip, manufacturer detailed reference manual that describes common peripherals and aspects of a physical chip family, ARM core generic user guide, ARM core technical reference manual, ARM architecture reference manual that describes the instruction set(s).
+
+XMC documentation tree (top to bottom)
+
+XMC website.
+XMC marketing slides.
+XMC datasheet.
+XMC reference manual.
+ARM core website.
+ARM core generic user guide.
+ARM core technical reference manual.
+ARM architecture reference manual.
+Access to this documentation on the infineon website is only granted after accepting a NDA like license. This license forbids publishing any information from these documents, except where one can prove that this information was previously published.
+Infineon has additional documents, such as: evaluation board user manuals, application notes, getting started guides, software library documents, errata, and more.  See External Links section for links to official XMC and ARM documents.

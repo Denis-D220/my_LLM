@@ -1,0 +1,80 @@
+In computer science, type conversion, type casting, type coercion, and type juggling are different ways of changing an expression from one data type to another. An example would be the conversion of an integer value into a floating point value or its textual representation as a string, and vice versa. Type conversions can take advantage of certain features of type hierarchies or data representations. Two important aspects of a type conversion are whether it happens implicitly (automatically) or explicitly, and whether the underlying data representation is converted from one representation into another, or a given representation is merely reinterpreted as the representation of another data type. In general, both primitive and compound data types can be converted.
+Each programming language has its own rules on how types can be converted. Languages with strong typing typically do little implicit conversion and discourage the reinterpretation of representations, while languages with weak typing perform many implicit conversions between data types.  Weak typing language often allow forcing the compiler to arbitrarily interpret a data item as having different representations—this can be a non-obvious programming error, or a technical method to directly deal with underlying hardware.
+In most languages, the word coercion is used to denote an implicit conversion, either during compilation or during run time. For example, in an expression mixing integer and floating point numbers (like 5 + 0.1), the compiler will automatically convert integer representation into floating point representation so fractions are not lost. Explicit type conversions are either indicated by writing additional code (e.g. adding type identifiers or calling built-in routines) or by coding conversion routines for the compiler to use when it otherwise would halt with a type mismatch.
+In most ALGOL-like languages, such as Pascal, Modula-2, Ada and Delphi, conversion and casting are distinctly different concepts. In these languages, conversion refers to either implicitly or explicitly changing a value from one data type storage format to another, e.g. a 16-bit integer to a 32-bit integer. The storage needs may change as a result of the conversion, including a possible loss of precision or truncation. The word cast, on the other hand, refers to explicitly changing the interpretation of the bit pattern representing a value from one type to another. For example, 32 contiguous bits may be treated as an array of 32 Booleans, a 4-byte string, an unsigned 32-bit integer or an IEEE single precision floating point value. Because the stored bits are never changed, the programmer must know low level details such as representation format, byte order, and alignment needs, to meaningfully cast.
+In the C family of languages and ALGOL 68, the word cast typically refers to an explicit type conversion (as opposed to an implicit conversion), causing some ambiguity about whether this is a re-interpretation of a bit-pattern or a real data representation conversion.  More important is the multitude of ways and rules that apply to what data type (or class) is located by a pointer and how a pointer may be adjusted by the compiler in cases like object (class) inheritance.
+
+Explicit casting in various languages
+
+Ada
+Ada provides a generic library function Unchecked_Conversion.
+
+C-like languages
+
+Implicit type conversion
+Implicit type conversion, also known as coercion or type juggling, is an automatic type conversion by the compiler. Some programming languages allow compilers to provide coercion; others require it.
+In a mixed-type expression, data of one or more subtypes can be converted to a supertype as needed at runtime so that the program will run correctly. For example, the following is legal C language code:
+
+Although d, l, and i belong to different data types, they will be automatically converted to equal data types each time a comparison or assignment is executed. This behavior should be used with caution, as unintended consequences can arise. Data can be lost when converting representations from floating-point to integer, as the fractional components of the floating-point values will be truncated (rounded toward zero). Conversely, precision can be lost when converting representations from integer to floating-point, since a floating-point type may be unable to exactly represent all possible values of some integer type. For example, float might be an IEEE 754 single precision type, which cannot represent the integer 16777217 exactly, while a 32-bit integer type can. This can lead to unintuitive behavior, as demonstrated by the following code:
+
+On compilers that implement floats as IEEE single precision, and ints as at least 32 bits, this code will give this peculiar print-out:
+
+The integer is: 16777217
+The float is: 16777216.000000
+Their equality: 1
+
+Note that 1 represents equality in the last line above. This odd behavior is caused by an implicit conversion of i_value to float when it is compared with f_value. The conversion causes loss of precision, which makes the values equal before the comparison.
+Important takeaways:
+
+float to int causes truncation, i.e., removal of the fractional part.
+double to float causes rounding of digit.
+long to int causes dropping of excess higher order bits.
+
+Type promotion
+One special case of implicit type conversion is type promotion, where an object is automatically converted into another data type representing a superset of the original type. Promotions are commonly used with types smaller than the native type of the target platform's arithmetic logic unit (ALU), before arithmetic and logical operations, to make such operations possible, or more efficient if the ALU can work with more than one type. C and C++ perform such promotion for objects of Boolean, character, wide character, enumeration, and short integer types which are promoted to int, and for objects of type float, which are promoted to double. Unlike some other type conversions, promotions never lose precision or modify the value stored in the object.
+In Java:
+
+Explicit type conversion
+Explicit type conversion, also called type casting, is a type conversion which is explicitly defined within a program (instead of being done automatically according to the rules of the language for implicit type conversion). It is requested by the user in the program.
+
+There are several kinds of explicit conversion.
+
+checked
+Before the conversion is performed, a runtime check is done to see if the destination type can hold the source value. If not, an error condition is raised.
+unchecked
+No check is performed. If the destination type cannot hold the source value, the result is undefined.
+bit pattern
+The raw bit representation of the source is copied verbatim, and it is re-interpreted according to the destination type. This can also be achieved via aliasing.
+In object-oriented programming languages, objects can also be downcast : a reference of a base class is cast to one of its derived classes.
+
+C# and C++
+In C#, type conversion can be made in a safe or unsafe (i.e., C-like) manner, the former called checked type cast.
+
+In C++ a similar effect can be achieved using C++-style cast syntax.
+
+Eiffel
+In Eiffel the notion of type conversion is integrated into the rules of the type system. The Assignment Rule says that an assignment, such as x := y, is valid if and only if the type of its source expression (y) is compatible with the type of its target entity (x). In this rule, compatible with means that the type of the source expression either conforms to or converts to that of the target. Conformance of types is defined by the rules for polymorphism in object-oriented programming. For example, in the assignment above, the type of y conforms to the type of x if the class upon which y is based is a descendant of that upon which x is based.
+
+Rust
+Rust provides no implicit type conversion (coercion) between most primitive types. But, explicit type conversion (casting) can be performed using the as keyword.
+
+Type assertion
+A related concept in static type systems is called type assertion, which instruct the compiler to treat the expression of a certain type, disregarding its own inference. Type assertion may be safe (a runtime check is performed) or unsafe. A type assertion does not convert the value from a data type to another.
+
+TypeScript
+In TypeScript, a type assertion is done by using the as keyword:
+
+In the above example, document.getElementById is declared to return an HTMLElement, but you know that it always return an HTMLCanvasElement, which is a subtype of HTMLElement, in this case. If it is not the case, subsequent code which relies on the behaviour of HTMLCanvasElement will not perform correctly, as in TypeScript there is no runtime checking for type assertions.
+In TypeScript, there is no general way to check if a value is of a certain type at runtime, as there is no runtime type support. However, it is possible to write a user-defined function which the user tells the compiler if a value is of a certain type of not. Such a function is called type guard, and is declared with a return type of x is Type, where x is a parameter or this, in place of boolean.
+This allows unsafe type assertions to be contained in the checker function instead of littered around the codebase.
+
+Go
+In Go, a type assertion can be used to access a concrete type value from an interface value. It is a safe assertion that it will panic (in the case of one return value), or return a zero value (if two return values are used), if the value is not of that concrete type.
+
+This type assertions tell the system that i is of type T. If it isn't, it panics.
+
+Implicit casting using untagged unions
+Many programming languages support union types which can hold a value of multiple types. Untagged unions are provided in some languages with loose type-checking, such as C and PL/I, but also in the original Pascal. These can be used to interpret the bit pattern of one type as a value of another type.
+
+Security issues
+In hacking, typecasting is the misuse of type conversion to temporarily change a variable's data type from how it was originally defined. This provides opportunities for hackers since in type conversion after a variable is "typecast" to become a different data type, the compiler will treat that hacked variable as the new data type for that specific operation.

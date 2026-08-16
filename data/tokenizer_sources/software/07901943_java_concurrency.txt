@@ -1,0 +1,68 @@
+The Java programming language and the Java virtual machine (JVM) are designed to support concurrent programming. All execution takes place in the context of threads. Objects and resources can be accessed by many separate threads, with each thread with its own path of execution, but with access to any object in the program. Read and write access to objects must be properly coordinated (or "synchronized") between threads. Thread synchronization ensures that objects are modified by only one thread at a time and prevents threads from accessing partially updated objects during modification by another thread.
+
+Processes and threads
+Most implementations of the Java virtual machine run as a single process. In the Java programming language, concurrent programming is primarily concerned with threads (also called lightweight processes). Multiple processes can only be realized with multiple JVMs.
+
+Thread objects
+Threads share the process' resources, including memory and open files. This makes for efficient, but potentially problematic, communication. Every application has at least one thread called the main thread. The main thread has the ability to create additional threads as Runnable or Callable objects. The java.lang.Callable interface is similar to java.lang.Runnable in that both are designed for classes whose instances are potentially executed by another thread. A java.lang.Runnable, however, does not return a result and cannot throw a checked exception.
+Each thread can be scheduled on a different CPU core or use time-slicing on a single hardware processor, or time-slicing on many hardware processors. There is no general solution to how Java threads are mapped to native OS threads. Every JVM implementation can do this differently.
+Each thread is associated with an instance of the class java.lang.Thread. Threads can be managed either by directly using the java.lang.Thread objects, or indirectly by using abstract mechanisms such as java.util.concurrent.Executors or task classes. Java provides the following task classes:
+
+java.util.concurrent.ForkJoinTask<V>, and its descendants:
+java.util.concurrent.CountedCompleter<T>
+java.util.concurrent.RecursiveAction (is ForkJoinTask<Void>)
+java.util.concurrent.RecursiveTask<V>
+java.util.concurrent.FutureTask<V>
+javafx.concurrent.Task<V> (from JavaFX)
+As part of Project Loom in Java 21, virtual threads were introduced, which allow for normal, blocking, synchronous code while scaling to millions of tasks. The classic Java thread is called a "platform thread", corresponding roughly to an OS thread, but Java virtual threads are lightweight and managed by the JVM, scheduled onto a small pool of real OS threads. Virtual threads are still java.lang.Thread, but are created with factory methods like ofVirtual(). Although the code is still synchronous and blocking, the physical OS threads are asynchronous; upon stopping to wait, the JVM detaches the code from the physical thread, running other tasks until the OS sends an asynchronous event notification to pick up the code where it left off to finish.
+
+Thread starting
+A thread may be started through providing a java.lang.Runnable object:
+
+Or, through subclassing:
+
+Interrupts
+An interrupt tells a thread that it should stop what it is doing and do something else. A thread sends an interrupt by invoking interrupt() on a java.lang.Thread for the thread to be interrupted. The interrupt mechanism is implemented using an internal flag marking its interruption status, which is set upon a call to interrupt(). Any method that exits by throwing a java.lang.InterruptedException clears the interrupted status when it does so, but there is the possibility that the interrupted status may immediately be set again, by another thread calling interrupt().
+Historically, threads could be stopped immediately using the stop() method; upon calling this, a java.lang.ThreadDeath would be thrown, which clears the thread. This method was dangerous as it could leave data in a corrupted state, and was eventually removed in Java 20.
+
+Joins
+The java.lang.Thread#join() method allows a java.lang.Thread to wait for the completion of another.
+
+Exceptions
+Uncaught exceptions thrown by code will terminate the thread. The main thread prints exceptions to the console, but user-created threads need a handler registered to do so.
+
+Memory model
+The Java memory model describes how threads in the Java programming language interact through memory. On modern platforms, code is frequently not executed in the order it was written. It is reordered by the compiler, the processor and the memory subsystem for performance reasons. There is no guarantee of linearizability, or even sequential consistency, when reading or writing fields of shared objects. This allows for compiler optimizations (such as register allocation, common subexpression elimination, and redundant read elimination), through reordering memory read-writes.
+
+Synchronization
+Threads communicate primarily by sharing access to fields and the objects that reference fields refer to. This form of communication is extremely efficient, but makes two kinds of errors possible: thread interference and memory consistency errors.
+Reorderings may take effect in incorrectly synchronized multithreaded programs, where one thread is able to observe the effects of other threads, and may be able to detect that variable accesses become visible to other threads in a different order than executed or specified in the program.
+When threads must interact with one another, synchronization is used. To synchronize threads, Java uses monitors, which are a high-level mechanism for allowing only one thread at a time to execute a region of code protected by the monitor. The behavior of monitors is explained in terms of locks; there is a lock associated with each object.
+Synchronization has many implementations. Of particular note is mutual exclusion, where only one thread can hold a monitor at once, so synchronizing on a monitor means that once one thread enters a synchronized block protected by a monitor, no other thread can enter a block protected by that monitor until the first thread exits the synchronized block.
+Synchronization ensures that memory writes by a thread before or during a synchronized block are made visible in a predictable manner to other threads which synchronize on the same monitor. Once a synchronized block completes, the monitor is released, which flushes the cache to main memory, so that writes made by this thread are visible to other threads. Before a synchronized block begins, the monitor is acquired, invalidating the local processor cache so that variables are reloaded from main memory. All writes made by the previous release are at that point visible.
+Read-writes to fields are linearizable if either the field is volatile, or the field is protected by a unique lock which is acquired by all readers and writers.
+
+Locks and synchronized blocks
+A thread can achieve mutual exclusion either by entering a synchronized block or method, which acquires an implicit lock, or by acquiring an explicit lock (such as the ReentrantLock from the java.util.concurrent.locks package ). Both approaches have the same implications for memory behavior. If all accesses to a particular field are protected by the same lock, then reads—writes to that field are linearizable (atomic).
+JVM may also apply lock in runtime: this is known as the "store-free biased locking technique" or "biased locking".
+
+Volatile fields
+When applied to a field, volatile keyword guarantees that there is a global ordering on the reads and writes to a volatile variable. This implies that every thread accessing a volatile field will read its current value before continuing, instead of (potentially) using a cached value. However, there is no guarantee about the relative ordering of volatile reads and writes with regular reads and writes.
+Since Java 5, volatile reads and writes establish a happens-before relationship, much like acquiring and releasing a mutex. This relationship is simply a guarantee that memory writes by one specific statement are visible to another specific statement.
+volatile fields are linearizable. Reading a volatile field is like acquiring a lock: the working memory is invalidated and the volatile field's current value is reread from memory. Writing a volatile field is like releasing a lock: the volatile field is immediately written back to memory.
+
+Final fields
+A field declared to be final cannot be modified once it has been initialized. An object's final fields are initialized in its constructor. As long as the this reference is not released from the constructor before the constructor returns, the correct value of any final fields will be visible to other threads without synchronization.
+
+Atomics and locks
+Java offers atomicity features in java.util.concurrent.atomic. These provide lock-free, thread-safe types with atomic operations, while avoiding synchronized.
+Primitives and arrays of primitives have their own atomic types (such as java.util.concurrent.atomic.AtomicInteger and java.util.concurrent.atomic.AtomicIntegerArray), and for reference types, the class java.util.concurrent.atomic.AtomicReference<T> is provided.
+
+Futures
+Rather than java.lang.Thread, another class java.util.concurrent.CompletableFuture<T> is provided for asynchronous computation; this may be seen as similar to a System.Threading.Tasks.Task<T> in C#, even though Java lacks explicit coroutines like those of C#.
+
+History
+Since JDK 1.2, Java has included a standard set of collection classes, the Java collections framework
+Doug Lea, who also participated in the Java collections framework implementation, developed a concurrency package, comprising several concurrency primitives and a large battery of collection-related classes. This work was continued and updated as part of JSR 166 which was chaired by Doug Lea.
+JDK 5.0 incorporated many additions and clarifications to the Java concurrency model. The concurrency APIs developed by JSR 166 were also included as part of the JDK for the first time. JSR 133 provided support for well-defined atomic operations in a multithreaded/multiprocessor environment.
+Both the Java SE 6 and Java SE 7 releases introduced updated versions of the JSR 166 APIs as well as several new additional APIs.

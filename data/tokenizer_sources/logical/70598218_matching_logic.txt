@@ -1,0 +1,2816 @@
+Matching logic is a family of formal systems that were created mainly to specify and reason about computer programs and their correctness. Compared to classical logics such as first-order logic, matching logic's formulas, called patterns, are interpreted as, not elements, but power sets of the underlying carrier set(s), with the intuition that a pattern is matched by the set of elements that "match" it. This way, matching logic is said to admit a semantics based on pattern matching.
+Matching logic was initially coined by Grigore Rosu and finalized with Xiaohong Chen in 2019. Matching logic is the logical foundation of the K framework.
+
+History
+
+Early development
+The term "matching logic" was coined in 2009. and has been used to refer to a couple of formal systems since then. In the early days, matching logic was represented in the literature as a formal system to specify and reason about computer programs' configurations. Together with a set of rules, it was used to specify and reason about the dynamic behaviors of computer programs.
+The latter was later developed into reachability logic, which is a language-agnostic formal system with a fixed number of rules that provides sound and relatively complete formal verification capability for all programming languages. In these works of literature, matching logic is presented as an independent component of reachability logic.
+
+Formalization as a standalone logic
+The first paper that establishes matching logic as a standalone formal logic was published in 2017. There, matching logic was given an independent definition of its syntax, semantics, and proof system for the first time. In 2019, fixpoint constructors and proof rules were added to matching logic.
+More recently, researchers have shown increasing interest in simplifying matching logic to a bare minimum. They aim to keep its expressive power intact during this process. All these formalizations exist in today's literature and sometimes appear under the same name "matching logic''.
+
+Variants
+We list them below in the chronological order:
+
+"Matching logic", which is a many-sorted logic but has no fixpoint operators.
+"Matching 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+-logic", which extends the LMCS'17 formalization with fixpoint operators and proof rules.
+"Applicative matching logic", which is a restricted fragment that requires the signatures to include only one sort and only one non-constant symbol that is a binary symbol.
+Since then, the term "matching logic" has been used to refer to any of the above formalizations in the literature. To avoid confusion, we shall present the formalization of the most complete version, matching 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+-logic. Then, we will present the other formalizations as variants.
+
+Formal definition
+Matching 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+-logic is defined through its syntax and semantics, which are detailed below.
+
+Syntax
+The syntax of matching logic specifies how patterns are constructed using variables, symbols, and logical connectives.
+
+Signatures and variables
+Matching logic is parametric on a many-sorted signature 
+  
+    
+      
+        (
+        S
+        ,
+        Σ
+        )
+      
+    
+    {\displaystyle (S,\Sigma )}
+  
+ that has a set 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ of sorts and an 
+  
+    
+      
+        (
+        
+          S
+          
+            ∗
+          
+        
+        ×
+        S
+        )
+      
+    
+    {\displaystyle (S^{*}\times S)}
+  
+-indexed set 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+ of many-sorted symbols, or simply symbols. A symbol 
+  
+    
+      
+        σ
+        ∈
+        
+          Σ
+          
+            
+              s
+              
+                1
+              
+            
+            …
+            
+              s
+              
+                n
+              
+            
+            ,
+            s
+          
+        
+      
+    
+    {\displaystyle \sigma \in \Sigma _{s_{1}\dots s_{n},s}}
+  
+ means that it takes 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ arguments of sorts 
+  
+    
+      
+        
+          s
+          
+            1
+          
+        
+      
+    
+    {\displaystyle s_{1}}
+  
+, ..., 
+  
+    
+      
+        
+          s
+          
+            n
+          
+        
+      
+    
+    {\displaystyle s_{n}}
+  
+, respectively, and returns a value of sort 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+.
+Let 
+  
+    
+      
+        (
+        S
+        ,
+        Σ
+        )
+      
+    
+    {\displaystyle (S,\Sigma )}
+  
+ be a many-sorted signature. Let 
+  
+    
+      
+        
+          E
+          V
+        
+        =
+        
+          
+            
+              
+                {
+                E
+                V
+              
+              
+                s
+              
+            
+            }
+          
+          
+            s
+            ∈
+            S
+          
+        
+      
+    
+    {\displaystyle \mathrm {EV} ={\mathrm {\{EV} _{s}\}}_{s\in S}}
+  
+ and 
+  
+    
+      
+        
+          S
+          V
+        
+        =
+        
+          
+            
+              
+                {
+                S
+                V
+              
+              
+                s
+              
+            
+            }
+          
+          
+            s
+            ∈
+            S
+          
+        
+      
+    
+    {\displaystyle \mathrm {SV} ={\mathrm {\{SV} _{s}\}}_{s\in S}}
+  
+ be two disjoint families of 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+-indexed sets of variables. We call elements in 
+  
+    
+      
+        
+          E
+          V
+        
+      
+    
+    {\displaystyle \mathrm {EV} }
+  
+ element variables, denoted 
+  
+    
+      
+        x
+        :
+        s
+      
+    
+    {\displaystyle x:s}
+  
+, 
+  
+    
+      
+        y
+        :
+        s
+      
+    
+    {\displaystyle y:s}
+  
+, ... and elements in 
+  
+    
+      
+        
+          S
+          V
+        
+      
+    
+    {\displaystyle \mathrm {SV} }
+  
+ set variables, denoted 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+, 
+  
+    
+      
+        Y
+        :
+        s
+      
+    
+    {\displaystyle Y:s}
+  
+, ...
+
+Patterns
+Matching logic formulas are called patterns. The set of 
+  
+    
+      
+        (
+        S
+        ,
+        Σ
+        )
+      
+    
+    {\displaystyle (S,\Sigma )}
+  
+-patterns, or simply patterns, is an 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+-indexed set 
+  
+    
+      
+        
+          P
+          a
+          t
+          t
+          e
+          r
+          n
+        
+        =
+        
+          
+            
+              
+                {
+                P
+                a
+                t
+                t
+                e
+                r
+                n
+              
+              
+                s
+              
+            
+            }
+          
+          
+            s
+            ∈
+            S
+          
+        
+      
+    
+    {\displaystyle \mathrm {Pattern} ={\mathrm {\{Pattern} _{s}\}}_{s\in S}}
+  
+. We write 
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+        ∈
+        
+          P
+          a
+          t
+          t
+          e
+          r
+          n
+        
+      
+    
+    {\displaystyle \varphi _{s}\in \mathrm {Pattern} }
+  
+ or 
+  
+    
+      
+        φ
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \varphi \in \mathrm {Pattern} _{s}}
+  
+ to denote a pattern of a sort 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+. The set of all patterns is inductively defined by the following grammar rules:
+
+  
+    
+      
+        x
+        :
+        s
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle x:s\in \mathrm {Pattern} _{s}}
+  
+.
+
+  
+    
+      
+        X
+        :
+        s
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle X:s\in \mathrm {Pattern} _{s}}
+  
+.
+
+  
+    
+      
+        σ
+        (
+        
+          φ
+          
+            
+              s
+              
+                1
+              
+            
+          
+        
+        ,
+        …
+        ,
+        
+          φ
+          
+            
+              s
+              
+                n
+              
+            
+          
+        
+        )
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \sigma (\varphi _{s_{1}},\dots ,\varphi _{s_{n}})\in \mathrm {Pattern} _{s}}
+  
+ for any 
+  
+    
+      
+        σ
+        ∈
+        Σ
+        
+          
+            s
+            
+              1
+            
+          
+          …
+          
+            s
+            
+              n
+            
+          
+          ,
+          s
+        
+      
+    
+    {\displaystyle \sigma \in \Sigma {s_{1}\dots s_{n},s}}
+  
+.
+
+  
+    
+      
+        
+          ⊥
+          
+            s
+          
+        
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \bot _{s}\in \mathrm {Pattern} _{s}}
+  
+.
+
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+        →
+        
+          φ
+          
+            s
+          
+          ′
+        
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \varphi _{s}\to \varphi '_{s}\in \mathrm {Pattern} _{s}}
+  
+.
+
+  
+    
+      
+        ∃
+        x
+        :
+        
+          s
+          ′
+        
+        ⋅
+        
+          φ
+          
+            s
+          
+        
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \exists x:s'\cdot \varphi _{s}\in \mathrm {Pattern} _{s}}
+  
+. Note that 
+  
+    
+      
+        
+          s
+          ′
+        
+      
+    
+    {\displaystyle s'}
+  
+ and 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ need not be the same.
+
+  
+    
+      
+        μ
+        X
+        :
+        s
+        ⋅
+        
+          φ
+          
+            s
+          
+        
+        ∈
+        
+          
+            P
+            a
+            t
+            t
+            e
+            r
+            n
+          
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \mu X:s\cdot \varphi _{s}\in \mathrm {Pattern} _{s}}
+  
+ if 
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \varphi _{s}}
+  
+ is positive in 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+.
+Here, 
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \varphi _{s}}
+  
+ is positive in 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+ if every occurrence of 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+ lies within an even number of implication left-hand sides. For example, 
+  
+    
+      
+        X
+        :
+        s
+        →
+        Y
+        :
+        s
+      
+    
+    {\displaystyle X:s\to Y:s}
+  
+ is positive in 
+  
+    
+      
+        Y
+        :
+        s
+      
+    
+    {\displaystyle Y:s}
+  
+ but not in 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+. In contrast, 
+  
+    
+      
+        (
+        X
+        :
+        s
+        →
+        Y
+        :
+        s
+        )
+        →
+        X
+        :
+        s
+      
+    
+    {\displaystyle (X:s\to Y:s)\to X:s}
+  
+ is positive in 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+ but not in 
+  
+    
+      
+        Y
+        :
+        s
+      
+    
+    {\displaystyle Y:s}
+  
+.
+
+Common notations
+Notations can be defined in the usual way. The following are some standard notations:
+
+  
+    
+      
+        ¬
+        
+          φ
+          
+            s
+          
+        
+        ≡
+        
+          φ
+          
+            s
+          
+        
+        →
+        
+          ⊥
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \neg \varphi _{s}\equiv \varphi _{s}\to \bot _{s}}
+  
+
+  
+    
+      
+        
+          ⊤
+          
+            s
+          
+        
+        ≡
+        ¬
+        
+          ⊥
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \top _{s}\equiv \neg \bot _{s}}
+  
+
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+        ∨
+        
+          φ
+          
+            s
+          
+          ′
+        
+        ≡
+        ¬
+        
+          φ
+          
+            s
+          
+        
+        →
+        
+          φ
+          
+            s
+          
+          ′
+        
+      
+    
+    {\displaystyle \varphi _{s}\lor \varphi '_{s}\equiv \neg \varphi _{s}\to \varphi '_{s}}
+  
+
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+        ∧
+        
+          φ
+          
+            s
+          
+          ′
+        
+        ≡
+        ¬
+        (
+        ¬
+        
+          φ
+          
+            s
+          
+        
+        ∧
+        ¬
+        
+          φ
+          
+            s
+          
+          ′
+        
+        )
+      
+    
+    {\displaystyle \varphi _{s}\land \varphi '_{s}\equiv \neg (\neg \varphi _{s}\land \neg \varphi '_{s})}
+  
+
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+        ↔
+        
+          φ
+          
+            s
+          
+          ′
+        
+        ≡
+        (
+        
+          φ
+          
+            s
+          
+        
+        →
+        
+          φ
+          
+            s
+          
+          ′
+        
+        )
+        ∧
+        (
+        
+          φ
+          
+            s
+          
+        
+        →
+        
+          φ
+          
+            s
+          
+          ′
+        
+        )
+      
+    
+    {\displaystyle \varphi _{s}\leftrightarrow \varphi _{s}'\equiv (\varphi _{s}\to \varphi '_{s})\land (\varphi _{s}\to \varphi '_{s})}
+  
+
+  
+    
+      
+        ∀
+        x
+        :
+        
+          s
+          ′
+        
+        ⋅
+        
+          φ
+          
+            s
+          
+        
+        ≡
+        ¬
+        ∃
+        x
+        :
+        
+          s
+          ′
+        
+        ⋅
+        ¬
+        
+          φ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \forall x:s'\cdot \varphi _{s}\equiv \neg \exists x:s'\cdot \neg \varphi _{s}}
+  
+
+  
+    
+      
+        ν
+        X
+        :
+        s
+        ⋅
+        
+          φ
+          
+            s
+          
+        
+        ≡
+        ¬
+        μ
+        X
+        :
+        s
+        ⋅
+        ¬
+        
+          φ
+          
+            s
+          
+        
+        [
+        ¬
+        X
+        :
+        s
+        
+          /
+        
+        X
+        :
+        s
+        ]
+      
+    
+    {\displaystyle \nu X:s\cdot \varphi _{s}\equiv \neg \mu X:s\cdot \neg \varphi _{s}[\neg X:s/X:s]}
+  
+
+Here, 
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+        [
+        ¬
+        X
+        :
+        s
+        
+          /
+        
+        X
+        :
+        s
+        ]
+      
+    
+    {\displaystyle \varphi _{s}[\neg X:s/X:s]}
+  
+ is the result of substituting every occurrence of 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+ for its negation 
+  
+    
+      
+        ¬
+        X
+        :
+        s
+      
+    
+    {\displaystyle \neg X:s}
+  
+. One can verify that 
+  
+    
+      
+        ν
+        X
+        :
+        s
+        ⋅
+        
+          φ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \nu X:s\cdot \varphi _{s}}
+  
+ is well-formed if 
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \varphi _{s}}
+  
+ is positive in 
+  
+    
+      
+        X
+        :
+        s
+      
+    
+    {\displaystyle X:s}
+  
+.
+
+Semantics
+The semantics of matching logic defines how patterns are interpreted over models and valuations.
+
+Interpretation of patterns
+Matching logic formulas, called patterns, are interpreted not as true/false values, but as sets. Intuitively, a matching logic pattern 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is interpreted as the set of elements that "match" it.
+Let 
+  
+    
+      
+        (
+        S
+        ,
+        Σ
+        )
+      
+    
+    {\displaystyle (S,\Sigma )}
+  
+ be a signature. An 
+  
+    
+      
+        (
+        S
+        ,
+        Σ
+        )
+      
+    
+    {\displaystyle (S,\Sigma )}
+  
+-model, or simply a model, is denoted 
+  
+    
+      
+        M
+        =
+        (
+        {
+        
+          
+            M
+            
+              s
+            
+          
+        
+        
+          }
+          
+            s
+            ∈
+            S
+          
+        
+        ,
+        
+          
+            {
+            
+              σ
+              
+                M
+              
+            
+            }
+          
+          
+            σ
+            ∈
+            Σ
+          
+        
+        )
+      
+    
+    {\displaystyle M=(\{{M_{s}}\}_{s\in S},{\{\sigma _{M}\}}_{\sigma \in \Sigma })}
+  
+. It consists of:
+
+A nonempty carrier set 
+  
+    
+      
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle M_{s}}
+  
+ for every 
+  
+    
+      
+        s
+        ∈
+        S
+      
+    
+    {\displaystyle s\in S}
+  
+.
+A function 
+  
+    
+      
+        
+          σ
+          
+            M
+          
+        
+        :
+        
+          M
+          
+            
+              s
+              
+                1
+              
+            
+          
+        
+        ×
+        ⋯
+        ×
+        
+          M
+          
+            
+              s
+              
+                n
+              
+            
+          
+        
+        →
+        
+          
+            P
+          
+        
+        (
+        
+          M
+          
+            s
+          
+        
+        )
+      
+    
+    {\displaystyle \sigma _{M}:M_{s_{1}}\times \dots \times M_{s_{n}}\to {\mathcal {P}}(M_{s})}
+  
+ for every 
+  
+    
+      
+        σ
+        ∈
+        
+          Σ
+          
+            
+              s
+              
+                1
+              
+            
+            …
+            
+              s
+              
+                n
+              
+            
+            ,
+            s
+          
+        
+      
+    
+    {\displaystyle \sigma \in \Sigma _{s_{1}\dots s_{n},s}}
+  
+.
+Here, 
+  
+    
+      
+        
+          
+            P
+          
+        
+        (
+        
+          M
+          
+            s
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathcal {P}}(M_{s})}
+  
+ denotes the power set of 
+  
+    
+      
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle M_{s}}
+  
+.
+A valuation 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ maps every element variable of sort 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ to an element in 
+  
+    
+      
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle M_{s}}
+  
+. It also maps every set element of sort 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ to a subset of 
+  
+    
+      
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle M_{s}}
+  
+. That is, 
+  
+    
+      
+        ρ
+        (
+        x
+        :
+        s
+        )
+        ∈
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \rho (x:s)\in M_{s}}
+  
+ and 
+  
+    
+      
+        ρ
+        (
+        X
+        :
+        s
+        )
+        ⊆
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \rho (X:s)\subseteq M_{s}}
+  
+. Given a model 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ and a valuation 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+, the interpretation of a pattern is 
+  
+    
+      
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        ⊆
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho }\subseteq M_{s}}
+  
+. This interpretation is inductively defined in the following way:
+
+  
+    
+      
+        
+
+        
+        
+          
+            |
+            
+              x
+              :
+              s
+            
+            |
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          {
+          ρ
+          (
+          x
+          :
+          s
+          )
+        
+        }
+      
+    
+    {\displaystyle \mathrm {} \left\vert {x:s}\right\vert _{M,\rho }={\{\rho (x:s)}\}}
+  
+
+  
+    
+      
+        
+
+        
+        
+          
+            |
+            
+              X
+              :
+              s
+            
+            |
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        ρ
+        (
+        X
+        :
+        s
+        )
+      
+    
+    {\displaystyle \mathrm {} \left\vert X:s\right\vert _{M,\rho }=\rho (X:s)}
+  
+
+  
+    
+      
+        
+          
+            
+              |
+              
+                σ
+                (
+                
+                  φ
+                  
+                    
+                      s
+                      
+                        1
+                      
+                    
+                  
+                
+                ,
+                …
+                ,
+                
+                  φ
+                  
+                    
+                      s
+                      
+                        n
+                      
+                    
+                  
+                
+                )
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          ⋃
+          
+            
+              a
+              
+                1
+              
+            
+            ∈
+            
+              
+                
+                  |
+                  
+                    φ
+                    
+                      
+                        s
+                        
+                          1
+                        
+                      
+                    
+                  
+                  |
+                
+              
+              
+                M
+                ,
+                ρ
+              
+            
+          
+        
+        …
+        
+          ⋃
+          
+            
+              a
+              
+                n
+              
+            
+            ∈
+            
+              
+                
+                  |
+                  
+                    φ
+                    
+                      
+                        s
+                        
+                          n
+                        
+                      
+                    
+                  
+                  |
+                
+              
+              
+                M
+                ,
+                ρ
+              
+            
+          
+        
+        
+          σ
+          
+            M
+          
+        
+        (
+        
+          a
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle \mathrm {\left\vert \sigma (\varphi _{s_{1}},\dots ,\varphi _{s_{n}})\right\vert } _{M,\rho }=\bigcup _{a_{1}\in \mathrm {\left\vert \varphi _{s_{1}}\right\vert } _{M,\rho }}\dots \bigcup _{a_{n}\in \mathrm {\left\vert \varphi _{s_{n}}\right\vert } _{M,\rho }}\sigma _{M}(a_{1},\dots ,a_{n})}
+  
+
+  
+    
+      
+        
+
+        
+        
+          
+            |
+            
+              ⊥
+              
+                x
+              
+            
+            |
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        ∅
+      
+    
+    {\displaystyle \mathrm {} \left\vert \bot _{x}\right\vert _{M,\rho }=\emptyset }
+  
+, the empty set.
+
+  
+    
+      
+        
+          
+            
+              |
+              
+                
+                  φ
+                  
+                    s
+                  
+                
+                →
+                
+                  φ
+                  
+                    s
+                  
+                  ′
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          M
+          
+            s
+          
+        
+        ∖
+        (
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        ∖
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+                ′
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        )
+      
+    
+    {\displaystyle \mathrm {\left\vert \varphi _{s}\to \varphi '_{s}\right\vert } _{M,\rho }=M_{s}\setminus (\mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho }\setminus \mathrm {\left\vert \varphi '_{s}\right\vert } _{M,\rho })}
+  
+, where "
+  
+    
+      
+        ∖
+      
+    
+    {\displaystyle \setminus }
+  
+" denotes set difference.
+
+  
+    
+      
+        
+
+        
+        
+          
+            |
+            
+              ∃
+              x
+              :
+              
+                s
+                ′
+              
+              ⋅
+              
+                φ
+                
+                  s
+                
+              
+            
+            |
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          ⋃
+          
+            a
+            ∈
+            
+              M
+              
+                
+                  s
+                  ′
+                
+              
+            
+          
+        
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+            [
+            a
+            
+              /
+            
+            x
+            :
+            
+              s
+              ′
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle \mathrm {} \left\vert \exists x:s'\cdot \varphi _{s}\right\vert _{M,\rho }=\bigcup _{a\in M_{s'}}\mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho [a/x:s']}}
+  
+, where 
+  
+    
+      
+        ρ
+        [
+        a
+        
+          /
+        
+        x
+        :
+        
+          s
+          ′
+        
+        ]
+      
+    
+    {\displaystyle \rho [a/x:s']}
+  
+ is the valuation that is identical to 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ except that it maps to 
+  
+    
+      
+        x
+        :
+        
+          s
+          ′
+        
+      
+    
+    {\displaystyle x:s'}
+  
+ to 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+.
+
+  
+    
+      
+        
+
+        
+        
+          
+            |
+            
+              μ
+              X
+              :
+              s
+              ⋅
+              
+                φ
+                
+                  s
+                
+              
+            
+            |
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        ⋂
+        {
+        
+          A
+          ⊆
+          
+            M
+            
+              s
+            
+          
+          ∣
+          
+            
+              
+                |
+                
+                  φ
+                  
+                    s
+                  
+                
+                |
+              
+            
+            
+              M
+              ,
+              ρ
+              [
+              A
+              
+                /
+              
+              X
+              :
+              s
+              ]
+            
+          
+          ⊆
+          A
+        
+        }
+      
+    
+    {\displaystyle \mathrm {} \left\vert \mu X:s\cdot \varphi _{s}\right\vert _{M,\rho }=\bigcap \{{A\subseteq M_{s}\mid \mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho [A/X:s]}\subseteq A}\}}
+  
+
+Fixpoints and properties
+By the Knaster-Tarski Fixpoint Theorem, 
+  
+    
+      
+        μ
+        X
+        :
+        s
+        ⋅
+        
+          φ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \mu X:s\cdot \varphi _{s}}
+  
+ is the least fixpoint of the function that maps 
+  
+    
+      
+        A
+        ⊆
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle A\subseteq M_{s}}
+  
+ to 
+  
+    
+      
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+            [
+            A
+            
+              /
+            
+            X
+            :
+            s
+            ]
+          
+        
+      
+    
+    {\displaystyle \mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho [A/X:s]}}
+  
+.
+The following properties hold for common notations:
+
+  
+    
+      
+        
+          
+            
+              |
+              
+                ¬
+                
+                  φ
+                  
+                    s
+                  
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          M
+          
+            s
+          
+        
+        ∖
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+      
+    
+    {\displaystyle \mathrm {\left\vert \neg \varphi _{s}\right\vert } _{M,\rho }=M_{s}\setminus \mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho }}
+  
+
+  
+    
+      
+        
+          
+            
+              |
+              
+                ⊤
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          M
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \mathrm {\left\vert \top _{s}\right\vert } _{M,\rho }=M_{s}}
+  
+
+  
+    
+      
+        
+          
+            
+              |
+              
+                
+                  φ
+                  
+                    s
+                  
+                
+                ∨
+                
+                  φ
+                  
+                    s
+                  
+                  ′
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        ∪
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+                ′
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+      
+    
+    {\displaystyle \mathrm {\left\vert \varphi _{s}\lor \varphi '_{s}\right\vert } _{M,\rho }=\mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho }\cup \mathrm {\left\vert \varphi '_{s}\right\vert } _{M,\rho }}
+  
+
+  
+    
+      
+        
+          
+            
+              |
+              
+                
+                  φ
+                  
+                    s
+                  
+                
+                ∧
+                
+                  φ
+                  
+                    s
+                  
+                  ′
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        ∩
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+                ′
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+      
+    
+    {\displaystyle \mathrm {\left\vert \varphi _{s}\land \varphi '_{s}\right\vert } _{M,\rho }=\mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho }\cap \mathrm {\left\vert \varphi '_{s}\right\vert } _{M,\rho }}
+  
+
+  
+    
+      
+        
+          
+            
+              |
+              
+                
+                  φ
+                  
+                    s
+                  
+                
+                ↔
+                
+                  φ
+                  
+                    s
+                  
+                  ′
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          M
+          
+            s
+          
+        
+        ∖
+        (
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        Δ
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+                ′
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        )
+      
+    
+    {\displaystyle \mathrm {\left\vert \varphi _{s}\leftrightarrow \varphi '_{s}\right\vert } _{M,\rho }=M_{s}\setminus (\mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho }\Delta \mathrm {\left\vert \varphi '_{s}\right\vert } _{M,\rho })}
+  
+, where "
+  
+    
+      
+        Δ
+      
+    
+    {\displaystyle \Delta }
+  
+" denotes the symmetric difference operator.
+
+  
+    
+      
+        
+
+        
+        
+          
+            |
+            
+              ∀
+              x
+              :
+              
+                s
+                ′
+              
+              ⋅
+              
+                φ
+                
+                  s
+                
+              
+            
+            |
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        
+          ⋂
+          
+            a
+            ∈
+            
+              M
+              
+                
+                  s
+                  ′
+                
+              
+            
+          
+        
+        
+          
+            
+              |
+              
+                φ
+                
+                  s
+                
+              
+              |
+            
+          
+          
+            M
+            ,
+            ρ
+            [
+            a
+            
+              /
+            
+            x
+            :
+            
+              s
+              ′
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle \mathrm {} \left\vert \forall x:s'\cdot \varphi _{s}\right\vert _{M,\rho }=\bigcap _{a\in M_{s'}}\mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho [a/x:s']}}
+  
+
+  
+    
+      
+        
+
+        
+        
+          
+            |
+            
+              ν
+              X
+              :
+              s
+              ⋅
+              
+                φ
+                
+                  s
+                
+              
+            
+            |
+          
+          
+            M
+            ,
+            ρ
+          
+        
+        =
+        ⋃
+        {
+        
+          A
+          ⊆
+          
+            M
+            
+              s
+            
+          
+          ∣
+          A
+          ⊆
+          
+            
+              
+                |
+                
+                  φ
+                  
+                    s
+                  
+                
+                |
+              
+            
+            
+              M
+              ,
+              ρ
+              [
+              A
+              
+                /
+              
+              X
+              :
+              s
+              ]
+            
+          
+          ⊆
+          A
+        
+        }
+      
+    
+    {\displaystyle \mathrm {} \left\vert \nu X:s\cdot \varphi _{s}\right\vert _{M,\rho }=\bigcup \{{A\subseteq M_{s}\mid A\subseteq \mathrm {\left\vert \varphi _{s}\right\vert } _{M,\rho [A/X:s]}\subseteq A}\}}
+  
+
+Applications
+Matching logic is used with reachability logic by the K Framework to specify operational semantics and use them directly for formal verification, which forms an alternative approach to Hoare logic.
+The fixpoint-free fragment of matching logic can be converted to first-order logic with equality. This conversion allows the K Framework to use existing Satisfiability modulo theories (SMT) solvers. These solvers help to find proofs for theorems.

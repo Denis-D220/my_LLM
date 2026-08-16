@@ -1,0 +1,65 @@
+DATABASES AND DISTRIBUTED DATA
+
+A database manages persistent data for many concurrent clients, guaranteeing that stored information survives failure and that simultaneous access does not corrupt it. A distributed system spreads work across machines that fail independently and communicate over an unreliable network. Modern data infrastructure is invariably both, and most of its difficulty comes from that combination: guarantees a single machine provides cheaply become expensive once state is spread across nodes that cannot observe one another.
+
+THE RELATIONAL MODEL
+
+The relational model represents data as relations, informally tables, composed of tuples with named typed attributes. Its power comes from separating logical structure from physical storage: a query states what is wanted and the system decides how to obtain it, so storage layout and access paths can change without rewriting application code.
+
+Normalization eliminates redundancy and the update anomalies that follow. First normal form requires atomic values, second eliminates partial dependency on a composite key, and third eliminates transitive dependency among non-key attributes. The objective is that each fact is stored once, so updating it cannot leave contradictory copies behind. Denormalization deliberately reverses this to avoid joins on read-heavy paths, transferring responsibility for consistency to the application.
+
+Constraints let the database enforce invariants that would otherwise be scattered across application code: primary keys enforce identity, foreign keys enforce referential integrity, and check constraints enforce domain rules.
+
+TRANSACTIONS AND ISOLATION
+
+A transaction groups operations into a unit with four properties. Atomicity means all operations take effect or none do. Consistency means the database moves between states valid with respect to declared constraints. Isolation means concurrent transactions do not observe one another's partial work. Durability means committed results survive crash.
+
+Atomicity and durability are implemented with write-ahead logging: changes are appended to a sequential log and flushed to stable storage before data pages are modified, so recovery replays committed transactions and undoes uncommitted ones. Sequential log writes are far faster than random page writes.
+
+Isolation is where the tradeoffs live. Serializability, meaning the result equals some serial execution, is strongest and most expensive. Read committed prevents dirty reads but permits non-repeatable reads, where a row changes between two reads in one transaction. Repeatable read prevents that but may permit phantoms, where new rows matching a predicate appear.
+
+Multi-version concurrency control is the dominant implementation. Rather than blocking readers behind writers, the system retains multiple row versions and gives each transaction a consistent snapshot as of its start, so readers never block writers and writers never block readers, at the cost of storing old versions and reclaiming them. Snapshot isolation still permits write skew, in which two transactions read overlapping data, make disjoint writes, and jointly violate an invariant each preserved individually; serializable snapshot isolation detects such conflicts and aborts one participant.
+
+INDEXING AND QUERY EXECUTION
+
+An index provides an alternative access path. B-tree indexes maintain sorted order and support equality lookups, range scans, and ordered retrieval at logarithmic cost, while hash indexes support equality only at constant expected cost and inverted indexes map terms to documents for text search. Log-structured merge trees buffer writes in memory and merge sorted runs on disk, trading read amplification for very high write throughput.
+
+A query planner converts a declarative query into an execution plan, estimating cost from statistics about table sizes and value distributions. Nested loop join suits small inputs or an indexed inner relation, hash join builds a table on the smaller input and probes with the larger, and merge join requires sorted inputs. Cardinality estimation is the weak point of every planner, since correlation between columns is rarely modeled well, and a plan chosen from a badly wrong estimate will be wrong regardless of the cost model. Comparing estimated with actual row counts is therefore the first diagnostic step for a slow query.
+
+REPLICATION
+
+Replication maintains copies of data on multiple nodes for durability, availability, and read scaling.
+
+Single-leader replication designates one node to accept writes and propagate them to followers, avoiding write conflicts entirely. Synchronous replication waits for follower acknowledgment before confirming a commit, guaranteeing no loss on leader failure but tying write latency to the slowest follower; asynchronous replication is fast but loses recent writes if the leader fails before propagation.
+
+Multi-leader replication accepts writes at several nodes, suiting geographically distributed deployments, at the cost of conflicts requiring resolution. Last-write-wins is simple and silently discards data; conflict-free replicated data types merge concurrent updates deterministically but constrain the data model. Leaderless replication sends every write and read to multiple nodes, so that if the write quorum plus the read quorum exceeds the replica count every read intersects the latest write.
+
+Replication lag creates observable anomalies: a user who writes and then reads from a lagging replica may not see their own write, which read-your-writes consistency addresses by routing their reads to the leader for a period.
+
+PARTITIONING AND THE CAP THEOREM
+
+Partitioning divides data across nodes so that dataset size and write load can exceed one machine. Range partitioning preserves efficient range scans but risks hotspots when access concentrates, as it does when the key is a timestamp, while hash partitioning distributes keys uniformly but destroys range locality. Consistent hashing minimizes redistribution when the node count changes. Secondary indexes complicate matters: a local index makes writes cheap but requires scatter-gather across partitions, while a global index makes reads efficient but writes cross-partition.
+
+The CAP theorem states that during a network partition a system must choose between consistency and availability, because an isolated node must either refuse to answer or answer with possibly stale data. It is widely misapplied: it describes behavior only during a partition, not a permanent architectural choice, and says nothing about the far more common tradeoff between latency and consistency in normal operation, which the PACELC formulation adds.
+
+CONSENSUS AND TIME
+
+Consensus is the problem of getting nodes to agree despite failures, underlying leader election, atomic commit, and distributed locking. The FLP impossibility result proves that no deterministic algorithm can guarantee consensus in an asynchronous system with even one faulty process, because a slow node cannot be distinguished from a failed one; practical algorithms circumvent this with timeouts and randomization, sacrificing guaranteed termination while retaining safety.
+
+Raft achieves consensus through explicit leader election, log replication from leader to followers, and a rule that only a candidate with a sufficiently current log may become leader. A majority quorum is required for progress, so a cluster of five tolerates two failures. Two-phase commit, by contrast, leaves participants blocked holding locks if the coordinator fails after the prepare phase, which is why it is avoided in high-availability designs.
+
+Physical clocks drift and cannot be compared reliably across machines, so logical clocks establish causal ordering instead: Lamport timestamps give a total order consistent with causality, and vector clocks additionally detect concurrency.
+
+EVENTUAL CONSISTENCY AND FAILURE HANDLING
+
+Eventual consistency guarantees only that replicas converge if updates stop, which many applications tolerate in exchange for availability and latency stronger models cannot provide. Causal consistency preserves the order of causally related operations while allowing concurrent ones to be seen in any order, and it is the strongest model achievable in an always-available system.
+
+Message queues decouple producers from consumers. At-most-once delivery may lose messages and at-least-once may duplicate them; exactly-once delivery is not achievable across a network, but its effect is obtained by combining at-least-once delivery with idempotent consumers. The saga pattern replaces distributed transactions with local transactions each having a compensating action, and compensation is not rollback: an email already sent can only be followed by a correction.
+
+Distributed systems fail partially, which is harder than failing completely. Failure detectors based on heartbeats are imperfect, since a short timeout triggers unnecessary failover and a long one delays recovery. Split brain, where two nodes each believe they are leader, is prevented by fencing tokens that attach an increasing number to each leadership term so storage rejects stale writers. Defensive patterns contain rather than eliminate failure: timeouts bound waiting, retries with backoff and jitter avoid a thundering herd, circuit breakers stop requests to a failing dependency, and bulkheads isolate resource pools.
+
+Observability makes these systems operable: metrics reveal trends, logs reveal specifics, and distributed traces follow one request across services to show where latency accumulates. Percentile latencies matter far more than averages.
+
+CHOOSING A DATA SYSTEM
+
+There is no general-purpose optimum. Relational databases remain the correct default for transactional workloads. Document stores suit data accessed as whole aggregates, key-value stores give maximum throughput, column-oriented stores suit analytics over few columns of many rows, graph databases make traversal efficient, and time-series databases exploit the append-mostly nature of metrics. The judgment lies in matching access patterns to the system and refusing distributed complexity until one node cannot suffice.

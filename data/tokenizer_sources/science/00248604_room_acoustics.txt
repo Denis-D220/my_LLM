@@ -1,0 +1,413 @@
+Room acoustics is a subfield of acoustics dealing with the behaviour of sound in enclosed or partially-enclosed spaces. The architectural details of a room influence the behaviour of sound waves within it, with the effects varying by frequency. Acoustic reflection, diffraction, and diffusion can combine to create audible phenomena such as room modes and standing waves at specific frequencies and locations, echoes, and unique reverberation patterns.
+
+Frequency zones
+The way that sound behaves in a room can be broken up into four different frequency zones:
+
+The first zone is below the frequency that has a wavelength of twice the longest dimension of the room. In this zone, sound behaves very much like changes in static air pressure.
+Above that zone, until wavelengths are comparable to the dimensions of the room, room resonances dominate. This transition frequency is popularly known as the Schroeder frequency, or the cross-over frequency, and it differentiates the low frequencies which create standing waves within small rooms from the mid and high frequencies.
+The third region which extends approximately 2 octaves is a transition to the fourth zone.
+In the fourth zone, sounds behave like rays of light bouncing around the room.
+
+Natural modes
+
+For frequencies under the Schroeder frequency, certain wavelengths of sound will build up as resonances within the boundaries of the room, and the resonating frequencies can be determined using the room's dimensions. Similar to the calculation of standing waves inside a pipe with two closed ends, the modal frequencies 
+  
+    
+      
+        (
+        
+          f
+          
+            m
+            ,
+            n
+            ,
+            l
+          
+        
+        )
+      
+    
+    {\textstyle (f_{m,n,l})}
+  
+ and the sound pressure of those modes at a particular position 
+  
+    
+      
+        (
+        
+          p
+          
+            m
+            ,
+            n
+            ,
+            l
+          
+        
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        )
+      
+    
+    {\textstyle (p_{m,n,l}(x,y,z))}
+  
+ of a rectilinear room can be defined as 
+
+  
+    
+      
+        
+          f
+          
+            m
+            ,
+            n
+            ,
+            l
+          
+        
+        =
+        
+          
+            c
+            2
+          
+        
+        
+          
+            
+              
+                (
+              
+            
+            
+              
+                m
+                
+                  L
+                  
+                    x
+                  
+                
+              
+            
+            
+              
+                
+                  )
+                
+              
+              
+                2
+              
+            
+            +
+            
+              
+                (
+              
+            
+            
+              
+                n
+                
+                  L
+                  
+                    y
+                  
+                
+              
+            
+            
+              
+                
+                  )
+                
+              
+              
+                2
+              
+            
+            +
+            
+              
+                (
+              
+            
+            
+              
+                l
+                
+                  L
+                  
+                    z
+                  
+                
+              
+            
+            
+              
+                
+                  )
+                
+              
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle f_{m,n,l}={\frac {c}{2}}{\sqrt {{\Big (}{\frac {m}{L_{x}}}{\Big )}^{2}+{\Big (}{\frac {n}{L_{y}}}{\Big )}^{2}+{\Big (}{\frac {l}{L_{z}}}{\Big )}^{2}}}}
+  
+  
+
+  
+    
+      
+        
+          p
+          
+            m
+            ,
+            n
+            ,
+            l
+          
+        
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        =
+        A
+        cos
+        ⁡
+        
+          
+            (
+          
+        
+        
+          
+            
+              m
+              π
+            
+            
+              L
+              
+                x
+              
+            
+          
+        
+        x
+        
+          
+            )
+          
+        
+        cos
+        ⁡
+        
+          
+            (
+          
+        
+        
+          
+            
+              n
+              π
+            
+            
+              L
+              
+                y
+              
+            
+          
+        
+        y
+        
+          
+            )
+          
+        
+        cos
+        ⁡
+        
+          
+            (
+          
+        
+        
+          
+            
+              l
+              π
+            
+            
+              L
+              
+                z
+              
+            
+          
+        
+        z
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle p_{m,n,l}(x,y,z)=A\cos {\Big (}{\frac {m\pi }{L_{x}}}x{\Big )}\cos {\Big (}{\frac {n\pi }{L_{y}}}y{\Big )}\cos {\Big (}{\frac {l\pi }{L_{z}}}z{\Big )}}
+  
+
+where 
+  
+    
+      
+        m
+        ,
+        n
+        ,
+        l
+        =
+        0
+        ,
+        1
+        ,
+        2
+        ,
+        3...
+      
+    
+    {\textstyle m,n,l=0,1,2,3...}
+  
+ are mode numbers corresponding to the x-,y-, and z-axis of the room, 
+  
+    
+      
+        c
+      
+    
+    {\textstyle c}
+  
+ is the speed of sound in 
+  
+    
+      
+        
+          
+            m
+            s
+          
+        
+      
+    
+    {\textstyle {\frac {m}{s}}}
+  
+, 
+  
+    
+      
+        
+          L
+          
+            x
+          
+        
+        ,
+        
+          L
+          
+            y
+          
+        
+        ,
+        
+          L
+          
+            z
+          
+        
+      
+    
+    {\textstyle L_{x},L_{y},L_{z}}
+  
+ are the dimensions of the room in meters. 
+  
+    
+      
+        A
+      
+    
+    {\textstyle A}
+  
+ is the amplitude of the sound wave, and 
+  
+    
+      
+        x
+        ,
+        y
+        ,
+        z
+      
+    
+    {\textstyle x,y,z}
+  
+ are coordinates of a point contained inside the room. 
+Modes can occur in all three dimensions of a room. Axial modes are one-dimensional and build up between one set of parallel walls. Tangential modes are two-dimensional and involve four walls bounding the space perpendicular to each other. Finally, oblique modes concern all walls within the simplified rectilinear room.
+A modal density analysis method using concepts from psychoacoustics, the "Bonello criterion", analyzes the first 48 room modes and plots the number of modes in each one-third of an octave. The curve increases monotonically (each one-third of an octave must have more modes than the preceding one). Other systems to determine correct room ratios have more recently been developed.
+
+Reverberation of the room
+After determining the best dimensions of the room, using the modal density criteria, the next step is to find the correct reverberation time.  The most appropriate reverberation time depends on the use of the room. RT60 is a measure of reverberation time. Times about 1.5 to 2 seconds are needed for opera theaters and concert halls. For broadcasting and recording studios and conference rooms, values under one second are frequently used. The recommended reverberation time is always a function of the volume of the room. Several authors give their recommendations. A good approximation for broadcasting studios and conference rooms is:
+
+TR[1 kHz] = [0.4 log (V + 62)] – 0.38 seconds,
+with V=volume of the room in m3. Ideally, the RT60 should have about the same value at all frequencies from 30 to 12,000 Hz. 
+To get the desired RT60, several acoustic materials can be used as described in several books.  A valuable simplification of the task was proposed by Oscar Bonello in 1979. It consists of using standard acoustic panels of 1 m2 hung from the walls of the room (only if the panels are parallel). These panels use a combination of three  Helmholtz resonators and a wooden resonant panel. This system gives a large acoustic absorption at low frequencies (under 500 Hz) and reduces at high frequencies to compensate for the typical absorption by people, lateral surfaces, ceilings, etc.
+
+Acoustic space is an acoustic environment in which sound can be heard by an observer. The term acoustic space was first mentioned by Marshall McLuhan, a professor and philosopher.
+
+Nature of acoustics
+In reality, there are some properties of acoustics that affect the acoustic space. These properties can either improve the quality of the sound or interfere with the sound.
+
+Reflection is the change in direction of a wave when it hits an object. Many acoustic engineers take advantage of this. It is used for interior designs, either using reflections for benefits or eliminating the reflections. The sound waves usually reflect off the wall and interfere with other sound waves that are generated later. To prevent sound waves reflecting directly to the receiver, a diffusor is introduced. A diffusor has different depths in it, causing the sound to scatter in random directions evenly. It changes the disturbing echo of the sound into a mild reverb which decays over time.
+Diffraction is the change of a sound wave's propagation to avoid obstacles. According to Huygens’ principle, when a sound wave is partially blocked by an obstacle, the remaining part that gets through acts as a source of secondary waves. For instance, if a person is in a room and shouts with the door open, the people on either side of the hallway will hear it. The sound waves that left the door become a source and then spread out in the hallway. The sounds from the surroundings might interfere with the acoustic space, like the example given.
+
+Uses of acoustic space
+The application of acoustic space is very useful in architecture. Some kinds of architecture need a proficient design to bring out the best performances. For example, concert halls, auditoriums, theaters, or even cathedrals.
+
+Concert Hall – a place that is designed to hold a concert. A good concert hall usually holds around 1700 to 2600 audience. There are three main attributes of a good concert halls: clarity, ambiance, and loudness. If the seats are well positioned, the audience will hear clear sound from every single seat. For more ambiance, reverberation times are designed as preferred. For instance, romantic music usually requires an amount of reverberation time to enhance the emotions; therefore, the ceilings of the concert hall should be high. 
+Theater – a place that is designed for live performances. The first priority for sound design in a theater is speech. Speech has to be heard clearly, even if it is a soft whisper. The reverb is not needed in this case; it interrupts the words spoken by the actors. The intensity has to be increased, in order to enlarge the acoustic space, to cover the theater without disrupting the dynamic. In large theaters, amplification must be used.
+
+Cathedral (and church) have an area called a choir, usually located near the transept, where the tower is located in most cathedrals. The choir is for the choir to sing. This kind of singing needs a soft, cloudy sound for ambiance and emotion. The height of the cathedral not only shows religious pride but also improves the acoustics. There is more reverb when the source generates a sound in the space
+
+Planning the acoustics of the room
+The acoustic impression of a room is determined by:
+
+fraction of direct sound in the total sound level
+the time delay and direction of early reflections and their contribution to the overall sound level
+the delayed onset and spatial distribution of the reverberation, as well as its proportion in the overall sound level and its temporal development (reverberation time)
+The task of room acoustics is to influence these parameters by designing the room in such a way that the acoustic properties of the room are maximized for its intended use. However, not all venues are designed with acoustics in mind. In this case, speaker placement will play a decisive role in the movement of sound waves, affecting clarity, loudness and overall sound quality.
+The goals of acoustical room design can be:
+
+when recording sound in recording studios, there should be no undesirable influence of the room: it is important that the reflectivity is as low as possible so that the recorded sound is mainly determined by the direct sound and the acoustic character of the recording room does not adversely affect the recording.
+as much speech intelligibility as possible in classrooms, lecture halls and theaters: the proportion of direct sound should be high and early reflections should come mainly from the speaker's side with a relatively short onset delay to increase the speaker's volume and aid localization.
+to achieve the best possible spatial music perception in concert halls: the proportion of direct sound must be balanced with reflections - large enough to make the music perceived clearly and transparently, but not too large so as not to impair the spatial impression. Early reflections should make up a large proportion of the total sound and be distributed as evenly as possible in direction.
+Since the acoustic properties of rooms for different applications are almost incompatible, it is hardly possible to create a universal room that combines good speech intelligibility and good spatial music perception.

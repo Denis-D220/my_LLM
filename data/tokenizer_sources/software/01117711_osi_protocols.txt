@@ -1,0 +1,75 @@
+The Open Systems Interconnection protocols are a family of information exchange standards developed jointly by the ISO and the ITU-T. The standardization process began in 1977. 
+While the seven-layer OSI model is often used as a reference for teaching and documentation, the protocols originally conceived for the model did not gain popularity, and only X.400, X.500, and IS-IS have achieved lasting impact. The goal of an open-standard protocol suite instead has been met by the Internet protocol suite, maintained by the Internet Engineering Task Force (IETF).
+
+Overview
+The OSI protocol stack is structured into seven conceptual layers. The layers form a hierarchy of functionality starting with the physical hardware components to the user interfaces at the software application level. Each layer receives information from the layer above, processes it and passes it down to the next layer. Each layer adds encapsulation information (header) to the incoming information before it is passed to the lower layer.  Headers generally include address of source and destination, error control information, protocol identification and protocol parameters such as flow control options and sequence numbers.
+
+Layer 1: physical layer
+This layer deals with the physical plugs, sockets, electrical/optical specifications and the required line codes.
+The physical layer includes the medium over which the digital signals are transmitted. It can be twisted pair, coaxial cable, optical fiber, wireless, or other transmission media.
+
+Layer 2: data link layer
+The data link layer packages raw bits from the physical layer into frames (logical, structured packets for data).  It is specified in ITU-T Rec. X.212 [ISO/IEC 8886], ITU-T Rec. X.222 and others. This layer is responsible for transferring frames from one host to another.  It might perform error checking. This layer further consists of two sublayers: MAC and LLC.
+
+Layer 3: network layer
+Connectionless Network Service (CLNS) – ITU-T Rec. X.213 [ISO/IEC 8348].  SCCP is based on X.213.
+Connectionless Network Protocol (CLNP) – ITU-T Rec. X.233 [ISO/IEC 8473-1].
+Connection-Oriented Network Service (CONS) – ITU-T Rec. X.213 [ISO/IEC 8348].
+Connection-Oriented Network Protocol (X.25) – ITU-T Rec. X.233 [ISO/IEC 8878].  This is the use of the X.25 protocol to provide the CONS.
+Network Fast Byte Protocol – ISO/IEC 14700
+End System to Intermediate System Routing Exchange Protocol (ES-IS) - ISO/IEC 9452 (reprinted in RFC 995).
+Intermediate System to Intermediate System Intra-domain Routing Protocol (IS-IS) - ISO/IEC 10589 (reprinted in RFC 1142), later adapted for the TCP/IP model.
+End System Routing Information Exchange Protocol for use with ISO/IEC 8878 (SNARE) – ITU-T Rec. X.116 [ISO/IEC 10030].
+This level is in charge of transferring data between systems in a network, using network-layer addresses of machines to keep track of destinations and sources. This layer uses routers and switches to manage its traffic (control flow control, error check, routing etc.)
+So here it takes all routing decisions, it deals with end to end data transmission.
+
+Layer 4: transport layer
+The connection-mode and connectionless-mode transport services are specified by ITU-T Rec. X.214 [ISO/IEC 8072]; the protocol that provides the connection-mode service is specified by ITU-T Rec. X.224 [ISO/IEC 8073], and the protocol that provides the connectionless-mode service is specified by ITU-T Rec. X.234 [ISO/IEC 8602].
+
+Transport Protocol Class 0 (TP0)
+Transport Protocol Class 1 (TP1)
+Transport Protocol Class 2 (TP2)
+Transport Protocol Class 3 (TP3)
+Transport Protocol Class 4 (TP4)
+Transport Fast Byte Protocol – ISO 14699
+The transport layer transfers data between source and destination processes.  Generally, two connection modes are recognized, connection-oriented or connectionless. Connection-oriented service establishes a dedicated virtual circuit and offers various grades of guaranteed delivery, ensuring that data received is identical to data transmitted.  Connectionless mode provides only best-effort service without the built-in ability to correct errors, which includes complete loss of data without notifying the data source of the failure. No logical connection, and no persistent state of the transaction exists between the endpoints, lending the connectionless mode low overhead and potentially better real-time performance for timing-critical applications such as voice and video transmissions.
+
+Layer 5: session layer
+Session service – ITU-T Rec. X.215 [ISO/IEC 8326]
+Connection-oriented Session protocol – ITU-T Rec. X.225 [ISO/IEC 8327-1]
+Connectionless Session protocol – ITU-T Rec. X.235 [ISO/IEC 9548-1]
+The session layer controls the dialogues (connections) between computers. It establishes, manages and terminates the connections between the local and remote application. It provides for full-duplex, and half-duplex or simplex operation, and establishes checkpointing, adjournment, termination, and restart procedures. The OSI model made this layer responsible for graceful close of sessions, which is a property of the Transmission Control Protocol, and also for session checkpointing and recovery, which is not usually used in the Internet Protocol Suite. The session layer is commonly implemented explicitly in application environments that use remote procedure calls.
+
+Layer 6: presentation layer
+Presentation service – ITU-T Rec. X.216 [ISO/IEC 8822]
+Connection-oriented Presentation protocol – ITU-T Rec. X.226 [ISO/IEC 8823-1]
+Connectionless Presentation protocol – ITU-T Rec. X.236 [ISO/IEC 9576-1]
+This layer defines and encrypts/decrypts data types from the application layer. Protocols such as MIDI, MPEG, and GIF are presentation layer formats shared by different applications.
+
+Layer 7: application layer
+
+Common-Application Service Elements (CASEs)
+Association Control Service Element (ACSE) – ITU-T Rec. X.217 [ISO/IEC 8649], ITU-T Rec. X.227 [ISO/IEC 8650-1], ITU-T Rec. X.237 [ISO/IEC 10035-1].
+Reliable Transfer Service Element (RTSE) – ITU-T Rec. X.218 [ISO/IEC 9066-1], ITU-T Rec. X.228 [ISO/IEC 9066-2].
+Remote Operations Service Element (ROSE) – ITU-T Rec. X.219 [ISO/IEC 9072-1], ITU-T Rec. X.229 [ISO/IEC 9072-2].  TCAP is related to X.219.
+Commitment, Concurrency, and Recovery service element (CCRSE)
+Security Exchange Service Element (SESE)
+This keeps track of how each application talks to another application.  Destination and source addresses are linked to specific applications.
+
+Application processes
+Common management information protocol (CMIP) – ISO 9596 / X.700
+Directory services (DS) – X.500, later modified for the TCP/IP stack as LDAP
+File transfer, access, and management (FTAM)
+Message handling system (MHS) – X.400
+Virtual terminal protocol (VT) - ISO 9040/9041
+Remote Database Access (RDA)
+Distributed Transaction Processing (OSI TP)
+Interlibrary Loan Application Protocol (ILAP)
+Document Transfer And Manipulation (DTAM)
+Document Printing Application (DPA)
+Document Filing and Retrieval (DFR)
+
+Routing protocols
+Intermediate System to Intermediate System (IS-IS) – ISO 10589 (reprinted in RFC 1142)
+End System to Intermediate System (ES-IS) – ISO 9542 (reprinted in RFC 995)
+Interdomain Routing Protocol (IDRP) – ISO 10747

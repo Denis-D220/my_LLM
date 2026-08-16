@@ -1,0 +1,977 @@
+Tarski's axioms are an axiom system for Euclidean geometry, specifically for that portion of Euclidean geometry that is formulable in first-order logic with identity (i.e. is formulable as an elementary theory). As such, it does not require an underlying set theory. The only primitive objects of the system are "points" and the only primitive predicates are "betweenness" (expressing the fact that a point lies on a line segment between two other points)  and "congruence" (expressing the fact that the distance between two points equals the distance between two other points). The system contains infinitely many axioms.
+The axiom system is due to Alfred Tarski who first presented it in 1926. Other modern axiomizations of Euclidean geometry are Hilbert's axioms (1899) and Birkhoff's axioms (1932).
+Using his axiom system, Tarski was able to show that the first-order theory of Euclidean geometry is consistent, complete and decidable: every sentence in its language is either provable or disprovable from the axioms, and we have an algorithm which decides for any given sentence whether it is provable or not.
+
+Overview
+Early in his career Tarski taught geometry and researched set theory. His coworker Steven Givant (1999) explained Tarski's take-off point:
+
+From Enriques, Tarski learned of the work of Mario Pieri, an Italian geometer who was strongly influenced by Peano. Tarski preferred Pieri's system [of his Point and Sphere memoir], where the logical structure and the complexity of the axioms were more transparent.
+Givant then says that "with typical thoroughness" Tarski devised his system:
+
+What was different about Tarski's approach to geometry? First of all, the axiom system was much simpler than any of the axiom systems that existed up to that time. In fact the length of all of Tarski's axioms together is not much more than just one of Pieri's 24 axioms. It was the first system of Euclidean geometry that was simple enough for all axioms to be expressed in terms of the primitive notions only, without the help of defined notions. Of even greater importance, for the first time a clear distinction was made between full geometry and its elementary — that is, its first order — part.
+Like other modern axiomatizations of Euclidean geometry, Tarski's employs a formal system consisting of symbol strings, called sentences, whose construction respects formal syntactical rules, and rules of proof that determine the allowed manipulations of the sentences. Unlike some other modern axiomatizations, such as Birkhoff's and Hilbert's, Tarski's axiomatization has no primitive objects other than points, so a variable or constant cannot refer to a line or an angle. Because points are the only primitive objects, and because Tarski's system is a first-order theory, it is not even possible to define lines as sets of points. The only primitive relations (predicates) are "betweenness" and "congruence" among points.
+Tarski's axiomatization is shorter than its rivals, in a sense Tarski and Givant (1999) make explicit. It is more concise than Pieri's because Pieri had only two primitive notions while Tarski introduced three: point, betweenness, and congruence. Such economy of primitive and defined notions means that Tarski's system is not very convenient for doing Euclidean geometry. Rather, Tarski designed his system to facilitate its analysis via the tools of mathematical logic, i.e., to facilitate deriving its metamathematical properties. Tarski's system has the unusual property that all sentences can be written in universal-existential form, a special case of the prenex normal form. This form has all universal quantifiers preceding any existential quantifiers, so that all sentences can be recast in the form 
+  
+    
+      
+        ∀
+        u
+        ∀
+        v
+        …
+        ∃
+        a
+        ∃
+        b
+        …
+        .
+      
+    
+    {\displaystyle \forall u\forall v\ldots \exists a\exists b\dots .}
+  
+ This fact allowed Tarski to prove that Euclidean geometry is decidable: there exists an algorithm which can determine the truth or falsity of any sentence. Tarski's axiomatization is also complete. This does not contradict Gödel's first incompleteness theorem, because Tarski's theory lacks the expressive power needed to interpret Robinson arithmetic (Franzén 2005, pp. 25–26).
+
+The axioms
+Alfred Tarski worked on the axiomatization and metamathematics of Euclidean geometry intermittently from 1926 until his death in 1983, with Tarski (1959) heralding his mature interest in the subject. The work of Tarski and his students on Euclidean geometry culminated in the monograph Schwabhäuser, Szmielew, and Tarski (1983), which set out the 10 axioms and one axiom schema shown below, the associated metamathematics, and a fair bit of the subject. Gupta (1965) made important contributions, and Tarski and Givant (1999) discuss the history.
+
+Fundamental relations
+These axioms are a more elegant version of a set Tarski devised in the 1920s as part of his investigation of the metamathematical properties of Euclidean plane geometry. This objective required reformulating that geometry as a first-order theory. Tarski did so by positing a universe of points, with lower case letters denoting variables ranging over that universe.  Equality is provided by the underlying logic (see First-order logic#Equality and its axioms). Tarski then posited two primitive relations:
+
+Betweenness, a triadic relation. The atomic sentence Bxyz denotes that the point y is "between" the points x and z, in other words, that y is a point on the line segment xz.  (This relation is interpreted inclusively, so that Bxyz is trivially true whenever x=y or y=z.)
+Congruence (or "equidistance"), a tetradic relation.  The atomic sentence Cwxyz or commonly wx ≡ yz can be interpreted as wx is congruent to yz, in other words, that the length of the line segment wx is equal to the length of the line segment yz.
+Betweenness captures the affine aspect (such as the parallelism of lines) of Euclidean geometry; congruence, its metric aspect (such as angles and distances). The background logic includes identity, a binary relation denoted by =. 
+The axioms below are grouped by the types of relation they invoke, then sorted, first by the number of existential quantifiers, then by the number of atomic sentences. The axioms should be read as universal closures; hence any free variables should be taken as tacitly universally quantified.
+
+Congruence axioms
+Reflexivity of congruence
+
+  
+    
+      
+        x
+        y
+        ≡
+        y
+        x
+        
+        .
+      
+    
+    {\displaystyle xy\equiv yx\,.}
+  
+
+Identity of congruence
+
+  
+    
+      
+        x
+        y
+        ≡
+        z
+        z
+        →
+        x
+        =
+        y
+        .
+      
+    
+    {\displaystyle xy\equiv zz\rightarrow x=y.}
+  
+
+Transitivity of congruence
+
+  
+    
+      
+        (
+        x
+        y
+        ≡
+        z
+        u
+        ∧
+        x
+        y
+        ≡
+        v
+        w
+        )
+        →
+        z
+        u
+        ≡
+        v
+        w
+        .
+      
+    
+    {\displaystyle (xy\equiv zu\land xy\equiv vw)\rightarrow zu\equiv vw.}
+  
+
+Commentary
+While the congruence relation 
+  
+    
+      
+        x
+        y
+        ≡
+        z
+        w
+      
+    
+    {\displaystyle xy\equiv zw}
+  
+ is, formally, a 4-way relation among points, it may also be thought of, informally, as a binary relation between two line segments 
+  
+    
+      
+        x
+        y
+      
+    
+    {\displaystyle xy}
+  
+ and 
+  
+    
+      
+        z
+        w
+      
+    
+    {\displaystyle zw}
+  
+.  The reflexivity and transitivity axioms above, combined, prove both:
+
+that this binary relation is in fact an equivalence relation
+it is reflexive: 
+  
+    
+      
+        x
+        y
+        ≡
+        x
+        y
+      
+    
+    {\displaystyle xy\equiv xy}
+  
+.
+it is symmetric 
+  
+    
+      
+        x
+        y
+        ≡
+        z
+        w
+        →
+        z
+        w
+        ≡
+        x
+        y
+      
+    
+    {\displaystyle xy\equiv zw\rightarrow zw\equiv xy}
+  
+.
+it is transitive 
+  
+    
+      
+        (
+        x
+        y
+        ≡
+        z
+        u
+        ∧
+        z
+        u
+        ≡
+        v
+        w
+        )
+        →
+        x
+        y
+        ≡
+        v
+        w
+      
+    
+    {\displaystyle (xy\equiv zu\land zu\equiv vw)\rightarrow xy\equiv vw}
+  
+.
+and that the order in which the points of a line segment are specified is irrelevant.
+
+  
+    
+      
+        x
+        y
+        ≡
+        z
+        w
+        →
+        x
+        y
+        ≡
+        w
+        z
+      
+    
+    {\displaystyle xy\equiv zw\rightarrow xy\equiv wz}
+  
+.
+
+  
+    
+      
+        x
+        y
+        ≡
+        z
+        w
+        →
+        y
+        x
+        ≡
+        z
+        w
+      
+    
+    {\displaystyle xy\equiv zw\rightarrow yx\equiv zw}
+  
+.
+
+  
+    
+      
+        x
+        y
+        ≡
+        z
+        w
+        →
+        y
+        x
+        ≡
+        w
+        z
+      
+    
+    {\displaystyle xy\equiv zw\rightarrow yx\equiv wz}
+  
+.
+The transitivity axiom asserts that congruence is Euclidean, in that it respects the first of Euclid's "common notions".
+The identity of congruence axiom states, intuitively, that if xy is congruent with a segment that begins and ends at the same point, x and y are the same point. This is closely related to the notion of reflexivity for binary relations.
+
+Betweenness axioms
+
+Identity of betweenness
+
+  
+    
+      
+        B
+        x
+        y
+        x
+        →
+        x
+        =
+        y
+        .
+      
+    
+    {\displaystyle Bxyx\rightarrow x=y.}
+  
+
+The only point on the line segment 
+  
+    
+      
+        x
+        x
+      
+    
+    {\displaystyle xx}
+  
+ is 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ itself.
+
+Axiom of Pasch
+
+  
+    
+      
+        (
+        B
+        x
+        u
+        z
+        ∧
+        B
+        y
+        v
+        z
+        )
+        →
+        ∃
+        a
+        
+        (
+        B
+        u
+        a
+        y
+        ∧
+        B
+        v
+        a
+        x
+        )
+        .
+      
+    
+    {\displaystyle (Bxuz\land Byvz)\rightarrow \exists a\,(Buay\land Bvax).}
+  
+
+Axiom schema of continuity
+Let φ(x) and ψ(y) be first-order formulae containing no free instances of either a or b. Let there also be no free instances of x in ψ(y) or of y in φ(x). Then all instances of the following schema are axioms:
+
+  
+    
+      
+        
+          (
+          
+            ∃
+            a
+            
+            ∀
+            x
+            
+            ∀
+            y
+            
+            [
+            (
+            ϕ
+            (
+            x
+            )
+            ∧
+            ψ
+            (
+            y
+            )
+            )
+            →
+            B
+            a
+            x
+            y
+            ]
+          
+          )
+        
+        →
+        ∃
+        b
+        
+        ∀
+        x
+        
+        ∀
+        y
+        
+        [
+        (
+        ϕ
+        (
+        x
+        )
+        ∧
+        ψ
+        (
+        y
+        )
+        )
+        →
+        B
+        x
+        b
+        y
+        ]
+        .
+      
+    
+    {\displaystyle \left(\exists a\,\forall x\,\forall y\,[(\phi (x)\land \psi (y))\rightarrow Baxy]\right)\rightarrow \exists b\,\forall x\,\forall y\,[(\phi (x)\land \psi (y))\rightarrow Bxby].}
+  
+
+Let r be a ray with endpoint a. Let the first order formulae φ and ψ define subsets X and Y of r, such that every point in Y is to the right of every point of X (with respect to a). Then there exists a point b in r lying between X and Y. This is essentially the Dedekind cut construction, carried out in a way that avoids quantification over sets.
+Note that the formulae φ(x) and ψ(y) may contain parameters, i.e. free variables different from a, b, x, y. And indeed, each instance of the axiom scheme that does not contain parameters can be proven from the other axioms.
+
+Lower dimension
+
+  
+    
+      
+        ∃
+        a
+        
+        ∃
+        b
+        
+        ∃
+        c
+        
+        [
+        ¬
+        B
+        a
+        b
+        c
+        ∧
+        ¬
+        B
+        b
+        c
+        a
+        ∧
+        ¬
+        B
+        c
+        a
+        b
+        ]
+        .
+      
+    
+    {\displaystyle \exists a\,\exists b\,\exists c\,[\neg Babc\land \neg Bbca\land \neg Bcab].}
+  
+
+There exist three noncollinear points.  Without this axiom, the theory could be modeled by the one-dimensional real line, a single point, or even the empty set.
+
+Congruence and betweenness
+
+Upper dimension
+
+  
+    
+      
+        (
+        x
+        u
+        ≡
+        x
+        v
+        )
+        ∧
+        (
+        y
+        u
+        ≡
+        y
+        v
+        )
+        ∧
+        (
+        z
+        u
+        ≡
+        z
+        v
+        )
+        ∧
+        (
+        u
+        ≠
+        v
+        )
+        →
+        (
+        B
+        x
+        y
+        z
+        ∨
+        B
+        y
+        z
+        x
+        ∨
+        B
+        z
+        x
+        y
+        )
+        .
+      
+    
+    {\displaystyle (xu\equiv xv)\land (yu\equiv yv)\land (zu\equiv zv)\land (u\neq v)\rightarrow (Bxyz\lor Byzx\lor Bzxy).}
+  
+
+Three points equidistant from two distinct points form a line. Without this axiom, the theory could be modeled by three-dimensional or higher-dimensional space.
+
+Axiom of Euclid
+Three variants of this axiom can be given, labeled A, B and C below. They are equivalent to each other given the remaining Tarski's axioms, and indeed equivalent to Euclid's parallel postulate.
+
+A: 
+  
+    
+      
+        (
+        (
+        B
+        x
+        y
+        w
+        ∧
+        x
+        y
+        ≡
+        y
+        w
+        )
+        ∧
+        (
+        B
+        x
+        u
+        v
+        ∧
+        x
+        u
+        ≡
+        u
+        v
+        )
+        ∧
+        (
+        B
+        y
+        u
+        z
+        ∧
+        y
+        u
+        ≡
+        u
+        z
+        )
+        )
+        →
+        y
+        z
+        ≡
+        v
+        w
+        .
+      
+    
+    {\displaystyle ((Bxyw\land xy\equiv yw)\land (Bxuv\land xu\equiv uv)\land (Byuz\land yu\equiv uz))\rightarrow yz\equiv vw.}
+  
+
+Let a line segment join the midpoint of two sides of a given triangle. That line segment will be half as long as the third side. This is equivalent to the interior angles of any triangle summing to two right angles.
+
+B: 
+  
+    
+      
+        B
+        x
+        y
+        z
+        ∨
+        B
+        y
+        z
+        x
+        ∨
+        B
+        z
+        x
+        y
+        ∨
+        ∃
+        a
+        
+        (
+        x
+        a
+        ≡
+        y
+        a
+        ∧
+        x
+        a
+        ≡
+        z
+        a
+        )
+        .
+      
+    
+    {\displaystyle Bxyz\lor Byzx\lor Bzxy\lor \exists a\,(xa\equiv ya\land xa\equiv za).}
+  
+
+Given any triangle, there exists a circle that includes all of its vertices.
+
+C: 
+  
+    
+      
+        (
+        B
+        x
+        u
+        v
+        ∧
+        B
+        y
+        u
+        z
+        ∧
+        x
+        ≠
+        u
+        )
+        →
+        ∃
+        a
+        
+        ∃
+        b
+        
+        (
+        B
+        x
+        y
+        a
+        ∧
+        B
+        x
+        z
+        b
+        ∧
+        B
+        a
+        v
+        b
+        )
+        .
+      
+    
+    {\displaystyle (Bxuv\land Byuz\land x\neq u)\rightarrow \exists a\,\exists b\,(Bxya\land Bxzb\land Bavb).}
+  
+
+Given any angle and any point v in its interior, there exists a line segment including v, with an endpoint on each side of the angle.
+Each variant has an advantage over the others:
+
+A dispenses with existential quantifiers;
+B has the fewest variables and atomic sentences;
+C requires but one primitive notion, betweenness. This variant is the usual one given in the literature.
+Five segment
+
+  
+    
+      
+        
+          (
+          x
+          ≠
+          y
+          ∧
+          B
+          x
+          y
+          z
+          ∧
+          B
+          
+            x
+            ′
+          
+          
+            y
+            ′
+          
+          
+            z
+            ′
+          
+          ∧
+          x
+          y
+          ≡
+          
+            x
+            ′
+          
+          
+            y
+            ′
+          
+          ∧
+          y
+          z
+          ≡
+          
+            y
+            ′
+          
+          
+            z
+            ′
+          
+          ∧
+          x
+          u
+          ≡
+          
+            x
+            ′
+          
+          
+            u
+            ′
+          
+          ∧
+          y
+          u
+          ≡
+          
+            y
+            ′
+          
+          
+            u
+            ′
+          
+          )
+        
+        →
+        z
+        u
+        ≡
+        
+          z
+          ′
+        
+        
+          u
+          ′
+        
+        .
+      
+    
+    {\displaystyle {(x\neq y\land Bxyz\land Bx'y'z'\land xy\equiv x'y'\land yz\equiv y'z'\land xu\equiv x'u'\land yu\equiv y'u')}\rightarrow zu\equiv z'u'.}
+  
+
+Begin with two triangles, xuz and x'u'z'. Draw the line segments yu and y'u', connecting a vertex of each triangle to a point on the side opposite to the vertex. The result is two divided triangles, each made up of five segments. If four segments of one triangle are each congruent to a segment in the other triangle, then the fifth segments in both triangles must be congruent.
+This is equivalent to the side-angle-side rule for determining that two triangles are congruent; if the angles uxz and u'x'z' are congruent (there exist congruent triangles xuz and x'u'z'), and the two pairs of incident sides are congruent (xu ≡ x'u' and xz ≡ x'z'), then the remaining pair of sides is also congruent (uz ≡ u'z'). 
+
+Segment construction
+
+  
+    
+      
+        ∃
+        z
+        
+        [
+        B
+        x
+        y
+        z
+        ∧
+        y
+        z
+        ≡
+        a
+        b
+        ]
+        .
+      
+    
+    {\displaystyle \exists z\,[Bxyz\land yz\equiv ab].}
+  
+
+For any point y, it is possible to draw in any direction (determined by x) a line congruent to any segment ab.
+
+Discussion
+According to Tarski and Givant (1999: 192-93), none of the above axioms are fundamentally new. The first four axioms establish some elementary properties of the two primitive relations. For instance, reflexivity and transitivity of congruence establish that congruence is an equivalence relation over line segments. The identity of congruence and of betweenness govern the trivial case when those relations are applied to nondistinct points. The theorem xy≡zz ↔ x=y ↔ Bxyx extends these Identity axioms.
+A number of other properties of betweenness are derivable as theorems including:
+
+Reflexivity: Bxxy ;
+Symmetry: Bxyz → Bzyx ;
+Transitivity: (Bxyw ∧ Byzw) → Bxyz ;
+Connectivity: (Bxyw ∧ Bxzw) → (Bxyz ∨ Bxzy).
+The last two properties totally order the points making up a line segment.
+The upper and lower dimension axioms together require that any model of these axioms have dimension 2, i.e. that we are axiomatizing the Euclidean plane. Suitable changes in these axioms yield axiom sets for Euclidean geometry for dimensions 0, 1, and greater than 2 (Tarski and Givant 1999: Axioms 8(1), 8(n), 9(0), 9(1), 9(n) ). Note that solid geometry requires no new axioms, unlike the case with Hilbert's axioms. Moreover, lower dimension for n dimensions is simply the negation of upper dimension for n - 1 dimensions.
+When the number of dimensions is greater than 1, betweenness can be defined in terms of congruence (Tarski and Givant, 1999). First define the relation "≤" (where 
+  
+    
+      
+        a
+        b
+        ≤
+        c
+        d
+      
+    
+    {\displaystyle ab\leq cd}
+  
+ is interpreted "the length of line segment 
+  
+    
+      
+        a
+        b
+      
+    
+    {\displaystyle ab}
+  
+ is less than or equal to the length of line segment 
+  
+    
+      
+        c
+        d
+      
+    
+    {\displaystyle cd}
+  
+"):
+
+  
+    
+      
+        x
+        y
+        ≤
+        z
+        u
+        ↔
+        ∀
+        v
+        (
+        z
+        v
+        ≡
+        u
+        v
+        →
+        ∃
+        w
+        (
+        x
+        w
+        ≡
+        y
+        w
+        ∧
+        y
+        w
+        ≡
+        u
+        v
+        )
+        )
+        .
+      
+    
+    {\displaystyle xy\leq zu\leftrightarrow \forall v(zv\equiv uv\rightarrow \exists w(xw\equiv yw\land yw\equiv uv)).}
+  
+
+In the case of two dimensions, the intuition is as follows: For any line segment xy, consider the possible range of lengths of xv, where v is any point on the perpendicular bisector of xy. It is apparent that while there is no upper bound to the length of xv, there is a lower bound, which occurs when v is the midpoint of xy. So if xy is shorter than or equal to zu, then the range of possible lengths of xv will be a superset of the range of possible lengths of zw, where w is any point on the perpendicular bisector of zu.
+Betweenness can then be defined by using the intuition that the shortest distance between any two points is a straight line:
+
+  
+    
+      
+        B
+        x
+        y
+        z
+        ↔
+        ∀
+        u
+        (
+        (
+        u
+        x
+        ≤
+        x
+        y
+        ∧
+        u
+        z
+        ≤
+        z
+        y
+        )
+        →
+        u
+        =
+        y
+        )
+        .
+      
+    
+    {\displaystyle Bxyz\leftrightarrow \forall u((ux\leq xy\land uz\leq zy)\rightarrow u=y).}
+  
+
+The axiom schema of continuity assures that the ordering of points on a line is complete (with respect to first-order definable properties). As was pointed out by Tarski, this first-order axiom schema may be replaced by a more powerful second-order axiom of continuity if one allows for variables to refer to arbitrary sets of points. The resulting second-order system is equivalent to Hilbert's set of axioms (Tarski and Givant 1999).
+The axioms of Pasch and Euclid are well known. The segment construction axiom makes measurement and the Cartesian coordinate system possible—simply assign the length 1 to some arbitrary non-empty line segment. Indeed, it is shown in (Schwabhäuser 1983) that by specifying two distinguished points on a line, called 0 and 1, we can define an addition, multiplication and ordering, turning the set of points on that line into a real-closed ordered field. We can then introduce coordinates from this field, showing that every model of Tarski's axioms is isomorphic to the two-dimensional plane over some real-closed ordered field.
+The standard geometric notions of parallelism and intersection of lines (where lines are represented by two distinct points on them), right angles, congruence of angles, similarity of triangles, tangency of lines and circles (represented by a center point and a radius) can all be defined in Tarski's system. 
+Let wff stand for a well-formed formula (or syntactically correct first-order formula) in Tarski's system. Tarski and Givant (1999: 175) proved that Tarski's system is:
+
+Consistent: There is no wff such that it and its negation can both be proven from the axioms;
+Complete: Every wff or its negation is a theorem provable from the axioms;
+Decidable: There exists an algorithm that decides for every wff whether is it is provable or disprovable from the axioms. This follows from Tarski's:
+Decision procedure for the real closed field, which he found by quantifier elimination (the Tarski–Seidenberg theorem);
+Axioms admitting the above-mentioned representation as a two-dimensional plane over a real closed field.
+This has the consequence that every statement of (second-order, general) Euclidean geometry which can be formulated as a first-order sentence in Tarski's system is true if and only if it is provable in Tarski's system, and this provability can be automatically checked with Tarski's algorithm. This, for instance, applies to all theorems in Euclid's Elements, Book I. An example of a theorem of Euclidean geometry which cannot be so formulated is the Archimedean property: to any two positive-length line segments S1 and S2 there exists a natural number n such that nS1 is longer than S2. (This is a consequence of the fact that there are real-closed fields that contain infinitesimals.) Other notions that cannot be expressed in Tarski's system are the constructability with straightedge and compass and statements that talk about "all polygons" etc.
+Gupta (1965) proved the Tarski's axioms independent, excepting Pasch and reflexivity of congruence.
+Negating the axiom of Euclid yields hyperbolic geometry, while eliminating it outright yields absolute geometry. Full (as opposed to elementary) Euclidean geometry requires giving up a first order axiomatization: replace φ(x) and ψ(y) in the axiom schema of Continuity with x ∈ A and y ∈ B, where A and B are universally quantified variables ranging over sets of points.
+Further simplifications for the fragment describing the plane Euclidean geometry of ruler and segment-transporter constructions, as well as for that of ruler and compass constructions were provided in (Pambuccian 2024). Each axiom of the axiom systems presented there is a prenex statement with at most 5 variables.
+
+Comparison with Hilbert's system
+Hilbert's axioms for plane geometry number 16, and include transitivity of congruence and a variant of the axiom of Pasch. The only notion from intuitive geometry invoked in the remarks to Tarski's axioms is triangle. (Versions B and C of the axiom of Euclid refer to "circle" and "angle," respectively.) Hilbert's axioms also require "ray," "angle," and the notion of a triangle "including" an angle. In addition to betweenness and congruence, Hilbert's axioms require a primitive binary relation "on," linking a point and a line. 
+Hilbert uses two axioms of continuity, and they require second-order logic. By contrast, Tarski's axiom schema of continuity consists of infinitely many first-order axioms. Such a schema is indispensable; Euclidean geometry in Tarski's (or equivalent) language cannot be finitely axiomatized as a first-order theory. 
+Hilbert's system is therefore considerably stronger: every model is isomorphic to the real plane 
+  
+    
+      
+        
+          
+            R
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{2}}
+  
+ (using the standard notions of points and lines). By contrast, Tarski's system has many non-isomorphic models: for every real-closed field F, the plane F2 provides one such model (where betweenness and congruence are defined in the obvious way).
+The first four groups of axioms of Hilbert's axioms for plane geometry are bi-interpretable with Tarski's axioms minus continuity.

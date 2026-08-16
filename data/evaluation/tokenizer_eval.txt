@@ -1,0 +1,387 @@
+Technical Tokenizer Evaluation Corpus v0.1
+
+This file is a held-out evaluation corpus for measuring tokenizer quality.
+It should not be included in tokenizer training data.
+
+GENERAL TECHNICAL ENGLISH
+
+A computer system executes instructions by moving data through memory, registers, buses, and processing units. Modern processors use multiple levels of cache to reduce the average time required to access frequently used data. Software performance depends not only on processor frequency but also on memory latency, branch prediction, instruction-level parallelism, and the efficiency of the algorithms being executed.
+
+A distributed application may consist of several independent services communicating over a network. Each service should expose a clearly defined interface, handle failures explicitly, and record enough diagnostic information to support troubleshooting. Reliability is improved through redundancy, timeout policies, retries with backoff, health checks, and careful management of shared state.
+
+Technical documentation should distinguish requirements, assumptions, interfaces, failure modes, and verification procedures. A useful engineering document explains not only what a system does, but also why particular design choices were made and how those choices can be tested.
+
+ELECTRONICS AND ELECTRICAL ENGINEERING
+
+Ohm's law relates voltage, current, and resistance. If a 4.7 kΩ resistor carries 2.0 mA, the voltage across it is approximately 9.4 V.
+
+A decoupling capacitor should normally be placed close to the power pins of an integrated circuit. A 100 nF ceramic capacitor can supply short transient currents while reducing high-frequency noise on the local power rail.
+
+The impedance of an ideal capacitor decreases as frequency increases. The impedance of an ideal inductor increases as frequency increases. Real components also include parasitic resistance, capacitance, and inductance.
+
+A MOSFET can operate as an electronic switch. Important parameters include V_GS(th), R_DS(on), maximum drain current, gate charge, and power dissipation.
+
+The notation 3.3 V, 250 mA, 10 µF, 4.7 kΩ, 100 MHz, 2.4 GHz, -40 dBm, and 25 °C should remain distinguishable after tokenization.
+
+Electrical quantities may be written using Unicode symbols such as Ω, µ, Δ, Σ, π, √, ±, ≤, ≥, ×, and °.
+
+EMBEDDED SYSTEMS
+
+An STM32 microcontroller may communicate with external sensors through I²C, SPI, UART, CAN, or USB. Peripheral configuration typically includes clock selection, GPIO mode, interrupt priority, DMA settings, and timing parameters.
+
+The STM32F411 can execute code from Flash while using SRAM for stacks, buffers, and dynamic data. Interrupt service routines should remain short when low latency is required.
+
+A sensor driver should separate hardware-specific communication from device-specific protocol logic. This makes it easier to test the protocol implementation independently from the physical I²C or SPI interface.
+
+Example identifiers:
+
+STM32F411
+VL53L8CX
+GPIO_PIN_13
+HAL_I2C_Master_Transmit
+HAL_UART_Receive_IT
+SystemClock_Config
+MAX_SENSOR_COUNT
+I2C_TIMEOUT_MS
+UART_BUFFER_SIZE
+
+Example register-style notation:
+
+CTRL_REG1 = 0x8F
+STATUS_REG = 0b00100101
+DEVICE_ID = 0x52
+sample_period_us = 1250
+
+SOFTWARE ENGINEERING
+
+A well-designed Python module should expose a small public API and keep implementation details private. Functions should have clear inputs, outputs, and error behavior. Unit tests should verify both normal operation and edge cases.
+
+Object-oriented design can be useful when state and behavior naturally belong together, but unnecessary inheritance can make a system harder to understand. Composition often provides a simpler alternative.
+
+A robust parser must handle malformed input, unexpected end-of-file conditions, invalid encodings, duplicate fields, missing values, and unsupported versions.
+
+Version control history should contain small, understandable commits. A useful commit message explains the purpose of the change rather than merely listing modified files.
+
+PYTHON
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+
+@dataclass
+class SensorReading:
+    temperature_c: float
+    voltage_v: float
+    timestamp_ms: int
+
+def calculate_power(voltage: float, current: float) -> float:
+    return voltage * current
+
+def load_configuration(path: Path) -> dict[str, object]:
+    if not path.exists():
+        raise FileNotFoundError(path)
+
+    text = path.read_text(encoding="utf-8")
+    return {"raw": text, "length": len(text)}
+
+class HTTPClient:
+    MAX_RETRIES = 5
+
+    def get_response(self, url: str) -> bytes:
+        raise NotImplementedError
+
+PYTHON EXPRESSIONS AND IDENTIFIERS
+
+torch.nn.functional.scaled_dot_product_attention
+model.state_dict()
+optimizer.zero_grad(set_to_none=True)
+loss.backward()
+torch.cuda.is_available()
+CUDA_VISIBLE_DEVICES
+PYTHONPATH
+__init__.py
+__main__
+calculate_average_temperature
+TransformerDecoderLayer
+
+C AND C++
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#define MAX_PACKET_SIZE 256U
+
+typedef struct
+{
+    uint32_t timestamp_ms;
+    float voltage_v;
+    float current_a;
+} measurement_t;
+
+bool sensor_read(measurement_t *measurement)
+{
+    if (measurement == NULL)
+    {
+        return false;
+    }
+
+    measurement->timestamp_ms = HAL_GetTick();
+    return true;
+}
+
+std::vector<std::string> device_names;
+std::unique_ptr<Device> device;
+constexpr uint32_t kTimeoutMs = 1000U;
+
+NETWORKING AND PROTOCOLS
+
+HTTP and HTTPS are application-layer protocols. HTTP methods include GET, POST, PUT, PATCH, and DELETE. Status codes such as 200, 201, 400, 401, 403, 404, 429, and 500 communicate the result of a request.
+
+An IPv4 address may appear as 192.168.1.100, while an IPv6 address may appear as 2001:db8:85a3::8a2e:370:7334.
+
+Network services may use addresses such as:
+
+https://api.example.com/v1/devices/42
+https://example.org/search?q=transformer&limit=25
+http://localhost:8080/health
+ws://192.168.1.20:9000/socket
+mqtt://broker.example.net:1883
+
+A TCP connection provides an ordered byte stream. UDP preserves message boundaries but does not guarantee delivery, ordering, or retransmission.
+
+TLS protects data in transit using cryptographic protocols. Certificate validation should verify the certificate chain, hostname, validity period, and trusted issuing authority.
+
+ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
+
+A neural network represents a parameterized function whose weights are adjusted during training. Gradient-based optimization reduces a loss function by updating parameters in the direction suggested by computed derivatives.
+
+A transformer processes token representations using self-attention and feed-forward layers. In causal self-attention, each position can attend only to itself and earlier positions.
+
+For each attention head, the model constructs query, key, and value vectors. Attention scores are computed from the similarity between queries and keys, then normalized before being applied to values.
+
+Rotary positional embeddings encode position information by rotating components of query and key vectors. RMSNorm rescales hidden states according to their root-mean-square magnitude.
+
+A decoder-only language model predicts the next token from previous tokens. During pretraining, the target sequence is shifted by one position relative to the input sequence.
+
+Byte Pair Encoding repeatedly merges frequent adjacent token pairs. A larger vocabulary can reduce sequence length, but it also increases the size of the embedding and output projection matrices.
+
+Terms for tokenizer fragmentation testing:
+
+transformer
+backpropagation
+microcontroller
+electromagnetic
+telecommunications
+virtualization
+cryptography
+semiconductor
+asynchronous
+tokenization
+normalization
+autoregressive
+quantization
+vectorization
+parallelization
+interoperability
+
+MATHEMATICS AND SCIENTIFIC NOTATION
+
+V = I × R
+P = V × I
+E = mc²
+A = πr²
+x² + y² = z²
+ΔV = V_out - V_in
+Σ(i=1..n) x_i
+√2 ≈ 1.41421356237
+0 ≤ probability ≤ 1
+x → y
+a ≠ b
+temperature = -273.15 °C
+
+Scientific notation examples:
+
+1.0e-9
+1.25e-6
+3.3e-3
+6.02214076e23
+2.99792458E+8
+-4.2E-12
+
+NUMBERS, VERSIONS, AND ADDRESSES
+
+0
+1
+-1
+42
+255
+1024
+65535
+4294967295
+3.141592653589793
+0.000001
+-0.125
+2026-08-08
+2026-08-08T20:40:00-04:00
+v0.1.0
+v1.2.3-beta.4
+Python-3.14.6
+0x00
+0x7F
+0xDEADBEEF
+0b10101010
+0o755
+192.168.0.1
+255.255.255.0
+
+CASE-SENSITIVE TECHNICAL TERMS
+
+HTTP
+http
+HTTPS
+https
+RAM
+ram
+GET
+get
+POST
+post
+Python
+python
+Linux
+linux
+JSON
+json
+MHz
+mHz
+MB
+Mb
+GB
+Gb
+V
+v
+A
+a
+ClassName
+className
+classname
+MAX_CURRENT
+max_current
+DeviceID
+deviceId
+device_id
+
+FILESYSTEM PATHS AND COMMANDS
+
+/home/daniel/projects/my_llm/src/llm/tokenizer/tokenizer.py
+/opt/my_llm/checkpoints/model-v0.1.pt
+./configs/model.yaml
+../data/tokenized/train-00042.bin
+C:\Users\Daniel\Documents\Projects\my_LLM-main\src\llm\model.py
+\\server\share\datasets\technical\shard-00001.jsonl
+
+python -m pytest tests/tokenizer/test_roundtrip.py -v
+python scripts/train_tokenizer.py --input data/training --vocab-size 24000
+python scripts/evaluate_tokenizer.py --tokenizer artifacts/tokenizer-v0.1/tokenizer.json
+git status
+git commit -m "Add tokenizer evaluation pipeline"
+sudo systemctl restart my-llm.service
+docker compose up -d
+
+JSON
+
+{
+  "model": {
+    "architecture": "decoder-only-transformer",
+    "vocab_size": 24000,
+    "hidden_size": 512,
+    "num_layers": 6,
+    "num_heads": 8,
+    "context_length": 2048
+  },
+  "training": {
+    "precision": "bf16",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003
+  },
+  "enabled": true
+}
+
+YAML
+
+model:
+  architecture: decoder-only-transformer
+  vocab_size: 24000
+  hidden_size: 512
+  num_layers: 6
+  num_heads: 8
+  context_length: 2048
+
+training:
+  precision: bf16
+  optimizer: AdamW
+  learning_rate: 3.0e-4
+
+LOG AND DIAGNOSTIC TEXT
+
+2026-08-08 20:40:13 INFO  tokenizer.training Starting vocabulary training
+2026-08-08 20:40:14 DEBUG tokenizer.bpe Pair frequency=1842 pair=(116, 104)
+2026-08-08 20:40:15 WARNING dataset.loader Skipping empty document id=000184
+2026-08-08 20:40:16 ERROR network.client ConnectionError: timeout after 5.0 seconds
+
+[INFO] device=GPU0 memory_used=8.4GB temperature=67°C
+[WARN] retry=3/5 endpoint=https://api.example.com/v1/status
+[ERROR] checksum mismatch expected=0xA91F received=0xA81F
+
+TECHNICAL PUNCTUATION AND MIXED CONTENT
+
+function(arg1, arg2, keyword=value)
+array[index]
+mapping["temperature"]
+object.attribute
+pointer->field
+namespace::ClassName
+template<typename T>
+vector<int>
+std::array<uint8_t, 16>
+user@example.com
+name+tag@example.co.uk
+key=value&enabled=true
+sensor[3].distance_mm
+ADC_CH[7]
+I²C
+SPI
+UART
+CAN-FD
+USB-C
+Wi-Fi
+Bluetooth®
+IEEE 802.11ax
+
+RARE BUT VALID UNICODE
+
+café
+naïve
+résumé
+München
+São Paulo
+ångström
+λ
+ξ
+η
+θ
+∂
+∇
+↔
+⇌
+⚡
+🛰️
+
+FINAL HELD-OUT TECHNICAL PASSAGE
+
+A small language model intended for technical assistance must preserve information that appears insignificant in ordinary prose. Capitalization can distinguish MHz from mHz, punctuation can separate a function call from an identifier, and whitespace can determine program structure. Unicode symbols may represent physical units or mathematical operators rather than decoration. For this reason, tokenizer evaluation must examine both compression efficiency and exact round-trip behavior.
+
+A useful tokenizer should represent common English and technical terminology with reasonably compact token sequences while retaining byte-level coverage for unfamiliar input. It should not require an unknown token for valid UTF-8 text. At the same time, vocabulary capacity should not be wasted memorizing rare phrases that appear only in a narrow training sample.
+
+The final tokenizer will be evaluated on text that was never used to learn its BPE merges. This separation allows vocabulary sizes and corpus mixtures to be compared under the same conditions. The selected tokenizer should provide a practical balance between sequence length, technical fidelity, vocabulary size, and computational cost.

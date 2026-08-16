@@ -1,0 +1,72 @@
+A real-time clock (RTC) is an electronic timekeeping device, most often in the form of an integrated circuit (IC).
+Although the term often refers to the devices in personal computers, servers and embedded systems, RTCs are present in almost any electronic device that needs to keep accurate time of day.
+
+Terminology
+The term real-time clock is used to avoid confusion with ordinary hardware clocks, which are only signals that govern digital electronics, and do not count time in human units. RTC should not be confused with real-time computing, which shares its three-letter acronym but does not directly relate to time of day.
+
+Purpose
+Although keeping time can be done without an RTC, using one has benefits:
+
+Reliably maintains and provides current time through disruptive system states such as hangs, sleep, reboots, or if given sufficient backup power, full shutdown and hardware reassembly, without the need to have its time set again.
+Low power consumption  (important when running from alternate power)
+Frees the main system for time-critical tasks
+Sometimes more accurate than other methods
+A GPS receiver can shorten its startup time by comparing the current time, according to its RTC, with the time at which it last had a valid signal. If it has been less than a few hours, then the previous ephemeris is still usable.
+Some motherboards are made without RTCs. The RTC may be omitted out of a desire to save money or reduce possible sources of hardware failure.
+
+Power source
+
+RTCs often have an alternate source of power, so they can continue to keep time while the primary source of power is off or unavailable. This alternate source of power is normally a lithium battery in older systems, but some newer systems use a supercapacitor, because they are rechargeable and can be soldered. The alternate power source can also supply power to battery backed RAM.
+
+Timing
+Most RTCs use a crystal oscillator, but some have the option of using the power line frequency. The crystal frequency is usually 32.768 kHz, the same frequency used in quartz clocks and watches. Being exactly 215 cycles per second, it is a convenient rate to use with simple binary counter circuits. The low frequency saves power, while remaining above human hearing range.  The quartz tuning fork of these crystals does not change size much with temperature, so temperature does not change its frequency much.
+Some RTCs use a micromechanical resonator on the silicon chip of the RTC. This reduces the size and cost of an RTC by reducing its parts count. Micromechanical resonators are much more sensitive to temperature than quartz resonators. So, these compensate for temperature changes using an electronic thermometer and electronic logic.
+Typical crystal RTC accuracy specifications are from ±100 to ±20 parts per million (8.6 to 1.7 seconds per day), but temperature-compensated RTC ICs are available accurate to less than 5 parts per million. In practical terms, this is good enough to perform celestial navigation, the classic task of a chronometer. In 2011, chip-scale atomic clocks became available. Although vastly more expensive and power-hungry (120 mW vs. <1 μW), they keep time within 50 parts per trillion (5×10−11).
+
+Examples
+
+Many integrated circuit manufacturers make RTCs, including Epson, Intersil, IDT, Maxim, NXP Semiconductors, Texas Instruments, STMicroelectronics and Ricoh. A common RTC used in single-board computers is the Maxim Integrated DS1307.
+The RTC was introduced to PC compatibles by the IBM PC/AT in 1984, which used a Motorola MC146818 RTC. Later, Dallas Semiconductor made compatible RTCs, which were often used in older personal computers, and are easily found on motherboards because of their distinctive black battery cap and silkscreened logo. A standard CMOS interface is available for the PC RTC.
+In newer computer systems, the RTC is integrated into the southbridge chip.
+Some microcontrollers have a real-time clock built in, generally only the ones with many other features and peripherals.
+
+Radio-based RTCs
+Some modern computers receive clock information by digital radio and use it to promote time standards. There are two common methods: Most cell phone protocols (e.g., LTE) directly provide the current local time.  If an internet radio is available, a computer may use the network time protocol. Computers used as local time servers occasionally use GPS or ultra-low frequency radio transmissions broadcast by a national standards organization (i.e. a radio clock).
+
+Software-based RTCs
+
+The following system is well-known to embedded systems programmers, who sometimes must construct RTCs in systems that lack them. Most computers have one or more hardware timers that use timing signals from quartz crystals or ceramic resonators. These have inaccurate absolute timing (more than 100 parts per million) that is yet very repeatable (often less than 1 ppm). Software can do the math to make these into accurate RTCs. The hardware timer can produce a periodic interrupt, e.g., 50 Hz, to mimic a historic RTC (see below).  However, it uses math to adjust the timing chain for accuracy:
+
+  
+    
+      
+        t
+        i
+        m
+        e
+        =
+        t
+        i
+        m
+        e
+        +
+        r
+        a
+        t
+        e
+      
+    
+    {\displaystyle time=time+rate}
+  
+
+When the time variable exceeds a constant, usually a power of two, the nominal, calculated clock time (say, for 1/50 of a second) is subtracted from time, and the clock's timing-chain software is invoked to count fractions of seconds, seconds, etc. With 32-bit variables for time and rate, the mathematical resolution of "rate" can exceed one part per billion. The clock remains accurate because it will occasionally skip a fraction of a second or increment by two fractions. The tiny skip (jitter) is imperceptible for almost all real uses of an RTC.
+The complexity with this system is determining the instantaneous corrected value for the variable rate.  The simplest system tracks RTC time and reference time between two settings of the clock, and divides reference time by RTC time to find rate. Internet time is often accurate to less than 20 milliseconds, so 8000 or more seconds (2.2 or more hours) of separation between settings can usually divide the forty milliseconds (or less) of error to less than 5 parts per million to get chronometer-like accuracy. The main complexity with this system is converting dates and times to counts of seconds, but methods are well known.
+If the RTC runs when a unit is off, usually the RTC will run at two rates, one when the unit is on and another when off. This is because the temperature and power-supply voltage in each state is consistent. To adjust for these states, the software calculates two rates. First, software records the RTC time, reference time, on seconds and off seconds for the two intervals between the last three times that the clock is set. Using this, it can measure the accuracy of the two intervals, with each interval having a different distribution of on and off seconds. The rate math solves two linear equations to calculate two rates, one for on and the other for off.
+Another approach measures the temperature of the oscillator with an electronic thermometer (e.g., a thermistor and analog-to-digital converter) and uses a polynomial to calculate rate about once per minute. These require a calibration that measures the frequency at several temperatures, and then a linear regression to find the equation of temperature. The most common quartz crystals in a system are SC-cut crystals, and their rates over temperature can be characterized with a 3rd-degree polynomial. So, to calibrate these, the frequency is measured at four temperatures. The common tuning-fork-style crystals used in watches and many RTC components have parabolic (2nd-degree) equations of temperature, and can be calibrated with only 3 measurements. MEMS oscillators vary from 3rd-degree to 5th-degree polynomials, depending on their mechanical design, and so need from four to six calibration measurements. Something like this approach might be used in commercial RTC ICs, but the actual methods of efficient high-speed manufacturing are proprietary.
+
+Historic RTCs
+Some computer designs such as the smaller IBM System/360,
+PDP-8 and Data General Nova used a real-time clock that was accurate, simple and low cost. In Europe, North America and some other grids, the frequency of the AC mains is adjusted to the long-term frequency accuracy of the national standards. In those grids, clocks using AC mains can keep perfect time without adjustment. Such clocks are not practical in portable computers or grids (e.g., in South Asia) that do not regulate the frequency of AC mains.
+These computers' power supplies use a transformer or resistor divider to produce a sine wave at logic voltages. This signal is conditioned by a zero-crossing detector, either using a linear amplifier or a schmitt trigger. The result is a square wave with single, fast edges at the mains frequency. This logic signal triggers an interrupt. The interrupt handler software usually counts cycles, seconds, etc. In this way, it can provide an entire clock and calendar. In the IBM 360, the interrupt updates a 64-bit count of microseconds utilized by standardized systems software. The clock's jitter error is half if the clock interrupts for each zero crossing, instead of each cycle.
+The clock also usually formed the basis of computers' software timing chains; e.g., it was usually the timer used to switch tasks in an operating system. Counting timers used in modern computers provide similar features at lower precision, and may trace their requirements to this type of clock. (e.g., in the PDP-8, the mains-based clock, model DK8EA, came first, and was later followed by a crystal-based clock, DK8EC.)
+A software-based clock must be set each time its computer is turned on. Originally, this was done by computer operators. When the Internet became commonplace, network time protocols were used to automatically set clocks of this type.

@@ -1,0 +1,3008 @@
+In multivariate calculus, a differential or differential form is said to be exact or perfect (exact differential), as contrasted with an inexact differential, if it is equal to the general differential 
+  
+    
+      
+        d
+        Q
+      
+    
+    {\displaystyle dQ}
+  
+ for some differentiable function 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ in an orthogonal coordinate system (hence 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is a multivariable function whose variables are independent, as they are always expected to be when treated in multivariable calculus).
+An exact differential is sometimes also called a total differential, or a full differential, or, in the study of differential geometry, it is termed an exact form.
+The integral of an exact differential over any integral path is path-independent, and this fact is used to identify state functions in thermodynamics.
+
+Overview
+
+Definition
+Even if we work in three dimensions here, the definitions of exact differentials for other dimensions are structurally similar to the three dimensional definition. In three dimensions, a form of the type
+
+  
+    
+      
+        A
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+        d
+        x
+        +
+        B
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+        d
+        y
+        +
+        C
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+        d
+        z
+      
+    
+    {\displaystyle A(x,y,z)\,dx+B(x,y,z)\,dy+C(x,y,z)\,dz}
+  
+
+is called a differential form. This form is called exact on an open domain 
+  
+    
+      
+        D
+        ⊂
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle D\subset \mathbb {R} ^{3}}
+  
+ in space if there exists some differentiable scalar function 
+  
+    
+      
+        Q
+        =
+        Q
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+      
+    
+    {\displaystyle Q=Q(x,y,z)}
+  
+ defined on 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+ such that
+
+  
+    
+      
+        d
+        Q
+        ≡
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  Q
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            )
+          
+          
+            y
+            ,
+            z
+          
+        
+        
+        d
+        x
+        +
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  Q
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            )
+          
+          
+            x
+            ,
+            z
+          
+        
+        
+        d
+        y
+        +
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  Q
+                
+                
+                  ∂
+                  z
+                
+              
+            
+            )
+          
+          
+            x
+            ,
+            y
+          
+        
+        
+        d
+        z
+        ,
+        
+        d
+        Q
+        =
+        A
+        
+        d
+        x
+        +
+        B
+        
+        d
+        y
+        +
+        C
+        
+        d
+        z
+      
+    
+    {\displaystyle dQ\equiv \left({\frac {\partial Q}{\partial x}}\right)_{y,z}\,dx+\left({\frac {\partial Q}{\partial y}}\right)_{x,z}\,dy+\left({\frac {\partial Q}{\partial z}}\right)_{x,y}\,dz,\quad dQ=A\,dx+B\,dy+C\,dz}
+  
+
+throughout 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+, where 
+  
+    
+      
+        x
+        ,
+        y
+        ,
+        z
+      
+    
+    {\displaystyle x,y,z}
+  
+ are orthogonal coordinates (e.g., Cartesian, cylindrical, or spherical coordinates). In other words, in some open domain of a space, a differential form is an exact differential if it is equal to the general differential of a differentiable function in an orthogonal coordinate system.
+The subscripts outside the parenthesis in the above mathematical expression indicate which variables are being held constant during differentiation. Due to the definition of the partial derivative, these subscripts are not required, but they are explicitly shown here as reminders.
+
+Integral path independence
+The exact differential for a differentiable scalar function 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ defined in an open domain 
+  
+    
+      
+        D
+        ⊂
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle D\subset \mathbb {R} ^{n}}
+  
+ is equal to 
+  
+    
+      
+        d
+        Q
+        =
+        ∇
+        Q
+        ⋅
+        d
+        
+          r
+        
+      
+    
+    {\displaystyle dQ=\nabla Q\cdot d\mathbf {r} }
+  
+, where 
+  
+    
+      
+        ∇
+        Q
+      
+    
+    {\displaystyle \nabla Q}
+  
+ is the gradient of 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+, 
+  
+    
+      
+        ⋅
+      
+    
+    {\displaystyle \cdot }
+  
+ represents the scalar product, and 
+  
+    
+      
+        d
+        
+          r
+        
+      
+    
+    {\displaystyle d\mathbf {r} }
+  
+ is the general differential displacement vector, if an orthogonal coordinate system is used. If 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is of differentiability class 
+  
+    
+      
+        
+          C
+          
+            1
+          
+        
+      
+    
+    {\displaystyle C^{1}}
+  
+ (continuously differentiable), then 
+  
+    
+      
+        ∇
+        Q
+      
+    
+    {\displaystyle \nabla Q}
+  
+ is a conservative vector field for the corresponding potential 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ by the definition. For three dimensional spaces, expressions such as 
+  
+    
+      
+        d
+        
+          r
+        
+        =
+        (
+        d
+        x
+        ,
+        d
+        y
+        ,
+        d
+        z
+        )
+      
+    
+    {\displaystyle d\mathbf {r} =(dx,dy,dz)}
+  
+ and 
+  
+    
+      
+        ∇
+        Q
+        =
+        
+          (
+          
+            
+              
+                
+                  ∂
+                  Q
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            ,
+            
+              
+                
+                  ∂
+                  Q
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            ,
+            
+              
+                
+                  ∂
+                  Q
+                
+                
+                  ∂
+                  z
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \nabla Q=\left({\frac {\partial Q}{\partial x}},{\frac {\partial Q}{\partial y}},{\frac {\partial Q}{\partial z}}\right)}
+  
+ can be made.
+The gradient theorem states
+
+  
+    
+      
+        
+          ∫
+          
+            i
+          
+          
+            f
+          
+        
+        d
+        Q
+        =
+        
+          ∫
+          
+            i
+          
+          
+            f
+          
+        
+        ∇
+        Q
+        (
+        
+          r
+        
+        )
+        ⋅
+        d
+        
+          r
+        
+        =
+        Q
+        
+          (
+          f
+          )
+        
+        −
+        Q
+        
+          (
+          i
+          )
+        
+      
+    
+    {\displaystyle \int _{i}^{f}dQ=\int _{i}^{f}\nabla Q(\mathbf {r} )\cdot d\mathbf {r} =Q\left(f\right)-Q\left(i\right)}
+  
+
+that does not depend on which integral path between the given path endpoints 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ and 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is chosen. So it is concluded that the integral of an exact differential is independent of the choice of an integral path between given path endpoints (path independence).
+For three dimensional spaces, if 
+  
+    
+      
+        ∇
+        Q
+      
+    
+    {\displaystyle \nabla Q}
+  
+ defined on an open domain 
+  
+    
+      
+        D
+        ⊂
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle D\subset \mathbb {R} ^{3}}
+  
+ is of differentiability class 
+  
+    
+      
+        
+          C
+          
+            1
+          
+        
+      
+    
+    {\displaystyle C^{1}}
+  
+ (equivalently 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is of 
+  
+    
+      
+        
+          C
+          
+            2
+          
+        
+      
+    
+    {\displaystyle C^{2}}
+  
+), then this integral path independence can also be proved by using the vector calculus identity 
+  
+    
+      
+        ∇
+        ×
+        (
+        ∇
+        Q
+        )
+        =
+        
+          0
+        
+      
+    
+    {\displaystyle \nabla \times (\nabla Q)=\mathbf {0} }
+  
+ and Stokes' theorem.
+
+  
+    
+      
+        
+          ∮
+          
+            ∂
+            Σ
+          
+        
+        ∇
+        Q
+        ⋅
+        d
+        
+          r
+        
+        =
+        
+          ∬
+          
+            Σ
+          
+        
+        (
+        ∇
+        ×
+        ∇
+        Q
+        )
+        ⋅
+        d
+        
+          a
+        
+        =
+        0
+      
+    
+    {\displaystyle \oint _{\partial \Sigma }\nabla Q\cdot d\mathbf {r} =\iint _{\Sigma }(\nabla \times \nabla Q)\cdot d\mathbf {a} =0}
+  
+
+for a simply closed loop 
+  
+    
+      
+        ∂
+        Σ
+      
+    
+    {\displaystyle \partial \Sigma }
+  
+ with the smooth oriented surface 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+ in it. If the open domain 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+ is simply connected open space (roughly speaking, a single piece open space without a hole within it), then any irrotational vector field (defined as a 
+  
+    
+      
+        
+          C
+          
+            1
+          
+        
+      
+    
+    {\displaystyle C^{1}}
+  
+ vector field 
+  
+    
+      
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {v} }
+  
+ which curl is zero, i.e., 
+  
+    
+      
+        ∇
+        ×
+        
+          v
+        
+        =
+        
+          0
+        
+      
+    
+    {\displaystyle \nabla \times \mathbf {v} =\mathbf {0} }
+  
+) has the path independence by the Stokes' theorem, so the following statement is made; In a simply connected open region, any 
+  
+    
+      
+        
+          C
+          
+            1
+          
+        
+      
+    
+    {\displaystyle C^{1}}
+  
+ vector field that has the path-independence property (so it is a conservative vector field.) must also be irrotational and vice versa. The equality of the path independence and conservative vector fields is shown here.
+
+Thermodynamic state function
+In thermodynamics, when 
+  
+    
+      
+        d
+        Q
+      
+    
+    {\displaystyle dQ}
+  
+ is exact, the function 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is a state function of the system: a mathematical function which depends solely on the current equilibrium state, not on the path taken to reach that state. Internal energy 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+, Entropy 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+, Enthalpy 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+, Helmholtz free energy 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, and Gibbs free energy 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ are state functions. Generally, neither work 
+  
+    
+      
+        W
+      
+    
+    {\displaystyle W}
+  
+ nor heat 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is a state function. (Note: 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is commonly used to represent heat in physics. It should not be confused with the use earlier in this article as the parameter of an exact differential.)
+
+One dimension
+In one dimension, a differential form
+
+  
+    
+      
+        A
+        (
+        x
+        )
+        
+        d
+        x
+      
+    
+    {\displaystyle A(x)\,dx}
+  
+
+is exact if and only if 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ has an antiderivative (but not necessarily one in terms of elementary functions). If 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ has an antiderivative and let 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ be an antiderivative of 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ so 
+  
+    
+      
+        
+          
+            
+              d
+              Q
+            
+            
+              d
+              x
+            
+          
+        
+        =
+        A
+      
+    
+    {\displaystyle {\frac {dQ}{dx}}=A}
+  
+, then 
+  
+    
+      
+        A
+        (
+        x
+        )
+        
+        d
+        x
+      
+    
+    {\displaystyle A(x)\,dx}
+  
+ obviously satisfies the condition for exactness. If 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ does not have an antiderivative, then we cannot write 
+  
+    
+      
+        d
+        Q
+        =
+        
+          
+            
+              d
+              Q
+            
+            
+              d
+              x
+            
+          
+        
+        d
+        x
+      
+    
+    {\displaystyle dQ={\frac {dQ}{dx}}dx}
+  
+ with 
+  
+    
+      
+        A
+        =
+        
+          
+            
+              d
+              Q
+            
+            
+              d
+              x
+            
+          
+        
+      
+    
+    {\displaystyle A={\frac {dQ}{dx}}}
+  
+ for a differentiable function 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ so 
+  
+    
+      
+        A
+        (
+        x
+        )
+        
+        d
+        x
+      
+    
+    {\displaystyle A(x)\,dx}
+  
+ is inexact.
+
+Two and three dimensions
+By symmetry of second derivatives, for any "well-behaved" (non-pathological) function 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+, we have
+
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              Q
+            
+            
+              ∂
+              x
+              
+              ∂
+              y
+            
+          
+        
+        =
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              Q
+            
+            
+              ∂
+              y
+              
+              ∂
+              x
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {\partial ^{2}Q}{\partial x\,\partial y}}={\frac {\partial ^{2}Q}{\partial y\,\partial x}}.}
+  
+
+Hence, in a simply-connected region R of the xy-plane, where 
+  
+    
+      
+        x
+        ,
+        y
+      
+    
+    {\displaystyle x,y}
+  
+ are independent, a differential form
+
+  
+    
+      
+        A
+        (
+        x
+        ,
+        y
+        )
+        
+        d
+        x
+        +
+        B
+        (
+        x
+        ,
+        y
+        )
+        
+        d
+        y
+      
+    
+    {\displaystyle A(x,y)\,dx+B(x,y)\,dy}
+  
+
+is an exact differential if and only if the equation
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  A
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            )
+          
+          
+            x
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  B
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            )
+          
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \left({\frac {\partial A}{\partial y}}\right)_{x}=\left({\frac {\partial B}{\partial x}}\right)_{y}}
+  
+
+holds. If it is an exact differential so 
+  
+    
+      
+        A
+        =
+        
+          
+            
+              ∂
+              Q
+            
+            
+              ∂
+              x
+            
+          
+        
+      
+    
+    {\displaystyle A={\frac {\partial Q}{\partial x}}}
+  
+ and 
+  
+    
+      
+        B
+        =
+        
+          
+            
+              ∂
+              Q
+            
+            
+              ∂
+              y
+            
+          
+        
+      
+    
+    {\displaystyle B={\frac {\partial Q}{\partial y}}}
+  
+, then 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is a differentiable (smoothly continuous) function along 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+, so 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  A
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            )
+          
+          
+            x
+          
+        
+        =
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              Q
+            
+            
+              ∂
+              y
+              ∂
+              x
+            
+          
+        
+        =
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              Q
+            
+            
+              ∂
+              x
+              ∂
+              y
+            
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  B
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            )
+          
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \left({\frac {\partial A}{\partial y}}\right)_{x}={\frac {\partial ^{2}Q}{\partial y\partial x}}={\frac {\partial ^{2}Q}{\partial x\partial y}}=\left({\frac {\partial B}{\partial x}}\right)_{y}}
+  
+. If 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  A
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            )
+          
+          
+            x
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  B
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            )
+          
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \left({\frac {\partial A}{\partial y}}\right)_{x}=\left({\frac {\partial B}{\partial x}}\right)_{y}}
+  
+ holds, then 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ and 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ are differentiable (again, smoothly continuous) functions along 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ and 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ respectively, and 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  A
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            )
+          
+          
+            x
+          
+        
+        =
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              Q
+            
+            
+              ∂
+              y
+              ∂
+              x
+            
+          
+        
+        =
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              Q
+            
+            
+              ∂
+              x
+              ∂
+              y
+            
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  B
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            )
+          
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \left({\frac {\partial A}{\partial y}}\right)_{x}={\frac {\partial ^{2}Q}{\partial y\partial x}}={\frac {\partial ^{2}Q}{\partial x\partial y}}=\left({\frac {\partial B}{\partial x}}\right)_{y}}
+  
+ is only the case.
+For three dimensions, in a simply-connected region R of the xyz-coordinate system, by a similar reason, a differential
+
+  
+    
+      
+        d
+        Q
+        =
+        A
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+        d
+        x
+        +
+        B
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+        d
+        y
+        +
+        C
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+        d
+        z
+      
+    
+    {\displaystyle dQ=A(x,y,z)\,dx+B(x,y,z)\,dy+C(x,y,z)\,dz}
+  
+
+is an exact differential if and only if between the functions A, B and C there exist the relations
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  A
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            )
+          
+          
+            x
+            ,
+            z
+          
+        
+        
+        
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  B
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            )
+          
+          
+            y
+            ,
+            z
+          
+        
+      
+    
+    {\displaystyle \left({\frac {\partial A}{\partial y}}\right)_{x,z}\!\!\!=\left({\frac {\partial B}{\partial x}}\right)_{y,z}}
+  
+; 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  A
+                
+                
+                  ∂
+                  z
+                
+              
+            
+            )
+          
+          
+            x
+            ,
+            y
+          
+        
+        
+        
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  C
+                
+                
+                  ∂
+                  x
+                
+              
+            
+            )
+          
+          
+            y
+            ,
+            z
+          
+        
+      
+    
+    {\displaystyle \left({\frac {\partial A}{\partial z}}\right)_{x,y}\!\!\!=\left({\frac {\partial C}{\partial x}}\right)_{y,z}}
+  
+; 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  B
+                
+                
+                  ∂
+                  z
+                
+              
+            
+            )
+          
+          
+            x
+            ,
+            y
+          
+        
+        
+        
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  C
+                
+                
+                  ∂
+                  y
+                
+              
+            
+            )
+          
+          
+            x
+            ,
+            z
+          
+        
+        .
+      
+    
+    {\displaystyle \left({\frac {\partial B}{\partial z}}\right)_{x,y}\!\!\!=\left({\frac {\partial C}{\partial y}}\right)_{x,z}.}
+  
+
+These conditions are equivalent to the following sentence: If G is the graph of this vector valued function then for all tangent vectors X,Y of the surface G then s(X, Y) = 0 with s the symplectic form.
+These conditions, which are easy to generalize, arise from the independence of the order of differentiations in the calculation of the second derivatives. So, in order for a differential dQ, that is a function of four variables, to be an exact differential, there are six conditions (the combination 
+  
+    
+      
+        C
+        (
+        4
+        ,
+        2
+        )
+        =
+        6
+      
+    
+    {\displaystyle C(4,2)=6}
+  
+) to satisfy.
+
+Partial differential relations
+If a differentiable function 
+  
+    
+      
+        z
+        (
+        x
+        ,
+        y
+        )
+      
+    
+    {\displaystyle z(x,y)}
+  
+ is one-to-one (injective) for each independent variable, e.g., 
+  
+    
+      
+        z
+        (
+        x
+        ,
+        y
+        )
+      
+    
+    {\displaystyle z(x,y)}
+  
+ is one-to-one for 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ at a fixed 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ while it is not necessarily one-to-one for 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        )
+      
+    
+    {\displaystyle (x,y)}
+  
+, then the following total differentials exist because each independent variable is a differentiable function for the other variables, e.g., 
+  
+    
+      
+        x
+        (
+        y
+        ,
+        z
+        )
+      
+    
+    {\displaystyle x(y,z)}
+  
+.
+
+  
+    
+      
+        d
+        x
+        =
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    x
+                  
+                  
+                    ∂
+                    y
+                  
+                
+              
+              )
+            
+          
+          
+            z
+          
+        
+        
+        d
+        y
+        +
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    x
+                  
+                  
+                    ∂
+                    z
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        
+        d
+        z
+      
+    
+    {\displaystyle dx={\left({\frac {\partial x}{\partial y}}\right)}_{z}\,dy+{\left({\frac {\partial x}{\partial z}}\right)}_{y}\,dz}
+  
+
+  
+    
+      
+        d
+        z
+        =
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        
+        d
+        x
+        +
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    y
+                  
+                
+              
+              )
+            
+          
+          
+            x
+          
+        
+        
+        d
+        y
+        .
+      
+    
+    {\displaystyle dz={\left({\frac {\partial z}{\partial x}}\right)}_{y}\,dx+{\left({\frac {\partial z}{\partial y}}\right)}_{x}\,dy.}
+  
+
+Substituting the first equation into the second and rearranging, we obtain
+
+  
+    
+      
+        d
+        z
+        =
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        
+          [
+          
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        x
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                  )
+                
+              
+              
+                z
+              
+            
+            d
+            y
+            +
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        x
+                      
+                      
+                        ∂
+                        z
+                      
+                    
+                  
+                  )
+                
+              
+              
+                y
+              
+            
+            d
+            z
+          
+          ]
+        
+        +
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    y
+                  
+                
+              
+              )
+            
+          
+          
+            x
+          
+        
+        d
+        y
+        ,
+      
+    
+    {\displaystyle dz={\left({\frac {\partial z}{\partial x}}\right)}_{y}\left[{\left({\frac {\partial x}{\partial y}}\right)}_{z}dy+{\left({\frac {\partial x}{\partial z}}\right)}_{y}dz\right]+{\left({\frac {\partial z}{\partial y}}\right)}_{x}dy,}
+  
+
+  
+    
+      
+        d
+        z
+        =
+        
+          [
+          
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        z
+                      
+                      
+                        ∂
+                        x
+                      
+                    
+                  
+                  )
+                
+              
+              
+                y
+              
+            
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        x
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                  )
+                
+              
+              
+                z
+              
+            
+            +
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        z
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                  )
+                
+              
+              
+                x
+              
+            
+          
+          ]
+        
+        d
+        y
+        +
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    x
+                  
+                  
+                    ∂
+                    z
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        d
+        z
+        ,
+      
+    
+    {\displaystyle dz=\left[{\left({\frac {\partial z}{\partial x}}\right)}_{y}{\left({\frac {\partial x}{\partial y}}\right)}_{z}+{\left({\frac {\partial z}{\partial y}}\right)}_{x}\right]dy+{\left({\frac {\partial z}{\partial x}}\right)}_{y}{\left({\frac {\partial x}{\partial z}}\right)}_{y}dz,}
+  
+
+  
+    
+      
+        
+          [
+          
+            1
+            −
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        z
+                      
+                      
+                        ∂
+                        x
+                      
+                    
+                  
+                  )
+                
+              
+              
+                y
+              
+            
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        x
+                      
+                      
+                        ∂
+                        z
+                      
+                    
+                  
+                  )
+                
+              
+              
+                y
+              
+            
+          
+          ]
+        
+        d
+        z
+        =
+        
+          [
+          
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        z
+                      
+                      
+                        ∂
+                        x
+                      
+                    
+                  
+                  )
+                
+              
+              
+                y
+              
+            
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        x
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                  )
+                
+              
+              
+                z
+              
+            
+            +
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        z
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                  )
+                
+              
+              
+                x
+              
+            
+          
+          ]
+        
+        d
+        y
+        .
+      
+    
+    {\displaystyle \left[1-{\left({\frac {\partial z}{\partial x}}\right)}_{y}{\left({\frac {\partial x}{\partial z}}\right)}_{y}\right]dz=\left[{\left({\frac {\partial z}{\partial x}}\right)}_{y}{\left({\frac {\partial x}{\partial y}}\right)}_{z}+{\left({\frac {\partial z}{\partial y}}\right)}_{x}\right]dy.}
+  
+
+Since 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ and 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+ are independent variables, 
+  
+    
+      
+        d
+        y
+      
+    
+    {\displaystyle dy}
+  
+ and 
+  
+    
+      
+        d
+        z
+      
+    
+    {\displaystyle dz}
+  
+ may be chosen without restriction. For this last equation to generally hold, the bracketed terms must be equal to zero. The left bracket equal to zero leads to the reciprocity relation while the right bracket equal to zero goes to the cyclic relation as shown below.
+
+Reciprocity relation
+Setting the first term in brackets equal to zero yields
+
+  
+    
+      
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    x
+                  
+                  
+                    ∂
+                    z
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        =
+        1.
+      
+    
+    {\displaystyle {\left({\frac {\partial z}{\partial x}}\right)}_{y}{\left({\frac {\partial x}{\partial z}}\right)}_{y}=1.}
+  
+
+A slight rearrangement gives a reciprocity relation,
+
+  
+    
+      
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        =
+        
+          
+            1
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        x
+                      
+                      
+                        ∂
+                        z
+                      
+                    
+                  
+                  )
+                
+              
+              
+                y
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\left({\frac {\partial z}{\partial x}}\right)}_{y}={\frac {1}{{\left({\frac {\partial x}{\partial z}}\right)}_{y}}}.}
+  
+
+There are two more permutations of the foregoing derivation that give a total of three reciprocity relations between 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+, 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ and 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+.
+
+Cyclic relation
+The cyclic relation is also known as the cyclic rule or the Triple product rule. Setting the second term in brackets equal to zero yields
+
+  
+    
+      
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    x
+                  
+                  
+                    ∂
+                    y
+                  
+                
+              
+              )
+            
+          
+          
+            z
+          
+        
+        =
+        −
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    y
+                  
+                
+              
+              )
+            
+          
+          
+            x
+          
+        
+        .
+      
+    
+    {\displaystyle {\left({\frac {\partial z}{\partial x}}\right)}_{y}{\left({\frac {\partial x}{\partial y}}\right)}_{z}=-{\left({\frac {\partial z}{\partial y}}\right)}_{x}.}
+  
+
+Using a reciprocity relation for 
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                z
+              
+              
+                ∂
+                y
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\partial z}{\partial y}}}
+  
+ on this equation and reordering gives a cyclic relation (the triple product rule),
+
+  
+    
+      
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    x
+                  
+                  
+                    ∂
+                    y
+                  
+                
+              
+              )
+            
+          
+          
+            z
+          
+        
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    y
+                  
+                  
+                    ∂
+                    z
+                  
+                
+              
+              )
+            
+          
+          
+            x
+          
+        
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    z
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            y
+          
+        
+        =
+        −
+        1.
+      
+    
+    {\displaystyle {\left({\frac {\partial x}{\partial y}}\right)}_{z}{\left({\frac {\partial y}{\partial z}}\right)}_{x}{\left({\frac {\partial z}{\partial x}}\right)}_{y}=-1.}
+  
+
+If, instead, reciprocity relations for 
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                x
+              
+              
+                ∂
+                y
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\partial x}{\partial y}}}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                y
+              
+              
+                ∂
+                z
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\partial y}{\partial z}}}
+  
+ are used with subsequent rearrangement, a standard form for implicit differentiation is obtained:
+
+  
+    
+      
+        
+          
+            
+              (
+              
+                
+                  
+                    ∂
+                    y
+                  
+                  
+                    ∂
+                    x
+                  
+                
+              
+              )
+            
+          
+          
+            z
+          
+        
+        =
+        −
+        
+          
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        z
+                      
+                      
+                        ∂
+                        x
+                      
+                    
+                  
+                  )
+                
+              
+              
+                y
+              
+            
+            
+              
+                
+                  (
+                  
+                    
+                      
+                        ∂
+                        z
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                  )
+                
+              
+              
+                x
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\left({\frac {\partial y}{\partial x}}\right)}_{z}=-{\frac {{\left({\frac {\partial z}{\partial x}}\right)}_{y}}{{\left({\frac {\partial z}{\partial y}}\right)}_{x}}}.}
+  
+
+Some useful equations derived from exact differentials in two dimensions
+(See also Bridgman's thermodynamic equations for the use of exact differentials in the theory of thermodynamic equations)
+Suppose we have five state functions 
+  
+    
+      
+        z
+        ,
+        x
+        ,
+        y
+        ,
+        u
+      
+    
+    {\displaystyle z,x,y,u}
+  
+, and 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+. Suppose that the state space is two-dimensional and any of the five quantities are differentiable. Then by the chain rule
+
+but also by the chain rule:
+
+and
+
+so that (by substituting (2) and (3) into (1)):
+
+which implies that (by comparing (4) with (1)):
+
+Letting 
+  
+    
+      
+        v
+        =
+        y
+      
+    
+    {\displaystyle v=y}
+  
+ in (5) gives:
+
+Letting 
+  
+    
+      
+        u
+        =
+        y
+      
+    
+    {\displaystyle u=y}
+  
+ in (5) gives:
+
+Letting 
+  
+    
+      
+        u
+        =
+        y
+      
+    
+    {\displaystyle u=y}
+  
+ and 
+  
+    
+      
+        v
+        =
+        z
+      
+    
+    {\displaystyle v=z}
+  
+ in (7) gives:
+
+using (
+  
+    
+      
+        ∂
+        a
+        
+          /
+        
+        ∂
+        b
+        
+          )
+          
+            c
+          
+        
+        =
+        1
+        
+          /
+        
+        (
+        ∂
+        b
+        
+          /
+        
+        ∂
+        a
+        
+          )
+          
+            c
+          
+        
+      
+    
+    {\displaystyle \partial a/\partial b)_{c}=1/(\partial b/\partial a)_{c}}
+  
+ gives the triple product rule:

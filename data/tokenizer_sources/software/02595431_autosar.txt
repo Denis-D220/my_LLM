@@ -1,0 +1,119 @@
+AUTOSAR (AUTomotive Open System ARchitecture)  is a global development partnership founded in 2003 by automotive manufacturers, suppliers and other companies from the electronics, semiconductor and software industries. Its purpose is to develop and establish an open and standardized software architecture for automotive electronic control units (ECUs). 
+The objectives are scalability to different vehicle and platform variants, transferability of software, consideration of availability and safety requirements, cooperation between different partners, sustainable use of natural resources and maintainability during the product lifecycle.
+
+History
+AUTOSAR  was formed in July 2003 by Bavarian Motor Works (BMW), Robert Bosch GmbH, Continental AG, Mercedes-Benz Group AG, Siemens VDO and Volkswagen AG to develop and establish an open industry standard for the automotive electrical-electronic (E/E) architecture. 
+In November 2003, the Ford Motor Company joined as a Core Partner. In the following December Peugeot Citroën Automobiles S.A. and the Toyota Motor Corporation followed. In November of the following year, General Motors Holding LLC also joined as a Core Partner. After Siemens VDO was acquired by Continental in February 2008, Siemens VDO is no longer independently represented as a Core Partner of AUTOSAR.
+Since 2003, AUTOSAR has provided four major versions of the standardized automotive software architecture for its Classic Platform and one release, along with the version of acceptance tests. The work on the AUTOSAR Classic Platform can be divided into three phases:
+
+Phase I (2004–2006): Fundamental development of the standard (releases 1.0, 2.0, 2.1)
+Phase II (2007–2009): Expansion of the standard in terms of architecture and methodology (releases 3.0, 3.1, 4.0)
+Phase III (2010–2013): Maintenance and selected improvements (releases 3.2, 4.1, 4.2)
+In 2013, the AUTOSAR consortium introduced a continuous working mode for the Classic Platform to maintain the standard and provide selected improvements (including releases R4.2, and 1.0 of acceptance tests).
+In 2016, work began on the Adaptive Platform. An initial release (17-03) was published in early 2017, followed by release 17–10 in October 2017 and release 18–03 in March 2018. With release 18–10 in October 2018, the major development activities were published.
+From December 2023, AUTOSAR Releases became virtually
+R23-11 News & Events AUTOSAR
+R24-11  News & Events AUTOSAR
+R25-11 https://www.autosar.org/news-events/detail/autosar-release-event-r25-11
+
+Concept and goals
+
+Vision
+AUTOSAR aims to establish a global standard for software and methodology, enabling open E/E system architectures for future intelligent mobility. This vision focuses on ensuring high levels of dependability, particularly in terms of safety and security.
+
+Motivation and Goals of AUTOSAR
+AUTOSAR provides specifications for basic software modules, defines application interfaces, and builds a common development methodology based on a standardized exchange format. The basic software modules made available by the AUTOSAR layered software architecture can be used in vehicles from different manufacturers and electronic components from different suppliers, thereby reducing expenditures for research and development.
+Based on this principle, AUTOSAR aims to prepare for upcoming technologies.
+The motivation behind AUTOSAR is to manage the increasing complexity of software and E/E systems as their functional scope expands. The initiative is designed to support flexibility in product modifications, upgrades, and updates, while leveraging scalable solutions within and across product lines. Enhancing scalability and flexibility in the integration and transfer of functions is a key objective, aiming to improve the quality and reliability of software and E/E systems.
+The goals of AUTOSAR include addressing future vehicle requirements such as availability, safety, software upgrades, updates, and maintainability. AUTOSAR seeks to enhance scalability and flexibility for function integration and transfer. Additionally, the initiative aims to increase the use of "Commercial off the Shelf" software and hardware components across product lines, promoting software reuse. By accelerating development and maintenance processes, AUTOSAR intends to improve the management of product and process complexity and risk, while optimizing the costs associated with scalable systems. Based on this principle, AUTOSAR aims to prepare for upcoming technologies.
+
+Released AUTOSAR Standards
+AUTOSAR uses a three-layer architecture:
+
+Basic Software: standardized software modules (mostly) with no explicit automotive job, but offers services needed to run the functional part of the upper software layer.
+Runtime environment (RTE): middleware which abstracts from the network topology for the inter- and intra-ECU information exchange between the application software components and between the Basic Software and the applications.
+Application Layer: application software components that interact with the runtime environment.
+
+Foundation
+The purpose of the foundation standard is to enforce interoperability between the AUTOSAR platforms. The foundation contains common requirements and technical specifications (for example protocols) shared between the AUTOSAR platforms, and the common methodology.
+
+Methodology
+System Configuration Description includes all system information and the information agreed between different ECUs (e.g. definition of bus signals).
+ECU extract: contains the information from the System Configuration Description needed for a specific ECU (e.g. those signals where a specific ECU has access to).
+ECU Configuration Description: contains all basic software configuration information that is local to a specific ECU. Use this information to build the executable software, the code of the basic software modules and the code of the software components out of it.
+
+Classic Platform
+The AUTOSAR classic platform is the standard for embedded real-time ECUs based on OSEK. Its main deliverable is specifications.
+The architecture distinguishes between three software layers that run on a microcontroller: application, runtime environment (RTE) and basic software (BSW). The application software layer is mostly hardware independent. Communication between software components and access to BSW happens via RTE, which represents the full interface for applications.
+The BSW is divided in three major layers and complex drivers: 
+
+Services
+Electronic control unit (ECU) abstraction
+Microcontroller abstraction
+Services are divided further, into functional groups representing the infrastructure for system, memory and communication services.
+One essential concept of the Classic Platform is the Virtual Functional Bus (VFB). This virtual bus is an abstract set of RTEs that are not yet deployed to specific ECUs and decouples the applications from the infrastructure. It communicates via dedicated ports, which means that the communication interfaces of the application software must be mapped to these ports. The VFB handles communication within the individual ECU and between ECUs. From an application point of view, no detailed knowledge of lower-level technologies or dependencies is required. This supports hardware-independent development and usage of application software.
+The Classic Platform also enables the integration of non-AUTOSAR systems such as GENIVI, now renamed COVESA, by using the Franca Interface Definition Language (Franca IDL).
+
+Standardized application interfaces
+Standardization of functional interfaces across manufacturers and suppliers and standardization of the interfaces between the different software layers is seen as a basis for achieving the technical goals of AUTOSAR. Only by standardizing concrete interface contents in their physical and temporal representation allows achieving the needed integration compatibility.
+
+Adaptive platform
+New use-cases required the development of the adaptive platform. One example is automated driving, in the context of which the driver temporarily and/or partially transfers responsibility for driving to the vehicle. The automation system replacing the driver will require communication with external  infrastructure (e.g. traffic signs, traffic centers or cloud servers), it needs to perform a huge amount of signal processing, calculations of driving strategies and system health monitoring: This has to be based on high performance computing hardware, like multicore-processors or graphics processing units. 
+Further, Car-2-X applications require interaction to vehicles and off-board systems. That means that the system has to provide secure on-board communication, support of cross-domain computing platforms, smartphone integration, integration of non-AUTOSAR systems, and so on. Also, cloud-based services will require dedicated means for security, such as secure cloud interaction and emergency vehicle preemption. They will enable remote and distributed services, such as remote diagnostics, over the air (OTA) update, repair, and exchange handling.
+To support dynamic deployment of customer applications and to provide an environment for applications that require high-end computing power AUTOSAR is currently standardizing the AUTOSAR Adaptive Platform. Its core is an operating system based on the POSIX standard. The operating system can be used by the application via a subset of the POSIX according to IEEE1003.13 (namely PSE51). One of the key features of the Adaptive Platform is service-oriented communication since the Platform is based on the Service - Oriented Architecture.
+Adaptive AUTOSAR is developed and written using C++ which is an object-oriented programming language. The communication protocol used for the in-vehicle networking is SOME/IP, based on Ethernet.
+Two types of interfaces are available: services and application programming interfaces (APIs). The platform consists of functional clusters which are grouped in services and the AUTOSAR adaptive platform foundation.
+Functional clusters:
+
+Assemble functions of the adaptive platform
+Define clustering of requirements specification
+Describe behavior of software platform from application and network perspective
+Do not constrain the final SW design of the architecture implementing the Adaptive Platform.
+Functional clusters in AUTOSAR Adaptive Platform have to have at least one instance per (virtual) machine while services may be distributed in the in-car network.
+Adaptive platform services include:
+
+Update and Configuration management
+State Management
+Network Management
+Diagnostics
+The adaptive platform contains both specification and code. In comparison to the Classic Platform, AUTOSAR develops an implementation to shorten the validation cycle and illustrate the underlying concepts. This implementation is available to all AUTOSAR partners.
+
+Organization
+AUTOSAR defined six different levels of membership. The contribution of partners varies depending on the type of partnership:
+
+Premium Partner Plus
+Premium Partner
+Associate Partner
+Associate Partner Light
+Development Partner
+Attendee
+Subscriber
+Core Partners are since 2026 AUMOVIO (AUMOVIO Germany GmbH), BMW (BMW AG), Bosch (Robert Bosch GmbH), Denso, GM (General Motors Holding LLC), Huawei (Huawei Technologies Co.Ltd.), Mercedes-Benz (Mercedes-Benz Group AG), Toyota (TMC), Vector (Vector Informatik GmbH) and  VW (Volkswagen AG). These companies are responsible for organization, administration and control of the AUTOSAR development partnership. Within this core, the executive board defines the overall strategy and roadmap. The Steering Committee manages day-to-day non-technical operations and admission of partners, public relations and contractual issues. The chairman and Deputy of chairman, appointed for one year, represent the Steering Committee for that purpose. The AUTOSAR Spokesperson takes over the communication with the outside world.
+Premium Partner Plus companies support the project leader team in the various technical, organizational and everyday processes. They also give new strategic inputs to the project leader round.
+Premium and Development members contribute to work packages coordinated and monitored by the Project Leader Team established by the Core Partners. Associate partners are making use of the standard documents AUTOSAR has already released. Attendees are currently participating with Academic collaboration and non-commercial projects.
+
+Vendors
+
+Selection of vendors, including RTOS, BSW, design tools, compiler, etc.
+
+Elektrobit (now part of Continental AG)
+ETAS (part of Bosch)
+KPIT Technologies
+Siemens (previously Mentor Graphics)
+Vector Informatik
+Tata Technologies
+
+AUTOSAR-related software vendors and partners
+Vendors which provide related tools and software, e.g. for testing, diagnostics, development, etc.
+
+dSPACE GmbH
+MATLAB by MathWorks
+
+Competitors or related consortia
+Automotive Grade Linux
+COMASSO Organization provides an open source AUTOSAR platform
+GENIVI Alliance
+
+AUTOSAR on site
+AUTOSAR takes part in various events every year. Furthermore the AUTOSAR Open Conference (AOC) is planned every year to network and give an overview over the newest achievements.
+A list of the events which are planned can be found on the AUTOSAR website.

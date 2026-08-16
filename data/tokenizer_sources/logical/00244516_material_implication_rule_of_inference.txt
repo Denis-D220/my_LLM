@@ -1,0 +1,460 @@
+In classical propositional logic, material implication is a valid rule of replacement that allows a conditional statement to be replaced by a disjunction in which the antecedent is negated. The rule states that P implies Q is logically equivalent to not-
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ or 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ and that either form can replace the other in logical proofs. In other words, if 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is true, then 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ must also be true, while if 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is not true, then 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ cannot be true either; additionally, when 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is not true, 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ may be either true or false.
+
+  
+    
+      
+        P
+        →
+        Q
+        ⇔
+        ¬
+        P
+        ∨
+        Q
+        ,
+      
+    
+    {\displaystyle P\to Q\Leftrightarrow \neg P\lor Q,}
+  
+
+where "
+  
+    
+      
+        ⇔
+      
+    
+    {\displaystyle \Leftrightarrow }
+  
+" is a metalogical symbol representing "can be replaced in a proof with", P and Q are any given logical statements, and 
+  
+    
+      
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle \neg P\lor Q}
+  
+ can be read as "(not P) or Q". To illustrate this, consider the following statements:
+
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+: Sam ate an orange for lunch.
+
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+: Sam ate a fruit for lunch.
+Then, to say "Sam ate an orange for lunch" implies "Sam ate a fruit for lunch" (
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+). Logically, if Sam did not eat a fruit for lunch, then Sam also cannot have eaten an orange for lunch (by contraposition). However, merely saying that Sam did not eat an orange for lunch provides no information on whether or not Sam ate a fruit (of any kind) for lunch.
+
+Proof
+Suppose we are given that 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+. Then we have 
+  
+    
+      
+        ¬
+        P
+        ∨
+        P
+      
+    
+    {\displaystyle \neg P\lor P}
+  
+ by the law of excluded middle (i.e. either 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ must be true, or 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ must not be true). 
+Subsequently, since 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+, 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ can be replaced by 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ in the statement, and thus it follows that 
+  
+    
+      
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle \neg P\lor Q}
+  
+ (i.e. either 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ must be true, or 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ must not be true).
+Suppose, conversely, we are given 
+  
+    
+      
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle \neg P\lor Q}
+  
+. Then if 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is true, that rules out the first disjunct, so we have 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+. In short, 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+.
+This can also be expressed with a truth table:
+
+Example
+An example: we are given the conditional fact that if it is a bear, then it can swim. Then, all 4 possibilities in the truth table are compared to that fact.
+
+If it is a bear, then it can swim — T
+If it is a bear, then it can not swim — F
+If it is not a bear, then it can swim — T because it doesn’t contradict our initial fact.
+If it is not a bear, then it can not swim — T (as above)
+Thus, the conditional fact can be converted to 
+  
+    
+      
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle \neg P\vee Q}
+  
+, which is "it is not a bear" or "it can swim",
+where 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is the statement "it is a bear" and 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is the statement "it can swim".
+
+Differences with implication in intuitionistic logic
+Intuitionistic logic does not treat 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+ as equivalent to 
+  
+    
+      
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle \neg P\vee Q}
+  
+ because
+
+  
+    
+      
+        P
+        →
+        Q
+        
+          
+            ⇒
+          
+        
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle P\to Q{\cancel {\Rightarrow }}\neg P\lor Q}
+  
+
+Given 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+, one can constructively transform a proof of 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ into a proof of 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+. In particular, 
+  
+    
+      
+        P
+        →
+        P
+      
+    
+    {\displaystyle P\to P}
+  
+ holds in intuitionistic logic. If 
+  
+    
+      
+        P
+        →
+        Q
+        ⇒
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle P\to Q\Rightarrow \neg P\lor Q}
+  
+ would hold, then 
+  
+    
+      
+        ¬
+        P
+        ∨
+        P
+      
+    
+    {\displaystyle \neg P\lor P}
+  
+ could be derived. However, the latter is the law of excluded middle, which is not accepted by intuitionistic logic (one cannot assume 
+  
+    
+      
+        ¬
+        P
+        ∨
+        P
+      
+    
+    {\displaystyle \neg P\lor P}
+  
+ without knowing which case applies).

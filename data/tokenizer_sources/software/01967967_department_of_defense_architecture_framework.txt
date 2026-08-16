@@ -1,0 +1,323 @@
+The Department of Defense Architecture Framework (DoDAF) is an architecture framework for the United States Department of Defense (DoD) that provides visualization infrastructure for specific stakeholders concerns through viewpoints organized by various views. These views are artifacts for visualizing, understanding, and assimilating the broad scope and complexities of an architecture description through tabular, structural, behavioral, ontological, pictorial, temporal, graphical, probabilistic, or alternative conceptual means. The current release is DoDAF 2.02.
+This Architecture Framework is especially suited to large systems with complex integration and interoperability challenges, and it is apparently unique in its employment of "operational views". These views offer overview and details aimed to specific stakeholders within their domain and in interaction with other domains in which the system will operate.
+
+Overview
+The DoDAF provides a foundational framework for developing and representing architecture descriptions that ensure a common denominator for understanding, comparing, and integrating architectures across organizational, joint, and multinational boundaries. It establishes data element definitions, rules, and relationships and a baseline set of products for consistent development of systems, integrated, or federated architectures. These architecture descriptions may include families of systems (FoS), systems of systems (SoS), and net-centric capabilities for interoperating and interacting in the non-combat environment.
+DoD Components are expected to conform to DoDAF to the maximum extent possible in development of architectures within the department. Conformance ensures that reuse of information, architecture artifacts, models, and viewpoints can be shared with common understanding. All major U.S. DoD weapons and information technology system acquisitions are required to develop and document an enterprise architecture (EA) using the views prescribed in the DoDAF. While it is clearly aimed at military systems, DoDAF has broad applicability across the private, public and voluntary sectors around the world, and represents one of a large number of systems architecture frameworks.
+
+The purpose of DoDAF is to define concepts and models usable in DoD's six core processes:
+Joint Capabilities Integration and Development (JCIDS)
+Planning, Programming, Budgeting, and Execution (PPBE)
+Defense Acquisition System (DAS)
+Systems Engineering (SE)
+Operational Planning (OPLAN)
+Capability Portfolio Management (CPM)
+In addition, DoDAF 2.0's specific goals were to:
+Establish guidance for architecture content as a function of purpose – “fit for purpose”
+Increase utility and effectiveness of architectures via a rigorous data model – the DoDAF Meta Model (DM2) -- so the architectures can be integrated, analyzed, and evaluated with more precision.
+
+History
+
+The first version of the development DoDAF was developed in the 1990s under the name C4ISR Architecture Framework. In the same period the reference model TAFIM, which was initiated in 1986, was further developed. The first C4ISR Architecture Framework v1.0, released 7 June 1996, was created in response to the passage of the Clinger-Cohen Act. It addressed the 1995 Deputy Secretary of Defense directive that a DoD-wide effort be undertaken to define and develop a better means and process for ensuring that C4ISR capabilities were interoperable and met the needs of the warfighter. Continued development effort resulted in December 1997 in the second version, C4ISR Architecture Framework v2.0.
+In August 2003 the DoDAF v1.0 was released, which restructured the C4ISR Framework v2.0 to offer guidance, product descriptions, and supplementary information in two volumes and a Desk Book. It broadened the applicability of architecture tenets and practices to all Mission Areas rather than just the C4ISR community. This document addressed usage, integrated architectures, DoD and Federal policies, value of architectures, architecture measures, DoD decision support processes, development techniques, analytical techniques, and the CADM v1.01, and moved towards a repository-based approach by placing emphasis on architecture data elements that comprise architecture products. In February 2004 the documentation of Version 1.0 was released with volume "I: Definitions and Guidelines", "II: Product Descriptions" and a "Deskbook". In April 2007 the Version 1.5 was released with a documentation of "Definitions and Guidelines", "Product Descriptions" and "Architecture Data Description".  This period further developed the concepts and terms that have since been replaced with different approaches.  For example, a Mission Needs Statement (MNS) was a U.S. Department of Defense type of document which identified capability needs for a program to satisfy by a combination of solutions (DOTMLPF) to resolve a mission deficiency or to enhance operational capability.  This type of document has been superseded by the description of capability needs called an Initial Capabilities Document, as of CJCSI 3170.01E. The CJCSI 3170.01 and 6212.01 were superseded by the CJCSI 5123.01 Series.
+This term was introduced as a fundamental step in CJCSI 3170.01B (Apr 2001), 6212.01D (Apr 2005), and the Interim Defense Acquisition Guidebook (Oct 2004).
+On May 28, 2009, DoDAF v2.0 was approved by the Department of Defense. The current version is DoDAF 2.02 
+DoDAF V2.0 is published on a public website.
+Other derivative frameworks based on DoDAF include the NATO Architecture Framework (NAF) and Ministry of Defence Architecture Framework. Like other EA approaches, for example The Open Group Architecture Framework (TOGAF), DoDAF is organized around a shared repository to hold work products. The repository is defined by the common database schema Core Architecture Data Model 2.0 and the DoD Architecture Registry System (DARS). A key feature of DoDAF is interoperability, which is organized as a series of levels, called Levels of Information System Interoperability (LISI). The developing system must not only meet its internal data needs but also those of the operational framework into which it is set.
+
+Capabilities and mission
+See the diagram for a depiction of the Capabilities Emphasis, as tied in with mission/course of action, threads, activities, and architectures. 
+
+The DoD has moved toward a focus on the delivery of capabilities, which are the reason for creating the system/service.
+The Capability Models describe capability taxonomy and capability evolution. 
+A capability thread would equate to the specific activities, rules, and systems that are linked to that particular capability.
+The concept of capability, as defined by its Meta-model Data Group allows one to answer questions such as:
+
+How does a particular capability or capabilities support the overall mission/vision?
+What outcomes are expected to be achieved by a particular capability or set of capabilities?
+What services are required to support a capability?
+What is the functional scope and organizational span of a capability or set of capabilities?
+What is our current set of capabilities that we are managing as part of a portfolio?
+
+The Mission or Course of Action is described by a Concept of Operations (CONOPS), and is organized by Capabilities.
+
+Capabilities are described by Threads.
+Threads are described by Activities executed in serial or parallel.
+Activities are grouped into Mission Areas. Activities define operations for an Architecture.
+Architectures are organized by mission areas. Architectures provide proper resourcing of capabilities required by the Mission or Course of Action.
+
+Version 1.5 views
+
+The DoDAF V1.5 defines a set of products, a view model, that act as mechanisms for visualizing, understanding, and assimilating the broad scope and complexities of an architecture description through graphic, tabular, or textual means. These products are organized under four views:
+
+All view (AV)
+Operational view (OV)
+Systems view (SV)
+Technical standards view (TV)
+Each view depicts certain perspectives of an architecture as described below. Only a subset of the full DoDAF viewset is usually created for each system development. The figure represents the information that links the operational view, systems and services view, and technical standards view. The three views and their interrelationships – driven by common architecture data elements – provide the basis for
+deriving measures such as interoperability or performance, and for measuring the impact of the values of these metrics on operational mission and task effectiveness.
+
+All view
+All view (AV) products provide overarching descriptions of the entire architecture and define the scope and context of the architecture. The DoDAF V1.5 AV products are defined as:
+
+AV-1 Overview and Summary Information
+Scope, purpose, intended users, environment depicted, analytical findings (if applicable)
+AV-2 Integrated Dictionary
+Definitions of all terms used in all products.
+
+Operational view
+Operational View (OV) products provide descriptions of the tasks and activities, operational elements, and information exchanges required to accomplish DoD missions. The OV provides textual and graphical representations of operational nodes and elements, assigned tasks and activities, and information flows between nodes. It defines the type of information exchanged, the frequency of exchanges, the tasks and activities supported by these exchanges and the nature of the exchanges. The DoDAF V1.5 OV products are defined as:
+
+OV-1 High Level Operational Concept Graphic
+High level graphical and textual description of operational concept (high level organizations, missions, geographic configuration, connectivity, etc.).
+OV-2 Operational Node Connectivity Description
+Operational nodes, activities performed at each node, and connectivities and information flow between nodes.
+OV-3 Operational Information Exchange Matrix
+Information exchanged between nodes and the relevant attributes of that exchange such as media, quality, quantity, and the level of interoperability required.
+OV-4 Organizational Relationships Chart
+Command, control, coordination, and other relationships among organizations.
+OV-5 Operational Activity Model
+Activities, relationships among activities, inputs and outputs. In addition, overlays can show cost, performing nodes, or other pertinent information.
+OV-6a Operational Rules Model
+One of the three products used to describe operational activity sequence and timing that identifies the business rules that constrain the operation.
+OV-6b Operational State Transition Description
+One of the three products used to describe operational activity sequence and timing that identifies responses of a business process to events.
+OV-6c Operational Event-Trace Description
+One of the three products used to describe operational activity sequence and timing that traces the actions in a scenario or critical sequence of events.
+OV-7 Logical Data Model
+Documentation of the data requirements and structural business process rules of the Operational View. (In DoDAF V1.5. This corresponds to DIV-2 in DoDAF V2.0.)
+
+Systems and services view
+Systems and services view (SV) is a set of graphical and textual products that describe systems and services and interconnections providing for, or supporting, DoD functions. SV products focus on specific physical systems with specific physical (geographical) locations. The relationship between architecture data elements across the SV to the OV can be exemplified as systems are procured and fielded to support organizations and their operations. The DoDAF V1.5 SV products are:
+
+SV-1 Systems/Services Interface Description
+Depicts systems nodes and the systems resident at these nodes to support organizations/human roles represented by operational nodes of the OV-2. SV-1 also identifies the interfaces between systems and systems nodes.
+SV-2 Systems/Services Communications Description
+Depicts pertinent information about communications systems, communications links, and communications networks. SV-2 documents the kinds of communications media that support the systems and implements their interfaces as described in SV-1. Thus, SV-2 shows the communications details of SV-1 interfaces that automate aspects of the needlines represented in OV-2.
+SV-3 Systems-Systems, Services-Systems, Services-Services Matrices
+provides detail on the interface characteristics described in SV-1 for the architecture, arranged in matrix form.
+SV-4a/SV-4b Systems/Services Functionality Description
+The SV-4a documents system functional hierarchies and system functions, and the system data flows between them. The SV-4 from DoDAF v1.0 is designated as 'SV-4a' in DoDAF v1.5. Although there is a correlation between OV-5 or business-process hierarchies and the system functional hierarchy of SV-4a, it need not be a one-to-one mapping, hence, the need for the Operational Activity to Systems Function Traceability Matrix (SV-5a), which provides that mapping.
+SV-5a, SV-5b, SV-5c Operational Activity to Systems Function, Operational Activity to Systems and Services Traceability Matrices
+Operational Activity to SV-5a and SV-5b is a specification of the relationships between the set of operational activities applicable to an architecture and the set of system functions applicable to that architecture. The SV-5 and extension to the SV-5 from DoDAF v1.0 is designated as 'SV-5a' and ‘SV-5b’ in DoDAF v1.5 respectively.
+SV-6 Systems/Services Data Exchange Matrix
+Specifies the characteristics of the system data exchanged between systems. This product focuses on automated information exchanges (from OV-3) that are implemented in systems. Non-automated information exchanges, such as verbal orders, are captured in the OV products only.
+SV-7 Systems/Services Performance Parameters Matrix
+Specifies the quantitative characteristics of systems and system hardware/software items, their interfaces (system data carried by the interface as well as communications link details that implement the interface), and their functions. It specifies the current performance parameters of each system, interface, or system function, and the expected or required performance parameters at specified times in the future. Performance parameters include all technical performance characteristics of systems for which requirements can be developed and specification defined. The complete set of performance parameters may not be known at the early stages of architecture definition, so it should be expected that this product will be updated throughout the system’s specification, design, development, testing, and possibly even its deployment and operations life-cycle phases.
+SV-8 Systems/Services Evolution Description
+Captures evolution plans that describe how the system, or the architecture in which the system is embedded, will evolve over a lengthy period of time. Generally, the timeline milestones are critical for a successful understanding of the evolution timeline.
+SV-9 Systems/Services Technology Forecast
+Defines the underlying current and expected supporting technologies that have been targeted using standard forecasting methods. Expected supporting technologies are those that can be reasonably forecast given the current state of technology and expected improvements. New technologies should be tied to specific time periods, which can correlate against the time periods used in SV-8 milestones.
+SV-10a Systems/Services Rules Model
+Describes the rules under which the architecture or its systems behave under specified conditions.
+SV-10b Systems/Services State Transition Description
+A graphical method of describing a system (or system function) response to various events by changing its state. The diagram basically represents the sets of events to which the systems in the architecture will respond (by taking an action to move to a new state) as a function of its current state. Each transition specifies an event and an action.
+SV-10c Systems/Services Event-Trace Description
+Provides a time-ordered examination of the system data elements exchanged between participating systems (external and internal), system functions, or human roles as a result of a particular scenario. Each event-trace diagram should have an accompanying description that defines the particular scenario or situation. SV-10c in the Systems and Services View may reflect system-specific aspects or refinements of critical sequences of events described in the Operational View.
+SV-11 Physical Schema
+One of the architecture products closest to actual system design in the Framework. The product defines the structure of the various kinds of system data that are utilized by the systems in the architecture. (In DoDAF V1.5. This corresponds to DIV-3 in DoDAF V2.0.)
+
+Technical standards view
+Technical standards view (TV) products define technical standards, implementation conventions, business rules and criteria that govern the architecture. The DoDAF V1.5 TV products are as follows:
+
+StdV-1 Technical Standards Profile - Extraction of standards that applies to the given architecture. (In DoDAF V1.5. Renamed to StdV-1 in DoDAF V2.0.)
+StdV-2 Technical Standards Forecast - Description of emerging standards that are expected to apply to the given architecture, within an appropriate set of timeframes. (In DoDAF V1.5. Renamed to StdV-2 in DoDAF V2.0.)
+
+Version 2.0 viewpoints
+
+In DoDAF V2.0, architectural viewpoints are composed of data that has been organized to facilitate understanding. To align with ISO Standards, where appropriate, the terminology has changed from Views to Viewpoint (e.g., the Operational View is now the Operational Viewpoint).
+
+All Viewpoint (AV)
+Describes the overarching aspects of architecture context that relate to all viewpoints.
+Capability Viewpoint (CV)
+New in DoDAF V2.0. Articulates the capability requirements, the delivery timing, and the deployed capability.
+Data and Information Viewpoint (DIV)
+New in DoDAF V2.0. Articulates the data relationships and alignment structures in the architecture content for the capability and operational requirements, system engineering processes, and systems and services.
+Operational Viewpoint (OV)
+Includes the operational scenarios, activities, and requirements that support capabilities.
+Project Viewpoint (PV)
+New in DoDAF V2.0. Describes the relationships between operational and capability requirements and the various projects being implemented. The Project Viewpoint also details dependencies among capability and operational requirements, system engineering processes, systems design, and services design within the Defense Acquisition System process.
+Services Viewpoint (SvcV)
+New in DoDAF V2.0. Presents the design for solutions articulating the Performers, Activities, Services, and their Exchanges, providing for or supporting operational and capability functions.
+Standards Viewpoint (StdV)
+Renamed from Technical Standards View. Articulates the applicable operational, business, technical, and industry policies, standards, guidance, constraints, and forecasts that apply to capability and operational requirements, system engineering processes, and systems and services.
+Systems Viewpoint (SV)
+Articulates, for legacy support, the design for solutions articulating the systems, their composition, interconnectivity, and context providing for or supporting operational and capability functions. Note, System has changed in DoDAF V2.0 from DoDAF V1.5: System is not just computer hardware and computer software. System is now defined in the general sense of an assemblage of components - machine, human - that perform activities (since they are subtypes of Performer) and are interacting or interdependent. This could be anything, i.e., anything from small pieces of equipment that have interacting or interdependent elements, to Family of Systems (FoS) and System of Systems (SoS). Note that Systems are made up of Materiel (e.g., equipment, aircraft, and vessels) and Personnel Types.
+The architectures for DoDAF V1.0 and DoDAF V1.5 may continue to be used. When appropriate (usually indicated by policy or by the decision-maker), DoDAF V1.0 and V1.5 architectures will need to update their architecture. When pre-DoDAF V2.0 architecture is compared with DoDAF V2.0 architecture, concept differences (such as Node) must be defined or explained for the newer architecture. In regard to DoDAF V1.5 products, they have been transformed into parts of the DoDAF V2.0 models. In most cases, the DoDAF V2.0 Meta-model supports the DoDAF V1.5 data concepts, with one notable exception: Node. Node is a complex, logical concept that is represented with more concrete concepts.
+
+All Viewpoint (AV)
+AV-1 Overview and Summary Information
+Describes a Project's Visions, Goals, Objectives, Plans, Activities, Events, Conditions, Measures, Effects (Outcomes), and produced objects.
+AV-2 Integrated Dictionary
+An architectural data repository with definitions of all terms used throughout
+
+Capability Viewpoint (CV)
+CV-1 Vision
+Addresses the enterprise concerns associated with the overall vision for transformational endeavours and thus defines the strategic context for a group of capabilities. The purpose of the CV-1 is to provide a strategic context for the capabilities described in the Architecture Description.
+CV-2 Capability Taxonomy
+Captures capability taxonomies. The model presents a hierarchy of capabilities. These capabilities may be presented in the context of a timeline. The CV-2 specifies all the capabilities that are referenced throughout one or more architectures.
+CV-3 Capability Phasing
+The planned achievement of capability at different points in time or during specific periods of time. The CV-3 shows the capability phasing in terms of the activities, conditions, desired effects, rules complied with, resource consumption and production, and measures, without regard to the performer and location solutions
+CV-4 Capability Dependencies
+The dependencies between planned capabilities and the definition of logical groupings of capabilities.
+CV-5 Capability to Organizational Development Mapping
+The fulfillment of capability requirements shows the planned capability deployment and interconnection for a particular Capability Phase. The CV-5 shows the planned solution for the phase in terms of performers and locations and their associated concepts.
+CV-6 Capability to Operational Activities Mapping
+A mapping between the capabilities required and the operational activities that those capabilities support.
+CV-7 Capability to Services Mapping
+A mapping between the capabilities and the services that these capabilities enable.
+
+Data and Information Viewpoint (DIV)
+DIV-1 Conceptual Data Model
+The required high-level data concepts and their relationships.
+DIV-2 Logical Data Model
+The documentation of the data requirements and structural business process (activity) rules. In DoDAF V1.5, this was the OV-7.
+DIV-3 Physical Data Model
+The physical implementation format of the Logical Data Model entities, e.g., message formats, file structures, physical schema. In DoDAF V1.5, this was the SV-11.
+Note, see Logical data model for discussion of the relationship of these three DIV data models, with comparison of the Conceptual, Logical & Physical Data Models.
+
+Operational Viewpoint (OV)
+OV-1 High-Level Operational Concept Graphic
+The high-level graphical/textual description of the operational concept.
+OV-2 Operational Resource Flow Description
+A description of the Resource Flows exchanged between operational activities.
+OV-3 Operational Resource Flow Matrix
+A description of the resources exchanged and the relevant attributes of the exchanges.
+OV-4 Organizational Relationships Chart
+The organizational context, role or other relationships among organizations.
+OV-5a Operational Activity Decomposition Tree
+The capabilities and activities (operational activities) organized in a hierarchal structure.
+OV-5b Operational Activity Model
+The context of capabilities and activities (operational activities) and their relationships among activities, inputs, and outputs; Additional data can show cost, performers or other pertinent information.
+OV-6a Operational Rules Model
+One of three models used to describe activity (operational activity). It identifies business rules that constrain operations.
+OV-6b State Transition Description
+One of three models used to describe operational activity (activity). It identifies business process (activity) responses to events (usually, very short activities).
+OV-6c Event-Trace Description
+One of three models used to describe activity (operational activity). It traces actions in a scenario or sequence of events.
+
+Project Viewpoint (PV)
+PV-1 Project Portfolio Relationships
+It describes the dependency relationships between the organizations and projects and the organizational structures needed to manage a portfolio of projects.
+PV-2 Project Timelines
+A timeline perspective on programs or projects, with the key milestones and interdependencies.
+PV-3 Project to Capability Mapping
+A mapping of programs and projects to capabilities to show how the specific projects and program elements help to achieve a capability.
+
+Services Viewpoint (SvcV)
+SvcV-1 Services Context Description
+The identification of services, service items, and their interconnections.
+SvcV-2 Services Resource Flow Description
+A description of Resource Flows exchanged between services.
+SvcV-3a Systems-Services Matrix
+The relationships among or between systems and services in a given Architectural Description.
+SvcV-3b Services-Services Matrix
+The relationships among services in a given Architectural Description. It can be designed to show relationships of interest, (e.g., service-type interfaces, planned vs. existing interfaces).
+SvcV-4 Services Functionality Description
+The functions performed by services and the service data flows among service functions (activities).
+SvcV-5 Operational Activity to Services Traceability Matrix
+A mapping of services (activities) back to operational activities (activities).
+SvcV-6 Services Resource Flow Matrix
+It provides details of service Resource Flow elements being exchanged between services and the attributes of that exchange.
+SvcV-7 Services Measures Matrix
+The measures (metrics) of Services Model elements for the appropriate timeframe(s).
+SvcV-8 Services Evolution Description
+The planned incremental steps toward migrating a suite of services to a more efficient suite or toward evolving current services to a future implementation.
+SvcV-9 Services Technology & Skills Forecast
+The emerging technologies, software/hardware products, and skills that are expected to be available in a given set of time frames and that will affect future service development.
+SvcV-10a Services Rules Model
+One of three models used to describe service functionality. It identifies constraints that are imposed on systems functionality due to some aspect of system design or implementation.
+SvcV-10b Services State Transition Description
+One of three models used to describe service functionality. It identifies responses of services to events.
+SvcV-10c Services Event-Trace Description
+One of three models used to describe service functionality. It identifies service-specific refinements of critical sequences of events described in the Operational Viewpoint.
+
+Standards Viewpoint (StdV)
+StdV-1 Standards Profile
+The listing of standards that apply to solution elements. In DoDAF V1.5, this was the TV-1.
+StdV-2 Standards Forecast
+The description of emerging standards and potential impact on current solution elements, within a set of time frames. In DoDAF V1.5, this was the TV-2.
+
+Systems Viewpoint (SV)
+SV-1 Systems Interface Description
+The identification of systems, system items, and their interconnections.
+SV-2 Systems Resource Flow Description
+A description of Resource Flows exchanged between systems.
+SV-3 Systems-Systems Matrix
+The relationships among systems in a given Architectural Description. It can be designed to show relationships of interest, (e.g., system-type interfaces, planned vs. existing interfaces).
+SV-4 Systems Functionality Description
+The functions (activities) performed by systems and the system data flows among system functions (activities).
+SV-5a Operational Activity to Systems Function Traceability Matrix
+A mapping of system functions (activities) back to operational activities (activities).
+SV-5b Operational Activity to Systems Traceability Matrix
+A mapping of systems back to capabilities or operational activities (activities).
+SV-6 Systems Resource Flow Matrix
+Provides details of system resource flow elements being exchanged between systems and the attributes of that exchange.
+SV-7 Systems Measures Matrix
+The measures (metrics) of Systems Model elements for the appropriate timeframe(s).
+SV-8 Systems Evolution Description
+The planned incremental steps toward migrating a suite of systems to a more efficient suite, or toward evolving a current system to a future implementation.
+SV-9 Systems Technology & Skills Forecast
+The emerging technologies, software/hardware products, and skills that are expected to be available in a given set of time frames and that will affect future system development.
+SV-10a Systems Rules Model
+One of three models used to describe system functionality. It identifies constraints that are imposed on systems functionality due to some aspect of system design or implementation.
+SV-10b Systems State Transition Description
+One of three models used to describe system functionality. It identifies responses of systems to events.
+SV-10c Systems Event-Trace Description
+One of three models used to describe system functionality. It identifies system-specific refinements of critical sequences of events described in the Operational Viewpoint.
+
+Creating an integrated architecture using DoDAF
+
+The DODAF 2.0 Architects Guide  repeated DOD Instruction 4630.8 definition of an integrated architecture as "An architecture consisting of multiple views facilitating integration and promoting interoperability across capabilities and among integrated architectures". For the purposes of architecture development, the term integrated means that data required in more than one of the architectural models is commonly defined and understood across those models. Integrated architectures are a property or design principle for architectures at all levels: Capability, Component, Solution, and Enterprise (in the context of the DoD Enterprise Architecture (EA) being a federation [of] architectures). In simpler terms, integration is seen in the connection from items common among architecture products, where items shown in one architecture product (such as sites used or systems interfaced or services provided) should have the identical number, name, and meaning appear in related architecture product views."
+There are many different approaches for creating an integrated architecture using DoDAF and for determining which products are required. The approach depends on the requirements and the expected results; i.e., what the resulting architecture will be used for.
+As one example, the DoDAF v1.0 listed the following products as the "minimum set of products required to satisfy the definition of an OV, SV and TV." One note: while the DoDAF does not list the OV-1 artifact as a core product, its development is strongly encouraged. The sequence of the artifacts listed below gives a suggested order in which the artifacts could be developed. The actual sequence of view generation and their potential customization is a function of the application domain and the specific needs of the effort.
+
+AV-1 : Overview and Summary Information
+AV-2 : Integrated Dictionary
+OV-1 : High Level Operational Concept Graphic
+OV-5 : Operational Activity Model
+OV-2 : Operational Node Connectivity Description
+OV-3 : Operational Informational Exchange Matrix
+SV-1 : System Interface Description
+TV-1 : Technical Standards Profile
+One concern about the DoDAF is how well these products meet actual stakeholder concerns for any given system of interest. One can view DoDAF products, or at least the 3 views, as ANSI/IEEE 1471-2000 or ISO/IEC 42010 viewpoints. But to build an architecture description that corresponds to ANSI/IEEE 1471-2000 or ISO/IEC 42010, it is necessary to clearly identify the stakeholders and their concerns that map to each selected DoDAF product. Otherwise there is the risk of producing products with no customers.
+
+The figure "DoDAF V1.5 Products Matrix" shows how the DoD Chairman of the Joint Chiefs of Staff Instruction (CJCSI) 6212.01E specifies which DoDAF V1.5 products are required for each type of analysis, in the context of the Net-Ready Key Performance Parameter (NR-KPP):
+
+Initial Capabilities Document (ICD). Documents the need for a materiel solution to a specific capability gap derived from an initial analysis of alternatives executed by the operational user and, as required, an independent analysis of alternatives. It defines the capability gap in terms of the functional area, the relevant range of military operations, desired effects, and time.
+Capability Development Document (CDD). A document that captures the information necessary to develop a proposed program(s), normally using an evolutionary acquisition strategy. The CDD outlines an affordable increment of militarily useful, logistically supportable and technically mature capability.
+Capability Production Document (CPD). A document that addresses the production elements specific to a single increment of an acquisition program.
+Information Support Plan (ISP). The identification and documentation of information needs, infrastructure support, IT and NSS interface requirements and dependencies focusing on net-centric, interoperability, supportability and sufficiency concerns (DODI 4630.8).
+Tailored Information Support Plan (TISP). The purpose of the TISP process is to provide a dynamic and efficient vehicle for certain programs (ACAT II and below) to produce requirements necessary for I&S Certification. Select program managers may request to tailor the content of their ISP (ref ss). For programs not designated OSD special interest by ASD (NII)/DOD CIO, the component will make final decision on details of the tailored plan subject to minimums specified in the TISP procedures linked from the CJCSI 6212 resource page and any special needs identified by the J-6 for the I&S certification process.
+
+Representation
+Representations for the DoDAF products may be drawn from many diagramming techniques including:
+
+tables
+IDEF
+Entity-relationship diagrams (ERDs)
+UML
+SysML
+There is a UPDM (Unified Profile for DoDAF and MODAF) effort within the OMG to standardize the representation of DoDAF products when UML is used.
+DoDAF generically describes in the representation of the artifacts to be generated, but allows considerable flexibility regarding the specific formats and modeling techniques. The DoDAF deskbook provides examples in using traditional systems engineering and data engineering techniques, and secondly, UML format. DoDAF proclaims latitude in work product format, without professing one diagramming technique over another.
+In addition to graphical representation, there is typically a requirement to provide metadata to the Defense Information Technology Portfolio Repository (DITPR) or other architectural repositories.
+
+Meta-model
+DoDAF has a meta-model underpinning the framework, defining the types of modelling elements that can be used in each view and the relationships between them. DoDAF versions 1.0 thru 1.5 used the CADM meta-model, which was defined in IDEF1X (then later in UML) with an XML Schema derived from the resulting relational database. From version 2.0, DoDAF has adopted the IDEAS Group foundation ontology as the basis for its new meta-model. This new meta-model is called "DM2"; an acronym for "DoDAF Meta-Model". Each of these three levels of the DM2 is important to a particular viewer of Departmental processes:
+
+The conceptual level or Conceptual Data Model (CDM) defines the high-level data constructs from which Architectural Descriptions are created in non-technical terms, so that executives and managers at all levels can understand the data basis of Architectural Description. Represented in the DoDAF V2.0 DIV-1 Viewpoint.
+The Logical Data Model (LDM) adds technical information, such as attributes to the CDM and, when necessary, clarifies relationships into an unambiguous usage definition. Represented in the DoDAF V2.0 DIV-2 Viewpoint.
+The Physical Exchange Specification (PES) consists of the LDM with general data types specified and implementation attributes (e.g., source, date) added, and then generated as an XSD. Represented in the DoDAF V2.0 DIV-3 Viewpoint.
+The purposes of the DM2 are:
+
+Establish and define the constrained vocabulary for description and discourse about DoDAF models (formerly “products”) and their usage in the 6 core processes
+Specify the semantics and format for federated EA data exchange between:architecture development and analysis tools and architecture databases across the DoD Enterprise Architecture (EA) Community of Interest (COI) and with other authoritative data sources
+Support discovery and understandability of EA data:
+Discovery of EA data using DM2 categories of information
+Understandability of EA data using DM2's precise semantics augmented with linguistic traceability (aliases)
+Provide a basis for semantic precision in architectural descriptions to support heterogeneous architectural description integration and analysis in support of core process decision making.
+The DM2 defines architectural data elements and enables the integration and federation of Architectural Descriptions. It establishes a basis for semantic (i.e., understanding) consistency within and across Architectural Descriptions. In this manner, the DM2 supports the exchange and reuse of architectural information among JCAs, Components, and Federal and Coalition partners, thus facilitating the understanding and implementation of interoperability of processes and systems. As the DM2 matures to meet the ongoing data requirements of process owners, decision makers, architects, and new technologies, it will evolve to a resource that more completely supports the requirements for architectural data, published in a consistently understandable way, and will enable greater ease for discovering, sharing, and reusing architectural data across organizational boundaries.
+To facilitate the use of information at the data layer, the DoDAF describes a set of models for visualizing data through graphic, tabular, or textual means. These views relate to stakeholder requirements for producing an Architectural Description.
+
+Relationship to other architecture frameworks
+The UPDM (Unified Profile for DoDAF and MODAF) is an OMG initiative to standardize UML and SysML usage for USA and UK defense architecture frameworks. In addition, the multi-national IDEAS Group, which is supported by Australia, Canada, Sweden, UK, USA, with NATO observers, has launched an initiative to develop a formal ontology for enterprise architectures.

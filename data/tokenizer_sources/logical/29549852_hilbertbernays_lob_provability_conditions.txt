@@ -1,0 +1,1104 @@
+In mathematical logic, the Hilbert–Bernays-Löb provability conditions, named after David Hilbert, Paul Bernays, and Martin Löb, are a set of requirements for formalized provability predicates in formal theories of arithmetic (Smith 2007:224).
+These conditions are used in many proofs of Kurt Gödel's second incompleteness theorem. They are also closely related to axioms of provability logic.
+
+The conditions
+Let T be a formal theory of arithmetic with a formalized provability predicate Prov(n), which is expressed as a formula of T with one free number variable. For each formula φ in the theory, let #(φ) be the Gödel number of φ. The Hilbert–Bernays-Löb provability conditions are:
+
+If T proves a sentence φ then T proves Prov(#(φ)).
+For every sentence φ, T proves Prov(#(φ)) → Prov(#(Prov(#(φ))))
+T proves that Prov(#(φ → ψ)) and Prov(#(φ)) imply Prov(#(ψ))
+Note that Prov is predicate of numbers, and it is a provability predicate in the sense that the intended interpretation of Prov(#(φ)) is that there exists a number that codes for a proof of φ. Formally what is required of Prov is the above three conditions.
+In the more concise notation of provability logic, letting 
+  
+    
+      
+        T
+        ⊢
+        φ
+      
+    
+    {\displaystyle T\vdash \varphi }
+  
+ denote "
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ proves 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+" and 
+  
+    
+      
+        ◻
+        φ
+      
+    
+    {\displaystyle \Box \varphi }
+  
+ denote 
+  
+    
+      
+        
+          Prov
+        
+        (
+        #
+        (
+        φ
+        )
+        )
+      
+    
+    {\displaystyle {\text{Prov}}(\#(\varphi ))}
+  
+:
+
+  
+    
+      
+        (
+        T
+        ⊢
+        φ
+        )
+        →
+        (
+        T
+        ⊢
+        ◻
+        φ
+        )
+      
+    
+    {\displaystyle (T\vdash \varphi )\to (T\vdash \Box \varphi )}
+  
+
+  
+    
+      
+        T
+        ⊢
+        (
+        ◻
+        ϕ
+        →
+        ◻
+        ◻
+        ϕ
+        )
+      
+    
+    {\displaystyle T\vdash (\Box \phi \to \Box \Box \phi )}
+  
+
+  
+    
+      
+        T
+        ⊢
+        (
+        ◻
+        (
+        φ
+        →
+        ψ
+        )
+        →
+        (
+        ◻
+        φ
+        →
+        ◻
+        ψ
+        )
+        )
+      
+    
+    {\displaystyle T\vdash (\Box (\varphi \to \psi )\to (\Box \varphi \to \Box \psi ))}
+  
+
+Use in proving Gödel's incompleteness theorems
+The Hilbert–Bernays provability conditions, combined with the diagonal lemma, allow proving both of Gödel's incompleteness theorems shortly. Indeed the main effort of Godel's proofs lay in showing that these conditions (or equivalent ones) and the diagonal lemma hold for Peano arithmetics; once these are established the proof can be easily formalized.
+Using the diagonal lemma, there is a formula 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ such that 
+  
+    
+      
+        T
+        ⊩
+        ρ
+        ↔
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash \rho \leftrightarrow \neg Prov(\#(\rho ))}
+  
+.
+
+Proving Godel's first incompleteness theorem
+For the first theorem only the first and third conditions are needed.
+The condition that T is ω-consistent is generalized by the condition that if for every formula φ, if T proves  Prov(#(φ)), then T proves φ. Note that this indeed holds for an ω-consistent T because Prov(#(φ)) means that there is a number coding for the proof of φ, and if T is ω-consistent then going through all natural numbers one can actually find such a particular number a, and then one can use a to construct an actual proof of φ in T.
+Suppose T could have proven 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+. We then would have the following theorems in T:
+
+  
+    
+      
+        T
+        ⊩
+        ρ
+      
+    
+    {\displaystyle T\Vdash \rho }
+  
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash \neg Prov(\#(\rho ))}
+  
+ (by construction of 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ and theorem 1)
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\rho ))}
+  
+ (by condition no. 1 and theorem 1)
+Thus T proves both 
+  
+    
+      
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle Prov(\#(\rho ))}
+  
+ and 
+  
+    
+      
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle \neg Prov(\#(\rho ))}
+  
+. But if T is consistent, this is impossible, and we are forced to conclude that T does not prove 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+.
+Now let us suppose T could have proven 
+  
+    
+      
+        ¬
+        ρ
+      
+    
+    {\displaystyle \neg \rho }
+  
+. We then would have the following theorems in T:
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        ρ
+      
+    
+    {\displaystyle T\Vdash \neg \rho }
+  
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\rho ))}
+  
+ (by construction of 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ and theorem 1)
+
+  
+    
+      
+        T
+        ⊩
+        ρ
+      
+    
+    {\displaystyle T\Vdash \rho }
+  
+ (by ω-consistency)
+Thus T proves both 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ and 
+  
+    
+      
+        ¬
+        ρ
+      
+    
+    {\displaystyle \neg \rho }
+  
+. But if T is consistent, this is impossible, and we are forced to conclude that T does not prove 
+  
+    
+      
+        ¬
+        ρ
+      
+    
+    {\displaystyle \neg \rho }
+  
+.
+To conclude, T can prove neither 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ nor 
+  
+    
+      
+        ¬
+        ρ
+      
+    
+    {\displaystyle \neg \rho }
+  
+.
+
+Using Rosser's trick
+Using Rosser's trick, one needs not assume that T is ω-consistent. However, one would need to show that the first and third provability conditions holds for ProvR, Rosser's provability predicate, rather than for the naive provability predicate Prov. This follows from the fact that for every formula φ, Prov(#(φ)) holds if and only if ProvR holds.
+An additional condition used is that T proves that ProvR(#(φ)) implies ¬ProvR(#(¬φ)). This condition holds for every T that includes logic and very basic arithmetics (as elaborated in Rosser's trick#The Rosser sentence).
+Using Rosser's trick, ρ is defined using Rosser's provability predicate, instead of the naive provability predicate. The first part of the proof remains unchanged, except that the provability predicate is replaced with Rosser's provability predicate there, too.
+The second part of the proof no longer uses ω-consistency, and is changed to the following:
+Suppose T could have proven 
+  
+    
+      
+        ¬
+        ρ
+      
+    
+    {\displaystyle \neg \rho }
+  
+. We then would have the following theorems in T:
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        ρ
+      
+    
+    {\displaystyle T\Vdash \neg \rho }
+  
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        
+          v
+          
+            R
+          
+        
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov^{R}(\#(\rho ))}
+  
+ (by construction of 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ and theorem 1)
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        P
+        r
+        o
+        
+          v
+          
+            R
+          
+        
+        (
+        #
+        (
+        ¬
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash \neg Prov^{R}(\#(\neg \rho ))}
+  
+ (by theorem 2 and the additional condition following the definition of Rosser's provability predicate)
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        
+          v
+          
+            R
+          
+        
+        (
+        #
+        (
+        ¬
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov^{R}(\#(\neg \rho ))}
+  
+ (by condition no. 1 and theorem 1)
+Thus T proves both 
+  
+    
+      
+        P
+        r
+        o
+        
+          v
+          
+            R
+          
+        
+        (
+        #
+        (
+        ¬
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle Prov^{R}(\#(\neg \rho ))}
+  
+ and 
+  
+    
+      
+        ¬
+        P
+        r
+        o
+        
+          v
+          
+            R
+          
+        
+        (
+        #
+        (
+        ¬
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle \neg Prov^{R}(\#(\neg \rho ))}
+  
+. But if T is consistent, this is impossible, and we are forced to conclude that T does not prove 
+  
+    
+      
+        ¬
+        ρ
+      
+    
+    {\displaystyle \neg \rho }
+  
+.
+
+The second theorem
+We assume that T proves its own consistency, i.e. that:
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        1
+        =
+        0
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash \neg Prov(\#(1=0))}
+  
+.
+For every formula φ:
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        φ
+        →
+        (
+        φ
+        →
+        (
+        1
+        =
+        0
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash \neg \varphi \rightarrow (\varphi \rightarrow (1=0))}
+  
+ (by negation elimination)
+It is possible to show by using condition no. 1 on the latter theorem, followed by repeated use of condition no. 3, that:
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ¬
+        φ
+        )
+        )
+        →
+        (
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        φ
+        )
+        )
+        →
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        1
+        =
+        0
+        )
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\neg \varphi ))\rightarrow (Prov(\#(\varphi ))\rightarrow Prov(\#(1=0)))}
+  
+
+And using T proving its own consistency it follows that: 
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ¬
+        φ
+        )
+        )
+        →
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        φ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\neg \varphi ))\rightarrow \neg Prov(\#(\varphi ))}
+  
+
+We now use this to show that T is not consistent:
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        )
+        →
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\neg Prov(\#(\rho )))\rightarrow \neg Prov(\#(Prov(\#(\rho )))}
+  
+ (following T proving its own consistency, with 
+  
+    
+      
+        φ
+        =
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle \varphi =Prov(\#(\rho ))}
+  
+)
+
+  
+    
+      
+        T
+        ⊩
+        ρ
+        →
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash \rho \rightarrow \neg Prov(\#(\rho ))}
+  
+ (by construction of 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+)
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        →
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\rho \rightarrow \neg Prov(\#(\rho )))}
+  
+ (by condition no. 1 and theorem 2)
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        →
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\rho ))\rightarrow Prov(\#(\neg Prov(\#(\rho )))}
+  
+ (by condition no. 3 and theorem 3)
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        →
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\rho ))\rightarrow \neg Prov(\#(Prov(\#(\rho )))}
+  
+ (by theorems 1 and 4)
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        →
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\rho ))\rightarrow Prov(\#(Prov(\#(\rho )))}
+  
+ (by condition no. 2)
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash \neg Prov(\#(\rho ))}
+  
+ (by theorems 5 and 6)
+
+  
+    
+      
+        T
+        ⊩
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+        →
+        ρ
+      
+    
+    {\displaystyle T\Vdash \neg Prov(\#(\rho ))\rightarrow \rho }
+  
+ (by construction of 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+)
+
+  
+    
+      
+        T
+        ⊩
+        ρ
+      
+    
+    {\displaystyle T\Vdash \rho }
+  
+ (by theorems 7 and 8)
+
+  
+    
+      
+        T
+        ⊩
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle T\Vdash Prov(\#(\rho ))}
+  
+ (by condition 1 and theorem 9)
+Thus T proves both 
+  
+    
+      
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle Prov(\#(\rho ))}
+  
+ and 
+  
+    
+      
+        ¬
+        P
+        r
+        o
+        v
+        (
+        #
+        (
+        ρ
+        )
+        )
+      
+    
+    {\displaystyle \neg Prov(\#(\rho ))}
+  
+, hence is T inconsistent.

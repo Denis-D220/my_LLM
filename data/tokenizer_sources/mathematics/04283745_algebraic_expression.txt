@@ -1,0 +1,680 @@
+In mathematics, an algebraic expression is an expression built up from constants (usually, algebraic numbers), variables, and the basic algebraic operations: 
+addition (+), subtraction (−), multiplication (×), division (÷), whole number powers, and roots (fractional powers), without any relational signs such as  =  or <.. For example, ⁠
+  
+    
+      
+        3
+        
+          x
+          
+            2
+          
+        
+        −
+        2
+        x
+        y
+        +
+        c
+      
+    
+    {\displaystyle 3x^{2}-2xy+c}
+  
+⁠ is an algebraic expression. Since taking the square root is the same as raising to the power ⁠1/2⁠, the following is also an algebraic expression:
+
+  
+    
+      
+        
+          
+            
+              
+                1
+                −
+                
+                  x
+                  
+                    2
+                  
+                
+              
+              
+                1
+                +
+                
+                  x
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\sqrt {\frac {1-x^{2}}{1+x^{2}}}}}
+  
+
+An algebraic equation is an equation involving polynomials, for which algebraic expressions may be solutions.
+If the set of constants is restricted to numbers, any algebraic expression can be called an arithmetic expression. However, algebraic expressions can be used on more abstract objects such as in Abstract algebra. If the constants are restricted to integers, the set of numbers that can be described with an algebraic expression are called Algebraic numbers.
+By contrast, transcendental numbers like π  and e are not algebraic, since they are not derived from integer constants and algebraic operations. Usually, π is constructed as a geometric relationship, and the definition of e requires an infinite number of algebraic operations. More generally, expressions which are algebraically independent from their constants and/or variables are called transcendental.
+
+Terminology
+Algebra has its own terminology to describe parts of an expression:
+
+Conventions
+
+Variables
+By convention, letters at the beginning of the alphabet (e.g.  
+  
+    
+      
+        a
+        ,
+        b
+        ,
+        c
+      
+    
+    {\displaystyle a,b,c}
+  
+) are typically used to represent constants, and those toward the end of the alphabet (e.g. 
+  
+    
+      
+        x
+        ,
+        y
+      
+    
+    {\displaystyle x,y}
+  
+ and 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+) are used to represent variables. They are usually written in italics.
+
+Exponents
+By convention, terms with the highest power (exponent), are written on the left, for example, 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle x^{2}}
+  
+ is written to the left of 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. When a coefficient is one, it is usually omitted (e.g. 
+  
+    
+      
+        1
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 1x^{2}}
+  
+ is written 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle x^{2}}
+  
+). Likewise when the exponent (power) is one, (e.g. 
+  
+    
+      
+        3
+        
+          x
+          
+            1
+          
+        
+      
+    
+    {\displaystyle 3x^{1}}
+  
+ is written 
+  
+    
+      
+        3
+        x
+      
+    
+    {\displaystyle 3x}
+  
+), and, when the exponent is zero, the result is always 1 (e.g. 
+  
+    
+      
+        3
+        
+          x
+          
+            0
+          
+        
+      
+    
+    {\displaystyle 3x^{0}}
+  
+ is written 
+  
+    
+      
+        3
+      
+    
+    {\displaystyle 3}
+  
+, since 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+    {\displaystyle x^{0}}
+  
+ is always 
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+).
+
+In roots of polynomials
+The roots of a polynomial expression of degree n, or equivalently the solutions of a polynomial equation, can always be written as algebraic expressions if n < 5 (see quadratic formula, cubic function, and quartic equation). Such a solution of an equation is called an algebraic solution. But the Abel–Ruffini theorem states that algebraic solutions do not exist for all such equations (just for some of them) if n 
+  
+    
+      
+        ≥
+      
+    
+    {\displaystyle \geq }
+  
+ 5.
+
+Rational expressions
+
+Given two polynomials ⁠
+  
+    
+      
+        P
+        (
+        x
+        )
+      
+    
+    {\displaystyle P(x)}
+  
+⁠ and ⁠
+  
+    
+      
+        Q
+        (
+        x
+        )
+      
+    
+    {\displaystyle Q(x)}
+  
+⁠
+, their quotient is called a rational expression or simply rational fraction. A rational expression 
+  
+    
+      
+        
+          
+            
+              P
+              (
+              x
+              )
+            
+            
+              Q
+              (
+              x
+              )
+            
+          
+        
+      
+    
+    {\textstyle {\frac {P(x)}{Q(x)}}}
+  
+ is called proper if 
+  
+    
+      
+        deg
+        ⁡
+        P
+        (
+        x
+        )
+        <
+        deg
+        ⁡
+        Q
+        (
+        x
+        )
+      
+    
+    {\displaystyle \deg P(x)<\deg Q(x)}
+  
+, and improper otherwise. For example, the fraction 
+  
+    
+      
+        
+          
+            
+              
+                2
+                x
+              
+              
+                
+                  x
+                  
+                    2
+                  
+                
+                −
+                1
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {2x}{x^{2}-1}}}
+  
+ is proper, and the fractions 
+  
+    
+      
+        
+          
+            
+              
+                
+                  x
+                  
+                    3
+                  
+                
+                +
+                
+                  x
+                  
+                    2
+                  
+                
+                +
+                1
+              
+              
+                
+                  x
+                  
+                    2
+                  
+                
+                −
+                5
+                x
+                +
+                6
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {x^{3}+x^{2}+1}{x^{2}-5x+6}}}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              
+                
+                  x
+                  
+                    2
+                  
+                
+                −
+                x
+                +
+                1
+              
+              
+                5
+                
+                  x
+                  
+                    2
+                  
+                
+                +
+                3
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {x^{2}-x+1}{5x^{2}+3}}}
+  
+ are improper. Any improper rational fraction can be expressed as the sum of a polynomial (possibly constant) and a proper rational fraction. In the first example of an improper fraction one has
+
+  
+    
+      
+        
+          
+            
+              
+                x
+                
+                  3
+                
+              
+              +
+              
+                x
+                
+                  2
+                
+              
+              +
+              1
+            
+            
+              
+                x
+                
+                  2
+                
+              
+              −
+              5
+              x
+              +
+              6
+            
+          
+        
+        =
+        (
+        x
+        +
+        6
+        )
+        +
+        
+          
+            
+              24
+              x
+              −
+              35
+            
+            
+              
+                x
+                
+                  2
+                
+              
+              −
+              5
+              x
+              +
+              6
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {x^{3}+x^{2}+1}{x^{2}-5x+6}}=(x+6)+{\frac {24x-35}{x^{2}-5x+6}},}
+  
+
+where the second term is a proper rational fraction. The sum of two proper rational fractions is a proper rational fraction as well. The reverse process of expressing a proper rational fraction as the sum of two or more fractions is called resolving it into partial fractions. For example,
+
+  
+    
+      
+        
+          
+            
+              2
+              x
+            
+            
+              
+                x
+                
+                  2
+                
+              
+              −
+              1
+            
+          
+        
+        =
+        
+          
+            1
+            
+              x
+              −
+              1
+            
+          
+        
+        +
+        
+          
+            1
+            
+              x
+              +
+              1
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {2x}{x^{2}-1}}={\frac {1}{x-1}}+{\frac {1}{x+1}}.}
+  
+
+Here, the two terms on the right are called partial fractions.
+
+Irrational fraction
+An irrational fraction is one that contains the variable under a fractional exponent. An example of an irrational fraction is
+
+  
+    
+      
+        
+          
+            
+              
+                x
+                
+                  1
+                  
+                    /
+                  
+                  2
+                
+              
+              −
+              
+                
+                  
+                    1
+                    3
+                  
+                
+              
+              a
+            
+            
+              
+                x
+                
+                  1
+                  
+                    /
+                  
+                  3
+                
+              
+              −
+              
+                x
+                
+                  1
+                  
+                    /
+                  
+                  2
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {x^{1/2}-{\tfrac {1}{3}}a}{x^{1/3}-x^{1/2}}}.}
+  
+
+The process of transforming an irrational fraction to a rational fraction is known as rationalization. Every irrational fraction in which the radicals are monomials may be rationalized by finding the least common multiple of the indices of the roots, and substituting the variable for another variable with the least common multiple as exponent. In the example given, the least common multiple is 6, hence we can substitute 
+  
+    
+      
+        x
+        =
+        
+          z
+          
+            6
+          
+        
+      
+    
+    {\displaystyle x=z^{6}}
+  
+ to obtain
+
+  
+    
+      
+        
+          
+            
+              
+                z
+                
+                  3
+                
+              
+              −
+              
+                
+                  
+                    1
+                    3
+                  
+                
+              
+              a
+            
+            
+              
+                z
+                
+                  2
+                
+              
+              −
+              
+                z
+                
+                  3
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {z^{3}-{\tfrac {1}{3}}a}{z^{2}-z^{3}}}.}
+  
+
+Algebraic and other mathematical expressions
+The table below summarizes how algebraic expressions compare with several other types of mathematical expressions by the type of elements they may contain, according to common but not universal conventions.
+
+A rational algebraic expression (or rational expression) is an algebraic expression that can be written as a quotient of polynomials, such as x2 + 4x + 4. An irrational algebraic expression is one that is not rational, such as √x + 4.

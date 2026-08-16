@@ -1,0 +1,113 @@
+Rec Room was a virtual reality online game platform developed by Rec Room Inc. (formerly known as Against Gravity Corp.). The game was available on various platforms, including the PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch, and Meta Quest. Various unofficial fan servers have since been created using most of the game's original assets.There have been no official sequels for the game. 
+Rec Room was a platform that made up a collection of player made games, also known as Rooms. These Rooms mainly consisted of player-made games, but those created by the company themselves were referred to as "Rec Room Originals" or "RROs". These rooms could be accessed by selecting them using an in-game game discovery menu, or by walking through "room doors" found in other rooms, as well as joining through invitations sent by in-game friends.
+On June 1, 2026, following financial issues within the Rec Room Inc. company, Rec Room officially ceased operations and shut down all game servers.
+
+Gameplay
+
+Virtual reality support
+Rec Room supported optional virtual reality (VR) gameplay across compatible devices, including headsets from Meta, Pico 4, and Steam VR platforms. In virtual reality mode, players interacted with the environment using motion controllers, enabling object manipulation and spatial movement. A non-VR mode known as "screen mode" was also available, allowing access to the game without needing a headset through a PC or PS4, and was later expanded to iOS, PS5, Xbox, Nintendo Switch, and Android.
+In VR mode, players could explore the in-game space within the confines of their physical floor space, while roaming further in-game by using the controllers. Players could "teleport" a short distance, and likely experience no virtual reality sickness, or could "walk" smoothly with the thumbstick, although this posed a higher risk of motion sickness.
+
+Orientation & Dorm Room
+When loading into the game for the first time, new players would start in Orientation, a place where they would be introduced to the game's basic mechanics and given their virtual watch. After going through orientation, players would start in their Dorm Room any time they loaded into the game.The Dorm Room was a small private room with a flexible dummy that players could punch, a whiteboard that players could draw on, and a mirror. Players could change their outfit and appearance via buttons on the side of the mirror, which could also be used to access the in-game shop to buy more outfit items. 
+Players could leave their Dorm Room by either interacting with a door, which would load them into the Rec Center, or could choose a room to go to from their watch menu. The watch menu had a list of rooms sorted by their genres and types. Players could also use a search bar to search up a specific room to play.
+
+Public Rooms & Social Interaction
+In the Rec Center, players could interact with other players, join Rec Room Original rooms through doors, or play minigames like darts, or throwing basketballs into hoops. The Rec Center would occasionally be updated during events with decorations and sometimes usable or responsive components.
+All rooms joined by a player were  public by default, but players could also create a private instance of any room, or join other private rooms (if invited).
+In all rooms, players could interact with other players in real time through voice and text chat, (though players under the age of 13 on "Junior" accounts could not use either) and interact using their hands and movement of their body.
+Rec Room had many social features, all accessible through the watch menu, but often had accompanying gestures. For example, players could choose to friend another player with a handshake. Players could also invite, mute, or report other players, as well as block with a 'talk to the hand' gesture, "cheer" them for various reasons with a thumbs up, or form a party with other players to travel between rooms together with a fist bump.
+By playing, players could earn experience, and eventually level up, receiving a gift box and an increase to the indicator next to their username showing their level. Levels were originally capped at 50, but were later increased to 87.
+
+User generated content
+When Rec Room was first released, no creation system existed for players. All playable games were made by the developer team and released as Rec Room Originals. Shortly after the game's release, the 3D Pen was added, resembling a large, red, chunky hot glue gun with the ability to draw in 3D space, creating movable objects primarily meant for playing Charades. Rec Room later introduced the Sandbox Machine, a stationary arcade cabinet style machine with a simple UI, which could spawn objects such as weapons, sports props, and furniture.
+On September 14th, 2017, Rec Room released Custom Rooms, allowing players to create and privately host their rooms, or publish them for others to join, replacing the previous "private games" menu.
+
+On October 2nd, 2017, Rec Room released the "Maker Pen", a tool that could create a wider variety of shapes, use more colors, and utilize functions like the Clone tool. It retained the same 3D model as the 3D Pen, but had a blue-colored body and an orange "glue stick", unlike the 3D pen's red colors. This early version of the Maker Pen featured very few tools and functions relative to later versions. At this point, creations with the Maker Pen could not be saved, but on December 14, 2017, Saved Rooms Alpha released, allowing players to save (and restore) rooms in their current state.
+Players were limited to a maximum amount of objects they could create in a given room, represented by an "Ink" limit. Each item and shape would have a different Ink cost based on the average computation required to display it, to ensure rooms would all run well on most hardware, without crashing players' games. Ink values for objects could be decreased by setting them to "Decoration" mode, where they could not be interacted with by players and had no physics. The "glue stick" in the Maker Pen would reduce in size based on how much ink was used in the current room.
+
+Circuits V1
+On Feb 15th, 2018, Rec Room introduced the Circuits V1 system in the Maker Pen.
+This system was developed mainly from 2018 to 2021, and worked with a system of wires. In the code, events ran constantly. An integer value was assigned to each event which could be changed by wiring, and when an event occurred, an integer would send to the next chip.
+As a chip would detect a change in integer value at the input, it would be able to send output to the next chip. Players were assigned player IDs, which served as the primary form of integer input in order to keep track of players.
+
+Circuits V2
+
+In 2021, Rec Room introduced a more feature-rich version of the circuit system called Circuits V2 (often abbreviated "CV2"), a visual programming language. CV2 chips had a different design than Circuits V1, with gray rectangular chips with ports on either side, where each port represented a different kind of input or output. Circuits V1 continued existing alongside CV2.
+The most common types of ports in CV2 included an orange arrow-shaped port, (an "input exec" port), triggered by an exec signal sent from another chip, and multiple colored rectangular ports; a blue port representing a floating-point, a green port representing an integer value, and a purple port representing a string or text input.
+When an event was triggered, input ports wired to that event would have their data updated, either locally or globally. The code would then be accessible as an output connectable to another input. For example, an If statement triggered by another condition could send an exec signal to another chip in order to trigger a delay timer, only when the condition was true.
+CV2 was intended to be a less buggy, easier to understand, and more powerful system than Circuits V1. CV2 was actively in development until the game's shutdown announcement.
+
+Rec Room Studio
+
+On September 23, 2022, Rec Room announced Rec Room Studio at Rec Con 2022. This was a partnership between Rec Room and game engine Unity in order to bring professional-level tools into Rec Room creation.
+Rec Room Studio's access was gradually rolled out starting in 2023, with it at first only being accessible to handpicked creators, and later to those who met minimum requirements and had Rec Room Plus, before opening access by November 13, 2024 to anyone who met the following requirements:
+
+Player level of 20+
+One or more published rooms
+Good moderation history
+No bans of 7 or fewer days within the last 90 days
+No bans of 8+ days in the last 2 years
+No violations of the Creator Code of Conduct
+Rooms in Rec Room could be opened up as a scene within Unity using Rec Room Studio. It could then be edited with Unity tools, and allowed users to import assets and textures, custom sound, and custom animations, as well as utilize Unity's Terrain Editor and Unity ProBuilder. The game could then be uploaded to Rec Room and published, provided it passed an automated scan for inappropriate content. Creating an invention within Rec Room Studio rooms would also require passing moderation before the invention could be created.
+Later, in 2024, Rec Room dropped the Rec Room Plus requirement from Rec Room Studio, making it free for everyone.
+
+Rooms 2.0
+Rooms 2.0 (abbreviated as R2) was introduced on October 10 at Rec Con 2023 and was made the default room system on April 14, 2025. It was an updated version of the original rooms system, intended to improve performance and creator abilities. Rooms 2.0 had new features, such as the removal of the ink limit, (though CV2 chips were still limited) expanded compatibility with Rec Room studio, in-room monetization changes, as well as hierarchical building and compound objects, which allowed for nesting of objects, improving organization and performance in projects. CV1 could not be used in Rooms 2.0 rooms.
+Both Rec Room Studio and CV2 were supported in Rooms 2.0, but CV1 and some other features which were part of Rooms 1.0, such as certain props, were not available.
+Rec Room later made Rooms 1.0 the default mode again, with players celebrating under the announcement. Rooms 2.0 remained an option for players. They previously stated that Rooms 2.0 "didn’t land like we needed it to." Multiple features of Rooms 2.0 were moved to Rooms 1.0, such as unlimited ink, room offers, inventory items, and Rooms 2.0 circuit components.
+
+Creative programs
+Rec Room had a variety of creative programs in-game and on its Discord server, and published tutorial articles and videos online to encourage room creation within Rec Room. This included creative classes. A player could apply to teach a class, and if accepted, they could create a classroom and allow students to enlist.
+Maker Pen classes could teach many subjects, with the most common being Rooms 2.0, building, circuiteering, and Rec Room Studio. Incentives for teaching a class included maker pen skins, and a gown avatar item, which was colored based on how many hours an individual had spent teaching, in purple for 10 hours, orange for 20, and green for 30. Taking a class could lead to the receiving of an in-game green graduation gown, with a different design from the green teacher gown.
+All classes had to be part of the Creator Hub, which was organized through Discord. Qualifications to start a class included minimum hourly totals and overall meeting quantities, and for teachers of a Rec Room Studio class, previously published quality content and access to a PC capable of running Unity with access to Rec Room Studio, as well as recording, streaming, and uploading video capabilities. Classes were limited to 3 teachers for those with under 50 hours of prior teaching, and 4 teachers with over 50.
+Workshops were also led in Rec Room. To become a workshop host, application was necessary. Workshops were creative events where creators could join and free-create in themes led by the host. Workshop hosts could gain Maker Pen skins from leading a workshop, and requirements to host a workshop were much less strict than those for starting a class.
+Creative events led by staff also occurred. The two most prominent being the Rec Room Gallery and the Maker Pen Class Q&A. The Rec Room Gallery was hosted every Wednesday at 8pm Eastern Standard Time, and featured submitted inventions, or creations, by creators. The Maker Pen Class Q&A was much akin to a workshop and occurred on Fridays and Sundays, although to create in it prior experience was necessary.
+
+Currency and Monetization
+Rec Room's in-game currency, Tokens, could be purchased using real money, earned by subscribing to Rec Room Plus (Stylized as Rec Room+ or RR+), or by playing Rec Room Originals (Paintball, Laser Tag, Etc). Rec Room Original rewards would present players with a choice of one of three reward options, where one option had a chance of being tokens. Additional tokens could sometimes be earned by completing daily challenges. Tokens could be used to purchase skins, clothing and avatar items, and food items.
+RR+ granted several benefits, including the ability to make and sell user-generated content (such as inventions, custom clothing, or room keys), a 10% discount on all token-denominated items (excluding items in rooms), and a special name tag with the ability to add emojis. Tokens earned by selling created inventions or room keys could be exchanged for real money. It also provided access to Roomie.
+Roomie was an in-game companion with conversational AI features similar to ChatGPT or Claude, and was powered by "Roomie Energy". RR+ Subscribers would receive 8,000 energy per month, and further energy could be purchased at a rate of $1 per 1,000 Roomie Energy, either one-time for $5, or as a $20 monthly subscription. An active RR+ subscription was not required for subscribers to the $20 plan to use Roomie.
+
+Notable events
+
+Player Lawsuit
+Rec Room sued an approximately 16 year old Canadian player for copyright infringement and cheating in-game, alleging he had developed and distributed cheat software for the game, displayed a Nazi flag in a public room, taken over other players' accounts, and evaded bans by Rec Room through creation of new accounts. Though he was located in Canada, the lawsuit took place in a court in Seattle, as the venue was agreed to by the player in the Rec Room Terms of Service. Rec Room sued for damages under the Digital Millennium Copyright Act, which could have levied $2,500 per copy of cheat software distributed, but the player later settled with Rec Room for $50,000, and an agreement to never play the game again.
+
+Phone Number Breach
+On April 23, 2026, GeekWire alleged that in January that year, someone had used Rec Room's friend-finder feature to match people's in-game usernames with their phone numbers, and that someone familiar with the incident stated Rec Room had never proactively notified players that had their phone numbers linked to their account. They also alleged that Rec Room acknowledged the usage of the friend-finder API had spiked when the individual was querying phone numbers, and that they had then disabled the feature and banned the user involved.
+
+Rec.net
+On January 12, 2018, Rec.net was publicly released as a way to see and download photos players took in-game, and to manage account settings. In the year prior to its closure, Rec.net served its original purpose, with additional features including managing rooms, purchasing Rec Room+ and Tokens, and accessing creator tutorials.
+Following the shutdown, some individuals claimed the Rec.net domain was for sale on Sedo. A Rec Room developer stated the domain was not for sale.
+It was previously stated that Rec.net would go offline when Rec Room did on June 1st, though it was also stated in the same post that gift card refunds for unused funds would remain available on rec.net until June 15th. Rec.net shut down on June 9, 2026, leaving an orange page stating the game and the site were gone for good. The forum and recroom.com still remained accessible, though the forum only remained accessible until June 19th. 
+
+Development
+
+Seattle-based development studio Rec Room Inc. (formerly Against Gravity Corp.) was co-founded in April 2016 by Nicholas Fajt, Cameron Brown, Dan Kroymann, Bilal Orhan, Josh Wehrly, and John Bevis. Prior to the company's founding, CEO Fajt worked as a program manager on the HoloLens team at Microsoft. Kroymann worked on the same team after working on the Xbox team. CCO Brown worked as the creative director of HoloLens.
+In 2016 and early 2017, the company raised $5 million in funding for the development of Rec Room and its community. It remained free to download throughout its' lifespan.
+In June 2019, Rec Room Inc. announced that the company raised an additional $24 million over two rounds of funding. In December 2020, Rec Room Inc. announced an additional $20 million in funding.
+In March 2021, Rec Room Inc. announced another funding round of $100 million with a valuation of $1.25 billion leading to its unicorn status. In December 2021, Rec Room Inc. announced that they raised $145 million during another funding round, bringing the studio's value up to $3.5 billion.
+In March 2025, Rec Room laid off 16% of its staff, citing a "more challenging fundraising environment" and a slowdown in gaming market growth. This did not prevent a more severe layoff in August 2025, where 50% of the remaining staff were laid off.
+
+Music
+Most of the music heard in Rec Room Originals was composed by creative director Cameron Brown, going by "gribbly" in-game, using Reason, with Korg Gadget also being used for music used in Laser Tag and Jumbotron.
+
+Reception
+Dan Ackerman, writing for CNET, described Rec Room as VR's "killer app". In January 2017, Ars Technica reported that trolling and harassment were major issues for Rec Room. In June 2017, MIT Technology Review contributor Rachel Metz described it as a great example of VR's potential for social interaction while criticizing its underdeveloped anti-abuse features. Filmmaker Joyce Wong described Rec Room as her choice of "most interesting piece of art in 2017".
+
+Closure
+On March 30, 2026, Rec Room announced on their blog and across their social media that the game would shut down all game servers on June 1, 2026 (12 p.m. PT), along with Rec.net and Rec Room Studio. Rec Room cited its inability to reach profitability as the reason. Previously, Rec Room had stated that for every $1 in revenue, after platform fees, they would receive 70 cents from their original content, and just 30 cents from user-generated content after creator payouts.
+Rec Room had previously stated on August 28, 2025 they had enough runway to continue operating into 2029, but later stated they chose to shut down sooner because 'we basically tried all the ideas we had to reach sustainable profitability' and hadn't succeeded, and wanted to give people months of advance notice while also taking care of their staff. At the time of the announcement, Rec Room had reached over 150 million total lifetime players.
+Immediately after the announcement, account creation, friend requests, and new Rec Room+ subscriptions were disabled. Token purchases and gift card redemption was set to end on May 1, 2026, followed by the end of creator token earnings on May 18, 2026. A final creator payout was scheduled for June 1, 2026, the same day the game, and Rec Room Studio's online services were to go offline.
+After the announcement was made, users were able to bulk download their photos taken in-game, and a "final report card" displaying their avatar, name, and bio. Creators could download rooms and inventions in non-playable formats via the Steam PC build, intended to allow recreation of rooms elsewhere, such as in Unity.
+Rec Room Studio (not to be confused with Rec Room) users can still access cached rooms on their local computer following the shutdown of Rec Room, in "limited offline mode".
+Less than a day prior to the day of the shutdown, Rec Room published an end credits video, ending with the quote "We created another dimension. With the span of our attention."
+Rec Room shut down at 12:00 P.M. Pacific Standard Time on June 1, 2026. Some users received messages when attempting to launch the game indicating there was an update available that was required to play, though no update existed. Alternative third-party implementations of Rec Room with operational servers were created before and after the shutdown announcement and continue to function.
+On June 2, 2026, Rec Room was removed for download on the Steam store, PlayStation store, Apple App Store, Google Play Store, and Meta Quest Store. The game was not removed from the Xbox store, or Pico store. Some players claimed Pico users were still able to access the game from their headsets without issue.
+On June 5, 2026, CCO of Rec Room Cameron Brown, also known as "Gribbly", posted on the official Rec Room subreddit that Rec Room was genuinely shut down, and not to give money to anyone claiming to fund-raise for Rec Room, stating "It's over."
+
+Post-shutdown
+Some users seemed to be continuing to play Rec Room after the shutdown, with players uploading photos from in-game of rooms, themselves, and other in-game players to rec.net following the shutdown on June 1. Steam player counts indicated over 500 players still in-game as of June 3, after a previous increase (and subsequent decline) of over 1,000 players the night before over the span of a few hours.
+The increase was attributed by a Rec Room developer responding to player questions to an automated build process that re-opened servers for Steam players, who were able to log into Rec Room on the 1st (1:50pm PT) and the 2nd (3:57pm-4:09pm PT and 6:36pm-8:59pm PT). By June 5, Just under 300 players were online according to Steam player counts, (which would include those on the main menu trying to log into Rec Room, even if not authenticated). Pico VR players were capable of logging in and continuing to play until June 9th.
+On June 9th, Rec Room officially shutdown with the closure of rec.net and its APIs, which meant no regular players could get back into Rec Room. Previously, a Rec Room developer stated that both developers and some select players were playing after the game's initial shutdown date to record things for posterity.

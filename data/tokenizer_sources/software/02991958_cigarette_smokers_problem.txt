@@ -1,0 +1,20 @@
+The cigarette smokers problem is a classic concurrency problem in computer science, introduced by Suhas Patil in 1971. It illustrates synchronization challenges in multi-process systems, where multiple processes (smokers) compete for limited resources (ingredients) provided by a single agent. The problem is notable for its constraints, such as the immutability of the agent's behavior and the prohibition of conditional statements in solutions, which have been subjects of criticism.
+
+Problem description
+Patil's problem includes a "quite arbitrary" "restriction that the process which supplies the ingredients cannot be changed and that no conditional statements may be used." 
+Assume a cigarette requires three ingredients to make and smoke: tobacco, paper, and matches. There are three smokers around a table, each of whom has an infinite supply of one of the three ingredients — one smoker has an infinite supply of tobacco, another has paper, and the third has matches.
+There is also a non-smoking agent who enables the smokers to make their cigarettes by arbitrarily (non-deterministically) selecting two of the supplies to place on the table. The smoker who has the third supply should remove the two items from the table, using them (along with their own supply) to make a cigarette, which they smoke for a while. Once the smoker has finished his cigarette, the agent places two new random items on the table. This process continues forever.
+Three semaphores are used to represent the items on the table; the agent increases the appropriate semaphore to signal that an item has been placed on the table, and smokers decrement the semaphore when removing items. Also, each smoker has an associated semaphore that they use to signal to the agent that the particular smoker is done smoking; the agent has a process that waits on each smoker's semaphore to let the agent know that it can place the new items on the table.
+A simple pseudocode implementation of the smoker who has the supply of tobacco might look like the following:
+
+However, this can lead to deadlock; if the agent places paper and tobacco on the table, the smoker with tobacco may remove the paper and the smoker with matches may take the tobacco, leaving both unable to make their cigarette. The solution is to define additional processes and semaphores that prevent deadlock, without modifying the agent.
+
+Criticism
+Patil placed the following constraints on the cigarette smokers problem:
+
+The agent code is not modifiable.
+The solution is not allowed to use conditional statements.
+Patil used a proof in terms of Petri nets to claim that a solution to the cigarette smokers problem using Edsger Dijkstra's semaphore primitives is impossible, and to suggest that a more powerful primitive is necessary. However, David Parnas demonstrated that Patil's proof is inadequate if arrays of semaphores are used, offering a solution that uses helper processes that do arithmetic to signal the appropriate smoker to proceed.
+According to Allen B. Downey, the first restriction makes sense, because if the agent represents an operating system, it would be unreasonable or impossible to modify it every time a new application came along. However, Parnas argues that the second restriction is unjustified:
+
+The limitations reported by Patil are limitations of his primitives, but they are not limitations on the primitives described by Dijkstra. … It is important, however, that such an investigation [of Dijkstra primitives] not investigate the power of these primitives under artificial restrictions. By artificial we mean restrictions which cannot be justified by practical considerations. In this author's opinion, restrictions prohibiting either conditionals or semaphore arrays are artificial.

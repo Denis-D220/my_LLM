@@ -1,0 +1,812 @@
+Dynamic semantics is a framework in logic and natural language semantics that treats the meaning of a sentence as its potential to update a context. In static semantics, knowing the meaning of a sentence amounts to knowing when it is true; in dynamic semantics, knowing the meaning of a sentence means knowing "the change it brings about in the information state of anyone who accepts the news conveyed by it." In dynamic semantics, sentences are mapped to functions called context change potentials, which take an input context and return an output context. Dynamic semantics was originally developed by Irene Heim and Hans Kamp in 1981 to model anaphora, but has since been applied widely to phenomena including presupposition, plurals, questions, discourse relations, and modality.
+
+Dynamics of anaphora
+
+The first systems of dynamic semantics were the closely related File Change Semantics and discourse representation theory, developed simultaneously and independently by Irene Heim and Hans Kamp. These systems were intended to capture donkey anaphora, which resists an elegant compositional treatment in classic approaches to semantics such as Montague grammar. Donkey anaphora is exemplified by the infamous donkey sentences, first noticed by the medieval logician Walter Burley and brought to modern attention by Peter Geach.
+
+Donkey sentence (relative clause): Every farmer who owns a donkey beats it.
+Donkey sentence (conditional): If a farmer owns a donkey, he beats it.
+To capture the empirically observed truth conditions of such sentences in first order logic, one would need to translate the indefinite noun phrase "a donkey" as a universal quantifier scoping over the variable corresponding to the pronoun "it".
+
+FOL translation of donkey sentence:  : 
+  
+    
+      
+        ∀
+        x
+        ∀
+        y
+        (
+        
+        (
+        
+          farmer
+        
+        (
+        x
+        )
+        ∧
+        
+          donkey
+        
+        (
+        y
+        )
+        ∧
+        
+          own
+        
+        (
+        x
+        ,
+        y
+        )
+        )
+        →
+        
+          beat
+        
+        (
+        x
+        ,
+        y
+        )
+        
+        )
+      
+    
+    {\displaystyle \forall x\forall y(\,({\text{farmer}}(x)\land {\text{donkey}}(y)\land {\text{own}}(x,y))\rightarrow {\text{beat}}(x,y)\,)}
+  
+
+While this translation captures (or approximates) the truth conditions of the natural language sentences, its relationship to the syntactic form of the sentence is puzzling in two ways. First, indefinites in non-donkey contexts normally express existential rather than universal quantification. Second, the syntactic position of the donkey pronoun would not normally allow it to be bound by the indefinite.
+To explain these peculiarities, Heim and Kamp proposed that natural language indefinites are special in that they introduce a new discourse referent that remains available outside the syntactic scope of the operator that introduced it. To cash this idea out, they proposed their respective formal systems that capture donkey anaphora because they validate Egli's theorem and its corollary.
+
+Egli's theorem: 
+  
+    
+      
+        (
+        ∃
+        x
+        φ
+        )
+        ∧
+        ψ
+        ⇔
+        ∃
+        x
+        (
+        φ
+        ∧
+        ψ
+        )
+      
+    
+    {\displaystyle (\exists x\varphi )\land \psi \Leftrightarrow \exists x(\varphi \land \psi )}
+  
+
+Egli's corollary: 
+  
+    
+      
+        (
+        ∃
+        x
+        ϕ
+        →
+        ψ
+        )
+        ⇔
+        ∀
+        x
+        (
+        ϕ
+        →
+        ψ
+        )
+      
+    
+    {\displaystyle (\exists x\phi \rightarrow \psi )\Leftrightarrow \forall x(\phi \rightarrow \psi )}
+  
+
+Update semantics
+Update semantics is a framework within dynamic semantics that was developed by Frank Veltman. In update semantics, each formula 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is mapped to a function 
+  
+    
+      
+        [
+        φ
+        ]
+      
+    
+    {\displaystyle [\varphi ]}
+  
+ that takes and returns a discourse context. Thus, if 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is a context, then 
+  
+    
+      
+        C
+        [
+        φ
+        ]
+      
+    
+    {\displaystyle C[\varphi ]}
+  
+ is the context one gets by updating 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ with 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+. Systems of update semantics vary both in how they define a context and in the semantic entries they assign to formulas. The simplest update systems are intersective ones, which simply lift static systems into the dynamic framework. However, update semantics includes systems more expressive than what can be defined in the static framework. In particular, it allows information sensitive semantic entries, in which  the information contributed by updating with some formula can depend on the information already present in the context. This property of update semantics has led to its widespread application to presuppositions, modals, and conditionals.
+
+Intersective update
+An update with 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is called intersective if it amounts to taking the intersection of the input context with the proposition denoted by 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+. Crucially, this definition assumes that there is a single fixed proposition that 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ always denotes, regardless of the context.
+
+Intersective update: Let 
+  
+    
+      
+        [
+        
+        [
+        φ
+        ]
+        
+        ]
+      
+    
+    {\displaystyle [\![\varphi ]\!]}
+  
+ be the proposition denoted by 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+. Then 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is intersective if and only if for any 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+, we have that 
+  
+    
+      
+        C
+        [
+        φ
+        ]
+        =
+        C
+        ∩
+        [
+        
+        [
+        φ
+        ]
+        
+        ]
+      
+    
+    {\displaystyle C[\varphi ]=C\cap [\![\varphi ]\!]}
+  
+
+Intersective update was proposed by Robert Stalnaker in 1978 as a way of formalizing the speech act of assertion.  In Stalnaker's original system, a context (or context set) is defined as a set of possible worlds representing the information in the common ground of a conversation. For instance, if 
+  
+    
+      
+        C
+        =
+        {
+        w
+        ,
+        v
+        ,
+        u
+        }
+      
+    
+    {\displaystyle C=\{w,v,u\}}
+  
+ this represents a scenario where the information agreed upon by all participants in the conversation indicates that the actual world must be either 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+, 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+, or 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+. If 
+  
+    
+      
+        [
+        
+        [
+        φ
+        ]
+        
+        ]
+        =
+        {
+        w
+        ,
+        v
+        }
+      
+    
+    {\displaystyle [\![\varphi ]\!]=\{w,v\}}
+  
+, then updating 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ with 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ would return a new context 
+  
+    
+      
+        C
+        [
+        φ
+        ]
+        =
+        {
+        w
+        ,
+        v
+        }
+      
+    
+    {\displaystyle C[\varphi ]=\{w,v\}}
+  
+. Thus, an assertion of 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ would be understood as an attempt to rule out the possibility that the actual world is 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+.
+From a formal perspective, intersective update can be taken as a recipe for lifting one's preferred static semantics to dynamic semantics. For instance, if we take classical propositional semantics as our starting point, this recipe delivers the following intersective update semantics.
+
+Intersective update semantics based on classical propositional logic:
+
+  
+    
+      
+        C
+        [
+        P
+        ]
+        =
+        {
+        w
+        ∈
+        C
+        ∣
+        w
+        (
+        P
+        )
+        =
+        1
+        }
+      
+    
+    {\displaystyle C[P]=\{w\in C\mid w(P)=1\}}
+  
+
+  
+    
+      
+        C
+        [
+        ¬
+        φ
+        ]
+        =
+        C
+        −
+        C
+        [
+        φ
+        ]
+      
+    
+    {\displaystyle C[\neg \varphi ]=C-C[\varphi ]}
+  
+
+  
+    
+      
+        C
+        [
+        φ
+        ∧
+        ψ
+        ]
+        =
+        C
+        [
+        φ
+        ]
+        ∩
+        C
+        [
+        ψ
+        ]
+      
+    
+    {\displaystyle C[\varphi \land \psi ]=C[\varphi ]\cap C[\psi ]}
+  
+
+  
+    
+      
+        C
+        [
+        φ
+        ∨
+        ψ
+        ]
+        =
+        C
+        [
+        φ
+        ]
+        ∪
+        C
+        [
+        ψ
+        ]
+      
+    
+    {\displaystyle C[\varphi \lor \psi ]=C[\varphi ]\cup C[\psi ]}
+  
+
+The notion of intersectivity can be decomposed into the two properties known as eliminativity and distributivity. Eliminativity says that an update can only ever remove worlds from the context—it can't add them. Distributivity says that updating 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ with 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is equivalent to updating each singleton subset of 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ with 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ and then pooling the results.
+
+Eliminativity: 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is eliminative iff 
+  
+    
+      
+        C
+        [
+        φ
+        ]
+        ⊆
+        C
+      
+    
+    {\displaystyle C[\varphi ]\subseteq C}
+  
+ for all contexts 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+
+Distributivity: 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is distributive iff 
+  
+    
+      
+        C
+        [
+        φ
+        ]
+        =
+        ⋃
+        {
+        {
+        w
+        }
+        [
+        φ
+        ]
+        ∣
+        w
+        ∈
+        C
+        }
+      
+    
+    {\displaystyle C[\varphi ]=\bigcup \{\{w\}[\varphi ]\mid w\in C\}}
+  
+
+Intersectivity amounts to the conjunction of these two properties, as proven by Johan van Benthem.
+
+The test semantics for modals
+The framework of update semantics is more general than static semantics because it is not limited to intersective meanings. Nonintersective meanings are theoretically useful because they contribute different information depending on what information is already present in the context. For instance, if 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is intersective, then it will update any input context with the exact same information, namely the information encoded by the proposition 
+  
+    
+      
+        [
+        
+        [
+        φ
+        ]
+        
+        ]
+      
+    
+    {\displaystyle [\![\varphi ]\!]}
+  
+. On the other hand, if 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is nonintersective, it could contribute 
+  
+    
+      
+        [
+        
+        [
+        φ
+        ]
+        
+        ]
+      
+    
+    {\displaystyle [\![\varphi ]\!]}
+  
+ when it updates some contexts, but some completely different information when it updates other contexts.
+Many natural language expressions have been argued to have nonintersective meanings. The nonintersectivity of epistemic modals can be seen in the infelicity of epistemic contradictions.
+
+Epistemic contradiction: #It's raining and it might not be raining.
+These sentences have been argued to be bona fide logical contradictions, unlike superficially similar examples such as Moore sentences, which can be given a pragmatic explanation.
+
+Epistemic contradiction principle: 
+  
+    
+      
+        φ
+        ∧
+        ◊
+        ¬
+        φ
+        ⊨
+        ⊥
+      
+    
+    {\displaystyle \varphi \land \Diamond \neg \varphi \models \bot }
+  
+
+These sentences cannot be analysed as logical contradictions within purely intersective frameworks such as the relational semantics for modal logic. The Epistemic Contradiction Principle only holds on the class of relational frames such that 
+  
+    
+      
+        R
+        w
+        v
+        ⇒
+        (
+        w
+        =
+        v
+        )
+      
+    
+    {\displaystyle Rwv\Rightarrow (w=v)}
+  
+. However, such frames also validate an entailment from 
+  
+    
+      
+        ◊
+        φ
+      
+    
+    {\displaystyle \Diamond \varphi }
+  
+ to 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+. Thus, accounting for the infelicity of epistemic contradictions within a classical semantics for modals would bring along the unwelcome prediction that "It might be raining" entails "It is raining". Update Semantics skirts this problem by providing a nonintersective denotation for modals. When given such a denotation, the formula 
+  
+    
+      
+        ◊
+        ¬
+        φ
+      
+    
+    {\displaystyle \Diamond \neg \varphi }
+  
+ can update input contexts differently depending on whether they already contain the information that 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ provides. The most widely adopted semantic entry for modals in update semantics is the test semantics proposed by Frank Veltman.
+
+The test semantics for modals: 
+  
+    
+      
+        C
+        [
+        ◊
+        φ
+        ]
+        =
+        
+          
+            {
+            
+              
+                
+                  C
+                
+                
+                  
+                    if 
+                  
+                  C
+                  [
+                  φ
+                  ]
+                  ≠
+                  ∅
+                
+              
+              
+                
+                  ∅
+                
+                
+                  
+                    otherwise
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle C[\Diamond \varphi ]={\begin{cases}C&{\text{if }}C[\varphi ]\neq \varnothing \\\varnothing &{\text{otherwise}}\end{cases}}}
+  
+
+On this semantics, 
+  
+    
+      
+        ◊
+        φ
+      
+    
+    {\displaystyle \Diamond \varphi }
+  
+ tests whether the input context could be updated with 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ without getting trivialized, i.e. without returning the empty set. If the input context passes the test, it remains unchanged. If it fails the test, the update trivializes the context by returning the empty set. This semantics can handle epistemic contradictions because no matter the input context, updating with 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ will always output a context that fails the test imposed by 
+  
+    
+      
+        ◊
+        ¬
+        φ
+      
+    
+    {\displaystyle \Diamond \neg \varphi }
+  
+.

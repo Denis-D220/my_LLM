@@ -1,0 +1,298 @@
+Rayleigh–Lorentz pendulum (or Lorentz pendulum) is a simple pendulum, but subjected to a slowly varying frequency due to an external action (frequency is varied by varying the pendulum length), named after Lord Rayleigh and Hendrik Lorentz. This problem formed the basis for the concept of adiabatic invariants in mechanics. On account of the slow variation of frequency, it is shown that the ratio of average energy to frequency is constant. 
+
+History
+The pendulum problem was first formulated by Lord Rayleigh in 1902, although some mathematical aspects have been discussed before by Léon Lecornu in 1895 and Charles Bossut in 1778. Unaware of Rayleigh's work, at the first Solvay conference in 1911, Hendrik Lorentz proposed a question, How does a simple pendulum behave when the length of the suspending thread is gradually shortened?, in order to clarify the quantum theory at that time. To that Albert Einstein responded the next day by saying that both energy and frequency of the quantum pendulum changes such that their ratio is constant, so that the pendulum is in the same quantum state as the initial state. These two separate works formed the basis for the concept of adiabatic invariant, which found applications in various fields and old quantum theory. In 1958, Subrahmanyan Chandrasekhar took interest in the problem and studied it so that a renewed interest in the problem was set, subsequently to be studied by many other researchers like John Edensor Littlewood etc.
+
+Mathematical description
+The equation of the simple harmonic motion with frequency 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+ for the displacement 
+  
+    
+      
+        x
+        (
+        t
+        )
+      
+    
+    {\displaystyle x(t)}
+  
+ is given by
+
+  
+    
+      
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+        +
+        
+          ω
+          
+            2
+          
+        
+        x
+        =
+        0.
+      
+    
+    {\displaystyle {\ddot {x}}+\omega ^{2}x=0.}
+  
+
+If the frequency is constant, the solution is simply given by 
+  
+    
+      
+        x
+        =
+        A
+        cos
+        ⁡
+        (
+        ω
+        t
+        +
+        ϕ
+        )
+      
+    
+    {\displaystyle x=A\cos(\omega t+\phi )}
+  
+. But if the frequency is allowed to vary slowly with time 
+  
+    
+      
+        ω
+        =
+        ω
+        (
+        t
+        )
+      
+    
+    {\displaystyle \omega =\omega (t)}
+  
+, or precisely, if the characteristic time scale for the frequency variation is much smaller than the time period of oscillation, i.e.,
+
+  
+    
+      
+        
+          |
+          
+            
+              
+                1
+                ω
+              
+            
+            
+              
+                
+                  d
+                  ω
+                
+                
+                  d
+                  t
+                
+              
+            
+          
+          |
+        
+        ≪
+        ω
+        ,
+      
+    
+    {\displaystyle \left|{\frac {1}{\omega }}{\frac {d\omega }{dt}}\right|\ll \omega ,}
+  
+
+then it can be shown that
+
+  
+    
+      
+        
+          
+            
+              
+                E
+                ¯
+              
+            
+            ω
+          
+        
+        =
+        
+          constant
+        
+        ,
+      
+    
+    {\displaystyle {\frac {\bar {E}}{\omega }}={\text{constant}},}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              E
+              ¯
+            
+          
+        
+      
+    
+    {\displaystyle {\bar {E}}}
+  
+ is the average energy averaged over an oscillation. Since the frequency is changing with time due to external action, conservation of energy no longer holds and the energy over a single oscillation is not constant. During an oscillation, the frequency changes (however slowly), so does its energy. Therefore, to describe the system, one defines the average energy per unit mass for a given potential 
+  
+    
+      
+        V
+        (
+        x
+        ;
+        ω
+        )
+      
+    
+    {\displaystyle V(x;\omega )}
+  
+ as follows
+
+  
+    
+      
+        
+          
+            
+              E
+              ¯
+            
+          
+        
+        =
+        
+          
+            
+              ∮
+              d
+              t
+              
+                [
+                
+                  
+                    
+                      
+                        1
+                        2
+                      
+                    
+                  
+                  
+                    
+                      (
+                      
+                        
+                          
+                            x
+                            ˙
+                          
+                        
+                      
+                      )
+                    
+                    
+                      2
+                    
+                  
+                  +
+                  V
+                  (
+                  x
+                  (
+                  t
+                  )
+                  ;
+                  ω
+                  (
+                  t
+                  )
+                  )
+                
+                ]
+              
+            
+            
+              ∮
+              d
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\bar {E}}={\frac {\displaystyle \oint dt\left[{\tfrac {1}{2}}\left({\dot {x}}\right)^{2}+V(x(t);\omega (t))\right]}{\displaystyle \oint dt}}}
+  
+
+where the closed integral denotes that it is taken over a complete oscillation. Defined this way, it can be seen that the averaging is done, weighting each element of the orbit by the fraction of time that the pendulum spends in that element. For simple harmonic oscillator, it reduces to
+
+  
+    
+      
+        
+          
+            
+              E
+              ¯
+            
+          
+        
+        =
+        
+          
+            
+              1
+              2
+            
+          
+        
+        
+          A
+          
+            2
+          
+        
+        
+          ω
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {\bar {E}}={\tfrac {1}{2}}A^{2}\omega ^{2}}
+  
+
+where both the amplitude and frequency are now functions of time.

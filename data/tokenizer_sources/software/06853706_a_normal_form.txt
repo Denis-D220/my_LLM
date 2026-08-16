@@ -1,0 +1,40 @@
+In computer science, A-normal form (abbreviated ANF, sometimes expanded as administrative normal form or as atomic normal form) is an intermediate representation of programs in functional programming language compilers. 
+In ANF, all arguments to a function must be trivial (constants or variables).  That is, evaluation of each argument must halt immediately. 
+ANF was introduced by Sabry and Felleisen in 1992 as a simpler alternative to continuation-passing style (CPS).  Some of the advantages of using CPS as an intermediate representation are that optimizations are easier to perform on programs in CPS than in the source language, and that it is also easier for compilers to generate machine code for programs in CPS. Flanagan et al. showed how compilers could use ANF to achieve those same benefits with one source-level transformation; in contrast, for realistic compilers the CPS transformation typically involves additional phases, for example, to simplify CPS terms.
+
+Grammar
+Consider the pure λ-calculus with constants and let-expressions. The ANF restriction is enforced by
+
+allowing only values (variables, constants, and λ-terms), to serve as operands of function applications, and
+requiring that the result of a non-trivial expression (such as a function application) be immediately captured in a let-bound variable.
+The following BNF grammars show how one would modify the syntax of λ-expressions to implement the constraints of ANF:
+
+Variants of ANF used in compilers or in research often allow records, tuples, multiargument functions, primitive operations and conditional expressions as well.
+
+Examples
+The expression:
+
+f(g(x),h(y))
+
+is written in ANF as:
+
+let v0 = g(x) in
+    let v1 = h(y) in
+        f(v0,v1)
+
+By imagining the sort of assembly this function call would produce:
+
+;; let v0 = g(x)
+move x into args[0]
+call g
+move result into temp[0]
+;; let v1 = h(y)
+move y into args[0]
+call h
+move result into temp[1]
+;; f(v0, v1)
+move temp[0] into args[0]
+move temp[1] into args[1]
+call f
+
+One can see the immediate similarities between ANF and the compiled form of a function; this property is a part of what makes ANF a good intermediate representation for optimisations in compilers.

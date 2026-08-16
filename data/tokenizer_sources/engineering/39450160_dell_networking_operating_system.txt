@@ -1,0 +1,55 @@
+DNOS or Dell Networking Operating System is a network operating system running on switches from Dell Networking. It is derived from either the PowerConnect OS (DNOS 6.x) or Force10 OS/FTOS (DNOS 9.x) and will be made available for the 10G and faster Dell Networking S-series switches, the Z-series 40G core switches and DNOS6 is available for the N-series switches.
+
+Two version families
+The DNOS network operating system family comes in a few main versions:
+
+DNOS3
+DNOS 3.x: This is a family of firmware for the campus access switches that can only be managed using a web based GUI or run as unmanaged device.
+
+DNOS6
+DNOS 6.x: This is the operating system running on the Dell Networking N-series (campus) networking switches. It is the latest version of the 'PowerConnect' operating system, running on a Linux Kernel. It is available as upgrade for the PowerConnect 8100 series switches (which then become a Dell Networking N40xx switch) and it also is installed on all DN N1000, N2000 and N3000 series switches. It has a full web-based GUI together with a full CLI (command line interface) and the CLI will be very similar to the original PowerConnect CLI, though with a range of new features like PVSTP (per VLAN spanning tree), Policy Based Routing and MLAG.
+
+DNOS9
+DNOS 9.x: This is the operating system running on Dell Networking S- and Z- series switches and is a further development of the FTOS or Force10 Operating System. Standard DNOS 9.x (and FTOS) only offers a CLI and no GUI, although with the automation toolset it is possible to create your own webGUI on DNOS9 / FTOS switches. DNOS 9.x is running on NetBSD.
+Only the PowerConnect 8100 will be able to run on DNOS 6.x: all other PowerConnect Ethernet switches will continue to run its own PowerConnect OS (on top of VxWorks) while the PowerConnect W-series run on a Dell specific version of ArubaOS.
+The Dell Networking S- xxxx and Z9x00 series will run on DNOS where the other Dell Networking switches will continue to run FTOS 8.x firmware.
+
+OS10
+OS10 is a Linux-based open networking OS that can run on all Open Network Install Environment (ONIE) switches. As it runs directly in a Linux environment network admins can highly automate the network platform and manage the switches in a similar way as the (Linux) servers.
+
+Hardware Abstraction Layer
+Three of the four product families from Dell Networking are using the Broadcom Trident+ ASICs, but the company doesn't use the APIs from Broadcom: the developers at Dell Networking have written their own Hardware Abstraction Layer so that DNOS 9.x can run on different hardware platforms with minimal impact for the firmware. Currently three of the four DN switch families are based on the Broadcom Trident family (while the 4th - the E-series- run on self-developed ASICs); and two of them are running DNOS 9.x (S- and Z- series) and if the product developers want or need to use different hardware for new products they only need to develop a HAL for that new hardware and the same firmware can run on it. This keeps the company flexible and not dependent on a specific hardware-vendor and can use both 3rd party or self designed ASICs and chipsets.
+The underlying OS on which DNOS 9.x, runs, is based on NetBSD  (while the DNOS 6.x runs on a Linux kernel), an implementation which is often used in embedded networking-systems. NetBSD is a very stable, open source, OS running on many different hardware platforms. By choosing for a proven technology with extended TCP functionality built into the core of the OS it reduces time during development of new products or extending the DNOS with new features.
+
+Modular setup
+DNOS 9.x is also modular where different parts of the OS run independently from each other within one switch: if one process would fail the impact on other processes on the switch are limited. This modular setup is also taken to the hardware level in some product-lines where a routing-module has three separate CPUs: one for management, one for L2 and one for L3 processing. This same approach is also used in the newer firmware-families from Cisco like the NX-OS for the Nexus product-line or the IOS XR for the high-end routers (the Carrier Routing Systems) from Cisco. (and unlike the original IOS: processes under IOS aren't isolated from each other). This approach is regarded not only a way to make the firmware more resilient but also increases the security of the switches
+
+Capabilities
+All DNOS 9.x based switches offer a wide range of layer2 and layer3 protocols. All features are available on all switches: some switch models (in the S-series) offer an additional license for layer3 or routing: this additional license is NOT required to use that protocol, but only required to get support from the Dell Networking support department on using these features. All interfaces on DNOS 9.x running switches are configured as a layer3 interface and by default shutdown. To use such an interface as an Ethernet switchport you need to configure it as such (with the command "switchport") and then enable that port using "no shutdown".
+Unlike DNOS 6.x (which provide web and CLI - with extensive API control via undocumented "debug console" and "dev help" commands), DNOS 9.x only offers a documented command line interface (CLI) to configure and monitor the switch directly, though it is possible with the "Automation Tools" to create your own webGui on DNOS 9.x switches.
+
+Layer2 capabilities
+All standardized Ethernet standards are supported by switches running FTOS including: Spanning Tree Protocol and RSTP, VLAN and the IEEE 802.1Q standards, QinQ or IEEE 802.1ad, Link Layer Discovery Protocol and LLDP MED.
+The S-series switches ending with a V and some of the E-series line-cards support Power over Ethernet or PoE with the standards for this protocol.
+
+Layer3 capabilities
+As mentioned above, by default an interface on a switch running DNOS 9.x are configured as a layer3 port. All these switches are thus routers with many interfaces that can (and most often are) reconfigured into a layer2 Ethernet switch.
+All DNOS 9 switches run at least the following routing protocols: Routing Information Protocol and RIP version 2, OSPF, IS-IS and Border Gateway Protocol version 4.
+
+Open Automation
+Under the name OpenAutomation 2.0 Dell Networking switches running DNOS 9.x  offers a number of features under this name. These features include:
+
+Smart Scripting
+Dell Networking switches support so called smart scripting. It is possible to develop scripts that run on the switches running DNOS 9. Both Perl and Python are supported as scripting languages to automate environment specific repetitive tasks or to build in custom behavior. Users who write such scripts are promoted to share these scripts with the user-community and make them available to other Force10/DNOS users. Force10 introduced the smart scripting in FTOS in 2010, following other vendors like Cisco for their Nexus product range
+
+Bare metal provisioning
+Dell Networking switches support a bare metal provisioning option: if you need to deploy a number of similar switches you can put both (desired/latest) firmware release and standard user-specific configuration on a USB key: when deploying the switches you can insert the USB key, power-up the switch and it will automatically load the correct firmware and configuration. In combination with smart scripting someone can combine these features for a fully automated installation and configuration of new switches. It is also possible to run BMP via the network: unless re-configured to start in 'normal' mode all DNOS 9.x switches (and the earlier FTOS switches) will check if there is a BMP server on the network by sending out a DHCP/BOOTP request at boot: if it gets the correct response from the DHCP server (IP address, address of TFTP server and a script/config file name) it will contact a TFTP server to download correct firmware and configuration files and run that. You can disable this feature during initial configuration so that the switch will boot from the firmware and configuration saved on the switch NVRAM memory.
+
+Virtual server networking
+Part of the Open Automation platform are special features for the use of virtualisation in your datacenter. Virtualisation allows you to create complete (virtual) server-systems running on a standard hypervisor farm. This will create new challenges for networking in such a datacenter, support automated configuration of datacenter switches to connect newly created virtual servers. The open automation platform has several features to support this.
+
+Network Automation
+According to Dell the move to (server and datacenter) virtualisation is one of the most important developments in the IT industry. According to this vendor the industry must prevent that this path leads to getting locked-in into specific vendors due to the use of proprietary technologies. The open automation framework is an open framework that doesn't rely on proprietary solutions
+
+Alternative OS
+On some models Dell Networking switches (currently the S3048-ON, S4048-ON, S4810-ON, S6000-ON and Z9100) it is possible to run an alternative network OS: Cumulus Linux. This will run instead of DNOS on top of NetBSD. Cumulus Linux is a complete Linux distribution which uses the full TCP/IP stack of Linux.

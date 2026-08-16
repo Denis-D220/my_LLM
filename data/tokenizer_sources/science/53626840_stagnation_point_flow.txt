@@ -1,0 +1,3187 @@
+In fluid dynamics, a stagnation point flow refers to a fluid flow in the neighbourhood of a stagnation point (in two-dimensional flows) or a stagnation line (in three-dimensional flows) with which the stagnation point/line refers to a point/line where the velocity is zero in the inviscid approximation. The flow specifically considers a class of stagnation points known as saddle points wherein incoming streamlines gets deflected and directed outwards in a different direction; the streamline deflections are guided by separatrices. The flow in the neighborhood of the stagnation point or line can generally be described using potential flow theory, although viscous effects cannot be neglected if the stagnation point lies on a solid surface.
+
+Stagnation point flow without solid surfaces
+When two streams of two-dimensional or axisymmetric nature impinge on each other, a stagnation plane is created and the incoming streams are diverted tangentially outwards from the plane. Thus, the velocity component normal to the stagnation plane is zero; whereas, the tangential component is non-zero. In the neighborhood of the stagnation point, a local description for the velocity field can be described.
+
+General three-dimensional velocity field
+The stagnation point flow corresponds to a linear dependence on the coordinates, that can be described in the Cartesian coordinates 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+      
+    
+    {\displaystyle (x,y,z)}
+  
+ with velocity components 
+  
+    
+      
+        (
+        
+          v
+          
+            x
+          
+        
+        ,
+        
+          v
+          
+            y
+          
+        
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+      
+    
+    {\displaystyle (v_{x},v_{y},v_{z})}
+  
+ as follows
+
+  
+    
+      
+        
+          v
+          
+            x
+          
+        
+        =
+        α
+        x
+        ,
+        
+        
+          v
+          
+            y
+          
+        
+        =
+        β
+        y
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        γ
+        z
+      
+    
+    {\displaystyle v_{x}=\alpha x,\quad v_{y}=\beta y,\quad v_{z}=\gamma z}
+  
+
+where 
+  
+    
+      
+        (
+        α
+        ,
+        β
+        ,
+        γ
+        )
+      
+    
+    {\displaystyle (\alpha ,\beta ,\gamma )}
+  
+ are constants (or time-dependent functions) referred to as the strain rates. The three strain rates are not completely arbitrary since the continuity equation requires 
+  
+    
+      
+        α
+        +
+        β
+        +
+        γ
+        =
+        0
+      
+    
+    {\displaystyle \alpha +\beta +\gamma =0}
+  
+; therefore, only two of the three constants are independent. We shall assume 
+  
+    
+      
+        γ
+        <
+        0
+        ≤
+        α
+      
+    
+    {\displaystyle \gamma <0\leq \alpha }
+  
+, meaning the flow is towards the stagnation point in the 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+ direction and away from the stagnation point in the 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ direction. Without loss of generality, one can assume that 
+  
+    
+      
+        β
+        ≥
+        α
+      
+    
+    {\displaystyle \beta \geq \alpha }
+  
+. The flow field can be categorized into different types based on a single parameter
+
+  
+    
+      
+        λ
+        =
+        
+          
+            
+              α
+              −
+              β
+            
+            
+              α
+              +
+              β
+            
+          
+        
+      
+    
+    {\displaystyle \lambda ={\frac {\alpha -\beta }{\alpha +\beta }}}
+  
+
+Planar stagnation-point flow
+The two-dimensional stagnation-point flow belongs to the case 
+  
+    
+      
+        β
+        =
+        0
+        
+        (
+        λ
+        =
+        1
+        )
+      
+    
+    {\displaystyle \beta =0\,(\lambda =1)}
+  
+. The flow field is described as follows
+
+  
+    
+      
+        
+          v
+          
+            x
+          
+        
+        =
+        k
+        x
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        −
+        k
+        z
+      
+    
+    {\displaystyle v_{x}=kx,\quad v_{z}=-kz}
+  
+
+where we let 
+  
+    
+      
+        k
+        =
+        α
+        =
+        −
+        γ
+        >
+        0
+      
+    
+    {\displaystyle k=\alpha =-\gamma >0}
+  
+. This flow field is investigated as early as 1934 by G. I. Taylor. In the laboratory, this flow field is created using a four-mill apparatus, although these flow fields are ubiquitous in turbulent flows.
+This type of flow also finds application in electrochemical reactors, where perpendicular feed streams can generate a uniform mass transfer boundary layer along the electrode surface, enhancing reaction uniformity and efficiency throughout the equipment. 
+
+Axisymmetric stagnation-point flow
+The axisymmetric stagnation point flow corresponds to 
+  
+    
+      
+        α
+        =
+        β
+        
+        (
+        λ
+        =
+        0
+        )
+      
+    
+    {\displaystyle \alpha =\beta \,(\lambda =0)}
+  
+. The flow field can be simply described in cylindrical coordinate system 
+  
+    
+      
+        (
+        r
+        ,
+        θ
+        ,
+        z
+        )
+      
+    
+    {\displaystyle (r,\theta ,z)}
+  
+ with velocity components 
+  
+    
+      
+        (
+        
+          v
+          
+            r
+          
+        
+        ,
+        0
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+      
+    
+    {\displaystyle (v_{r},0,v_{z})}
+  
+ as follows
+
+  
+    
+      
+        
+          v
+          
+            r
+          
+        
+        =
+        k
+        r
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        −
+        2
+        k
+        z
+      
+    
+    {\displaystyle v_{r}=kr,\quad v_{z}=-2kz}
+  
+
+where we let 
+  
+    
+      
+        k
+        =
+        α
+        =
+        β
+        =
+        −
+        γ
+        
+          /
+        
+        2
+        >
+        0
+      
+    
+    {\displaystyle k=\alpha =\beta =-\gamma /2>0}
+  
+.
+
+Radial stagnation flows
+In radial stagnation flows, instead of a stagnation point, we have a stagnation circle and the stagnation plane is replaced by a stagnation cylinder. The radial stagnation flow is described using the cylindrical coordinate system 
+  
+    
+      
+        (
+        r
+        ,
+        z
+        )
+      
+    
+    {\displaystyle (r,z)}
+  
+ with velocity components 
+  
+    
+      
+        (
+        
+          v
+          
+            r
+          
+        
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+      
+    
+    {\displaystyle (v_{r},v_{z})}
+  
+ as follows
+
+  
+    
+      
+        
+          v
+          
+            r
+          
+        
+        =
+        −
+        k
+        
+          (
+          
+            r
+            −
+            
+              
+                
+                  r
+                  
+                    s
+                  
+                  
+                    2
+                  
+                
+                r
+              
+            
+          
+          )
+        
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        2
+        k
+        z
+      
+    
+    {\displaystyle v_{r}=-k\left(r-{\frac {r_{s}^{2}}{r}}\right),\quad v_{z}=2kz}
+  
+
+where 
+  
+    
+      
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r_{s}}
+  
+ is the location of the stagnation cylinder.
+
+Hiemenz flow
+
+The flow due to the presence of a solid surface at 
+  
+    
+      
+        z
+        =
+        0
+      
+    
+    {\displaystyle z=0}
+  
+ in planar stagnation-point flow was described first by Karl Hiemenz in 1911, whose numerical computations for the solutions were improved later by Leslie Howarth. A familiar example where Hiemenz flow is applicable is the forward stagnation line that occurs in the flow over a circular cylinder.
+The solid surface lies on the 
+  
+    
+      
+        x
+        y
+      
+    
+    {\displaystyle xy}
+  
+. According to potential flow theory, the fluid motion described in terms of the stream function 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ and the velocity components 
+  
+    
+      
+        (
+        
+          v
+          
+            x
+          
+        
+        ,
+        0
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+      
+    
+    {\displaystyle (v_{x},0,v_{z})}
+  
+ are given by
+
+  
+    
+      
+        ψ
+        =
+        k
+        x
+        z
+        ,
+        
+        
+          v
+          
+            x
+          
+        
+        =
+        k
+        x
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        −
+        k
+        z
+        .
+      
+    
+    {\displaystyle \psi =kxz,\quad v_{x}=kx,\quad v_{z}=-kz.}
+  
+
+The stagnation line for this flow is 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        =
+        (
+        0
+        ,
+        y
+        ,
+        0
+        )
+      
+    
+    {\displaystyle (x,y,z)=(0,y,0)}
+  
+. The velocity component 
+  
+    
+      
+        
+          v
+          
+            x
+          
+        
+      
+    
+    {\displaystyle v_{x}}
+  
+ is non-zero on the solid surface indicating that the above velocity field do not satisfy no-slip boundary condition on the wall. To find the velocity components that satisfy the no-slip boundary condition, one assumes the following form 
+
+  
+    
+      
+        ψ
+        =
+        
+          
+            ν
+            k
+          
+        
+        x
+        F
+        (
+        η
+        )
+        ,
+        
+        η
+        =
+        
+          
+            z
+            
+              ν
+              
+                /
+              
+              k
+            
+          
+        
+      
+    
+    {\displaystyle \psi ={\sqrt {\nu k}}xF(\eta ),\quad \eta ={\frac {z}{\sqrt {\nu /k}}}}
+  
+
+where 
+  
+    
+      
+        ν
+      
+    
+    {\displaystyle \nu }
+  
+ is the Kinematic viscosity and 
+  
+    
+      
+        
+          
+            ν
+            
+              /
+            
+            k
+          
+        
+      
+    
+    {\displaystyle {\sqrt {\nu /k}}}
+  
+ is the characteristic thickness where viscous effects are significant. The existence of constant value for the viscous effects thickness is due to the competing balance between the fluid convection that is directed towards the solid surface and viscous diffusion that is directed away from the surface. Thus the vorticity produced at the solid surface is able to diffuse only to distances of order 
+  
+    
+      
+        
+          
+            ν
+            
+              /
+            
+            k
+          
+        
+      
+    
+    {\displaystyle {\sqrt {\nu /k}}}
+  
+; analogous situations that resembles this behavior occurs in asymptotic suction profile and von Kármán swirling flow. The velocity components, pressure and Navier–Stokes equations then become
+
+  
+    
+      
+        
+          v
+          
+            x
+          
+        
+        =
+        k
+        x
+        
+          F
+          ′
+        
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        −
+        
+          
+            ν
+            k
+          
+        
+        F
+        ,
+        
+        
+          
+            
+              
+                p
+                
+                  o
+                
+              
+              −
+              p
+            
+            ρ
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          k
+          
+            2
+          
+        
+        
+          x
+          
+            2
+          
+        
+        +
+        k
+        ν
+        
+          F
+          ′
+        
+        +
+        
+          
+            1
+            2
+          
+        
+        k
+        ν
+        
+          F
+          
+            2
+          
+        
+      
+    
+    {\displaystyle v_{x}=kxF',\quad v_{z}=-{\sqrt {\nu k}}F,\quad {\frac {p_{o}-p}{\rho }}={\frac {1}{2}}k^{2}x^{2}+k\nu F'+{\frac {1}{2}}k\nu F^{2}}
+  
+
+  
+    
+      
+        
+          F
+          ‴
+        
+        +
+        F
+        
+          F
+          ″
+        
+        −
+        
+          F
+          
+            ′
+            
+              2
+            
+          
+        
+        +
+        1
+        =
+        0
+      
+    
+    {\displaystyle F'''+FF''-F'^{2}+1=0}
+  
+
+The requirements that 
+  
+    
+      
+        (
+        
+          v
+          
+            x
+          
+        
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+        =
+        (
+        0
+        ,
+        0
+        )
+      
+    
+    {\displaystyle (v_{x},v_{z})=(0,0)}
+  
+ at 
+  
+    
+      
+        z
+        =
+        0
+      
+    
+    {\displaystyle z=0}
+  
+ and that 
+  
+    
+      
+        
+          v
+          
+            x
+          
+        
+        →
+        k
+        x
+      
+    
+    {\displaystyle v_{x}\rightarrow kx}
+  
+ as 
+  
+    
+      
+        z
+        →
+        ∞
+      
+    
+    {\displaystyle z\rightarrow \infty }
+  
+ translate to 
+
+  
+    
+      
+        F
+        (
+        0
+        )
+        =
+        0
+        ,
+         
+        
+          F
+          ′
+        
+        (
+        0
+        )
+        =
+        0
+        ,
+        
+          F
+          ′
+        
+        (
+        ∞
+        )
+        =
+        1.
+      
+    
+    {\displaystyle F(0)=0,\ F'(0)=0,F'(\infty )=1.}
+  
+
+The condition for 
+  
+    
+      
+        
+          v
+          
+            z
+          
+        
+      
+    
+    {\displaystyle v_{z}}
+  
+ as 
+  
+    
+      
+        z
+        →
+        ∞
+      
+    
+    {\displaystyle z\rightarrow \infty }
+  
+ cannot be prescribed and is obtained as a part of the solution. The problem formulated here is a special case of Falkner-Skan boundary layer. The solution can be obtained from numerical integrations and is shown in the figure. The asymptotic behaviors for large 
+  
+    
+      
+        η
+        →
+        ∞
+      
+    
+    {\displaystyle \eta \rightarrow \infty }
+  
+ are
+
+  
+    
+      
+        F
+        ∼
+        η
+        −
+        0.6479
+        ,
+        
+        
+          v
+          
+            x
+          
+        
+        ∼
+        k
+        x
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        ∼
+        −
+        k
+        (
+        z
+        −
+        
+          δ
+          
+            ∗
+          
+        
+        )
+        ,
+        
+        
+          δ
+          
+            ∗
+          
+        
+        =
+        0.6479
+        δ
+      
+    
+    {\displaystyle F\sim \eta -0.6479,\quad v_{x}\sim kx,\quad v_{z}\sim -k(z-\delta ^{*}),\quad \delta ^{*}=0.6479\delta }
+  
+
+where 
+  
+    
+      
+        
+          δ
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \delta ^{*}}
+  
+ is the displacement thickness.
+
+Stagnation point flow with a translating wall
+Hiemenz flow when the solid wall translates with a constant velocity 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ along the 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ was solved by Rott (1956). This problem describes the flow in the neighbourhood of the forward stagnation line occurring in a flow over a rotating cylinder. The required stream function is
+
+  
+    
+      
+        ψ
+        =
+        
+          
+            ν
+            k
+          
+        
+        x
+        F
+        (
+        η
+        )
+        +
+        U
+        δ
+        
+          ∫
+          
+            0
+          
+          
+            η
+          
+        
+        G
+        (
+        η
+        )
+        d
+        η
+      
+    
+    {\displaystyle \psi ={\sqrt {\nu k}}xF(\eta )+U\delta \int _{0}^{\eta }G(\eta )d\eta }
+  
+
+where the function 
+  
+    
+      
+        G
+        (
+        η
+        )
+      
+    
+    {\displaystyle G(\eta )}
+  
+ satisfies 
+
+  
+    
+      
+        
+          G
+          ″
+        
+        +
+        F
+        
+          G
+          ′
+        
+        −
+        
+          F
+          ′
+        
+        G
+        =
+        0
+        ,
+        
+        G
+        (
+        0
+        )
+        =
+        1
+        ,
+        
+        G
+        (
+        ∞
+        )
+        =
+        0
+      
+    
+    {\displaystyle G''+FG'-F'G=0,\quad G(0)=1,\quad G(\infty )=0}
+  
+
+The solution to the above equation is given by 
+  
+    
+      
+        G
+        (
+        η
+        )
+        =
+        
+          F
+          ″
+        
+        (
+        η
+        )
+        
+          /
+        
+        
+          F
+          ″
+        
+        (
+        0
+        )
+        .
+      
+    
+    {\displaystyle G(\eta )=F''(\eta )/F''(0).}
+  
+
+Oblique stagnation point flow
+If the incoming stream is perpendicular to the stagnation line, but approaches obliquely, the outer flow is not potential, but has a constant vorticity 
+  
+    
+      
+        −
+        
+          ζ
+          
+            o
+          
+        
+      
+    
+    {\displaystyle -\zeta _{o}}
+  
+.  The appropriate stream function for oblique stagnation point flow is given by 
+
+  
+    
+      
+        ψ
+        =
+        k
+        x
+        z
+        +
+        
+          
+            1
+            2
+          
+        
+        
+          ζ
+          
+            o
+          
+        
+        
+          z
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \psi =kxz+{\frac {1}{2}}\zeta _{o}z^{2}}
+  
+
+Viscous effects due to the presence of a solid wall was studied by Stuart (1959), Tamada (1979) and Dorrepaal (1986). In their approach, the streamfunction takes the form
+
+  
+    
+      
+        ψ
+        =
+        
+          
+            ν
+            k
+          
+        
+        x
+        F
+        (
+        η
+        )
+        +
+        
+          ζ
+          
+            o
+          
+        
+        
+          δ
+          
+            2
+          
+        
+        
+          ∫
+          
+            0
+          
+          
+            η
+          
+        
+        H
+        (
+        η
+        )
+        d
+        η
+      
+    
+    {\displaystyle \psi ={\sqrt {\nu k}}xF(\eta )+\zeta _{o}\delta ^{2}\int _{0}^{\eta }H(\eta )d\eta }
+  
+
+where the function 
+  
+    
+      
+        H
+        (
+        η
+        )
+      
+    
+    {\displaystyle H(\eta )}
+  
+ 
+
+  
+    
+      
+        
+          H
+          ″
+        
+        +
+        F
+        
+          H
+          ′
+        
+        −
+        
+          F
+          ′
+        
+        H
+        =
+        0
+        ,
+        
+        H
+        (
+        0
+        )
+        =
+        0
+        ,
+        
+        
+          H
+          ′
+        
+        (
+        ∞
+        )
+        =
+        1
+      
+    
+    {\displaystyle H''+FH'-F'H=0,\quad H(0)=0,\quad H'(\infty )=1}
+  
+.
+
+Homann flow
+
+The solution for axisymmetric stagnation point flow in the presence of a solid wall was first obtained by Homann (1936). A typical example of this flow is the forward stagnation point appearing in a flow past a sphere. Paul A. Libby (1974)(1976) extended Homann's work by allowing the solid wall to translate along its own plane with a constant speed and allowing constant suction or injection at the solid surface.  
+The solution for this problem is obtained in the cylindrical coordinate system 
+  
+    
+      
+        (
+        r
+        ,
+        θ
+        ,
+        z
+        )
+      
+    
+    {\displaystyle (r,\theta ,z)}
+  
+ by introducing
+
+  
+    
+      
+        η
+        =
+        
+          
+            z
+            
+              ν
+              
+                /
+              
+              k
+            
+          
+        
+        ,
+        
+        γ
+        =
+        −
+        
+          
+            V
+            
+              2
+              
+                
+                  k
+                  ν
+                
+              
+            
+          
+        
+        ,
+        
+        
+          v
+          
+            r
+          
+        
+        =
+        k
+        r
+        
+          F
+          ′
+        
+        (
+        η
+        )
+        +
+        U
+        cos
+        ⁡
+        θ
+        G
+        (
+        η
+        )
+        ,
+        
+        
+          v
+          
+            θ
+          
+        
+        =
+        −
+        U
+        sin
+        ⁡
+        θ
+        G
+        (
+        η
+        )
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        −
+        2
+        
+          
+            k
+            ν
+          
+        
+        F
+        (
+        η
+        )
+      
+    
+    {\displaystyle \eta ={\frac {z}{\sqrt {\nu /k}}},\quad \gamma =-{\frac {V}{2{\sqrt {k\nu }}}},\quad v_{r}=krF'(\eta )+U\cos \theta G(\eta ),\quad v_{\theta }=-U\sin \theta G(\eta ),\quad v_{z}=-2{\sqrt {k\nu }}F(\eta )}
+  
+
+where 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is the translational speed of the wall and 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ is the injection (or, suction) velocity at the wall. The problem is axisymmetric only when 
+  
+    
+      
+        U
+        =
+        0
+      
+    
+    {\displaystyle U=0}
+  
+. The pressure is given by
+
+  
+    
+      
+        
+          
+            
+              p
+              −
+              
+                p
+                
+                  o
+                
+              
+            
+            ρ
+          
+        
+        =
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          k
+          
+            2
+          
+        
+        
+          r
+          
+            2
+          
+        
+        −
+        2
+        k
+        ν
+        (
+        
+          F
+          
+            2
+          
+        
+        +
+        
+          F
+          ′
+        
+        )
+      
+    
+    {\displaystyle {\frac {p-p_{o}}{\rho }}=-{\frac {1}{2}}k^{2}r^{2}-2k\nu (F^{2}+F')}
+  
+
+The Navier–Stokes equations then reduce to
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  F
+                  ‴
+                
+                +
+                2
+                F
+                
+                  F
+                  ″
+                
+                −
+                
+                  F
+                  
+                    ′
+                    
+                      2
+                    
+                  
+                
+                +
+                1
+              
+              
+                
+                =
+                0
+                ,
+              
+            
+            
+              
+                
+                  G
+                  ″
+                
+                +
+                2
+                F
+                
+                  G
+                  ′
+                
+                −
+                
+                  F
+                  ′
+                
+                G
+              
+              
+                
+                =
+                0
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}F'''+2FF''-F'^{2}+1&=0,\\G''+2FG'-F'G&=0\end{aligned}}}
+  
+
+along with boundary conditions,
+
+  
+    
+      
+        F
+        (
+        0
+        )
+        =
+        γ
+        ,
+        
+        
+          F
+          ′
+        
+        (
+        0
+        )
+        =
+        0
+        ,
+        
+        
+          F
+          ′
+        
+        (
+        ∞
+        )
+        =
+        1
+        ,
+        
+        G
+        (
+        0
+        )
+        =
+        1
+        ,
+        
+        G
+        (
+        ∞
+        )
+        =
+        0.
+      
+    
+    {\displaystyle F(0)=\gamma ,\quad F'(0)=0,\quad F'(\infty )=1,\quad G(0)=1,\quad G(\infty )=0.}
+  
+
+When 
+  
+    
+      
+        U
+        =
+        V
+        =
+        0
+      
+    
+    {\displaystyle U=V=0}
+  
+, the classical Homann problem is recovered.
+
+Plane counterflows
+According to potential theory, two opposed jets form a stagnation point between them at their point of interaction. The flow near the stagnation point can by studied using a self-similar solution. This setup is widely used in combustion experiments. The initial study of impinging stagnation flows are due to C.Y. Wang. 
+Let two fluids with constant properties denoted with suffix 
+  
+    
+      
+        1
+        (
+        
+          top
+        
+        )
+        ,
+         
+        2
+        (
+        
+          bottom
+        
+        )
+      
+    
+    {\displaystyle 1({\text{top}}),\ 2({\text{bottom}})}
+  
+ flowing from opposite direction impinge, and assume the two fluids are immiscible and the interface (located at 
+  
+    
+      
+        y
+        =
+        0
+      
+    
+    {\displaystyle y=0}
+  
+) is planar. The velocity is given by
+
+  
+    
+      
+        
+          u
+          
+            1
+          
+        
+        =
+        
+          k
+          
+            1
+          
+        
+        x
+        ,
+        
+        
+          v
+          
+            1
+          
+        
+        =
+        −
+        
+          k
+          
+            1
+          
+        
+        y
+        ,
+        
+        
+          u
+          
+            2
+          
+        
+        =
+        
+          k
+          
+            2
+          
+        
+        x
+        ,
+        
+        
+          v
+          
+            2
+          
+        
+        =
+        −
+        
+          k
+          
+            2
+          
+        
+        y
+      
+    
+    {\displaystyle u_{1}=k_{1}x,\quad v_{1}=-k_{1}y,\quad u_{2}=k_{2}x,\quad v_{2}=-k_{2}y}
+  
+
+where 
+  
+    
+      
+        
+          k
+          
+            1
+          
+        
+        ,
+         
+        
+          k
+          
+            2
+          
+        
+      
+    
+    {\displaystyle k_{1},\ k_{2}}
+  
+ are strain rates of the fluids. At the interface, velocities, tangential stress and pressure must be continuous.
+Introducing the self-similar transformation,
+
+  
+    
+      
+        
+          η
+          
+            1
+          
+        
+        =
+        
+          
+            
+              
+                ν
+                
+                  1
+                
+              
+              
+                k
+                
+                  1
+                
+              
+            
+          
+        
+        y
+        ,
+        
+        
+          u
+          
+            1
+          
+        
+        =
+        
+          k
+          
+            1
+          
+        
+        x
+        
+          F
+          
+            1
+          
+          ′
+        
+        ,
+        
+        
+          v
+          
+            1
+          
+        
+        =
+        −
+        
+          
+            
+              ν
+              
+                1
+              
+            
+            
+              k
+              
+                1
+              
+            
+          
+        
+        
+          F
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \eta _{1}={\sqrt {\frac {\nu _{1}}{k_{1}}}}y,\quad u_{1}=k_{1}xF_{1}',\quad v_{1}=-{\sqrt {\nu _{1}k_{1}}}F_{1}}
+  
+
+  
+    
+      
+        
+          η
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                ν
+                
+                  2
+                
+              
+              
+                k
+                
+                  2
+                
+              
+            
+          
+        
+        y
+        ,
+        
+        
+          u
+          
+            2
+          
+        
+        =
+        
+          k
+          
+            2
+          
+        
+        x
+        
+          F
+          
+            2
+          
+          ′
+        
+        ,
+        
+        
+          v
+          
+            2
+          
+        
+        =
+        −
+        
+          
+            
+              ν
+              
+                2
+              
+            
+            
+              k
+              
+                2
+              
+            
+          
+        
+        
+          F
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \eta _{2}={\sqrt {\frac {\nu _{2}}{k_{2}}}}y,\quad u_{2}=k_{2}xF_{2}',\quad v_{2}=-{\sqrt {\nu _{2}k_{2}}}F_{2}}
+  
+
+results equations,
+
+  
+    
+      
+        
+          F
+          
+            1
+          
+          ‴
+        
+        +
+        
+          F
+          
+            1
+          
+        
+        
+          F
+          
+            1
+          
+          ″
+        
+        −
+        
+          F
+          
+            1
+          
+          
+            ′
+            
+              2
+            
+          
+        
+        +
+        1
+        =
+        0
+        ,
+        
+        
+          
+            
+              
+                p
+                
+                  o
+                  1
+                
+              
+              −
+              
+                p
+                
+                  1
+                
+              
+            
+            
+              ρ
+              
+                1
+              
+            
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          k
+          
+            1
+          
+          
+            2
+          
+        
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          k
+          
+            1
+          
+        
+        
+          ν
+          
+            1
+          
+        
+        
+          F
+          
+            1
+          
+          ′
+        
+        +
+        
+          
+            1
+            2
+          
+        
+        
+          k
+          
+            1
+          
+        
+        
+          ν
+          
+            1
+          
+        
+        
+          F
+          
+            1
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle F_{1}'''+F_{1}F_{1}''-F_{1}'^{2}+1=0,\quad {\frac {p_{o1}-p_{1}}{\rho _{1}}}={\frac {1}{2}}k_{1}^{2}x^{2}+k_{1}\nu _{1}F_{1}'+{\frac {1}{2}}k_{1}\nu _{1}F_{1}^{2}}
+  
+
+  
+    
+      
+        
+          F
+          
+            2
+          
+          ‴
+        
+        +
+        
+          F
+          
+            2
+          
+        
+        
+          F
+          
+            2
+          
+          ″
+        
+        −
+        
+          F
+          
+            2
+          
+          
+            ′
+            
+              2
+            
+          
+        
+        +
+        1
+        =
+        0
+        ,
+        
+        
+          
+            
+              
+                p
+                
+                  o
+                  2
+                
+              
+              −
+              
+                p
+                
+                  2
+                
+              
+            
+            
+              ρ
+              
+                2
+              
+            
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          k
+          
+            2
+          
+          
+            2
+          
+        
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          k
+          
+            2
+          
+        
+        
+          ν
+          
+            2
+          
+        
+        
+          F
+          
+            2
+          
+          ′
+        
+        +
+        
+          
+            1
+            2
+          
+        
+        
+          k
+          
+            2
+          
+        
+        
+          ν
+          
+            2
+          
+        
+        
+          F
+          
+            2
+          
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle F_{2}'''+F_{2}F_{2}''-F_{2}'^{2}+1=0,\quad {\frac {p_{o2}-p_{2}}{\rho _{2}}}={\frac {1}{2}}k_{2}^{2}x^{2}+k_{2}\nu _{2}F_{2}'+{\frac {1}{2}}k_{2}\nu _{2}F_{2}^{2}.}
+  
+
+The no-penetration condition at the interface and free stream condition far away from the stagnation plane become
+
+  
+    
+      
+        
+          F
+          
+            1
+          
+        
+        (
+        0
+        )
+        =
+        0
+        ,
+        
+        
+          F
+          
+            1
+          
+          ′
+        
+        (
+        ∞
+        )
+        =
+        1
+        ,
+        
+        
+          F
+          
+            2
+          
+        
+        (
+        0
+        )
+        =
+        0
+        ,
+        
+        
+          F
+          
+            2
+          
+          ′
+        
+        (
+        −
+        ∞
+        )
+        =
+        1.
+      
+    
+    {\displaystyle F_{1}(0)=0,\quad F_{1}'(\infty )=1,\quad F_{2}(0)=0,\quad F_{2}'(-\infty )=1.}
+  
+
+But the equations require two more boundary conditions. At 
+  
+    
+      
+        η
+        =
+        0
+      
+    
+    {\displaystyle \eta =0}
+  
+, the tangential velocities 
+  
+    
+      
+        
+          u
+          
+            1
+          
+        
+        =
+        
+          u
+          
+            2
+          
+        
+      
+    
+    {\displaystyle u_{1}=u_{2}}
+  
+, the tangential stress 
+  
+    
+      
+        
+          ρ
+          
+            1
+          
+        
+        
+          ν
+          
+            1
+          
+        
+        ∂
+        
+          u
+          
+            1
+          
+        
+        
+          /
+        
+        ∂
+        y
+        =
+        
+          ρ
+          
+            2
+          
+        
+        
+          ν
+          
+            2
+          
+        
+        ∂
+        
+          u
+          
+            2
+          
+        
+        
+          /
+        
+        ∂
+        y
+      
+    
+    {\displaystyle \rho _{1}\nu _{1}\partial u_{1}/\partial y=\rho _{2}\nu _{2}\partial u_{2}/\partial y}
+  
+ and the pressure 
+  
+    
+      
+        
+          p
+          
+            1
+          
+        
+        =
+        
+          p
+          
+            2
+          
+        
+      
+    
+    {\displaystyle p_{1}=p_{2}}
+  
+ are continuous. Therefore,
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  k
+                  
+                    1
+                  
+                
+                
+                  F
+                  
+                    1
+                  
+                  ′
+                
+                (
+                0
+                )
+              
+              
+                
+                =
+                
+                  k
+                  
+                    2
+                  
+                
+                
+                  F
+                  
+                    2
+                  
+                  ′
+                
+                (
+                0
+                )
+                ,
+              
+            
+            
+              
+                
+                  ρ
+                  
+                    1
+                  
+                
+                
+                  
+                    
+                      ν
+                      
+                        1
+                      
+                    
+                    
+                      k
+                      
+                        1
+                      
+                      
+                        3
+                      
+                    
+                  
+                
+                
+                  F
+                  
+                    1
+                  
+                  ″
+                
+                (
+                0
+                )
+              
+              
+                
+                =
+                
+                  ρ
+                  
+                    2
+                  
+                
+                
+                  
+                    
+                      ν
+                      
+                        2
+                      
+                    
+                    
+                      k
+                      
+                        2
+                      
+                      
+                        3
+                      
+                    
+                  
+                
+                
+                  F
+                  
+                    2
+                  
+                  ″
+                
+                (
+                0
+                )
+                ,
+              
+            
+            
+              
+                
+                  p
+                  
+                    o
+                    1
+                  
+                
+                −
+                
+                  ρ
+                  
+                    1
+                  
+                
+                
+                  ν
+                  
+                    1
+                  
+                
+                
+                  k
+                  
+                    1
+                  
+                
+                
+                  F
+                  
+                    1
+                  
+                  ′
+                
+                (
+                0
+                )
+              
+              
+                
+                =
+                
+                  p
+                  
+                    o
+                    2
+                  
+                
+                −
+                
+                  ρ
+                  
+                    2
+                  
+                
+                
+                  ν
+                  
+                    2
+                  
+                
+                
+                  k
+                  
+                    2
+                  
+                
+                
+                  F
+                  
+                    2
+                  
+                  ′
+                
+                (
+                0
+                )
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}k_{1}F_{1}'(0)&=k_{2}F_{2}'(0),\\\rho _{1}{\sqrt {\nu _{1}k_{1}^{3}}}F_{1}''(0)&=\rho _{2}{\sqrt {\nu _{2}k_{2}^{3}}}F_{2}''(0),\\p_{o1}-\rho _{1}\nu _{1}k_{1}F_{1}'(0)&=p_{o2}-\rho _{2}\nu _{2}k_{2}F_{2}'(0).\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        
+          ρ
+          
+            1
+          
+        
+        
+          k
+          
+            1
+          
+          
+            2
+          
+        
+        =
+        
+          ρ
+          
+            2
+          
+        
+        
+          k
+          
+            2
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \rho _{1}k_{1}^{2}=\rho _{2}k_{2}^{2}}
+  
+ (from outer inviscid problem) is used. Both 
+  
+    
+      
+        
+          F
+          
+            i
+          
+          ′
+        
+        (
+        0
+        )
+        ,
+        
+          F
+          
+            i
+          
+          ″
+        
+        (
+        0
+        )
+      
+    
+    {\displaystyle F_{i}'(0),F_{i}''(0)}
+  
+ are not known apriori, but derived from matching conditions. The third equation is determine variation of outer pressure 
+  
+    
+      
+        
+          p
+          
+            o
+            1
+          
+        
+        −
+        
+          p
+          
+            o
+            2
+          
+        
+      
+    
+    {\displaystyle p_{o1}-p_{o2}}
+  
+ due to the effect of viscosity. So there are only two parameters, which governs the flow, which are
+
+  
+    
+      
+        Λ
+        =
+        
+          
+            
+              k
+              
+                1
+              
+            
+            
+              k
+              
+                2
+              
+            
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ρ
+                  
+                    2
+                  
+                
+                
+                  ρ
+                  
+                    1
+                  
+                
+              
+            
+            )
+          
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        ,
+        
+        Γ
+        =
+        
+          
+            
+              ν
+              
+                2
+              
+            
+            
+              ν
+              
+                1
+              
+            
+          
+        
+      
+    
+    {\displaystyle \Lambda ={\frac {k_{1}}{k_{2}}}=\left({\frac {\rho _{2}}{\rho _{1}}}\right)^{1/2},\quad \Gamma ={\frac {\nu _{2}}{\nu _{1}}}}
+  
+
+then the boundary conditions become
+
+  
+    
+      
+        
+          F
+          
+            1
+          
+          ′
+        
+        (
+        0
+        )
+        =
+        Λ
+        
+          F
+          
+            2
+          
+          ′
+        
+        (
+        0
+        )
+        ,
+        
+        
+          F
+          
+            1
+          
+          ″
+        
+        (
+        0
+        )
+        =
+        
+          
+            
+              Γ
+              Λ
+            
+          
+        
+        
+          F
+          
+            2
+          
+          ″
+        
+        (
+        0
+        )
+      
+    
+    {\displaystyle F_{1}'(0)=\Lambda F_{2}'(0),\quad F_{1}''(0)={\sqrt {\frac {\Gamma }{\Lambda }}}F_{2}''(0)}
+  
+.
+
+Liñán's similarity solution
+Liñán's similarity solution, named after Amable Liñán, refers to a self-similar solution of the planar stagnation point flow involving gaseous flow with variable density, viscosity and transport coefficients, such as in flames problems in stagnation point flows. Liñán's similarity solution is described by the ansatz
+
+  
+    
+      
+        
+          v
+          
+            x
+          
+        
+        =
+        k
+        (
+        y
+        ,
+        z
+        ,
+        t
+        )
+        x
+        ,
+        
+        
+          v
+          
+            y
+          
+        
+        =
+        −
+        
+          k
+          
+            +
+            ∞
+          
+        
+        y
+        +
+        u
+        (
+        y
+        ,
+        z
+        ,
+        t
+        )
+        ,
+        
+        
+          v
+          
+            z
+          
+        
+        =
+        v
+        (
+        y
+        ,
+        z
+        ,
+        t
+        )
+        ,
+      
+    
+    {\displaystyle v_{x}=k(y,z,t)x,\quad v_{y}=-k_{+\infty }y+u(y,z,t),\quad v_{z}=v(y,z,t),}
+  
+
+  
+    
+      
+        p
+        =
+        
+          p
+          
+            +
+            ∞
+          
+        
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          k
+          
+            +
+            ∞
+          
+          
+            2
+          
+        
+        
+          ρ
+          
+            +
+            ∞
+          
+        
+        (
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            2
+          
+        
+        )
+        +
+        Π
+        (
+        y
+        ,
+        z
+        ,
+        t
+        )
+      
+    
+    {\displaystyle p=p_{+\infty }-{\frac {1}{2}}k_{+\infty }^{2}\rho _{+\infty }(x^{2}+z^{2})+\Pi (y,z,t)}
+  
+
+where 
+  
+    
+      
+        k
+        =
+        k
+        (
+        y
+        ,
+        z
+        ,
+        t
+        )
+      
+    
+    {\displaystyle k=k(y,z,t)}
+  
+ is the variable strain rate with 
+  
+    
+      
+        
+          k
+          
+            +
+            ∞
+          
+        
+        =
+        k
+        (
+        y
+        ,
+        +
+        ∞
+        ,
+        t
+        )
+      
+    
+    {\displaystyle k_{+\infty }=k(y,+\infty ,t)}
+  
+, 
+  
+    
+      
+        
+          p
+          
+            +
+            ∞
+          
+        
+      
+    
+    {\displaystyle p_{+\infty }}
+  
+ is the reference pressure at 
+  
+    
+      
+        z
+        →
+        +
+        ∞
+      
+    
+    {\displaystyle z\to +\infty }
+  
+ and 
+  
+    
+      
+        
+          ρ
+          
+            +
+            ∞
+          
+        
+        =
+        ρ
+        (
+        y
+        ,
+        +
+        ∞
+        ,
+        t
+        )
+      
+    
+    {\displaystyle \rho _{+\infty }=\rho (y,+\infty ,t)}
+  
+. Substituting these into the Navier–Stokes equations yields a two-dimensional set of equations, governing 
+  
+    
+      
+        k
+        ,
+        u
+        ,
+        v
+      
+    
+    {\displaystyle k,u,v}
+  
+ and 
+  
+    
+      
+        Π
+      
+    
+    {\displaystyle \Pi }
+  
+.

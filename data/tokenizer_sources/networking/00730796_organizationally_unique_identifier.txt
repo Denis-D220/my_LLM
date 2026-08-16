@@ -1,0 +1,120 @@
+An organizationally unique identifier (OUI) is a 24-bit number that uniquely identifies a vendor, manufacturer, or other organization.
+OUIs are purchased from the Institute of Electrical and Electronics Engineers (IEEE) Registration Authority by the assignee (IEEE term for the vendor, manufacturer, or other organization). Only an assignment from the MA-L registry assigns a new OUI. They are used to uniquely identify individual pieces of equipment through derived identifiers such as MAC addresses, Subnetwork Access Protocol protocol identifiers, World Wide Names for Fibre Channel devices or vendor blocks in EDID.
+In MAC addresses, the OUI is combined with a 24-bit number (assigned by the assignee of the OUI) to form the address. The first three octets of the address are the OUI.
+
+Representation and formatting conventions
+The following terms are defined (either implicitly or explicitly) in IEEE Standard 802-2001 for use in referring to the various representations and formats of OUIs and the identifiers that may be created using them.
+
+Hexadecimal representation
+“The representation of a sequence of octet values in which the values of the individual octets are displayed in order from left to right, with each octet value represented as a two-digit hexadecimal numeral, and with the resulting pairs of hexadecimal digits separated by hyphens. The order of the hexadecimal digits in each pair, and the mapping between the hexadecimal digits and the bits of the octet value, are derived by interpreting the bits of the octet value as a binary numeral using the normal mathematical rules for digit significance.” (See hexadecimal).
+
+Canonical format
+"The format of a MAC data frame in which the octets of any MAC addresses conveyed in the MAC user data field have the same bit ordering as in the Hexadecimal Representation." (See MAC data frame, MAC addresses)
+
+Significance order
+This appears from the context of the IEEE Standard 802-2001 to be another term for the 'Hexadecimal Representation' – i.e., "by interpreting the bits of the octet value as a binary numeral using the normal mathematical rules for digit significance."
+
+Bit-reversed representation
+"The representation of a sequence of octet values in which the values of the individual octets are displayed in order from left to right, with each octet value represented as a two-digit hexadecimal numeral, and with the resulting pairs of hexadecimal digits separated by colons. The order of the hexadecimal digits in each pair, and the mapping between the hexadecimal digits and the bits of the octet value, are derived by reversing the order of the bits in the octet value and interpreting the resulting bit sequence as a binary numeral using the normal mathematical rules for digit significance."
+The bit-reversed representation corresponds to the convention of transmitting the least-significant-bit of each byte first in serial data communications.
+
+Noncanonical representation
+"The format of a MAC data frame in which the octets of MAC addresses conveyed in the MAC user data field have the same bit ordering as in the Bit-reversed representation."
+
+Transmission order
+The order in which an octet or a sequence of octets is transmitted over the transmission medium – this order normally corresponds to the bit-reversed representation.
+
+Example
+An OUI consisting of the hexadecimal digits ACDE4816 would be represented as follows:
+The following figure shows the position of these bits in significance order:
+
+|            OUI                 |
+| Octet 0  | Octet 1  | Octet 2  |
+|  nibble  |  nibble  |  nibble  |
+|  __||__  |  __||__  |  __||__  |
+| |      | | |      | | |      | |
+| 0  ||  1 | 2  ||  3 | 4  ||  5 |
+|bits||bits|bits||bits|bits||bits|
+|7654||3210|7654||3210|7654||3210|
+|||||  |||||||||  |||||||||  |||||
+|  A     C |  D     E |  4     8 |
+|1010  1100|1101  1110|0100  1000|
+ |    |  ||                 |   |
+ |    |  ||                 |   least-significant-bit of OUI
+ |    |  ||                 least-significant-byte of OUI
+ |    |  |least-significant-bit of first octet of OUI = I/G or M bit
+ |    |  next-to-least-significant-bit of first octet of OUI = U/L or X bit
+ |    most-significant-byte of OUI
+ most-significant-bit of OUI
+
+Potential for confusion in token ring
+Ethernet users are used to seeing canonical form, such as in the output of the ifconfig command. Canonical form is the intended standard.
+However, since IEEE 802.3 (Ethernet) and IEEE 802.4 (Token Bus) send the bytes (octets) over the wire, left-to-right, with least significant bit in each byte first, while IEEE 802.5 (Token Ring) and IEEE 802.6 (FDDI) send the bytes over the wire with the most significant bit first, confusion may arise when an OUI in the latter scenario is represented with bits reversed from the canonical representation. So for instance, an OUI whose canonical form is ACDE48 could be seen written as 357B12 if translation is done improperly or inconsistently. The latter form (bit-reversed or noncanonical representation), may also be referred to in the literature as "MSB format", "IBM format", or "Token Ring format" for this reason. RFC2469 explains the problem in more detail.
+
+Format
+The OUI is normally discussed and represented as a set of octets in hexadecimal notation separated by dashes (i.e., FF-FF-FF) or as a set of octets separated by colons in bit-reversed notation (i.e., FF:FF:FF).
+The two least-significant-bits of the second nibble of the first octet of the hexadecimal representation (i.e., the two least significant bits of the first octet) of the OUI are reserved as flag bits for some protocols (e.g., 'M' bit and 'X' bit), flags to indicate whether the address is part of an individual (unicast) or group (multicast) address block (e.g., Individual/Group [I/G] bit or Unicast/Multicast [U/M] bit), flags to indicate whether an address is universally or locally administered (e.g., Universal/Local [U/L] bit), etc., and should not contain the values 1, 2, 3, 5, 6, 7, 9, a, b, d, e, or f, unless these values reflect the true meaning of these flag bits – if the organization that owns the OUI does set one of these bits when creating an identifier, then the value of the second nibble of the first octet changes accordingly in representations of the OUI (e.g., if the hexadecimal value of the second nibble of the first octet is 'C' and the least-significant-bit is set, then the value becomes 'D').
+Notes:
+
+"Three-octet values occupying the same fields as OUIs can occupy, but with the next-to-LSB of the first octet set to 1, are locally assigned and have no relationship to the IEEE-assigned values..."
+The IEEE also has Company ID (CID) where the four least significant bits of Octet 0 are designated the M bit, X bit, Y bit, and Z bit, respectively, beginning with the least significant bit. In the CID, the M, X, Y, and Z bits have the values 0, 1, 0, and 1, respectively.
+
+Types of identifiers
+
+32-bit context-dependent identifier (CDI-32)
+The CDI-32 was historically recommended as a context-dependent identifier that was formed by concatenating the 24-bit OUI with an 8-bit extension identifier that is assigned by the organization that purchased the OUI – the resulting identifier was generally represented as a set of octets separated by dashes (hexadecimal notation) or colons (bit-reversed notation) as in FF-FF-FF-FF or FF:FF:FF:FF, as a string of 4 bytes as in {FF,FF,FF,FF}, or as a base 16 number as in FFFFFFFF16.
+
+40-bit context-dependent identifier (CDI-40)
+The CDI-40 was historically recommended as a context-dependent identifier that was formed by concatenating the 24-bit OUI with a 16-bit extension or by concatenating a 36-bit OUI-36 with a 4-bit extension. In either case, the extension was assigned by the organization that purchased the OUI. The resulting identifier was generally represented as a set of octets separated by dashes (hexadecimal notation) or colons (bit-reversed notation) as in FF-FF-FF-FF-FF or FF:FF:FF:FF:FF, as a string of 5 bytes as in {FF,FF,FF,FF,FF}, or as a base 16 number as in FFFFFFFFFF16.
+Note: There were also IAB based CDI-40 sequences that were formed by combining the 36-bit IEEE assigned IAB base value with the 4-bit extension identifier assigned by the organization – e.g., if the IEEE assigned IAB base value is 0x0050C257A and the 4-bit extension identifier is 0xF, then the CDI-40 values generated by combining these two numbers are from 0x0050C257AF00 to 0x0050C257AFFF
+
+48-bit media access control identifier (MAC-48)
+The IEEE now considers the label MAC-48 to be an obsolete term which was previously used to refer to a specific type of EUI-48 identifier used to address hardware interfaces (e.g., Network Interface Controllers and other network hardware) within existing IEEE 802 based networking applications and should not be used in the future. Instead, the term EUI-48 should be used by manufacturers and others in the field for this purpose – i.e., MAC-48 identifier is identical to the EUI-48 identifier and is an obsolete label for it, although some distinction is still made when encapsulating MAC-48 and EUI-48 identifiers within EUI-64 identifiers (but now, the encapsulating mechanism is also deprecated).
+
+48-bit extended unique identifier (EUI-48)
+The EUI-48 is an identifier that is formed by concatenating the 24-bit OUI with a 24-bit extension identifier that is assigned by the organization that purchased the OUI – the resulting identifier is generally represented as a set of octets separated by dashes (hexadecimal notation) or colons (bit-reversed notation) as in FF-FF-FF-FF-FF-FF or FF:FF:FF:FF:FF:FF, as a string of 6 bytes as in {FF,FF,FF,FF,FF,FF}, or as a base 16 number as in FFFFFFFFFFFF16.
+
+60-bit extended unique identifier (EUI-60)
+The EUI-60 is an identifier that is formed by concatenating the 24-bit OUI with a 36-bit extension identifier that is assigned by the organization that purchased the OUI – the resulting identifier is generally represented by a string of 15 nibbles, as a base 16 number as in FFFFFFFFFFFFFFF16, or as FF-FF-FF:F.F.F.F.F.F.F.F.F as an EUI-64 value.
+Note: This identifier was previously used as the worldwide name (WWN) identifier within some storage systems. Its use is now considered deprecated by the IEEE and the EUI-64 identifier should be used in the future for this and all other purposes for which the EUI-60 was previously used. Some of the storage systems in which an OUI-based variant was used are Fibre Channel, and Serial Attached SCSI (SAS).
+
+64-bit extended unique identifier (EUI-64)
+The EUI-64 is an identifier that is formed by concatenating the 24-bit OUI with a 40-bit extension identifier that is assigned by the organization that purchased the OUI – the resulting identifier is generally represented as a set of octets separated by dashes (hexadecimal notation) or colons (bit-reversed notation) as in FF-FF-FF-FF-FF-FF-FF-FF or FF:FF:FF:FF:FF:FF:FF:FF, as a string of 8 bytes as in {FF,FF,FF,FF,FF,FF,FF,FF}, or as a base 16 number as in FFFFFFFFFFFFFFFF16.
+Note: According to the IEEE guidelines, the first four digits of the organizationally assigned identifier (i.e., the first four digits of the extension identifier) portion of an EUI-64 “shall not be FFFE16 or FFFF16” (i.e., EUI-64 identifiers of the form ccccccFFFEeeeeee and ccccccFFFFeeeeee are not allowed) – this is to support the encapsulation of EUI-48 (FFFE16) and MAC-48 (FFFF16) values into EUI-64 values (though now the encapsulation is deprecated).
+
+Other identifiers
+IPv6 uses a 64-bit Modified Extended Unique Identifier (Modified EUI-64) in the lower half of some IPv6 addresses. A Modified EUI-64 is an EUI-64 with the U/L bit inverted.
+There are other identifiers that may be formed using the OUI but those listed above are the most commonly used.
+
+Encapsulating
+Mapping an EUI-48 to an EUI-64 is deprecated. The mapping is described here for historical reasons.
+Other identifiers, such as MAC-48 and EUI-48 values, can be contained within a larger identifier or 'container', such as EUI-64, by creating the larger identifier through a process of combining the smaller identifier with specified values placed in specified bit-positions within the larger identifier – this process is known as 'encapsulation' and is provided for the purpose of easing the transition from MAC-48 and EUI-48 to EUI-64 and to provide a mechanism for the conversion of MAC-48 and EUI-48 identifiers to EUI-64 in such a way that duplicate or conflicting values are avoided.
+
+Encapsulation examples
+Encapsulation of MAC-48 within EUI-64 example:
+Assuming that an organization has registered the OUI of AC-DE-48 and that the organization has created the MAC-48 value of AC-DE-48-23-45-67 by concatenating the extension identifier 23-45-67, this MAC-48 identifier has the following binary transmission order:
+
+The same MAC-48 identifier after encapsulation within an EUI-64 has the following transmission order:
+
+The same MAC-48 identifier after encapsulation within an EUI-64 has the following significance order:
+
+Encapsulation of EUI-48 within EUI-64 example:
+Assuming that an organization has registered the OUI of AC-DE-48 and that the organization has created the EUI-48 value of AC-DE-48-23-45-67 by concatenating the extension identifier 23-45-67, this EUI-48 identifier has the following format in significance order:
+
+The same EUI-48 identifier after encapsulation within an EUI-64 has the following format in significance order:
+
+Encapsulation of MAC-48 or EUI-48 within modified EUI-64 example:
+In the encapsulation within a Modified EUI-64 a MAC-48 is treated as an EUI-48 and the U/L bit is inverted.
+Assuming that an organization has registered the OUI of AC-DE-48 and that the organization has created the MAC-48 or EUI-48 value of AC-DE-48-23-45-67 by concatenating the extension identifier 23-45-67, this MAC-48 or EUI-48 identifier has the following format in significance order:
+
+The same MAC-48 or EUI-48 identifier after encapsulation within a Modified EUI-64 has the following format in significance order:
+
+NAA Name_Identifier
+Network Address Authority (NAA) Name_Identifier formats define the first nibble (4 bits) to define the format of the identifier:
+
+This encapsulation is used in Fibre Channel and SAS, and is also supported in iSCSI in RFC 3980. This addition requires either a shortened vendor-specific identifier field, or some OUI bits are assumed to be 0, such as when using EUI-64 Mapped format.
+
+Individual Address Block
+An Individual Address Block (IAB) is an inactive registry activity which has been replaced by the MA-S registry product as of 1 January 2014. The IAB uses a MA-L (and OUI) belonging to the IEEE Registration Authority, concatenated with 12 additional IEEE-provided bits (for a total of 36 bits), leaving only 12 bits for the IAB owner to assign to their (up to 4096) individual devices. An IAB is ideal for organizations requiring not more than 4096 unique 48-bit numbers (EUI-48). Unlike an OUI, which allows the assignee to assign values in various different number spaces (for example, EUI-48, EUI-64, and the various context-dependent identifier number spaces), the Individual Address Block could only be used to assign EUI-48 identifiers. All other potential uses based on the OUI from which the IABs are allocated are reserved and remain the property of the IEEE Registration Authority. It should also be noted that, between 2007 and September 2012, the OUI value 00:50:C2 was used for IAB assignments. After September 2012, the value 40:D8:55 was used. The owners of an already assigned IAB may continue to use the assignment.
+The OUI-36 is a deprecated registry activity name, which has been replaced by the MA-S registry product name as of 1 January 2014. This registry activity includes both a 36-bit unique number used in some standards and the assignment of a block of EUI-48 and EUI-64 identifiers (while owner of IAB cannot assign EUI-64) by the IEEE Registration Authority. The owner of an already assigned OUI-36 registry product may continue to use the assignment.
+Example of EUI-48 created within an IAB: An EUI-48 identifier is formed by combining the 36-bit IEEE-assigned IAB base value with a 12-bit extension identifier assigned by the organization – e.g., if the IEEE-assigned IAB base-16 value is 0x0050C257A and the 12-bit extension identifier is 0xFFF, then the EUI-48 value generated by combining these two numbers is 0x0050C257AFFF.

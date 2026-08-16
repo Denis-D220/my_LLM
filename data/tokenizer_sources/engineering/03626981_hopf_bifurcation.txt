@@ -1,0 +1,5261 @@
+In the mathematics of dynamical systems and differential equations, a Hopf bifurcation is said to occur when varying a parameter of the system causes the set of solutions (trajectories) to change from being attracted to (or repelled by) a fixed point, and instead become attracted to (or repelled by) an oscillatory, periodic solution. The Hopf bifurcation is a two-dimensional analog of the pitchfork bifurcation.
+Many different kinds of systems exhibit Hopf bifurcations, from radio oscillators to railroad bogies. Trailers towed behind automobiles become infamously unstable if loaded incorrectly, or if designed with the wrong geometry. This offers an intuitive example of a Hopf bifurcation in the ordinary world, where stable motion becomes unstable and oscillatory as a parameter is varied. Fluid flows also exhibit Hopf bifurcation behavior when the transition from steady to unsteady laminar flow occurs.
+The general theory of how the solution sets of dynamical systems change in response to changes of parameters is called bifurcation theory; the term bifurcation arises, as the set of solutions typically split into several classes. Stability theory pursues the general theory of stability in mechanical, electronic and biological systems.
+The conventional approach to locating Hopf bifurcations is to work with the Jacobian matrix associated with the system of differential equations. When this matrix has a pair of complex-conjugate eigenvalues that cross the imaginary axis as a parameter is varied, that point is the bifurcation. That crossing is associated with a stable fixed point "bifurcating" into a limit cycle.
+A Hopf bifurcation is also known as a Poincaré–Andronov–Hopf bifurcation, named after Henri Poincaré, Aleksandr Andronov and Eberhard Hopf.
+
+Overview
+
+Normal form
+Hopf bifurcations occur in a large variety of dynamical systems described by differential equations. Near such a bifurcation, a two-dimensional subset  of the dynamical system is approximated by a normal form, canonically expressed as the following time-dependent differential equation:
+
+  
+    
+      
+        
+          
+            
+              d
+              z
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        z
+        
+          (
+          
+            (
+            λ
+            +
+            i
+            )
+            +
+            b
+            
+              |
+            
+            z
+            
+              
+                |
+              
+              
+                2
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle {\frac {dz}{dt}}=z\left((\lambda +i)+b|z|^{2}\right)}
+  
+
+Here 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+ is the dynamical variable; it is a complex number. The parameter 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ is real, and 
+  
+    
+      
+        b
+        =
+        α
+        +
+        i
+        β
+      
+    
+    {\displaystyle b=\alpha +i\beta }
+  
+ is a complex parameter. The number 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ is called the first Lyapunov coefficient. The above has a simple exact solution, given below. This solution exhibits two distinct behaviors, depending on whether 
+  
+    
+      
+        λ
+        >
+        0
+      
+    
+    {\displaystyle \lambda >0}
+  
+ or 
+  
+    
+      
+        λ
+        <
+        0
+      
+    
+    {\displaystyle \lambda <0}
+  
+. This change of behavior, as a function of 
+  
+    
+      
+        λ
+        ,
+      
+    
+    {\displaystyle \lambda ,}
+  
+ is termed the "Hopf bifurcation".
+The study of Hopf bifurcations is not so much the study of the above and its solution, as it is the study of how such two-dimensional subspaces can be identified and mapped onto this normal form. One approach is to examine the eigenvalues of the Jacobian matrix of the differential equations as a parameter is varied near the bifurcation point.
+
+Simplified normal form
+For example, if we analyze the following system of two ordinary differential equations depending on one parameter 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+,
+  
+    
+      
+        
+          
+            {
+            
+              
+                
+                  
+                    
+                      
+                        
+                          d
+                        
+                        
+                          x
+                          
+                            1
+                          
+                        
+                      
+                      
+                        d
+                        t
+                      
+                    
+                  
+                  =
+                  α
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  −
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  −
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  (
+                  
+                    x
+                    
+                      1
+                    
+                    
+                      2
+                    
+                  
+                  +
+                  
+                    x
+                    
+                      2
+                    
+                    
+                      2
+                    
+                  
+                  )
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          d
+                        
+                        
+                          x
+                          
+                            2
+                          
+                        
+                      
+                      
+                        d
+                        t
+                      
+                    
+                  
+                  =
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  +
+                  α
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  −
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  (
+                  
+                    x
+                    
+                      1
+                    
+                    
+                      2
+                    
+                  
+                  +
+                  
+                    x
+                    
+                      2
+                    
+                    
+                      2
+                    
+                  
+                  )
+                
+              
+            
+            
+          
+        
+         
+        ,
+      
+    
+    {\displaystyle {\begin{cases}{\frac {\mathrm {d} x_{1}}{\mathrm {dt} }}=\alpha x_{1}-x_{2}-x_{1}(x_{1}^{2}+x_{2}^{2})\\{\frac {\mathrm {d} x_{2}}{\mathrm {dt} }}=x_{1}+\alpha x_{2}-x_{2}(x_{1}^{2}+x_{2}^{2})\end{cases}}\ ,}
+  
+and examine the Jacobian matrix 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+  
+ of the equilibrium solution 
+  
+    
+      
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        )
+        =
+        (
+        0
+        ,
+        0
+        )
+      
+    
+    {\displaystyle (x_{1},x_{2})=(0,0)}
+  
+, we find that it is of the form
+  
+    
+      
+        J
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  −
+                  1
+                
+              
+              
+                
+                  1
+                
+                
+                  α
+                
+              
+            
+            )
+          
+        
+        ,
+      
+    
+    {\displaystyle J={\begin{pmatrix}\alpha &-1\\1&\alpha \end{pmatrix}},}
+  
+with eigenvalues 
+  
+    
+      
+        
+          λ
+          
+            1
+            ;
+            2
+          
+        
+        =
+        α
+        ±
+        
+          i
+        
+      
+    
+    {\displaystyle \lambda _{1;2}=\alpha \pm \mathrm {i} }
+  
+ (where 
+  
+    
+      
+        
+          i
+        
+      
+    
+    {\displaystyle \mathrm {i} }
+  
+ is the imaginary unit). This allows us to rewrite the system by introducing a new complex variable 
+  
+    
+      
+        z
+        =
+        
+          x
+          
+            1
+          
+        
+        +
+        
+          i
+        
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle z=x_{1}+\mathrm {i} x_{2}}
+  
+ such that 
+  
+    
+      
+        
+          
+            z
+            ¯
+          
+        
+        =
+        
+          x
+          
+            1
+          
+        
+        −
+        
+          i
+        
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {\overline {z}}=x_{1}-\mathrm {i} x_{2}}
+  
+, and consequently, 
+  
+    
+      
+        
+          |
+        
+        
+          
+            z
+            ¯
+          
+        
+        
+          
+            |
+          
+          
+            2
+          
+        
+        =
+        z
+        
+          
+            z
+            ¯
+          
+        
+        =
+        
+          x
+          
+            1
+          
+          
+            2
+          
+        
+        +
+        
+          x
+          
+            2
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle |{\overline {z}}|^{2}=z{\overline {z}}=x_{1}^{2}+x_{2}^{2}}
+  
+. Due to the linearity of differentiation,
+  
+    
+      
+        
+          
+            
+              
+                d
+              
+              z
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            
+              
+                d
+              
+              
+                x
+                
+                  1
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        +
+        
+          i
+        
+        
+          
+            
+              
+                d
+              
+              
+                x
+                
+                  2
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        α
+        (
+        
+          x
+          
+            1
+          
+        
+        +
+        
+          i
+        
+        
+          x
+          
+            2
+          
+        
+        )
+        +
+        
+          i
+        
+        (
+        
+          x
+          
+            1
+          
+        
+        +
+        
+          i
+        
+        
+          x
+          
+            2
+          
+        
+        )
+        −
+        (
+        
+          x
+          
+            1
+          
+        
+        +
+        
+          i
+        
+        
+          x
+          
+            2
+          
+        
+        )
+        (
+        
+          x
+          
+            1
+          
+          
+            2
+          
+        
+        +
+        
+          x
+          
+            2
+          
+          
+            2
+          
+        
+        )
+        =
+        (
+        α
+        +
+        
+          i
+        
+        )
+        z
+        −
+        z
+        
+          |
+        
+        z
+        
+          
+            |
+          
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {\mathrm {d} z}{\mathrm {dt} }}={\frac {\mathrm {d} x_{1}}{\mathrm {dt} }}+\mathrm {i} {\frac {\mathrm {d} x_{2}}{\mathrm {dt} }}=\alpha (x_{1}+\mathrm {i} x_{2})+\mathrm {i} (x_{1}+\mathrm {i} x_{2})-(x_{1}+\mathrm {i} x_{2})(x_{1}^{2}+x_{2}^{2})=(\alpha +\mathrm {i} )z-z|z|^{2},}
+  
+which is the desired normal form, with parameters 
+  
+    
+      
+        λ
+        =
+        α
+      
+    
+    {\displaystyle \lambda =\alpha }
+  
+ and 
+  
+    
+      
+        b
+        =
+        −
+        z
+      
+    
+    {\displaystyle b=-z}
+  
+.
+
+Representation in polar coordinates
+Since the example above is expressed in terms of complex variables, we can easily convert it to a two-variable system of ordinary differential equations using polar coordinates. Setting 
+  
+    
+      
+        z
+        =
+        r
+        
+          
+            e
+          
+          
+            
+              i
+            
+            φ
+          
+        
+      
+    
+    {\displaystyle z=r\mathrm {e} ^{\mathrm {i} \varphi }}
+  
+ (see Complex number § Polar form), we obtain
+  
+    
+      
+        
+          
+            
+              
+                d
+              
+              z
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            
+              
+                d
+              
+              r
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            e
+          
+          
+            
+              i
+            
+            φ
+          
+        
+        +
+        r
+        
+          i
+        
+        
+          
+            
+              
+                d
+              
+              φ
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            e
+          
+          
+            
+              i
+            
+            φ
+          
+        
+        =
+        r
+        
+          
+            e
+          
+          
+            
+              i
+            
+            φ
+          
+        
+        (
+        α
+        +
+        
+          i
+        
+        −
+        
+          r
+          
+            2
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle {\frac {\mathrm {d} z}{\mathrm {dt} }}={\frac {\mathrm {d} r}{\mathrm {dt} }}\mathrm {e} ^{\mathrm {i} \varphi }+r\mathrm {i} {\frac {\mathrm {d} \varphi }{\mathrm {dt} }}\mathrm {e} ^{\mathrm {i} \varphi }=r\mathrm {e} ^{\mathrm {i} \varphi }(\alpha +\mathrm {i} -r^{2}).}
+  
+Dividing by 
+  
+    
+      
+        
+          
+            e
+          
+          
+            i
+            φ
+          
+        
+      
+    
+    {\displaystyle \mathrm {e} ^{i\varphi }}
+  
+ and simplifying yields the equation 
+  
+    
+      
+        
+          
+            
+              
+                d
+              
+              r
+            
+            
+              d
+              t
+            
+          
+        
+        +
+        
+          i
+        
+        r
+        
+          
+            
+              
+                d
+              
+              φ
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        r
+        (
+        α
+        −
+        
+          r
+          
+            2
+          
+        
+        )
+        +
+        
+          i
+        
+        r
+      
+    
+    {\displaystyle {\frac {\mathrm {d} r}{\mathrm {dt} }}+\mathrm {i} r{\frac {\mathrm {d} \varphi }{\mathrm {dt} }}=r(\alpha -r^{2})+\mathrm {i} r}
+  
+. Since both 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ and 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ are real variables, the real and imaginary components can be separated, and we get the resulting polar form of the system:
+  
+    
+      
+        
+          
+            {
+            
+              
+                
+                  
+                    
+                      
+                        
+                          d
+                        
+                        r
+                      
+                      
+                        d
+                        t
+                      
+                    
+                  
+                  =
+                  r
+                  (
+                  α
+                  −
+                  
+                    r
+                    
+                      2
+                    
+                  
+                  )
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          d
+                        
+                        φ
+                      
+                      
+                        d
+                        t
+                      
+                    
+                  
+                  =
+                  1
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{cases}{\frac {\mathrm {d} r}{\mathrm {dt} }}=r(\alpha -r^{2})\\{\frac {\mathrm {d} \varphi }{\mathrm {dt} }}=1\end{cases}}}
+  
+Alternatively, we could have derived the same polar representation directly by setting 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        =
+        r
+        cos
+        ⁡
+        (
+        φ
+        )
+      
+    
+    {\displaystyle x_{1}=r\cos(\varphi )}
+  
+ and 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        =
+        r
+        sin
+        ⁡
+        (
+        φ
+        )
+      
+    
+    {\displaystyle x_{2}=r\sin(\varphi )}
+  
+.
+
+Exact solution
+
+The normal form is effectively the Stuart–Landau equation, written with a different parametrization. It has a simple exact solution in polar coordinates. Writing 
+  
+    
+      
+        z
+        =
+        r
+        
+          e
+          
+            i
+            θ
+          
+        
+      
+    
+    {\displaystyle z=re^{i\theta }}
+  
+ and considering the real and imaginary parts as distinct, one obtains a pair of ordinary differential equations:
+
+  
+    
+      
+        
+          
+            
+              d
+              θ
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        1
+        +
+        β
+        
+          r
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {\frac {d\theta }{dt}}=1+\beta r^{2}}
+  
+
+and
+
+  
+    
+      
+        
+          
+            
+              d
+              r
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        r
+        
+          (
+          
+            λ
+            +
+            α
+            
+              r
+              
+                2
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle {\frac {dr}{dt}}=r\left(\lambda +\alpha r^{2}\right).}
+  
+
+The second equation can be solved by observing that it is linear in 
+  
+    
+      
+        1
+        
+          /
+        
+        
+          r
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 1/r^{2}}
+  
+. That is,
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            
+              1
+              
+                r
+                
+                  2
+                
+              
+            
+          
+          )
+        
+        =
+        −
+        2
+        
+          (
+          
+            
+              
+                λ
+                
+                  r
+                  
+                    2
+                  
+                
+              
+            
+            +
+            α
+          
+          )
+        
+      
+    
+    {\displaystyle {\frac {d}{dt}}\left({\frac {1}{r^{2}}}\right)=-2\left({\frac {\lambda }{r^{2}}}+\alpha \right)}
+  
+
+which is just the shifted exponential equation. Re-arranging gives the generic solution 
+
+  
+    
+      
+        r
+        (
+        t
+        )
+        =
+        
+          r
+          
+            0
+          
+        
+        
+          
+            
+              λ
+              
+                
+                  (
+                  
+                    λ
+                    +
+                    α
+                    
+                      r
+                      
+                        0
+                      
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                
+                  e
+                  
+                    −
+                    2
+                    λ
+                    t
+                  
+                
+                −
+                α
+                
+                  r
+                  
+                    0
+                  
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle r(t)=r_{0}{\sqrt {\frac {\lambda }{\left(\lambda +\alpha r_{0}^{2}\right)e^{-2\lambda t}-\alpha r_{0}^{2}}}}}
+  
+
+Depending on the sign of 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ and 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+, the trajectory of a point can be seen to spiral in to the origin, spiral out to infinity, or to approach a limit cycle.
+
+Supercritical and subcritical Hopf bifurcations
+
+The limit cycle is orbitally stable if the first Lyapunov coefficient 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ is negative, and if 
+  
+    
+      
+        λ
+        >
+        0.
+      
+    
+    {\displaystyle \lambda >0.}
+  
+ Then the bifurcation is said to be supercritical. Otherwise it is unstable and the bifurcation is subcritical.
+If 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ is negative then there is a stable limit cycle for 
+  
+    
+      
+        λ
+        >
+        0
+        :
+      
+    
+    {\displaystyle \lambda >0:}
+  
+
+  
+    
+      
+        z
+        (
+        t
+        )
+        =
+        r
+        
+          e
+          
+            i
+            ω
+            t
+          
+        
+      
+    
+    {\displaystyle z(t)=re^{i\omega t}}
+  
+
+where
+
+  
+    
+      
+        r
+        =
+        
+          
+            −
+            λ
+            
+              /
+            
+            α
+          
+        
+        
+        
+           and 
+        
+        
+        ω
+        =
+        1
+        +
+        β
+        
+          r
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle r={\sqrt {-\lambda /\alpha }}\quad {\text{ and }}\quad \omega =1+\beta r^{2}.}
+  
+
+This is the supercritical regime.
+If 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ is positive then there is an unstable limit cycle for 
+  
+    
+      
+        λ
+        <
+        0.
+      
+    
+    {\displaystyle \lambda <0.}
+  
+  The bifurcation is said to be subcritical. This classification into sub and super-critical bifurcations is analogous to that of the pitchfork bifurcation.
+
+Jacobian
+The Hopf bifurcation can be understood by examining the eigenvalues of the Jacobian matrix for the normal form. This is most readily done by re-writing the normal form in Cartesian coordinates 
+  
+    
+      
+        z
+        =
+        x
+        +
+        i
+        y
+      
+    
+    {\displaystyle z=x+iy}
+  
+. It then has the form
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      x
+                      ˙
+                    
+                  
+                
+              
+              
+                
+                =
+                λ
+                x
+                −
+                y
+                +
+                
+                  (
+                  
+                    α
+                    x
+                    −
+                    β
+                    y
+                  
+                  )
+                
+                
+                  (
+                  
+                    
+                      x
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      y
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+                
+                  
+                    
+                      y
+                      ˙
+                    
+                  
+                
+              
+              
+                
+                =
+                x
+                +
+                λ
+                y
+                +
+                
+                  (
+                  
+                    β
+                    x
+                    +
+                    α
+                    y
+                  
+                  )
+                
+                
+                  (
+                  
+                    
+                      x
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      y
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{\dot {x}}&=\lambda x-y+\left(\alpha x-\beta y\right)\left(x^{2}+y^{2}\right)\\{\dot {y}}&=x+\lambda y+\left(\beta x+\alpha y\right)\left(x^{2}+y^{2}\right)\\\end{aligned}}}
+  
+
+where the shorthand 
+  
+    
+      
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        =
+        d
+        x
+        
+          /
+        
+        d
+        t
+      
+    
+    {\displaystyle {\dot {x}}=dx/dt}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              y
+              ˙
+            
+          
+        
+        =
+        d
+        y
+        
+          /
+        
+        d
+        t
+      
+    
+    {\displaystyle {\dot {y}}=dy/dt}
+  
+ is used. The Jacobian is
+
+  
+    
+      
+        J
+        =
+        
+          [
+          
+            
+              
+                
+                  
+                    
+                      
+                        ∂
+                        
+                          
+                            
+                              x
+                              ˙
+                            
+                          
+                        
+                      
+                      
+                        ∂
+                        x
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        ∂
+                        
+                          
+                            
+                              x
+                              ˙
+                            
+                          
+                        
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                
+              
+              
+                
+                  
+                    
+                      
+                        ∂
+                        
+                          
+                            
+                              y
+                              ˙
+                            
+                          
+                        
+                      
+                      
+                        ∂
+                        x
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        ∂
+                        
+                          
+                            
+                              y
+                              ˙
+                            
+                          
+                        
+                      
+                      
+                        ∂
+                        y
+                      
+                    
+                  
+                
+              
+            
+          
+          ]
+        
+      
+    
+    {\displaystyle J=\left[{\begin{array}{cc}{\frac {\partial {\dot {x}}}{\partial x}}&{\frac {\partial {\dot {x}}}{\partial y}}\\{\frac {\partial {\dot {y}}}{\partial x}}&{\frac {\partial {\dot {y}}}{\partial y}}\end{array}}\right]}
+  
+
+This is a bit tedious to compute:
+
+  
+    
+      
+        J
+        =
+        
+          [
+          
+            
+              
+                
+                  λ
+                  +
+                  3
+                  α
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  −
+                  2
+                  β
+                  x
+                  y
+                  +
+                  α
+                  
+                    y
+                    
+                      2
+                    
+                  
+                  
+                
+                
+                  −
+                  1
+                  −
+                  3
+                  β
+                  
+                    y
+                    
+                      2
+                    
+                  
+                  +
+                  2
+                  α
+                  x
+                  y
+                  −
+                  β
+                  
+                    x
+                    
+                      2
+                    
+                  
+                
+              
+              
+                
+                  1
+                  +
+                  3
+                  β
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  +
+                  2
+                  α
+                  x
+                  y
+                  +
+                  β
+                  
+                    y
+                    
+                      2
+                    
+                  
+                  
+                
+                
+                  λ
+                  +
+                  3
+                  α
+                  
+                    y
+                    
+                      2
+                    
+                  
+                  +
+                  2
+                  β
+                  x
+                  y
+                  +
+                  α
+                  
+                    x
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+          ]
+        
+      
+    
+    {\displaystyle J=\left[{\begin{array}{cc}\lambda +3\alpha x^{2}-2\beta xy+\alpha y^{2}\quad &-1-3\beta y^{2}+2\alpha xy-\beta x^{2}\\1+3\beta x^{2}+2\alpha xy+\beta y^{2}\quad &\lambda +3\alpha y^{2}+2\beta xy+\alpha x^{2}\end{array}}\right]}
+  
+
+The fixed point was previously identified to be located at 
+  
+    
+      
+        x
+        =
+        y
+        =
+        0
+      
+    
+    {\displaystyle x=y=0}
+  
+, at which location the Jacobian takes the particularly simple form:
+
+  
+    
+      
+        J
+        =
+        
+          [
+          
+            
+              
+                
+                  λ
+                
+                
+                  −
+                  1
+                
+              
+              
+                
+                  1
+                
+                
+                  λ
+                
+              
+            
+          
+          ]
+        
+      
+    
+    {\displaystyle J=\left[{\begin{array}{cc}\lambda &-1\\1&\lambda \end{array}}\right]}
+  
+
+The corresponding characteristic polynomial is 
+
+  
+    
+      
+        0
+        =
+        det
+        [
+        J
+        −
+        w
+        I
+        ]
+        =
+        
+          
+            (
+            
+              λ
+              −
+              w
+            
+            )
+          
+          
+            2
+          
+        
+        +
+        1
+      
+    
+    {\displaystyle 0=\det[J-wI]=\left(\lambda -w\right)^{2}+1}
+  
+
+which has solutions
+
+  
+    
+      
+        w
+        =
+        λ
+        ±
+        i
+      
+    
+    {\displaystyle w=\lambda \pm i}
+  
+
+Here, 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+ is a pair of complex conjugate eigenvalues of the Jacobian. When the parameter 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ is negative, the real part of the eigenvalues is (obviously) negative. As the parameter crosses zero, the real part vanishes: this is the Hopf bifurcation. As previously seen, the limit cycle arises as 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ goes positive if 
+  
+    
+      
+        α
+        <
+        0
+      
+    
+    {\displaystyle \alpha <0}
+  
+.
+All Hopf bifurcations have this general form: the Jacobian matrix has a pair of complex-conjugate eigenvalues that cross the imaginary axis as the pertinent parameter is varied.
+
+Linearization
+The above computation of the Jacobian can be significantly simplified by working in the tangent plane, tangent to the fixed point. The fixed point is located at 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        )
+        =
+        (
+        0
+        ,
+        0
+        )
+      
+    
+    {\displaystyle (x,y)=(0,0)}
+  
+ and so one can "linearize" the differential equation by dropping all terms that are higher than linear order.  This gives
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      x
+                      ˙
+                    
+                  
+                
+              
+              
+                
+                =
+                λ
+                x
+                −
+                y
+              
+            
+            
+              
+                
+                  
+                    
+                      y
+                      ˙
+                    
+                  
+                
+              
+              
+                
+                =
+                x
+                +
+                λ
+                y
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{\dot {x}}&=\lambda x-y\\{\dot {y}}&=x+\lambda y\\\end{aligned}}}
+  
+
+The Jacobian is computed exactly as before; nothing has changed, except to make the calculations simpler. The linearized differential equation can be recognized as being given by a Lie derivative defined on the tangent bundle. Because all cotangent bundles are always symplectic manifolds, it is common to formulate bifurcation theory in terms of symplectic geometry.
+
+Examples
+
+Hopf bifurcations occur in the Lotka–Volterra model of predator–prey interaction (known as paradox of enrichment), the Hodgkin–Huxley model for nerve membrane potential, the Selkov model of glycolysis, the Belousov–Zhabotinsky reaction, the Lorenz attractor, the Brusselator, the delay differential equation and in classical electromagnetism. Hopf bifurcations have also been shown to occur in fission waves.
+The Selkov model is
+
+  
+    
+      
+        
+          
+            
+              d
+              x
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        −
+        x
+        +
+        a
+        y
+        +
+        
+          x
+          
+            2
+          
+        
+        y
+        ,
+         
+         
+        
+          
+            
+              d
+              y
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        b
+        −
+        a
+        y
+        −
+        
+          x
+          
+            2
+          
+        
+        y
+        .
+      
+    
+    {\displaystyle {\frac {dx}{dt}}=-x+ay+x^{2}y,~~{\frac {dy}{dt}}=b-ay-x^{2}y.}
+  
+
+The figure shows a phase portrait illustrating the Hopf bifurcation in the Selkov model.
+In railway vehicle systems, Hopf bifurcation analysis is notably important. Conventionally a railway vehicle's stable motion at low speeds crosses over to unstable at high speeds. One aim of the nonlinear analysis of these systems is to perform an analytical investigation of bifurcation, nonlinear lateral stability and hunting behavior of rail vehicles on a tangent track, which uses the Bogoliubov method.
+
+Geometric interpretation
+The benefit of the abstract formulation in terms of symplectic geometry is that it enables a geometric intuition into what otherwise seem to be complicated dynamical systems.
+Consider the space of all possible solutions (point trajectories) to some set of differential equations. The tangent vectors to these solutions lie in the phase space for that system; more formally, in the tangent bundle. The phase space can be divided into three parts: the stable manifold, the unstable manifold, and the center manifold. The stable manifold consists of all of the tangent vector fields that, upon integration, approach the limit point or limit cycle. The unstable manifold consist of those vector fields that point away from the limit-point/limit cycle. The center manifold consists of the points on the limit, together with their tangent vectors.
+The Hopf bifurcation is a rearrangement of these manifolds, as parameters are varied. For the normal form, the phase space is four-dimensional: the two coordinates 
+  
+    
+      
+        x
+        ,
+        y
+      
+    
+    {\displaystyle x,y}
+  
+ and the two velocities 
+  
+    
+      
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        ,
+        
+          
+            
+              y
+              ˙
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\dot {x}},{\dot {y}}.}
+  
+ When 
+  
+    
+      
+        λ
+        <
+        0
+      
+    
+    {\displaystyle \lambda <0}
+  
+ (and 
+  
+    
+      
+        α
+        <
+        0
+      
+    
+    {\displaystyle \alpha <0}
+  
+) the entire (four-dimensional) space of solutions belongs to the stable manifold. As 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ is varied, the center manifold changes from a point to a circle. As 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ is varied, the stable manifold flips to become unstable.
+In a general setting, the abstraction allows a four-dimensional subspace to be isolated from the full system, and then, as parameters are varied, all changes to the overall geometry are isolated to that four-dimensional subspace.
+
+Formal definition of a Hopf bifurcation
+The appearance or the disappearance of a periodic orbit through a local change in the stability properties of a fixed point is known as the Hopf bifurcation. The following theorem works for fixed points with one pair of conjugate nonzero purely imaginary eigenvalues. It tells the conditions under which this bifurcation phenomenon occurs.
+Theorem (see section 11.2 of ). Let 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+  
+ be the Jacobian of a continuous parametric dynamical system evaluated at a fixed point. Suppose that all eigenvalues of 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+  
+ have negative real part except for one conjugate pair, varying as 
+  
+    
+      
+        ρ
+        ±
+        i
+        ϵ
+      
+    
+    {\displaystyle \rho \pm i\epsilon }
+  
+ for some function 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ of the parameters. A Hopf bifurcation arises when this eigenvalue pair cross the imaginary axis. This occurs as 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ changes from negative to positive as the system parameters are varied.
+
+Routh–Hurwitz criterion
+The Routh–Hurwitz criterion (section I.13 of ) gives necessary conditions for a Hopf bifurcation to occur.
+
+Sturm series
+Let 
+  
+    
+      
+        
+          p
+          
+            0
+          
+        
+        ,
+         
+        
+          p
+          
+            1
+          
+        
+        ,
+         
+        …
+         
+        ,
+         
+        
+          p
+          
+            k
+          
+        
+      
+    
+    {\displaystyle p_{0},~p_{1},~\dots ~,~p_{k}}
+  
+ be Sturm series associated to a characteristic polynomial 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+. They can be written in the form:
+
+  
+    
+      
+        
+          p
+          
+            i
+          
+        
+        (
+        μ
+        )
+        =
+        
+          c
+          
+            i
+            ,
+            0
+          
+        
+        
+          μ
+          
+            k
+            −
+            i
+          
+        
+        +
+        
+          c
+          
+            i
+            ,
+            1
+          
+        
+        
+          μ
+          
+            k
+            −
+            i
+            −
+            2
+          
+        
+        +
+        
+          c
+          
+            i
+            ,
+            2
+          
+        
+        
+          μ
+          
+            k
+            −
+            i
+            −
+            4
+          
+        
+        +
+        ⋯
+      
+    
+    {\displaystyle p_{i}(\mu )=c_{i,0}\mu ^{k-i}+c_{i,1}\mu ^{k-i-2}+c_{i,2}\mu ^{k-i-4}+\cdots }
+  
+
+The coefficients 
+  
+    
+      
+        
+          c
+          
+            i
+            ,
+            0
+          
+        
+      
+    
+    {\displaystyle c_{i,0}}
+  
+ for 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ in 
+  
+    
+      
+        {
+        1
+        ,
+         
+        …
+         
+        ,
+         
+        k
+        }
+      
+    
+    {\displaystyle \{1,~\dots ~,~k\}}
+  
+ correspond to what is called Hurwitz determinants. Their definition is related to the associated Hurwitz matrix.
+
+Propositions
+Proposition 1. If all the Hurwitz determinants 
+  
+    
+      
+        
+          c
+          
+            i
+            ,
+            0
+          
+        
+      
+    
+    {\displaystyle c_{i,0}}
+  
+ are positive, apart perhaps 
+  
+    
+      
+        
+          c
+          
+            k
+            ,
+            0
+          
+        
+      
+    
+    {\displaystyle c_{k,0}}
+  
+ then the associated Jacobian has no pure imaginary eigenvalues.
+Proposition 2. If all Hurwitz determinants 
+  
+    
+      
+        
+          c
+          
+            i
+            ,
+            0
+          
+        
+      
+    
+    {\displaystyle c_{i,0}}
+  
+ (for all 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ in 
+  
+    
+      
+        {
+        0
+        ,
+         
+        …
+         
+        ,
+         
+        k
+        −
+        2
+        }
+      
+    
+    {\displaystyle \{0,~\dots ~,~k-2\}}
+  
+ are positive, 
+  
+    
+      
+        
+          c
+          
+            k
+            −
+            1
+            ,
+            0
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle c_{k-1,0}=0}
+  
+ and 
+  
+    
+      
+        
+          c
+          
+            k
+            −
+            2
+            ,
+            1
+          
+        
+        <
+        0
+      
+    
+    {\displaystyle c_{k-2,1}<0}
+  
+ then all the eigenvalues of the associated Jacobian have negative real parts except a purely imaginary conjugate pair.
+The conditions that we are looking for so that a Hopf bifurcation occurs (see theorem above) for a parametric continuous dynamical system are given by this last proposition.
+
+Example
+Consider the classical Van der Pol oscillator written with ordinary differential equations:
+
+  
+    
+      
+        
+          {
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          d
+                          x
+                        
+                        
+                          d
+                          t
+                        
+                      
+                    
+                  
+                  =
+                  μ
+                  (
+                  1
+                  −
+                  
+                    y
+                    
+                      2
+                    
+                  
+                  )
+                  x
+                  −
+                  y
+                  ,
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          d
+                          y
+                        
+                        
+                          d
+                          t
+                        
+                      
+                    
+                  
+                  =
+                  x
+                  .
+                
+              
+            
+          
+          
+        
+      
+    
+    {\displaystyle \left\{{\begin{array}{l}{\dfrac {dx}{dt}}=\mu (1-y^{2})x-y,\\{\dfrac {dy}{dt}}=x.\end{array}}\right.}
+  
+
+The Jacobian matrix associated to this system is
+
+  
+    
+      
+        J
+        =
+        
+          
+            [
+            
+              
+                
+                  −
+                  μ
+                  (
+                  −
+                  1
+                  +
+                  
+                    y
+                    
+                      2
+                    
+                  
+                  )
+                
+                
+                  −
+                  2
+                  μ
+                  y
+                  x
+                  −
+                  1
+                
+              
+              
+                
+                  1
+                
+                
+                  0
+                
+              
+            
+            ]
+          
+        
+        .
+      
+    
+    {\displaystyle J={\begin{bmatrix}-\mu (-1+y^{2})&-2\mu yx-1\\1&0\end{bmatrix}}.}
+  
+
+The characteristic polynomial (in 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+) of the Jacobian at the fixed point 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        )
+        =
+        (
+        0
+        ,
+        0
+        )
+      
+    
+    {\displaystyle (x,y)=(0,0)}
+  
+ is
+
+  
+    
+      
+        P
+        (
+        λ
+        )
+        =
+        
+          λ
+          
+            2
+          
+        
+        −
+        μ
+        λ
+        +
+        1.
+      
+    
+    {\displaystyle P(\lambda )=\lambda ^{2}-\mu \lambda +1.}
+  
+
+The associated Sturm series is
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  p
+                  
+                    0
+                  
+                
+                (
+                λ
+                )
+                =
+                
+                  a
+                  
+                    0
+                  
+                
+                
+                  λ
+                  
+                    2
+                  
+                
+                −
+                
+                  a
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+                
+                  p
+                  
+                    1
+                  
+                
+                (
+                λ
+                )
+                =
+                
+                  a
+                  
+                    1
+                  
+                
+                λ
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{array}{l}p_{0}(\lambda )=a_{0}\lambda ^{2}-a_{2}\\p_{1}(\lambda )=a_{1}\lambda \end{array}}}
+  
+
+with coefficients 
+  
+    
+      
+        
+          a
+          
+            0
+          
+        
+        =
+        1
+        ,
+        
+          a
+          
+            1
+          
+        
+        =
+        −
+        μ
+        ,
+        
+          a
+          
+            2
+          
+        
+        =
+        1.
+      
+    
+    {\displaystyle a_{0}=1,a_{1}=-\mu ,a_{2}=1.}
+  
+
+The Sturm polynomials can be written as (here 
+  
+    
+      
+        i
+        =
+        0
+        ,
+        1
+      
+    
+    {\displaystyle i=0,1}
+  
+):
+
+  
+    
+      
+        
+          p
+          
+            i
+          
+        
+        (
+        μ
+        )
+        =
+        
+          c
+          
+            i
+            ,
+            0
+          
+        
+        
+          μ
+          
+            k
+            −
+            i
+          
+        
+        +
+        
+          c
+          
+            i
+            ,
+            1
+          
+        
+        
+          μ
+          
+            k
+            −
+            i
+            −
+            2
+          
+        
+        +
+        
+          c
+          
+            i
+            ,
+            2
+          
+        
+        
+          μ
+          
+            k
+            −
+            i
+            −
+            4
+          
+        
+        +
+        ⋯
+      
+    
+    {\displaystyle p_{i}(\mu )=c_{i,0}\mu ^{k-i}+c_{i,1}\mu ^{k-i-2}+c_{i,2}\mu ^{k-i-4}+\cdots }
+  
+
+For the Van der Pol oscillator, the coefficients are
+
+  
+    
+      
+        
+          c
+          
+            0
+            ,
+            0
+          
+        
+        =
+        1
+        ,
+        
+        
+          c
+          
+            1
+            ,
+            0
+          
+        
+        =
+        −
+        μ
+        ,
+        
+        
+          c
+          
+            0
+            ,
+            1
+          
+        
+        =
+        −
+        1.
+      
+    
+    {\displaystyle c_{0,0}=1,\qquad c_{1,0}=-\mu ,\qquad c_{0,1}=-1.}
+  
+
+A Hopf bifurcation can occur when proposition 2 is satisfied; in the present case, proposition 2 requires that 
+
+  
+    
+      
+        
+          c
+          
+            0
+            ,
+            0
+          
+        
+        >
+        0
+        ,
+        
+        
+          c
+          
+            1
+            ,
+            0
+          
+        
+        =
+        0
+        ,
+        
+        
+          c
+          
+            0
+            ,
+            1
+          
+        
+        <
+        0.
+      
+    
+    {\displaystyle c_{0,0}>0,\qquad c_{1,0}=0,\qquad c_{0,1}<0.}
+  
+
+Clearly, the first and third conditions are satisfied; the second condition states that a Hopf bifurcation occurs for the Van der Pol oscillator when 
+  
+    
+      
+        μ
+        =
+        0
+      
+    
+    {\displaystyle \mu =0}
+  
+.
+
+Serial expansion method
+The serial expansion method provides a way for obtaining explicit solutions containing a Hopf bifurcation by means of a perturbative expansion in the order parameter.
+Consider a system defined by 
+  
+    
+      
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+        +
+        h
+        (
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        ,
+        x
+        ,
+        μ
+        )
+        =
+        0
+      
+    
+    {\displaystyle {\ddot {x}}+h({\dot {x}},x,\mu )=0}
+  
+, where 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ is smooth and 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ is a parameter. The parameter should be written so that as 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ increases from below zero to above zero, the origin turns from a spiral sink to a spiral source. A linear transform of parameters may be needed to place the equation into this form. For 
+  
+    
+      
+        μ
+        >
+        0
+      
+    
+    {\displaystyle \mu >0}
+  
+, a perturbative expansion is performed using two-timing:
+
+  
+    
+      
+        x
+        (
+        t
+        )
+        =
+        ϵ
+        
+          x
+          
+            1
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        +
+        
+          ϵ
+          
+            2
+          
+        
+        
+          x
+          
+            2
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        +
+        
+          ϵ
+          
+            3
+          
+        
+        
+          x
+          
+            3
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        +
+        ⋯
+      
+    
+    {\displaystyle x(t)=\epsilon x_{1}(t,T)+\epsilon ^{2}x_{2}(t,T)+\epsilon ^{3}x_{3}(t,T)+\cdots }
+  
+
+where 
+  
+    
+      
+        T
+        =
+        ν
+        t
+      
+    
+    {\displaystyle T=\nu t}
+  
+ is "slow-time" (thus "two-timing"), and 
+  
+    
+      
+        ϵ
+        ,
+        ν
+      
+    
+    {\displaystyle \epsilon ,\nu }
+  
+ are functions of 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+. By an argument of harmonic balance (see  for details), one may use 
+  
+    
+      
+        ϵ
+        =
+        
+          μ
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        ,
+        ν
+        =
+        μ
+      
+    
+    {\displaystyle \epsilon =\mu ^{1/2},\nu =\mu }
+  
+. Placing the perturbative expansion for 
+  
+    
+      
+        x
+        (
+        t
+        )
+      
+    
+    {\displaystyle x(t)}
+  
+ into 
+  
+    
+      
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+        +
+        h
+        (
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        ,
+        x
+        ,
+        μ
+        )
+        =
+        0
+      
+    
+    {\displaystyle {\ddot {x}}+h({\dot {x}},x,\mu )=0}
+  
+, and keeping terms up to the 
+  
+    
+      
+        
+          ϵ
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \epsilon ^{3}}
+  
+ produces three ordinary differential equations in 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        
+          x
+          
+            3
+          
+        
+      
+    
+    {\displaystyle x_{1},x_{2},x_{3}}
+  
+.
+The first equation is of form 
+  
+    
+      
+        
+          ∂
+          
+            t
+            t
+          
+        
+        
+          x
+          
+            1
+          
+        
+        +
+        
+          ω
+          
+            0
+          
+          
+            2
+          
+        
+        
+          x
+          
+            1
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle \partial _{tt}x_{1}+\omega _{0}^{2}x_{1}=0}
+  
+, which is solved by 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        =
+        A
+        (
+        T
+        )
+        cos
+        ⁡
+        (
+        
+          ω
+          
+            0
+          
+        
+        t
+        +
+        ϕ
+        (
+        T
+        )
+        )
+        .
+      
+    
+    {\displaystyle x_{1}(t,T)=A(T)\cos(\omega _{0}t+\phi (T)).}
+  
+ The 
+  
+    
+      
+        A
+        (
+        T
+        )
+        ,
+        ϕ
+        (
+        T
+        )
+      
+    
+    {\displaystyle A(T),\phi (T)}
+  
+ are "slowly varying" functions of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+. Inserting this into the second equation allows it to be solved for 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        (
+        t
+        ,
+        T
+        )
+      
+    
+    {\displaystyle x_{2}(t,T)}
+  
+.
+Then plugging the solutions for 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle x_{1},x_{2}}
+  
+ into the third equation, an equation of form 
+  
+    
+      
+        
+          ∂
+          
+            t
+            t
+          
+        
+        
+          x
+          
+            3
+          
+        
+        +
+        
+          ω
+          
+            0
+          
+          
+            2
+          
+        
+        
+          x
+          
+            3
+          
+        
+        =
+        ⋯
+      
+    
+    {\displaystyle \partial _{tt}x_{3}+\omega _{0}^{2}x_{3}=\cdots }
+  
+ is obtained, with the right-hand-side a sum of trigonometric terms. Of these terms, the "resonance term", the one containing 
+  
+    
+      
+        cos
+        ⁡
+        (
+        
+          ω
+          
+            0
+          
+        
+        t
+        )
+        ,
+        sin
+        ⁡
+        (
+        
+          ω
+          
+            0
+          
+        
+        t
+        )
+      
+    
+    {\displaystyle \cos(\omega _{0}t),\sin(\omega _{0}t)}
+  
+ must be set to zero. This is the same idea as in the Poincaré–Lindstedt method. This provides two ordinary differential equations for 
+  
+    
+      
+        A
+        ,
+        ϕ
+      
+    
+    {\displaystyle A,\phi }
+  
+, allowing one to solve for the equilibrium value of 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, as well as its stability.
+
+Example of serial expansion
+Consider the system defined by 
+
+  
+    
+      
+        
+          {
+          
+            
+              
+                
+                  
+                    
+                      
+                        x
+                        ˙
+                      
+                    
+                  
+                
+                
+                  =
+                  μ
+                  x
+                  +
+                  y
+                  −
+                  
+                    x
+                    
+                      2
+                    
+                  
+                
+              
+              
+                
+                  
+                    
+                      
+                        y
+                        ˙
+                      
+                    
+                  
+                
+                
+                  =
+                  −
+                  x
+                  +
+                  μ
+                  y
+                  +
+                  2
+                  
+                    x
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+          
+        
+      
+    
+    {\displaystyle \left\{{\begin{array}{l}{\dot {x}}&=\mu x+y-x^{2}\\{\dot {y}}&=-x+\mu y+2x^{2}\\\end{array}}\right.}
+  
+
+This system has an equilibrium point at origin. When 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ increases from negative to positive, the origin turns from a stable spiral point to an unstable spiral point. Eliminating 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ from the equations gives a single second-order differential equation
+
+  
+    
+      
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+        −
+        2
+        μ
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        +
+        (
+        1
+        +
+        
+          μ
+          
+            2
+          
+        
+        )
+        x
+        +
+        2
+        x
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        −
+        (
+        2
+        +
+        μ
+        )
+        
+          x
+          
+            2
+          
+        
+        =
+        0.
+      
+    
+    {\displaystyle {\ddot {x}}-2\mu {\dot {x}}+(1+\mu ^{2})x+2x{\dot {x}}-(2+\mu )x^{2}=0.}
+  
+
+The perturbative expansion to be performed is
+
+  
+    
+      
+        x
+        (
+        t
+        )
+        =
+        ϵ
+        
+          x
+          
+            1
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        +
+        
+          ϵ
+          
+            2
+          
+        
+        
+          x
+          
+            2
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        +
+        ⋯
+      
+    
+    {\displaystyle x(t)=\epsilon x_{1}(t,T)+\epsilon ^{2}x_{2}(t,T)+\cdots }
+  
+
+with 
+
+  
+    
+      
+        ϵ
+        =
+        
+          μ
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        ,
+        
+        T
+        =
+        μ
+        t
+        .
+      
+    
+    {\displaystyle \epsilon =\mu ^{1/2},\qquad T=\mu t.}
+  
+ 
+Expanding up to order 
+  
+    
+      
+        
+          ϵ
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \epsilon ^{3}}
+  
+ results in
+
+  
+    
+      
+        
+          
+            {
+            
+              
+                
+                  
+                    ∂
+                    
+                      t
+                      t
+                    
+                  
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  +
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  =
+                  0
+                
+              
+              
+                
+                  
+                    ∂
+                    
+                      t
+                      t
+                    
+                  
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  +
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  =
+                  2
+                  
+                    x
+                    
+                      1
+                    
+                    
+                      2
+                    
+                  
+                  −
+                  2
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  
+                    ∂
+                    
+                      t
+                    
+                  
+                  
+                    x
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  
+                    ∂
+                    
+                      t
+                      t
+                    
+                  
+                  
+                    x
+                    
+                      3
+                    
+                  
+                  +
+                  
+                    x
+                    
+                      3
+                    
+                  
+                  =
+                  4
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  +
+                  2
+                  
+                    ∂
+                    
+                      t
+                    
+                  
+                  (
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  −
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  −
+                  
+                    ∂
+                    
+                      T
+                    
+                  
+                  
+                    x
+                    
+                      1
+                    
+                  
+                  )
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{cases}\partial _{tt}x_{1}+x_{1}=0\\\partial _{tt}x_{2}+x_{2}=2x_{1}^{2}-2x_{1}\partial _{t}x_{1}\\\partial _{tt}x_{3}+x_{3}=4x_{1}x_{2}+2\partial _{t}(x_{1}-x_{1}x_{2}-\partial _{T}x_{1})\end{cases}}}
+  
+
+The first equation has the solution 
+
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        =
+        A
+        (
+        T
+        )
+        cos
+        ⁡
+        (
+        t
+        +
+        ϕ
+        (
+        T
+        )
+        )
+        .
+      
+    
+    {\displaystyle x_{1}(t,T)=A(T)\cos(t+\phi (T)).}
+  
+
+Here 
+  
+    
+      
+        A
+        (
+        T
+        )
+        ,
+        ϕ
+        (
+        T
+        )
+      
+    
+    {\displaystyle A(T),\phi (T)}
+  
+ are respectively the "slow-varying amplitude" and "slow-varying phase" of the simple oscillation. The second equation has solution
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        =
+        B
+        cos
+        ⁡
+        (
+        t
+        +
+        θ
+        )
+        +
+        
+          A
+          
+            2
+          
+        
+        −
+        
+          
+            1
+            3
+          
+        
+        
+          A
+          
+            2
+          
+        
+        (
+        sin
+        ⁡
+        (
+        2
+        t
+        +
+        2
+        ϕ
+        )
+        +
+        cos
+        ⁡
+        (
+        2
+        t
+        +
+        2
+        ϕ
+        )
+        )
+        ,
+      
+    
+    {\displaystyle x_{2}(t,T)=B\cos(t+\theta )+A^{2}-{\frac {1}{3}}A^{2}(\sin(2t+2\phi )+\cos(2t+2\phi )),}
+  
+
+where 
+  
+    
+      
+        B
+        ,
+        θ
+      
+    
+    {\displaystyle B,\theta }
+  
+ are also slow-varying amplitude and phase. The 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ and 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+ terms can be absorbed into 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ and 
+  
+    
+      
+        ϕ
+        ;
+      
+    
+    {\displaystyle \phi ;}
+  
+ equivalently, 
+  
+    
+      
+        B
+        =
+        0
+      
+    
+    {\displaystyle B=0}
+  
+ can be set without loss of generality. To demonstrate this, the perturbative expansion is written as
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                ϵ
+                
+                  x
+                  
+                    1
+                  
+                
+                +
+                
+                  ϵ
+                  
+                    2
+                  
+                
+                
+                  x
+                  
+                    2
+                  
+                
+                +
+                ⋯
+              
+            
+            
+              
+              
+                
+                =
+                ϵ
+                (
+                A
+                cos
+                ⁡
+                (
+                t
+                +
+                ϕ
+                )
+                +
+                ϵ
+                B
+                cos
+                ⁡
+                (
+                t
+                +
+                θ
+                )
+                )
+                +
+                ⋯
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=\epsilon x_{1}+\epsilon ^{2}x_{2}+\cdots \\&=\epsilon (A\cos(t+\phi )+\epsilon B\cos(t+\theta ))+\cdots \\\end{aligned}}}
+  
+
+Basic trigonometry allows the two cosines to be merged into one:
+
+  
+    
+      
+        A
+        cos
+        ⁡
+        (
+        t
+        +
+        ϕ
+        )
+        +
+        ϵ
+        B
+        cos
+        ⁡
+        (
+        t
+        +
+        θ
+        )
+        =
+        C
+        cos
+        ⁡
+        (
+        t
+        +
+        ξ
+        )
+      
+    
+    {\displaystyle A\cos(t+\phi )+\epsilon B\cos(t+\theta )=C\cos(t+\xi )}
+  
+
+for some 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ and 
+  
+    
+      
+        ξ
+        .
+      
+    
+    {\displaystyle \xi .}
+  
+ But this has exactly the same form as 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        .
+      
+    
+    {\displaystyle x_{1}.}
+  
+ Thus, the 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ term can be eliminated by redefining 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ to be 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ and 
+  
+    
+      
+        ξ
+      
+    
+    {\displaystyle \xi }
+  
+ to be 
+  
+    
+      
+        ϕ
+        .
+      
+    
+    {\displaystyle \phi .}
+  
+ The solution to the second equation is thus
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        (
+        t
+        ,
+        T
+        )
+        =
+        
+          A
+          
+            2
+          
+        
+        −
+        
+          
+            1
+            3
+          
+        
+        
+          A
+          
+            2
+          
+        
+        (
+        sin
+        ⁡
+        (
+        2
+        t
+        +
+        2
+        ϕ
+        )
+        +
+        cos
+        ⁡
+        (
+        2
+        t
+        +
+        2
+        ϕ
+        )
+        )
+      
+    
+    {\displaystyle x_{2}(t,T)=A^{2}-{\frac {1}{3}}A^{2}(\sin(2t+2\phi )+\cos(2t+2\phi ))}
+  
+
+Plugging through the third equation gives
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  ∂
+                  
+                    t
+                    t
+                  
+                
+                
+                  x
+                  
+                    3
+                  
+                
+                +
+                
+                  x
+                  
+                    3
+                  
+                
+              
+              
+                
+                =
+                (
+                2
+                A
+                −
+                
+                  A
+                  
+                    3
+                  
+                
+                −
+                2
+                
+                  A
+                  ′
+                
+                )
+                sin
+                ⁡
+                (
+                t
+                +
+                ϕ
+                )
+              
+            
+            
+              
+              
+                
+                
+                −
+                (
+                2
+                A
+                
+                  ϕ
+                  ′
+                
+                +
+                11
+                
+                  A
+                  
+                    3
+                  
+                
+                
+                  /
+                
+                3
+                )
+                cos
+                ⁡
+                (
+                t
+                +
+                ϕ
+                )
+              
+            
+            
+              
+              
+                
+                
+                +
+                
+                  
+                    1
+                    3
+                  
+                
+                
+                  A
+                  
+                    3
+                  
+                
+                (
+                5
+                sin
+                ⁡
+                (
+                3
+                t
+                +
+                3
+                ϕ
+                )
+                −
+                cos
+                ⁡
+                (
+                3
+                t
+                +
+                3
+                ϕ
+                )
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\partial _{tt}x_{3}+x_{3}&=(2A-A^{3}-2A')\sin(t+\phi )\\&\quad -(2A\phi '+11A^{3}/3)\cos(t+\phi )\\&\quad +{\frac {1}{3}}A^{3}(5\sin(3t+3\phi )-\cos(3t+3\phi ))\end{aligned}}}
+  
+
+Eliminating the resonance term gives 
+
+  
+    
+      
+        
+          A
+          ′
+        
+        =
+        A
+        −
+        
+          A
+          
+            3
+          
+        
+        
+          /
+        
+        2
+        ,
+        
+        
+          ϕ
+          ′
+        
+        =
+        −
+        
+          
+            11
+            6
+          
+        
+        
+          A
+          
+            2
+          
+        
+      
+    
+    {\displaystyle A'=A-A^{3}/2,\quad \phi '=-{\frac {11}{6}}A^{2}}
+  
+
+where the prime denotes differentiation by the slow time 
+  
+    
+      
+        T
+        .
+      
+    
+    {\displaystyle T.}
+  
+ The first equation shows that 
+  
+    
+      
+        A
+        =
+        
+          
+            2
+          
+        
+      
+    
+    {\displaystyle A={\sqrt {2}}}
+  
+ is a stable equilibrium. The Hopf bifurcation creates an attracting (rather than repelling) limit cycle.
+Plugging in 
+  
+    
+      
+        A
+        =
+        
+          
+            2
+          
+        
+      
+    
+    {\displaystyle A={\sqrt {2}}}
+  
+ gives 
+  
+    
+      
+        ϕ
+        =
+        −
+        
+          
+            11
+            3
+          
+        
+        T
+        +
+        
+          ϕ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \phi =-{\frac {11}{3}}T+\phi _{0}}
+  
+. The time coordinate can be shifted so that 
+  
+    
+      
+        
+          ϕ
+          
+            0
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle \phi _{0}=0}
+  
+. The third equation becomes
+
+  
+    
+      
+        
+          ∂
+          
+            t
+            t
+          
+        
+        
+          x
+          
+            3
+          
+        
+        +
+        
+          x
+          
+            3
+          
+        
+        =
+        
+          
+            1
+            3
+          
+        
+        
+          A
+          
+            3
+          
+        
+        (
+        5
+        sin
+        ⁡
+        (
+        3
+        t
+        +
+        3
+        ϕ
+        )
+        −
+        cos
+        ⁡
+        (
+        3
+        t
+        +
+        3
+        ϕ
+        )
+        )
+      
+    
+    {\displaystyle \partial _{tt}x_{3}+x_{3}={\frac {1}{3}}A^{3}(5\sin(3t+3\phi )-\cos(3t+3\phi ))}
+  
+
+giving a solution
+
+  
+    
+      
+        
+          x
+          
+            3
+          
+        
+        =
+        
+          
+            
+              2
+            
+            12
+          
+        
+        (
+        5
+        sin
+        ⁡
+        (
+        3
+        t
+        +
+        3
+        ϕ
+        )
+        −
+        cos
+        ⁡
+        (
+        3
+        t
+        +
+        3
+        ϕ
+        )
+        )
+      
+    
+    {\displaystyle x_{3}={\frac {\sqrt {2}}{12}}(5\sin(3t+3\phi )-\cos(3t+3\phi ))}
+  
+
+Plugging in 
+  
+    
+      
+        A
+        =
+        
+          
+            2
+          
+        
+      
+    
+    {\displaystyle A={\sqrt {2}}}
+  
+ back to the expressions for 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle x_{1},x_{2}}
+  
+ gives
+
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        =
+        
+          
+            2
+          
+        
+        cos
+        ⁡
+        (
+        t
+        +
+        ϕ
+        )
+        ,
+        
+        
+          x
+          
+            2
+          
+        
+        =
+        2
+        −
+        
+          
+            2
+            3
+          
+        
+        (
+        sin
+        ⁡
+        (
+        2
+        t
+        +
+        2
+        ϕ
+        )
+        +
+        cos
+        ⁡
+        (
+        2
+        t
+        +
+        2
+        ϕ
+        )
+        )
+      
+    
+    {\displaystyle x_{1}={\sqrt {2}}\cos(t+\phi ),\quad x_{2}=2-{\frac {2}{3}}(\sin(2t+2\phi )+\cos(2t+2\phi ))}
+  
+
+Plugging these back to 
+  
+    
+      
+        y
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        −
+        μ
+        x
+      
+    
+    {\displaystyle y=x^{2}+{\dot {x}}-\mu x}
+  
+ yields the serial expansion of 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ as well, up to order 
+  
+    
+      
+        
+          μ
+          
+            3
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle \mu ^{3/2}}
+  
+.
+After writing 
+  
+    
+      
+        θ
+        :=
+        t
+        +
+        ϕ
+      
+    
+    {\displaystyle \theta :=t+\phi }
+  
+ the solution is
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                
+                  μ
+                  
+                    1
+                    
+                      /
+                    
+                    2
+                  
+                
+                
+                  
+                    2
+                  
+                
+                cos
+                ⁡
+                θ
+                +
+                μ
+                
+                  (
+                  
+                    −
+                    
+                      
+                        2
+                        3
+                      
+                    
+                    sin
+                    ⁡
+                    (
+                    2
+                    θ
+                    )
+                    −
+                    
+                      
+                        2
+                        3
+                      
+                    
+                    cos
+                    ⁡
+                    (
+                    2
+                    θ
+                    )
+                    +
+                    2
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                
+                +
+                
+                  μ
+                  
+                    3
+                    
+                      /
+                    
+                    2
+                  
+                
+                
+                  
+                    1
+                    
+                      72
+                    
+                  
+                
+                
+                  (
+                  
+                    5
+                    sin
+                    ⁡
+                    (
+                    3
+                    θ
+                    )
+                    −
+                    cos
+                    ⁡
+                    (
+                    3
+                    θ
+                    )
+                  
+                  )
+                
+                +
+                
+                  
+                    O
+                  
+                
+                (
+                
+                  μ
+                  
+                    2
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=\mu ^{1/2}{\sqrt {2}}\cos \theta +\mu \left(-{\frac {2}{3}}\sin(2\theta )-{\frac {2}{3}}\cos(2\theta )+2\right)\\&\qquad +\mu ^{3/2}{\frac {1}{\sqrt {72}}}\left(5\sin(3\theta )-\cos(3\theta )\right)+{\mathcal {O}}(\mu ^{2})\\\end{aligned}}}
+  
+
+and
+
+  
+    
+      
+        
+          
+            
+              
+                y
+              
+              
+                
+                =
+                −
+                
+                  μ
+                  
+                    1
+                    
+                      /
+                    
+                    2
+                  
+                
+                
+                  
+                    2
+                  
+                
+                sin
+                ⁡
+                θ
+                +
+                μ
+                
+                  (
+                  
+                    +
+                    
+                      
+                        4
+                        3
+                      
+                    
+                    sin
+                    ⁡
+                    (
+                    2
+                    θ
+                    )
+                    −
+                    
+                      
+                        1
+                        3
+                      
+                    
+                    cos
+                    ⁡
+                    (
+                    2
+                    θ
+                    )
+                    +
+                    1
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                
+                +
+                
+                  μ
+                  
+                    3
+                    
+                      /
+                    
+                    2
+                  
+                
+                
+                  
+                    1
+                    
+                      72
+                    
+                  
+                
+                
+                  (
+                  
+                    −
+                    5
+                    sin
+                    ⁡
+                    (
+                    3
+                    θ
+                    )
+                    +
+                    7
+                    cos
+                    ⁡
+                    (
+                    3
+                    θ
+                    )
+                    +
+                    36
+                    sin
+                    ⁡
+                    θ
+                    +
+                    28
+                    cos
+                    ⁡
+                    θ
+                  
+                  )
+                
+                +
+                
+                  
+                    O
+                  
+                
+                (
+                
+                  μ
+                  
+                    2
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}y&=-\mu ^{1/2}{\sqrt {2}}\sin \theta +\mu \left(+{\frac {4}{3}}\sin(2\theta )-{\frac {1}{3}}\cos(2\theta )+1\right)\\&\qquad +\mu ^{3/2}{\frac {1}{\sqrt {72}}}\left(-5\sin(3\theta )+7\cos(3\theta )+36\sin \theta +28\cos \theta \right)+{\mathcal {O}}(\mu ^{2})\end{aligned}}}
+  
+
+This provides a parametric equation for the limit cycle. This is plotted in the illustration on the right.

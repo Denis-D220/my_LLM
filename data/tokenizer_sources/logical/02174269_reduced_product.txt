@@ -1,0 +1,158 @@
+In model theory, a branch of mathematical logic, and in algebra, the reduced product is a construction that generalizes both direct product and ultraproduct.
+Let {Si | i ∈ I} be a nonempty family of structures of the same signature σ indexed by a set I, and let U be a proper filter on I. The domain of the reduced product is the quotient of the Cartesian product
+
+  
+    
+      
+        
+          ∏
+          
+            i
+            ∈
+            I
+          
+        
+        
+          S
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \prod _{i\in I}S_{i}}
+  
+
+by a certain equivalence relation ~: two elements (ai) and (bi) of the Cartesian product are equivalent if
+
+  
+    
+      
+        
+          {
+          
+            i
+            ∈
+            I
+            :
+            
+              a
+              
+                i
+              
+            
+            =
+            
+              b
+              
+                i
+              
+            
+          
+          }
+        
+        ∈
+        U
+      
+    
+    {\displaystyle \left\{i\in I:a_{i}=b_{i}\right\}\in U}
+  
+
+If U only contains I as an element, the equivalence relation is trivial, and the reduced product is just the direct product.  If U is an ultrafilter, the reduced product is an ultraproduct.
+Operations from σ are interpreted on the reduced product by applying the operation pointwise. Relations are interpreted by
+
+  
+    
+      
+        R
+        (
+        (
+        
+          a
+          
+            i
+          
+          
+            1
+          
+        
+        )
+        
+          /
+        
+        
+          ∼
+        
+        ,
+        …
+        ,
+        (
+        
+          a
+          
+            i
+          
+          
+            n
+          
+        
+        )
+        
+          /
+        
+        
+          ∼
+        
+        )
+        
+        ⟺
+        
+        {
+        i
+        ∈
+        I
+        ∣
+        
+          R
+          
+            
+              S
+              
+                i
+              
+            
+          
+        
+        (
+        
+          a
+          
+            i
+          
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            i
+          
+          
+            n
+          
+        
+        )
+        }
+        ∈
+        U
+        .
+      
+    
+    {\displaystyle R((a_{i}^{1})/{\sim },\dots ,(a_{i}^{n})/{\sim })\iff \{i\in I\mid R^{S_{i}}(a_{i}^{1},\dots ,a_{i}^{n})\}\in U.}
+  
+
+For example, if each structure is a vector space, then the reduced product is a vector space with addition defined as (a + b)i = ai + bi and multiplication by a scalar c as (ca)i = c ai.

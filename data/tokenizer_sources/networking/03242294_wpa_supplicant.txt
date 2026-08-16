@@ -1,0 +1,18 @@
+wpa_supplicant is a free software implementation of an IEEE 802.11i supplicant for Linux, FreeBSD, NetBSD, QNX, AROS, Microsoft Windows, Solaris, OS/2 (including ArcaOS and eComStation) and Haiku. In addition to being a WPA3 and WPA2  supplicant, it also implements WPA and older wireless LAN security protocols.
+
+Features
+Features include:
+
+WPA-PSK and WPA2-PSK ("WPA-Personal", pre-shared key)
+WPA3
+WPA with EAP ("WPA-Enterprise", for example with RADIUS authentication server)
+RSN: PMKSA caching, pre-authentication
+IEEE 802.11r
+IEEE 802.11w
+Wi-Fi Protected Setup (WPS)
+Included with the supplicant are a GUI and a command-line utility for interacting with the running supplicant. From either of these interfaces it is possible to review a list of currently visible networks, select one of them, provide any additional security information needed to authenticate with the network (for example, a passphrase, or username and password) and add it to the preference list to enable automatic reconnection in the future.
+The graphical user interface is built on top of the Qt library.
+wpa_supplicant can authenticate with any of the following EAP (Extensible Authentication Protocol) methods: EAP-TLS, EAP-PEAP (both PEAPv0 and PEAPv1), EAP-TTLS, EAP-SIM, EAP-AKA, EAP-AKA', EAP-PWD, EAP-EKE, EAP-PSK (experimental), EAP-FAST, EAP-PAX, EAP-SAKE, EAP-GPSK, EAP-IKEv2, EAP-MD5, EAP-MSCHAPv2, and LEAP (requires special functions in the driver).
+
+Vulnerability to KRACK
+wpa_supplicant was especially susceptible to KRACK, as it can be manipulated to install an all-zeros encryption key, effectively nullifying WPA2 protection in a man-in-the-middle attack. Version 2.7 fixed KRACK and several other vulnerabilities.

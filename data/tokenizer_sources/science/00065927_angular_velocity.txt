@@ -1,0 +1,1628 @@
+In kinematics, angular velocity (symbol ω or ⁠
+  
+    
+      
+        
+          
+            
+              ω
+              →
+            
+          
+        
+      
+    
+    {\displaystyle {\vec {\omega }}}
+  
+⁠, the lowercase Greek letter omega), also known as the angular frequency vector, is a three-dimensional Euclidean vector that uniquely identifies the plane, direction and angular speed of rotation of a particle rotating in a circle at constant speed in three dimensions.
+The direction 
+  
+    
+      
+        
+          
+            
+              ω
+              ^
+            
+          
+        
+        =
+        
+          ω
+        
+        
+          /
+        
+        ‖
+        
+          ω
+        
+        ‖
+      
+    
+    {\displaystyle {\hat {\boldsymbol {\omega }}}={\boldsymbol {\omega }}/\|{\boldsymbol {\omega }}\|}
+  
+ is normal to the instantaneous plane of rotation. The sense of angular velocity is conventionally specified by the right-hand rule, implying counterclockwise rotations (as viewed from "above" the plane of rotation); negation (multiplication by −1) leaves the magnitude unchanged but flips the axis in the opposite direction.
+The magnitude of this vector, 
+  
+    
+      
+        ω
+        =
+        ‖
+        
+          ω
+        
+        ‖
+      
+    
+    {\displaystyle \omega =\|{\boldsymbol {\omega }}\|}
+  
+, represents the angular speed, the angular rate at which the object rotates (spins or revolves).
+The angular velocity as given above for point particles, is called orbital angular velocity. A rigid body rotating about a fixed axis has each point of the body having the same orbital angular velocity. Hence such a rigid body can be given an angular velocity (called spin angular velocity) equal to the orbital angular velocity of each point in the body.
+The angular velocity, as given above for rotation in a fixed circle at constant speed, can be generalized to more general motion in three dimensions. More specifically, given that the angular velocity of a particle rotating in a fixed circle in three dimensions at constant speed can be determined by its position with respect to the center of the circle and its velocity, the angular velocity of a particle whose position in three dimensions is twice-continuously differentiable with respect to time is determined in the same way by its position from the center of curvature and its velocity.
+Angular velocity has dimension of per unit time. The SI unit of angular velocity is radians per second,. The radian is a dimensionless quantity, thus the SI units of angular velocity are dimensionally equivalent to reciprocal seconds, s−1, although rad/s is preferable to avoid confusion with rotational velocity in units of hertz (also equivalent to s−1). 
+For example, a geostationary satellite completes one orbit per sidereal day above the equator (approximately 360 degrees per 24 hours) has angular velocity magnitude (angular speed) ω = 360°/24 h = 15°/h (or 2π rad/24 h ≈ 0.26 rad/h) and angular velocity direction (a unit vector) parallel to Earth's rotation axis (⁠
+  
+    
+      
+        
+          
+            
+              ω
+              ^
+            
+          
+        
+        =
+        
+          
+            
+              Z
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\hat {\omega }}={\hat {Z}}}
+  
+⁠, in the geocentric coordinate system). If angle is measured in radians, the linear velocity is the radius times the angular velocity, ⁠
+  
+    
+      
+        v
+        =
+        r
+        ω
+      
+    
+    {\displaystyle v=r\omega }
+  
+⁠. With orbital radius 42000 km from the Earth's center, the satellite's tangential speed through space is thus v = 42000 km × 0.26/h ≈ 11000 km/h. The angular velocity is positive since the satellite travels prograde with the Earth's rotation (the same direction as the rotation of Earth).
+
+Orbital angular velocity of a point particle
+
+Particle in two dimensions
+
+In the simplest case of circular motion at radius ⁠
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+⁠, with position given by the angular displacement 
+  
+    
+      
+        ϕ
+        (
+        t
+        )
+      
+    
+    {\displaystyle \phi (t)}
+  
+ from the x-axis, the orbital angular velocity is the rate of change of angle with respect to time: ⁠
+  
+    
+      
+        
+          ω
+          =
+          
+            
+              
+                d
+                ϕ
+              
+              
+                d
+                t
+              
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \omega ={\frac {d\phi }{dt}}}
+  
+⁠. If 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ is measured in radians, the arc-length from the positive x-axis around the circle to the particle is ⁠
+  
+    
+      
+        ℓ
+        =
+        r
+        ϕ
+      
+    
+    {\displaystyle \ell =r\phi }
+  
+⁠, and the linear velocity is ⁠
+  
+    
+      
+        
+          v
+          (
+          t
+          )
+          =
+          
+            
+              
+                d
+                ℓ
+              
+              
+                d
+                t
+              
+            
+          
+          =
+          r
+          ω
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle v(t)={\frac {d\ell }{dt}}=r\omega (t)}
+  
+⁠, so that ⁠
+  
+    
+      
+        
+          ω
+          =
+          
+            
+              v
+              r
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \omega ={\frac {v}{r}}}
+  
+⁠.
+In the general case of a particle moving in the plane, the orbital angular velocity is the rate at which the position vector relative to a chosen origin "sweeps out" angle. The diagram shows the position vector 
+  
+    
+      
+        
+          r
+        
+      
+    
+    {\displaystyle \mathbf {r} }
+  
+ from the origin 
+  
+    
+      
+        O
+      
+    
+    {\displaystyle O}
+  
+ to a particle ⁠
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+⁠, with its polar coordinates ⁠
+  
+    
+      
+        (
+        r
+        ,
+        ϕ
+        )
+      
+    
+    {\displaystyle (r,\phi )}
+  
+⁠. (All variables are functions of time ⁠
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+⁠.) The particle has linear velocity splitting as ⁠
+  
+    
+      
+        
+          v
+        
+        =
+        
+          
+            v
+          
+          
+            ‖
+          
+        
+        +
+        
+          
+            v
+          
+          
+            ⊥
+          
+        
+      
+    
+    {\displaystyle \mathbf {v} =\mathbf {v} _{\Vert }+\mathbf {v} _{\perp }}
+  
+⁠,  with the radial component 
+  
+    
+      
+        
+          
+            v
+          
+          
+            ‖
+          
+        
+      
+    
+    {\displaystyle \mathbf {v} _{\|}}
+  
+ parallel to the radius, and the cross-radial (or tangential) component 
+  
+    
+      
+        
+          
+            v
+          
+          
+            ⊥
+          
+        
+      
+    
+    {\displaystyle \mathbf {v} _{\perp }}
+  
+ perpendicular to the radius. When there is no radial component, the particle moves around the origin in a circle; but when there is no cross-radial component, it moves in a straight line from the origin. Since radial motion leaves the angle unchanged, only the cross-radial component of linear velocity contributes to angular velocity.
+The angular velocity ω is the rate of change of angular position with respect to time, which can be computed from the cross-radial velocity as:
+
+  
+    
+      
+        ω
+        =
+        
+          
+            
+              d
+              ϕ
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            
+              v
+              
+                ⊥
+              
+            
+            r
+          
+        
+        .
+      
+    
+    {\displaystyle \omega ={\frac {d\phi }{dt}}={\frac {v_{\perp }}{r}}.}
+  
+
+Here the cross-radial speed 
+  
+    
+      
+        
+          v
+          
+            ⊥
+          
+        
+      
+    
+    {\displaystyle v_{\perp }}
+  
+ is the signed magnitude of ⁠
+  
+    
+      
+        
+          
+            v
+          
+          
+            ⊥
+          
+        
+      
+    
+    {\displaystyle \mathbf {v} _{\perp }}
+  
+⁠, positive for counter-clockwise motion, negative for clockwise. Taking polar coordinates for the linear velocity 
+  
+    
+      
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {v} }
+  
+ gives magnitude 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ (linear speed) and angle 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+ relative to the radius vector; in these terms, ⁠
+  
+    
+      
+        
+          v
+          
+            ⊥
+          
+        
+        =
+        v
+        sin
+        ⁡
+        (
+        θ
+        )
+      
+    
+    {\displaystyle v_{\perp }=v\sin(\theta )}
+  
+⁠, so that
+
+  
+    
+      
+        ω
+        =
+        
+          
+            
+              v
+              sin
+              ⁡
+              (
+              θ
+              )
+            
+            r
+          
+        
+        .
+      
+    
+    {\displaystyle \omega ={\frac {v\sin(\theta )}{r}}.}
+  
+
+These formulas may be derived doing ⁠
+  
+    
+      
+        
+          r
+        
+        =
+        (
+        r
+        cos
+        ⁡
+        (
+        φ
+        )
+        ,
+        r
+        sin
+        ⁡
+        (
+        φ
+        )
+        )
+      
+    
+    {\displaystyle \mathbf {r} =(r\cos(\varphi ),r\sin(\varphi ))}
+  
+⁠, being 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ a function of the distance to the origin with respect to time, and 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ a function of the angle between the vector and the x-axis. Then:
+
+  
+    
+      
+        
+          
+            
+              d
+              
+                r
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        (
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+        cos
+        ⁡
+        (
+        φ
+        )
+        −
+        r
+        
+          
+            
+              φ
+              ˙
+            
+          
+        
+        sin
+        ⁡
+        (
+        φ
+        )
+        ,
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+        sin
+        ⁡
+        (
+        φ
+        )
+        +
+        r
+        
+          
+            
+              φ
+              ˙
+            
+          
+        
+        cos
+        ⁡
+        (
+        φ
+        )
+        )
+        ,
+      
+    
+    {\displaystyle {\frac {d\mathbf {r} }{dt}}=({\dot {r}}\cos(\varphi )-r{\dot {\varphi }}\sin(\varphi ),{\dot {r}}\sin(\varphi )+r{\dot {\varphi }}\cos(\varphi )),}
+  
+
+which is equal to:
+
+  
+    
+      
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+        (
+        cos
+        ⁡
+        (
+        φ
+        )
+        ,
+        sin
+        ⁡
+        (
+        φ
+        )
+        )
+        +
+        r
+        
+          
+            
+              φ
+              ˙
+            
+          
+        
+        (
+        −
+        sin
+        ⁡
+        (
+        φ
+        )
+        ,
+        cos
+        ⁡
+        (
+        φ
+        )
+        )
+        =
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+        
+          
+            
+              r
+              ^
+            
+          
+        
+        +
+        r
+        
+          
+            
+              φ
+              ˙
+            
+          
+        
+        
+          
+            
+              φ
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {r}}(\cos(\varphi ),\sin(\varphi ))+r{\dot {\varphi }}(-\sin(\varphi ),\cos(\varphi ))={\dot {r}}{\hat {r}}+r{\dot {\varphi }}{\hat {\varphi }}}
+  
+
+(see Unit vector in cylindrical coordinates). 
+Knowing ⁠
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  r
+                
+              
+              
+                d
+                t
+              
+            
+          
+          =
+          
+            v
+          
+        
+      
+    
+    {\displaystyle \textstyle {\frac {d\mathbf {r} }{dt}}=\mathbf {v} }
+  
+⁠, we conclude that the radial component of the velocity is given by ⁠
+  
+    
+      
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {r}}}
+  
+⁠, because 
+  
+    
+      
+        
+          
+            
+              r
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\hat {r}}}
+  
+ is a radial unit vector; and the perpendicular component is given by 
+  
+    
+      
+        r
+        
+          
+            
+              φ
+              ˙
+            
+          
+        
+      
+    
+    {\displaystyle r{\dot {\varphi }}}
+  
+ because 
+  
+    
+      
+        
+          
+            
+              φ
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\hat {\varphi }}}
+  
+ is a perpendicular unit vector.
+In two dimensions, angular velocity is a number with plus or minus sign indicating orientation, but not pointing in a direction. The sign is conventionally taken to be positive if the radius vector turns counter-clockwise, and negative if clockwise. Angular velocity then may be termed a pseudoscalar, a numerical quantity which changes sign under a parity inversion, such as inverting one axis or switching the two axes.
+
+Particle in three dimensions
+
+In  three-dimensional space, we again have the position vector r of a moving particle. Here, orbital angular velocity is a pseudovector whose magnitude is the rate at which r sweeps out angle (in radians per unit of time), and whose direction is perpendicular to the instantaneous plane in which r sweeps out angle (i.e. the plane spanned by r and v). However, as there are two directions perpendicular to any plane, an additional condition is necessary to uniquely specify the direction of the angular velocity; conventionally, the right-hand rule is used.
+Let the pseudovector 
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle \mathbf {u} }
+  
+ be the unit vector perpendicular to the plane spanned by r and v, so that the right-hand rule is satisfied (i.e. the instantaneous direction of angular displacement is counter-clockwise looking from the top of ⁠
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle \mathbf {u} }
+  
+⁠). Taking polar coordinates 
+  
+    
+      
+        (
+        r
+        ,
+        ϕ
+        )
+      
+    
+    {\displaystyle (r,\phi )}
+  
+ in this plane, as in the two-dimensional case above, one may define the orbital angular velocity vector as:
+
+  
+    
+      
+        
+          ω
+        
+        =
+        ω
+        
+          u
+        
+        =
+        
+          
+            
+              d
+              ϕ
+            
+            
+              d
+              t
+            
+          
+        
+        
+          u
+        
+        =
+        
+          
+            
+              v
+              sin
+              ⁡
+              (
+              θ
+              )
+            
+            r
+          
+        
+        
+          u
+        
+        ,
+      
+    
+    {\displaystyle {\boldsymbol {\omega }}=\omega \mathbf {u} ={\frac {d\phi }{dt}}\mathbf {u} ={\frac {v\sin(\theta )}{r}}\mathbf {u} ,}
+  
+
+where ⁠
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+⁠ is the angle between ⁠
+  
+    
+      
+        
+          r
+        
+      
+    
+    {\displaystyle \mathbf {r} }
+  
+⁠ and ⁠
+  
+    
+      
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {v} }
+  
+⁠. In terms of the cross product, this is:
+
+  
+    
+      
+        
+          ω
+        
+        =
+        
+          
+            
+              
+                r
+              
+              ×
+              
+                v
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\boldsymbol {\omega }}={\frac {\mathbf {r} \times \mathbf {v} }{r^{2}}}.}
+  
+
+From the above equation, one can recover the tangential velocity as:
+
+  
+    
+      
+        
+          
+            v
+          
+          
+            ⊥
+          
+        
+        =
+        
+          ω
+        
+        ×
+        
+          r
+        
+      
+    
+    {\displaystyle \mathbf {v} _{\perp }={\boldsymbol {\omega }}\times \mathbf {r} }
+  
+
+Spin angular velocity of a rigid body or reference frame
+Given a rotating frame of three linearly independent unit coordinate vectors, at each instant in time, there always exists a common axis (called the axis of rotation) around which all three vectors rotate with the same angular speed and in the same angular direction (clockwise or counterclockwise). In such a frame, each vector may be considered as a moving particle with constant scalar radius. A collection of such particles is called a rigid body.
+Euler's rotation theorem says that in a rotating frame, the axis of rotation one obtains from one choice of three linearly independent unit vectors is the same as that for any other choice; that is, there is one single instantaneous axis of rotation to the frame, around which all points rotate at the same angular speed and in the same angular direction (clockwise or counterclockwise). The spin angular velocity of a frame or rigid body is defined to be the pseudovector whose magnitude is this common angular speed, and whose direction is along the common axis of rotation in accordance with the right-hand rule (that is, for counterclockise rotation, it points "upward" along the axis, while for clockwise rotation, it points "downward").
+In larger than 3 spatial dimensions, the interpretation of spin angular velocity as a pseudovector is not valid; however, it may be characterized by a more general type of object known as an antisymmetric rank-2 tensor.
+The addition of angular velocity vectors for frames is also defined by the usual vector addition (composition of linear movements), and can be useful to decompose the rotation as in a gimbal. All components of the vector can be calculated as derivatives of the parameters defining the moving frames (Euler angles or rotation matrices). As in the general case, addition is commutative: ⁠
+  
+    
+      
+        
+          ω
+          
+            1
+          
+        
+        +
+        
+          ω
+          
+            2
+          
+        
+        =
+        
+          ω
+          
+            2
+          
+        
+        +
+        
+          ω
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \omega _{1}+\omega _{2}=\omega _{2}+\omega _{1}}
+  
+⁠.
+If we choose a reference point 
+  
+    
+      
+        
+          
+            
+              r
+            
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle {{\boldsymbol {r}}_{0}}}
+  
+ fixed in a rotating frame, the velocity 
+  
+    
+      
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {\boldsymbol {r}}}}
+  
+ of any point in the frame is given by
+
+  
+    
+      
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+        =
+        
+          
+            
+              
+                
+                  r
+                
+                
+                  0
+                
+              
+              ˙
+            
+          
+        
+        +
+        
+          ω
+        
+        ×
+        (
+        
+          r
+        
+        −
+        
+          
+            
+              r
+            
+            
+              0
+            
+          
+        
+        )
+      
+    
+    {\displaystyle {\dot {\boldsymbol {r}}}={\dot {{\boldsymbol {r}}_{0}}}+{\boldsymbol {\omega }}\times ({\boldsymbol {r}}-{{\boldsymbol {r}}_{0}})}
+  
+
+Components from the basis vectors of a body-fixed frame
+Consider a rigid body rotating about a fixed point O. Construct a reference frame in the body consisting of an orthonormal set of vectors 
+  
+    
+      
+        
+          
+            e
+          
+          
+            1
+          
+        
+        ,
+        
+          
+            e
+          
+          
+            2
+          
+        
+        ,
+        
+          
+            e
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbf {e} _{1},\mathbf {e} _{2},\mathbf {e} _{3}}
+  
+ fixed to the body and with their common origin at O. The spin angular velocity vector of both frame and body about O is then
+
+  
+    
+      
+        
+          ω
+        
+        =
+        
+          (
+          
+            
+              
+                
+                  
+                    
+                      e
+                    
+                    ˙
+                  
+                
+              
+              
+                1
+              
+            
+            ⋅
+            
+              
+                e
+              
+              
+                2
+              
+            
+          
+          )
+        
+        
+          
+            e
+          
+          
+            3
+          
+        
+        +
+        
+          (
+          
+            
+              
+                
+                  
+                    
+                      e
+                    
+                    ˙
+                  
+                
+              
+              
+                2
+              
+            
+            ⋅
+            
+              
+                e
+              
+              
+                3
+              
+            
+          
+          )
+        
+        
+          
+            e
+          
+          
+            1
+          
+        
+        +
+        
+          (
+          
+            
+              
+                
+                  
+                    
+                      e
+                    
+                    ˙
+                  
+                
+              
+              
+                3
+              
+            
+            ⋅
+            
+              
+                e
+              
+              
+                1
+              
+            
+          
+          )
+        
+        
+          
+            e
+          
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle {\boldsymbol {\omega }}=\left({\dot {\mathbf {e} }}_{1}\cdot \mathbf {e} _{2}\right)\mathbf {e} _{3}+\left({\dot {\mathbf {e} }}_{2}\cdot \mathbf {e} _{3}\right)\mathbf {e} _{1}+\left({\dot {\mathbf {e} }}_{3}\cdot \mathbf {e} _{1}\right)\mathbf {e} _{2},}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              
+                
+                  e
+                
+                ˙
+              
+            
+          
+          
+            i
+          
+        
+        =
+        
+          
+            
+              d
+              
+                
+                  e
+                
+                
+                  i
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {\mathbf {e} }}_{i}={\frac {d\mathbf {e} _{i}}{dt}}}
+  
+ is the time rate of change of the frame vector ⁠
+  
+    
+      
+        
+          
+            e
+          
+          
+            i
+          
+        
+        ,
+        i
+        =
+        1
+        ,
+        2
+        ,
+        3
+      
+    
+    {\displaystyle \mathbf {e} _{i},i=1,2,3}
+  
+⁠,  due to the rotation.
+This formula is incompatible with the expression for orbital angular velocity
+
+  
+    
+      
+        
+          ω
+        
+        =
+        
+          
+            
+              
+                r
+              
+              ×
+              
+                v
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\boldsymbol {\omega }}={\frac {{\boldsymbol {r}}\times {\boldsymbol {v}}}{r^{2}}},}
+  
+
+as that formula defines angular velocity for a single point about O, while the formula in this section applies to a frame or rigid body. In the case of a rigid body a single 
+  
+    
+      
+        
+          ω
+        
+      
+    
+    {\displaystyle {\boldsymbol {\omega }}}
+  
+ has to account for the motion of all particles in the body.
+
+Components from Euler angles
+
+The components of the spin angular velocity pseudovector were first calculated by Leonhard Euler using his Euler angles and the use of an intermediate frame:
+
+One axis of the reference frame (the precession axis)
+The line of nodes of the moving frame with respect to the reference frame (nutation axis)
+One axis of the moving frame (the intrinsic rotation axis)
+Euler proved that the projections of the angular velocity pseudovector on each of these three axes is the derivative of its associated angle (which is equivalent to decomposing the instantaneous rotation into three instantaneous Euler rotations). Therefore:
+
+  
+    
+      
+        
+          ω
+        
+        =
+        
+          
+            
+              α
+              ˙
+            
+          
+        
+        
+          
+            u
+          
+          
+            1
+          
+        
+        +
+        
+          
+            
+              β
+              ˙
+            
+          
+        
+        
+          
+            u
+          
+          
+            2
+          
+        
+        +
+        
+          
+            
+              γ
+              ˙
+            
+          
+        
+        
+          
+            u
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle {\boldsymbol {\omega }}={\dot {\alpha }}\mathbf {u} _{1}+{\dot {\beta }}\mathbf {u} _{2}+{\dot {\gamma }}\mathbf {u} _{3}}
+  
+
+This basis is not orthonormal and it is difficult to use, but now the velocity vector can be changed to the fixed frame or to the moving frame with just a change of bases. For example, changing to the mobile frame:
+
+  
+    
+      
+        
+          ω
+        
+        =
+        (
+        
+          
+            
+              α
+              ˙
+            
+          
+        
+        sin
+        ⁡
+        β
+        sin
+        ⁡
+        γ
+        +
+        
+          
+            
+              β
+              ˙
+            
+          
+        
+        cos
+        ⁡
+        γ
+        )
+        
+          
+            
+              
+                i
+              
+              ^
+            
+          
+        
+        +
+        (
+        
+          
+            
+              α
+              ˙
+            
+          
+        
+        sin
+        ⁡
+        β
+        cos
+        ⁡
+        γ
+        −
+        
+          
+            
+              β
+              ˙
+            
+          
+        
+        sin
+        ⁡
+        γ
+        )
+        
+          
+            
+              
+                j
+              
+              ^
+            
+          
+        
+        +
+        (
+        
+          
+            
+              α
+              ˙
+            
+          
+        
+        cos
+        ⁡
+        β
+        +
+        
+          
+            
+              γ
+              ˙
+            
+          
+        
+        )
+        
+          
+            
+              
+                k
+              
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\boldsymbol {\omega }}=({\dot {\alpha }}\sin \beta \sin \gamma +{\dot {\beta }}\cos \gamma ){\hat {\mathbf {i} }}+({\dot {\alpha }}\sin \beta \cos \gamma -{\dot {\beta }}\sin \gamma ){\hat {\mathbf {j} }}+({\dot {\alpha }}\cos \beta +{\dot {\gamma }}){\hat {\mathbf {k} }}}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              
+                i
+              
+              ^
+            
+          
+        
+        ,
+        
+          
+            
+              
+                j
+              
+              ^
+            
+          
+        
+        ,
+        
+          
+            
+              
+                k
+              
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\hat {\mathbf {i} }},{\hat {\mathbf {j} }},{\hat {\mathbf {k} }}}
+  
+ are unit vectors for the frame fixed in the moving body. This example has been made using the Z-X-Z convention for Euler angles.
+
+Tensor

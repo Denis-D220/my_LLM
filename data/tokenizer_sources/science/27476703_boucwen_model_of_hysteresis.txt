@@ -1,0 +1,2867 @@
+In structural engineering, the Bouc–Wen model of hysteresis is a hysteretic model typically employed to describe non-linear hysteretic systems. It was introduced by Robert Bouc and extended by Yi-Kwei Wen, who demonstrated its versatility by producing a variety of hysteretic patterns.
+This model is able to capture, in analytical form, a range of hysteretic cycle shapes matching the behaviour of a wide class of hysteretical systems. Due to its versatility and mathematical tractability, the Bouc–Wen model has gained popularity. It has been extended and applied to a wide variety of engineering problems, including multi-degree-of-freedom (MDOF) systems, buildings, frames, bidirectional and torsional response of hysteretic systems, two- and three-dimensional continua, soil liquefaction and base isolation systems. The Bouc–Wen model, its variants and extensions have been used in structural control—in particular, in the modeling of behaviour of magneto-rheological dampers, base-isolation devices for buildings and other kinds of damping devices. It has also been used in the modelling and analysis of structures built of reinforced concrete, steel, masonry, and timber.
+
+Model formulation
+Consider the equation of motion of a single-degree-of-freedom (sdof) system:
+
+here, 
+  
+    
+      
+        
+          m
+        
+      
+    
+    {\displaystyle \textstyle m}
+  
+ represents the mass, 
+  
+    
+      
+        
+          u
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle u(t)}
+  
+ is the displacement, 
+  
+    
+      
+        
+          c
+        
+      
+    
+    {\displaystyle \textstyle c}
+  
+ the linear viscous damping coefficient, 
+  
+    
+      
+        
+          F
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle F(t)}
+  
+ the restoring force and 
+  
+    
+      
+        
+          f
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle f(t)}
+  
+ the excitation force while the overdot denotes the derivative with respect to time.
+According to the Bouc–Wen model, the restoring force is expressed as:
+
+where 
+  
+    
+      
+        
+          a
+          :=
+          
+            
+              
+                k
+                
+                  f
+                
+              
+              
+                k
+                
+                  i
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle a:={\frac {k_{f}}{k_{i}}}}
+  
+ is the ratio of post-yield 
+  
+    
+      
+        
+          
+            k
+            
+              f
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle k_{f}}
+  
+ to pre-yield (elastic) 
+  
+    
+      
+        
+          
+            k
+            
+              i
+            
+          
+          :=
+          
+            
+              
+                F
+                
+                  y
+                
+              
+              
+                u
+                
+                  y
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle k_{i}:={\frac {F_{y}}{u_{y}}}}
+  
+ stiffness, 
+  
+    
+      
+        
+          
+            F
+            
+              y
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle F_{y}}
+  
+ is the yield force, 
+  
+    
+      
+        
+          
+            u
+            
+              y
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle u_{y}}
+  
+ the yield displacement, and 
+  
+    
+      
+        
+          z
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle z(t)}
+  
+ a non-observable hysteretic parameter (usually called the hysteretic displacement) that obeys the following nonlinear differential equation with zero initial condition (
+  
+    
+      
+        
+          z
+          (
+          0
+          )
+          =
+          0
+        
+      
+    
+    {\displaystyle \textstyle z(0)=0}
+  
+), and that has dimensions of length:
+
+or simply as:
+
+where 
+  
+    
+      
+        
+          sign
+        
+      
+    
+    {\displaystyle \textstyle \operatorname {sign} }
+  
+ denotes the signum function, and 
+  
+    
+      
+        
+          A
+        
+      
+    
+    {\displaystyle \textstyle A}
+  
+, 
+  
+    
+      
+        
+          β
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle \beta >0}
+  
+, 
+  
+    
+      
+        
+          γ
+        
+      
+    
+    {\displaystyle \textstyle \gamma }
+  
+ and 
+  
+    
+      
+        
+          n
+        
+      
+    
+    {\displaystyle \textstyle n}
+  
+ are dimensionless quantities controlling the behaviour of the model (
+  
+    
+      
+        
+          n
+          =
+          ∞
+        
+      
+    
+    {\displaystyle \textstyle n=\infty }
+  
+ retrieves the elastoplastic hysteresis). Take into account that in the original paper of Wen (1976), 
+  
+    
+      
+        
+          β
+        
+      
+    
+    {\displaystyle \textstyle \beta }
+  
+ is called 
+  
+    
+      
+        
+          α
+        
+      
+    
+    {\displaystyle \textstyle \alpha }
+  
+, and 
+  
+    
+      
+        
+          γ
+        
+      
+    
+    {\displaystyle \textstyle \gamma }
+  
+ is called 
+  
+    
+      
+        
+          β
+        
+      
+    
+    {\displaystyle \textstyle \beta }
+  
+. Nowadays the notation varies from paper to paper and very often the places of 
+  
+    
+      
+        
+          β
+        
+      
+    
+    {\displaystyle \textstyle \beta }
+  
+ and 
+  
+    
+      
+        
+          γ
+        
+      
+    
+    {\displaystyle \textstyle \gamma }
+  
+ are exchanged. Here the notation used by Song J. and Der Kiureghian A. (2006) is implemented. The restoring force 
+  
+    
+      
+        
+          F
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle F(t)}
+  
+ can be decomposed into an elastic and a hysteretic part as follows:
+
+and
+
+therefore, the restoring force can be visualized as two springs connected in parallel.
+For small values of the positive exponential parameter 
+  
+    
+      
+        
+          n
+        
+      
+    
+    {\displaystyle \textstyle n}
+  
+ the transition from elastic to the post-elastic branch is smooth, while for large values that transition is abrupt. Parameters 
+  
+    
+      
+        
+          A
+        
+      
+    
+    {\displaystyle \textstyle A}
+  
+, 
+  
+    
+      
+        
+          β
+        
+      
+    
+    {\displaystyle \textstyle \beta }
+  
+ and 
+  
+    
+      
+        
+          γ
+        
+      
+    
+    {\displaystyle \textstyle \gamma }
+  
+ control the size and shape of the hysteretic loop. It has been found that the parameters of the Bouc–Wen model are functionally redundant. Removing this redundancy is best achieved by setting 
+  
+    
+      
+        
+          A
+          =
+          1
+        
+      
+    
+    {\displaystyle \textstyle A=1}
+  
+.
+Wen assumed integer values for 
+  
+    
+      
+        
+          n
+        
+      
+    
+    {\displaystyle \textstyle n}
+  
+; however, all real positive values of 
+  
+    
+      
+        
+          n
+        
+      
+    
+    {\displaystyle \textstyle n}
+  
+ are admissible, i.e., 
+  
+    
+      
+        
+          n
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle n>0}
+  
+. The parameter 
+  
+    
+      
+        
+          β
+        
+      
+    
+    {\displaystyle \textstyle \beta }
+  
+ is positive by assumption, while the admissible values for 
+  
+    
+      
+        
+          γ
+        
+      
+    
+    {\displaystyle \textstyle \gamma }
+  
+, that is 
+  
+    
+      
+        
+          γ
+          ∈
+          [
+          −
+          β
+          ,
+          β
+          ]
+        
+      
+    
+    {\displaystyle \textstyle \gamma \in [-\beta ,\beta ]}
+  
+, can be derived from a thermodynamical analysis (Baber and Wen (1981)).
+Ikhouane and Rodellar (2005) give some insight regarding the behavior of the Bouc–Wen model and provide evidence that the response of the Bouc–Wen model under periodic input is asymptotically periodic.
+
+Definitions
+Some terms are defined below: 
+
+Softening: Slope of hysteresis loop decreases with displacement
+Hardening: Slope of hysteresis loop increases with displacement
+Pinched hysteresis loops: Thinner loops in the middle than at the ends. Pinching is a sudden loss of stiffness, primarily caused by damage and interaction of structural components under a large deformation. It is caused by closing (or unclosed) cracks and yielding of compression reinforcement before closing the cracks in reinforced concrete members, slipping at bolted joints (in steel construction) and loosening and slipping of the joints caused by previous cyclic loadings in timber structures with dowel-type fasteners (e.g. nails and bolts).
+Stiffness degradation: Progressive loss of stiffness in each loading cycle
+Strength degradation: Degradation of strength when cyclically loaded to the same displacement level. The term "strength degradation" is somewhat misleading, since strength degradation can only be modeled if displacement is the input function.
+Rate-independency: The relationship between a system's input and output depends entirely on the history of the input's path, rather than the speed or frequency at which that input changes. If you slow down, speed up, or temporarily freeze the input sequence, the system's output path will trace the exact same hysteresis loop. In other words,  the rate-independency implies that the output 
+  
+    
+      
+        F
+        (
+        t
+        )
+      
+    
+    {\displaystyle F(t)}
+  
+ is insensitive to the time-derivatives 
+  
+    
+      
+        
+          
+            
+              
+                
+                  d
+                
+              
+              x
+              (
+              t
+              )
+            
+            
+              
+                
+                  d
+                
+              
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {{\textrm {d}}x(t)}{{\textrm {d}}t}}}
+  
+ of the input 
+  
+    
+      
+        x
+        (
+        t
+        )
+      
+    
+    {\displaystyle x(t)}
+  
+. According to the definition of rate-independency, the restoring force 
+  
+    
+      
+        F
+        (
+        t
+        )
+      
+    
+    {\displaystyle F(t)}
+  
+ is a function of the input 
+  
+    
+      
+        x
+        (
+        t
+        )
+      
+    
+    {\displaystyle x(t)}
+  
+ and its history, but not of the rate of change of 
+  
+    
+      
+        x
+        (
+        t
+        )
+      
+    
+    {\displaystyle x(t)}
+  
+. Mathematically, this can be expressed as:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  d
+                
+              
+              F
+              (
+              t
+              )
+            
+            
+              
+                
+                  d
+                
+              
+              t
+            
+          
+        
+        =
+        g
+        
+          (
+          
+            x
+            (
+            t
+            )
+            ,
+            sign
+            ⁡
+            
+              (
+              
+                
+                  
+                    
+                      
+                        d
+                      
+                    
+                    x
+                    (
+                    t
+                    )
+                  
+                  
+                    
+                      
+                        d
+                      
+                    
+                    t
+                  
+                
+              
+              )
+            
+            ,
+            F
+            (
+            t
+            )
+          
+          )
+        
+        
+          
+            
+              
+                
+                  d
+                
+              
+              x
+              (
+              t
+              )
+            
+            
+              
+                
+                  d
+                
+              
+              t
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {{\textrm {d}}F(t)}{{\textrm {d}}t}}=g\left(x(t),\operatorname {sign} \left({\frac {{\textrm {d}}x(t)}{{\textrm {d}}t}}\right),F(t)\right){\frac {{\textrm {d}}x(t)}{{\textrm {d}}t}},}
+  
+
+where 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is a function that represents the tangential stiffness of the system, which depends on the current input 
+  
+    
+      
+        x
+        (
+        t
+        )
+      
+    
+    {\displaystyle x(t)}
+  
+, the direction of change of the input (indicated by 
+  
+    
+      
+        sign
+        ⁡
+        
+          (
+          
+            
+              
+                
+                  
+                    
+                      d
+                    
+                  
+                  x
+                  (
+                  t
+                  )
+                
+                
+                  
+                    
+                      d
+                    
+                  
+                  t
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \operatorname {sign} \left({\tfrac {{\textrm {d}}x(t)}{{\textrm {d}}t}}\right)}
+  
+), and the current restoring force 
+  
+    
+      
+        F
+        (
+        t
+        )
+      
+    
+    {\displaystyle F(t)}
+  
+. The key point is that the function 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ does not depend on the magnitude of 
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    d
+                  
+                
+                x
+                (
+                t
+                )
+              
+              
+                
+                  
+                    d
+                  
+                
+                t
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {{\textrm {d}}x(t)}{{\textrm {d}}t}}}
+  
+, meaning that the system's response is independent of the rate at which the input changes.
+Asymmetry: It refers to unequal behavior in the positive and negative directions of loading. In an asymmetric hysteresis loop, the response of the system differs when subjected to positive versus negative loading. Asymmetry can arise due to various factors such as material properties, or geometric configurations that cause the system to respond differently under tension and compression or in different loading directions.
+
+Absorbed hysteretic energy
+Absorbed hysteretic energy represents the energy dissipated by the hysteretic system, and is quantified as the area of the hysteretic force under total displacement; therefore, the absorbed hysteretic energy (per unit of mass) can be quantified as
+
+that is,
+
+here 
+  
+    
+      
+        
+          
+            ω
+            
+              2
+            
+          
+          :=
+          
+            
+              
+                k
+                
+                  i
+                
+              
+              m
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \omega ^{2}:={\frac {k_{i}}{m}}}
+  
+ is the squared pseudo-natural frequency of the non-linear system; the units of this energy are 
+  
+    
+      
+        
+          J
+          
+            /
+          
+          k
+          g
+        
+      
+    
+    {\displaystyle \textstyle J/kg}
+  
+.
+Energy dissipation is a good measure of cumulative damage under stress reversals; it mirrors the loading history, and parallels the process of damage evolution. In the Bouc–Wen–Baber–Noori model, this energy is used to quantify system degradation.
+
+Modifications to the original Bouc–Wen model
+
+Bouc–Wen–Baber–Noori model
+An important modification to the original Bouc–Wen model was suggested by Baber and Wen (1981) and Baber and Noori (1985, 1986).
+This modification included strength, stiffness and pinching degradation effects, by means of suitable degradation functions:
+
+where the parameters 
+  
+    
+      
+        
+          ν
+          (
+          ε
+          )
+        
+      
+    
+    {\displaystyle \textstyle \nu (\varepsilon )}
+  
+, 
+  
+    
+      
+        
+          η
+          (
+          ε
+          )
+        
+      
+    
+    {\displaystyle \textstyle \eta (\varepsilon )}
+  
+ and 
+  
+    
+      
+        
+          h
+          (
+          z
+          )
+        
+      
+    
+    {\displaystyle \textstyle h(z)}
+  
+ are associated (respectively) with the strength, stiffness and pinching degradation effects. The 
+  
+    
+      
+        
+          ν
+          (
+          ε
+          )
+        
+      
+    
+    {\displaystyle \textstyle \nu (\varepsilon )}
+  
+, 
+  
+    
+      
+        
+          A
+          (
+          ε
+          )
+        
+      
+    
+    {\displaystyle \textstyle A(\varepsilon )}
+  
+ and 
+  
+    
+      
+        
+          η
+          (
+          ε
+          )
+        
+      
+    
+    {\displaystyle \textstyle \eta (\varepsilon )}
+  
+ are defined as linear functions of the absorbed hysteretic energy 
+  
+    
+      
+        
+          ε
+        
+      
+    
+    {\displaystyle \textstyle \varepsilon }
+  
+:
+
+The pinching function 
+  
+    
+      
+        
+          h
+          (
+          z
+          )
+        
+      
+    
+    {\displaystyle \textstyle h(z)}
+  
+ is specified as:
+
+where:
+
+and 
+  
+    
+      
+        
+          
+            z
+            
+              u
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle z_{u}}
+  
+ is the ultimate value of 
+  
+    
+      
+        
+          z
+        
+      
+    
+    {\displaystyle \textstyle z}
+  
+, given by
+
+Observe that the new parameters included in the model are: 
+  
+    
+      
+        
+          
+            δ
+            
+              ν
+            
+          
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle \delta _{\nu }>0}
+  
+, 
+  
+    
+      
+        
+          
+            δ
+            
+              A
+            
+          
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle \delta _{A}>0}
+  
+, 
+  
+    
+      
+        
+          
+            δ
+            
+              η
+            
+          
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle \delta _{\eta }>0}
+  
+, 
+  
+    
+      
+        
+          
+            ν
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \nu _{0}}
+  
+, 
+  
+    
+      
+        
+          
+            A
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle A_{0}}
+  
+, 
+  
+    
+      
+        
+          
+            η
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \eta _{0}}
+  
+, 
+  
+    
+      
+        
+          
+            ψ
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \psi _{0}}
+  
+, 
+  
+    
+      
+        
+          
+            δ
+            
+              ψ
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \delta _{\psi }}
+  
+, 
+  
+    
+      
+        
+          λ
+        
+      
+    
+    {\displaystyle \textstyle \lambda }
+  
+, 
+  
+    
+      
+        
+          p
+        
+      
+    
+    {\displaystyle \textstyle p}
+  
+ and 
+  
+    
+      
+        
+          ς
+        
+      
+    
+    {\displaystyle \textstyle \varsigma }
+  
+, where  
+  
+    
+      
+        
+          ς
+        
+      
+    
+    {\displaystyle \textstyle \varsigma }
+  
+, p, q, 
+  
+    
+      
+        
+          ψ
+        
+      
+    
+    {\displaystyle \textstyle \psi }
+  
+, 
+  
+    
+      
+        
+          δ
+        
+      
+    
+    {\displaystyle \textstyle \delta }
+  
+ and 
+  
+    
+      
+        
+          λ
+        
+      
+    
+    {\displaystyle \textstyle \lambda }
+  
+ are the pinching parameters. When 
+  
+    
+      
+        
+          
+            δ
+            
+              ν
+            
+          
+          =
+          0
+        
+      
+    
+    {\displaystyle \textstyle \delta _{\nu }=0}
+  
+, 
+  
+    
+      
+        
+          
+            δ
+            
+              η
+            
+          
+          =
+          0
+        
+      
+    
+    {\displaystyle \textstyle \delta _{\eta }=0}
+  
+ or 
+  
+    
+      
+        
+          h
+          (
+          z
+          )
+          =
+          1
+        
+      
+    
+    {\displaystyle \textstyle h(z)=1}
+  
+ no strength degradation, stiffness degradation or pinching effect is included in the model.
+Foliente (1993), in collaboration with MP Singh and M. Noori, and later Heine (2001) slightly altered the pinching function in order to model slack systems. An example of a slack system is a wood structure where displacement occurs with stiffness seemingly null, as the bolt of the structure is pressed into the wood.
+
+Two-degree-of-freedom generalization
+Consider a two-degree-of-freedom system subject to biaxial excitations. In this case, the interaction between the restoring forces may considerably change the structural response; for instance, the damage suffered from the excitation in one direction may weaken the stiffness and/or strength degradation in the other direction, and vice versa. The equation of motion that models such interaction is given by:
+
+  
+    
+      
+        M
+        
+          
+            [
+            
+              
+                
+                  
+                    
+                      
+                        
+                          u
+                          ¨
+                        
+                      
+                    
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          u
+                          ¨
+                        
+                      
+                    
+                    
+                      y
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        +
+        C
+        
+          
+            [
+            
+              
+                
+                  
+                    
+                      
+                        
+                          u
+                          ˙
+                        
+                      
+                    
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          u
+                          ˙
+                        
+                      
+                    
+                    
+                      y
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        +
+        
+          
+            [
+            
+              
+                
+                  
+                    q
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                  
+                    q
+                    
+                      y
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    f
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                  
+                    f
+                    
+                      y
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle M{\begin{bmatrix}{\ddot {u}}_{x}\\{\ddot {u}}_{y}\end{bmatrix}}+C{\begin{bmatrix}{\dot {u}}_{x}\\{\dot {u}}_{y}\end{bmatrix}}+{\begin{bmatrix}q_{x}\\q_{y}\end{bmatrix}}={\begin{bmatrix}f_{x}\\f_{y}\end{bmatrix}}}
+  
+
+where 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ and 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ stand for the mass and damping matrices, 
+  
+    
+      
+        
+          u
+          
+            x
+          
+        
+      
+    
+    {\displaystyle u_{x}}
+  
+ and 
+  
+    
+      
+        
+          u
+          
+            y
+          
+        
+      
+    
+    {\displaystyle u_{y}}
+  
+ are the displacements, 
+  
+    
+      
+        
+          f
+          
+            x
+          
+        
+      
+    
+    {\displaystyle f_{x}}
+  
+ and 
+  
+    
+      
+        
+          f
+          
+            y
+          
+        
+      
+    
+    {\displaystyle f_{y}}
+  
+ are the excitations and 
+  
+    
+      
+        
+          q
+          
+            x
+          
+        
+      
+    
+    {\displaystyle q_{x}}
+  
+ and 
+  
+    
+      
+        
+          q
+          
+            y
+          
+        
+      
+    
+    {\displaystyle q_{y}}
+  
+ are the restoring forces acting in two orthogonal (perpendicular) directions, which are given by
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  
+                    q
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                  
+                    q
+                    
+                      y
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        =
+        a
+        K
+        
+          
+            [
+            
+              
+                
+                  
+                    u
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      y
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        +
+        (
+        1
+        −
+        a
+        )
+        K
+        
+          
+            [
+            
+              
+                
+                  
+                    z
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                  
+                    z
+                    
+                      y
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle {\begin{bmatrix}q_{x}\\q_{y}\end{bmatrix}}=aK{\begin{bmatrix}u_{x}\\u_{y}\end{bmatrix}}+(1-a)K{\begin{bmatrix}z_{x}\\z_{y}\end{bmatrix}}}
+  
+
+where 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ is the initial stiffness matrix, 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is the ratio of post-yield to pre-yield (elastic) stiffness and 
+  
+    
+      
+        
+          z
+          
+            x
+          
+        
+      
+    
+    {\displaystyle z_{x}}
+  
+ and 
+  
+    
+      
+        
+          z
+          
+            y
+          
+        
+      
+    
+    {\displaystyle z_{y}}
+  
+ represent the hysteretic displacements.
+Using this two-degree-of-freedom generalization, Park et al. (1986) represented the hysteretic behaviour of the system by: 
+
+This model is suited, for instance, to reproduce the geometrically-linear, uncoupled behaviour of a biaxially-loaded, reinforced concrete column. Software like ETABS and SAP2000 use this formulation to model base isolators.
+Wang and Wen (2000) attempted to extend the model of Park et al. (1986) to include cases with varying 'knee' sharpness (i.e., 
+  
+    
+      
+        n
+        ≠
+        2
+      
+    
+    {\displaystyle n\neq 2}
+  
+). However, in so doing, the proposed model was no longer rotationally invariant (isotropic). Harvey and Gavin (2014) proposed an alternative generalization of the Park-Wen model that retained the isotropy and still allowed for 
+  
+    
+      
+        n
+        ≠
+        2
+      
+    
+    {\displaystyle n\neq 2}
+  
+, viz.
+
+Take into account that using the change of variables: 
+  
+    
+      
+        
+          z
+          
+            x
+          
+        
+        =
+        z
+        cos
+        ⁡
+        θ
+      
+    
+    {\displaystyle z_{x}=z\cos \theta }
+  
+, 
+  
+    
+      
+        
+          z
+          
+            y
+          
+        
+        =
+        z
+        sin
+        ⁡
+        θ
+      
+    
+    {\displaystyle z_{y}=z\sin \theta }
+  
+, 
+  
+    
+      
+        
+          u
+          
+            x
+          
+        
+        =
+        u
+        cos
+        ⁡
+        θ
+      
+    
+    {\displaystyle u_{x}=u\cos \theta }
+  
+, 
+  
+    
+      
+        
+          u
+          
+            y
+          
+        
+        =
+        u
+        sin
+        ⁡
+        θ
+      
+    
+    {\displaystyle u_{y}=u\sin \theta }
+  
+, the equations Eq. 14 reduce to the uniaxial hysteretic relationship Eq. 3 with 
+  
+    
+      
+        n
+        =
+        2
+      
+    
+    {\displaystyle n=2}
+  
+, that is,
+
+since this equation is valid for any value of 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+, the hysteretic restoring displacement is isotropic.
+
+Wang and Wen modification
+Wang and Wen (1998) suggested the following expression to account for the asymmetric peak restoring force:
+
+where 
+  
+    
+      
+        
+          ϕ
+        
+      
+    
+    {\displaystyle \textstyle \phi }
+  
+ is an additional parameter, to be determined.
+
+Asymmetrical hysteresis
+Asymmetric hysteretical curves appear due to the asymmetry of the mechanical properties of the tested element, of the geometry or of both. Song and Der Kiureghian (2006) observed that the hysteresis loops are often affected not only by the signs of the velocity 
+  
+    
+      
+        
+          
+            
+              u
+              ˙
+            
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\dot {u}}(t)}
+  
+ and the hysteretic displacement 
+  
+    
+      
+        z
+        (
+        t
+        )
+      
+    
+    {\displaystyle z(t)}
+  
+ but also by the sign of the displacement 
+  
+    
+      
+        u
+        (
+        t
+        )
+      
+    
+    {\displaystyle u(t)}
+  
+, because the hysteretic behaviour of a structural element in tension can be different from that in compression. Therefore, Song and Der Kiureghian (2006) proposed the following function for modelling those asymmetric curves:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                
+                  
+                    
+                      z
+                      ˙
+                    
+                  
+                
+                (
+                t
+                )
+              
+              
+                
+                =
+                
+                  
+                    
+                      u
+                      ˙
+                    
+                  
+                
+                (
+                t
+                )
+                
+                  
+                    {
+                  
+                
+                A
+                −
+                
+                  
+                    [
+                  
+                
+                
+                  β
+                  
+                    1
+                  
+                
+                sign
+                ⁡
+                (
+                
+                  
+                    
+                      u
+                      ˙
+                    
+                  
+                
+                (
+                t
+                )
+                z
+                (
+                t
+                )
+                )
+                +
+                
+                  β
+                  
+                    2
+                  
+                
+                sign
+                ⁡
+                (
+                u
+                (
+                t
+                )
+                
+                  
+                    
+                      u
+                      ˙
+                    
+                  
+                
+                (
+                t
+                )
+                )
+                +
+                
+                  β
+                  
+                    3
+                  
+                
+                sign
+                ⁡
+                (
+                u
+                (
+                t
+                )
+                z
+                (
+                t
+                )
+                )
+                +
+              
+            
+            
+              
+              
+                
+                +
+                
+                  β
+                  
+                    4
+                  
+                
+                sign
+                ⁡
+                (
+                
+                  
+                    
+                      u
+                      ˙
+                    
+                  
+                
+                (
+                t
+                )
+                )
+                +
+                
+                  β
+                  
+                    5
+                  
+                
+                sign
+                ⁡
+                (
+                z
+                (
+                t
+                )
+                )
+                +
+                
+                  β
+                  
+                    6
+                  
+                
+                sign
+                ⁡
+                (
+                u
+                (
+                t
+                )
+                )
+                
+                  
+                    ]
+                  
+                
+                
+                  |
+                
+                z
+                (
+                t
+                )
+                
+                  
+                    |
+                  
+                  
+                    n
+                  
+                
+                
+                  
+                    }
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\quad {\dot {z}}(t)&={\dot {u}}(t){\Big \{}A-{\big [}\beta _{1}\operatorname {sign} ({\dot {u}}(t)z(t))+\beta _{2}\operatorname {sign} (u(t){\dot {u}}(t))+\beta _{3}\operatorname {sign} (u(t)z(t))+\\&+\beta _{4}\operatorname {sign} ({\dot {u}}(t))+\beta _{5}\operatorname {sign} (z(t))+\beta _{6}\operatorname {sign} (u(t)){\big ]}|z(t)|^{n}{\Big \}}\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        
+          
+            β
+            
+              i
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \beta _{i}}
+  
+, 
+  
+    
+      
+        
+          i
+          =
+          1
+          ,
+          2
+          ,
+          …
+          ,
+          6
+        
+      
+    
+    {\displaystyle \textstyle i=1,2,\ldots ,6}
+  
+ are six parameters that have to be determined in the identification process. However, according to Ikhouane et al. (2008), the coefficients 
+  
+    
+      
+        
+          
+            β
+            
+              2
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \beta _{2}}
+  
+, 
+  
+    
+      
+        
+          
+            β
+            
+              3
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \beta _{3}}
+  
+ and 
+  
+    
+      
+        
+          
+            β
+            
+              6
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \beta _{6}}
+  
+ should be set to zero. Also, according to Aloisio et al. (2020), no investigations concerning the intervals of the admissibility of the 
+  
+    
+      
+        
+          β
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \beta _{i}}
+  
+ parameters have been carried out yet in the light of the second principle of thermodynamics.
+Aloisio et al. (2020) extended the formulation presented by Song and Der Kiureghian (2006) to reproduce pinching and degradation phenomena. They included two additional parameters 
+  
+    
+      
+        
+          
+            β
+            
+              7
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \beta _{7}}
+  
+ and 
+  
+    
+      
+        
+          
+            β
+            
+              8
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \beta _{8}}
+  
+ that lead to pinched load paths; also they made the eight 
+  
+    
+      
+        
+          
+            β
+            
+              i
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle \beta _{i}}
+  
+ coefficients functions of the dissipated hysteretic energy 
+  
+    
+      
+        ε
+      
+    
+    {\displaystyle \varepsilon }
+  
+ to account for strength and stiffness degradation.
+
+Calculation of the response, based on the excitation time-histories
+In displacement-controlled experiments, the time history of the displacement 
+  
+    
+      
+        
+          u
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle u(t)}
+  
+ and its derivative 
+  
+    
+      
+        
+          
+            
+              
+                u
+                ˙
+              
+            
+          
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle {\dot {u}}(t)}
+  
+ are known; therefore, the calculation of the hysteretic variable and restoring force is performed directly using equations Eq. 2 and Eq. 3.
+In force-controlled experiments, Eq. 1, Eq. 2 and Eq. 4 can be transformed in state space form, using the change of variables 
+  
+    
+      
+        
+          
+            x
+            
+              1
+            
+          
+          (
+          t
+          )
+          =
+          u
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle x_{1}(t)=u(t)}
+  
+, 
+  
+    
+      
+        
+          
+            
+              
+                
+                  x
+                  ˙
+                
+              
+            
+            
+              1
+            
+          
+          (
+          t
+          )
+          =
+          
+            
+              
+                u
+                ˙
+              
+            
+          
+          (
+          t
+          )
+          =
+          
+            x
+            
+              2
+            
+          
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle {\dot {x}}_{1}(t)={\dot {u}}(t)=x_{2}(t)}
+  
+, 
+  
+    
+      
+        
+          
+            
+              
+                
+                  x
+                  ˙
+                
+              
+            
+            
+              2
+            
+          
+          (
+          t
+          )
+          =
+          
+            
+              
+                u
+                ¨
+              
+            
+          
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle {\dot {x}}_{2}(t)={\ddot {u}}(t)}
+  
+ and 
+  
+    
+      
+        
+          
+            x
+            
+              3
+            
+          
+          (
+          t
+          )
+          =
+          z
+          (
+          t
+          )
+        
+      
+    
+    {\displaystyle \textstyle x_{3}(t)=z(t)}
+  
+ as:
+
+and solved using, for example, the Livermore predictor-corrector method, the Rosenbrock methods or the 4th/5th-order Runge–Kutta method. The latter method is more efficient in terms of computational time; the others are slower, but provide a more accurate answer.
+The state-space form of the Bouc–Wen–Baber–Noori model is given by:
+
+This is a stiff ordinary differential equation that can be solved, for example, using the function ode15 of MATLAB.
+According to Heine (2001), computing time to solve the model and numeric noise is greatly reduced if both force and displacement are the same order of magnitude; for instance, the units kN and mm are good choices.
+
+Analytical calculation of the hysteretic response
+The hysteresis produced by the Bouc–Wen model is rate-independent. Eq. 4 can be written as:
+
+where 
+  
+    
+      
+        
+          
+            
+              u
+              ˙
+            
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\dot {u}}(t)}
+  
+ within the 
+  
+    
+      
+        sign
+      
+    
+    {\displaystyle \operatorname {sign} }
+  
+ function serves only as an indicator of the direction of movement. The indefinite integral of Eq.19 can be expressed analytically in terms of the Gauss hypergeometric function 
+  
+    
+      
+        
+          
+          
+            2
+          
+        
+        
+          F
+          
+            1
+          
+        
+        (
+        a
+        ,
+        b
+        ,
+        c
+        ;
+        w
+        )
+      
+    
+    {\displaystyle _{2}F_{1}(a,b,c;w)}
+  
+. Accounting for initial conditions, the following relation holds:
+
+where, 
+  
+    
+      
+        q
+        =
+        β
+        sign
+        ⁡
+        (
+        z
+        (
+        t
+        )
+        
+          
+            
+              u
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        )
+        +
+        γ
+      
+    
+    {\displaystyle q=\beta \operatorname {sign} (z(t){\dot {u}}(t))+\gamma }
+  
+ is assumed constant for the (not necessarily small) transition under examination, 
+  
+    
+      
+        A
+        =
+        1
+      
+    
+    {\displaystyle A=1}
+  
+ and 
+  
+    
+      
+        
+          u
+          
+            0
+          
+        
+      
+    
+    {\displaystyle u_{0}}
+  
+, 
+  
+    
+      
+        
+          z
+          
+            0
+          
+        
+      
+    
+    {\displaystyle z_{0}}
+  
+ are the initial values of the displacement and the hysteretic parameter, respectively. Eq.20 is solved analytically for 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+ for specific values of the exponential parameter 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, i.e. for 
+  
+    
+      
+        n
+        =
+        1
+      
+    
+    {\displaystyle n=1}
+  
+ and 
+  
+    
+      
+        n
+        =
+        2
+      
+    
+    {\displaystyle n=2}
+  
+. For arbitrary values of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, Eq. 20 can be solved efficiently using e.g. bisection – type methods, such as the Brent's method.
+
+Parameter constraints and identification
+The parameters of the Bouc–Wen model have the following bounds 
+  
+    
+      
+        
+          a
+          ∈
+          (
+          0
+          ,
+          1
+          )
+        
+      
+    
+    {\displaystyle \textstyle a\in (0,1)}
+  
+, 
+  
+    
+      
+        
+          
+            k
+            
+              i
+            
+          
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle k_{i}>0}
+  
+, 
+  
+    
+      
+        
+          
+            k
+            
+              f
+            
+          
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle k_{f}>0}
+  
+, 
+  
+    
+      
+        
+          c
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle c>0}
+  
+, 
+  
+    
+      
+        
+          A
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle A>0}
+  
+, 
+  
+    
+      
+        
+          n
+          >
+          1
+        
+      
+    
+    {\displaystyle \textstyle n>1}
+  
+, 
+  
+    
+      
+        
+          β
+          >
+          0
+        
+      
+    
+    {\displaystyle \textstyle \beta >0}
+  
+, 
+  
+    
+      
+        
+          γ
+          ∈
+          [
+          −
+          β
+          ,
+          β
+          ]
+        
+      
+    
+    {\displaystyle \textstyle \gamma \in [-\beta ,\beta ]}
+  
+.
+As noted above, Ma et al.(2004) proved that the parameters of the Bouc–Wen model are functionally redundant; that is, there exist multiple parameter vectors that produce an identical response from a given excitation. Removing this redundancy is best achieved by setting 
+  
+    
+      
+        
+          A
+          =
+          1
+        
+      
+    
+    {\displaystyle \textstyle A=1}
+  
+.
+Constantinou and Adnane (1987) suggested imposing the constraint 
+  
+    
+      
+        
+          
+            
+              A
+              
+                β
+                +
+                γ
+              
+            
+          
+          =
+          1
+        
+      
+    
+    {\displaystyle \textstyle {\frac {A}{\beta +\gamma }}=1}
+  
+ in order to reduce the model to a formulation with well-defined properties.
+Adopting those constraints, the unknown parameters become: 
+  
+    
+      
+        
+          γ
+        
+      
+    
+    {\displaystyle \textstyle \gamma }
+  
+, 
+  
+    
+      
+        
+          n
+        
+      
+    
+    {\displaystyle \textstyle n}
+  
+, 
+  
+    
+      
+        
+          a
+        
+      
+    
+    {\displaystyle \textstyle a}
+  
+, 
+  
+    
+      
+        
+          
+            k
+            
+              i
+            
+          
+        
+      
+    
+    {\displaystyle \textstyle k_{i}}
+  
+ and 
+  
+    
+      
+        
+          c
+        
+      
+    
+    {\displaystyle \textstyle c}
+  
+.
+Determination of the model parameters using experimental input and output data can be accomplished by system identification techniques. The procedures suggested in the literature include:  
+
+Optimization based on the least-squares method, (using Gauss–Newton methods, evolutionary algorithms, genetic algorithms, etc.); in this case, the error difference between the time histories or between the short-time-Fourier transforms of the signals is minimized.
+Extended Kalman filter, unscented Kalman filter, particle filters
+Differential evolution
+Genetic algorithms
+Particle Swarm Optimization
+Adaptive laws
+Hybrid methods
+These parameter-tuning algorithms minimize a loss function that are based on one or several of the following criteria:
+
+Minimization of the error between the experimental displacement and the calculated displacement.
+Minimization of the error between the experimental restoring force and the calculated restoring force.
+Minimization of the error between the experimental dissipated energy (estimated from the displacement and the restoring force) and the calculated total dissipated energy.
+Once an identification method has been applied to tune the Bouc–Wen model parameters, the resulting model is considered a good approximation of true hysteresis, when the error between the experimental data and the output of the model is small enough (from a practical point of view).
+
+Criticisms
+The hysteretic Bouc–Wen model has received some criticism regarding its ability to accurately describe the phenomenon of hysteresis in materials. For example:
+
+Thyagarajan and Iwan (1990) found that displacement predictions have lower quality compared to velocity and acceleration predictions.
+Bažant (1978) asserts that Bouc-Wen class models do not align with classical plasticity theory requirements, such as Drucker’s postulate. Charalampakis and Koumousis (2009) propose a modification on the Bouc–Wen model to eliminate displacement drift, force relaxation and nonclosure of hysteretic loops when the material is subjected to short unloading reloading paths resulting to local violation of Drucker's or Ilyushin's postulate of plasticity.
+Casciati and Faravelli (1987) and Thyagarajan and Iwan (1990) noted that Bouc-Wen class models may result in negative energy dissipation during the unloading-reloading process without load reversal.

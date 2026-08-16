@@ -1,0 +1,73 @@
+TESTING AND COMPILER CONSTRUCTION
+
+Testing and compilation appear unrelated. One verifies that a program behaves as intended; the other translates it into a form a machine can run. They share a concern: both establish properties of a program without running it on every possible input. A type checker proves that certain errors cannot occur; a test suite is evidence that certain behaviors do. Both narrow the space of defects, and a project investing in one usually needs less of the other.
+
+PART ONE: TESTING
+
+WHAT TESTING ESTABLISHES
+
+Testing demonstrates the presence of defects, not their absence. Exhaustive testing is infeasible for any realistic program, since a function taking two thirty-two-bit integers already has more than eighteen quintillion input combinations. Testing therefore samples, and the value of a suite depends on whether the sample is chosen well.
+
+Good sampling targets boundaries and classes rather than arbitrary points. Equivalence partitioning divides inputs into classes expected to be handled identically and tests one representative from each. Boundary value analysis then tests the edges of those classes, because off-by-one errors cluster there: the empty collection, the single element, the maximum size, the values just below and above a threshold.
+
+THE TESTING PYRAMID
+
+Tests differ in scope, speed, and diagnostic precision, and a healthy suite contains many of the fast narrow kind and few of the slow broad kind.
+
+Unit tests exercise a single function in isolation. They run in milliseconds and when one fails it points directly at the defective code, but they verify components against assumptions that may not match reality. Integration tests exercise components together, including real databases, and catch what unit tests cannot: wrong serialization formats, incorrect queries, misunderstood library semantics. End-to-end tests drive the complete system as a user would, giving the strongest evidence that it works while being slow and brittle.
+
+Many unit tests, fewer integration tests, and a small number of end-to-end tests covering critical journeys gives fast feedback with adequate confidence.
+
+TEST DOUBLES AND DETERMINISM
+
+Isolating a unit requires replacing its dependencies: a stub returns canned values, a fake is a simplified working implementation, and a mock asserts that expected calls occurred. Overuse of mocks produces tests coupled to implementation rather than behavior, so the discipline is to mock at architectural boundaries such as network and clock.
+
+Nondeterminism must be controlled, since current time, random numbers, and thread scheduling vary between runs. Injecting a clock and seeding a generator converts flaky tests into reliable ones, and a flaky test is worse than no test because it trains the team to ignore red results.
+
+BEYOND EXAMPLE-BASED TESTING
+
+Property-based testing states invariants that must hold for all inputs and lets a framework generate cases, including adversarial ones the author would not have considered: encoding followed by decoding should return the original value, and a sort should produce ordered output that is a permutation of its input. When a property fails, the framework shrinks the counterexample to a minimal failing case.
+
+Fuzzing feeds malformed input to find crashes and memory-safety violations, with coverage-guided fuzzers keeping mutations that reach new code paths. Mutation testing evaluates the suite itself by introducing deliberate faults; a surviving mutant indicates code executed but not asserted on. Coverage, by contrast, identifies untested code without indicating that tested code is correct.
+
+Test-driven development writes a failing test before the code satisfying it, and its benefits are less about testing than about design. Continuous integration runs the suite on every change, and its value depends on speed: a suite taking an hour will be bypassed.
+
+PART TWO: COMPILERS
+
+THE PIPELINE AND LEXICAL ANALYSIS
+
+A compiler translates source text through a sequence of phases. The front end analyzes source and produces an intermediate representation, the middle end optimizes it, and the back end generates target code. This separation allows one infrastructure to support many languages and targets, requiring one front end per language and one back end per target rather than one component per combination.
+
+The lexer converts a character stream into tokens: identifiers, keywords, literals, operators, and punctuation. Whitespace and comments are usually discarded, though not where indentation is significant, in which case the lexer emits explicit indent and dedent tokens. Token patterns are described by regular expressions and recognized by finite automata, so a generated lexer classifies input in linear time. Ambiguity is resolved by two conventions: the longest match wins, and among equal-length matches the rule declared first wins, which is how keywords are distinguished from identifiers.
+
+PARSING
+
+The parser checks that the token sequence conforms to the grammar and builds a tree, with context-free grammars describing the syntax through productions expanding non-terminals into sequences of terminals and non-terminals.
+
+Top-down parsers begin at the start symbol and expand downward. Recursive descent implements one function per non-terminal and is straightforward to write by hand, though it requires the grammar to be free of left recursion. Bottom-up parsers begin at the tokens and reduce upward; LR parsers and their LALR variants accept a strictly larger class of grammars and are what most generators produce, at the cost of opaque tables and conflicts that are hard to interpret. Precedence climbing and Pratt parsing handle expressions by associating binding powers with operators.
+
+The parser produces an abstract syntax tree, retaining structure while discarding syntactic noise such as parentheses and separators. Panic-mode error recovery discards tokens until reaching a synchronizing token such as a semicolon, allowing multiple errors to be reported in one pass.
+
+SEMANTIC ANALYSIS
+
+Correct syntax does not make a program meaningful, and semantic analysis checks rules a context-free grammar cannot express. Name resolution binds each identifier to its declaration using a symbol table, typically a stack of scopes searched from innermost outward, detecting undeclared names, duplicate declarations, and shadowing. Type checking verifies that operations apply to compatible types and that calls match signatures; static systems check before execution and reject a class of errors outright, while dynamic systems check during execution. Type inference deduces unwritten types, with Hindley-Milner inference able to reconstruct principal types for an entire program while most mainstream languages use more limited local inference.
+
+INTERMEDIATE REPRESENTATION AND OPTIMIZATION
+
+The compiler lowers the syntax tree into a representation designed for analysis rather than reading. Three-address code expresses each operation with at most two operands and one result, and control flow graphs partition code into basic blocks connected by edges representing possible transfers of control. Static single assignment form gives every variable exactly one definition, introducing phi functions at merge points to select among values arriving on different paths, which makes data flow explicit and is why nearly every modern optimizing compiler uses it.
+
+Optimizations are classified by scope. Local optimizations act within a block: constant folding evaluates constant expressions at compile time, common subexpression elimination reuses computed values, and strength reduction replaces expensive operations with cheaper equivalents. Global optimizations act across blocks, including dead code elimination and loop-invariant code motion. Interprocedural optimizations act across functions, with inlining the most consequential because it exposes further opportunities by merging contexts. Loop transformations matter disproportionately: unrolling reduces branch overhead, interchange reorders nested loops so memory access follows storage layout, and vectorization converts scalar operations into single-instruction multiple-data operations.
+
+Every optimization must preserve observable behavior, and the subtlety is what counts as observable: floating-point reassociation changes results because arithmetic is not associative, so compilers require explicit flags before such transformations.
+
+CODE GENERATION, LINKING, AND JIT
+
+The back end maps intermediate representation to target instructions. Instruction selection chooses instructions covering the operations, and instruction scheduling reorders them to avoid pipeline stalls while respecting dependencies. Register allocation assigns values to the finite set of machine registers, spilling to memory when they do not fit; it is modeled as graph coloring, and since optimal coloring is NP-complete, heuristics such as linear scan trade quality for speed.
+
+Calling conventions specify how arguments are passed and which registers must be preserved, and adherence is what makes separately compiled code interoperate. Linking resolves symbolic references across compilation units: static linking copies library code into the executable, while dynamic linking resolves at load time, sharing code across processes at the cost of version compatibility risk.
+
+Just-in-time compilation compiles during execution, permitting optimization based on observed behavior: profiling identifies hot paths, and the actual types seen at a call site allow speculative devirtualization and inlining behind a guard that deoptimizes if the assumption fails. This lets dynamically typed languages approach statically compiled performance on hot loops.
+
+WHERE THE TWO CONVERGE
+
+Compilers are among the most thoroughly tested programs in existence, because a defect produces incorrect code silently across every program compiled. Their testing applies the techniques above aggressively: enormous regression suites, differential testing against other implementations, and random program generation to find inputs where optimized and unoptimized builds disagree. The reverse relationship is equally strong. Static analyzers are compiler front ends with different back ends, coverage instrumentation is a compiler pass, sanitizers insert runtime checks during code generation, and coverage-guided fuzzing depends on compiler-inserted tracing. The strongest guarantees come from making errors unrepresentable in the type system rather than testing for them afterward, which is why language design has become a practical software quality concern.

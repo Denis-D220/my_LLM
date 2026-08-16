@@ -1,0 +1,36 @@
+{
+  "completed_shards": [],
+  "next_output_index": 1,
+  "partial_shard": {
+    "name": "cc_text_00000.jsonl.gz",
+    "next_line": 10000
+  },
+  "totals": {
+    "records_seen": 10000,
+    "documents_accepted": 9851,
+    "documents_rejected": 149,
+    "accepted_characters": 43303326,
+    "accepted_utf8_bytes": 43604053,
+    "output_jsonl_bytes": 47334900,
+    "acceptance_rate": 0.9851,
+    "rejected_by_reason": {
+      "control_characters": 15,
+      "duplicate_lines": 94,
+      "keyword_wall": 10,
+      "language_script_mismatch": 16,
+      "replacement_characters": 14
+    }
+  },
+  "decontamination": {
+    "enabled": true,
+    "evaluation_file": "data\\evaluation\\model\\v0.1\\pretraining_eval.jsonl",
+    "evaluation_items": 20,
+    "evaluation_items_indexed": 20,
+    "evaluation_items_skipped_short": [],
+    "evaluation_sha256": "6c994e255976ea692251cee0d0d43218dff52ae6f958d706e7a084c39dd75452",
+    "shingle_size": 8,
+    "min_containment": 0.8,
+    "min_evaluation_tokens": 50
+  },
+  "updated_at_utc": "2026-08-15T03:51:10.767807+00:00"
+}

@@ -1,0 +1,512 @@
+Sound localization is a listener's ability to identify the location or origin of a detected sound in direction and distance.
+The sound localization mechanisms of the mammalian auditory system have been extensively studied. The auditory system uses several cues for sound source localization, including time difference and level difference (or intensity difference) between the ears, and spectral information.  Other animals, such as birds and reptiles, also use them but they may use them differently, and some also have localization cues which are absent in the human auditory system, such as the effects of ear movements. Animals with the ability to localize sound have an  evolutionary advantage.
+
+How sound reaches the brain
+Sound is the perceptual result of mechanical vibrations traveling through a medium such as air or water. Through the mechanisms of compression and rarefaction, sound waves travel through the air, bounce off the pinna and concha of the exterior ear, and enter the ear canal.  In mammals, the sound waves vibrate the tympanic membrane (ear drum), causing the three bones of the middle ear to vibrate, which then sends the energy through the oval window and into the cochlea where it is changed into a chemical signal by hair cells in the organ of Corti, which synapse onto spiral ganglion fibers that travel through the cochlear nerve into the brain.
+
+Neural interactions
+In vertebrates, interaural time differences are known to be calculated in the superior olivary nucleus of the brainstem. According to Jeffress, this calculation relies on delay lines: neurons in the superior olive which accept innervation from each ear with different connecting axon lengths. Some cells are more directly connected to one ear than the other, thus they are specific for a particular interaural time difference. This theory is equivalent to the mathematical procedure of cross-correlation. However, because Jeffress's theory is unable to account for the precedence effect, in which only the first of multiple identical sounds is used to determine the sounds' location (thus avoiding confusion caused by echoes), it cannot be entirely used to explain the response. Furthermore, a number of recent physiological observations made in the midbrain and brainstem of small mammals have shed considerable doubt on the validity of Jeffress's original ideas.
+Neurons sensitive to interaural level differences (ILDs) are excited by stimulation of one ear and inhibited by stimulation of the other ear, such that the response magnitude of the cell depends on the relative strengths of the two inputs, which in turn, depends on the sound intensities at the ears.
+In the auditory midbrain nucleus, the inferior colliculus (IC), many ILD sensitive neurons have response functions that decline steeply from maximum to zero spikes as a function of ILD. However, there are also many neurons with much more shallow response functions that do not decline to zero spikes.
+
+Human auditory system
+Sound localization is the process of determining the location of a sound source. The brain utilizes subtle differences in intensity, spectral, and timing cues to localize sound sources.
+Localization can be described in terms of three-dimensional position: the azimuth or horizontal angle, the elevation or vertical angle, and the distance (for static sounds) or velocity (for moving sounds).
+The azimuth of a sound is signaled by the difference in arrival times between the ears, by the relative amplitude of high-frequency sounds (the shadow effect), and by the asymmetrical spectral reflections from various parts of our bodies, including torso, shoulders, and pinnae.
+The distance cues are the loss of amplitude, the loss of high frequencies, and the ratio of the direct signal to the reverberated signal.
+Depending on where the source is located, our head acts as a barrier to change the timbre, intensity, and spectral qualities of the sound, helping the brain orient where the sound emanated from. These minute differences between the two ears are known as interaural cues.
+Lower frequencies, with longer wavelengths, diffract the sound around the head forcing the brain to focus only on the phasing cues from the source.
+Helmut Haas discovered that we can discern the sound source despite additional reflections at 10 decibels louder than the original wave front, using the earliest arriving wave front. This principle is known as the Haas effect, a specific version of the precedence effect. Haas measured down to even a 1 millisecond difference in timing between the original sound and reflected sound increased the spaciousness, allowing the brain to discern the true location of the original sound. The nervous system combines all early reflections into a single perceptual whole allowing the brain to process multiple different sounds at once. The nervous system will combine reflections that are within about 35 milliseconds of each other and that have a similar intensity.
+
+Duplex theory
+To determine the lateral input direction (left, front, right), the auditory system analyzes the following ear signal information:
+
+In 1907, Lord Rayleigh utilized tuning forks to generate monophonic excitation and studied the lateral sound localization theory on a human head model without auricle. He first presented the interaural clue difference based sound localization theory, which is known as Duplex Theory. Human ears are on different sides of the head, and thus have different coordinates in space. As shown in the duplex theory figure, since the distances between the acoustic source and ears are different, there are time difference and intensity difference between the sound signals of two ears. We call those kinds of differences as Interaural Time Difference (ITD) and Interaural Intensity Difference (IID) respectively.
+
+From the duplex theory figure we can see that for source B1 or source B2, there will be a propagation delay between two ears, which will generate the ITD. Simultaneously, human head and ears may have a shadowing effect on high-frequency signals, which will generate IID.
+
+Interaural time difference (ITD) – Sound from the right side reaches the right ear earlier than the left ear. The auditory system evaluates interaural time differences from: (a) Phase delays at low frequencies and (b) group delays at high frequencies.
+Theory and experiments show that ITD relates to the signal frequency 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+. Suppose the angular position of the acoustic source is 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+, the head radius is 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ and the acoustic velocity is 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+, the function of ITD is given by:   
+  
+    
+      
+        I
+        T
+        D
+        =
+        
+          
+            {
+            
+              
+                
+                  3
+                  ×
+                  
+                    
+                      r
+                      c
+                    
+                  
+                  ×
+                  sin
+                  ⁡
+                  θ
+                  ,
+                
+                
+                  
+                    if 
+                  
+                  f
+                  ≤
+                  
+                    4000Hz 
+                  
+                
+              
+              
+                
+                  2
+                  ×
+                  
+                    
+                      r
+                      c
+                    
+                  
+                  ×
+                  sin
+                  ⁡
+                  θ
+                  ,
+                
+                
+                  
+                    if 
+                  
+                  f
+                  >
+                  
+                     4000Hz
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle ITD={\begin{cases}3\times {\frac {r}{c}}\times \sin \theta ,&{\text{if }}f\leq {\text{4000Hz }}\\2\times {\frac {r}{c}}\times \sin \theta ,&{\text{if }}f>{\text{ 4000Hz}}\end{cases}}}
+  
+. In above closed form, we assumed that the 0 degree is in the right ahead of the head and counter-clockwise is positive.
+Interaural intensity difference (IID) or interaural level difference (ILD) – Sound from the right side has a higher level at the right ear than at the left ear, because the head shadows the left ear. These level differences are highly frequency dependent and they increase with increasing frequency.  Massive theoretical researches demonstrate that IID relates to the signal frequency 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and the angular position of the acoustic source 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+. The function of IID is given by:   
+  
+    
+      
+        I
+        I
+        D
+        =
+        1.0
+        +
+        (
+        f
+        
+          /
+        
+        1000
+        
+          )
+          
+            0.8
+          
+        
+        ×
+        sin
+        ⁡
+        θ
+      
+    
+    {\displaystyle IID=1.0+(f/1000)^{0.8}\times \sin \theta }
+  
+
+For frequencies below 1000 Hz, mainly ITDs are evaluated (phase delays), for frequencies above 1500 Hz mainly IIDs are evaluated. Between 1000 Hz and 1500 Hz there is a transition zone, where both mechanisms play a role.
+Localization accuracy is 1 degree for sources in front of the listener and 15 degrees for sources to the sides. Humans can discern interaural time differences of 10 microseconds or less.
+For frequencies below 800 Hz, the dimensions of the head (ear distance 21.5 cm, corresponding to an interaural time delay of 626 μs) are smaller than the half wavelength of the sound waves. So the auditory system can determine phase delays between both ears without confusion. Interaural level differences are very low in this frequency range, especially below about 200 Hz, so a precise evaluation of the input direction is nearly impossible on the basis of level differences alone. As the frequency drops below 80 Hz it becomes difficult or impossible to use either time difference or level difference to determine a sound's lateral source, because the phase difference between the ears becomes too small for a directional evaluation.
+For frequencies above 1600 Hz the dimensions of the head are greater than the length of the sound waves. An unambiguous determination of the input direction based on interaural phase alone is not possible at these frequencies. However, the interaural level differences become larger, and these level differences are evaluated by the auditory system. Also, delays between the ears can still be detected via some combination of phase differences and group delays, which are more pronounced at higher frequencies; that is, if there is a sound onset, the delay of this onset between the ears can be used to determine the input direction of the corresponding sound source. This mechanism becomes especially important in reverberant environments. After a sound onset there is a short time frame where the direct sound reaches the ears, but not yet the reflected sound. The auditory system uses this short time frame for evaluating the sound source direction, and keeps this detected direction as long as reflections and reverberation prevent an unambiguous direction estimation. The mechanisms described above cannot be used to differentiate between a sound source ahead of the hearer or behind the hearer; therefore additional cues have to be evaluated.
+
+Pinna filtering effect
+
+Duplex theory shows that ITD and IID play significant roles in sound localization, but they can only deal with lateral localization problems. For example, if two acoustic sources are placed symmetrically at the front and back of the right side of the human head, they will generate equal ITDs and IIDs, in what is called the cone model effect. However, human ears can still distinguish between these sources. Besides that, in natural sense of hearing, one ear alone, without any ITD or IID, can distinguish between them with high accuracy.  Due to the disadvantages of duplex theory, researchers proposed the pinna filtering effect theory. The shape of the human pinna is concave with complex folds and asymmetrical both horizontally and vertically. Reflected and direct waves generate a frequency spectrum on the eardrum, relating to the acoustic sources. Then auditory nerves localize the sources using this frequency spectrum.
+
+These spectrum clues generated by the pinna filtering effect can be presented as a head-related transfer function (HRTF). The corresponding time domain expressions are called the head-related impulse response (HRIR). The HRTF is also described as the transfer function from the free field to a specific point in the ear canal. HRTFs are usually recognized as LTI systems:
+
+  
+    
+      
+        
+          H
+          
+            L
+          
+        
+        =
+        
+          H
+          
+            L
+          
+        
+        (
+        r
+        ,
+        θ
+        ,
+        φ
+        ,
+        ω
+        ,
+        α
+        )
+        =
+        
+          P
+          
+            L
+          
+        
+        (
+        r
+        ,
+        θ
+        ,
+        φ
+        ,
+        ω
+        ,
+        α
+        )
+        
+          /
+        
+        
+          P
+          
+            0
+          
+        
+        (
+        r
+        ,
+        ω
+        )
+      
+    
+    {\displaystyle H_{L}=H_{L}(r,\theta ,\varphi ,\omega ,\alpha )=P_{L}(r,\theta ,\varphi ,\omega ,\alpha )/P_{0}(r,\omega )}
+  
+
+  
+    
+      
+        
+          H
+          
+            R
+          
+        
+        =
+        
+          H
+          
+            R
+          
+        
+        (
+        r
+        ,
+        θ
+        ,
+        φ
+        ,
+        ω
+        ,
+        α
+        )
+        =
+        
+          P
+          
+            R
+          
+        
+        (
+        r
+        ,
+        θ
+        ,
+        φ
+        ,
+        ω
+        ,
+        α
+        )
+        
+          /
+        
+        
+          P
+          
+            0
+          
+        
+        (
+        r
+        ,
+        ω
+        )
+        ,
+      
+    
+    {\displaystyle H_{R}=H_{R}(r,\theta ,\varphi ,\omega ,\alpha )=P_{R}(r,\theta ,\varphi ,\omega ,\alpha )/P_{0}(r,\omega ),}
+  
+
+where L and R represent the left ear and right ear respectively, 
+  
+    
+      
+        
+          P
+          
+            L
+          
+        
+      
+    
+    {\displaystyle P_{L}}
+  
+ and 
+  
+    
+      
+        
+          P
+          
+            R
+          
+        
+      
+    
+    {\displaystyle P_{R}}
+  
+ represent the amplitude of the sound pressure at the entrances to the left and right ear canals, and 
+  
+    
+      
+        
+          P
+          
+            0
+          
+        
+      
+    
+    {\displaystyle P_{0}}
+  
+ is the amplitude of sound pressure at the center of the head coordinate when listener does not exist. In general, an HRTF's 
+  
+    
+      
+        
+          H
+          
+            L
+          
+        
+      
+    
+    {\displaystyle H_{L}}
+  
+ and 
+  
+    
+      
+        
+          H
+          
+            R
+          
+        
+      
+    
+    {\displaystyle H_{R}}
+  
+ are functions of source angular position 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+, elevation angle 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+, the distance between the source and the center of the head 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+, the angular velocity 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+ and the equivalent dimension of the head 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.
+At present, the main institutes that work on measuring HRTF database include CIPIC International Lab, MIT Media Lab, the Graduate School in Psychoacoustics at the University of Oldenburg, the Neurophysiology Lab at the University of Wisconsin–Madison and Ames Lab of NASA. Databases of HRIRs from humans with normal and impaired hearing and from animals are publicly available.
+
+Other cues
+The human outer ear, i.e. the structures of the pinna and the external ear canal, form direction-selective filters. Depending on the sound input direction, different filter resonances become active. These resonances implant direction-specific patterns into the frequency responses of the ears, which can be evaluated by the auditory system for sound localization. Together with other direction-selective reflections at the head, shoulders and torso, they form the outer ear transfer functions. These patterns in the ear's frequency responses are highly individual, depending on the shape and size of the outer ear. If sound is presented through headphones, and has been recorded via another head with different-shaped outer ear surfaces, the directional patterns differ from the listener's own, and problems will appear when trying to evaluate directions in the median plane with these foreign ears. As a consequence, front–back permutations or inside-the-head-localization can appear when listening to dummy head recordings, or otherwise referred to as binaural recordings. It has been shown that human subjects can monaurally localize high frequency sound but not low frequency sound. Binaural localization, however, was possible with lower frequencies. This is likely due to the pinna being small enough to only interact with sound waves of high frequency. It seems that people can only accurately localize the elevation of sounds that are complex and include frequencies above 7,000 Hz, and a pinna must be present.
+When the head is stationary, the binaural cues for lateral sound localization (interaural time difference and interaural level difference) do not give information about the location of a sound in the median plane. Identical ITDs and ILDs can be produced by sounds at eye level or at any elevation, as long as the lateral direction is constant. However, if the head is rotated, the ITD and ILD change dynamically, and those changes are different for sounds at different elevations. For example, if an eye-level sound source is straight ahead and the head turns to the left, the sound becomes louder (and arrives sooner) at the right ear than at the left. But if the sound source is directly overhead, there will be no change in the ITD and ILD as the head turns. Intermediate elevations will produce intermediate degrees of change, and if the presentation of binaural cues to the two ears during head movement is reversed, the sound will be heard behind the listener. Hans Wallach artificially altered a sound's binaural cues during movements of the head. Although the sound was objectively placed at eye level, the dynamic changes to ITD and ILD as the head rotated were those that would be produced if the sound source had been elevated. In this situation, the sound was heard at the synthesized elevation. The fact that the sound sources objectively remained at eye level prevented monaural cues from specifying the elevation, showing that it was the dynamic change in the binaural cues during head movement that allowed the sound to be correctly localized in the vertical dimension. The head movements need not be actively produced; accurate vertical localization occurred in a similar setup when the head rotation was produced passively, by seating the blindfolded subject in a rotating chair. As long as the dynamic changes in binaural cues accompanied a perceived head rotation, the synthesized elevation was perceived.
+In the 1960s Batteau showed the pinna also enhances horizontal localization.
+
+Distance of the sound source
+The human auditory system has only limited possibilities to determine the distance of a sound source. In the close-up-range there are some indications for distance determination, such as extreme level differences (e.g. when whispering into one ear) or specific pinna (the visible part of the ear) resonances in the close-up range.
+The auditory system uses these clues to estimate the distance to a sound source:
+
+Direct/ Reflection ratio: In enclosed rooms, two types of sound are arriving at a listener: The direct sound arrives at the listener's ears without being reflected at a wall. Reflected sound has been reflected at least one time at a wall before arriving at the listener. The ratio between direct sound and reflected sound can give an indication about the distance of the sound source.
+Loudness: Distant sound sources have a lower loudness than close ones. This aspect can be evaluated especially for well-known sound sources.
+Sound spectrum: High frequencies are more quickly damped by the air than low frequencies. Therefore, a distant sound source sounds more muffled than a close one, because the high frequencies are attenuated. For sound with a known spectrum (e.g. speech) the distance can be estimated roughly with the help of the perceived sound.
+ITDG: The Initial Time Delay Gap describes the time difference between arrival of the direct wave and first strong reflection at the listener. Nearby sources create a relatively large ITDG, with the first reflections having a longer path to take, possibly many times longer. When the source is far away, the direct and the reflected sound waves have similar path lengths.
+Movement: Similar to the visual system there is also the phenomenon of motion parallax in acoustical perception. For a moving listener nearby sound sources are passing faster than distant sound sources.
+Level Difference: Very close sound sources cause a different level between the ears.
+
+Signal processing
+Sound processing of the human auditory system is performed in so-called critical bands. The hearing range is segmented into 24 critical bands, each with a width of 1 Bark or 100 Mel. For a directional analysis the signals inside the critical band are analyzed together.
+The auditory system can extract the sound of a desired sound source out of interfering noise. This allows the listener to concentrate on only one speaker if other speakers are also talking (the cocktail party effect). With the help of the cocktail party effect sound from interfering directions is perceived attenuated compared to the sound from the desired direction. The auditory system can increase the signal-to-noise ratio by up to 15 dB, which means that interfering sound is perceived to be attenuated to half (or less) of its actual loudness. 
+In enclosed rooms not only the direct sound from a sound source is arriving at the listener's ears, but also sound which has been reflected at the walls. The auditory system analyses only the direct sound, which is arriving first, for sound localization, but not the reflected sound, which is arriving later (law of the first wave front). So sound localization remains possible even in an echoic environment. This echo cancellation occurs in the Dorsal Nucleus of the Lateral Lemniscus (DNLL).
+In order to determine the time periods, where the direct sound prevails and which can be used for directional evaluation, the auditory system analyzes loudness changes in different critical bands and also the stability of the perceived direction. If there is a strong attack of the loudness in several critical bands and if the perceived direction is stable, this attack is in all probability caused by the direct sound of a sound source, which is entering newly or which is changing its signal characteristics. This short time period is used by the auditory system for directional and loudness analysis of this sound. When reflections arrive a little bit later, they do not enhance the loudness inside the critical bands in such a strong way, but the directional cues become unstable, because there is a mix of sound of several reflection directions. As a result, no new directional analysis is triggered by the auditory system.
+This first detected direction from the direct sound is taken as the found sound source direction, until other strong loudness attacks, combined with stable directional information, indicate that a new directional analysis is possible. (see Franssen effect)
+
+Specific techniques with applications
+
+Auditory transmission stereo system
+This kind of sound localization technique provides us the real virtual stereo system. It utilizes "smart" manikins, such as KEMAR,  to glean signals or use DSP methods to simulate the transmission process from sources to ears. After amplifying, recording and transmitting, the two channels of received signals will be reproduced through earphones or speakers.  This localization approach uses electroacoustic methods to obtain the spatial information of the original sound field by transferring the listener's auditory apparatus to the original sound field. The most considerable advantages of it would be that its acoustic images are lively and natural. Also, it only needs two independent transmitted signals to reproduce the acoustic image of a 3D system.
+
+3D para-virtualization stereo system
+The representatives of this kind of system are SRS Audio Sandbox, Spatializer Audio Lab and Qsound Qxpander. They use HRTF to simulate the received acoustic signals at the ears from different directions with common binary-channel stereo reproduction. Therefore, they can simulate reflected sound waves and improve subjective sense of space and envelopment. Since they are para-virtualization stereo systems, the major goal of them is to simulate stereo sound information.  Traditional stereo systems use sensors that are quite different from human ears. Although those sensors can receive the acoustic information from different directions, they do not have the same frequency response of human auditory system. Therefore, when binary-channel mode is applied, human auditory systems still cannot feel the 3D sound effect field. However, the 3D para-virtualization stereo system overcome such disadvantages. It uses HRTF principles to glean acoustic information from the original sound field then produce a lively 3D sound field through common earphones or speakers.
+
+Multichannel stereo virtual reproduction
+Since the multichannel stereo systems require many reproduction channels, some researchers adopted the HRTF simulation technologies to reduce the number of reproduction channels. They use only two speakers to simulate multiple speakers in a multichannel system. This process is called as virtual reproduction. Essentially, such approach uses both interaural difference principle and pinna filtering effect theory.  Unfortunately, this kind of approach cannot perfectly substitute the traditional multichannel stereo system, such as 5.1/7.1 surround sound system. That is because when the listening zone is relatively larger, simulation reproduction through HRTFs may cause invert acoustic images at symmetric positions.
+
+Animals
+Since most animals have two ears, many of the effects of the human auditory system can also be found in other animals. Therefore, interaural time differences (interaural phase differences) and interaural level differences play a role for the hearing of many animals. But the influences on localization of these effects are dependent on head sizes, ear distances, the ear positions and the orientation of the ears.  Smaller animals like insects use different techniques as the separation of the ears are too small. For the process of animals emitting sound to improve localization, a biological form of active sonar, see animal echolocation.
+
+Lateral information (left, ahead, right)
+If the ears are located at the side of the head, similar lateral localization cues as for the human auditory system can be used. This means: evaluation of interaural time differences (interaural phase differences) for lower frequencies and evaluation of interaural level differences for higher frequencies. The evaluation of interaural phase differences is useful, as long as it gives unambiguous results. This is the case, as long as ear distance is smaller than half the length (maximal one wavelength) of the sound waves. For animals with a larger head than humans the evaluation range for interaural phase differences is shifted towards lower frequencies, for animals with a smaller head, this range is shifted towards higher frequencies.
+The lowest frequency which can be localized depends on the ear distance. Animals with a greater ear distance can localize lower frequencies than humans can. For animals with a smaller ear distance the lowest localizable frequency is higher than for humans.
+If the ears are located at the side of the head, interaural level differences appear for higher frequencies and can be evaluated for localization tasks. For animals with ears at the top of the head, no shadowing by the head will appear and therefore there will be much less interaural level differences which could be evaluated. Many of these animals can move their ears, and these ear movements can be used as a lateral localization cue.
+
+In the median plane (front, above, back, below)
+For many mammals there are also pronounced structures in the pinna near the entry of the ear canal. As a consequence, direction-dependent resonances can appear, which could be used as an additional localization cue, similar to the localization in the median plane in the human auditory system.
+There are additional localization cues which are also used by animals.
+
+Head tilting
+For sound localization in the median plane (elevation of the sound) also two detectors can be used, which are positioned at different heights. In animals, however, rough elevation information is gained simply by tilting the head, provided that the sound lasts long enough to complete the movement. This explains the innate behavior of cocking the head to one side when trying to localize a sound precisely. To get instantaneous localization in more than two dimensions from time-difference or amplitude-difference cues requires more than two detectors.
+
+Localization with coupled ears (flies)
+The tiny parasitic fly Ormia ochracea has become a model organism in sound localization experiments because of its unique ear. The animal is too small for the time difference of sound arriving at the two ears to be calculated in the usual way, yet it can determine the direction of sound sources with exquisite precision. The tympanic membranes of opposite ears are directly connected mechanically, allowing resolution of sub-microsecond time differences and requiring a new neural coding strategy.  Ho showed that the coupled-eardrum system in frogs can produce increased interaural vibration disparities when only small arrival time and sound level differences were available to the animal's head. Efforts to build directional microphones based on the coupled-eardrum structure are underway.
+
+Bi-coordinate sound localization (owls)
+
+Most owls are nocturnal or crepuscular birds of prey. Because they hunt at night, they must rely on non-visual senses. Experiments by Roger Payne have shown that owls are sensitive to the sounds made by their prey, not the heat or the smell. In fact, the sound cues are both necessary and sufficient for localization of mice from a distant location where they are perched. For this to work, the owls must be able to accurately localize both the azimuth and the elevation of the sound source.
+
+Dolphins
+
+Dolphins (and other odontocetes) rely on echolocation to aid in detecting, identifying, localizing, and capturing prey. Dolphin sonar signals are well suited for localizing multiple, small targets in a three-dimensional aquatic environment by utilizing highly directional (3 dB beamwidth of about 10 deg), broadband (3 dB bandwidth typically of about 40 kHz; peak frequencies between 40 kHz and 120 kHz), short duration clicks (about 40 μs). Dolphins can localize sounds both passively and actively (echolocation) with a resolution of about 1 deg. Cross-modal matching (between vision and echolocation) suggests dolphins perceive the spatial structure of complex objects interrogated through echolocation, a feat that likely requires spatially resolving individual object features and integration into a holistic representation of object shape. Although dolphins are sensitive to small, binaural intensity and time differences, mounting evidence suggests dolphins employ position-dependent spectral cues derived from well-developed head-related transfer functions, for sound localization in both the horizontal and vertical planes. A very small temporal integration time (264 μs) allows localization of multiple targets at varying distances. Localization adaptations include pronounced asymmetry of the skull, nasal sacks, and specialized lipid structures in the forehead and jaws, as well as acoustically isolated middle and inner ears.
+
+History
+The term 'binaural' literally signifies 'to hear with two ears', and was introduced in 1859 to signify the practice of listening to the same sound through both ears, or to two discrete sounds, one through each ear. It was not until 1916 that Carl Stumpf (1848–1936), a German philosopher and psychologist, distinguished between dichotic listening, which refers to the stimulation of each ear with a different stimulus, and diotic listening, the simultaneous stimulation of both ears with the same stimulus.
+Later, it would become apparent that binaural hearing, whether dichotic or diotic, is the means by which sound localization occurs.
+Scientific consideration of binaural hearing began before the phenomenon was so named, with speculations published in 1792 by William Charles Wells (1757–1817) based on his research into binocular vision. Giovanni Battista Venturi (1746–1822) conducted and described experiments in which people tried to localize a sound using both ears, or one ear blocked with a finger. This work was not followed up on, and was only recovered after others had worked out how human sound localization works. Lord Rayleigh (1842–1919) would do these same experiments and come to the results, without knowing Venturi had first done them, almost seventy-five years later.
+Charles Wheatstone (1802–1875) did work on optics and color mixing, and also explored hearing.  He invented a device he called a "microphone" that involved a metal plate over each ear, each connected to metal rods; he used this device to amplify sound.  He also did experiments holding tuning forks to both ears at the same time, or separately, trying to work out how sense of hearing works, that he published in 1827. Ernst Heinrich Weber (1795–1878) and August Seebeck (1805–1849) and William Charles Wells also attempted to compare and contrast what would become known as binaural hearing with the principles of binocular integration generally.
+Understanding how the differences in sound signals between two ears contributes to auditory processing in such a way as to enable sound localization and direction was considerably advanced after the invention of the stethophone by Somerville Scott Alison in 1859, who coined the term 'binaural'. Alison based the stethophone on the stethoscope, which had been invented by René Théophile Hyacinthe Laennec (1781–1826); the stethophone had two separate "pickups", allowing the user to hear and compare sounds derived from two discrete locations.

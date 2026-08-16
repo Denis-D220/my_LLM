@@ -1,0 +1,3284 @@
+In probability theory and statistics, a probability distribution describes how probabilities are assigned to the possible results of a random phenomenon—more precisely, to events, which are sets of possible outcomes of a probabilistic experiment. Informally, a probability distribution tells us how likely different results are. Formally, it is a probability measure: a function that assigns probabilities to events in a way that satisfies the axioms of probability.
+Probability distributions are closely linked to random variables. A random variable is a function that assigns a value to each outcome of a probabilistic experiment; it induces a probability distribution on the set of values it can take. For example, the result of a coin toss can be represented by a random variable X that equals 1 for heads and 0 for tails. If the coin is fair, this distribution assigns probability 1/2 to X = 1 and probability 1/2 to X = 0. Viewed as a probability measure, the distribution of X assigns ℙ(X ∈ A) to each set A ⊆ {0,1}; for a fair coin, ℙ(X ∈ {1}) = ℙ(X ∈ {0}) = 1/2, ℙ(X ∈ {0,1}) = 1, and ℙ(X ∈ ∅) = 0.
+In practice, probability distributions are often described by functions such as cumulative distribution functions, probability mass functions, or probability density functions. Which description is used depends on the nature of the distribution: probability mass functions are used for discrete distributions, while probability density functions are used for many continuous distributions.
+Probability distributions that occur frequently or have special theoretical importance are often given specific names; examples are collected in the list of probability distributions.
+
+Introduction
+A probability distribution is a mathematical description of the probabilities of events, i.e. subsets of the sample space. The sample space, often represented in notation by 
+  
+    
+      
+         
+        Ω
+         
+        ,
+      
+    
+    {\displaystyle \ \Omega \ ,}
+  
+ is the set of all possible outcomes of a random phenomenon being observed. The sample space may be any set of numbers, vectors, labels, or whatever else. For example, the sample space of a coin flip could be Ω = {"heads", "tails"} , whereas for a die roll, it could be Ω = {1, 2, 3, 4, 5, 6} .
+To define probability distributions for the specific case of random variables (so that the sample space can mapped to a measurable space, for example the real numbers), it is common to distinguish between discrete and continuous random variables. In the discrete case, it is sufficient to specify a probability mass function 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ assigning a probability to each possible outcome (e.g. when throwing a fair die, each of the six digits "1" to "6", corresponding to the number of dots on the die, has probability 
+  
+    
+      
+        
+          
+            
+              1
+              6
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {1}{6}}}
+  
+ of being on top when it lands). The probability of an event is then defined to be the sum of the probabilities of all outcomes that satisfy the event; for example, the probability of the event "the die rolls an even value" is
+
+  
+    
+      
+        P
+        (
+        2
+        )
+        +
+        P
+        (
+        4
+        )
+        +
+        P
+        (
+        6
+        )
+        =
+        
+          
+            1
+            6
+          
+        
+        +
+        
+          
+            1
+            6
+          
+        
+        +
+        
+          
+            1
+            6
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+      
+    
+    {\displaystyle P(2)+P(4)+P(6)={\frac {1}{6}}+{\frac {1}{6}}+{\frac {1}{6}}={\frac {1}{2}}}
+  
+
+In contrast, when a random variable takes values from a continuum, then unless the probability density function has any infinitely-dense peaks, any individual outcome has probability zero. For such continuous random variables, only events that include infinitely many outcomes, such as intervals, have probability greater than 0.
+For example, consider measuring the weight of a piece of ham in the supermarket, and assume the scale can provide arbitrarily many digits of precision. Then, the probability that it weighs exactly 500 g must be zero because no matter how high the level of precision chosen, it cannot be assumed that there are no non-zero digits after those output by the scale. However, for the same use case, it is possible to meet quality control requirements such as that a package of "500 g" of ham must weigh between 490 g and 510 g. This is possible because this measurement does not require infinite precision from the underlying equipment, and it provides some tolerance for variability in physical objects and processes.
+
+Continuous probability distributions can be described by means of the cumulative distribution function, which describes the probability that the random variable is no larger than a given value (i.e., P(X ≤ x) for some x. The cumulative distribution function is the area under the probability density function from -∞ to x, as shown in figure 1.
+Most continuous probability distributions encountered in practice are not only continuous but also absolutely continuous. Such distributions can be described by their probability density function. Informally, the probability density 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ of a random variable 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ describes the relative value of the infinitesimal probability that 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ takes any value 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ — that is 
+  
+    
+      
+        P
+        (
+        x
+        ≤
+        X
+        <
+        x
+        +
+        Δ
+        x
+        )
+        ≈
+        f
+        (
+        x
+        )
+        
+        Δ
+        x
+      
+    
+    {\displaystyle P(x\leq X<x+\Delta x)\approx f(x)\,\Delta x}
+  
+ as 
+  
+    
+      
+        Δ
+        x
+        >
+        0
+      
+    
+    {\displaystyle \Delta x>0}
+  
+ becomes arbitrarily small. The probability that 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ lies in a given interval can be computed rigorously by integrating the probability density function over that interval.
+
+General probability definition
+Let 
+  
+    
+      
+        (
+        Ω
+        ,
+        
+          
+            F
+          
+        
+        ,
+        P
+        )
+      
+    
+    {\displaystyle (\Omega ,{\mathcal {F}},P)}
+  
+ be a probability space, 
+  
+    
+      
+        (
+        E
+        ,
+        
+          
+            E
+          
+        
+        )
+      
+    
+    {\displaystyle (E,{\mathcal {E}})}
+  
+ be a measurable space, and 
+  
+    
+      
+        X
+        :
+        Ω
+        →
+        E
+      
+    
+    {\displaystyle X:\Omega \to E}
+  
+ be a 
+  
+    
+      
+        (
+        E
+        ,
+        
+          
+            E
+          
+        
+        )
+      
+    
+    {\displaystyle (E,{\mathcal {E}})}
+  
+-valued random variable. Then the probability distribution of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is the pushforward measure of the probability measure 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ onto 
+  
+    
+      
+        (
+        E
+        ,
+        
+          
+            E
+          
+        
+        )
+      
+    
+    {\displaystyle (E,{\mathcal {E}})}
+  
+ induced by 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+. Explicitly, this pushforward measure on 
+  
+    
+      
+        (
+        E
+        ,
+        
+          
+            E
+          
+        
+        )
+      
+    
+    {\displaystyle (E,{\mathcal {E}})}
+  
+ is given by
+
+  
+    
+      
+        
+          X
+          
+            ∗
+          
+        
+        (
+        P
+        )
+        (
+        B
+        )
+        =
+        P
+        
+          (
+          
+            
+              X
+              
+                −
+                1
+              
+            
+            (
+            B
+            )
+          
+          )
+        
+      
+    
+    {\displaystyle X_{*}(P)(B)=P\left(X^{-1}(B)\right)}
+  
+ for 
+  
+    
+      
+        B
+        ∈
+        
+          
+            E
+          
+        
+        .
+      
+    
+    {\displaystyle B\in {\mathcal {E}}.}
+  
+
+Any probability distribution is a probability measure on 
+  
+    
+      
+        (
+        E
+        ,
+        
+          
+            E
+          
+        
+        )
+      
+    
+    {\displaystyle (E,{\mathcal {E}})}
+  
+ (in general different from 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+, unless 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ happens to be the identity map).
+A probability distribution can be described in various forms, such as by a probability mass function or a cumulative distribution function. One of the most general descriptions, which applies for absolutely continuous and discrete variables, is by means of a probability function 
+  
+    
+      
+        P
+        :
+        
+          
+            A
+          
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle P\colon {\mathcal {A}}\to \mathbb {R} }
+  
+ whose  input space  
+  
+    
+      
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathcal {A}}}
+  
+ is a σ-algebra, and gives a real number probability  as its output, particularly, a number in 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+        ⊆
+        
+          R
+        
+      
+    
+    {\displaystyle [0,1]\subseteq \mathbb {R} }
+  
+.
+The probability function 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ can take as argument subsets of the sample space itself, as in the coin toss example, where the function 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ was defined so that P(heads) = 0.5 and P(tails) = 0.5. However, because of the widespread use of random variables, which transform the sample space into a set of numbers (e.g., 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+), it is more common to study probability distributions whose argument are subsets of these particular kinds of sets (number sets), and all probability distributions discussed in this article are of this type. It is common to denote as 
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        E
+        )
+      
+    
+    {\displaystyle P(X\in E)}
+  
+ the probability that a certain value of the variable 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ belongs to a certain event 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+.
+The above probability function only characterizes a probability distribution if it satisfies all the Kolmogorov axioms, that is:
+
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        E
+        )
+        ≥
+        0
+        
+        ∀
+        E
+        ∈
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle P(X\in E)\geq 0\;\forall E\in {\mathcal {A}}}
+  
+, so the probability is non-negative
+
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        E
+        )
+        ≤
+        1
+        
+        ∀
+        E
+        ∈
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle P(X\in E)\leq 1\;\forall E\in {\mathcal {A}}}
+  
+, so no probability exceeds 
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        
+          ⋃
+          
+            i
+          
+        
+        
+          E
+          
+            i
+          
+        
+        )
+        =
+        
+          ∑
+          
+            i
+          
+        
+        P
+        (
+        X
+        ∈
+        
+          E
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle P(X\in \bigcup _{i}E_{i})=\sum _{i}P(X\in E_{i})}
+  
+ for any countable disjoint family of sets 
+  
+    
+      
+        {
+        
+          E
+          
+            i
+          
+        
+        }
+      
+    
+    {\displaystyle \{E_{i}\}}
+  
+
+The concept of probability function is made more rigorous by defining it as the element of a probability space 
+  
+    
+      
+        (
+        X
+        ,
+        
+          
+            A
+          
+        
+        ,
+        P
+        )
+      
+    
+    {\displaystyle (X,{\mathcal {A}},P)}
+  
+, where 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is the set of possible outcomes, 
+  
+    
+      
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathcal {A}}}
+  
+ is the set of all subsets 
+  
+    
+      
+        E
+        ⊂
+        X
+      
+    
+    {\displaystyle E\subset X}
+  
+ whose probability can be measured, and 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is the probability function, or probability measure, that assigns a probability to each of these measurable subsets 
+  
+    
+      
+        E
+        ∈
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle E\in {\mathcal {A}}}
+  
+.
+Probability distributions usually belong to one of two classes.
+A discrete probability distribution is applicable to the scenarios where the set of possible outcomes is discrete (e.g. a coin toss, a roll of a die) and the probabilities are encoded by a discrete list of the probabilities of the outcomes; in this case probabilities are described by a probability mass function, and the probability distribution is given by a sum of the probability mass function.
+An absolutely continuous probability distribution is applicable to scenarios where the set of possible outcomes can take on values in a continuous range (e.g. real numbers), such as the temperature on a given day. In the absolutely continuous case, probabilities are described by a probability density function, and the probability distribution is by definition the integral of the probability density function. The normal distribution is a commonly encountered absolutely continuous probability distribution. More complex experiments, such as those involving stochastic processes defined in continuous time, may demand the use of more general probability measures.
+A probability distribution whose sample space is one-dimensional (for example real numbers, list of labels, ordered labels or binary) is called univariate, while a distribution whose sample space is a vector space of dimension 2 or more is called multivariate. A univariate distribution gives the probabilities of a single random variable taking on various different values; a multivariate distribution (a joint probability distribution) gives the probabilities of a random vector – a list of two or more random variables – taking on various combinations of values. Important and commonly encountered univariate probability distributions include the binomial distribution, the hypergeometric distribution, and the normal distribution. A commonly encountered multivariate distribution is the multivariate normal distribution.
+Besides the probability function, the cumulative distribution function, the probability mass function and the probability density function, the moment generating function and the characteristic function also serve to identify a probability distribution, as they uniquely determine an underlying cumulative distribution function.
+
+Terminology
+Some key concepts and terms, widely used in the literature on the topic of probability distributions, are listed below.
+
+Basic terms
+Random variable: takes values from a sample space; probabilities describe which values and set of values are more likely taken.
+Event: set of possible values (outcomes) of a random variable that occurs with a certain probability.
+Probability function or probability measure: describes the probability 
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        E
+        )
+      
+    
+    {\displaystyle P(X\in E)}
+  
+ that the event 
+  
+    
+      
+        E
+        ,
+      
+    
+    {\displaystyle E,}
+  
+ occurs.
+Cumulative distribution function: function evaluating the probability that 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ will take a value less than or equal to 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ for a random variable (only for real-valued random variables).
+Quantile function: the inverse of the cumulative distribution function. Gives 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ such that, with probability 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+, 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ will not exceed 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+.
+
+Discrete probability distributions
+Discrete probability distribution: for many random variables with finitely or countably infinitely many values.
+Probability mass function (pmf): function that gives the probability that a discrete random variable is equal to some value.
+Frequency distribution: a table that displays the frequency of various outcomes in a sample.
+Relative frequency distribution: a frequency distribution where each value has been divided (normalized) by a number of outcomes in a sample (i.e. sample size).
+Categorical distribution: for discrete random variables with a finite set of values.
+
+Absolutely continuous probability distributions
+Absolutely continuous probability distribution: for many random variables with uncountably many values.
+Probability density function (pdf) or probability density: function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would equal that sample.
+
+Related terms
+Support: the set of values x such that the random variable as a positive probability of falling in every open neighborhood of x.
+Tail: the regions close to the bounds of the random variable, if the pmf or pdf are relatively low therein. Usually has the form 
+  
+    
+      
+        X
+        >
+        a
+      
+    
+    {\displaystyle X>a}
+  
+, 
+  
+    
+      
+        X
+        <
+        b
+      
+    
+    {\displaystyle X<b}
+  
+ or a union thereof.
+Expected value or mean: the weighted average of the possible values, using their probabilities as their weights; or the continuous analog thereof.
+Median: the value such that the set of values less than the median, and the set greater than the median, each have probabilities no greater than one-half.
+Mode: for a discrete random variable, the value with highest probability; for an absolutely continuous random variable, a location at which the probability density function has a local peak.
+Quantile: the q-quantile is the value 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ such that 
+  
+    
+      
+        P
+        (
+        X
+        <
+        x
+        )
+        =
+        q
+      
+    
+    {\displaystyle P(X<x)=q}
+  
+.
+Variance: the second moment of the random variable about its mean; an important measure of the dispersion of the distribution.
+Standard deviation: the square root of the variance, and hence another measure of dispersion.
+Symmetry: a property of some distributions in which the portion of the distribution to the left of a specific value (usually the median) is a mirror image of the portion to its right.
+Skewness: a measure of the extent to which a pmf or pdf "leans" to one side of its mean. The third standardized moment of the distribution.
+Kurtosis: a measure of the "fatness" of the tails of a pmf or pdf. The fourth standardized moment of the distribution.
+
+Cumulative distribution function
+
+In the special case of a real-valued random variable, the probability distribution can equivalently be represented by a cumulative distribution function instead of a probability measure. The cumulative distribution function of a random variable 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ with regard to a probability distribution 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is defined as
+
+  
+    
+      
+        F
+        (
+        x
+        )
+        =
+        P
+        (
+        X
+        ≤
+        x
+        )
+        .
+      
+    
+    {\displaystyle F(x)=P(X\leq x).}
+  
+
+The cumulative distribution function of any real-valued random variable has the properties:
+
+  
+    
+      
+        F
+        (
+        x
+        )
+      
+    
+    {\displaystyle F(x)}
+  
+ is non-decreasing;
+
+  
+    
+      
+        F
+        (
+        x
+        )
+      
+    
+    {\displaystyle F(x)}
+  
+ is right-continuous;
+
+  
+    
+      
+        0
+        ≤
+        F
+        (
+        x
+        )
+        ≤
+        1
+      
+    
+    {\displaystyle 0\leq F(x)\leq 1}
+  
+;
+
+  
+    
+      
+        
+          lim
+          
+            x
+            →
+            −
+            ∞
+          
+        
+        F
+        (
+        x
+        )
+        =
+        0
+      
+    
+    {\displaystyle \lim _{x\to -\infty }F(x)=0}
+  
+ and 
+  
+    
+      
+        
+          lim
+          
+            x
+            →
+            ∞
+          
+        
+        F
+        (
+        x
+        )
+        =
+        1
+      
+    
+    {\displaystyle \lim _{x\to \infty }F(x)=1}
+  
+; and
+
+  
+    
+      
+        Pr
+        (
+        a
+        <
+        X
+        ≤
+        b
+        )
+        =
+        F
+        (
+        b
+        )
+        −
+        F
+        (
+        a
+        )
+      
+    
+    {\displaystyle \Pr(a<X\leq b)=F(b)-F(a)}
+  
+.
+Conversely, any function 
+  
+    
+      
+        F
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle F:\mathbb {R} \to \mathbb {R} }
+  
+ that satisfies the first four of the properties above is the cumulative distribution function of some probability distribution on the real numbers.
+Any probability distribution can be decomposed as the mixture of a discrete, an absolutely continuous and a singular continuous distribution, and thus any cumulative distribution function admits a decomposition as the convex sum of the three according cumulative distribution functions.
+
+Discrete probability distribution
+
+A discrete probability distribution is the probability distribution of a random variable that can take on only a countable number of values (almost surely) which means that the probability of any event 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ can be expressed as a (finite or countably infinite) sum:
+
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        E
+        )
+        =
+        
+          ∑
+          
+            ω
+            ∈
+            A
+            ∩
+            E
+          
+        
+        P
+        (
+        X
+        =
+        ω
+        )
+        ,
+      
+    
+    {\displaystyle P(X\in E)=\sum _{\omega \in A\cap E}P(X=\omega ),}
+  
+
+where 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is a countable set with 
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        A
+        )
+        =
+        1
+      
+    
+    {\displaystyle P(X\in A)=1}
+  
+. Thus the discrete random variables (i.e. random variables whose probability distribution is discrete) are exactly those with a probability mass function 
+  
+    
+      
+        p
+        (
+        x
+        )
+        =
+        P
+        (
+        X
+        =
+        x
+        )
+      
+    
+    {\displaystyle p(x)=P(X=x)}
+  
+. In the case where the range of values is countably infinite, these values have to decline to zero fast enough for the probabilities to add up to 1. For example, if 
+  
+    
+      
+        p
+        (
+        n
+        )
+        =
+        
+          
+            
+              1
+              
+                2
+                
+                  n
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle p(n)={\tfrac {1}{2^{n}}}}
+  
+ for 
+  
+    
+      
+        n
+        =
+        1
+        ,
+        2
+        ,
+        .
+        .
+        .
+      
+    
+    {\displaystyle n=1,2,...}
+  
+, the sum of probabilities would be 
+  
+    
+      
+        1
+        
+          /
+        
+        2
+        +
+        1
+        
+          /
+        
+        4
+        +
+        1
+        
+          /
+        
+        8
+        +
+        ⋯
+        =
+        1
+      
+    
+    {\displaystyle 1/2+1/4+1/8+\dots =1}
+  
+.
+Well-known discrete probability distributions used in statistical modeling include the Poisson distribution, the Bernoulli distribution, the binomial distribution, the geometric distribution, the negative binomial distribution and categorical distribution. When a sample (a set of observations) is drawn from a larger population, the sample points have an empirical distribution that is discrete, and which provides information about the population distribution. Additionally, the discrete uniform distribution is commonly used in computer programs that make equal-probability random selections between a number of choices.
+
+Cumulative distribution function
+A real-valued discrete random variable can equivalently be defined as a random variable whose cumulative distribution function increases only by jump discontinuities—that is, its cdf increases only where it "jumps" to a higher value, and is constant in intervals without jumps. The points where jumps occur are precisely the values which the random variable may take.
+Thus the cumulative distribution function has the form
+
+  
+    
+      
+        F
+        (
+        x
+        )
+        =
+        P
+        (
+        X
+        ≤
+        x
+        )
+        =
+        
+          ∑
+          
+            ω
+            ≤
+            x
+          
+        
+        p
+        (
+        ω
+        )
+        .
+      
+    
+    {\displaystyle F(x)=P(X\leq x)=\sum _{\omega \leq x}p(\omega ).}
+  
+
+The points where the cdf jumps always form a countable set; this may be any countable set and thus may even be dense in the real numbers.
+
+Dirac delta representation
+A discrete probability distribution is often represented with Dirac measures, also called one-point distributions (see below), the probability distributions of deterministic random variables. For any outcome 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+, let 
+  
+    
+      
+        
+          δ
+          
+            ω
+          
+        
+      
+    
+    {\displaystyle \delta _{\omega }}
+  
+ be the Dirac measure concentrated at 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+. Given a discrete probability distribution, there is a countable set 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ with 
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        A
+        )
+        =
+        1
+      
+    
+    {\displaystyle P(X\in A)=1}
+  
+ and a probability mass function 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+. If 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is any event, then
+
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        E
+        )
+        =
+        
+          ∑
+          
+            ω
+            ∈
+            A
+          
+        
+        p
+        (
+        ω
+        )
+        
+          δ
+          
+            ω
+          
+        
+        (
+        E
+        )
+        ,
+      
+    
+    {\displaystyle P(X\in E)=\sum _{\omega \in A}p(\omega )\delta _{\omega }(E),}
+  
+
+or in short,
+
+  
+    
+      
+        
+          P
+          
+            X
+          
+        
+        =
+        
+          ∑
+          
+            ω
+            ∈
+            A
+          
+        
+        p
+        (
+        ω
+        )
+        
+          δ
+          
+            ω
+          
+        
+        .
+      
+    
+    {\displaystyle P_{X}=\sum _{\omega \in A}p(\omega )\delta _{\omega }.}
+  
+
+Similarly, discrete distributions can be represented with the Dirac delta function as a generalized probability density function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, where
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          ∑
+          
+            ω
+            ∈
+            A
+          
+        
+        p
+        (
+        ω
+        )
+        δ
+        (
+        x
+        −
+        ω
+        )
+        ,
+      
+    
+    {\displaystyle f(x)=\sum _{\omega \in A}p(\omega )\delta (x-\omega ),}
+  
+
+which means
+
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        E
+        )
+        =
+        
+          ∫
+          
+            E
+          
+        
+        f
+        (
+        x
+        )
+        
+        d
+        x
+        =
+        
+          ∑
+          
+            ω
+            ∈
+            A
+          
+        
+        p
+        (
+        ω
+        )
+        
+          ∫
+          
+            E
+          
+        
+        δ
+        (
+        x
+        −
+        ω
+        )
+        =
+        
+          ∑
+          
+            ω
+            ∈
+            A
+            ∩
+            E
+          
+        
+        p
+        (
+        ω
+        )
+      
+    
+    {\displaystyle P(X\in E)=\int _{E}f(x)\,dx=\sum _{\omega \in A}p(\omega )\int _{E}\delta (x-\omega )=\sum _{\omega \in A\cap E}p(\omega )}
+  
+
+for any event 
+  
+    
+      
+        E
+        .
+      
+    
+    {\displaystyle E.}
+  
+
+Indicator-function representation
+For a discrete random variable 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+, let 
+  
+    
+      
+        
+          u
+          
+            0
+          
+        
+        ,
+        
+          u
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle u_{0},u_{1},\dots }
+  
+ be the values it can take with non-zero probability. Denote
+
+  
+    
+      
+        
+          Ω
+          
+            i
+          
+        
+        =
+        
+          X
+          
+            −
+            1
+          
+        
+        (
+        
+          u
+          
+            i
+          
+        
+        )
+        =
+        {
+        ω
+        :
+        X
+        (
+        ω
+        )
+        =
+        
+          u
+          
+            i
+          
+        
+        }
+        ,
+        
+        i
+        =
+        0
+        ,
+        1
+        ,
+        2
+        ,
+        …
+      
+    
+    {\displaystyle \Omega _{i}=X^{-1}(u_{i})=\{\omega :X(\omega )=u_{i}\},\,i=0,1,2,\dots }
+  
+
+These are disjoint sets, and for such sets
+
+  
+    
+      
+        P
+        
+          (
+          
+            
+              ⋃
+              
+                i
+              
+            
+            
+              Ω
+              
+                i
+              
+            
+          
+          )
+        
+        =
+        
+          ∑
+          
+            i
+          
+        
+        P
+        (
+        
+          Ω
+          
+            i
+          
+        
+        )
+        =
+        
+          ∑
+          
+            i
+          
+        
+        P
+        (
+        X
+        =
+        
+          u
+          
+            i
+          
+        
+        )
+        =
+        1.
+      
+    
+    {\displaystyle P\left(\bigcup _{i}\Omega _{i}\right)=\sum _{i}P(\Omega _{i})=\sum _{i}P(X=u_{i})=1.}
+  
+
+It follows that the probability that 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ takes any value except for 
+  
+    
+      
+        
+          u
+          
+            0
+          
+        
+        ,
+        
+          u
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle u_{0},u_{1},\dots }
+  
+ is zero, and thus one can write 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ as
+
+  
+    
+      
+        X
+        (
+        ω
+        )
+        =
+        
+          ∑
+          
+            i
+          
+        
+        
+          u
+          
+            i
+          
+        
+        
+          1
+          
+            
+              Ω
+              
+                i
+              
+            
+          
+        
+        (
+        ω
+        )
+      
+    
+    {\displaystyle X(\omega )=\sum _{i}u_{i}1_{\Omega _{i}}(\omega )}
+  
+
+except on a set of probability zero, where 
+  
+    
+      
+        
+          1
+          
+            A
+          
+        
+      
+    
+    {\displaystyle 1_{A}}
+  
+ is the indicator function of 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+. This may serve as an alternative definition of discrete random variables.
+
+One-point distribution
+A special case is the discrete distribution of a random variable that can take on only one fixed value, in other words, a Dirac measure. Expressed formally, the random variable 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ has a one-point distribution if it has a possible outcome 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ such that 
+  
+    
+      
+        P
+        (
+        X
+        
+          =
+        
+        x
+        )
+        =
+        1.
+      
+    
+    {\displaystyle P(X{=}x)=1.}
+  
+ All other possible outcomes then have probability 0. Its cumulative distribution function jumps immediately from 0 before 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ to 1 at 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. It is closely related to a deterministic distribution, which cannot take on any other value, while a one-point distribution can take other values, though only with probability 0. For most practical purposes the two notions are equivalent.
+
+Absolutely continuous probability distribution
+
+An absolutely continuous probability distribution is a probability distribution on the real numbers with uncountably many possible values, such as a whole interval in the real line, and where the probability of any event can be expressed as an integral. More precisely, a real random variable 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ has an absolutely continuous probability distribution if there is a function 
+  
+    
+      
+        f
+        :
+        
+          R
+        
+        →
+        [
+        0
+        ,
+        ∞
+        ]
+      
+    
+    {\displaystyle f:\mathbb {R} \to [0,\infty ]}
+  
+ such that for each interval 
+  
+    
+      
+        I
+        =
+        [
+        a
+        ,
+        b
+        ]
+        ⊂
+        
+          R
+        
+      
+    
+    {\displaystyle I=[a,b]\subset \mathbb {R} }
+  
+ the probability of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ belonging to 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ is given by the integral of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ over 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+:
+
+  
+    
+      
+        P
+        
+          (
+          
+            a
+            ≤
+            X
+            ≤
+            b
+          
+          )
+        
+        =
+        
+          ∫
+          
+            a
+          
+          
+            b
+          
+        
+        f
+        (
+        x
+        )
+        
+        d
+        x
+        .
+      
+    
+    {\displaystyle P\left(a\leq X\leq b\right)=\int _{a}^{b}f(x)\,dx.}
+  
+
+This is the definition of a probability density function, so that absolutely continuous probability distributions are exactly those with a probability density function.
+In particular, the probability for 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to take any single value 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ (that is, 
+  
+    
+      
+        a
+        ≤
+        X
+        ≤
+        a
+      
+    
+    {\displaystyle a\leq X\leq a}
+  
+) is zero, because an integral with coinciding upper and lower limits is always equal to zero.
+If the interval 
+  
+    
+      
+        [
+        a
+        ,
+        b
+        ]
+      
+    
+    {\displaystyle [a,b]}
+  
+ is replaced by any measurable set 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, the according equality still holds:
+
+  
+    
+      
+        P
+        (
+        X
+        ∈
+        A
+        )
+        =
+        
+          ∫
+          
+            A
+          
+        
+        f
+        (
+        x
+        )
+        
+        d
+        x
+        .
+      
+    
+    {\displaystyle P(X\in A)=\int _{A}f(x)\,dx.}
+  
+
+An absolutely continuous random variable is a random variable whose probability distribution is absolutely continuous.
+There are many examples of absolutely continuous probability distributions: normal, uniform, chi-squared, and others.
+
+Cumulative distribution function
+Absolutely continuous probability distributions as defined above are precisely those with an absolutely continuous cumulative distribution function.
+In this case, the cumulative distribution function 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ has the form
+
+  
+    
+      
+        F
+        (
+        x
+        )
+        =
+        P
+        (
+        X
+        ≤
+        x
+        )
+        =
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            x
+          
+        
+        f
+        (
+        t
+        )
+        
+        d
+        t
+      
+    
+    {\displaystyle F(x)=P(X\leq x)=\int _{-\infty }^{x}f(t)\,dt}
+  
+
+where 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a density of the random variable 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ with regard to the distribution 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+.
+Note on terminology: Absolutely continuous distributions ought to be distinguished from continuous distributions, which are those having a continuous cumulative distribution function. Every absolutely continuous distribution is a continuous distribution but the inverse is not true, there exist singular distributions, which are neither absolutely continuous nor discrete nor a mixture of those, and do not have a density. An example is given by the Cantor distribution. Some authors however use the term "continuous distribution" to denote all distributions whose cumulative distribution function is absolutely continuous, i.e. refer to absolutely continuous distributions as continuous distributions.
+For a more general definition of density functions and the equivalent absolutely continuous measures see absolutely continuous measure.
+
+Kolmogorov definition
+
+In the measure-theoretic formalization of probability theory, a random variable is defined as a measurable function 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ from a probability space 
+  
+    
+      
+        (
+        Ω
+        ,
+        
+          
+            F
+          
+        
+        ,
+        
+          P
+        
+        )
+      
+    
+    {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {P} )}
+  
+ to a measurable space 
+  
+    
+      
+        (
+        
+          
+            X
+          
+        
+        ,
+        
+          
+            A
+          
+        
+        )
+      
+    
+    {\displaystyle ({\mathcal {X}},{\mathcal {A}})}
+  
+. Given that probabilities of events of the form 
+  
+    
+      
+        {
+        ω
+        ∈
+        Ω
+        ∣
+        X
+        (
+        ω
+        )
+        ∈
+        A
+        }
+      
+    
+    {\displaystyle \{\omega \in \Omega \mid X(\omega )\in A\}}
+  
+ satisfy Kolmogorov's probability axioms, the probability distribution of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is the image measure 
+  
+    
+      
+        
+          X
+          
+            ∗
+          
+        
+        
+          P
+        
+      
+    
+    {\displaystyle X_{*}\mathbb {P} }
+  
+ of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ , which is a probability measure on 
+  
+    
+      
+        (
+        
+          
+            X
+          
+        
+        ,
+        
+          
+            A
+          
+        
+        )
+      
+    
+    {\displaystyle ({\mathcal {X}},{\mathcal {A}})}
+  
+ satisfying 
+  
+    
+      
+        
+          X
+          
+            ∗
+          
+        
+        
+          P
+        
+        =
+        
+          P
+        
+        
+          X
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle X_{*}\mathbb {P} =\mathbb {P} X^{-1}}
+  
+.
+
+Other kinds of distributions
+
+Absolutely continuous and discrete distributions with support on 
+  
+    
+      
+        
+          
+            R
+          
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{k}}
+  
+ or 
+  
+    
+      
+        
+          
+            N
+          
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \mathbb {N} ^{k}}
+  
+ are extremely useful to model a myriad of phenomena, since most practical distributions are supported on relatively simple subsets, such as hypercubes or balls. However, this is not always the case, and there exist phenomena with supports that are actually complicated curves 
+  
+    
+      
+        γ
+        :
+        [
+        a
+        ,
+        b
+        ]
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \gamma :[a,b]\rightarrow \mathbb {R} ^{n}}
+  
+ within some space 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{n}}
+  
+ or similar. In these cases, the probability distribution is supported on the image of such curve, and is likely to be determined empirically, rather than finding a closed formula for it.
+One example is shown in the figure to the right, which displays the evolution of a system of differential equations (commonly known as the Rabinovich–Fabrikant equations) that can be used to model the behaviour of Langmuir waves in plasma. When this phenomenon is studied, the observed states from the subset are as indicated in red. So one could ask what is the probability of observing a state in a certain position of the red subset; if such a probability exists, it is called the probability measure of the system.
+This kind of complicated support appears quite frequently in dynamical systems. It is not simple to establish that the system has a probability measure, and the main problem is the following. Let 
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+        ≪
+        
+          t
+          
+            2
+          
+        
+        ≪
+        
+          t
+          
+            3
+          
+        
+      
+    
+    {\displaystyle t_{1}\ll t_{2}\ll t_{3}}
+  
+ be instants in time and 
+  
+    
+      
+        O
+      
+    
+    {\displaystyle O}
+  
+ a subset of the support; if the probability measure exists for the system, one would expect the frequency of observing states inside set 
+  
+    
+      
+        O
+      
+    
+    {\displaystyle O}
+  
+ would be equal in interval 
+  
+    
+      
+        [
+        
+          t
+          
+            1
+          
+        
+        ,
+        
+          t
+          
+            2
+          
+        
+        ]
+      
+    
+    {\displaystyle [t_{1},t_{2}]}
+  
+ and 
+  
+    
+      
+        [
+        
+          t
+          
+            2
+          
+        
+        ,
+        
+          t
+          
+            3
+          
+        
+        ]
+      
+    
+    {\displaystyle [t_{2},t_{3}]}
+  
+, which might not happen; for example, it could oscillate similar to a sine, 
+  
+    
+      
+        sin
+        ⁡
+        (
+        t
+        )
+      
+    
+    {\displaystyle \sin(t)}
+  
+, whose limit when 
+  
+    
+      
+        t
+        →
+        ∞
+      
+    
+    {\displaystyle t\rightarrow \infty }
+  
+ does not converge. Formally, the measure exists only if the limit of the relative frequency converges when the system is observed into the infinite future. The branch of dynamical systems that studies the existence of a probability measure is ergodic theory.
+Note that even in these cases, the probability distribution, if it exists, might still be termed "absolutely continuous" or "discrete" depending on whether the support is uncountable or countable, respectively.
+
+Lebesgue decomposition
+The Lebesgue decomposition theorem states that any probability distribution on the real line can be uniquely decomposed into a mixture of three fundamental types:
+
+  
+    
+      
+        F
+        =
+        α
+        
+          F
+          
+            discrete
+          
+        
+        +
+        β
+        
+          F
+          
+            ac
+          
+        
+        +
+        γ
+        
+          F
+          
+            singular
+          
+        
+      
+    
+    {\displaystyle F=\alpha F_{\text{discrete}}+\beta F_{\text{ac}}+\gamma F_{\text{singular}}}
+  
+
+where coefficients 
+  
+    
+      
+        α
+        ,
+        β
+        ,
+        γ
+        ∈
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle \alpha ,\beta ,\gamma \in [0,1]}
+  
+ sum to 1. The three components are:
+
+Discrete: The probability is concentrated on a countable set of values (points). The cumulative distribution function (CDF) is a step function.
+Absolutely continuous: The distribution has a probability density function 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+ such that 
+  
+    
+      
+        F
+        (
+        x
+        )
+        =
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            x
+          
+        
+        f
+        (
+        t
+        )
+        
+        d
+        t
+      
+    
+    {\displaystyle F(x)=\int _{-\infty }^{x}f(t)\,dt}
+  
+. The set of values with non-zero probability density has Lebesgue measure greater than zero.
+Singular continuous: The CDF is continuous everywhere, but its derivative is zero almost everywhere (with respect to Lebesgue measure). The probability is concentrated on a set of measure zero (e.g., the Cantor set). A classic example is the Cantor distribution.
+Most standard distributions in statistical applications are either purely discrete (
+  
+    
+      
+        α
+        =
+        1
+      
+    
+    {\displaystyle \alpha =1}
+  
+) or purely absolutely continuous (
+  
+    
+      
+        β
+        =
+        1
+      
+    
+    {\displaystyle \beta =1}
+  
+). Singular distributions rarely appear in applied statistics but are important in the theory of stochastic processes and fractals.
+
+Random number generation
+
+Most algorithms are based on a pseudorandom number generator that produces numbers 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ that are uniformly distributed in the half-open interval [0, 1). These random variates 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ are then transformed via some algorithm to create a new random variate having the required probability distribution. With this source of uniform pseudo-randomness, realizations of any random variable can be generated.
+For example, suppose U has a uniform distribution between 0 and 1. To construct a random Bernoulli variable for some 0 < p < 1, define
+
+  
+    
+      
+        X
+        =
+        
+          
+            {
+            
+              
+                
+                  1
+                
+                
+                  
+                    if 
+                  
+                  U
+                  <
+                  p
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    if 
+                  
+                  U
+                  ≥
+                  p
+                  .
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle X={\begin{cases}1&{\text{if }}U<p\\0&{\text{if }}U\geq p.\end{cases}}}
+  
+
+We thus have
+
+  
+    
+      
+        P
+        (
+        X
+        =
+        1
+        )
+        =
+        P
+        (
+        U
+        <
+        p
+        )
+        =
+        p
+        ,
+        
+        P
+        (
+        X
+        =
+        0
+        )
+        =
+        P
+        (
+        U
+        ≥
+        p
+        )
+        =
+        1
+        −
+        p
+        .
+      
+    
+    {\displaystyle P(X=1)=P(U<p)=p,\quad P(X=0)=P(U\geq p)=1-p.}
+  
+
+Therefore, the random variable X has a Bernoulli distribution with parameter p.
+This method can be adapted to generate real-valued random variables with any distribution: for be any cumulative distribution function F, let Finv be the generalized left inverse of 
+  
+    
+      
+        F
+        ,
+      
+    
+    {\displaystyle F,}
+  
+ also known in this context as the quantile function or inverse distribution function:
+
+  
+    
+      
+        
+          F
+          
+            
+              i
+              n
+              v
+            
+          
+        
+        (
+        p
+        )
+        =
+        inf
+        {
+        x
+        ∈
+        
+          R
+        
+        :
+        p
+        ≤
+        F
+        (
+        x
+        )
+        }
+        .
+      
+    
+    {\displaystyle F^{\mathrm {inv} }(p)=\inf\{x\in \mathbb {R} :p\leq F(x)\}.}
+  
+
+Then, Finv(p) ≤ x if and only if p ≤ F(x). As a result, if U is uniformly distributed on [0, 1], then the cumulative distribution function of X = Finv(U) is F.
+For example, suppose we want to generate a random variable having an exponential distribution with parameter 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ — that is, with cumulative distribution function 
+  
+    
+      
+        F
+        :
+        x
+        ↦
+        1
+        −
+        
+          e
+          
+            −
+            λ
+            x
+          
+        
+        .
+      
+    
+    {\displaystyle F:x\mapsto 1-e^{-\lambda x}.}
+  
+
+  
+    
+      
+        
+          
+            
+              
+                F
+                (
+                x
+                )
+                =
+                u
+              
+              
+                
+                ⇔
+                1
+                −
+                
+                  e
+                  
+                    −
+                    λ
+                    x
+                  
+                
+                =
+                u
+              
+            
+            
+              
+              
+                
+                ⇔
+                
+                  e
+                  
+                    −
+                    λ
+                    x
+                  
+                
+                =
+                1
+                −
+                u
+              
+            
+            
+              
+              
+                
+                ⇔
+                −
+                λ
+                x
+                =
+                ln
+                ⁡
+                (
+                1
+                −
+                u
+                )
+              
+            
+            
+              
+              
+                
+                ⇔
+                x
+                =
+                
+                  
+                    
+                      −
+                      1
+                    
+                    λ
+                  
+                
+                ln
+                ⁡
+                (
+                1
+                −
+                u
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}F(x)=u&\Leftrightarrow 1-e^{-\lambda x}=u\\[2pt]&\Leftrightarrow e^{-\lambda x}=1-u\\[2pt]&\Leftrightarrow -\lambda x=\ln(1-u)\\[2pt]&\Leftrightarrow x={\frac {-1}{\lambda }}\ln(1-u)\end{aligned}}}
+  
+
+so 
+  
+    
+      
+        
+          F
+          
+            
+              i
+              n
+              v
+            
+          
+        
+        (
+        u
+        )
+        =
+        −
+        
+          
+            
+              1
+              λ
+            
+          
+        
+        ln
+        ⁡
+        (
+        1
+        −
+        u
+        )
+      
+    
+    {\displaystyle F^{\mathrm {inv} }(u)=-{\tfrac {1}{\lambda }}\ln(1-u)}
+  
+, and if U has a uniform distribution on [0, 1) then 
+  
+    
+      
+        X
+        =
+        −
+        
+          
+            
+              1
+              λ
+            
+          
+        
+        ln
+        ⁡
+        (
+        1
+        −
+        U
+        )
+      
+    
+    {\displaystyle X=-{\tfrac {1}{\lambda }}\ln(1-U)}
+  
+ has an exponential distribution with parameter 
+  
+    
+      
+        λ
+        .
+      
+    
+    {\displaystyle \lambda .}
+  
+
+Although from a theoretical point of view this method always works, in practice the inverse distribution function is unknown and/or cannot be computed efficiently. In this case, other methods (such as the Monte Carlo method) are used.
+
+Common probability distributions and their applications
+
+The concept of the probability distribution and the random variables which they describe underlies the mathematical discipline of probability theory, and the science of statistics. There is spread or variability in almost any value that can be measured in a population (e.g. height of people, durability of a metal, sales growth, traffic flow, etc.); almost all measurements are made with some intrinsic error; in physics, many processes are described probabilistically, from the kinetic properties of gases to the quantum mechanical description of fundamental particles. For these and many other reasons, simple numbers are often inadequate for describing a quantity, while probability distributions are often more appropriate.
+The following is a list of some of the most common probability distributions, grouped by the type of process that they are related to. For a more complete list, see list of probability distributions, which groups by the nature of the outcome being considered (discrete, absolutely continuous, multivariate, etc.)
+All of the univariate distributions below are singly peaked; that is, it is assumed that the values cluster around a single point. In practice, actually observed quantities may cluster around multiple values. Such quantities can be modeled using a mixture distribution.
+
+Linear growth (e.g. errors, offsets)
+Normal distribution (Gaussian distribution), for a single such quantity; the most commonly used absolutely continuous distribution
+
+Exponential growth (e.g. prices, incomes, populations)
+Log-normal distribution, for a single such quantity whose log is normally distributed
+Pareto distribution, for a single such quantity whose log is exponentially distributed; the prototypical power law distribution
+
+Uniformly distributed quantities
+Discrete uniform distribution, for a finite set of values (e.g. the outcome of a fair dice)
+Continuous uniform distribution, for absolutely continuously distributed values
+
+Bernoulli trials (yes/no events, with a given probability)
+Basic distributions:
+Bernoulli distribution, for the outcome of a single Bernoulli trial (e.g. success/failure, yes/no)
+Binomial distribution, for the number of "positive occurrences" (e.g. successes, yes votes, etc.) given a fixed total number of independent occurrences
+Negative binomial distribution, for binomial-type observations but where the quantity of interest is the number of failures before a given number of successes occurs
+Geometric distribution, for binomial-type observations but where the quantity of interest is the number of failures before the first success; a special case of the negative binomial distribution
+Related to sampling schemes over a finite population:
+Hypergeometric distribution, for the number of "positive occurrences" (e.g. successes, yes votes, etc.) given a fixed number of total occurrences, using sampling without replacement
+Beta-binomial distribution, for the number of "positive occurrences" (e.g. successes, yes votes, etc.) given a fixed number of total occurrences, sampling using a Pólya urn model (in some sense, the "opposite" of sampling without replacement)
+
+Categorical outcomes (events with K possible outcomes)
+Categorical distribution, for a single categorical outcome (e.g. yes/no/maybe in a survey); a generalization of the Bernoulli distribution
+Multinomial distribution, for the number of each type of categorical outcome, given a fixed number of total outcomes; a generalization of the binomial distribution
+Multivariate hypergeometric distribution, similar to the multinomial distribution, but using sampling without replacement; a generalization of the hypergeometric distribution
+
+Poisson process (events that occur independently with a given rate)
+Poisson distribution, for the number of occurrences of a Poisson-type event in a given period of time
+Exponential distribution, for the time before the next Poisson-type event occurs
+Gamma distribution, for the time before the next k Poisson-type events occur
+
+Absolute values of vectors with normally distributed components
+Rayleigh distribution, for the distribution of vector magnitudes with Gaussian distributed orthogonal components. Rayleigh distributions are found in RF signals with Gaussian real and imaginary components.
+Rice distribution, a generalization of the Rayleigh distributions for where there is a stationary background signal component. Found in Rician fading of radio signals due to multipath propagation and in MR images with noise corruption on non-zero NMR signals.
+
+Normally distributed quantities operated with sum of squares
+Chi-squared distribution, the distribution of a sum of squared standard normal variables; useful e.g. for inference regarding the sample variance of normally distributed samples (see chi-squared test)
+Student's t distribution, the distribution of the ratio of a standard normal variable and the square root of a scaled chi squared variable; useful for inference regarding the mean of normally distributed samples with unknown variance (see Student's t-test)
+F-distribution, the distribution of the ratio of two scaled chi squared variables; useful e.g. for inferences that involve comparing variances or involving R-squared (the squared correlation coefficient)
+
+As conjugate prior distributions in Bayesian inference
+
+Beta distribution, for a single probability (real number between 0 and 1); conjugate to the Bernoulli distribution and binomial distribution
+Gamma distribution, for a non-negative scaling parameter; conjugate to the rate parameter of a Poisson distribution or exponential distribution, the precision (inverse variance) of a normal distribution, etc.
+Dirichlet distribution, for a vector of probabilities that must sum to 1; conjugate to the categorical distribution and multinomial distribution; generalization of the beta distribution
+Wishart distribution, for a symmetric non-negative definite matrix; conjugate to the inverse of the covariance matrix of a multivariate normal distribution; generalization of the gamma distribution
+
+Some specialized applications of probability distributions
+The cache language models and other statistical language models used in natural language processing to assign probabilities to the occurrence of particular words and word sequences do so by means of probability distributions.
+In quantum mechanics, the probability density of finding the particle at a given point is proportional to the square of the magnitude of the particle's wavefunction at that point (see Born rule). Therefore, the probability distribution function of the position of a particle is described by 
+  
+    
+      
+        
+          P
+          
+            a
+            ≤
+            x
+            ≤
+            b
+          
+        
+        (
+        t
+        )
+        =
+        
+          ∫
+          
+            a
+          
+          
+            b
+          
+        
+        d
+        x
+        
+        
+          |
+        
+        Ψ
+        (
+        x
+        ,
+        t
+        )
+        
+          
+            |
+          
+          
+            2
+          
+        
+      
+    
+    {\textstyle P_{a\leq x\leq b}(t)=\int _{a}^{b}dx\,|\Psi (x,t)|^{2}}
+  
+, probability that the particle's position x will be in the interval a ≤ x ≤ b in dimension one, and a similar triple integral in dimension three. This is a key principle of quantum mechanics.
+Probabilistic load flow in power-flow study explains the uncertainties of input variables as probability distribution and provides the power flow calculation also in term of probability distribution.
+Prediction of natural phenomena occurrences based on previous frequency distributions such as tropical cyclones, hail, time in between events, etc.
+
+Fitting
+
+Convergence
+A fundamental concept in probability theory is the convergence of sequences of probability distributions. A sequence of probability distributions 
+  
+    
+      
+        (
+        
+          P
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle (P_{n})}
+  
+ is said to converge weakly (or in distribution) to a probability distribution 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ if
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          P
+          
+            n
+          
+        
+        (
+        A
+        )
+        =
+        P
+        (
+        A
+        )
+      
+    
+    {\displaystyle \lim _{n\to \infty }P_{n}(A)=P(A)}
+  
+
+for every set 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ whose boundary has 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+-probability 0.
+Equivalently, using cumulative distribution functions, the sequence 
+  
+    
+      
+        
+          F
+          
+            n
+          
+        
+      
+    
+    {\displaystyle F_{n}}
+  
+ converges to 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ if
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          F
+          
+            n
+          
+        
+        (
+        x
+        )
+        =
+        F
+        (
+        x
+        )
+      
+    
+    {\displaystyle \lim _{n\to \infty }F_{n}(x)=F(x)}
+  
+
+for every 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ at which 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is continuous.
+This concept is essential for the Central limit theorem, which states that the probability distribution of the standardized sum of independent and identically distributed random variables converges to the standard normal distribution, regardless of the underlying distribution of the individual variables.

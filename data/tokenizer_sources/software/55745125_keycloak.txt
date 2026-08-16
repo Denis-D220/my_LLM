@@ -1,0 +1,12 @@
+Keycloak is an open-source software product to allow single sign-on with identity and access management aimed at modern applications and services. Until April 2023, this WildFly community project was under the stewardship of Red Hat, who use it as the upstream project for their Red Hat build of Keycloak. In April 2023, Keycloak was donated to the CNCF and joined the foundation as an incubating project. 
+Keycloak supports various protocols such as OpenID, OAuth version 2.0 and SAML and provides features such as user management, two-factor authentication, permissions and roles management, creating token services, etc. It is possible to integrate Keycloak with other technologies, such as front-end frameworks like React or Angular, as well as containerization solutions like Docker.
+
+History
+The first production release of Keycloak was in September 2014, with development having started about a year earlier.  In 2016, Red Hat switched the RH SSO product from being based on the PicketLink framework to being based on the Keycloak upstream Project.  This followed a merging of the PicketLink codebase into Keycloak.
+To some extent Keycloak can now also be considered a replacement of the Red Hat JBoss SSO open source product which was previously superseded by PicketLink.  As of March 2018, JBoss.org is redirecting the old jbosssso subsite to the Keycloak website.  The JBoss name is a registered trademark and Red Hat moved its upstream open source projects names to avoid using JBoss, JBoss AS to Wildfly being a more commonly recognized example.
+
+Components
+There are two main components of Keycloak:
+
+Keycloak server, including the API and graphical interface.
+Keycloak client. Previously Keycloak included a set of 'adapter' libraries, but those were discontinued in 2022.

@@ -1,0 +1,2690 @@
+In mathematics, a quadratic equation (from Latin  quadratus 'square') is an equation that can be rearranged in standard form as
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        0
+        
+        ,
+      
+    
+    {\displaystyle ax^{2}+bx+c=0\,,}
+  
+
+where the variable ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ represents an unknown number, and a, b, and c represent known numbers, where a ≠ 0. (If a = 0 and b ≠ 0 then the equation is linear, not quadratic.) The numbers a, b, and c are the coefficients of the equation and may be distinguished by calling them the quadratic coefficient, the linear coefficient and the constant coefficient or free term, respectively.
+The values of ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ that satisfy the equation are called solutions of the equation, and roots or zeros of the quadratic function on its left-hand side. A quadratic equation has at most two solutions. If there is only one solution, one says that it is a double root. If all the coefficients are real numbers, there are either two real solutions, or a real double root, or two complex solutions that are complex conjugates of each other. A quadratic equation always has two roots, if complex roots are included and a double root is counted for two. A quadratic equation can be factored into an equivalent equation 
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        a
+        (
+        x
+        −
+        r
+        )
+        (
+        x
+        −
+        s
+        )
+        =
+        0
+      
+    
+    {\displaystyle ax^{2}+bx+c=a(x-r)(x-s)=0}
+  
+
+where r and s are the solutions for ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠. 
+The quadratic formula
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              −
+              b
+              ±
+              
+                
+                  
+                    b
+                    
+                      2
+                    
+                  
+                  −
+                  4
+                  a
+                  c
+                
+              
+            
+            
+              2
+              a
+            
+          
+        
+      
+    
+    {\displaystyle x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}}
+  
+
+expresses the solutions in terms of a, b, and c. Completing the square is one of several ways for deriving the formula.
+Solutions to problems that can be expressed in terms of quadratic equations were known as early as 2000 BC.
+The quadratic equation contains only powers of ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ that are non-negative integers, and therefore it is a polynomial equation. In particular, it is a second-degree polynomial equation, since the greatest power is two.
+
+Solving the quadratic equation
+
+A quadratic equation whose coefficients are real numbers can have either zero, one, or two distinct real-valued solutions, also called roots. When there is only one distinct root, it can be interpreted as two roots with the same value, called a double root. When there are no real roots, the coefficients can be considered as complex numbers with zero imaginary part, and the quadratic equation still has two complex-valued roots, complex conjugates of each-other with a non-zero imaginary part. A quadratic equation whose coefficients are arbitrary complex numbers always has two complex-valued roots which may or may not be distinct.
+The solutions of a quadratic equation can be found by several alternative methods.
+
+Factoring by inspection
+It may be possible to express a quadratic equation ax2 + bx + c = 0 as a product (px + q)(rx + s) = 0. In some cases, it is possible, by simple inspection, to determine values of p, q, r, and s that make the two forms equivalent to one another. If the quadratic equation is written in the second form, then the "Zero Factor Property" states that the quadratic equation is satisfied if px + q = 0 or rx + s = 0. Solving these two linear equations provides the roots of the quadratic.
+For most students, factoring by inspection is the first method of solving quadratic equations to which they are exposed. If one is given a quadratic equation in the form x2 + bx + c = 0, the sought factorization has the form (x + q)(x + s), and one has to find two numbers q and s that add up to  b and whose product is c (this is sometimes called "Vieta's rule" and is related to Vieta's formulas). As an example, x2 + 5x + 6 factors as (x + 3)(x + 2). The more general case where a does not equal 1 can require a considerable effort in trial and error guess-and-check, assuming that it can be factored at all by inspection.
+Except for special cases such as where b = 0 or c = 0, factoring by inspection only works for quadratic equations that have rational roots. This means that the great majority of quadratic equations that arise in practical applications cannot be solved by factoring by inspection.
+
+Completing the square
+
+The process of completing the square makes use of the algebraic identity
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        +
+        2
+        h
+        x
+        +
+        
+          h
+          
+            2
+          
+        
+        =
+        (
+        x
+        +
+        h
+        
+          )
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle x^{2}+2hx+h^{2}=(x+h)^{2},}
+  
+
+which represents a well-defined algorithm that can be used to solve any quadratic equation. Starting with a quadratic equation in standard form, ax2 + bx + c = 0 
+
+Divide each side by a, the coefficient of the squared term.
+Subtract the constant term c/a from both sides.
+Add the square of one-half of b/a, the coefficient of x, to both sides. This "completes the square", converting the left side into a perfect square.
+Write the left side as a square and simplify the right side if necessary.
+Produce two linear equations by equating the square root of the left side with the positive and negative square roots of the right side.
+Solve each of the two linear equations.
+We illustrate use of this algorithm by solving 2x2 + 4x − 4 = 0
+
+  
+    
+      
+        2
+        
+          x
+          
+            2
+          
+        
+        +
+        4
+        x
+        −
+        4
+        =
+        0
+      
+    
+    {\displaystyle 2x^{2}+4x-4=0}
+  
+
+  
+    
+      
+         
+        
+          x
+          
+            2
+          
+        
+        +
+        2
+        x
+        −
+        2
+        =
+        0
+      
+    
+    {\displaystyle \ x^{2}+2x-2=0}
+  
+
+  
+    
+      
+         
+        
+          x
+          
+            2
+          
+        
+        +
+        2
+        x
+        =
+        2
+      
+    
+    {\displaystyle \ x^{2}+2x=2}
+  
+
+  
+    
+      
+         
+        
+          x
+          
+            2
+          
+        
+        +
+        2
+        x
+        +
+        1
+        =
+        2
+        +
+        1
+      
+    
+    {\displaystyle \ x^{2}+2x+1=2+1}
+  
+
+  
+    
+      
+        
+          
+            (
+            
+              x
+              +
+              1
+            
+            )
+          
+          
+            2
+          
+        
+        =
+        3
+      
+    
+    {\displaystyle \left(x+1\right)^{2}=3}
+  
+
+  
+    
+      
+         
+        x
+        +
+        1
+        =
+        ±
+        
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \ x+1=\pm {\sqrt {3}}}
+  
+
+  
+    
+      
+         
+        x
+        =
+        −
+        1
+        ±
+        
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \ x=-1\pm {\sqrt {3}}}
+  
+
+The plus–minus symbol "±" indicates that both 
+  
+    
+      
+        x
+        =
+        −
+        1
+        +
+        
+          
+            3
+          
+        
+      
+    
+    {\textstyle x=-1+{\sqrt {3}}}
+  
+ and 
+  
+    
+      
+        x
+        =
+        −
+        1
+        −
+        
+          
+            3
+          
+        
+      
+    
+    {\textstyle x=-1-{\sqrt {3}}}
+  
+ are solutions of the quadratic equation.
+
+Quadratic formula and its derivation
+
+Completing the square can be used to derive a general formula for solving quadratic equations, called the quadratic formula. The mathematical proof will now be briefly summarized. It can easily be seen, by polynomial expansion, that the following equation is equivalent to the quadratic equation:
+
+  
+    
+      
+        
+          
+            (
+            
+              x
+              +
+              
+                
+                  b
+                  
+                    2
+                    a
+                  
+                
+              
+            
+            )
+          
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                b
+                
+                  2
+                
+              
+              −
+              4
+              a
+              c
+            
+            
+              4
+              
+                a
+                
+                  2
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \left(x+{\frac {b}{2a}}\right)^{2}={\frac {b^{2}-4ac}{4a^{2}}}.}
+  
+
+Taking the square root of both sides, and isolating x, gives:
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              −
+              b
+              ±
+              
+                
+                  
+                    b
+                    
+                      2
+                    
+                  
+                  −
+                  4
+                  a
+                  c
+                
+              
+            
+            
+              2
+              a
+            
+          
+        
+        .
+      
+    
+    {\displaystyle x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}.}
+  
+
+Some sources, particularly older ones, use alternative parameterizations of the quadratic equation such as ax2 + 2bx + c = 0 or ax2 − 2bx + c = 0 , where b has a magnitude one half of the more common one, possibly with opposite sign. These result in slightly different forms for the solution, but are otherwise equivalent.
+A number of alternative derivations can be found in the literature. These proofs are simpler than the standard completing the square method, represent interesting applications of other frequently used techniques in algebra, or offer insight into other areas of mathematics.
+A lesser known quadratic formula, as used in Muller's method, provides the same roots via the equation
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              2
+              c
+            
+            
+              −
+              b
+              ±
+              
+                
+                  
+                    b
+                    
+                      2
+                    
+                  
+                  −
+                  4
+                  a
+                  c
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle x={\frac {2c}{-b\pm {\sqrt {b^{2}-4ac}}}}.}
+  
+ 
+This can be deduced from the standard quadratic formula by Vieta's formulas, which assert that the product of the roots is c/a. It also follows from dividing the quadratic equation by 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle x^{2}}
+  
+ giving 
+  
+    
+      
+        c
+        
+          x
+          
+            −
+            2
+          
+        
+        +
+        b
+        
+          x
+          
+            −
+            1
+          
+        
+        +
+        a
+        =
+        0
+        ,
+      
+    
+    {\displaystyle cx^{-2}+bx^{-1}+a=0,}
+  
+ solving this for 
+  
+    
+      
+        
+          x
+          
+            −
+            1
+          
+        
+        ,
+      
+    
+    {\displaystyle x^{-1},}
+  
+ and then inverting.
+One property of this form is that it yields one valid root when a = 0, while the other root contains division by zero, because when a = 0, the quadratic equation becomes a linear equation, which has one root. By contrast, in this case, the more common formula has a division by zero for one root and an indeterminate form 0/0 for the other root. On the other hand, when c = 0, the more common formula yields two correct roots whereas this form yields the zero root and an indeterminate form 0/0.
+When neither a nor c is zero, the equality between the standard quadratic formula and Muller's method,
+
+  
+    
+      
+        
+          
+            
+              2
+              c
+            
+            
+              −
+              b
+              −
+              
+                
+                  
+                    b
+                    
+                      2
+                    
+                  
+                  −
+                  4
+                  a
+                  c
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              −
+              b
+              +
+              
+                
+                  
+                    b
+                    
+                      2
+                    
+                  
+                  −
+                  4
+                  a
+                  c
+                
+              
+            
+            
+              2
+              a
+            
+          
+        
+        
+        ,
+      
+    
+    {\displaystyle {\frac {2c}{-b-{\sqrt {b^{2}-4ac}}}}={\frac {-b+{\sqrt {b^{2}-4ac}}}{2a}}\,,}
+  
+
+can be verified by cross multiplication, and similarly for the other choice of signs.
+
+Reduced quadratic equation
+It is sometimes convenient to reduce a quadratic equation so that its leading coefficient is one. This is done by dividing both sides by a, which is always possible since a is non-zero. This produces the reduced quadratic equation:
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        +
+        p
+        x
+        +
+        q
+        =
+        0
+        ,
+      
+    
+    {\displaystyle x^{2}+px+q=0,}
+  
+
+where p = b/a and q = c/a. This monic polynomial equation has the same solutions as the original.
+The quadratic formula for the solutions of the reduced quadratic equation, written in terms of its coefficients, is
+
+  
+    
+      
+        x
+        =
+        −
+        
+          
+            p
+            2
+          
+        
+        ±
+        
+          
+            
+              
+                (
+                
+                  
+                    p
+                    2
+                  
+                
+                )
+              
+              
+                2
+              
+            
+            −
+            q
+          
+        
+        
+        .
+      
+    
+    {\displaystyle x=-{\frac {p}{2}}\pm {\sqrt {\left({\frac {p}{2}}\right)^{2}-q}}\,.}
+  
+
+Discriminant
+
+In the quadratic formula, the expression underneath the square root sign is called the discriminant of the quadratic equation, and is often represented using an upper case D or an upper case Greek delta:
+
+  
+    
+      
+        Δ
+        =
+        
+          b
+          
+            2
+          
+        
+        −
+        4
+        a
+        c
+        .
+      
+    
+    {\displaystyle \Delta =b^{2}-4ac.}
+  
+
+A quadratic equation with real coefficients can have either one or two distinct real roots, or two distinct complex roots. In this case the discriminant determines the number and nature of the roots. There are three cases:
+
+If the discriminant is positive, then there are two distinct roots 
+  
+    
+      
+        
+          
+            
+              −
+              b
+              +
+              
+                
+                  Δ
+                
+              
+            
+            
+              2
+              a
+            
+          
+        
+        
+        
+          and
+        
+        
+        
+          
+            
+              −
+              b
+              −
+              
+                
+                  Δ
+                
+              
+            
+            
+              2
+              a
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {-b+{\sqrt {\Delta }}}{2a}}\quad {\text{and}}\quad {\frac {-b-{\sqrt {\Delta }}}{2a}},}
+  
+ both of which are real numbers. For quadratic equations with rational coefficients, if the discriminant is a square number, then the roots are rational—in other cases they may be quadratic irrationals.
+If the discriminant is zero, then there is exactly one real root 
+  
+    
+      
+        −
+        
+          
+            b
+            
+              2
+              a
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle -{\frac {b}{2a}},}
+  
+ sometimes called a repeated or double root or two equal roots.
+If the discriminant is negative, then there are no real roots. Rather, there are two distinct (non-real) complex roots
+  
+    
+      
+        −
+        
+          
+            b
+            
+              2
+              a
+            
+          
+        
+        +
+        i
+        
+          
+            
+              −
+              Δ
+            
+            
+              2
+              a
+            
+          
+        
+        
+        
+          and
+        
+        
+        −
+        
+          
+            b
+            
+              2
+              a
+            
+          
+        
+        −
+        i
+        
+          
+            
+              −
+              Δ
+            
+            
+              2
+              a
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle -{\frac {b}{2a}}+i{\frac {\sqrt {-\Delta }}{2a}}\quad {\text{and}}\quad -{\frac {b}{2a}}-i{\frac {\sqrt {-\Delta }}{2a}},}
+  
+ which are complex conjugates of each other. In these expressions i is the imaginary unit.
+Thus the roots are distinct if and only if the discriminant is non-zero, and the roots are real if and only if the discriminant is non-negative.
+
+Geometric interpretation
+
+The function f(x) = ax2 + bx + c is a quadratic function. The graph of any quadratic function has the same general shape, which is called a parabola. The location and size of the parabola, and how it opens, depend on the values of a, b, and c. If a > 0, the parabola has a minimum point and opens upward. If a < 0, the parabola has a maximum point and opens downward. The extreme point of the parabola, whether minimum or maximum, corresponds to its vertex. The x-coordinate of the vertex will be located at 
+  
+    
+      
+        
+          x
+          =
+          
+            
+              
+                
+                  −
+                  b
+                
+                
+                  2
+                  a
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \scriptstyle x={\tfrac {-b}{2a}}}
+  
+, and the y-coordinate of the vertex may be found by substituting this x-value into the function. The y-intercept is located at the point (0, c).
+The solutions of the quadratic equation ax2 + bx + c = 0 correspond to the roots of the function f(x) = ax2 + bx + c, since they are the values of x for which f(x) = 0. If a, b, and c are real numbers and the domain of f is the set of real numbers, then the roots of f are exactly the x-coordinates of the points where the graph touches the x-axis. If the discriminant is positive, the graph touches the x-axis at two points; if zero, the graph touches at one point; and if negative, the graph does not touch the x-axis.
+
+Quadratic factorization
+The term
+
+  
+    
+      
+        x
+        −
+        r
+      
+    
+    {\displaystyle x-r}
+  
+
+is a factor of the polynomial
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+      
+    
+    {\displaystyle ax^{2}+bx+c}
+  
+
+if and only if r is a root of the quadratic equation
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        0.
+      
+    
+    {\displaystyle ax^{2}+bx+c=0.}
+  
+
+It follows from the quadratic formula that
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        a
+        
+          (
+          
+            x
+            −
+            
+              
+                
+                  −
+                  b
+                  +
+                  
+                    
+                      
+                        b
+                        
+                          2
+                        
+                      
+                      −
+                      4
+                      a
+                      c
+                    
+                  
+                
+                
+                  2
+                  a
+                
+              
+            
+          
+          )
+        
+        
+          (
+          
+            x
+            −
+            
+              
+                
+                  −
+                  b
+                  −
+                  
+                    
+                      
+                        b
+                        
+                          2
+                        
+                      
+                      −
+                      4
+                      a
+                      c
+                    
+                  
+                
+                
+                  2
+                  a
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle ax^{2}+bx+c=a\left(x-{\frac {-b+{\sqrt {b^{2}-4ac}}}{2a}}\right)\left(x-{\frac {-b-{\sqrt {b^{2}-4ac}}}{2a}}\right).}
+  
+
+In the special case b2 = 4ac where the quadratic has only one distinct root (i.e. the discriminant is zero), the quadratic polynomial can be factored as
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        a
+        
+          
+            (
+            
+              x
+              +
+              
+                
+                  b
+                  
+                    2
+                    a
+                  
+                
+              
+            
+            )
+          
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle ax^{2}+bx+c=a\left(x+{\frac {b}{2a}}\right)^{2}.}
+  
+
+Graphical solution
+
+The solutions of the quadratic equation 
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        0
+      
+    
+    {\displaystyle ax^{2}+bx+c=0}
+  
+
+may be obtained from the graph of the quadratic function
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        ,
+      
+    
+    {\displaystyle f(x)=ax^{2}+bx+c,}
+  
+
+which is a parabola.
+If the parabola intersects the x-axis in two points, there are two real roots, which are the x-coordinates of these two points (also called x-intercept).
+If the parabola is tangent to the x-axis, there is a double root, which is the x-coordinate of the contact point between the graph and parabola.
+If the parabola does not intersect the x-axis, there are two complex conjugate roots. Although these roots cannot be visualized on the graph, their real and imaginary parts can be.
+Let h and k be respectively the x-coordinate and the y-coordinate of the vertex of the parabola (that is the point with maximal or minimal y-coordinate. The quadratic function may be rewritten
+
+  
+    
+      
+        y
+        =
+        a
+        (
+        x
+        −
+        h
+        
+          )
+          
+            2
+          
+        
+        +
+        k
+        .
+      
+    
+    {\displaystyle y=a(x-h)^{2}+k.}
+  
+
+Let d be the distance between the point of y-coordinate 2k on the axis of the parabola, and a point on the parabola with the same y-coordinate (see the figure; there are two such points, which give the same distance, because of the symmetry of the parabola). Then the real part of the roots is h, and their imaginary part are ±d. That is, the roots are 
+
+  
+    
+      
+        h
+        +
+        i
+        d
+        
+        
+          and
+        
+        
+        h
+        −
+        i
+        d
+        ,
+      
+    
+    {\displaystyle h+id\quad {\text{and}}\quad h-id,}
+  
+
+or in the case of the example of the figure
+
+  
+    
+      
+        5
+        +
+        3
+        i
+        
+        
+          and
+        
+        
+        5
+        −
+        3
+        i
+        .
+      
+    
+    {\displaystyle 5+3i\quad {\text{and}}\quad 5-3i.}
+  
+
+Avoiding loss of significance
+Although the quadratic formula provides an exact solution, the result is not exact if real numbers are approximated during the computation, as usual in numerical analysis, where real numbers are approximated by floating point numbers (called "reals" in many programming languages). In this context, the quadratic formula is not completely stable.
+This occurs when the roots have different order of magnitude, or, equivalently, when b2 and b2 − 4ac are close in magnitude. In this case, the subtraction of two nearly equal numbers will cause loss of significance or catastrophic cancellation in the smaller root. To avoid this, the root that is smaller in magnitude, r, can be computed as 
+  
+    
+      
+        (
+        c
+        
+          /
+        
+        a
+        )
+        
+          /
+        
+        R
+      
+    
+    {\displaystyle (c/a)/R}
+  
+ where R is the root that is bigger in magnitude. This is equivalent to using the formula
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              −
+              2
+              c
+            
+            
+              b
+              ±
+              
+                
+                  
+                    b
+                    
+                      2
+                    
+                  
+                  −
+                  4
+                  a
+                  c
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle x={\frac {-2c}{b\pm {\sqrt {b^{2}-4ac}}}}}
+  
+
+using the plus sign if 
+  
+    
+      
+        b
+        >
+        0
+      
+    
+    {\displaystyle b>0}
+  
+ and the minus sign if 
+  
+    
+      
+        b
+        <
+        0.
+      
+    
+    {\displaystyle b<0.}
+  
+
+A second form of cancellation can occur between the terms b2 and 4ac of the discriminant, that is when the two roots are very close. This can lead to loss of up to half of correct significant figures in the roots.
+
+Examples and applications
+
+The golden ratio is found as the positive solution of the quadratic equation 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        −
+        x
+        −
+        1
+        =
+        0.
+      
+    
+    {\displaystyle x^{2}-x-1=0.}
+  
+
+The equations of the circle and the other conic sections—ellipses, parabolas, and hyperbolas—are quadratic equations in two variables.
+Given the cosine or sine of an angle, finding the cosine or sine of the angle that is half as large involves solving a quadratic equation.
+The process of simplifying expressions involving the square root of an expression involving the square root of another expression involves finding the two solutions of a quadratic equation.
+Descartes' theorem states that for every four kissing (mutually tangent) circles, their radii satisfy a particular quadratic equation.
+The equation given by Fuss' theorem, giving the relation among the radius of a bicentric quadrilateral's inscribed circle, the radius of its circumscribed circle, and the distance between the centers of those circles, can be expressed as a quadratic equation for which the distance between the two circles' centers in terms of their radii is one of the solutions. The other solution of the same equation in terms of the relevant radii gives the distance between the circumscribed circle's center and the center of the excircle of an ex-tangential quadrilateral.
+Critical points of a cubic function and inflection points of a quartic function are found by solving a quadratic equation.
+In physics, for motion with constant acceleration 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+, the displacement or position 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ of a moving body can be expressed as a quadratic function of time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ given the initial position 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+    {\displaystyle x_{0}}
+  
+ and initial velocity 
+  
+    
+      
+        
+          v
+          
+            0
+          
+        
+      
+    
+    {\displaystyle v_{0}}
+  
+: 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+        +
+        
+          v
+          
+            0
+          
+        
+        t
+        +
+        
+          
+            1
+            2
+          
+        
+        a
+        
+          t
+          
+            2
+          
+        
+      
+    
+    {\textstyle x=x_{0}+v_{0}t+{\frac {1}{2}}at^{2}}
+  
+.
+In chemistry, the pH of a solution of weak acid can be calculated from the negative base-10 logarithm of the positive root of a quadratic equation in terms of the acidity constant and the analytical concentration of the acid.
+
+History
+Babylonian mathematicians, as early as 2000 BC (displayed on Old Babylonian clay tablets) could solve problems relating the areas and sides of rectangles. There is evidence dating this algorithm as far back as the Third Dynasty of Ur. In modern notation, the problems typically involved solving a pair of simultaneous equations of the form:
+
+  
+    
+      
+        x
+        +
+        y
+        =
+        p
+        ,
+         
+         
+        x
+        y
+        =
+        q
+        ,
+      
+    
+    {\displaystyle x+y=p,\ \ xy=q,}
+  
+
+which is equivalent to the statement that x and y are the roots of the equation:
+
+  
+    
+      
+        
+          z
+          
+            2
+          
+        
+        +
+        q
+        =
+        p
+        z
+        .
+      
+    
+    {\displaystyle z^{2}+q=pz.}
+  
+
+The steps given by Babylonian scribes for solving the above rectangle problem, in terms of x and y, were as follows:
+
+Compute half of p.
+Square the result.
+Subtract q.
+Find the (positive) square root using a table of squares.
+Add together the results of steps (1) and (4) to give x.
+In modern notation this means calculating 
+  
+    
+      
+        x
+        =
+        
+          
+            p
+            2
+          
+        
+        +
+        
+          
+            
+              
+                (
+                
+                  
+                    p
+                    2
+                  
+                
+                )
+              
+              
+                2
+              
+            
+            −
+            q
+          
+        
+      
+    
+    {\displaystyle x={\frac {p}{2}}+{\sqrt {\left({\frac {p}{2}}\right)^{2}-q}}}
+  
+, which is equivalent to the modern day quadratic formula for the larger real root (if any) 
+  
+    
+      
+        x
+        =
+        
+          
+            
+              −
+              b
+              +
+              
+                
+                  
+                    b
+                    
+                      2
+                    
+                  
+                  −
+                  4
+                  a
+                  c
+                
+              
+            
+            
+              2
+              a
+            
+          
+        
+      
+    
+    {\displaystyle x={\frac {-b+{\sqrt {b^{2}-4ac}}}{2a}}}
+  
+ with a = 1, b = −p, and c = q.
+Geometric methods were used to solve quadratic equations in Babylonia, Egypt, Greece, China, and India. The Egyptian Berlin Papyrus, dating back to the Middle Kingdom (2050 BC to 1650 BC), contains the solution to a two-term quadratic equation. Babylonian mathematicians from circa 400 BC and Chinese mathematicians from circa 200 BC used geometric methods of dissection to solve quadratic equations with positive roots. Rules for quadratic equations were given in The Nine Chapters on the Mathematical Art, a Chinese treatise on mathematics. These early geometric methods do not appear to have had a general formula. Euclid, the Greek mathematician, produced a more abstract geometrical method around 300 BC. With a purely geometric approach Pythagoras and Euclid created a general procedure to find solutions of the quadratic equation. In his work Arithmetica, the Greek mathematician Diophantus solved the quadratic equation, but giving only one root, even when both roots were positive.
+In 628 AD, Brahmagupta, an Indian mathematician, gave in his book Brāhmasphuṭasiddhānta the first explicit (although still not completely general) solution of the quadratic equation ax2 + bx = c as follows: "To the absolute number multiplied by four times the [coefficient of the] square, add the square of the [coefficient of the] middle term; the square root of the same, less the [coefficient of the] middle term, being divided by twice the [coefficient of the] square is the value." This is equivalent to
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              
+                
+                  4
+                  a
+                  c
+                  +
+                  
+                    b
+                    
+                      2
+                    
+                  
+                
+              
+              −
+              b
+            
+            
+              2
+              a
+            
+          
+        
+        .
+      
+    
+    {\displaystyle x={\frac {{\sqrt {4ac+b^{2}}}-b}{2a}}.}
+  
+
+The Bakhshali Manuscript written in India in the 7th century AD contained an algebraic formula for solving quadratic equations, as well as linear indeterminate equations (originally of type ax/c = y).
+Muhammad ibn Musa al-Khwarizmi (9th century) developed a set of formulas that worked for positive solutions. Al-Khwarizmi goes further in providing a full solution to the general quadratic equation, accepting one or two numerical answers for every quadratic equation, while providing geometric proofs in the process. He also described the method of completing the square and recognized that the discriminant must be positive, which was proven by his contemporary 'Abd al-Hamīd ibn Turk (Central Asia, 9th century) who gave geometric figures to prove that if the discriminant is negative, a quadratic equation has no solution. While al-Khwarizmi himself did not accept negative solutions, later Islamic mathematicians that succeeded him accepted negative solutions, as well as irrational numbers as solutions. Abū Kāmil Shujā ibn Aslam (Egypt, 10th century) in particular was the first to accept irrational numbers (often in the form of a square root, cube root or fourth root) as solutions to quadratic equations or as coefficients in an equation. The 9th century Indian mathematician Sridhara wrote down rules for solving quadratic equations.
+The Jewish mathematician Abraham bar Hiyya Ha-Nasi (12th century, Spain) authored the first European book to include the full solution to the general quadratic equation. His solution was largely based on Al-Khwarizmi's work. The writing of the Chinese mathematician Yang Hui (1238–1298 AD) is the first known one in which quadratic equations with negative coefficients of 'x' appear, although he attributes this to the earlier Liu Yi. By 1545 Gerolamo Cardano compiled the works related to the quadratic equations. The quadratic formula covering all cases was first obtained by Simon Stevin in 1594. In 1637 René Descartes published La Géométrie containing the quadratic formula in the form we know today.
+
+Advanced topics
+
+Alternative methods of root calculation
+
+Vieta's formulas
+
+Vieta's formulas (named after François Viète) are the relations
+
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        +
+        
+          x
+          
+            2
+          
+        
+        =
+        −
+        
+          
+            b
+            a
+          
+        
+        ,
+        
+        
+          x
+          
+            1
+          
+        
+        
+          x
+          
+            2
+          
+        
+        =
+        
+          
+            c
+            a
+          
+        
+      
+    
+    {\displaystyle x_{1}+x_{2}=-{\frac {b}{a}},\quad x_{1}x_{2}={\frac {c}{a}}}
+  
+ 
+between the roots of a quadratic polynomial and its coefficients. They result from comparing term by term the relation
+
+  
+    
+      
+        
+          (
+          
+            x
+            −
+            
+              x
+              
+                1
+              
+            
+          
+          )
+        
+        
+          (
+          
+            x
+            −
+            
+              x
+              
+                2
+              
+            
+          
+          )
+        
+        =
+        
+          x
+          
+            2
+          
+        
+        −
+        
+          (
+          
+            
+              x
+              
+                1
+              
+            
+            +
+            
+              x
+              
+                2
+              
+            
+          
+          )
+        
+        x
+        +
+        
+          x
+          
+            1
+          
+        
+        
+          x
+          
+            2
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle \left(x-x_{1}\right)\left(x-x_{2}\right)=x^{2}-\left(x_{1}+x_{2}\right)x+x_{1}x_{2}=0}
+  
+
+with the equation
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          
+            b
+            a
+          
+        
+        x
+        +
+        
+          
+            c
+            a
+          
+        
+        =
+        0.
+      
+    
+    {\displaystyle x^{2}+{\frac {b}{a}}x+{\frac {c}{a}}=0.}
+  
+
+The first Vieta's formula is useful for graphing a quadratic function. Since the graph is symmetric with respect to a vertical line through the vertex, the vertex's x-coordinate is located at the average of the roots (or intercepts). Thus the x-coordinate of the vertex is
+
+  
+    
+      
+        
+          x
+          
+            V
+          
+        
+        =
+        
+          
+            
+              
+                x
+                
+                  1
+                
+              
+              +
+              
+                x
+                
+                  2
+                
+              
+            
+            2
+          
+        
+        =
+        −
+        
+          
+            b
+            
+              2
+              a
+            
+          
+        
+        .
+      
+    
+    {\displaystyle x_{V}={\frac {x_{1}+x_{2}}{2}}=-{\frac {b}{2a}}.}
+  
+
+The y-coordinate can be obtained by substituting the above result into the given quadratic equation, giving
+
+  
+    
+      
+        
+          y
+          
+            V
+          
+        
+        =
+        −
+        
+          
+            
+              b
+              
+                2
+              
+            
+            
+              4
+              a
+            
+          
+        
+        +
+        c
+        =
+        −
+        
+          
+            
+              
+                b
+                
+                  2
+                
+              
+              −
+              4
+              a
+              c
+            
+            
+              4
+              a
+            
+          
+        
+        .
+      
+    
+    {\displaystyle y_{V}=-{\frac {b^{2}}{4a}}+c=-{\frac {b^{2}-4ac}{4a}}.}
+  
+
+Also, these formulas for the vertex can be deduced directly from the formula (see Completing the square)
+
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        a
+        
+          
+            (
+            
+              x
+              +
+              
+                
+                  b
+                  
+                    2
+                    a
+                  
+                
+              
+            
+            )
+          
+          
+            2
+          
+        
+        −
+        
+          
+            
+              
+                b
+                
+                  2
+                
+              
+              −
+              4
+              a
+              c
+            
+            
+              4
+              a
+            
+          
+        
+        .
+      
+    
+    {\displaystyle ax^{2}+bx+c=a\left(x+{\frac {b}{2a}}\right)^{2}-{\frac {b^{2}-4ac}{4a}}.}
+  
+
+For numerical computation, Vieta's formulas provide a useful method for finding the roots of a quadratic equation in the case where one root is much smaller than the other. If |x2| << |x1|, then x1 + x2 ≈ x1, and we have the estimate:
+
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ≈
+        −
+        
+          
+            b
+            a
+          
+        
+        .
+      
+    
+    {\displaystyle x_{1}\approx -{\frac {b}{a}}.}
+  
+
+The second Vieta's formula then provides:
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        =
+        
+          
+            c
+            
+              a
+              
+                x
+                
+                  1
+                
+              
+            
+          
+        
+        ≈
+        −
+        
+          
+            c
+            b
+          
+        
+        .
+      
+    
+    {\displaystyle x_{2}={\frac {c}{ax_{1}}}\approx -{\frac {c}{b}}.}
+  
+
+These formulas are much easier to evaluate than the quadratic formula under the condition of one large and one small root, because the quadratic formula evaluates the small root as the difference of two very nearly equal numbers (the case of large b), which causes round-off error in a numerical evaluation. The figure shows the difference between (i) a direct evaluation using the quadratic formula (accurate when the roots are near each other in value) and (ii) an evaluation based upon the above approximation of Vieta's formulas (accurate when the roots are widely spaced). As the linear coefficient b increases, initially the quadratic formula is accurate, and the approximate formula improves in accuracy, leading to a smaller difference between the methods as b increases. However, at some point the quadratic formula begins to lose accuracy because of round off error, while the approximate method continues to improve. Consequently, the difference between the methods begins to increase as the quadratic formula becomes worse and worse.
+This situation arises commonly in amplifier design, where widely separated roots are desired to ensure a stable operation (see Step response).
+
+Trigonometric solution
+In the days before calculators, people would use mathematical tables—lists of numbers showing the results of calculation with varying arguments—to simplify and speed up computation. Tables of logarithms and trigonometric functions were common in math and science textbooks. Specialized tables were published for applications such as astronomy, celestial navigation and statistics. Methods of numerical approximation existed, called prosthaphaeresis, that offered shortcuts around time-consuming operations such as multiplication and taking powers and roots. Astronomers, especially, were concerned with methods that could speed up the long series of computations involved in celestial mechanics calculations.
+It is within this context that we may understand the development of means of solving quadratic equations by the aid of trigonometric substitution. Consider the following alternate form of the quadratic equation,
+
+where the sign of the ± symbol is chosen so that a and c may both be positive. By substituting
+
+and then multiplying through by cos2(θ) / c, we obtain
+
+Introducing functions of 2θ and rearranging, we obtain
+
+where the subscripts n and p correspond, respectively, to the use of a negative or positive sign in equation [1]. Substituting the two values of θn or θp found from equations [4] or [5] into [2] gives the required roots of [1]. Complex roots occur in the solution based on equation [5] if the absolute value of sin 2θp exceeds unity. The amount of effort involved in solving quadratic equations using this mixed trigonometric and logarithmic table look-up strategy was two-thirds the effort using logarithmic tables alone. Calculating complex roots would require using a different trigonometric form.
+To illustrate, let us assume we had available seven-place logarithm and trigonometric tables, and wished to solve the following to six-significant-figure accuracy:
+
+  
+    
+      
+        4.16130
+        
+          x
+          
+            2
+          
+        
+        +
+        9.15933
+        x
+        −
+        11.4207
+        =
+        0
+      
+    
+    {\displaystyle 4.16130x^{2}+9.15933x-11.4207=0}
+  
+
+A seven-place lookup table might have only 100,000 entries, and computing intermediate results to seven places would generally require interpolation between adjacent entries.
+
+  
+    
+      
+        log
+        ⁡
+        a
+        =
+        0.6192290
+        ,
+        log
+        ⁡
+        b
+        =
+        0.9618637
+        ,
+        log
+        ⁡
+        c
+        =
+        1.0576927
+      
+    
+    {\displaystyle \log a=0.6192290,\log b=0.9618637,\log c=1.0576927}
+  
+
+  
+    
+      
+        2
+        
+          
+            a
+            c
+          
+        
+        
+          /
+        
+        b
+        =
+        2
+        ×
+        
+          10
+          
+            (
+            0.6192290
+            +
+            1.0576927
+            )
+            
+              /
+            
+            2
+            −
+            0.9618637
+          
+        
+        =
+        1.505314
+      
+    
+    {\displaystyle 2{\sqrt {ac}}/b=2\times 10^{(0.6192290+1.0576927)/2-0.9618637}=1.505314}
+  
+
+  
+    
+      
+        θ
+        =
+        (
+        
+          tan
+          
+            −
+            1
+          
+        
+        ⁡
+        1.505314
+        )
+        
+          /
+        
+        2
+        =
+        
+          28.20169
+          
+            ∘
+          
+        
+        
+           or 
+        
+        −
+        
+          61.79831
+          
+            ∘
+          
+        
+      
+    
+    {\displaystyle \theta =(\tan ^{-1}1.505314)/2=28.20169^{\circ }{\text{ or }}-61.79831^{\circ }}
+  
+
+  
+    
+      
+        log
+        ⁡
+        
+          |
+        
+        tan
+        ⁡
+        θ
+        
+          |
+        
+        =
+        −
+        0.2706462
+        
+           or 
+        
+        0.2706462
+      
+    
+    {\displaystyle \log |\tan \theta |=-0.2706462{\text{ or }}0.2706462}
+  
+
+  
+    
+      
+        log
+        ⁡
+        
+          
+            
+              
+                c
+                
+                  /
+                
+                a
+              
+            
+          
+        
+        =
+        (
+        1.0576927
+        −
+        0.6192290
+        )
+        
+          /
+        
+        2
+        =
+        0.2192318
+      
+    
+    {\displaystyle \log {\textstyle {\sqrt {c/a}}}=(1.0576927-0.6192290)/2=0.2192318}
+  
+
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        =
+        
+          10
+          
+            0.2192318
+            −
+            0.2706462
+          
+        
+        =
+        0.888353
+      
+    
+    {\displaystyle x_{1}=10^{0.2192318-0.2706462}=0.888353}
+  
+ (rounded to six significant figures) 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        =
+        −
+        
+          10
+          
+            0.2192318
+            +
+            0.2706462
+          
+        
+        =
+        −
+        3.08943
+      
+    
+    {\displaystyle x_{2}=-10^{0.2192318+0.2706462}=-3.08943}
+  
+
+Solution for complex roots in polar coordinates
+If the quadratic equation 
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        0
+      
+    
+    {\displaystyle ax^{2}+bx+c=0}
+  
+ with real coefficients has two complex roots—the case where 
+  
+    
+      
+        
+          b
+          
+            2
+          
+        
+        −
+        4
+        a
+        c
+        <
+        0
+        ,
+      
+    
+    {\displaystyle b^{2}-4ac<0,}
+  
+ requiring a and c to have the same sign as each other—then the solutions for the roots can be expressed in polar form as
+
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+        
+          x
+          
+            2
+          
+        
+        =
+        r
+        (
+        cos
+        ⁡
+        θ
+        ±
+        i
+        sin
+        ⁡
+        θ
+        )
+        ,
+      
+    
+    {\displaystyle x_{1},\,x_{2}=r(\cos \theta \pm i\sin \theta ),}
+  
+
+where 
+  
+    
+      
+        r
+        =
+        
+          
+            
+              
+                c
+                a
+              
+            
+          
+        
+      
+    
+    {\displaystyle r={\sqrt {\tfrac {c}{a}}}}
+  
+ and 
+  
+    
+      
+        θ
+        =
+        
+          cos
+          
+            −
+            1
+          
+        
+        ⁡
+        
+          (
+          
+            
+              
+                
+                  −
+                  b
+                
+                
+                  2
+                  
+                    
+                      a
+                      c
+                    
+                  
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle \theta =\cos ^{-1}\left({\tfrac {-b}{2{\sqrt {ac}}}}\right).}
+  
+
+Geometric solution
+
+The quadratic equation may be solved geometrically in a number of ways. One way is via Lill's method. The three coefficients a, b, c are drawn with right angles between them as in SA, AB, and BC in Figure 6. A circle is drawn with the start and end point SC as a diameter. If this cuts the middle line AB of the three then the equation has a solution, and the solutions are given by negative of the distance along this line from A divided by the first coefficient a or SA. If a is 1 the coefficients may be read off directly. Thus the solutions in the diagram are −AX1/SA and −AX2/SA.
+
+The Carlyle circle, named after Thomas Carlyle, has the property that the solutions of the quadratic equation are the horizontal coordinates of the intersections of the circle with the horizontal axis. Carlyle circles have been used to develop ruler-and-compass constructions of regular polygons.
+
+Generalization of quadratic equation
+The formula and its derivation remain correct if the coefficients a, b and c are complex numbers, or more generally members of any field whose characteristic is not 2. (In a field of characteristic 2, the element 2a is zero and it is impossible to divide by it.)
+The symbol
+
+  
+    
+      
+        ±
+        
+          
+            
+              b
+              
+                2
+              
+            
+            −
+            4
+            a
+            c
+          
+        
+      
+    
+    {\displaystyle \pm {\sqrt {b^{2}-4ac}}}
+  
+
+in the formula should be understood as "either of the two elements whose square is b2 − 4ac, if such elements exist". In some fields, some elements have no square roots and some have two; only zero has just one square root, except in fields of characteristic 2. Even if a field does not contain a square root of some number, there is always a quadratic extension field which does, so the quadratic formula will always make sense as a formula in that extension field.
+
+Characteristic 2
+In a field of characteristic 2, the quadratic formula, which relies on 2 being a unit, does not hold. Consider the monic quadratic polynomial
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+      
+    
+    {\displaystyle x^{2}+bx+c}
+  
+
+over a field of characteristic 2. If b = 0, then the solution reduces to extracting a square root, so the solution is
+
+  
+    
+      
+        x
+        =
+        
+          
+            c
+          
+        
+      
+    
+    {\displaystyle x={\sqrt {c}}}
+  
+
+and there is only one root since
+
+  
+    
+      
+        −
+        
+          
+            c
+          
+        
+        =
+        −
+        
+          
+            c
+          
+        
+        +
+        2
+        
+          
+            c
+          
+        
+        =
+        
+          
+            c
+          
+        
+        .
+      
+    
+    {\displaystyle -{\sqrt {c}}=-{\sqrt {c}}+2{\sqrt {c}}={\sqrt {c}}.}
+  
+
+In summary,
+
+  
+    
+      
+        
+          
+            x
+            
+              2
+            
+          
+          +
+          c
+          =
+          (
+          x
+          +
+          
+            
+              c
+            
+          
+          
+            )
+            
+              2
+            
+          
+          .
+        
+      
+    
+    {\displaystyle \displaystyle x^{2}+c=(x+{\sqrt {c}})^{2}.}
+  
+
+See quadratic residue for more information about extracting square roots in finite fields.
+In the case that b ≠ 0, there are two distinct roots, but if the polynomial is irreducible, they cannot be expressed in terms of square roots of numbers in the coefficient field. Instead, define the 2-root R(c) of c to be a root of the polynomial x2 + x + c, an element of the splitting field of that polynomial. One verifies that R(c) + 1 is also a root. In terms of the 2-root operation, the two roots of the (non-monic) quadratic ax2 + bx + c are
+
+  
+    
+      
+        
+          
+            b
+            a
+          
+        
+        R
+        
+          (
+          
+            
+              
+                a
+                c
+              
+              
+                b
+                
+                  2
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle {\frac {b}{a}}R\left({\frac {ac}{b^{2}}}\right)}
+  
+
+and
+
+  
+    
+      
+        
+          
+            b
+            a
+          
+        
+        
+          (
+          
+            R
+            
+              (
+              
+                
+                  
+                    a
+                    c
+                  
+                  
+                    b
+                    
+                      2
+                    
+                  
+                
+              
+              )
+            
+            +
+            1
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle {\frac {b}{a}}\left(R\left({\frac {ac}{b^{2}}}\right)+1\right).}
+  
+
+For example, let a denote a multiplicative generator of the group of units of F4, the Galois field of order four (thus a and a + 1 are roots of x2 + x + 1 over F4. Because (a + 1)2 = a, a + 1 is the unique solution of the quadratic equation x2 + a = 0. On the other hand, the polynomial x2 + ax + 1 is irreducible over F4, but it splits over F16, where it has the two roots ab and ab + a, where b is a root of x2 + x + a in F16.
+This is a special case of Artin–Schreier theory.

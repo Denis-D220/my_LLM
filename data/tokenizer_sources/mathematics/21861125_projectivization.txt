@@ -1,0 +1,58 @@
+In mathematics, projectivization is a procedure which associates with a non-zero vector space  V  a projective space  P(V), whose elements are one-dimensional subspaces of  V. More generally, any subset  S of  V closed under scalar multiplication defines a subset of  P(V) formed by the lines contained in  S and is called the projectivization of  S.
+
+Properties
+Projectivization is a special case of the factorization by a group action: the projective space  P(V) is the quotient of the open set V \ {0}  of nonzero vectors by the action of the multiplicative group of the base field by scalar transformations. The dimension of  P(V) in the sense of algebraic geometry is one less than the dimension of the vector space  V.
+Projectivization is functorial with respect to injective linear maps: if
+
+  
+    
+      
+        f
+        :
+        V
+        →
+        W
+      
+    
+    {\displaystyle f:V\to W}
+  
+
+is a linear map with trivial kernel then  f defines an algebraic map of the corresponding projective spaces,
+
+  
+    
+      
+        
+          P
+        
+        (
+        f
+        )
+        :
+        
+          P
+        
+        (
+        V
+        )
+        →
+        
+          P
+        
+        (
+        W
+        )
+        .
+      
+    
+    {\displaystyle \mathbf {P} (f):\mathbf {P} (V)\to \mathbf {P} (W).}
+  
+
+In particular, the general linear group GL(V) acts on the projective space  P(V) by automorphisms.
+
+Projective completion
+A related procedure embeds a vector space V over a field K into the projective space  P(V ⊕ K) of the same dimension. To every vector v of V, it associates the line spanned by the vector (v, 1) of V ⊕ K.
+
+Generalization
+
+In algebraic geometry, there is a procedure that associates a projective variety Proj S with a graded commutative algebra S (under some technical restrictions on S). If S is the algebra of polynomials on a vector space V then Proj S is P(V). This Proj construction gives rise to a contravariant functor from the category of graded commutative rings and surjective graded maps to the category of projective schemes.

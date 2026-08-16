@@ -1,0 +1,24 @@
+SLR grammars are the class of formal grammars accepted by a Simple LR parser.  SLR grammars are a superset of all LR(0) grammars and a subset of all LALR(1) and LR(1) grammars.
+When processed by an SLR parser, an SLR grammar is converted into parse tables with no shift/reduce or reduce/reduce conflicts for any combination of LR(0) parser state and expected lookahead symbol.  If the grammar is not SLR, the parse tables will have shift/reduce conflicts or reduce/reduce conflicts for some state and some lookahead symbols, and the resulting rejected parser is no longer deterministic.  The parser cannot decide whether to shift or reduce next, or cannot decide between two candidate reductions.  SLR parsers use a Follow(A) calculation to pick the lookahead symbols to expect for every completed nonterminal.  
+LALR parsers use a different calculation which sometimes gives smaller, tighter lookahead sets for the same parser states.  Those smaller sets can eliminate overlap with the state's shift actions, and overlap with lookaheads for other reductions in this same state.  The overlap conflicts reported by SLR parsers are then spurious, a result of the approximate calculation using Follow(A).
+A grammar which is ambiguous will have unavoidable shift/reduce conflicts or reduce/reduce conflicts for every LR analysis method, including SLR.  A common way for computer language grammars to be ambiguous is if some nonterminal is both left- and right-recursive:
+
+Expr → Expr * Val
+Expr → Val + Expr
+Expr → Val
+
+Definitions
+A rule of the form B → y • within a state of a SLR(1) automaton is said to be irreducible or in a reduced state because it has been completely expanded and is incapable of undergoing any shift transition. Rules in this state will have a dot ( • , the current look-ahead position) located at the rightmost end of its RHS (Right Hand Side).
+
+Rules
+A Grammar is said to be SLR(1) if and only if, for each and every state s in the SLR(1) automaton, none of the following conditions are violated:
+
+For any reducible rule A → a • Xb in state s (where X is some terminal), there must not exist some irreducible rule, B → a • in the same state s such that the follow set of B contains the terminal X. In more formal terms, the intersection of set containing the terminal X and the follow set of B must be empty. Violation of this rule is a Shift-Reduce Conflict.
+For any two complete items A → a • and B → b • in s, Follow(A) and Follow(B) are disjoint (their intersection is the empty set). Violation of this rule is a Reduce-Reduce Conflict.
+
+Parsing algorithm
+A grammar is said to be SLR(1) if the following simple LR parser algorithm results in no ambiguity.
+
+If state s contains any item of the form A → a • Xb, where X is a terminal, and X is the next token in the input string, then the action is to shift the current input token onto the stack, and the new state to be pushed on the stack is the state containing the item A → aX • b.
+If state s contains the complete item A → y • , and the next token in the input string is in Follow(A), then the action is to reduce by the rule A → y. A reduction by the rule S' → S, where S is the start state, is equivalent to acceptance; this will happen only if the next input token is $. In all other cases, the new state in computed as follows. Remove the string y and all of its corresponding states from the parsing stack. Correspondingly, back up in the DFA to the state from which the construction of y began. By construction, this state must contain an item of the form B → a • Ab. Push A on to the stack, and push the state containing the item B → aA • b.
+If the next input token is such that neither of the above two cases applies, an error is declared.

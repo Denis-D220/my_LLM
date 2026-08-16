@@ -1,0 +1,672 @@
+In ballistics, the ballistic coefficient (BC, Cb) of a body is a measure of its ability to overcome air resistance in flight. It is inversely proportional to the negative acceleration: a high number indicates a low negative acceleration—the drag on the body is small in proportion to its mass. BC can be expressed with the units kilogram-force per square meter (kgf/m2) or pounds per square inch (lb/in2) (where 1 lb/in2 corresponds to 703.06957829636 kgf/m2).
+
+Formulas
+
+General
+The ballistic coefficient provides a value representing how an object's velocity and acceleration through a fluid of a given density will relate to each other; for a given velocity through a given fluid, a higher coefficient means the projectile will be affected less by drag, i.e. it will be accelerated less by the drag force.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  F
+                  
+                    
+                      D
+                    
+                  
+                
+                =
+                m
+                a
+              
+              
+                
+                =
+                
+                  
+                    
+                      1
+                      2
+                    
+                  
+                
+                
+                  ρ
+                  
+                    
+                      f
+                      l
+                      u
+                      i
+                      d
+                    
+                  
+                
+                
+                  v
+                  
+                    2
+                  
+                
+                
+                  C
+                  
+                    d
+                  
+                
+                A
+              
+            
+            
+              
+                
+                  C
+                  
+                    b,physics
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    m
+                    
+                      
+                        C
+                        
+                          d
+                        
+                      
+                      A
+                    
+                  
+                
+                =
+                
+                  
+                    
+                      ρ
+                      ℓ
+                    
+                    
+                      C
+                      
+                        d
+                      
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        ρ
+                        
+                          
+                            f
+                            l
+                            u
+                            i
+                            d
+                          
+                        
+                      
+                      
+                        v
+                        
+                          2
+                        
+                      
+                    
+                    
+                      2
+                      a
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}F_{\mathrm {D} }=ma&={\tfrac {1}{2}}\rho _{\mathrm {fluid} }v^{2}C_{\text{d}}A\\C_{\text{b,physics}}&={\frac {m}{C_{\text{d}}A}}={\frac {\rho \ell }{C_{\text{d}}}}\\&={\frac {\rho _{\mathrm {fluid} }v^{2}}{2a}}\\\end{aligned}}}
+  
+
+where:
+
+Cb,physics is the ballistic coefficient as used in physics and engineering
+m is the mass of the object
+A is the cross sectional area
+Cd is the drag coefficient
+ρ is the density of the object
+ℓ is the characteristic body length such that the volume of the object equals ℓA
+FD is the drag force,
+a is the acceleration experienced by the object,
+ρfluid is the density of the fluid - e.g. the density of dry air at 20 °C (68 °F) and 1 atm (101.325 kPa) is 1.204 kg/m3 (0.07517 lb/cu ft),
+v is the speed of the object relative to the fluid.
+
+Examples
+
+For objects whose volume can be compared based on a known comparison of their projected frontal area, we can compare ballistic coefficients; for example, for the shapes on the right, the two cylinders are of unknown length and the cone is of unknown angle, making it impossible to compare their ballistic coefficients.  This comparison table assumes all of the objects are of the same characteristic density, so they will have the same mass at the same volume, i.e. the volume divided by the projected frontal area, V⁄AF, multiplied by some shared density ρ, equals the m⁄A term in the Ballistic Coefficient formula. Note that "angled cube", in this case, means the flow is perpendicular to an edge, not a corner.
+
+Ballistics
+The formula for calculating the ballistic coefficient for small and large arms projectiles only is as follows:
+
+  
+    
+      
+        
+          C
+          
+            b,projectile
+          
+        
+        =
+        
+          
+            m
+            
+              
+                d
+                
+                  2
+                
+              
+              i
+            
+          
+        
+      
+    
+    {\displaystyle C_{\text{b,projectile}}={\frac {m}{d^{2}i}}}
+  
+ 
+where:
+
+Cb,projectile, ballistic coefficient as used in point mass trajectory from the Siacci method (less than 20 degrees).
+m, mass of bullet
+d, measured cross-sectional diameter of projectile
+Note that the cross-sectional area from the original formula, expressed in d, is 
+  
+    
+      
+        
+          
+            
+              π
+              
+                d
+                
+                  2
+                
+              
+            
+            4
+          
+        
+      
+    
+    {\displaystyle {\frac {\pi d^{2}}{4}}}
+  
+
+i, coefficient of form
+The coefficient of form, i, can be derived by 6 methods and applied differently depending on the trajectory models used: G model, Beugless/Coxe, 3 Sky Screen, 4 Sky Screen, target zeroing, and Doppler radar.
+Here are several methods to compute i or Cd:
+You can assume the projectile is a "standard" ogive, ignoring the various ways an ogive can be specified as well as non-ogive projectiles.
+
+  
+    
+      
+        i
+        =
+        
+          
+            2
+            n
+          
+        
+        
+          
+            
+              
+                4
+                n
+                −
+                1
+              
+              n
+            
+          
+        
+      
+    
+    {\displaystyle i={\frac {2}{n}}{\sqrt {\frac {4n-1}{n}}}}
+  
+
+where:
+
+or
+A drag coefficient can also be calculated mathematically: 
+
+  
+    
+      
+        
+          C
+          
+            d
+          
+        
+        =
+        
+          
+            8
+            
+              ρ
+              
+                v
+                
+                  2
+                
+              
+              π
+              
+                d
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle C_{\text{d}}={\frac {8}{\rho v^{2}\pi d^{2}}}}
+  
+ 
+where:
+
+Cd, drag coefficient.
+
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+, density of the projectile.
+v, projectile velocity at range.
+π (pi) = 3.14159...
+d, measured cross-sectional diameter of projectile
+or
+From standard physics as applied to "G" models:
+
+  
+    
+      
+        i
+        =
+        
+          
+            
+              C
+              
+                p
+              
+            
+            
+              C
+              
+                G
+              
+            
+          
+        
+      
+    
+    {\displaystyle i={\frac {C_{\text{p}}}{C_{\text{G}}}}}
+  
+ 
+where:
+
+i, coefficient of form.
+CG, drag coefficient of 1.00 from any "G" model, reference drawing, projectile.
+Cp, drag coefficient of the actual test projectile at range.
+
+Commercial use
+This formula is for calculating the ballistic coefficient within the small arms shooting community, but is redundant with Cb,projectile:
+
+  
+    
+      
+        
+          C
+          
+            b,small-arms
+          
+        
+        =
+        
+          
+            
+              S
+              D
+            
+            i
+          
+        
+      
+    
+    {\displaystyle C_{\text{b,small-arms}}={\frac {SD}{i}}}
+  
+ 
+where:
+
+Cb,small-arms, ballistic coefficient
+SD, sectional density
+i, coefficient of form (form factor)
+
+History
+
+Background
+In 1537, Niccolò Tartaglia performed test firing to determine the maximum angle and range for a shot. His conclusion was near 45 degrees. He noted that the shot trajectory was continuously curved.
+In 1636, Galileo Galilei published results in "Dialogues Concerning Two New Sciences". He found that a falling body had a constant acceleration. This allowed Galileo to show that a bullet's trajectory was a curve.
+Circa 1665, Sir Isaac Newton derived the law of air resistance. Newton's experiments on drag were through air and fluids. He showed that drag on shot increases proportionately with the density of the air (or the fluid), cross sectional area, and the square of the speed. Newton's experiments were only at low velocities to about 260 m/s (853 ft/s).
+In 1718, John Keill challenged the Continental Mathematica, "To find the curve that a projectile may describe in the air, on behalf of the  simplest assumption of gravity, and the density of the medium uniform, on the other hand, in the duplicate ratio of the velocity of the resistance". This challenge supposes that air resistance increases exponentially to the velocity of a projectile. Keill gave no solution for his challenge. Johann Bernoulli took up this challenge and soon thereafter solved the problem and air resistance varied as "any power" of velocity; known as the Bernoulli equation. This is the precursor to the concept of the "standard projectile".
+In 1742, Benjamin Robins invented the ballistic pendulum. This was  a simple mechanical device that could measure a projectile's velocity. Robins reported muzzle velocities ranging from 1,400 ft/s (427 m/s) to 1,700 ft/s (518 m/s). In his book published that same year "New Principles of Gunnery", he uses numerical integration from Euler's method and found that air resistance varies as the square of the velocity, but insisted that it changes at the speed of sound.
+In 1753, Leonhard Euler  showed how theoretical trajectories might be calculated using his method as applied to the Bernoulli equation, but only for resistance varying as the square of the velocity.
+In 1864, the Electro-ballistic chronograph was invented, and by 1867 one electro-ballistic chronograph was claimed by its inventor to be able to resolve one ten-millionth of a second, but the absolute accuracy is unknown.
+
+Test firing
+Many countries and their militaries carried out test firings from the mid eighteenth century on using large ordnance to determine the drag characteristics of each individual projectile. These individual test firings were logged and reported in extensive ballistics tables.
+Of the test firing, most notably were: Francis Bashforth at Woolwich Marshes & Shoeburyness, England  (1864-1889) with velocities to 2,800 ft/s (853 m/s) and M. Krupp (1865–1880) of Friedrich Krupp AG at Meppen, Germany.  Friedrich Krupp AG continued these test firings to 1930; to a lesser extent General Nikolai V. Mayevski, then a Colonel (1868–1869) at St. Petersburg, Russia; the Commission d'Experience de Gâvre (1873 to 1889) at Le Gâvre, France with velocities to 1,830 m/s (6,004 ft/s) and The British Royal Artillery (1904–1906).
+The test projectiles (shot) used, vary from spherical, spheroidal, ogival; being hollow, solid and cored in design with the elongated ogival-headed projectiles having 1, ⁠1+1/2⁠, 2 and 3 caliber radii. These projectiles varied in size from, 75 mm (3.0 in) at 3 kg (6.6 lb) to 254 mm (10.0 in) at 187 kg (412.3 lb) 
+
+Methods and the standard projectile
+Many militaries up until the 1860s used calculus to compute the projectile trajectory. The numerical computations necessary to calculate just a single trajectory was lengthy, tedious and done by hand. So, investigations to develop a theoretical drag model began. The investigations led to a major simplification in the experimental treatment of drag. This was the concept of a "standard projectile". The ballistic tables are made up for a factitious projectile being defined as: "a factitious weight and with a specific shape and specific dimensions in a ratio of calibers". This simplifies calculation for the ballistic coefficient of a standard model projectile, which could mathematically move through the standard atmosphere with the same ability as any actual projectile could move through the actual atmosphere.
+
+The Bashforth method
+In 1870, Bashforth publishes a report containing his ballistic tables. Bashforth found that the drag of his test projectiles varied with the square of  velocity (v2) from 830 ft/s (253 m/s) to 430 ft/s (131 m/s) and with the cube of velocity (v3) from 1,000 ft/s (305 m/s) to 830 ft/s (253 m/s). As of his 1880 report, he found that drag varied by v6  from 1,100 ft/s (335 m/s) to 1,040 ft/s (317 m/s). Bashforth used rifled guns of 3 in (76 mm), 5 in (127 mm), 7 in (178 mm) and 9 in (229 mm);  smooth-bore guns of similar caliber for firing spherical shot and howitzers propelled elongated projectiles having an ogival-head of ⁠1+1/2⁠ caliber radius.
+Bashforth uses b as the variable for ballistic coefficient.  When b is equal to or less than v2, then b is equal to P for the drag of a projectile. It would be found that air does not deflect off the front of a projectile in the same direction, when there are of differing shapes. This prompted the introduction of a second factor to b, the coefficient of form (i). This is particularly true at high velocities, greater than 830 ft/s (253 m/s). Hence, Bashforth introduced the "undetermined multiplier" of any power called the k factor that compensate for this unknown effects of drag above 830 ft/s (253 m/s); k > i.  Bashforth then integrated k and i as Kv.
+Although Bashforth did not conceive the "restricted zone", he showed mathematically there were 5 restricted zones. Bashforth did not propose a standard projectile, but was well aware of the concept.
+
+Mayevski–Siacci method
+In 1872, Mayevski published his report Traité de Balistique Extérieure, which included the Mayevski model. Using his ballistic tables along with Bashforth's tables from the 1870 report, Mayevski created an analytical math formula that calculated the air resistances of a projectile in terms of log A and the value n. Although Mayevski's math used a differing approach than Bashforth, the resulting calculation of air resistance was the same. Mayevski proposed the restricted zone concept and found there to be six restricted zones for projectiles.
+Circa 1886, Mayevski published the results from a discussion of experiments made by M. Krupp (1880). Though the ogival-headed projectiles used varied greatly in caliber, they had essentially the same proportions as the standard projectile, being mostly 3 caliber in length, with an ogive of 2 calibers radius. Giving the standard projectile dimensionally as 10 cm (3.9 in) and 1 kg (2.2 lb).
+In 1880, Colonel Francesco Siacci published his work "Balistica". Siacci found as did those who came before him that the resistance and density of the air becomes greater and greater as a projectile displaced the air at higher and higher velocities.
+Siacci's method was for flat-fire trajectories with angles of departure of less than 20 degrees. He found that the angle of departure is sufficiently small to allow for air density to remain the same and was able to reduce the ballistics tables to easily tabulated quadrants giving distance, time, inclination and altitude of the projectile. Using Bashforth's k and Mayevski's tables, Siacci created a four-zone model. Siacci used Mayevski's standard projectile. From this method and standard projectile, Siacci formulated a shortcut.
+Siacci found that within a low-velocity restricted zone, projectiles of similar shape, and velocity in the same air density behave similarly; 
+  
+    
+      
+        
+          
+            
+              
+                δ
+                w
+              
+              
+                d
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\delta w}{d^{2}}}}
+  
+ or 
+  
+    
+      
+        
+          
+            
+              δ
+              C
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\delta }{C}}}
+  
+. Siacci used the variable 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ for ballistic coefficient. Meaning, air density is the generally the same for flat-fire trajectories, thus sectional density is equal to the ballistic coefficient and air density can be dropped. Then as the velocity rises to Bashforth's 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ for high velocity when 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ requires the introduction of 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+. Following within today's currently used ballistic trajectory tables for an average ballistic coefficient: 
+  
+    
+      
+        
+          
+            
+              m
+              
+                d
+                
+                  2
+                
+              
+            
+          
+        
+        ⋅
+        
+          
+            
+              
+                p
+                
+                  0
+                
+              
+              p
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {m}{d^{2}}}\cdot {\tfrac {p_{0}}{p}}}
+  
+ would equal 
+  
+    
+      
+        
+          
+            
+              m
+              
+                
+                  d
+                  
+                    2
+                  
+                
+                i
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {m}{d^{2}i}}}
+  
+ equals 
+  
+    
+      
+        
+          
+            
+              
+                S
+                D
+              
+              i
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {SD}{i}}}
+  
+ as 
+  
+    
+      
+        
+          C
+          
+            b
+          
+        
+      
+    
+    {\displaystyle C_{\text{b}}}
+  
+.
+Siacci wrote that within any restricted zone, C being the same for two or more projectiles, the trajectories differences will be minor. Therefore, C agrees with an average curve, and this average curve applies for all projectiles. Therefore, a single trajectory can be computed for the standard projectile without having to resort to tedious calculus methods, and then a trajectory for any actual bullet with known C can be  computed from the standard trajectory with just simple algebra.
+
+The ballistic tables
+The aforementioned ballistics tables are generally: functions, air density, projectile time at range, range, degree of projectile departure, weight and diameter to facilitate the calculation of ballistic formulae. These formulae produce the projectile velocity at range, drag and trajectories. The modern day commercially published ballistic tables or software computed ballistics tables for small arms, sporting ammunition are exterior ballistic, trajectory tables.
+The 1870 Bashforth tables were to 2,800 ft/s (853 m/s). Mayevski, using his tables, supplemented by the Bashforth tables (to 6 restricted zones) and the Krupp tables. Mayevski conceived a 7th restricted  zone and extended the Bashforth tables to 1,100 m/s (3,609 ft/s).  Mayevski converted Bashforth's data from Imperial units of measure to metric units of measure (now in SI units of measure). In 1884, James Ingalls published his tables in the U.S. Army Artillery Circular M using the Mayevski tables. Ingalls extended Mayevski's ballistics tables to 5,000 ft/s (1,524 m/s) within an 8th restricted zone, but still with the same n value (1.55) as Mayevski's 7th restricted  zone. Ingalls, converted Mayevski's results back to Imperial units. The British Royal Artillery results were very similar to those of Mayevski's and extended their tables to 5,000 ft/s (1,524 m/s) within the 8th restricted zone changing the n value from 1.55 to 1.67. These ballistic tables were published in 1909 and almost identical to those of Ingalls. In 1971 the Sierra Bullet company calculated their ballistic tables to 9 restricted zones but only within 4,400 ft/s (1,341 m/s).
+
+The G model
+In 1881, the Commission d'Expérience de Gâvre did a comprehensive survey of data available from their tests as well as other countries. After adopting a standard atmospheric condition for the drag data the Gavre drag function was adopted. This drag function was known as the Gavre function and the standard projectile adopted was the Type 1 projectile. Thereafter, the Type 1 standard projectile was renamed by Ballistics Section of Aberdeen Proving Grounds in Maryland, USA as G1 after the Commission d'Experience de Gâvre. For practical purposes the subscript 1 in G1 is generally written in normal font size as G1.
+The general form for the calculations of trajectory adopted for the G model is the Siacci method. The standard model projectile is a "fictitious projectile" used as the mathematical basis for the calculation of actual projectile's trajectory when an initial velocity is known. The G1 model projectile adopted is in dimensionless measures of 2 caliber radius ogival-head and 3.28 caliber in length. By calculation this leaves the body length 1.96 caliber and head, 1.32 caliber long.
+Over the years there has been some confusion as to adopted size, weight and radius ogival-head of the G1 standard projectile. This misconception may be explained by Colonel Ingalls in the 1886 publication,  Exterior Ballistics in the Plan Fire; page 15, In the following tables the first and second columns give the velocities and corresponding resistance, in pounds, to an elongated one inch in diameter and having an ogival head of one and a half calibers. They were deduced from Bashforth's experiments by Professor  A. G. Greenhill, and are taken from his papers published in the Proceedings of the Royal Artillery Institution, Number 2, Volume XIII. Further it is discussed that said projectile's weight was one pound.
+For the purposes of mathematical convenience for any standard projectile (G) the Cb is 1.00. Where as the projectile's sectional density (SD) is dimensionless with a mass of 1 divided by the square of the diameter of 1 caliber equaling an SD of 1. Then the standard projectile is assigned a coefficient of form of 1. Following that 
+  
+    
+      
+        
+          C
+          
+            b
+          
+        
+        =
+        
+          
+            
+              
+                S
+                D
+              
+              i
+            
+          
+        
+        =
+        
+          
+            
+              1
+              1
+            
+          
+        
+        =
+        1.00
+      
+    
+    {\displaystyle C_{\text{b}}={\tfrac {SD}{i}}={\tfrac {1}{1}}=1.00}
+  
+.  Cb, as a general rule, within flat-fire trajectory, is carried out to 2 decimal points. Cb is commonly found within commercial publications to be carried out to 3 decimal points as few sporting, small arms projectiles rise to the level of 1.00 for a ballistic coefficient.
+When using the Siacci method for different G models, the formula used to compute the trajectories is the same. What differs is retardation factors found through testing of actual projectiles that are similar in shape to the standard project reference. This creates slightly different set of retardation factors between differing G models. When the correct G model retardation factors are applied within the Siacci mathematical formula for the same G model Cb, a corrected trajectory can be calculated for any G model.
+Another method of determining trajectory and ballistic coefficient was developed and published by Wallace H. Coxe and Edgar Beugless of DuPont in 1936. This method is by shape comparison an logarithmic scale as drawn on 10 charts. The method estimates the ballistic coefficient related to the drag model of the Ingalls tables. When matching an actual projectile against the drawn caliber radii of Chart No. 1, it will provide i and by using Chart No. 2, C can be quickly calculated. Coxe and Beugless used the variable C for ballistic coefficient.
+The Siacci method was abandoned by the end of the World War I for artillery fire. But the U.S. Army Ordnance Corps continued using the Siacci method into the middle of the 20th century for direct (flat-fire) tank gunnery. The development of the electromechanical analog computer contributed to the calculation of aerial bombing trajectories during World War II. After World War II the advent of the silicon semiconductor based digital computer made it possible to create trajectories for the guided missiles/bombs, intercontinental ballistic missiles and space vehicles.
+Between World War I and II the U.S. Army Ballistics research laboratories at Aberdeen Proving Grounds, Maryland, USA developed the standard models for G2, G5, G6. In 1965, Winchester Western published a set of ballistics tables for G1, G5, G6 and GL. In 1971 Sierra Bullet Company retested all their bullets and concluded that the G5 model was not the best model for their boat tail bullets and started using the G1 model. This was fortunate, as the entire commercial sporting and firearms industries had based their calculations on the G1 model. The G1 model and Mayevski/Siacci Method continue to be the industry standard today. This benefit allows for comparison of all ballistic tables for trajectory within the commercial sporting and firearms industry.
+In recent years there have been vast advancements in the calculation of flat-fire trajectories with the advent of Doppler radar and the personal computer and handheld computing devices. Also, the newer methodology proposed by Dr. Arthur Pejsa and the use of the G7 model used by Mr. Bryan Litz, ballistic engineer for Berger Bullets, LLC for calculating boat tailed spitzer rifle bullet trajectories and 6 Dof model based software have improved the prediction of flat-fire trajectories.
+
+Differing mathematical models and bullet ballistic coefficients
+
+Most ballistic mathematical models and hence tables or software take for granted that one specific drag function correctly describes the drag and hence the flight characteristics of a bullet related to its ballistic coefficient. Those models do not differentiate between wadcutter, flat-based, spitzer, boat-tail, very-low-drag, etc. bullet types or shapes. They assume one invariable drag function as indicated by the published BC. Several different drag curve models optimized for several standard projectile shapes are available, however.
+The resulting drag curve models for several standard projectile shapes or types are referred to as:
+
+G1 or Ingalls (flatbase with 2 caliber (blunt) nose ogive - by far the most popular)
+G2 (Aberdeen J projectile)
+G5 (short 7.5° boat-tail, 6.19 calibers long tangent ogive)
+G6 (flatbase, 6 calibers long secant ogive)
+G7 (long 7.5° boat-tail, 10 calibers secant ogive, preferred by some manufacturers for very-low-drag bullets)
+G8 (flatbase, 10 calibers long secant ogive)
+GL (blunt lead nose)
+Since these standard projectile shapes differ significantly the Gx BC will also differ significantly from the Gy BC for an identical bullet. To illustrate this the bullet manufacturer Berger has published the G1 and G7 BCs for most of their target, tactical, varmint and hunting bullets. Other bullet manufacturers like Lapua and Nosler also published the G1 and G7 BCs for most of their target bullets. Many of these manufacturer and other independently verified G1 and G7 Ballistic Coefficients for most of the modern bullets gets published and updated regularly in freely published bullet database. How much a projectile deviates from the applied reference projectile is mathematically expressed by the form factor (i). The applied reference projectile shape always has a form factor (i) of exactly 1. When a particular projectile has a sub 1 form factor (i) this indicates that the particular projectile exhibits lower drag than the applied reference projectile shape. A form factor (i) greater than 1 indicates the particular projectile exhibits more drag than the applied reference projectile shape. In general the G1 model yields comparatively high BC values and is often used by the sporting ammunition industry.
+
+The transient nature of bullet ballistic coefficients
+Variations in BC claims for exactly the same projectiles can be explained by differences in the ambient air density used to compute specific values or differing range-speed measurements on which the stated G1 BC averages are based. Also, the BC changes during a projectile's flight, and stated BCs are always averages for particular range-speed regimes. Further explanation about the variable nature of a projectile's G1 BC during flight can be found at the external ballistics article. The external ballistics article implies that knowing how a BC was determined is almost as important as knowing the stated BC value itself.
+For the precise establishment of BCs (or perhaps the scientifically better expressed drag coefficients), Doppler radar-measurements are required. The normal shooting or aerodynamics enthusiast, however, has no access to such expensive professional measurement devices. Weibel 1000e or Infinition BR-1001 Doppler radars are used by governments, professional ballisticians, defense forces, and a few ammunition manufacturers to obtain exact real-world data on the flight behavior of projectiles of interest.
+Doppler radar measurement results for a lathe turned monolithic solid .50 BMG very-low-drag bullet (Lost River J40 13.0 millimetres (0.510 in), 50.1 grams (773 gr) monolithic solid bullet / twist rate 1:380 millimetres (15 in)) look like this:
+
+The initial rise in the BC value is attributed to a projectile's always present yaw and precession out of the bore. The test results were obtained from many shots, not just a single shot. The bullet was assigned 1.062 lb/in2 (746.7 kg/m2) for its BC number by the bullet's manufacturer, Lost River Ballistic Technologies, before it went out of business.
+Measurements on other bullets can give totally different results. How different speed regimes affect several 8.6 mm (.338 in calibre) rifle bullets made by the Finnish ammunition manufacturer Lapua can be seen in the .338 Lapua Magnum product brochure which states Doppler radar established BC data.
+
+General trends
+Sporting bullets, with a calibre d ranging from 4.4 to 12.7 millimetres (0.172 to 0.50 in), have Cb in the range 0.12 lb/in2 to slightly over 1.00 lb/in2 (84 kg/m2 to 703 kg/m2). Those bullets with the higher BCs are the most aerodynamic, and those with low BCs are the least. Very-low-drag bullets with Cb ≥ 1.10 lb/in2 (over 773 kg/m2) can be designed and produced on CNC precision lathes out of mono-metal rods, but they often have to be fired from custom made full bore rifles with special barrels.
+Ammunition makers often offer several bullet weights and types for a given cartridge. Heavy-for-caliber pointed (spitzer) bullets with a boattail design have BCs at the higher end of the normal range, whereas lighter bullets with square tails and blunt noses have lower BCs. The 6 mm and 6.5 mm cartridges are probably the most well known for having high BCs and are often used in long range target matches of 300 m (328 yd) – 1,000 m (1,094 yd). The 6 and 6.5 have relatively light recoil compared to high BC bullets of greater caliber and tend to be shot by the winner in matches where accuracy is key. Examples include the 6mm PPC, 6mm Norma BR, 6×47mm SM, 6.5×55mm Swedish Mauser, 6.5×47mm Lapua, 6.5 Creedmoor, 6.5 Grendel, .260 Remington, and the 6.5-284.
+In the United States, hunting cartridges such as the .25-06 Remington (a 6.35 mm caliber), the .270 Winchester (a 6.8 mm caliber), and the .284 Winchester (a 7 mm caliber) are used when high BCs and moderate recoil are desired. The .30-06 Springfield and .308 Winchester cartridges also offer several high-BC loads, although the bullet weights are on the heavy side for the available case capacity, and thus are velocity limited by the maximum allowable pressure.
+In the larger caliber category, the .338 Lapua Magnum and the .50 BMG are popular with very high BC bullets for shooting beyond 1,000 meters. Newer chamberings in the larger caliber category are the .375 and .408 Cheyenne Tactical and the .416 Barrett.
+
+Information sources
+For many years, bullet manufacturers were the main source of ballistic coefficients for use in trajectory calculations. However, in the past decade or so, it has been shown that ballistic coefficient measurements by independent parties can often be more accurate than manufacturer specifications.  Since ballistic coefficients depend on the specific firearm and other conditions that vary, it is notable that methods have been developed for individual users to measure their own ballistic coefficients.
+
+Satellites and reentry vehicles
+Satellites in low Earth orbit (LEO) with high ballistic coefficients experience smaller perturbations to their orbits due to atmospheric drag.
+The ballistic coefficient of an atmospheric reentry vehicle has a significant effect on its behavior. A very high ballistic coefficient vehicle would lose velocity very slowly and would impact the Earth's surface at higher speeds. In contrast, a low ballistic coefficient vehicle would reach subsonic speeds before reaching the ground.
+In general, reentry vehicles carrying human beings or other sensitive payloads back to Earth from space have high drag and a correspondingly low ballistic coefficient (less than approx. 100 lb/ft2). Vehicles that carry nuclear weapons launched by an intercontinental ballistic missile (ICBM), by contrast, have a high ballistic coefficient, ranging between 100 and 5000 lb/ft2, enabling a significantly faster descent from space to the surface. This in turn makes the weapon less affected by crosswinds or other weather phenomena, and harder to track, intercept, or otherwise defend against.

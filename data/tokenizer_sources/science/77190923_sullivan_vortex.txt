@@ -1,0 +1,1325 @@
+In fluid dynamics, the Sullivan vortex is an exact solution of the Navier–Stokes equations describing a two-celled vortex in an axially strained flow, that was discovered by Roger D. Sullivan in 1959.  At large radial distances, the Sullivan vortex resembles a Burgers vortex, however, it exhibits a two-cell structure near the center, creating a downdraft at the axis and an updraft at a finite radial location. Specifically, in the outer cell, the fluid spirals inward and upward and in the inner cell, the fluid spirals down at the axis and spirals upwards at the boundary with the outer cell. Due to its multi-celled structure, the vortex is used to model tornadoes and large-scale complex vortex structures in turbulent flows.
+
+Flow description
+Consider the velocity components 
+  
+    
+      
+        (
+        
+          v
+          
+            r
+          
+        
+        ,
+        
+          v
+          
+            θ
+          
+        
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+      
+    
+    {\displaystyle (v_{r},v_{\theta },v_{z})}
+  
+ of an incompressible fluid in cylindrical coordinates in the form
+
+  
+    
+      
+        
+          v
+          
+            r
+          
+        
+        =
+        −
+        α
+        r
+        +
+        
+          
+            
+              2
+              ν
+            
+            r
+          
+        
+        f
+        (
+        η
+        )
+        ,
+      
+    
+    {\displaystyle v_{r}=-\alpha r+{\frac {2\nu }{r}}f(\eta ),}
+  
+
+  
+    
+      
+        
+          v
+          
+            z
+          
+        
+        =
+        2
+        α
+        z
+        
+          [
+          
+            1
+            −
+            
+              f
+              ′
+            
+            (
+            η
+            )
+          
+          ]
+        
+        ,
+      
+    
+    {\displaystyle v_{z}=2\alpha z\left[1-f'(\eta )\right],}
+  
+
+  
+    
+      
+        
+          v
+          
+            θ
+          
+        
+        =
+        
+          
+            Γ
+            
+              2
+              π
+              r
+            
+          
+        
+        
+          
+            
+              g
+              (
+              η
+              )
+            
+            
+              g
+              (
+              ∞
+              )
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle v_{\theta }={\frac {\Gamma }{2\pi r}}{\frac {g(\eta )}{g(\infty )}},}
+  
+
+where 
+  
+    
+      
+        η
+        =
+        α
+        
+          r
+          
+            2
+          
+        
+        
+          /
+        
+        (
+        2
+        ν
+        )
+      
+    
+    {\displaystyle \eta =\alpha r^{2}/(2\nu )}
+  
+ and 
+  
+    
+      
+        α
+        >
+        0
+      
+    
+    {\displaystyle \alpha >0}
+  
+ is the strain rate of the axisymmetric stagnation-point flow. The Burgers vortex solution is simply given by 
+  
+    
+      
+        f
+        (
+        η
+        )
+        =
+        0
+      
+    
+    {\displaystyle f(\eta )=0}
+  
+ and 
+  
+    
+      
+        g
+        (
+        η
+        )
+        
+          /
+        
+        g
+        (
+        ∞
+        )
+        =
+        1
+        −
+        
+          e
+          
+            −
+            η
+          
+        
+      
+    
+    {\displaystyle g(\eta )/g(\infty )=1-e^{-\eta }}
+  
+. Sullivan showed that there exists a non-trivial solution for 
+  
+    
+      
+        f
+        (
+        η
+        )
+      
+    
+    {\displaystyle f(\eta )}
+  
+ from the Navier-Stokes equations accompanied by a function 
+  
+    
+      
+        g
+        (
+        η
+        )
+      
+    
+    {\displaystyle g(\eta )}
+  
+ that is not the Burgers vortex. The solution is given by
+
+  
+    
+      
+        f
+        (
+        η
+        )
+        =
+        3
+        (
+        1
+        −
+        
+          e
+          
+            −
+            η
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle f(\eta )=3(1-e^{-\eta }),}
+  
+
+  
+    
+      
+        g
+        (
+        η
+        )
+        =
+        
+          ∫
+          
+            0
+          
+          
+            η
+          
+        
+        
+          t
+          
+            3
+          
+        
+        
+          e
+          
+            −
+            t
+            −
+            3
+            Ei
+            ⁡
+            (
+            −
+            t
+            )
+          
+        
+        
+        
+          d
+        
+        t
+      
+    
+    {\displaystyle g(\eta )=\int _{0}^{\eta }t^{3}e^{-t-3\operatorname {Ei} (-t)}\,\mathrm {d} t}
+  
+
+where 
+  
+    
+      
+        Ei
+      
+    
+    {\displaystyle \operatorname {Ei} }
+  
+ is the exponential integral. For 
+  
+    
+      
+        η
+        ≪
+        1
+      
+    
+    {\displaystyle \eta \ll 1}
+  
+, the function 
+  
+    
+      
+        g
+        (
+        η
+        )
+      
+    
+    {\displaystyle g(\eta )}
+  
+ behaves like 
+  
+    
+      
+        g
+        =
+        
+          e
+          
+            −
+            3
+            γ
+          
+        
+        (
+        η
+        +
+        
+          η
+          
+            2
+          
+        
+        +
+        ⋯
+        )
+      
+    
+    {\displaystyle g=e^{-3\gamma }(\eta +\eta ^{2}+\cdots )}
+  
+ with 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ being is the Euler–Mascheroni constant, whereas for large values of 
+  
+    
+      
+        η
+      
+    
+    {\displaystyle \eta }
+  
+, we have 
+  
+    
+      
+        g
+        (
+        ∞
+        )
+        =
+        6.7088
+      
+    
+    {\displaystyle g(\infty )=6.7088}
+  
+.
+The boundary between the inner cell and the outer cell is given by 
+  
+    
+      
+        η
+        =
+        2.821
+      
+    
+    {\displaystyle \eta =2.821}
+  
+, which is obtained by solving the equation 
+  
+    
+      
+        
+          v
+          
+            r
+          
+        
+        =
+        0.
+      
+    
+    {\displaystyle v_{r}=0.}
+  
+ Within the inner cell, the transition between the downdraft and the updraft occurs at 
+  
+    
+      
+        η
+        =
+        1.099
+      
+    
+    {\displaystyle \eta =1.099}
+  
+, which is obtained by solving the equation 
+  
+    
+      
+        ∂
+        
+          v
+          
+            z
+          
+        
+        
+          /
+        
+        ∂
+        r
+        =
+        0.
+      
+    
+    {\displaystyle \partial v_{z}/\partial r=0.}
+  
+ The vorticity components of the Sullivan vortex are given by
+
+  
+    
+      
+        
+          ω
+          
+            r
+          
+        
+        =
+        0
+        ,
+        
+        
+          ω
+          
+            θ
+          
+        
+        =
+        −
+        
+          
+            
+              6
+              
+                α
+                
+                  2
+                
+              
+            
+            ν
+          
+        
+        r
+        z
+        
+          e
+          
+            −
+            α
+            
+              r
+              
+                2
+              
+            
+            
+              /
+            
+            2
+            ν
+          
+        
+        ,
+        
+        
+          ω
+          
+            z
+          
+        
+        =
+        
+          
+            
+              α
+              Γ
+            
+            
+              2
+              π
+              ν
+            
+          
+        
+        
+          
+            
+              
+                η
+                
+                  3
+                
+              
+              
+                e
+                
+                  −
+                  η
+                  −
+                  3
+                  Ei
+                  ⁡
+                  (
+                  −
+                  η
+                  )
+                
+              
+            
+            
+              g
+              (
+              ∞
+              )
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \omega _{r}=0,\quad \omega _{\theta }=-{\frac {6\alpha ^{2}}{\nu }}rze^{-\alpha r^{2}/2\nu },\quad \omega _{z}={\frac {\alpha \Gamma }{2\pi \nu }}{\frac {\eta ^{3}e^{-\eta -3\operatorname {Ei} (-\eta )}}{g(\infty )}}.}
+  
+
+The pressure field 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ with respect to its central value 
+  
+    
+      
+        
+          p
+          
+            0
+          
+        
+      
+    
+    {\displaystyle p_{0}}
+  
+ is given by
+
+  
+    
+      
+        
+          
+            
+              p
+              −
+              
+                p
+                
+                  0
+                
+              
+            
+            ρ
+          
+        
+        =
+        −
+        
+          
+            
+              α
+              
+                2
+              
+            
+            2
+          
+        
+        (
+        
+          r
+          
+            2
+          
+        
+        +
+        4
+        
+          z
+          
+            2
+          
+        
+        )
+        −
+        
+          
+            
+              18
+              
+                ν
+                
+                  2
+                
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+        (
+        1
+        −
+        
+          e
+          
+            −
+            α
+            
+              r
+              
+                2
+              
+            
+            
+              /
+            
+            2
+            ν
+          
+        
+        )
+        +
+        
+          ∫
+          
+            0
+          
+          
+            r
+          
+        
+        
+          
+            
+              v
+              
+                θ
+              
+              
+                2
+              
+            
+            r
+          
+        
+        d
+        r
+        ,
+      
+    
+    {\displaystyle {\frac {p-p_{0}}{\rho }}=-{\frac {\alpha ^{2}}{2}}(r^{2}+4z^{2})-{\frac {18\nu ^{2}}{r^{2}}}(1-e^{-\alpha r^{2}/2\nu })+\int _{0}^{r}{\frac {v_{\theta }^{2}}{r}}dr,}
+  
+
+where 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is the fluid density. The first term on the right-hand side corresponds to the potential flow motion, i.e., 
+  
+    
+      
+        (
+        
+          v
+          
+            r
+          
+        
+        ,
+        
+          v
+          
+            θ
+          
+        
+        ,
+        
+          v
+          
+            z
+          
+        
+        )
+        =
+        (
+        −
+        α
+        r
+        ,
+        0
+        ,
+        2
+        α
+        z
+        )
+      
+    
+    {\displaystyle (v_{r},v_{\theta },v_{z})=(-\alpha r,0,2\alpha z)}
+  
+, whereas the remaining two terms originates from the motion associated with the Sullivan vortex.
+
+Sullivan vortex in cylindrical stagnation surfaces
+Explicit solution of the Navier–Stokes equations for the Sullivan vortex in stretched cylindrical stagnation surfaces was solved by P. Rajamanickam and A. D. Weiss and is given by
+
+  
+    
+      
+        
+          v
+          
+            r
+          
+        
+        =
+        −
+        α
+        
+          (
+          
+            r
+            −
+            
+              
+                
+                  r
+                  
+                    s
+                  
+                  
+                    2
+                  
+                
+                r
+              
+            
+          
+          )
+        
+        +
+        
+          
+            
+              2
+              ν
+            
+            r
+          
+        
+        f
+        (
+        η
+        )
+        ,
+      
+    
+    {\displaystyle v_{r}=-\alpha \left(r-{\frac {r_{s}^{2}}{r}}\right)+{\frac {2\nu }{r}}f(\eta ),}
+  
+
+  
+    
+      
+        
+          v
+          
+            z
+          
+        
+        =
+        2
+        α
+        z
+        
+          [
+          
+            1
+            −
+            
+              f
+              ′
+            
+            (
+            η
+            )
+          
+          ]
+        
+        ,
+      
+    
+    {\displaystyle v_{z}=2\alpha z\left[1-f'(\eta )\right],}
+  
+
+  
+    
+      
+        
+          v
+          
+            θ
+          
+        
+        =
+        
+          
+            Γ
+            
+              2
+              π
+              r
+            
+          
+        
+        
+          
+            
+              g
+              (
+              η
+              )
+            
+            
+              g
+              (
+              ∞
+              )
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle v_{\theta }={\frac {\Gamma }{2\pi r}}{\frac {g(\eta )}{g(\infty )}},}
+  
+
+where 
+  
+    
+      
+        η
+        =
+        α
+        
+          r
+          
+            2
+          
+        
+        
+          /
+        
+        (
+        2
+        ν
+        )
+      
+    
+    {\displaystyle \eta =\alpha r^{2}/(2\nu )}
+  
+,
+
+  
+    
+      
+        f
+        (
+        η
+        )
+        =
+        (
+        3
+        −
+        
+          η
+          
+            s
+          
+        
+        )
+        (
+        1
+        −
+        
+          e
+          
+            −
+            η
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle f(\eta )=(3-\eta _{s})(1-e^{-\eta }),}
+  
+
+  
+    
+      
+        g
+        (
+        η
+        )
+        =
+        
+          ∫
+          
+            0
+          
+          
+            η
+          
+        
+        
+          t
+          
+            3
+          
+        
+        
+          e
+          
+            −
+            t
+            −
+            (
+            3
+            −
+            
+              η
+              
+                s
+              
+            
+            )
+            Ei
+            ⁡
+            (
+            −
+            t
+            )
+          
+        
+        
+        
+          d
+        
+        t
+        .
+      
+    
+    {\displaystyle g(\eta )=\int _{0}^{\eta }t^{3}e^{-t-(3-\eta _{s})\operatorname {Ei} (-t)}\,\mathrm {d} t.}
+  
+
+Note that the location of the stagnation cylindrical surface is not longer given by 
+  
+    
+      
+        r
+        =
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r=r_{s}}
+  
+(or equivalently 
+  
+    
+      
+        η
+        =
+        
+          η
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \eta =\eta _{s}}
+  
+), but is given by
+
+  
+    
+      
+        
+          η
+          
+            stag
+          
+        
+        =
+        3
+        +
+        
+          W
+          
+            0
+          
+        
+        [
+        
+          e
+          
+            −
+            3
+          
+        
+        (
+        
+          η
+          
+            s
+          
+        
+        −
+        3
+        )
+        ]
+      
+    
+    {\displaystyle \eta _{\operatorname {stag} }=3+W_{0}[e^{-3}(\eta _{s}-3)]}
+  
+
+where 
+  
+    
+      
+        
+          W
+          
+            0
+          
+        
+      
+    
+    {\displaystyle W_{0}}
+  
+ is the principal branch of the Lambert W function. Thus, 
+  
+    
+      
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r_{s}}
+  
+ here should be interpreted as the measure of the volumetric source strength 
+  
+    
+      
+        Q
+        =
+        2
+        π
+        α
+        
+          r
+          
+            s
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle Q=2\pi \alpha r_{s}^{2}}
+  
+ and not the location of the stagnation surface. Here, the vorticity components of the Sullivan vortex are given by
+
+  
+    
+      
+        
+          ω
+          
+            r
+          
+        
+        =
+        0
+        ,
+        
+        
+          ω
+          
+            θ
+          
+        
+        =
+        −
+        
+          
+            
+              2
+              
+                α
+                
+                  2
+                
+              
+            
+            ν
+          
+        
+        
+          (
+          
+            3
+            −
+            
+              
+                
+                  α
+                  
+                    r
+                    
+                      s
+                    
+                    
+                      2
+                    
+                  
+                
+                
+                  2
+                  ν
+                
+              
+            
+          
+          )
+        
+        r
+        z
+        
+          e
+          
+            −
+            α
+            
+              r
+              
+                2
+              
+            
+            
+              /
+            
+            2
+            ν
+          
+        
+        ,
+        
+        
+          ω
+          
+            z
+          
+        
+        =
+        
+          
+            
+              α
+              Γ
+            
+            
+              2
+              π
+              ν
+            
+          
+        
+        
+          
+            
+              
+                η
+                
+                  3
+                
+              
+              
+                e
+                
+                  −
+                  η
+                  +
+                  (
+                  
+                    η
+                    
+                      s
+                    
+                  
+                  −
+                  3
+                  )
+                  Ei
+                  ⁡
+                  (
+                  −
+                  η
+                  )
+                
+              
+            
+            
+              g
+              (
+              ∞
+              )
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \omega _{r}=0,\quad \omega _{\theta }=-{\frac {2\alpha ^{2}}{\nu }}\left(3-{\frac {\alpha r_{s}^{2}}{2\nu }}\right)rze^{-\alpha r^{2}/2\nu },\quad \omega _{z}={\frac {\alpha \Gamma }{2\pi \nu }}{\frac {\eta ^{3}e^{-\eta +(\eta _{s}-3)\operatorname {Ei} (-\eta )}}{g(\infty )}}.}

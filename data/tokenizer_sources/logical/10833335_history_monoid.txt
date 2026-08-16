@@ -1,0 +1,1319 @@
+In mathematics and computer science, a history monoid is a way of representing the histories of concurrently running computer processes as a collection of strings, each string representing the individual history of a process. The history monoid provides a set of synchronization primitives (such as locks, mutexes or thread joins) for providing rendezvous points between a set of independently executing processes or threads.
+History monoids occur in the theory of concurrent computation, and provide a low-level mathematical foundation for process calculi, such as CSP the language of communicating sequential processes, or CCS, the calculus of communicating systems. History monoids were first presented by M.W. Shields.
+History monoids are isomorphic to trace monoids (free partially commutative monoids) and to the monoid of dependency graphs. As such, they are free objects and are universal. The history monoid is a type of semi-abelian categorical product in the category of monoids.
+
+Product monoids and projection
+Let 
+
+  
+    
+      
+        A
+        =
+        (
+        
+          Σ
+          
+            1
+          
+        
+        ,
+        
+          Σ
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          Σ
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle A=(\Sigma _{1},\Sigma _{2},\ldots ,\Sigma _{n})}
+  
+
+denote an n-tuple of (not necessarily pairwise disjoint) alphabets 
+  
+    
+      
+        
+          Σ
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Sigma _{k}}
+  
+. Let 
+  
+    
+      
+        P
+        (
+        A
+        )
+      
+    
+    {\displaystyle P(A)}
+  
+ denote all possible combinations of one finite-length string from each alphabet:
+
+  
+    
+      
+        P
+        (
+        A
+        )
+        =
+        
+          Σ
+          
+            1
+          
+          
+            ∗
+          
+        
+        ×
+        
+          Σ
+          
+            2
+          
+          
+            ∗
+          
+        
+        ×
+        ⋯
+        ×
+        
+          Σ
+          
+            n
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle P(A)=\Sigma _{1}^{*}\times \Sigma _{2}^{*}\times \cdots \times \Sigma _{n}^{*}}
+  
+
+(In more formal language, 
+  
+    
+      
+        P
+        (
+        A
+        )
+      
+    
+    {\displaystyle P(A)}
+  
+ is the Cartesian product of the free monoids of the 
+  
+    
+      
+        
+          Σ
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Sigma _{k}}
+  
+. The superscript star is the Kleene star.) Composition in the product monoid is component-wise, so that, for
+
+  
+    
+      
+        
+          u
+        
+        =
+        (
+        
+          u
+          
+            1
+          
+        
+        ,
+        
+          u
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          u
+          
+            n
+          
+        
+        )
+        
+      
+    
+    {\displaystyle \mathbf {u} =(u_{1},u_{2},\ldots ,u_{n})\,}
+  
+
+and
+
+  
+    
+      
+        
+          v
+        
+        =
+        (
+        
+          v
+          
+            1
+          
+        
+        ,
+        
+          v
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          v
+          
+            n
+          
+        
+        )
+        
+      
+    
+    {\displaystyle \mathbf {v} =(v_{1},v_{2},\ldots ,v_{n})\,}
+  
+
+then
+
+  
+    
+      
+        
+          u
+          v
+        
+        =
+        (
+        
+          u
+          
+            1
+          
+        
+        
+          v
+          
+            1
+          
+        
+        ,
+        
+          u
+          
+            2
+          
+        
+        
+          v
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          u
+          
+            n
+          
+        
+        
+          v
+          
+            n
+          
+        
+        )
+        
+      
+    
+    {\displaystyle \mathbf {uv} =(u_{1}v_{1},u_{2}v_{2},\ldots ,u_{n}v_{n})\,}
+  
+
+for all 
+  
+    
+      
+        
+          u
+        
+        ,
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {u} ,\mathbf {v} }
+  
+ in 
+  
+    
+      
+        P
+        (
+        A
+        )
+      
+    
+    {\displaystyle P(A)}
+  
+. Define the union alphabet to be
+
+  
+    
+      
+        Σ
+        =
+        
+          Σ
+          
+            1
+          
+        
+        ∪
+        
+          Σ
+          
+            2
+          
+        
+        ∪
+        ⋯
+        ∪
+        
+          Σ
+          
+            n
+          
+        
+        .
+        
+      
+    
+    {\displaystyle \Sigma =\Sigma _{1}\cup \Sigma _{2}\cup \cdots \cup \Sigma _{n}.\,}
+  
+
+(The union here is the set union, not the disjoint union.) Given any string 
+  
+    
+      
+        w
+        ∈
+        
+          Σ
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle w\in \Sigma ^{*}}
+  
+, we can pick out just the letters in some 
+  
+    
+      
+        
+          Σ
+          
+            k
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \Sigma _{k}^{*}}
+  
+ using the corresponding string projection 
+  
+    
+      
+        
+          π
+          
+            k
+          
+        
+        :
+        
+          Σ
+          
+            ∗
+          
+        
+        →
+        
+          Σ
+          
+            k
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \pi _{k}:\Sigma ^{*}\to \Sigma _{k}^{*}}
+  
+. A distribution 
+  
+    
+      
+        π
+        :
+        
+          Σ
+          
+            ∗
+          
+        
+        →
+        P
+        (
+        A
+        )
+      
+    
+    {\displaystyle \pi :\Sigma ^{*}\to P(A)}
+  
+ is the mapping that operates on 
+  
+    
+      
+        w
+        ∈
+        
+          Σ
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle w\in \Sigma ^{*}}
+  
+ with all of the 
+  
+    
+      
+        
+          π
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \pi _{k}}
+  
+, separating it into components in each free monoid:
+
+  
+    
+      
+        π
+        (
+        w
+        )
+        ↦
+        (
+        
+          π
+          
+            1
+          
+        
+        (
+        w
+        )
+        ,
+        
+          π
+          
+            2
+          
+        
+        (
+        w
+        )
+        ,
+        …
+        ,
+        
+          π
+          
+            n
+          
+        
+        (
+        w
+        )
+        )
+        .
+        
+      
+    
+    {\displaystyle \pi (w)\mapsto (\pi _{1}(w),\pi _{2}(w),\ldots ,\pi _{n}(w)).\,}
+  
+
+Histories
+For every 
+  
+    
+      
+        a
+        ∈
+        Σ
+      
+    
+    {\displaystyle a\in \Sigma }
+  
+, the tuple 
+  
+    
+      
+        π
+        (
+        a
+        )
+      
+    
+    {\displaystyle \pi (a)}
+  
+ is called the elementary history of a. It serves as an indicator function for the inclusion of a letter a in an alphabet 
+  
+    
+      
+        
+          Σ
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Sigma _{k}}
+  
+. That is,
+
+  
+    
+      
+        π
+        (
+        a
+        )
+        =
+        (
+        
+          a
+          
+            1
+          
+        
+        ,
+        
+          a
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle \pi (a)=(a_{1},a_{2},\ldots ,a_{n})}
+  
+
+where
+
+  
+    
+      
+        
+          a
+          
+            k
+          
+        
+        =
+        
+          
+            {
+            
+              
+                
+                  a
+                  
+                    
+                       if 
+                    
+                  
+                  a
+                  ∈
+                  
+                    Σ
+                    
+                      k
+                    
+                  
+                
+              
+              
+                
+                  ε
+                  
+                    
+                       otherwise 
+                    
+                  
+                  .
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle a_{k}={\begin{cases}a{\mbox{ if }}a\in \Sigma _{k}\\\varepsilon {\mbox{ otherwise }}.\end{cases}}}
+  
+
+Here, 
+  
+    
+      
+        ε
+      
+    
+    {\displaystyle \varepsilon }
+  
+ denotes the empty string.  The history monoid 
+  
+    
+      
+        H
+        (
+        A
+        )
+      
+    
+    {\displaystyle H(A)}
+  
+ is the submonoid of the product monoid 
+  
+    
+      
+        P
+        (
+        A
+        )
+      
+    
+    {\displaystyle P(A)}
+  
+ generated by the elementary histories: 
+  
+    
+      
+        H
+        (
+        A
+        )
+        =
+        {
+        π
+        (
+        a
+        )
+        
+          |
+        
+        a
+        ∈
+        Σ
+        
+          }
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle H(A)=\{\pi (a)|a\in \Sigma \}^{*}}
+  
+ (where the superscript star is the Kleene star applied with a component-wise definition of composition as given above). The elements of  
+  
+    
+      
+        H
+        (
+        A
+        )
+      
+    
+    {\displaystyle H(A)}
+  
+ are called global histories, and the projections of a global history are called individual histories.
+
+Connection to computer science
+The use of the word history in this context, and the connection to concurrent computing, can be understood as follows. An individual history is a record of the sequence of states of a process (or thread or machine); the alphabet 
+  
+    
+      
+        
+          Σ
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Sigma _{k}}
+  
+ is the set of states of the process.
+A letter that occurs in two or more alphabets serves as a synchronization primitive between the various individual histories. That is, if such a letter occurs in one individual history, it must also occur in another history, and serves to "tie" or "rendezvous" them together.
+Consider, for example, 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+        =
+        {
+        a
+        ,
+        b
+        ,
+        c
+        }
+      
+    
+    {\displaystyle \Sigma _{1}=\{a,b,c\}}
+  
+ and 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+        =
+        {
+        a
+        ,
+        d
+        ,
+        e
+        }
+      
+    
+    {\displaystyle \Sigma _{2}=\{a,d,e\}}
+  
+. The union alphabet is of course 
+  
+    
+      
+        Σ
+        =
+        {
+        a
+        ,
+        b
+        ,
+        c
+        ,
+        d
+        ,
+        e
+        }
+      
+    
+    {\displaystyle \Sigma =\{a,b,c,d,e\}}
+  
+. The elementary histories are 
+  
+    
+      
+        (
+        a
+        ,
+        a
+        )
+      
+    
+    {\displaystyle (a,a)}
+  
+, 
+  
+    
+      
+        (
+        b
+        ,
+        ε
+        )
+      
+    
+    {\displaystyle (b,\varepsilon )}
+  
+, 
+  
+    
+      
+        (
+        c
+        ,
+        ε
+        )
+      
+    
+    {\displaystyle (c,\varepsilon )}
+  
+, 
+  
+    
+      
+        (
+        ε
+        ,
+        d
+        )
+      
+    
+    {\displaystyle (\varepsilon ,d)}
+  
+ and 
+  
+    
+      
+        (
+        ε
+        ,
+        e
+        )
+      
+    
+    {\displaystyle (\varepsilon ,e)}
+  
+.  In this example, an individual history of the first process might be 
+  
+    
+      
+        b
+        c
+        b
+        c
+        c
+      
+    
+    {\displaystyle bcbcc}
+  
+ while the individual history of the second machine might be 
+  
+    
+      
+        d
+        d
+        d
+        e
+        d
+      
+    
+    {\displaystyle ddded}
+  
+. Both of these individual histories are represented by the global history 
+  
+    
+      
+        b
+        c
+        b
+        d
+        d
+        d
+        c
+        c
+        e
+        d
+      
+    
+    {\displaystyle bcbdddcced}
+  
+, since the projection of this string onto the individual alphabets yields the individual histories. In the global history, the letters 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ and 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ can be considered to commute with the letters 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ and 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+, in that these can be rearranged without changing the individual histories. Such commutation is simply a statement that the first and second processes are running concurrently, and are unordered with respect to each other; they have not (yet) exchanged any messages or performed any synchronization.
+The letter 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ serves as a synchronization primitive, as its occurrence marks a spot in both the global and individual histories, that cannot be commuted across. Thus, while the letters 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ and 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ can be re-ordered past 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ and 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+, they cannot be reordered past 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+. Thus, the global history 
+  
+    
+      
+        b
+        c
+        d
+        a
+        b
+        e
+      
+    
+    {\displaystyle bcdabe}
+  
+ and the global history 
+  
+    
+      
+        b
+        d
+        c
+        a
+        e
+        b
+      
+    
+    {\displaystyle bdcaeb}
+  
+ both have as individual histories 
+  
+    
+      
+        b
+        c
+        a
+        b
+      
+    
+    {\displaystyle bcab}
+  
+ and 
+  
+    
+      
+        d
+        a
+        e
+      
+    
+    {\displaystyle dae}
+  
+, indicating that the execution of 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ may happen before or after 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+. However, the letter 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is synchronizing, so that 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ is guaranteed to happen after 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+, even though 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ is in a different process than 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+.
+
+Properties
+A history monoid is isomorphic to a trace monoid, and as such, is a type of semi-abelian categorical product in the category of monoids.  In particular, the history monoid 
+  
+    
+      
+        H
+        (
+        
+          Σ
+          
+            1
+          
+        
+        ,
+        
+          Σ
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          Σ
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle H(\Sigma _{1},\Sigma _{2},\ldots ,\Sigma _{n})}
+  
+ is isomorphic to the trace monoid 
+  
+    
+      
+        
+          M
+        
+        (
+        D
+        )
+      
+    
+    {\displaystyle \mathbb {M} (D)}
+  
+ with the dependency relation given by
+
+  
+    
+      
+        D
+        =
+        
+          (
+          
+            
+              Σ
+              
+                1
+              
+            
+            ×
+            
+              Σ
+              
+                1
+              
+            
+          
+          )
+        
+        ∪
+        
+          (
+          
+            
+              Σ
+              
+                2
+              
+            
+            ×
+            
+              Σ
+              
+                2
+              
+            
+          
+          )
+        
+        ∪
+        ⋯
+        ∪
+        
+          (
+          
+            
+              Σ
+              
+                n
+              
+            
+            ×
+            
+              Σ
+              
+                n
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle D=\left(\Sigma _{1}\times \Sigma _{1}\right)\cup \left(\Sigma _{2}\times \Sigma _{2}\right)\cup \cdots \cup \left(\Sigma _{n}\times \Sigma _{n}\right).}
+  
+
+In simple terms, this is just the formal statement of the informal discussion given above: the letters in an alphabet 
+  
+    
+      
+        
+          Σ
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Sigma _{k}}
+  
+ can be commutatively re-ordered past the letters in an alphabet 
+  
+    
+      
+        
+          Σ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \Sigma _{j}}
+  
+, unless they are letters that occur in both alphabets. Thus, traces are exactly global histories, and vice versa.
+Conversely, given any trace monoid 
+  
+    
+      
+        
+          M
+        
+        (
+        D
+        )
+      
+    
+    {\displaystyle \mathbb {M} (D)}
+  
+, one can construct an isomorphic history monoid by taking a sequence of alphabets 
+  
+    
+      
+        
+          Σ
+          
+            a
+            ,
+            b
+          
+        
+        =
+        {
+        a
+        ,
+        b
+        }
+      
+    
+    {\displaystyle \Sigma _{a,b}=\{a,b\}}
+  
+ where 
+  
+    
+      
+        (
+        a
+        ,
+        b
+        )
+      
+    
+    {\displaystyle (a,b)}
+  
+ ranges over all pairs in 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+.

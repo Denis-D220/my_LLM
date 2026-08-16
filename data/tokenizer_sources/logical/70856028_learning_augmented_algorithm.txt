@@ -1,0 +1,482 @@
+A learning augmented algorithm (also called algorithm with predictions) is an algorithm that can make use of a prediction to improve its performance.
+Whereas in regular algorithms just the problem instance is inputted, learning augmented algorithms accept an extra parameter.
+This extra parameter often is a prediction of some property of the solution.
+This prediction is then used by the algorithm to improve its running time or the quality of its output. The most common application are online algorithms, 
+where a prediction on the uncertain instance is provided.
+
+Description
+A learning augmented algorithm typically takes an input 
+  
+    
+      
+        (
+        
+          
+            I
+          
+        
+        ,
+        
+          
+            A
+          
+        
+        )
+      
+    
+    {\displaystyle ({\mathcal {I}},{\mathcal {A}})}
+  
+. Here 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ is a problem instance and 
+  
+    
+      
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathcal {A}}}
+  
+ is the prediction.
+A prediction can be any object. Common are the following types:
+
+Prediction of an optimal solution. The prediction gives a solution to the problem or characterizes an optimal solution.
+Prediction of the input. This is mainly used for online problems.
+Prediction of algorithmic actions. A prediction tailored to a specific algorithm that suggests a specific algorithm execution.
+Learning augmented algorithms usually satisfy the following three properties: 
+
+Consistency. A learning augmented algorithm is said to be consistent if the algorithm can be proven to have a good performance when it is provided with an accurate prediction.
+Smoothness. A learning augmented algorithm is called smooth if its performance can be bounded by a function of the quality of the prediction. Here, the quality can be measured in a problem specific way. This is also called the prediction error.
+Robustness. A learning augmented algorithm is called robust if its worst-case performance can be bounded even if the given prediction is inaccurate.
+Learning augmented algorithms generally do not prescribe how the prediction should be done. For this purpose machine learning can be used.
+
+Applications
+A few examples of problems where learning augmented algorithms have been applied are the following.
+
+Online algorithms
+The ski rental problem
+The weighted paging problem
+The set cover problem
+Nonclairvoyant scheduling
+The online bipartite matching problem
+
+Warm starting
+
+Data structures
+The binary search algorithm is an algorithm for finding elements of a sorted list 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            n
+          
+        
+      
+    
+    {\displaystyle x_{1},\ldots ,x_{n}}
+  
+. It needs 
+  
+    
+      
+        O
+        (
+        log
+        ⁡
+        (
+        n
+        )
+        )
+      
+    
+    {\displaystyle O(\log(n))}
+  
+ steps to find an element with some known value 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ in a list of length 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+.
+With a prediction 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ for the position of 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+, the following learning augmented algorithm can be used.
+
+First, look at position 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ in the list. If 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        =
+        y
+      
+    
+    {\displaystyle x_{i}=y}
+  
+, the element has been found.
+If 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        <
+        y
+      
+    
+    {\displaystyle x_{i}<y}
+  
+, look at positions 
+  
+    
+      
+        i
+        +
+        1
+        ,
+        i
+        +
+        2
+        ,
+        i
+        +
+        4
+        ,
+        …
+      
+    
+    {\displaystyle i+1,i+2,i+4,\ldots }
+  
+ until an index 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+ with 
+  
+    
+      
+        
+          x
+          
+            j
+          
+        
+        ≥
+        y
+      
+    
+    {\displaystyle x_{j}\geq y}
+  
+ is found.
+Now perform a binary search on 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            j
+          
+        
+      
+    
+    {\displaystyle x_{i},\ldots ,x_{j}}
+  
+.
+If 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        >
+        y
+      
+    
+    {\displaystyle x_{i}>y}
+  
+, do the same as in the previous case, but instead consider 
+  
+    
+      
+        i
+        −
+        1
+        ,
+        i
+        −
+        2
+        ,
+        i
+        −
+        4
+        ,
+        …
+      
+    
+    {\displaystyle i-1,i-2,i-4,\ldots }
+  
+.
+The error is defined to be 
+  
+    
+      
+        η
+        =
+        
+          |
+        
+        i
+        −
+        
+          i
+          
+            ∗
+          
+        
+        
+          |
+        
+      
+    
+    {\displaystyle \eta =|i-i^{*}|}
+  
+, where 
+  
+    
+      
+        
+          i
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle i^{*}}
+  
+ is the real index of 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+.
+In the learning augmented algorithm, probing the positions 
+  
+    
+      
+        i
+        +
+        1
+        ,
+        i
+        +
+        2
+        ,
+        i
+        +
+        4
+        ,
+        …
+      
+    
+    {\displaystyle i+1,i+2,i+4,\ldots }
+  
+ takes 
+  
+    
+      
+        
+          log
+          
+            2
+          
+        
+        ⁡
+        (
+        η
+        )
+      
+    
+    {\displaystyle \log _{2}(\eta )}
+  
+ steps.
+Then a binary search is performed on a list of size at most 
+  
+    
+      
+        2
+        η
+      
+    
+    {\displaystyle 2\eta }
+  
+, which takes 
+  
+    
+      
+        
+          log
+          
+            2
+          
+        
+        ⁡
+        (
+        η
+        )
+      
+    
+    {\displaystyle \log _{2}(\eta )}
+  
+ steps. This makes the total running time of the algorithm 
+  
+    
+      
+        2
+        
+          log
+          
+            2
+          
+        
+        ⁡
+        (
+        η
+        )
+      
+    
+    {\displaystyle 2\log _{2}(\eta )}
+  
+.
+So, when the error is small, the algorithm is faster than a normal binary search. This shows that the algorithm is consistent.
+Even in the worst case, the error will be at most 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+. Then the algorithm takes at most 
+  
+    
+      
+        O
+        (
+        log
+        ⁡
+        (
+        n
+        )
+        )
+      
+    
+    {\displaystyle O(\log(n))}
+  
+ steps, so the algorithm is robust.
+
+More examples
+The maximum weight matching problem
+
+Approximation algorithms
+The maximum cut problem
+The vertex cover problem
+
+Mechanism Design
+The facility location problem

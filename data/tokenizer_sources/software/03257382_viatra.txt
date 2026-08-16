@@ -1,0 +1,32 @@
+VIATRA 
+is an open-source model transformation framework based on the Eclipse Modeling Framework (EMF) and hosted by the Eclipse Foundation.
+VIATRA supports the development of model transformations with specific focus on event-driven, 
+reactive transformations, i.e., rule-based scenarios where transformations occur as reactions to 
+certain external changes in the model.
+Building upon an incremental query support for locating patterns 
+and changes in the model, 
+VIATRA offers a language (the VIATRA Query Language, VQL) to define transformations and a reactive transformation 
+engine to execute certain transformations upon changes in the underlying model.
+
+Application domains
+VIATRA, as an open-source framework offering, serves as a central 
+integration point and enabler engine in various applications, both in an industrial and in an academic context. Earlier versions of the framework have been intensively used for providing tool support for developing and verifying critical embedded systems in numerous European research projects such as DECOS, MOGENTES, INDEXYS and SecureChange.
+As a major industrial application of VIATRA, it is utilized as the underlying model querying and transformation engine of the IncQuery Suite. Thus, VIATRA is a key technical component in several industrial collaborations around model-based systems engineering (MBSE), fostering innovative systems engineering practices in domains like aerospace, manufacturing, industrial automation and automotive. Furthermore, via the applications of the IncQuery Suite, VIATRA serves as the foundation for model-based endeavors of ongoing, large-scale European industrial digitalization endeavors, such as the Arrowhead Tools and the Embrace projects.
+VIATRA is well integrated with Eclipse Modeling tools. However, VIATRA works outside the Eclipse environment as well, as demonstrated by the IncA project using the JetBrains MPS platform.
+
+Functionality
+VIATRA provides the following main services:
+
+An incremental query engine together with a graph pattern based language to specify and execute model queries efficiently.
+An internal DSL over the Xtend language to specify both batch and event-driven, reactive transformations.
+A model obfuscator to remove sensitive information from a confidential model (e.g., to create bug reports).
+
+Origins and history
+The current VIATRA project is a full rewrite of the previous VIATRA2 framework, coming with full compatibility and support for EMF models. The project features a History wiki page that describes the main differences between the different versions.
+As for applications of the earlier VIATRA2 framework, it served as the underlying model transformation engine of the DECOS European IP in the field of dependable embedded systems. Furthermore, a traditional application area for VIATRA2 – starting as early as 1998 – was to support the analysis of system models taken from various application areas (safety-critical and/or embedded systems, robust e-business applications, middleware, service-oriented architecture) described using various modeling languages (SysML, UML, BPMN, etc.) during a model-driven systems engineering process. Such a model analysis typically also includes the verification and validation, the testing, the safety and security analysis as well as the early assessment of non-functional characteristics (such as reliability, availability, responsiveness, throughput, etc.) of the system under design.
+These use-cases and application fields still constitute focal areas for VIATRA, mostly addressed via the IncQuery Suite as an interface on the user's end.
+
+Approach
+Since precise model-based systems development is the primary application area of VIATRA, it necessitates that (i) the model transformations are specified in a mathematically precise way, and (ii) these transformations are automated so that the target mathematical models can be derived fully automatically. To achieve this, VIATRA relies upon a mathematically precise rule-based specification formalism, namely, graph transformation (GT). VIATRA aims at invisible formal methods: here, formal details are hidden by automated model transformations projecting system models into various mathematical domains (and, preferably, vice versa).
+The basic concept in defining model transformations within VIATRA is the (graph) pattern. A pattern is a collection of model elements arranged into a certain structure fulfilling additional constraints (as defined by attribute conditions or other patterns). Patterns can be matched on certain model instances, and upon successful pattern matching, elementary model manipulation is specified by graph transformation rules. Like OCL, graph transformation rules describe pre- and postconditions to the transformations, but graph transformation rules are guaranteed to be executable, which is a main conceptual difference.
+In particular, as reactive, event-driven transformations are the current focus of VIATRA, VIATRA includes a rule execution engine which monitors changes (interpreted as events) in the model, and fires a rule whenever a change led to the fulfillment of the precondition for that rule (and, potentially, if some further control conditions are also met).

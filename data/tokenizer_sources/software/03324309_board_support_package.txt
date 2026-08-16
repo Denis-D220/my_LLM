@@ -1,0 +1,33 @@
+In embedded systems, a board support package (BSP) is the layer of software containing hardware-specific routines, such as boot loaders, device drivers, and sometimes kernels, that allow a given embedded operating system (often a real-time operating system) to function in a given hardware environment (a motherboard). The board support package is usually provided by the SoC manufacturer (such as Qualcomm), and may be modified by the OEM.
+
+Software
+Third-party hardware developers who wish to support a given embedded operating system must create a BSP that allows that embedded operating system to run on their platform. In most cases, the embedded operating system image—containing the BSP, software license, and hardware support—is bundled together by the hardware vendor. 
+BSPs are typically customizable, allowing the user to specify which drivers and routines should be included in the build based on their selection of hardware and software options. For instance, a particular single-board computer might be paired with several peripheral chips; in that case the BSP might include drivers for peripheral chips supported; when building the BSP image the user would specify which peripheral drivers to include based on their choice of hardware.
+Some suppliers also provide a root file system, a toolchain for building programs to run on the embedded system, and utilities to configure the device (while running) along with the BSP. Many embedded operating system providers provide template BSP's, developer assistance, and test suites to aid BSP developers to set up an embedded operating system on a new hardware platform. 
+Additionally, the BSP is supposed to perform the following operations:
+
+Initialize the processor
+Initialize the board
+Initialize the RAM
+Configure the segments
+Load and run OS from flash
+
+History
+The term BSP has been in use since 1981 when Hunter & Ready, the developers of the Versatile Real-Time Executive (VRTX), first coined the term to describe the hardware-dependent software needed to run VRTX on a specific hardware platform. Since the 1980s, it has been in wide use throughout the industry. Virtually all RTOS providers now use the term BSP. 
+In modern systems, the term has been extended to refer to packages that only deal with one processor, not the whole motherboard.
+
+Example
+The Wind River Systems board support package for the ARM Integrator 920T single-board computer contains, among other things, these elements:
+
+A config.h file, which defines constants such as ROM_SIZE and RAM_HIGH_ADRS.
+A Makefile, which defines binary versions of VxWorks ROM images for programming into flash memory.
+A boot ROM file, which defines the boot line parameters for the board.
+A target.ref file, which describes board-specific information such as switch and jumper settings, interrupt levels, and offset bias.
+A VxWorks image.
+Various C files, including:
+flashMem.c—the device driver for the board's flash memory
+pciIomapShow.c—mapping file for the PCI bus
+primeCellSio.c—TTY driver
+sysLib.c—system-dependent routines specific to this board
+romInit.s—ROM initialization module for the board; contains entry code for images that start running from ROM
+Windows CE and Android also use a BSP.

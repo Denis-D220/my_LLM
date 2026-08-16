@@ -1,0 +1,24 @@
+In computer science, execute in place (XIP) is a method of executing programs directly from long-term storage rather than copying it into RAM. It is an extension of using shared memory to reduce the total amount of memory required.
+Its general effect is that the program text consumes no writable memory, saving it for dynamic data, and that all instances of the program are run from a single copy.
+For this to work, several criteria have to be met:
+
+The storage must provide a similar interface to the CPU as regular memory (or an adaptive layer must be present).
+This interface must provide sufficiently fast read operations with a random access pattern.
+The file system, if one is used, needs to expose appropriate mapping functions.
+The program must either be linked to be aware of the address the storage appears at in the system or be position-independent.
+The program must not modify data within the loaded image.
+The storage requirements are usually met by using NOR flash memory or EEPROM, which can be byte-addressed for read operations, although it is a bit slower than normal system RAM in most setups.
+
+During boot
+
+In x86 systems, typically the first-stage bootloader is an XIP program that is linked to run at the address at which the flash chip(s) are mapped at power-up. It contains a minimal program to set up the system RAM (which depends on the components used on the individual boards and cannot be generalized enough so that the proper sequence could be embedded into the processor hardware) and then loads the second-stage bootloader or the OS kernel into RAM.
+During this initialization, writable memory may not be available, so all computations have to be performed within the processor registers. For this reason, first stage boot loaders tend to be written in assembly language and only do the minimum to provide a normal execution environment for the next program. Some processors either embed a small amount of SRAM in the chip itself, or allow using the onboard cache memory as RAM, to make this first stage boot loader easier to write using high-level language.
+For a kernel or bootloader, address space generally is assigned internally, so in order to use XIP for them, it is sufficient to instruct the linker to place unmodifiable and modifiable data in different address ranges and provide a mechanism for the modifiable data to be copied to writable memory before any code is run that assumes that data can be accessed normally. This can be done as part of the previous stage, or within a small code segment at the beginning of the program.
+If address space is assigned externally, such as in an application program that is run on a system that does not provide virtual memory, the compiler needs to access all modifiable data by adding an offset to a pointer to a private copy of the data area. In this case, the external loader is responsible for setting up the instance specific memory areas.
+In x86 systems, typically the BIOS / UEFI ROM is mapped to a fixed memory space upon power-on, and BIOS / UEFI in x86 systems use XIP to initialize the main memory. In ARM and RISC-V embedded systems, typically the SoC built-in boot ROM is mapped to a fixed memory space upon power-on, and the boot ROM can find and load an embedded bootloader such as Das U-Boot from NAND flash memory, and that boot process does not use a dedicated EEPROM chip.
+
+XIP as file system
+XIP places requirements on file systems that are often difficult to meet. In systems without a page table, the entire file must be stored within consecutive bytes and must not be fragmented, while flash based file systems often aim to distribute data into sectors of the flash chip that have the least erase cycles and even out the wear on the chip, prolonging its lifetime.
+All these complications and the speed tradeoff mean that XIP is generally only used for first stage bootloaders or when RAM is in extremely short supply. In particular, second through fourth generation video game consoles connect the ROM cartridge's address and data bus to that of the console, which lets (for example) the Atari 2600 work with only the 128 bytes of RAM in its joystick interface IC.
+A relatively new file system for Linux, called AXFS (Advanced XIP File System), aims to overcome some of the shortcomings associated with XIP, especially in regard to the in-place execution of user-space applications. For example, it makes it possible to split up an executable binary file into "XIP regions", thus avoiding the restriction of fragmentation that was mentioned above.
+A NetBSD implementation is also under development.

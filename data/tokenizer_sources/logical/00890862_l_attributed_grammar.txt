@@ -1,0 +1,126 @@
+L-attributed grammars are a special type of attribute grammars. They allow the attributes to be evaluated in one depth-first left-to-right traversal of the abstract syntax tree. As a result, attribute evaluation in L-attributed grammars can be incorporated conveniently in top-down parsing. 
+A syntax-directed definition is L-attributed if each inherited attribute of 
+  
+    
+      
+        
+          X
+          
+            j
+          
+        
+      
+    
+    {\displaystyle X_{j}}
+  
+ on the right side of 
+  
+    
+      
+        A
+        →
+        
+          X
+          
+            1
+          
+        
+        ,
+        
+          X
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            n
+          
+        
+      
+    
+    {\displaystyle A\rightarrow X_{1},X_{2},\dots ,X_{n}}
+  
+ depends only on 
+
+the attributes of the symbols 
+  
+    
+      
+        
+          X
+          
+            1
+          
+        
+        ,
+        
+          X
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            j
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle X_{1},X_{2},\dots ,X_{j-1}}
+  
+
+the inherited attributes of 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ (but not its synthesized attributes)
+Every S-attributed syntax-directed definition is also L-attributed.
+Implementing L-attributed definitions in Bottom-Up parsers requires rewriting L-attributed definitions into translation schemes.
+Many programming languages are L-attributed. Special types of compilers, the narrow compilers, are based on some form of L-attributed grammar. These are a strict superset of S-attributed grammars. Used for code synthesis.
+Either "inherited attributes" or "synthesized attributes" associated with the occurrence of symbol 
+  
+    
+      
+        
+          X
+          
+            1
+          
+        
+        ,
+        
+          X
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            n
+          
+        
+      
+    
+    {\displaystyle X_{1},X_{2},\dots ,X_{n}}
+  
+.

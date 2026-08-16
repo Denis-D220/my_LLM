@@ -1,0 +1,1023 @@
+In continuum mechanics, the Froude number (Fr, after William Froude, ) is a dimensionless number defined as the ratio of the flow inertia to the external force field (the latter in many applications simply due to gravity). The Froude number is based on the speed–length ratio which he defined as:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            u
+            
+              g
+              L
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {u}{\sqrt {gL}}}}
+  
+
+where u is the local flow velocity (in m/s), g is the local gravity field (in m/s2), and L is a characteristic length (in m).
+The Froude number has some analogy with the Mach number. In theoretical fluid dynamics the Froude number is not frequently considered since usually the equations are considered in the high Froude limit of negligible external field, leading to homogeneous equations that preserve the mathematical aspects. For example, homogeneous Euler equations are conservation equations.
+However, in naval architecture the Froude number is a significant figure used to determine the resistance of a partially submerged object moving through water.
+
+Origins
+In open channel flows, Belanger 1828 introduced first the ratio of the flow velocity to the square root of the gravity acceleration times the flow depth. When the ratio was less than unity, the flow behaved like a fluvial motion (i.e., subcritical flow), and like a torrential flow motion when the ratio was greater than unity.
+
+ Quantifying resistance of floating objects is generally credited to William Froude, who used a series of scale models to measure the resistance each model offered when towed at a given speed. The naval constructor Frederic Reech had put forward the concept much earlier in 1852 for testing ships and propellers but Froude was unaware of it. Speed–length ratio was originally defined by Froude in his Law of Comparison in 1868 in dimensional terms as:
+
+  
+    
+      
+        
+          speed–length ratio
+        
+        =
+        
+          
+            u
+            
+              LWL
+            
+          
+        
+      
+    
+    {\displaystyle {\text{speed–length ratio}}={\frac {u}{\sqrt {\text{LWL}}}}}
+  
+
+where:
+
+u = flow speed
+LWL = length of waterline
+The term was converted into non-dimensional terms and was given Froude's name in recognition of the work he did. In France, it is sometimes called Reech–Froude number after Frederic Reech.
+
+Definition and main application
+To show how the Froude number is linked to general continuum mechanics and not only to hydrodynamics we start from the Cauchy momentum equation in its dimensionless (nondimensional) form.
+
+Cauchy momentum equation
+
+In order to make the equations dimensionless, a characteristic length r0, and a characteristic velocity u0, need to be defined. These should be chosen such that the dimensionless variables are all of order one. The following dimensionless variables are thus obtained:
+
+  
+    
+      
+        
+          ρ
+          
+            ∗
+          
+        
+        ≡
+        
+          
+            ρ
+            
+              ρ
+              
+                0
+              
+            
+          
+        
+        ,
+        
+        
+          u
+          
+            ∗
+          
+        
+        ≡
+        
+          
+            u
+            
+              u
+              
+                0
+              
+            
+          
+        
+        ,
+        
+        
+          r
+          
+            ∗
+          
+        
+        ≡
+        
+          
+            r
+            
+              r
+              
+                0
+              
+            
+          
+        
+        ,
+        
+        
+          t
+          
+            ∗
+          
+        
+        ≡
+        
+          
+            
+              u
+              
+                0
+              
+            
+            
+              r
+              
+                0
+              
+            
+          
+        
+        t
+        ,
+        
+        
+          ∇
+          
+            ∗
+          
+        
+        ≡
+        
+          r
+          
+            0
+          
+        
+        ∇
+        ,
+        
+        
+          
+            g
+          
+          
+            ∗
+          
+        
+        ≡
+        
+          
+            
+              g
+            
+            
+              g
+              
+                0
+              
+            
+          
+        
+        ,
+        
+        
+          
+            σ
+          
+          
+            ∗
+          
+        
+        ≡
+        
+          
+            σ
+            
+              p
+              
+                0
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \rho ^{*}\equiv {\frac {\rho }{\rho _{0}}},\quad u^{*}\equiv {\frac {u}{u_{0}}},\quad r^{*}\equiv {\frac {r}{r_{0}}},\quad t^{*}\equiv {\frac {u_{0}}{r_{0}}}t,\quad \nabla ^{*}\equiv r_{0}\nabla ,\quad \mathbf {g} ^{*}\equiv {\frac {\mathbf {g} }{g_{0}}},\quad {\boldsymbol {\sigma }}^{*}\equiv {\frac {\boldsymbol {\sigma }}{p_{0}}},}
+  
+
+Substitution of these inverse relations in the Euler momentum equations, and definition of the Froude number:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            
+              u
+              
+                0
+              
+            
+            
+              
+                g
+                
+                  0
+                
+              
+              
+                r
+                
+                  0
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {u_{0}}{\sqrt {g_{0}r_{0}}}},}
+  
+
+and the Euler number:
+
+  
+    
+      
+        
+          E
+          u
+        
+        =
+        
+          
+            
+              p
+              
+                0
+              
+            
+            
+              
+                ρ
+                
+                  0
+                
+              
+              
+                u
+                
+                  0
+                
+                
+                  2
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \mathrm {Eu} ={\frac {p_{0}}{\rho _{0}u_{0}^{2}}},}
+  
+
+the equations are finally expressed (with the material derivative and now omitting the indexes):
+
+Cauchy-type equations in the high Froude limit Fr → ∞ (corresponding to negligible external field) are named free equations. On the other hand, in the low Euler limit Eu → 0 (corresponding to negligible stress) general Cauchy momentum equation becomes an inhomogeneous Burgers' equation (here we make explicit the material derivative):
+
+This is an inhomogeneous pure advection equation, as much as the Stokes equation is a pure diffusion equation.
+
+Euler momentum equation
+
+Euler momentum equation is a Cauchy momentum equation with the Pascal law being the stress constitutive relation:
+
+  
+    
+      
+        
+          σ
+        
+        =
+        p
+        
+          I
+        
+      
+    
+    {\displaystyle {\boldsymbol {\sigma }}=p\mathbf {I} }
+  
+
+in nondimensional Lagrangian form is:
+
+  
+    
+      
+        
+          
+            
+              D
+              
+                u
+              
+            
+            
+              D
+              t
+            
+          
+        
+        +
+        
+          E
+          u
+        
+        
+          
+            
+              ∇
+              p
+            
+            ρ
+          
+        
+        =
+        
+          
+            1
+            
+              
+                F
+                r
+              
+              
+                2
+              
+            
+          
+        
+        
+          
+            
+              g
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {D\mathbf {u} }{Dt}}+\mathrm {Eu} {\frac {\nabla p}{\rho }}={\frac {1}{\mathrm {Fr} ^{2}}}{\hat {g}}}
+  
+
+Free Euler equations are conservative. The limit of high Froude numbers (low external field) is thus notable and can be studied with perturbation theory.
+
+Incompressible Navier–Stokes momentum equation
+
+Incompressible Navier–Stokes momentum equation is a Cauchy momentum equation with the Pascal law and Stokes's law being the stress constitutive relations:
+
+  
+    
+      
+        
+          σ
+        
+        =
+        p
+        
+          I
+        
+        +
+        μ
+        
+          (
+          
+            ∇
+            
+              u
+            
+            +
+            (
+            ∇
+            
+              u
+            
+            
+              )
+              
+                
+                  T
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle {\boldsymbol {\sigma }}=p\mathbf {I} +\mu \left(\nabla \mathbf {u} +(\nabla \mathbf {u} )^{\mathsf {T}}\right)}
+  
+
+in nondimensional convective form it is:
+
+  
+    
+      
+        
+          
+            
+              D
+              
+                u
+              
+            
+            
+              D
+              t
+            
+          
+        
+        +
+        
+          E
+          u
+        
+        
+          
+            
+              ∇
+              p
+            
+            ρ
+          
+        
+        =
+        
+          
+            1
+            
+              R
+              e
+            
+          
+        
+        
+          ∇
+          
+            2
+          
+        
+        u
+        +
+        
+          
+            1
+            
+              
+                F
+                r
+              
+              
+                2
+              
+            
+          
+        
+        
+          
+            
+              g
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {D\mathbf {u} }{Dt}}+\mathrm {Eu} {\frac {\nabla p}{\rho }}={\frac {1}{\mathrm {Re} }}\nabla ^{2}u+{\frac {1}{\mathrm {Fr} ^{2}}}{\hat {g}}}
+  
+
+where Re is the Reynolds number. Free Navier–Stokes equations are dissipative (non conservative).
+
+Other applications
+
+Ship hydrodynamics
+
+In marine hydrodynamic applications, the Froude number is usually referenced with the notation Fn and is defined as:
+
+  
+    
+      
+        
+          
+            F
+            n
+          
+          
+            L
+          
+        
+        =
+        
+          
+            u
+            
+              g
+              L
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \mathrm {Fn} _{L}={\frac {u}{\sqrt {gL}}},}
+  
+
+where u is the relative flow velocity between the sea and ship, g is in particular the acceleration due to gravity, and L is the length of the ship at the water line level, or Lwl in some notations. It is an important parameter with respect to the ship's drag, or resistance, especially in terms of wave making resistance.
+In the case of planing craft, where the waterline length is too speed-dependent to be meaningful, the Froude number is best defined as displacement Froude number and the reference length is taken as the cubic root of the volumetric displacement of the hull:
+
+  
+    
+      
+        
+          
+            F
+            n
+          
+          
+            V
+          
+        
+        =
+        
+          
+            u
+            
+              g
+              
+                
+                  V
+                  
+                    3
+                  
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \mathrm {Fn} _{V}={\frac {u}{\sqrt {g{\sqrt[{3}]{V}}}}}.}
+  
+
+Shallow water waves
+For shallow water waves, such as tsunamis and hydraulic jumps, the characteristic velocity U is the average flow velocity, averaged over the cross-section perpendicular to the flow direction. The wave velocity, termed celerity c, is equal to the square root of gravitational acceleration g, times cross-sectional area A, divided by free-surface width B:
+
+  
+    
+      
+        c
+        =
+        
+          
+            g
+            
+              
+                A
+                B
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle c={\sqrt {g{\frac {A}{B}}}},}
+  
+
+so the Froude number in shallow water is:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            U
+            
+              g
+              
+                
+                  
+                    A
+                    B
+                  
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {U}{\sqrt {g{\dfrac {A}{B}}}}}.}
+  
+
+For rectangular cross-sections with uniform depth d, the Froude number can be simplified to:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            U
+            
+              g
+              d
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {U}{\sqrt {gd}}}.}
+  
+
+For Fr < 1 the flow is called a subcritical flow, further for Fr > 1 the flow is characterised as supercritical flow. When Fr ≈ 1 the flow is denoted as critical flow.
+
+Wind engineering
+When considering wind effects on dynamically sensitive structures such as suspension bridges it is sometimes necessary to simulate the combined effect of the vibrating mass of the structure with the fluctuating force of the wind. In such cases, the Froude number should be respected. 
+Similarly, when simulating hot smoke plumes combined with natural wind, Froude number scaling is necessary to maintain the correct balance between buoyancy forces and the momentum of the wind.
+
+Allometry
+The Froude number has also been applied in allometry to studying the locomotion of terrestrial animals, including antelope and dinosaurs.
+
+Rotary kilns
+The Froude number in rotary kiln engineering is a parameter that characterizes the balance between centrifugal forces caused by kiln rotation and gravitational forces acting on the bed material. It is defined as:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            
+              
+                ω
+                
+                  2
+                
+              
+              
+                
+                  R
+                
+                
+                  i
+                
+              
+            
+            g
+          
+        
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {\omega ^{2}{R}_{i}}{g}}}
+  
+
+where ω is the angular velocity of the kiln (in rad/s), Ri is the kiln's internal radius, and g is the gravitational acceleration. It is used to describe the motion regime of the granular bed, so whether the solids slip, roll, cascade, cataract or are centrifuged to the shell. Low Froude numbers (typically Fr < 10−4) correspond to a slipping or slumping regime with very little mixing of the solid bed.
+Because particle motion governs mixing, heat and mass transfer as well as the residence time in the kiln, the Froude number serves as a key scaling parameter for rotary kilns. A similar Froude numbers is a good initial indication for a similar flow behavior and bed profile across laboratory, pilot and industrial rotary kilns.
+
+Extended Froude number
+Geophysical mass flows such as avalanches and debris flows take place on inclined slopes which then merge into gentle and flat run-out zones.
+So, these flows are associated with the elevation of the topographic slopes that induce the gravity potential energy together with the pressure potential energy during the flow. Therefore, the classical Froude number should include this additional effect. For such a situation, Froude number needs to be re-defined. The extended Froude number is defined as the ratio between the kinetic and the potential energy:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            u
+            
+              β
+              h
+              +
+              
+                s
+                
+                  g
+                
+              
+              
+                (
+                
+                  
+                    x
+                    
+                      d
+                    
+                  
+                  −
+                  x
+                
+                )
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {u}{\sqrt {\beta h+s_{g}\left(x_{d}-x\right)}}},}
+  
+
+where u is the mean flow velocity, β = gK cos ζ, (K is the earth pressure coefficient, ζ is the slope), sg = g sin ζ, x is the channel downslope position and 
+  
+    
+      
+        
+          x
+          
+            d
+          
+        
+      
+    
+    {\displaystyle x_{d}}
+  
+ is the distance from the point of the mass release along the channel to the point where the flow hits the horizontal reference datum; Eppot = βh and Egpot = sg(xd − x) are the pressure potential and gravity potential energies, respectively. In the classical definition of the shallow-water or granular flow Froude number, the potential energy associated with the surface elevation, Egpot, is not considered. The extended Froude number differs substantially from the classical Froude number for higher surface elevations. The term βh emerges from the change of the geometry of the moving mass along the slope. Dimensional analysis suggests that for shallow flows βh ≪ 1, while u and sg(xd − x) are both of order unity. If the mass is shallow with a virtually bed-parallel free-surface, then βh can be disregarded. In this situation, if the gravity potential is not taken into account, then Fr is unbounded even though the kinetic energy is bounded. So, formally considering the additional contribution due to the gravitational potential energy, the singularity in Fr is removed.
+
+Stirred tanks
+In the study of stirred tanks, the Froude number governs the formation of surface vortices. Since the impeller tip velocity is ωr (circular motion), where ω is the impeller frequency (usually in rpm) and r is the impeller radius (in engineering the diameter is much more frequently employed), the Froude number then takes the following form:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        ω
+        
+          
+            
+              r
+              g
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \mathrm {Fr} =\omega {\sqrt {\frac {r}{g}}}.}
+  
+
+The Froude number finds also a similar application in powder mixers. It will indeed be used to determine in which mixing regime the blender is working. If Fr<1, the particles are just stirred, but if Fr>1, centrifugal forces applied to the powder overcome gravity and the bed of particles becomes fluidized, at least in some part of the blender, promoting mixing
+
+Densimetric Froude number
+When used in the context of the Boussinesq approximation the densimetric Froude number is defined as
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            u
+            
+              
+                g
+                ′
+              
+              h
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {u}{\sqrt {g'h}}}}
+  
+
+where g′ is the reduced gravity:
+
+  
+    
+      
+        
+          g
+          ′
+        
+        =
+        g
+        
+          
+            
+              
+                ρ
+                
+                  1
+                
+              
+              −
+              
+                ρ
+                
+                  2
+                
+              
+            
+            
+              ρ
+              
+                1
+              
+            
+          
+        
+      
+    
+    {\displaystyle g'=g{\frac {\rho _{1}-\rho _{2}}{\rho _{1}}}}
+  
+
+The densimetric Froude number is usually preferred by modellers who wish to nondimensionalize a speed preference to the Richardson number which is more commonly encountered when considering stratified shear layers. For example, the leading edge of a gravity current moves with a front Froude number of about unity.
+
+Walking Froude number
+The Froude number may be used to study trends in animal gait patterns. In analyses of the dynamics of legged locomotion, a walking limb is often modeled as an inverted pendulum, where the center of mass goes through a circular arc centered at the foot. The Froude number is the ratio of the centripetal force around the center of motion, the foot, and the weight of the animal walking:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            centripetal force
+            gravitational force
+          
+        
+        =
+        
+          
+            
+              
+              
+                
+                  
+                    m
+                    
+                      v
+                      
+                        2
+                      
+                    
+                  
+                  l
+                
+              
+              
+            
+            
+              m
+              g
+            
+          
+        
+        =
+        
+          
+            
+              v
+              
+                2
+              
+            
+            
+              g
+              l
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {\text{centripetal force}}{\text{gravitational force}}}={\frac {\;{\frac {mv^{2}}{l}}\;}{mg}}={\frac {v^{2}}{gl}}}
+  
+
+where m is the mass, l is the characteristic length, g is the acceleration due to gravity and v is the velocity. The characteristic length l may be chosen to suit the study at hand. For instance, some studies have used the vertical distance of the hip joint from the ground, while others have used total leg length.
+The Froude number may also be calculated from the stride frequency f as follows:
+
+  
+    
+      
+        
+          F
+          r
+        
+        =
+        
+          
+            
+              v
+              
+                2
+              
+            
+            
+              g
+              l
+            
+          
+        
+        =
+        
+          
+            
+              (
+              l
+              f
+              
+                )
+                
+                  2
+                
+              
+            
+            
+              g
+              l
+            
+          
+        
+        =
+        
+          
+            
+              l
+              
+                f
+                
+                  2
+                
+              
+            
+            g
+          
+        
+        .
+      
+    
+    {\displaystyle \mathrm {Fr} ={\frac {v^{2}}{gl}}={\frac {(lf)^{2}}{gl}}={\frac {lf^{2}}{g}}.}
+  
+
+If total leg length is used as the characteristic length, then the theoretical maximum speed of walking has a Froude number of 1.0 since any higher value would result in takeoff and the foot missing the ground. The typical transition speed from bipedal walking to running occurs with Fr ≈ 0.5. R. M. Alexander found that animals of different sizes and masses travelling at different speeds, but with the same Froude number, consistently exhibit similar gaits. This study found that animals typically switch from an amble to a symmetric running gait (e.g., a trot or pace) around a Froude number of 1.0. A preference for asymmetric gaits (e.g., a canter, transverse gallop, rotary gallop, bound, or pronk) was observed at Froude numbers between 2.0 and 3.0.
+
+Usage
+The Froude number is used to compare the wave making resistance between bodies of various sizes and shapes.
+In free-surface flow, the nature of the flow (supercritical or subcritical) depends upon whether the Froude number is greater than or less than unity.
+One can easily see the line of "critical" flow in a kitchen or bathroom sink. Leave it unplugged and let the faucet run. Near the place where the stream of water hits the sink, the flow is supercritical. It "hugs" the surface and moves quickly. On the outer edge of the flow pattern the flow is subcritical. This flow is thicker and moves more slowly. The boundary between the two areas is called a "hydraulic jump". The jump starts where the flow is just critical and Froude number is equal to 1.0.
+The Froude number has been used to study trends in animal locomotion in order to better understand why animals use different gait patterns as well as to form hypotheses about the gaits of extinct species.
+In addition particle bed behavior can be quantified by Froude number (Fr) in order to establish the optimum operating window.

@@ -1,0 +1,188 @@
+In mathematics, logic and computer science, a recursive (or decidable) language is a recursive subset of the Kleene closure of an alphabet. Equivalently, a formal language is recursive if there exists a Turing machine that decides the formal language. In theoretical computer science, such always-halting Turing machines are called total Turing machines or algorithms.
+The concept of decidability may be extended to other models of computation. For example, one may speak of languages decidable on a non-deterministic Turing machine.  Therefore, whenever an ambiguity is possible, the synonym used for "recursive language" is Turing-decidable language, rather than simply decidable.
+The class of all recursive languages is often called R, although this name is also used for the class RP.
+This type of language was not defined in the Chomsky hierarchy. All recursive languages are also recursively enumerable. All regular, context-free and context-sensitive languages are recursive.
+
+Definitions
+There are two equivalent major definitions for the concept of a recursive language:
+
+A recursive language is a recursive subset of the set of all possible finite-length words over an alphabet.
+A recursive language is a formal language for which there exists a Turing machine that decides it.
+On the other hand, we can show that a decision problem is decidable by exhibiting a Turing machine running an algorithm that terminates on all inputs. An undecidable problem is a problem that is not decidable.
+
+Examples
+As noted above, every context-sensitive language is recursive. Thus, a simple example of a recursive language is the set L={abc, aabbcc, aaabbbccc, ...};
+more formally, the set
+
+  
+    
+      
+        L
+        =
+        {
+        
+        w
+        ∈
+        {
+        a
+        ,
+        b
+        ,
+        c
+        
+          }
+          
+            ∗
+          
+        
+        ∣
+        w
+        =
+        
+          a
+          
+            n
+          
+        
+        
+          b
+          
+            n
+          
+        
+        
+          c
+          
+            n
+          
+        
+        
+          
+             for some 
+          
+        
+        n
+        ≥
+        1
+        
+        }
+      
+    
+    {\displaystyle L=\{\,w\in \{a,b,c\}^{*}\mid w=a^{n}b^{n}c^{n}{\mbox{ for some }}n\geq 1\,\}}
+  
+
+is context-sensitive and therefore recursive.
+Examples of decidable languages that are not context-sensitive are more difficult to describe. For one such example, some familiarity with mathematical logic is required: Presburger arithmetic is the first-order theory of the natural numbers with addition (but without multiplication). While the set of well-formed formulas in Presburger arithmetic is context-free, every deterministic Turing machine accepting the set of true statements in Presburger arithmetic has a worst-case runtime of at least 
+  
+    
+      
+        
+          2
+          
+            
+              2
+              
+                p
+                n
+              
+            
+          
+        
+      
+    
+    {\displaystyle 2^{2^{pn}}}
+  
+, for some constant p>0. Here, n denotes the length of the given formula. Since every context-sensitive language can be accepted by a linear bounded automaton, and such an automaton can be simulated by a deterministic Turing machine with worst-case running time at most 
+  
+    
+      
+        
+          q
+          
+            n
+          
+        
+      
+    
+    {\displaystyle q^{n}}
+  
+ for some constant q, the set of valid formulas in Presburger arithmetic is not context-sensitive. On a positive side, it is known that there is a deterministic Turing machine running in time at most triply exponential in n that decides the set of true formulas in Presburger arithmetic. Thus, this is an example of a language that is decidable but not context-sensitive.
+
+Closure properties
+Recursive languages are closed under the following operations. That is, if L and P are two recursive languages, then the following languages are recursive as well:
+
+The Kleene star 
+  
+    
+      
+        
+          L
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle L^{*}}
+  
+
+The image φ(L) under an e-free homomorphism φ
+The concatenation 
+  
+    
+      
+        L
+        ∘
+        P
+      
+    
+    {\displaystyle L\circ P}
+  
+
+The union 
+  
+    
+      
+        L
+        ∪
+        P
+      
+    
+    {\displaystyle L\cup P}
+  
+
+The intersection 
+  
+    
+      
+        L
+        ∩
+        P
+      
+    
+    {\displaystyle L\cap P}
+  
+
+The complement of 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+
+The set difference 
+  
+    
+      
+        L
+        −
+        P
+      
+    
+    {\displaystyle L-P}
+  
+
+The last property follows from the fact that the set difference can be expressed in terms of intersection and complement.

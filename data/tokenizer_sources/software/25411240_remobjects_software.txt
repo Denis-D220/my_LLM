@@ -1,0 +1,42 @@
+RemObjects Software is an American software company founded in 2002 by Alessandro Federici and Marc Hoffman. It develops and offers tools and libraries for software developers on a variety of development platforms, including Embarcadero Delphi, .NET Framework, Mono, and Apple's Xcode.
+
+History
+RemObjects Software was founded in the summer of 2002. Its first product was RemObjects SDK 1.0 for Delphi, the company's remoting solution which is now in its 6th version. In late 2003 RemObjects expanded its product portfolio to add Data Abstract for Delphi, a multi-tier database framework built on top of the SDK.
+In 2004, Carlo Kok, who would eventually become Chief Compiler Architect for Oxygene, joined the company, adding the open source Pascal Script library for Delphi to the company's portfolio. Initial development began on Oxygene (which was then named Chrome) based on Carlo's experience from writing the widely used Pascal Script scripting engine. Towards the end of 2004, RemObjects SDK for .NET was released, expanding the remoting framework to its second platform.
+Chrome 1.0 was released in mid-2005, providing support for .NET 1.1 and .NET 2.0, which was still in beta at the time - making Chrome the first shipping language for .NET that supported features such as generics. It was followed by Chrome 1.5 when .NET 2.0 shipped in November of the same year. 2005 also saw the expansion of Data Abstract to .NET as a second platform. Data Abstract for .NET was the first RemObjects product (besides Oxygene itself) to be written in Oxygene.
+Hydra 3.0, was released for .NET in December 2006, bringing a paradigm shift to the product, away from a regular plugin framework, and focusing on interoperability between plugins and host applications written in either .NET or Delphi/Win32, essentially enabling the use of both managed and unmanaged code in the same project.
+In Summer 2007, RemObjects released Chrome 'Joyride' which added official support for .NET 3.0 and 3.5. Chrome once again was the first language to ship release level support for new .NET framework features supported by that runtime - most importantly Sequences and Queries (aka LINQ).
+Development continued and in May 2008 Oxygene 3.0 was released, dropping the "Chrome" moniker. Oxygene once again brought major language enhancements, including extensive support for concurrency and parallel programming as part of the language syntax. In October 2008, RemObjects Software and Embarcadero Technologies announced plans to collaborate and ship future versions of Oxygene under the Delphi Prism moniker, later changed to Embarcadero Prism. The first of these releases of Prism became available in December 2008.
+Over the course of 2009, RemObjects software completed the expansion of its Data Abstract and RemObjects SDK product combo to a third development platform - Xcode and Cocoa, for both Mac OS X and iPhone SDK client development. RemObjects SDK for OS X shipped in the spring of 2009, followed by Data Abstract for OS X in the fall.
+In 2011, Oxygene was expanded to add support for the Java platform, in addition to NET.
+In 2014, RemObjects introduced a C# compiler which runs as a Visual Studio 2013 plugin, that can output code for iOS, MacOS (Cocoa) and Android, in addition to .NET compatible code. In addition, an IDE called Fire was introduced for macOS which works with their C# and Oxygene compilers.
+Together, the compiler supporting both Oxygene and C# was rebranded as the Elements Compiler, with CE# having the Code name "Hydrogene".
+In February 2015, RemObjects introduced a beta version of a Swift compiler called Silver as part of its Elements effort. Silver, too, could create code that will execute on Android, the JVM, .NET platform and also create native Cocoa code. Silver added new features to the Swift language, such as exceptions and has a few differences and limitations compared to Apple's Swift.
+In February 2020, support for the Go programming language was introduced with RemObjects Gold, including the ability to compile Go language code for all Elements platforms, and a port of the extensive Go Base Library available to all Elements languages.
+In 2021, Mercury was added to the Elements compiler as the sixth language, providing a future for the Visual Basic .NET language recently deprecated by Microsoft. Mercury supports building and maintaining existing VB.NET projects, as well as using the language for new projects both on .NET and the other platforms.
+
+Commercial products
+Elements is a development toolchain that targets .NET runtime, Java/Android virtual machines, the Apple ecosystem (macOS, iOS, tvOS), WebAssembly and native and Windows/Linux/Android NDK processor-native machine code in conjunction with a runtime library that does automatic garbage collection on non-ARC environments and ARC on ARC-based environments, such as iOS and MacOS.  Because Java, C#, Swift, and Oxygene all can import each other's APIs, Elements effectively functions as Java bonded together with C# bonded together with Swift bonded together with Oxygene as a confederation of languages cooperating together quite intimately.
+Oxygene, a unique programming language based on Object Pascal, which can import Java, C#, and Swift APIs from the runtime of the target operating system;
+RemObjects C#, an implementation of  C# programming language, which can import Java, Swift, and Oxygene APIs from the runtime of the target operating system and which is intended as a competitor of Xamarin, but Hydrogene's C# targets JVM bytecode instead of Xamarin's C# compiling to only Common Language Infrastructure byte code and needing the accompanying Mono Common Language Runtime to be present in such JVM-centric environments as Android;
+Silver, a free implementation of the Swift programming language, which can import Java, C#, and Oxygene APIs from the runtime of the target operating system;
+Iodine, an implementation of the Java programming language.
+Gold, an implementation of the Go programming language.
+Mercury, an implementation of the Visual Basic .NET programming language.
+Fire an integrated development environment for macOS.
+Water an integrated development environment for Windows.
+Data Abstract
+Remoting SDK, a.k.a. RemObjects SDK
+Hydra
+Oxfuscator
+Oxidizer, an automatic translator from Java, C#, Objective-C, and Delphi to Oxygene, from Java, Objective-C, and C# to Swift, and from Java and Objective-C to C#.
+
+Open source projects
+Train is an open-source JavaScript-based tool for building and running build scripts and automation.
+Internet Pack for .NET is a free, open source library for building network clients and servers using TCP and higher level protocols such as HTTP or FTP, using the .NET or Mono platforms. It includes a range of ready to use protocol implementations, as well as base classes that allow the creation of custom implementations.
+RemObjects Script for .NET is a fully managed ECMAScript implementation for .NET and Mono.
+Pascal Script for Delphi is a widely used implementation of Pascal as scripting language.
+
+Involvement of other projects
+The Oxygene Compiler
+Oxygene is a language based on Object Pascal and designed to efficiently target the Microsoft .NET and Mono managed runtimes; it expands Object Pascal with a range of additional language features, such as Aspect Oriented Programming, Class Contracts and support for Parallelism. It integrates with the Microsoft Visual Studio and MonoDevelop IDEs.

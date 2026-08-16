@@ -1,0 +1,2014 @@
+In mathematics, dependent random choice is a probabilistic technique that shows how to find a large set of vertices in a dense graph such that every small subset of vertices has many common neighbors. It is a useful tool to embed a graph into another graph with many edges. Thus it has its application in extremal graph theory, additive combinatorics and Ramsey theory.
+
+Statement of theorem
+Let 
+  
+    
+      
+        u
+        ,
+        n
+        ,
+        r
+        ,
+        m
+        ,
+        t
+        ∈
+        
+          N
+        
+      
+    
+    {\displaystyle u,n,r,m,t\in \mathbb {N} }
+  
+, 
+  
+    
+      
+        α
+        >
+        0
+      
+    
+    {\displaystyle \alpha >0}
+  
+ and suppose:
+
+  
+    
+      
+        n
+        
+          α
+          
+            t
+          
+        
+        −
+        
+          
+            
+              (
+            
+            
+              n
+              r
+            
+            
+              )
+            
+          
+        
+        
+          
+            (
+            
+              
+                m
+                n
+              
+            
+            )
+          
+          
+            t
+          
+        
+        ≥
+        u
+        .
+      
+    
+    {\displaystyle n\alpha ^{t}-{n \choose r}\left({\frac {m}{n}}\right)^{t}\geq u.}
+  
+Every graph on 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ vertices with at least 
+  
+    
+      
+        
+          
+            
+              α
+              
+                n
+                
+                  2
+                
+              
+            
+            2
+          
+        
+      
+    
+    {\displaystyle {\frac {\alpha n^{2}}{2}}}
+  
+ edges contains a subset 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ of vertices with 
+  
+    
+      
+        
+          |
+        
+        U
+        
+          |
+        
+        ≥
+        u
+      
+    
+    {\displaystyle |U|\geq u}
+  
+ such that for all 
+  
+    
+      
+        S
+        ⊂
+        U
+      
+    
+    {\displaystyle S\subset U}
+  
+ with 
+  
+    
+      
+        
+          |
+        
+        S
+        
+          |
+        
+        =
+        r
+      
+    
+    {\displaystyle |S|=r}
+  
+, 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ has at least 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ common neighbors. 
+
+Proof
+The basic idea is to choose the set of vertices randomly. However, instead of choosing each vertex uniformly at random, the procedure randomly chooses a list of 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ vertices first and then chooses common neighbors as the set of vertices. The hope is that in this way, the chosen set would be more likely to have more common neighbors.
+Formally, let 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ be a list of 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ vertices chosen uniformly at random from 
+  
+    
+      
+        V
+        (
+        G
+        )
+      
+    
+    {\displaystyle V(G)}
+  
+ with replacement (allowing repetition). Let 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ be the common neighborhood of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+. The expected value of 
+  
+    
+      
+        
+          |
+        
+        A
+        
+          |
+        
+      
+    
+    {\displaystyle |A|}
+  
+ is
+  
+    
+      
+        
+          
+            
+              
+                
+                  E
+                
+                
+                  |
+                
+                A
+                
+                  |
+                
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    v
+                    ∈
+                    V
+                  
+                
+                
+                  P
+                
+                (
+                v
+                ∈
+                A
+                )
+                =
+                
+                  ∑
+                  
+                    v
+                    ∈
+                    V
+                  
+                
+                
+                  P
+                
+                (
+                T
+                ⊆
+                N
+                (
+                v
+                )
+                )
+                =
+                
+                  ∑
+                  
+                    v
+                    ∈
+                    V
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          d
+                          (
+                          v
+                          )
+                        
+                        n
+                      
+                    
+                    )
+                  
+                  
+                    t
+                  
+                
+              
+            
+            
+              
+              
+                
+                ≥
+                n
+                
+                  
+                    (
+                    
+                      
+                        
+                          1
+                          n
+                        
+                      
+                      
+                        ∑
+                        
+                          v
+                          ∈
+                          V
+                        
+                      
+                      
+                        
+                          
+                            d
+                            (
+                            v
+                            )
+                          
+                          n
+                        
+                      
+                    
+                    )
+                  
+                  
+                    t
+                  
+                
+                
+                
+                  (convexity)
+                
+              
+            
+            
+              
+              
+                
+                ≥
+                n
+                
+                  α
+                  
+                    t
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbb {E} |A|&=\sum _{v\in V}\mathbb {P} (v\in A)=\sum _{v\in V}\mathbb {P} (T\subseteq N(v))=\sum _{v\in V}\left({\frac {d(v)}{n}}\right)^{t}\\&\geq n\left({\frac {1}{n}}\sum _{v\in V}{\frac {d(v)}{n}}\right)^{t}\quad {\text{(convexity)}}\\&\geq n\alpha ^{t}.\end{aligned}}}
+  
+For every 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+-element subset 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ of 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+, 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ contains 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ if and only if 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is contained in the common neighborhood of 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+, which occurs with probability 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  #
+                  
+                    common neighbors of 
+                  
+                  S
+                
+                n
+              
+            
+            )
+          
+          
+            t
+          
+        
+        .
+      
+    
+    {\textstyle \left({\frac {\#{\text{common neighbors of }}S}{n}}\right)^{t}.}
+  
+  An 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is bad if it has less than 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ common neighbors. Then for each fixed 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+-element subset 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ of 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+, it is contained in 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ with probability less than 
+  
+    
+      
+        (
+        m
+        
+          /
+        
+        n
+        
+          )
+          
+            t
+          
+        
+      
+    
+    {\displaystyle (m/n)^{t}}
+  
+. Therefore by linearity of expectation,
+  
+    
+      
+        
+          E
+        
+        [
+        #
+        
+          bad 
+        
+        r
+        
+          -element subset of 
+        
+        A
+        ]
+        <
+        
+          
+            
+              (
+            
+            
+              n
+              r
+            
+            
+              )
+            
+          
+        
+        
+          
+            (
+            
+              
+                m
+                n
+              
+            
+            )
+          
+          
+            t
+          
+        
+        .
+      
+    
+    {\displaystyle \mathbb {E} [\#{\text{bad }}r{\text{-element subset of }}A]<{\binom {n}{r}}\left({\frac {m}{n}}\right)^{t}.}
+  
+ To eliminate bad subsets, we exclude one element in each bad subset. The number of remaining elements is at least 
+  
+    
+      
+        
+          |
+        
+        A
+        
+          |
+        
+        −
+        (
+        #
+        
+          bad 
+        
+        r
+        
+          -element subset of 
+        
+        A
+        )
+      
+    
+    {\displaystyle |A|-(\#{\text{bad }}r{\text{-element subset of }}A)}
+  
+, whose expected value is at least 
+  
+    
+      
+        n
+        
+          α
+          
+            t
+          
+        
+        −
+        
+          
+            
+              (
+            
+            
+              n
+              r
+            
+            
+              )
+            
+          
+        
+        
+          
+            (
+            
+              
+                m
+                n
+              
+            
+            )
+          
+          
+            t
+          
+        
+        ≥
+        u
+        .
+      
+    
+    {\textstyle n\alpha ^{t}-{\binom {n}{r}}\left({\frac {m}{n}}\right)^{t}\geq u.}
+  
+ Consequently, there exists a 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ such that there are at least 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ elements in 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ remaining after getting rid of all bad 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+-element subsets. The set 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ of the remaining 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ elements expresses the desired properties.
+
+Applications
+
+Turán numbers of a bipartite graph
+Dependent random choice can help find the Turán number. Using appropriate parameters, if 
+  
+    
+      
+        H
+        =
+        A
+        ∪
+        B
+      
+    
+    {\displaystyle H=A\cup B}
+  
+ is a bipartite graph in which all vertices in 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ have degree at most 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+, then the extremal number 
+  
+    
+      
+        
+          ex
+        
+        (
+        n
+        ,
+        H
+        )
+        ≤
+        c
+        
+          n
+          
+            2
+            −
+            1
+            
+              /
+            
+            r
+          
+        
+      
+    
+    {\displaystyle {\text{ex}}(n,H)\leq cn^{2-1/r}}
+  
+ where 
+  
+    
+      
+        c
+        =
+        c
+        (
+        H
+        )
+      
+    
+    {\displaystyle c=c(H)}
+  
+ only depends on 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+.
+Formally, with 
+  
+    
+      
+        a
+        =
+        
+          |
+        
+        A
+        
+          |
+        
+        ,
+        b
+        =
+        
+          |
+        
+        B
+        
+          |
+        
+      
+    
+    {\displaystyle a=|A|,b=|B|}
+  
+, let 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ be a sufficiently large constant such that 
+  
+    
+      
+        (
+        2
+        c
+        
+          )
+          
+            r
+          
+        
+        −
+        (
+        a
+        +
+        b
+        
+          )
+          
+            r
+          
+        
+        ≥
+        a
+        .
+      
+    
+    {\displaystyle (2c)^{r}-(a+b)^{r}\geq a.}
+  
+ If 
+  
+    
+      
+        α
+        =
+        2
+        c
+        
+          n
+          
+            −
+            1
+            
+              /
+            
+            r
+          
+        
+        ,
+        m
+        =
+        a
+        +
+        b
+        ,
+        t
+        =
+        r
+        ,
+        u
+        =
+        a
+      
+    
+    {\displaystyle \alpha =2cn^{-1/r},m=a+b,t=r,u=a}
+  
+ then 
+
+  
+    
+      
+        n
+        
+          α
+          
+            t
+          
+        
+        −
+        
+          
+            
+              (
+            
+            
+              n
+              r
+            
+            
+              )
+            
+          
+        
+        
+          
+            (
+            
+              
+                m
+                n
+              
+            
+            )
+          
+          
+            t
+          
+        
+        =
+        (
+        2
+        c
+        
+          )
+          
+            r
+          
+        
+        −
+        
+          
+            
+              (
+            
+            
+              n
+              r
+            
+            
+              )
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  a
+                  +
+                  b
+                
+                n
+              
+            
+            )
+          
+          
+            r
+          
+        
+        ≥
+        (
+        2
+        c
+        
+          )
+          
+            r
+          
+        
+        −
+        (
+        a
+        +
+        b
+        
+          )
+          
+            r
+          
+        
+        ≥
+        a
+        =
+        u
+        ,
+      
+    
+    {\displaystyle n\alpha ^{t}-{\binom {n}{r}}\left({\frac {m}{n}}\right)^{t}=(2c)^{r}-{\binom {n}{r}}\left({\frac {a+b}{n}}\right)^{r}\geq (2c)^{r}-(a+b)^{r}\geq a=u,}
+  
+and so the assumption of dependent random choice holds. Hence, for each graph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ with at least 
+  
+    
+      
+        c
+        
+          n
+          
+            2
+            −
+            1
+            
+              /
+            
+            r
+          
+        
+      
+    
+    {\displaystyle cn^{2-1/r}}
+  
+ edges, there exists a vertex subset 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ of size 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ satisfying that every 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+-subset of 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ has at least 
+  
+    
+      
+        a
+        +
+        b
+      
+    
+    {\displaystyle a+b}
+  
+ common neighbors. By embedding 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ into 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ by embedding 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ into 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ arbitrarily and then embedding the vertices in 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ one by one, then for each vertex 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ in 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, it has at most 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ neighbors in 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, which shows that their images in 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ have at least  
+  
+    
+      
+        a
+        +
+        b
+      
+    
+    {\displaystyle a+b}
+  
+ common neighbors. Thus 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ can be embedded into one of the common neighbors while avoiding collisions.
+This can be generalized to degenerate graphs using a variation of dependent random choice.
+
+Embedding a 1-subdivision of a complete graph
+DRC can be applied directly to show that if 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ is a graph on 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ vertices and 
+  
+    
+      
+        ϵ
+        
+          n
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \epsilon n^{2}}
+  
+ edges, then 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ contains a 1-subdivision of a complete graph with 
+  
+    
+      
+        
+          ϵ
+          
+            3
+            
+              /
+            
+            2
+          
+        
+        
+          n
+          
+            1
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle \epsilon ^{3/2}n^{1/2}}
+  
+ vertices. This can be shown in a similar way to the above proof of the bound on Turán number  of a bipartite graph.
+Indeed, if we set 
+  
+    
+      
+        α
+        =
+        2
+        ϵ
+        ,
+        m
+        =
+        
+          a
+          
+            2
+          
+        
+        ,
+        t
+        =
+        
+          
+            
+              log
+              ⁡
+              n
+            
+            
+              2
+              log
+              ⁡
+              1
+              
+                /
+              
+              ϵ
+            
+          
+        
+        ,
+        u
+        =
+        a
+      
+    
+    {\displaystyle \alpha =2\epsilon ,m=a^{2},t={\frac {\log n}{2\log 1/\epsilon }},u=a}
+  
+, we have (since 
+  
+    
+      
+        2
+        ϵ
+        =
+        α
+        ≤
+        1
+      
+    
+    {\displaystyle 2\epsilon =\alpha \leq 1}
+  
+)
+  
+    
+      
+        n
+        
+          α
+          
+            t
+          
+        
+        −
+        
+          
+            
+              (
+            
+            
+              n
+              r
+            
+            
+              )
+            
+          
+        
+        
+          
+            (
+            
+              
+                m
+                n
+              
+            
+            )
+          
+          
+            t
+          
+        
+        ≥
+        (
+        2
+        ϵ
+        
+          )
+          
+            t
+          
+        
+        n
+        −
+        
+          
+            
+              (
+            
+            
+              n
+              2
+            
+            
+              )
+            
+          
+        
+        
+          ϵ
+          
+            3
+            t
+          
+        
+        ≥
+        
+          n
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        ≥
+        a
+        =
+        u
+        ,
+      
+    
+    {\displaystyle n\alpha ^{t}-{\binom {n}{r}}\left({\frac {m}{n}}\right)^{t}\geq (2\epsilon )^{t}n-{\binom {n}{2}}\epsilon ^{3t}\geq n^{1/2}\geq a=u,}
+  
+and so the DRC assumption holds. Since a 1-subdivision of the complete graph on 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ vertices is a bipartite graph with parts of size 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ and 
+  
+    
+      
+        b
+        =
+        
+          
+            
+              (
+            
+            
+              a
+              2
+            
+            
+              )
+            
+          
+        
+      
+    
+    {\displaystyle b={\binom {a}{2}}}
+  
+ where every vertex in the second part has degree two, the embedding argument in the proof of the bound on Turán number of a bipartite graph produces the desired result.
+
+Variation
+A stronger version finds two subsets of vertices 
+  
+    
+      
+        
+          U
+          
+            1
+          
+        
+        ,
+        
+          U
+          
+            2
+          
+        
+      
+    
+    {\displaystyle U_{1},U_{2}}
+  
+ in a dense graph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ so that every small subset of vertices in 
+  
+    
+      
+        
+          U
+          
+            i
+          
+        
+      
+    
+    {\displaystyle U_{i}}
+  
+ has a lot of common neighbors in 
+  
+    
+      
+        
+          U
+          
+            3
+            −
+            i
+          
+        
+      
+    
+    {\displaystyle U_{3-i}}
+  
+. 
+Formally, let 
+  
+    
+      
+        u
+        ,
+        n
+        ,
+        r
+        ,
+        m
+        ,
+        t
+        ,
+        q
+      
+    
+    {\displaystyle u,n,r,m,t,q}
+  
+ be some positive integers with 
+  
+    
+      
+        q
+        >
+        r
+      
+    
+    {\displaystyle q>r}
+  
+, and let 
+  
+    
+      
+        α
+        >
+        0
+      
+    
+    {\displaystyle \alpha >0}
+  
+ be some real number. Suppose that the following constraints hold:
+
+  
+    
+      
+        
+          
+            
+              
+                n
+                
+                  α
+                  
+                    t
+                  
+                
+                −
+                
+                  
+                    
+                      (
+                    
+                    
+                      n
+                      q
+                    
+                    
+                      )
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        m
+                        n
+                      
+                    
+                    )
+                  
+                  
+                    t
+                  
+                
+              
+              
+                
+                ≥
+                u
+              
+            
+            
+              
+                
+                  
+                    
+                      (
+                    
+                    
+                      n
+                      r
+                    
+                    
+                      )
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        m
+                        u
+                      
+                    
+                    )
+                  
+                  
+                    q
+                    −
+                    r
+                  
+                
+              
+              
+                
+                <
+                1.
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}n\alpha ^{t}-{\binom {n}{q}}\left({\frac {m}{n}}\right)^{t}&\geq u\\{\binom {n}{r}}\left({\frac {m}{u}}\right)^{q-r}&<1.\end{aligned}}}
+  
+
+Then every graph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ on 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ vertices with at least 
+  
+    
+      
+        α
+        
+          n
+          
+            2
+          
+        
+        
+          /
+        
+        2
+      
+    
+    {\displaystyle \alpha n^{2}/2}
+  
+ edges contains two subsets 
+  
+    
+      
+        
+          U
+          
+            1
+          
+        
+        ,
+        
+          U
+          
+            2
+          
+        
+      
+    
+    {\displaystyle U_{1},U_{2}}
+  
+ of vertices so that any 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ vertices in 
+  
+    
+      
+        
+          U
+          
+            i
+          
+        
+      
+    
+    {\displaystyle U_{i}}
+  
+ have at least 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ common neighbors in 
+  
+    
+      
+        
+          U
+          
+            3
+            −
+            i
+          
+        
+      
+    
+    {\displaystyle U_{3-i}}
+  
+.
+
+Extremal number of a degenerate bipartite graph
+Using this stronger statement, one can upper bound the extremal number of 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+-degenerate bipartite graphs: for each 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+-degenerate bipartite graph 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ with at most 
+  
+    
+      
+        
+          N
+          
+            1
+            −
+            1.8
+            
+              /
+            
+            s
+          
+        
+      
+    
+    {\displaystyle N^{1-1.8/s}}
+  
+ vertices, the extremal number 
+  
+    
+      
+        
+          ex
+        
+        (
+        N
+        ,
+        H
+        )
+      
+    
+    {\displaystyle {\text{ex}}(N,H)}
+  
+ is at most 
+  
+    
+      
+        
+          N
+          
+            2
+            −
+            1
+            
+              /
+            
+            (
+            
+              s
+              
+                3
+              
+            
+            r
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle N^{2-1/(s^{3}r)}.}
+  
+
+Ramsey number of a degenerate bipartite graph
+This statement can be also applied to obtain an upper bound of the Ramsey number of a degenerate bipartite graphs. If 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is a fixed integer, then for every bipartite 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+-degenerate bipartite graph 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ on 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ vertices, the Ramsey number 
+  
+    
+      
+        r
+        (
+        G
+        )
+      
+    
+    {\displaystyle r(G)}
+  
+ is of the order 
+  
+    
+      
+        
+          n
+          
+            1
+            +
+            o
+            (
+            1
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle n^{1+o(1)}.}

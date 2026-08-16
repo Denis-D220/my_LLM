@@ -1,0 +1,371 @@
+In mathematics, especially category theory, the homotopy category of an ∞-category C is the category where the objects are those in C but the hom-set from x to y is the quotient of the set of morphisms from x to y in C by an appropriate equivalence relation.
+If an ∞-category is defined as a weak Kan complex (usual definition), then the construction is due to Boardman and Vogt, who also gave the definition of an ∞-category as a weak Kan complex. In this case, the homotopy category of an ∞-category C is equivalent to 
+  
+    
+      
+        τ
+        (
+        C
+        )
+      
+    
+    {\displaystyle \tau (C)}
+  
+, where 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ is a left adjoint of the nerve functor.
+For example, the singular complex of a (reasonable) topological space X is a Kan complex and the homotopy category of it is the fundamental groupoid of X.
+
+Boardman–Vogt construction
+Let C be an ∞-category. If 
+  
+    
+      
+        f
+        ,
+        g
+        :
+        x
+        →
+        y
+      
+    
+    {\displaystyle f,g:x\to y}
+  
+ are morphisms (1-simplexes) in C, then we write 
+  
+    
+      
+        f
+        ∼
+        g
+      
+    
+    {\displaystyle f\sim g}
+  
+ if there is a 2-simplex 
+  
+    
+      
+        σ
+        :
+        
+          Δ
+          
+            2
+          
+        
+        →
+        C
+      
+    
+    {\displaystyle \sigma :\Delta ^{2}\to C}
+  
+ such that 
+  
+    
+      
+        σ
+        (
+        0
+        →
+        1
+        )
+        =
+        f
+        ,
+        
+        σ
+        (
+        0
+        →
+        2
+        )
+        =
+        g
+        ,
+        
+        σ
+        (
+        1
+        →
+        2
+        )
+        =
+        
+          id
+          
+            y
+          
+        
+        .
+      
+    
+    {\displaystyle \sigma (0\to 1)=f,\,\sigma (0\to 2)=g,\,\sigma (1\to 2)=\operatorname {id} _{y}.}
+  
+ Then by Joyal's work, the relation 
+  
+    
+      
+        ∼
+      
+    
+    {\displaystyle \sim }
+  
+ turns out to be an equivalence relation. Hence, we can take the quotient
+
+  
+    
+      
+        [
+        x
+        ,
+        y
+        ]
+        =
+        
+          Hom
+          
+            C
+          
+        
+        ⁡
+        (
+        x
+        ,
+        y
+        )
+        
+          /
+        
+        ∼
+        .
+      
+    
+    {\displaystyle [x,y]=\operatorname {Hom} _{C}(x,y)/\sim .}
+  
+
+Then the homotopy category 
+  
+    
+      
+        τ
+        (
+        C
+        )
+      
+    
+    {\displaystyle \tau (C)}
+  
+ in the sense of Boardman–Vogt is the category where 
+  
+    
+      
+        obj
+        ⁡
+        (
+        τ
+        (
+        C
+        )
+        )
+        =
+        obj
+        ⁡
+        (
+        C
+        )
+      
+    
+    {\displaystyle \operatorname {obj} (\tau (C))=\operatorname {obj} (C)}
+  
+, 
+  
+    
+      
+        
+          Hom
+          
+            τ
+            (
+            C
+            )
+          
+        
+        ⁡
+        (
+        x
+        ,
+        y
+        )
+        =
+        [
+        x
+        ,
+        y
+        ]
+      
+    
+    {\displaystyle \operatorname {Hom} _{\tau (C)}(x,y)=[x,y]}
+  
+ and the composition is given by 
+  
+    
+      
+        [
+        f
+        ]
+        ∘
+        [
+        g
+        ]
+        =
+        [
+        h
+        ]
+      
+    
+    {\displaystyle [f]\circ [g]=[h]}
+  
+ when 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ exhibits some composition of 
+  
+    
+      
+        f
+        ,
+        g
+      
+    
+    {\displaystyle f,g}
+  
+.
+Let 
+  
+    
+      
+        
+          π
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \pi _{0}}
+  
+ be a left adjoint to the inclusion of the category of sets into the category of simplicial sets. If 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ is a Kan complex, then 
+  
+    
+      
+        
+          π
+          
+            0
+          
+        
+        K
+      
+    
+    {\displaystyle \pi _{0}K}
+  
+ coincides with the set of simplicial homotopy classes of maps 
+  
+    
+      
+        
+          Δ
+          
+            0
+          
+        
+        →
+        K
+      
+    
+    {\displaystyle \Delta ^{0}\to K}
+  
+. Then
+
+  
+    
+      
+        
+          Hom
+          
+            τ
+            (
+            C
+            )
+          
+        
+        ⁡
+        (
+        x
+        ,
+        y
+        )
+        ≃
+        
+          π
+          
+            0
+          
+        
+        Map
+        ⁡
+        (
+        x
+        ,
+        y
+        )
+      
+    
+    {\displaystyle \operatorname {Hom} _{\tau (C)}(x,y)\simeq \pi _{0}\operatorname {Map} (x,y)}
+  
+
+for each objects 
+  
+    
+      
+        x
+        ,
+        y
+      
+    
+    {\displaystyle x,y}
+  
+ in 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+.

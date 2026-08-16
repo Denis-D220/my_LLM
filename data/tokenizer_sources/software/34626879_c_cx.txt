@@ -1,0 +1,42 @@
+C++/CX (or C++ Component Extensions) is a language projection for Microsoft's Windows Runtime platform. It takes the form of a language extension for C++ compilers, and it enables C++ programmers to write programs that call Windows Runtime (WinRT) APIs. C++/CX is superseded by the C++/WinRT language projection, which is not an extension to the C++ language; rather, it is an entirely standard modern ISO C++17 header file-based library.
+The language extensions borrow syntax from C++/CLI but target the Windows Runtime Universal Windows Platform native code instead of the Common Language Runtime and managed code. It brings a set of syntax and library abstractions that project COM's WRL subset-based WinRT programming model in a way that is intuitive to C++/CLI managed extensions' coders.
+It is possible to call the Windows Runtime from native ISO C++ via the lower level Windows Runtime C++ Template Library (WRL). However, WRL is also superseded by C++/WinRT.
+
+Extension syntax
+C++/CX introduces syntax extensions for programming for the Windows Runtime. The overall non platform-specific syntax is compatible with the C++11 standard.
+
+Objects
+WinRT objects are created, or activated, using ref new and assigned to variables declared with the ^ (hat) notation inherited from C++/CLI.
+
+A WinRT variable is simply a pair of a pointer to virtual method table and pointer to the object's internal data.
+
+Reference counting
+A WinRT object is reference counted and thus handles similarly to ordinary C++ objects enclosed in shared_ptrs. An object will be deleted when there are no remaining references that lead to it.
+There is no garbage collection involved. Nevertheless, the keyword gcnew has been reserved for possible future use.
+
+Classes
+
+Runtime classes
+There are special kinds of runtime classes that may contain component extension constructs. These are simply referred to as ref classes because they are declared using ref class.
+
+Partial classes
+C++/CX introduces the concept of partial classes. The feature allows a single class definition to be split across multiple files, mainly to enable the XAML graphical user interface design tools to auto-generate code in a separate file in order not to break the logic written by the developer. The parts are later merged at compilation.
+.NET languages like C# have had this feature for many years. Partial classes do not exist in the C++ standard and cannot therefore be used.
+A file that is generated and updated by the GUI-designer, and thus should not be modified by the programmer. Note the keyword partial.
+
+The file where the programmer writes user-interface logic. The header in which the compiler-generated part of the class is defined is imported. Note that the keyword partial is not necessary.
+
+This is the file in which the members of the partial class are implemented.  
+
+Generics
+Windows Runtime and thus C++/CX supports runtime-based generics. Generic type information is contained in the metadata and instantiated at runtime, unlike C++ templates which are compile-time constructs. Both are supported by the compiler and can be combined.
+
+Metadata
+
+All WinRT programs expose their declared classes and members through metadata. The format is the same that was standardized as part of the Common Language Infrastructure (CLI), the standard created from the .NET Framework. Because of this, code can be shared across C++/CX, CLI languages, and JavaScript that target Windows Runtime.
+
+Runtime library
+The C++/CX has a set of libraries that target the Windows Runtime. These help bridge the functionality of the C++ Standard Library and WinRT.
+
+Preprocessor-based detection
+You can detect if C++/CX extension is turned on by testing existence of __cplusplus_winrt preprocessor symbol.

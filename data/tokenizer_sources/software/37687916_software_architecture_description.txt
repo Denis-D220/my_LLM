@@ -1,0 +1,97 @@
+Software architecture description is the set of practices for expressing, communicating and analysing software architectures (also called architectural rendering), and the result of applying such practices through a work product expressing a software architecture (ISO/IEC/IEEE 42010).
+Architecture descriptions (ADs) are also sometimes referred to as architecture representations, architecture specifications
+or  software architecture documentation.
+
+Concepts
+Architecture description defines the practices, techniques and types of representations used by software architects to record a software architecture. Architecture description is largely a modeling activity (Software architectural model).
+Architecture models can take various forms, including text, informal drawings, diagrams or other formalisms (modeling language).
+An architecture description will often employ several different model kinds to effectively address a variety of audiences, the stakeholders (such as end users, system owners, software developers, system engineers, program managers) and a variety of architectural concerns (such as functionality, safety, delivery, reliability, scalability).
+Often, the models of an architecture description are organized into multiple views of the architecture such that "each [view] addresses specific concerns of interest to different stakeholders of the system". 
+An architecture viewpoint is a way of looking at a system (RM ODP). Each view in an architecture description should have a viewpoint documenting the concerns and stakeholders it is addressed to, and the model kinds, notations and modeling conventions it utilizes (ISO/IEC/IEEE 42010).
+The use of multiple views, while effective for communicating with diverse stakeholders and recording and analyzing diverse concerns, does raise potential problems: since views are typically not independent, the potential for overlap means there may be redundancy or inconsistency between views of a single system. Various mechanisms can be used to define and manage correspondences between views to share detail, to reduce redundancy and to enforce consistency.
+A common misunderstanding about architecture descriptions is that ADs only discuss "technical issues", but ADs need to address issues of relevance to many stakeholders. Some issues are technical; many issues are not: ADs are used to help architects, their clients and others manage cost, schedule and process. A related misunderstanding is that ADs only address the structural aspects of a system. However, this rarely satisfies the stakeholders, whose concerns often include structural, behavioral, aesthetic, and other "extra-functional" concerns.
+
+History
+The earliest architecture descriptions used informal pictures and diagrams and associated text. Informal descriptions remain the most widely used representations in industry.
+Influences on architecture description came from the areas of Software Engineering (such as data abstraction and programming in the large) and from system design (such as SARA).
+Work on programming in the large, such as module interconnection languages (MILs) focused on the expression of the large-scale properties of software: modules (including programs, libraries, subroutines and subsystems) and module-relationships (dependencies and interconnections between modules). This work influenced both architectural thinking about programming languages (e.g., Ada), and design and architecture notations (such as Buhr diagrams and use case maps and codified in architectural features of UML: packages, subsystems, dependences) and much of the work on architecture description languages. In addition to MILs, under the influence of mature work in the areas of Requirements and Design within Software Engineering, various kinds of models were "lifted" from software engineering and design to be applied to the description of architectures. These included function and activity models from Structured Analysis SADT, data modeling techniques (entity-relation) and object-oriented techniques.
+Perry and Wolf cited the precedent of building architecture for the role of multiple views:
+"A building architect works with the customer by means of a number of different views in which some particular aspect of the building is emphasized."
+Perry and Wolf posited that the representation of architectures should include: 
+{ elements, form and rationale }, distinguishing three kinds of elements (and therefore three kinds of views):
+
+processing: how the data is transformed;
+data: information that is used and transformed;
+connecting: glue holding the other elements together;
+Perry and Wolf identified four objectives or uses for architecture descriptions (called "architecture specifications" in their paper):
+
+prescribe architectural constraints without overspecifying solutions
+separate aesthetics from engineering
+express different aspects of the architecture each in an appropriate manner
+conduct architecture analysis, particularly dependency and consistency analyses
+Following the Perry and Wolf paper, two schools of thought on software architecture description emerged:
+
+Multiple views school
+Structuralist school
+
+Mechanisms for architecture description
+There are several common mechanisms used for architecture description. These mechanisms facilitate reuse of successful styles of description so that they may be applied to many systems:
+
+architecture viewpoints
+architecture description languages
+architecture frameworks
+
+Architecture viewpoints
+Software architecture descriptions are commonly organized into views, which are analogous to the different types of blueprints made in building architecture. Each view addresses a set of system concerns, following the conventions of its viewpoint, where a viewpoint is a specification that describes the notations, modeling techniques to be used in a view to express the architecture in question from the perspective of a given set of stakeholders and their concerns (ISO/IEC 42010). The viewpoint specifies not only the concerns framed (i.e., to be addressed) but the presentation, model kinds used, conventions used and any consistency (correspondence) rules to keep a view consistent with other views.
+Examples of viewpoints include: 
+
+Functional viewpoint
+Logical viewpoint
+Information/Data viewpoint
+Module viewpoint
+Component-and-connector viewpoint
+Requirements viewpoint
+Developer/Implementation viewpoint
+Concurrency/process/runtime/thread/execution viewpoint
+Performance viewpoint
+Security viewpoint
+Physical/Deployment/Installation viewpoint
+User action/feedback viewpoint
+The term viewtype is used to refer to categories of similar views sharing a common set of elements and relations.
+
+Architecture description languages
+An architecture description language (ADL) is any means of expression used to describe a software architecture (ISO/IEC/IEEE 42010).
+Many special-purpose ADLs have been developed since the 1990s, including AADL (SAE standard), Wright (developed by Carnegie Mellon), Acme (developed by Carnegie Mellon), xADL (developed by UCI), Darwin (developed by Imperial College London), DAOP-ADL (developed by University of Málaga), and ByADL (University of L'Aquila, Italy). 
+Early ADLs emphasized modeling systems in terms of their components, connectors and configurations. More recent ADLs (such as ArchiMate and SysML) have tended to be "wide-spectrum" languages capable of expressing not only components and connectors but a variety of concerns through multiple sub-languages. In addition to special-purpose languages, existing languages such as the UML can be used as ADLs "for analysis, design, and implementation of software-based systems as well as for modeling business and similar processes."
+
+Architecture frameworks
+An architecture framework captures the "conventions, principles and practices for the description of architectures established within a specific domain of application and/or community of stakeholders" (ISO/IEC/IEEE 42010). A framework is usually implemented in terms of one or more viewpoints or ADLs.
+Frameworks of interest in software architecture include:
+
+Arc42
+C4 model
+4+1
+RM-ODP (Reference Model of Open Distributed Processing)
+TOGAF
+
+Multiple views
+Represented in Kruchten's very influential 1995 paper on the "4+1 view model", this approach emphasized the varying stakeholders and concerns to be modeled.
+
+Structuralism
+Second, reflected in work of CMU and elsewhere, the notion that architecture was the high level organization of a system at run-time and that architecture should be described in terms of their components and connectors: "the architecture of a software system defines that system in terms of computational components and interactions among those components".
+During the 1990s-2000s, much of the academic work on ADLs took place within the paradigm of components and connectors. However, these ADLs have had very little impact in industry.
+Since the 1990s, there has been a convergence in approaches toward architecture description, with IEEE 1471 in 2000 codifying best practices: supporting, but not requiring, multiple viewpoints in an AD.
+
+Architecture description via decisions
+Elaborating on the rationale aspect of Perry and Wolf's original formula, a third school of thought has emerged, documenting the decisions and reasons for decisions as an essential way of conceiving and expressing a software architecture.
+This approach treats decisions as first-class elements of the architecture description, making explicit what was often implicit in earlier representations.
+
+Uses of architecture descriptions
+Architecture descriptions serve a variety of purposes including (ISO/IEC/IEEE 42010):
+
+to guide system construction and maintenance
+to aid system planning, costing and evolution
+to serve as a medium for analysis, evaluation or comparison of architectures
+to facilitate communication among system stakeholders regarding the architecture and the system
+to document architectural knowledge beyond the scope of individual projects (such as software product lines and product families, and reference architectures)
+to capture reusable architectural idioms (such as architectural styles and patterns)

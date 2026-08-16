@@ -1,0 +1,26 @@
+The Multi-Agent Programming Contest is an annual international programming competition with stated goal of stimulating research in the area of multi-agent system development and programming.
+
+History
+In 2005, Jürgen Dix (Clausthal University of Technology), Mehdi Dastani (University Utrecht) and Peter Novák (Czech Technical University in Prague) have brought the contest into being and running. The competition originally focused on Logic programming of Multi-agent systems. The goals, raised in 2005, have proven to be a solid basis for multi-agent system development and are still valid:
+
+Identification of key problems
+To collect suitable benchmarks.
+In 2007, a third goal has been added:
+
+ To gather test cases which require and enforce coordinated action.
+Although it is necessary to find a solution for the contest quest to win, the organizers pursue the intention that the solution is a system of cooperating autonomous programs that achieve the objectives together. They are also interested in how the contest participants develop the solution.
+
+Scenarios
+
+Food collectors
+Agents have to look for food and bring it to a depot on a two-dimensional grid world. Each cell can contain an agent, or food. The agents can only see a small part of the map. Initially there is no food available, it appears randomly during the game, so that agents need to search the map constantly in order to win. This scenario was used in 2005.
+
+Gold miners
+On a grid based map, teams of agents look for gold and transport it to the depot. As opposed to the food scenario, cells can also contain trees which block the agents and can form more or less complex labyrinths. Also, there are now two opposing teams competing for the gold. This scenario was used in the contests of 2006 and 2007. In 2007, the scenario was extended to allow the agents to carry more than one piece of gold, and to push opposing agents aside.
+
+Cowboys
+A grid based map contains trees, corrals, cows and agents. Two opposing teams try to drive as many cows as possible in ones corral. Cows behave using Swarm intelligence. They are also afraid of cowboys and try and run away. This scenario was used in 2008, 2009 and 2010. For the last two years, gates were introduced to make the scenario more challenging.
+
+Agents on Mars
+The 2011 contest introduces a scenario called agents on mars. Goal is to conquer as much space on mars as possible, using a team of cooperating agents. The challenge here is the higher complexity resulting from the introduction of five roles with different properties and abilities, which have to be used to scout, conquer, and keep the conquered land.
+The team HactarV2 from the TU-Delft won the 2011 competition while using the GOAL programming language.

@@ -1,0 +1,56 @@
+Flight envelope protection is a human machine interface extension of an aircraft's control system that prevents the pilot of an aircraft from making control commands that would force the aircraft to exceed its structural and aerodynamic operating limits. It is used in some form in all modern commercial fly-by-wire aircraft. The professed advantage of flight envelope protection systems is that they restrict a pilot's excessive control inputs, whether in surprise reaction to emergencies or otherwise, from translating into excessive flight control surface movements. Notionally, this allows pilots to react quickly to an emergency while blunting the effect of an excessive control input resulting from "startle," by electronically limiting excessive control surface movements that could over-stress the airframe and endanger the safety of the aircraft.
+In practice, these limitations have sometimes resulted in unintended human factors errors and accidents of their own.
+One example of such a flight envelope protection device is an anti-stall system which is designed to prevent an aircraft from stalling, for example in the form of a stick pusher that pushes the aircraft nose downward based on an input signal from a stall warning system, or by means of other fly-by-wire actions. Anti-stall systems are used on most modern swept wing aircraft, and are used on a large variety of civilian and military jet airplanes.
+
+Function
+Aircraft have a flight envelope that describes its safe performance limits in regard to such things as minimum and maximum operating speeds, and its operating structural strength. Flight envelope protection calculates that flight envelope (and adds a margin of safety) and uses this information to stop pilots from making control inputs that would put the aircraft outside that flight envelope. The interference of the flight envelope protection system with the pilot's commands can happen in two different ways (which can also be combined):
+
+Ignoring part or all of a control input that would bring an aircraft's state of flight closer to or even outside of its operational borders. This method is applied in most sidestick-controlled fly-by-wire aircraft with rate command.
+Inform the pilot that the respective command is bringing the aircraft closer to the calculated operational borders; this communication can happen by simple alarms or tactile feedback. This method is often applied in aircraft with conventional controls.
+For example, if the pilot uses the rearward side-stick to pitch the aircraft nose up, the control computers creating the flight envelope protection can prevent the pilot pitching the aircraft beyond the stalling angle of attack: 
+
+In the first case, if the pilot tries to apply even more rearward control, the flight envelope protection would cause the aircraft to ignore this command. Flight envelope protection can in this way increase aircraft safety by allowing the pilot to apply maximum control forces in an emergency while not at the same time inadvertently putting the aircraft outside the margins of its operational safety. Examples of where this might stop air accidents are when it allows a pilot to make a quick evasive maneuver in response to a ground proximity warning system warning, or in quick response to an approaching aircraft and a potential mid air collision. In this case without a flight envelope protection system, "you would probably hold back from maneuvering as hard as you could for fear of tumbling out of control, or worse. You would have to sneak up on it [2.5 G, the design limit], and when you got there you wouldn't be able to tell, because very few commercial pilots have ever flown 2.5 G. But in the A320, you wouldn't have to hesitate: you could just slam the controller all the way to the side and instantly get out of there as fast as the plane will take you." Thus the makers of the Airbus argue: "envelope protection doesn't constrain the pilot. It liberates the pilot from uncertainty – and thus enhances safety."
+In the second case, e.g. when using a force-feedback-system to communicate with the pilot, if the pilot tries to apply even more rearward control, the flight envelope protection would present increasing counterforces on the controls so that the pilot has to apply increasing force in order to continue the control input that is perceived as dangerous by the flight envelope protection.
+While most designers of modern fly-by-wire aircraft stick to either one of these two solutions ('sidestick-control & no feedback' or 'conventional control & feedback', see also below), there are also approaches in science to combine both of them: As a study demonstrated, force-feedback applied to the side-stick of an aircraft controlled via roll rate and g-load (as e.g. a modern Airbus aircraft) can be used to increase adherence to a safe flight envelope and thus reduce the risk of pilots entering dangerous states of flight outside the operational borders while maintaining the pilots' final authority and increasing their situation awareness.
+
+Airbus and Boeing
+The Airbus A320 was the first commercial aircraft to incorporate full flight-envelope protection into its flight-control software. This was instigated by former Airbus senior vice president for engineering Bernard Ziegler.  In the Airbus, the flight envelope protection cannot be overridden completely, although the crew can fly beyond flight envelope limits by selecting an alternate "control law".  Boeing took a different approach with the 777 by allowing the crew to override flight envelope limits by using excessive force on the flight controls.
+
+Incidents
+
+China Airlines Flight 006
+
+One objection raised against flight envelope protection is the incident that happened to China Airlines Flight 006, a Boeing 747SP-09, northwest of San Francisco in 1985. In this flight incident, the crew was forced to overstress (and structurally damage) the horizontal tail surfaces in order to recover from a roll and near-vertical dive. (This had been caused by an automatic disconnect of the autopilot and incorrect handling of a yaw brought about by an engine flame-out).  The pilot recovered control with about 10,000 ft of altitude remaining (from its original high-altitude cruise). To do this, the pilot had to pull the aircraft with an estimated 5.5 G, or more than twice its design limits. Had the aircraft 
+incorporated a flight envelope protection system, this excessive manoeuvre could not have been performed, greatly reducing chances of recovery.
+Against this objection, Airbus has responded that an A320 in the situation of Flight 006 "never would have fallen out of the air
+in the first place: the envelope protection would have automatically kept it in level flight in spite of the drag of a stalled engine".
+
+FedEx Flight 705
+
+In April 1995, FedEx Flight 705, a McDonnell Douglas DC-10-30, was hijacked by a FedEx Flight Engineer who, facing a dismissal, attempted to hijack the plane and crash it into FedEx Headquarters so that his family could collect his life insurance policy. After being attacked and severely injured, the flight crew was able to fight back and land the plane safely. In order to keep the attacker off balance and out of the cockpit the crew had to perform extreme maneuvers, including a barrel roll and a dive so fast the airplane couldn't measure its airspeed.
+Had the crew not been able to exceed the plane's flight envelope, the crew might not have been successful .
+
+American Airlines Flight 587
+
+American Airlines Flight 587, an Airbus A300, crashed in November 2001, when the vertical stabilizer broke off due to excessive rudder inputs made by the pilot.
+A flight-envelope protection system could have prevented this crash, though it can still be argued that an override button should be provided for contingencies when the pilots are aware of the need to exceed normal limits.
+
+US Airways Flight 1549
+
+US Airways Flight 1549, an Airbus A320, experienced a dual engine failure after a bird strike and subsequently landed safely in the Hudson River in January 2009. The NTSB accident report mentions the effect of flight envelope protection: "The airplane’s airspeed in the last 150 feet of the descent was low enough to activate the alpha-protection mode of the airplane’s fly-by-wire envelope protection features... Because of these features, the airplane could not reach the maximum angle of attack (AoA) attainable in pitch normal law for the airplane weight and configuration; however, the airplane did provide maximum performance for the weight and configuration at that time...
+The flight envelope protections allowed the captain to pull full aft on the sidestick without the risk of stalling the airplane."
+
+Qantas Flight 72
+
+Qantas 72 suffered an uncommanded pitch-down due to erroneous data from one of its ADIRU computers.
+
+Air France Flight 447
+
+Air France Flight 447, an Airbus A330, entered an aerodynamic stall from which it did not recover and crashed into the Atlantic Ocean in June 2009 killing all aboard.
+Temporary inconsistency between measured speeds, likely a result of the obstruction of the pitot tubes by ice crystals, caused autopilot disconnection and reconfiguration to alternate law; 
+a second consequence of the reconfiguration into alternate law was that stall protection no longer operated.
+The crew made inappropriate control inputs that caused the aircraft to stall and did not recognize that the aircraft had stalled.
+
+MCAS on the Boeing 737 MAX
+
+In October 2018 and again in March 2019, the MCAS flight protection system's erroneous activation pushed two Boeing 737 MAX airliners into unrecoverable dives, killing 346 people and resulting in the worldwide grounding of the airliner.

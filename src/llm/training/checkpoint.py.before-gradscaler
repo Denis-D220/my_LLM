@@ -1,0 +1,199 @@
+"""Checkpoint save and restore.
+
+A checkpoint has to carry everything needed to make the next step identical to
+the step that would have been taken had the process never stopped.  Model
+weights alone are not enough, and the omissions are all silent:
+
+* **optimizer state** -- AdamW's first and second moment estimates.  Dropping
+  them restarts the optimizer cold, which produces a visible loss spike and an
+  invisible permanent change to the trajectory.
+* **step counter** -- the learning rate is a function of it, so a wrong step
+  resumes at the wrong point on the schedule.
+* **RNG states** -- so any future stochastic component (dropout, sampling)
+  continues its stream rather than replaying it.
+* **dataset identity** -- the stream digests of the shards the run was trained
+  on.  Resuming against a *different* dataset is a real mistake that nothing
+  else here would catch, and it silently invalidates the run.
+* **both configs** -- so a checkpoint is interpretable without the code that
+  wrote it, and a mismatched architecture is refused rather than partially
+  loaded.
+
+Everything stored is a tensor or a plain Python primitive, so checkpoints load
+under ``weights_only=True`` and never execute arbitrary code on load.
+"""
+
+from __future__ import annotations
+
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+import torch
+from torch import nn
+
+CHECKPOINT_FORMAT = "llm_pretraining_checkpoint"
+CHECKPOINT_FORMAT_VERSION = 1
+
+
+def capture_rng_state() -> dict[str, Any]:
+    """Snapshot every RNG stream the training loop could consume."""
+
+    state: dict[str, Any] = {"cpu": torch.get_rng_state()}
+    if torch.cuda.is_available():
+        state["cuda"] = torch.cuda.get_rng_state_all()
+    return state
+
+
+def restore_rng_state(state: dict[str, Any]) -> None:
+    if "cpu" in state:
+        torch.set_rng_state(state["cpu"].to(torch.uint8).cpu())
+    cuda_states = state.get("cuda")
+    if cuda_states and torch.cuda.is_available():
+        available = torch.cuda.device_count()
+        if len(cuda_states) == available:
+            torch.cuda.set_rng_state_all([s.to(torch.uint8).cpu() for s in cuda_states])
+
+
+def save_checkpoint(
+    path: str | Path,
+    *,
+    model: nn.Module,
+    optimizer: torch.optim.Optimizer,
+    step: int,
+    tokens_processed: int,
+    model_config: dict[str, Any],
+    training_config: dict[str, Any],
+    schedule_config: dict[str, Any],
+    dataset_identity: dict[str, Any],
+    metrics: dict[str, Any] | None = None,
+) -> Path:
+    """Write a checkpoint atomically.
+
+    The payload goes to a temporary file first and is renamed into place only
+    once fully written.  A run interrupted mid-save otherwise leaves a
+    truncated file that looks like a checkpoint and fails to load hours later.
+    """
+
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+
+    payload = {
+        "format": CHECKPOINT_FORMAT,
+        "format_version": CHECKPOINT_FORMAT_VERSION,
+        "created_at_utc": datetime.now(timezone.utc).isoformat(),
+        "step": int(step),
+        "tokens_processed": int(tokens_processed),
+        "model_state_dict": model.state_dict(),
+        "optimizer_state_dict": optimizer.state_dict(),
+        "model_config": dict(model_config),
+        "training_config": dict(training_config),
+        "schedule_config": dict(schedule_config),
+        "dataset_identity": dict(dataset_identity),
+        "rng_state": capture_rng_state(),
+        "metrics": dict(metrics or {}),
+    }
+
+    staging = target.with_suffix(target.suffix + ".tmp")
+    torch.save(payload, staging)
+    staging.replace(target)
+    return target
+
+
+def load_checkpoint(
+    path: str | Path, *, map_location: str | torch.device = "cpu"
+) -> dict[str, Any]:
+    """Read a checkpoint and validate its envelope."""
+
+    source = Path(path)
+    if not source.is_file():
+        raise FileNotFoundError(f"checkpoint not found: {source}")
+
+    payload = torch.load(source, map_location=map_location, weights_only=True)
+
+    if not isinstance(payload, dict):
+        raise ValueError(f"checkpoint is not a mapping: {source}")
+    if payload.get("format") != CHECKPOINT_FORMAT:
+        raise ValueError(
+            f"unexpected checkpoint format {payload.get('format')!r} in {source}"
+        )
+    if payload.get("format_version") != CHECKPOINT_FORMAT_VERSION:
+        raise ValueError(
+            f"unsupported checkpoint version {payload.get('format_version')!r}"
+        )
+    for key in ("step", "model_state_dict", "optimizer_state_dict"):
+        if key not in payload:
+            raise ValueError(f"checkpoint is missing {key!r}: {source}")
+
+    return payload
+
+
+def restore_into(
+    payload: dict[str, Any],
+    *,
+    model: nn.Module,
+    optimizer: torch.optim.Optimizer | None = None,
+    model_config: dict[str, Any] | None = None,
+    dataset_identity: dict[str, Any] | None = None,
+    strict_dataset: bool = True,
+) -> tuple[int, int]:
+    """Restore a checkpoint into live objects; return ``(step, tokens)``.
+
+    ``model_config`` and ``dataset_identity``, when supplied, are compared
+    against what the checkpoint recorded.  Both mismatches are refused rather
+    than warned about: resuming a run against a different architecture or a
+    different corpus produces a model whose training history is a fiction.
+    """
+
+    if model_config is not None:
+        recorded = payload.get("model_config", {})
+        differences = {
+            key: (recorded.get(key), value)
+            for key, value in model_config.items()
+            if recorded.get(key) != value
+        }
+        if differences:
+            raise ValueError(
+                f"checkpoint architecture does not match this model: {differences}"
+            )
+
+    if dataset_identity is not None and strict_dataset:
+        recorded = payload.get("dataset_identity", {})
+        differences = {
+            key: (recorded.get(key), value)
+            for key, value in dataset_identity.items()
+            if recorded.get(key) != value
+        }
+        if differences:
+            raise ValueError(
+                "checkpoint was trained on a different dataset: "
+                f"{differences}. Resuming would make the run's token counts and "
+                "validation numbers meaningless."
+            )
+
+    model.load_state_dict(payload["model_state_dict"])
+    if optimizer is not None:
+        optimizer.load_state_dict(payload["optimizer_state_dict"])
+
+    rng_state = payload.get("rng_state")
+    if isinstance(rng_state, dict):
+        restore_rng_state(rng_state)
+
+    return int(payload["step"]), int(payload.get("tokens_processed", 0))
+
+
+def find_latest_checkpoint(directory: str | Path, pattern: str = "step-*.pt") -> Path | None:
+    """Return the highest-step checkpoint in ``directory``, if any."""
+
+    root = Path(directory)
+    if not root.is_dir():
+        return None
+
+    candidates = []
+    for candidate in root.glob(pattern):
+        digits = "".join(c for c in candidate.stem if c.isdigit())
+        if digits:
+            candidates.append((int(digits), candidate))
+
+    if not candidates:
+        return None
+    return max(candidates)[1]

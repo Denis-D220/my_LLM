@@ -1,0 +1,143 @@
+In predicate logic, existential generalization (also known as existential introduction, ∃I) is a valid rule of inference that allows one to move from a specific statement, or one instance, to a quantified generalized statement, or existential proposition. In first-order logic, it is often used as a rule for the existential quantifier (
+  
+    
+      
+        ∃
+      
+    
+    {\displaystyle \exists }
+  
+) in formal proofs.
+Example: "Rover loves to wag his tail. Therefore, something loves to wag its tail."
+Example: "Alice made herself a cup of tea. Therefore, Alice made someone a cup of tea."
+Example: "Alice made herself a cup of tea. Therefore, someone made someone a cup of tea."
+In the Fitch-style calculus:
+
+  
+    
+      
+        Q
+        (
+        a
+        )
+        →
+         
+        ∃
+        
+          x
+        
+        
+        Q
+        (
+        x
+        )
+        ,
+      
+    
+    {\displaystyle Q(a)\to \ \exists {x}\,Q(x),}
+  
+
+where 
+  
+    
+      
+        Q
+        (
+        a
+        )
+      
+    
+    {\displaystyle Q(a)}
+  
+ is obtained from 
+  
+    
+      
+        Q
+        (
+        x
+        )
+      
+    
+    {\displaystyle Q(x)}
+  
+ by replacing all its free occurrences of 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ (or some of them) by 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+.
+
+Quine
+According to Willard Van Orman Quine, universal instantiation and existential generalization are two aspects of a single principle, for instead of saying that 
+  
+    
+      
+        ∀
+        x
+        
+        x
+        =
+        x
+      
+    
+    {\displaystyle \forall x\,x=x}
+  
+ implies 
+  
+    
+      
+        
+          Socrates
+        
+        =
+        
+          Socrates
+        
+      
+    
+    {\displaystyle {\text{Socrates}}={\text{Socrates}}}
+  
+, we could as well say that the denial 
+  
+    
+      
+        
+          Socrates
+        
+        ≠
+        
+          Socrates
+        
+      
+    
+    {\displaystyle {\text{Socrates}}\neq {\text{Socrates}}}
+  
+ implies 
+  
+    
+      
+        ∃
+        x
+        
+        x
+        ≠
+        x
+      
+    
+    {\displaystyle \exists x\,x\neq x}
+  
+. The principle embodied in these two operations is the link between quantifications and the singular statements that are related to them as instances. Yet it is a principle only by courtesy. It holds only in the case where a term names and, furthermore, occurs referentially.

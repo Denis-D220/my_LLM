@@ -1,0 +1,131 @@
+iBeacon is a protocol developed by Apple and introduced at the Apple Worldwide Developers Conference in 2013. 
+Various vendors have since made iBeacon-compatible hardware transmitters – typically called beacons – a class of Bluetooth Low Energy (BLE) devices that broadcast their identifier to nearby portable electronic devices. The technology enables smartphones, tablets and other devices to perform actions when in proximity to an iBeacon.
+iBeacon is based on Bluetooth Low Energy proximity sensing by transmitting a universally unique identifier picked up by a compatible app or operating system.  The identifier and several bytes sent with it can be used to determine the device's physical location, track customers, or trigger a location-based action on the device such as a check-in on social media or a push notification.
+iBeacon can also be used with an application as an indoor positioning system, which helps smartphones determine their approximate location or context.  With the help of an iBeacon, a smartphone's software can approximately find its relative location to an iBeacon in a store. Brick and mortar retail stores use the beacons for mobile commerce, offering customers special deals through mobile marketing, and can enable mobile payments through point of sale systems.
+Another application is distributing messages at a specific Point of Interest, for example a store, a bus stop, a room or a more specific location like a piece of furniture or a vending machine. This is similar to previously used geopush technology based on GPS, but with a much reduced impact on battery life and better precision.
+iBeacon differs from some other location-based technologies as the broadcasting device (beacon) is only a 1-way transmitter to the receiving smartphone or receiving device, and necessitates a specific app installed on the device to interact with the beacons. This ensures that only the installed app (not the iBeacon transmitter) can track users as they walk around the transmitters.
+iBeacon compatible transmitters come in a variety of form factors, including small coin cell devices, USB sticks, and generic Bluetooth 4.0 capable USB dongles.
+
+Functions
+An iBeacon deployment consists of one or more iBeacon devices that transmit their own unique identification number to the local area. Software on a receiving device may then look up the iBeacon and perform various functions, such as notifying the user. Receiving devices can also connect to the iBeacons to retrieve values from iBeacon's GATT (generic attribute profile) service. iBeacons do not push notifications to receiving devices (other than their own identity). However, mobile software can use signals received from iBeacons to trigger their own push notifications.
+
+Region monitoring
+Region monitoring (limited to 20 regions on iOS) can function in the background (of the listening device) and has different delegates to notify the listening app (and user) of entry/exit in the region - even if the app is in the background or the phone is locked. Region monitoring also allows for a small window in which iOS gives a closed app an opportunity to react to the entry of a region.
+
+Ranging
+As opposed to monitoring, which enables users to detect movement in-and-out of range of the beacons, ranging provides a list of beacons detected in a given region, along with the estimated distance from the user's device to each beacon.  Ranging works only in the foreground but will return (to the listening device) an array (unlimited) of all iBeacons found along with their properties (UUID, etc.)
+An iOS device receiving an iBeacon transmission can approximate the distance from the iBeacon.  The distance (between transmitting iBeacon and receiving device) is categorized into 3 distinct ranges:
+
+Immediate: Within a few centimeters
+Near: Within a couple of meters
+Far: Greater than 10 meters away
+An iBeacon broadcast has the ability to approximate when a user has entered, exited, or lingered in region.  Depending on a customer's proximity to a beacon, they are able to receive different levels of interaction at each of these three ranges.
+The maximum range of an iBeacon transmission will depend on the location and placement, obstructions in the environment and where the device is being stored (e.g. in a leather handbag or with a thick case). Standard beacons have an approximate range of 70 meters. Long range beacons can reach up to 450 meters.
+
+Settings
+The frequency of the iBeacon transmission depends on the configuration of the iBeacon and can be altered using device specific methods.  Both the rate and the transmit power have an effect on the iBeacon battery life.  iBeacons come with predefined settings and several of them can be changed by the developer, including the rate, the transmit power, and the Major and Minor values.  The Major and Minor values are settings which can be used to connect to specific iBeacons or to work with more than one iBeacon at the same time.  Typically, multiple iBeacon deployment at a venue will have the same UUID, and use the major and minor pairs to segment and distinguish subspaces within the venue.  For example, the Major values of all the iBeacons in a specific store can be set to the same value and the Minor value can be used to identify a specific iBeacon within the store.
+
+Power consumption
+
+The Bluetooth LE protocol is significantly more power efficient than Bluetooth Classic. Several chipsets makers, including Texas Instruments and Nordic Semiconductor now supply chipsets optimized for iBeacon use. Power consumption depends on iBeacon configuration parameters of advertising interval and transmit power.  A study on 16 different iBeacon vendors reports that battery life can range between 1–24 months. Apple's recommended setting of 100 ms advertising interval with a coin cell battery provides for 1–3 months of life, which increases to 2–3 years as advertising interval is increased to 900 ms.
+Battery consumption of the phones is a factor that must be taken into account when deploying beacon-enabled apps. A recent report has shown that
+older phones tend to draw more battery in the vicinity of iBeacons, while the newer phones can be more efficient in the same environment. In addition to the time spent by the phone scanning, number of scans and number of beacons in the vicinity are also significant factors for battery drain, as pointed out by the Aislelabs report. 
+In a follow-up report, Aislelabs found a drastic improvement in battery consumption for iPhone 5s, iPhone 5c versus the older model iPhone 4s.
+At 10 surrounding iBeacons, iPhone 4s can consume up to 11% of battery per hour whereas iPhone 5s consumes a little less than 5% battery per hour.
+ 
+An energy efficient iBeacon application needs to consider these aspects in order to strike a good balance between app responsiveness and battery consumption.
+
+History and developments
+In mid-2013, Apple introduced iBeacons and experts wrote about how it is designed to help the retail industry by simplifying payments and enabling on-site offers. On December 6, 2013, Apple activated iBeacons across its 254 US retail stores. McDonald's has used the devices to give special offers to consumers in its fast-food stores.
+As of May 2014, different hardware iBeacons can be purchased for as little as $5 per device to more than $30 per device.
+Each of these different iBeacons have varying default settings for their default transmit power and iBeacon advertisement frequency. Some hardware iBeacons advertise at frequencies as low as 1 Hz while others can be as high as 10 Hz.
+iBeacon technology is still in its infancy.  One well-reported software quirk exists on 4.2 and 4.3 Android systems whereby the system's bluetooth stack crashes when presented with many iBeacons. This was reportedly fixed in Android 4.4.4.
+
+Technical details
+Bluetooth Low Energy devices can operate in an advertisement mode to notify nearby devices of their presence.
+In the simplest form, an iBeacon is a Bluetooth Low Energy device emitting advertisements following a strict format, that being an Apple-defined iBeacon prefix, followed by a variable UUID, and a major, minor pair. An example iBeacon advertisement frame could look like:
+
+fb0b57a2-8228-44cd-913a-94a122ba1206 Major 1 Minor 2
+
+where fb0b57a2-8228-44cd-913a-94a122ba1206 is the UUID.
+Since iBeacon advertising is just an application of the general Bluetooth Low Energy advertisement, the above iBeacon can be emitted by issuing the following commands on Linux to a supported Bluetooth 4 Low Energy device on a modern kernel:
+
+(Set LE Advertising Parameters)
+hcitool -i hci0 cmd 0x08 0x0006 a0 00 a0 00 03 00 00 00 00 00 00 00 00 07 00 
+############################### a0 00: Minimum Advertisement Interval (16-bit Little Endian) (0.625ms* 00 a0)
+##################################### a0 00: Maximum Advertisement Interval (16-bit Little Endian) (0.625ms* 00 a0)
+
+(Set LE Advertisement Data)
+hcitool -i hci0 cmd 0x08 0x0008 1E 02 01 06 1A FF 4C 00 02 15 FB 0B 57 A2 82 28 44 CD 91 3A 94 A1 22 BA 12 06 00 01 00 02 D1 00 
+############################### 1E: Number of total ADV bytes, cannot be more than 1F, (31 bytes max BLE advertisement length) 
+################################## 02 01 06 1A FF 4C 00 02 15: Apple's iBeacon advertising prefix
+
+(LE Advertisement Enable)
+hcitool -i hci0 cmd 0x08 0x000a 01
+
+For the retransmission interval setting (first of above commands) to work again, the transmission must be stopped with:
+
+(LE Advertisement Disable)
+hcitool -i hci0 cmd 0x08 0x000a 00
+
+Devices running the Android operating system prior to version 4.3 can only receive iBeacon advertisements but cannot emit iBeacon advertisements. Android 5.0 ("Lollipop") added the support for both central and peripheral modes.
+
+BLE advertisement packet structure byte map
+Byte 0-2: Standard BLE Flags (Not necessary but standard)
+
+ Byte 0: Length :  0x02
+ Byte 1: Type:     0x01 (Flags)
+ Byte 2: Value:    0x06 (Typical Flags 0b00000110) (LE General Discoverable Mode, BR/EDR Not Supported)
+
+Byte 3-29: Apple Defined iBeacon Data
+
+ Byte 3: Length:             0x1a (Of the following section)
+ Byte 4: Type:               0xff (Custom Manufacturer Data)
+ Byte 5-6: Manufacturer ID : 0x004c (Apple's Bluetooth SIG registered company code, 16-bit Little Endian)
+ Byte 7: SubType:            0x02 (Apple's iBeacon type of Custom Manufacturer Data)
+ Byte 8: SubType Length:     0x15 (Of the rest of the iBeacon data; UUID + Major + Minor + TXPower)
+ Byte 9-24: Proximity UUID        (Random or Public/Registered UUID of the specific beacon)
+ Byte 25-26: Major                (User-Defined value)
+ Byte 27-28: Minor                (User-Defined value)
+ Byte 29: Measured Power          (8 bit Signed value, ranges from -128 to 127, use Two's Complement to "convert" if necessary, Units: Measured Transmission Power in dBm @ 1 meters from beacon) (Set by user, not dynamic, can be used in conjunction with the received RSSI at a receiver to calculate rough distance to beacon)
+
+Android iBeacon Support
+
+Unlike iOS, Android does not have native iBeacon support.  Due to this, to use iBeacon on Android, a developer either has to use an existing library or create code that parses BLE packets to find iBeacon advertisements.
+BLE support was introduced in Android Jelly Bean with major bug fixes in Android KitKat. Stability improvements and additional BLE features have been progressively added there after, with a major stability improvement in version 6.01 of Android Marshmallow that prevents inter-app connection leaking.
+
+Spoofing
+By design, the iBeacon advertisement frame is plainly visible.
+This leaves the door open for interested parties to capture, copy and reproduce the iBeacon advertisement frames at different physical locations.
+This can be done simply by issuing the right sequence of commands to compatible Bluetooth 4.0 USB dongles.
+Successful spoofing of Apple store iBeacons was reported in February 2014.
+This is not a security flaw in the iBeacon per se, but application developers must keep this in mind when designing their applications with iBeacons.
+PayPal has taken a more robust approach, where the iBeacon is purely the start of a complex security negotiation (Challenge–response authentication). This is not likely to be hacked, nor is it likely that it would be disrupted by copies of beacons.
+Listening for iBeacon can be achieved using the following commands with a modern Linux distribution:
+
+hcitool -i hci0 lescan --passive --duplicates
+D6:EE:D4:16:ED:FC (unknown)
+F6:BE:90:32:3C:5E (unknown)
+...
+
+On another terminal, launch the protocol dump program:
+
+hcidump -R -i hci0
+> 04 3E 2A 02 01 00 01 FC ED 16 D4 EE D6 1E 02 01 06 1A FF 4C
+  00 02 15 B9 40 7F 30 F5 F8 46 6E AF F9 25 55 6B 57 FE 6D ED
+  FC D4 16 B6 B4
+...
+
+See Bluetooth Core Spec. Volume 4, Part E, 7.7.65.2: LE Meta Event::LE Advertising Report Sub-Event, for details on the hcidump output.
+The MAC address of the iBeacon along with its iBeacon payload is clearly identifiable.  The sequence of commands in technical details can then be used to reproduce the iBeacon frame.
+
+Compatible devices
+iOS devices with Bluetooth 4.0+ (iPhone 4s and later, iPad (3rd generation) and later, iPad Mini (1st generation) and later, and iPod Touch (5th generation) and later)
+Macintosh computers with OS X Mavericks (10.9) or later and Bluetooth 4.0
+Android Devices with Bluetooth 4.0+ and Android OS 4.3+ (e.g. Samsung Galaxy S7/J1 mini Prime, Samsung Galaxy Note 2/3, HTC One, Google/LG Nexus 7 2013 /Nexus 4/Nexus 5, OnePlus One, LG G3)
+Windows Phone devices with Bluetooth 4.0+ and the Lumia Cyan update or above (reports suggest support is not included with Windows Phone 8.1).
+
+Comparable technologies
+Even though the NFC environment is very different, and has many non-overlapping applications, it still compares with iBeacons.
+The NFC range is up to 20 cm (7.87 inches) but the optimum range is less than 4 cm (1.57 inches). iBeacons have a significantly higher range.
+Not all phones carry NFC chips. Apple's first iPhone model containing NFC chips was the iPhone 6, introduced September 2014, but most modern phones have had Bluetooth 4.0 or later capability for several years prior to this.

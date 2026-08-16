@@ -1,0 +1,27 @@
+Apache Lucene is a free and open-source search engine software library, originally written in Java by Doug Cutting. It is supported by the Apache Software Foundation and is released under the Apache Software License.  Lucene is widely used as a standard foundation for production search applications.
+Lucene has been ported to other programming languages including Object Pascal, Perl, C#, C++, Python, Ruby and PHP.
+
+History
+Doug Cutting originally wrote Lucene in 1999. Lucene was his fifth search engine. He had previously written two while at Xerox PARC, one at Apple, and a fourth at Excite. It was initially available for download from its home at the SourceForge web site. It joined the Apache Software Foundation's Jakarta family of open-source Java products in September 2001 and became its own top-level Apache project in February 2005. The name Lucene is Doug Cutting's wife's middle name and her maternal grandmother's first name.
+Lucene formerly included a number of sub-projects, such as Lucene.NET, Mahout, Tika and Nutch. These three are now independent top-level projects.
+In March 2010, the Apache Solr search server joined as a Lucene sub-project, merging the developer communities.
+Version 4.0 was released on October 12, 2012.
+In March 2021, Lucene changed its logo, and Apache Solr became a top level Apache project again, independent from Lucene.
+
+Features and common use
+While suitable for any application that requires full text indexing and searching capability, Lucene is recognized for its utility in the implementation of Internet search engines and local, single-site searching.
+Lucene includes a feature to perform a fuzzy search based on edit distance.
+Lucene has also been used to implement recommendation systems. For example, Lucene's 'MoreLikeThis' Class can generate recommendations for similar documents. In a comparison of the term vector-based similarity approach of 'MoreLikeThis' with citation-based document similarity measures, such as co-citation and co-citation proximity analysis, Lucene's approach excelled at recommending documents with very similar structural characteristics and more narrow relatedness. In contrast, citation-based document similarity measures tended to be more suitable for recommending more broadly related documents, meaning citation-based approaches may be more suitable for generating serendipitous recommendations, as long as documents to be recommended contain in-text citations.
+
+Lucene-based projects
+Lucene itself is just an indexing and search library and does not contain crawling and HTML parsing functionality. However, several projects extend Lucene's capability:
+
+Apache Nutch – provides web crawling and HTML parsing
+Apache Solr – an enterprise search server
+CrateDB – open source, distributed SQL database built on Lucene
+DocFetcher – a multiplatform desktop search application
+Elasticsearch – an enterprise search server released in 2010
+Kinosearch – a search engine written in Perl and C and a loose port of Lucene. The Socialtext wiki software uses this search engine, and so does the MojoMojo wiki. It is also used by the Human Metabolome Database (HMDB) and the Toxin and Toxin-Target Database (T3DB).
+MongoDB Atlas Search – a cloud-native enterprise search application based on MongoDB and Apache Lucene
+OpenSearch – an open source enterprise search server based on a fork of Elasticsearch 7
+Swiftype – an enterprise search startup based on Lucene

@@ -1,0 +1,951 @@
+Lemaître coordinates are a particular set of coordinates for the Schwarzschild metric—a spherically symmetric solution to the Einstein field equations in vacuum—introduced by Georges Lemaître in 1932. Changing from Schwarzschild to Lemaître coordinates removes the coordinate singularity at the Schwarzschild radius.
+
+Metric
+The original Schwarzschild coordinate expression of the Schwarzschild metric, in natural units (c = G = 1), is given as
+
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        
+          (
+          
+            1
+            −
+            
+              
+                
+                  r
+                  
+                    s
+                  
+                
+                r
+              
+            
+          
+          )
+        
+        d
+        
+          t
+          
+            2
+          
+        
+        −
+        
+          
+            
+              d
+              
+                r
+                
+                  2
+                
+              
+            
+            
+              1
+              −
+              
+                
+                  
+                    r
+                    
+                      s
+                    
+                  
+                  r
+                
+              
+            
+          
+        
+        −
+        
+          r
+          
+            2
+          
+        
+        
+          (
+          
+            d
+            
+              θ
+              
+                2
+              
+            
+            +
+            
+              sin
+              
+                2
+              
+            
+            ⁡
+            θ
+            d
+            
+              ϕ
+              
+                2
+              
+            
+          
+          )
+        
+        
+        ,
+      
+    
+    {\displaystyle ds^{2}=\left(1-{r_{s} \over r}\right)dt^{2}-{dr^{2} \over 1-{r_{s} \over r}}-r^{2}\left(d\theta ^{2}+\sin ^{2}\theta d\phi ^{2}\right)\;,}
+  
+
+where
+
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle ds^{2}}
+  
+ is the invariant interval;
+
+  
+    
+      
+        
+          r
+          
+            s
+          
+        
+        =
+        
+          
+            
+              2
+              G
+              M
+            
+            
+              c
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle r_{s}={\frac {2GM}{c^{2}}}}
+  
+ is the Schwarzschild radius;
+
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ is the mass of the central body;
+
+  
+    
+      
+        t
+        ,
+        r
+        ,
+        θ
+        ,
+        ϕ
+      
+    
+    {\displaystyle t,r,\theta ,\phi }
+  
+ are the Schwarzschild coordinates (which asymptotically turn into the flat spherical coordinates);
+
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ is the speed of light;
+and 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ is the gravitational constant.
+This metric has a coordinate singularity at the Schwarzschild radius 
+  
+    
+      
+        r
+        =
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r=r_{s}}
+  
+.
+Georges Lemaître was the first to show that this is not a real physical singularity but simply a manifestation of the fact that the static Schwarzschild coordinates cannot be realized with material bodies inside the Schwarzschild radius. Indeed, inside the Schwarzschild radius everything falls towards the centre and it is impossible for a physical body to keep a constant radius.
+A transformation of the Schwarzschild coordinate system from 
+  
+    
+      
+        {
+        t
+        ,
+        r
+        }
+      
+    
+    {\displaystyle \{t,r\}}
+  
+ to the new coordinates 
+  
+    
+      
+        {
+        τ
+        ,
+        ρ
+        }
+        ,
+      
+    
+    {\displaystyle \{\tau ,\rho \},}
+  
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                τ
+                =
+                d
+                t
+                +
+                
+                  
+                    
+                      
+                        r
+                        
+                          s
+                        
+                      
+                      r
+                    
+                  
+                
+                
+                
+                  
+                    (
+                    
+                      1
+                      −
+                      
+                        
+                          
+                            r
+                            
+                              s
+                            
+                          
+                          r
+                        
+                      
+                    
+                    )
+                  
+                  
+                    −
+                    1
+                  
+                
+                d
+                r
+                 
+              
+            
+            
+              
+                d
+                ρ
+                =
+                d
+                t
+                +
+                
+                  
+                    
+                      r
+                      
+                        r
+                        
+                          s
+                        
+                      
+                    
+                  
+                
+                
+                
+                  
+                    (
+                    
+                      1
+                      −
+                      
+                        
+                          
+                            r
+                            
+                              s
+                            
+                          
+                          r
+                        
+                      
+                    
+                    )
+                  
+                  
+                    −
+                    1
+                  
+                
+                d
+                r
+                 
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}d\tau =dt+{\sqrt {\frac {r_{s}}{r}}}\,\left(1-{\frac {r_{s}}{r}}\right)^{-1}dr~\\d\rho =dt+{\sqrt {\frac {r}{r_{s}}}}\,\left(1-{\frac {r_{s}}{r}}\right)^{-1}dr~\end{aligned}}}
+  
+
+(the numerator and denominator are switched inside the square-roots), leads to the Lemaître coordinate expression of the metric,
+
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        d
+        
+          τ
+          
+            2
+          
+        
+        −
+        
+          
+            
+              r
+              
+                s
+              
+            
+            r
+          
+        
+        d
+        
+          ρ
+          
+            2
+          
+        
+        −
+        
+          r
+          
+            2
+          
+        
+        (
+        d
+        
+          θ
+          
+            2
+          
+        
+        +
+        
+          sin
+          
+            2
+          
+        
+        ⁡
+        θ
+        d
+        
+          ϕ
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle ds^{2}=d\tau ^{2}-{\frac {r_{s}}{r}}d\rho ^{2}-r^{2}(d\theta ^{2}+\sin ^{2}\theta d\phi ^{2})}
+  
+
+where
+
+  
+    
+      
+        r
+        =
+        
+          
+            [
+            
+              
+                
+                  3
+                  2
+                
+              
+              (
+              ρ
+              −
+              τ
+              )
+            
+            ]
+          
+          
+            2
+            
+              /
+            
+            3
+          
+        
+        
+          r
+          
+            s
+          
+          
+            1
+            
+              /
+            
+            3
+          
+        
+        
+        .
+      
+    
+    {\displaystyle r=\left[{\frac {3}{2}}(\rho -\tau )\right]^{2/3}r_{s}^{1/3}\;.}
+  
+
+The metric in Lemaître coordinates is non-singular at the Schwarzschild radius 
+  
+    
+      
+        r
+        =
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r=r_{s}}
+  
+. This corresponds to the point 
+  
+    
+      
+        
+          
+            3
+            2
+          
+        
+        (
+        ρ
+        −
+        τ
+        )
+        =
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle {\frac {3}{2}}(\rho -\tau )=r_{s}}
+  
+. There remains a genuine gravitational singularity at the center, where 
+  
+    
+      
+        ρ
+        −
+        τ
+        =
+        0
+      
+    
+    {\displaystyle \rho -\tau =0}
+  
+, which cannot be removed by a coordinate change.
+The time coordinate used in the Lemaître coordinates is identical to the "raindrop" time coordinate used in the Gullstrand–Painlevé coordinates. The other three: the radial and angular coordinates 
+  
+    
+      
+        r
+        ,
+        θ
+        ,
+        ϕ
+      
+    
+    {\displaystyle r,\theta ,\phi }
+  
+ of the Gullstrand–Painlevé coordinates are identical to those of the Schwarzschild chart. That is, Gullstrand–Painlevé applies one coordinate transform to go from the Schwarzschild time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ to the raindrop coordinate 
+  
+    
+      
+        
+          t
+          
+            r
+          
+        
+        =
+        τ
+      
+    
+    {\displaystyle t_{r}=\tau }
+  
+. Then Lemaître applies a second coordinate transform to the radial component, so as to get rid of the off-diagonal entry in the Gullstrand–Painlevé chart.
+The notation 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ used in this article for the time coordinate should not be confused with the proper time. It is true that 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ gives the proper time for radially infalling observers; it does not give the proper time for observers traveling along other geodesics.
+
+Geodesics
+The trajectories with ρ constant are timelike geodesics with τ the proper time along these geodesics. They represent the motion of freely falling particles which start out with zero velocity at infinity. At any point their speed is just equal to the escape velocity from that point.
+The Lemaître coordinate system is synchronous, that is, the global time coordinate of the metric defines the proper time of co-moving observers. The radially falling bodies reach the Schwarzschild radius and the centre within finite proper time.
+Radial null geodesics correspond to 
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle ds^{2}=0}
+  
+, which have solutions 
+  
+    
+      
+        d
+        τ
+        =
+        ±
+        β
+        d
+        ρ
+      
+    
+    {\displaystyle d\tau =\pm \beta d\rho }
+  
+. Here, 
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  
+ is just a short-hand for
+
+  
+    
+      
+        β
+        ≡
+        β
+        (
+        r
+        )
+        =
+        
+          
+            
+              
+                r
+                
+                  s
+                
+              
+              r
+            
+          
+        
+      
+    
+    {\displaystyle \beta \equiv \beta (r)={\sqrt {r_{s} \over r}}}
+  
+
+The two signs correspond to outward-moving and inward-moving light rays, respectively. Re-expressing this in terms of the coordinate 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ gives
+
+  
+    
+      
+        d
+        r
+        =
+        
+          (
+          
+            ±
+            1
+            −
+            
+              
+                
+                  
+                    r
+                    
+                      s
+                    
+                  
+                  r
+                
+              
+            
+          
+          )
+        
+        d
+        τ
+      
+    
+    {\displaystyle dr=\left(\pm 1-{\sqrt {r_{s} \over r}}\right)d\tau }
+  
+
+Note that 
+  
+    
+      
+        d
+        r
+        <
+        0
+      
+    
+    {\displaystyle dr<0}
+  
+ when 
+  
+    
+      
+        r
+        <
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r<r_{s}}
+  
+. This is interpreted as saying that no signal can escape from inside the Schwarzschild radius, with light rays emitted radially either inwards or outwards both end up at the origin as the proper time 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ increases.
+The Lemaître coordinate chart is not geodesically complete. This can be seen by tracing outward-moving radial null geodesics backwards in time. The outward-moving geodesics correspond to the plus sign in the above. Selecting a starting point 
+  
+    
+      
+        r
+        >
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r>r_{s}}
+  
+ at 
+  
+    
+      
+        τ
+        =
+        0
+      
+    
+    {\displaystyle \tau =0}
+  
+, the above equation integrates to 
+  
+    
+      
+        r
+        →
+        +
+        ∞
+      
+    
+    {\displaystyle r\to +\infty }
+  
+ as 
+  
+    
+      
+        τ
+        →
+        +
+        ∞
+      
+    
+    {\displaystyle \tau \to +\infty }
+  
+. Going backwards in proper time, one has 
+  
+    
+      
+        r
+        →
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r\to r_{s}}
+  
+ as 
+  
+    
+      
+        τ
+        →
+        −
+        ∞
+      
+    
+    {\displaystyle \tau \to -\infty }
+  
+. Starting at 
+  
+    
+      
+        r
+        <
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r<r_{s}}
+  
+ and integrating forward, one arrives at 
+  
+    
+      
+        r
+        =
+        0
+      
+    
+    {\displaystyle r=0}
+  
+ in finite proper time. Going backwards, one has, once again that 
+  
+    
+      
+        r
+        →
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r\to r_{s}}
+  
+ as 
+  
+    
+      
+        τ
+        →
+        −
+        ∞
+      
+    
+    {\displaystyle \tau \to -\infty }
+  
+. Thus, one concludes that, although the metric is non-singular at 
+  
+    
+      
+        r
+        =
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r=r_{s}}
+  
+, all outward-traveling geodesics extend to 
+  
+    
+      
+        r
+        =
+        
+          r
+          
+            s
+          
+        
+      
+    
+    {\displaystyle r=r_{s}}
+  
+ as 
+  
+    
+      
+        τ
+        →
+        −
+        ∞
+      
+    
+    {\displaystyle \tau \to -\infty }
+  
+.

@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Model checkpoints.
+#
+# Training checkpoints are working files: one per interval, ~375 MB each, and
+# regenerable by resuming. Only the released model under artifacts/base-v0.1/
+# is tracked, and that one goes through Git LFS (see .gitattributes).
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Local archives and bundles
+*.zip
+*.tar.gz
+
+# Logs
+logs/
+
+# Large generated data.
+#
+# Excluded by extension rather than by directory. Git cannot re-include a file
+# whose parent directory is excluded, and `data/cleaned/` holds both the 1.9 GB
+# of corpus shards and the manifest, build report, progress file and freeze
+# stamp that are the evidence the corpus is what it claims to be. Ignoring the
+# directory would throw away the evidence with the payload.
+*.jsonl.gz
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.bin
+
+# Tokenizer artifacts.
+#
+# Superseded generations are regenerable from data/tokenizer_training/ plus
+# scripts/train_tokenizer.py. E011 is not disposable: it is the frozen
+# tokenizer the corpus is tokenized with, and losing it makes every token shard
+# permanently undecodable. The `dir/*` + `!dir/keep/` form is required here --
+# a bare `artifacts/` would make the re-include impossible.
+artifacts/*
+!artifacts/tokenizer-E011/
+
+# The released model. Two negations are needed: one to re-include the
+# directory that `artifacts/*` excluded, and one to override the global `*.pt`
+# rule above. Git applies the last matching pattern, so order matters here.
+!artifacts/base-v0.1/
+!artifacts/base-v0.1/*.pt

@@ -1,0 +1,301 @@
+An axiom 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is independent of a theory 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, i.e., a collection of sentences, if and only if neither 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ nor its negation 
+  
+    
+      
+        ¬
+        P
+      
+    
+    {\displaystyle \neg P}
+  
+ is provable from 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+.
+Equivalently, 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ and 
+  
+    
+      
+        ¬
+        P
+      
+    
+    {\displaystyle \neg P}
+  
+ are each consistent with 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, i.e., some models of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ make 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ true and others make 
+  
+    
+      
+        ¬
+        P
+      
+    
+    {\displaystyle \neg P}
+  
+ true. Proving the independence of  
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ from  
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is usually done by demonstrating the existence of such models. 
+If the theory 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is not itself consistent, then no new axiom is independent, since any sentence is provable in an inconsistent theory. Otherwise, proving independence can be very difficult. Forcing is one commonly used technique, which was developed to prove the independence of the continuum hypothesis from ZFC.
+Showing that an axiom is independent is often helpful for  
+providing a more minimal set of axioms, although many systems, such as ZFC, have axioms which can be derived from other axioms in the system. Such results are also central to the discipline of reverse mathematics, which studies when axioms are necessary (rather than merely sufficient) to prove a theorem.  
+
+Examples
+
+Parallel Postulate and Euclid's Axioms
+The Parallel Postulate is the fifth postulate in Euclid's Elements and it is independent from the preceding four postulates. This was first shown by Beltrami who proved the equiconsistency of hyperbolic and Euclidean geometry. Beltrami's proof makes use of several models of hyperbolic geometry including those now known as the Beltrami–Klein model, the Poincaré disk model, and the Poincaré half-plane model.    
+The parallel postulate is equivalent to Playfair's axiom that for any given line 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ and point 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ not on 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+, in the plane containing both line 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ and point 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ there is at most one line through 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ that does not intersect 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+, i.e., is parallel to 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+. 
+Euclidean geometry is the geometry which makes all five of Euclid's postulates true, including the parallel postulate. Hyperbolic geometry makes the first four of Euclid's postulates true as well as the axiom that there are at least two distinct lines through 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ that do not intersect 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+. Thus, the consistency of hyperbolic geometry shows that the negation of the parallel postulate is consistent with the other four postulates.  
+There are also other non-Euclidean geometries, such as elliptical geometry and spherical geometry, both of which have no lines through 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ that do not intersect 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+. 
+
+Continuum Hypothesis and ZFC
+The continuum hypothesis (CH) is independent from Zermelo–Fraenkel set theory with Choice (ZFC). CH states there is no set with cardinality between that of the integers and their power set, symbolically, 
+  
+    
+      
+        ∄
+        S
+        :
+        
+          ℵ
+          
+            0
+          
+        
+        <
+        
+          |
+        
+        S
+        
+          |
+        
+        <
+        
+          2
+          
+            
+              ℵ
+              
+                0
+              
+            
+          
+        
+      
+    
+    {\displaystyle \nexists S\colon \aleph _{0}<|S|<2^{\aleph _{0}}}
+  
+. 
+Gödel showed that CH cannot be disproved from ZF, even if the axiom of choice (AC) is adopted, i.e. from ZFC. Gödel's proof uses ZF to show that both CH and AC hold in the constructible universe 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+, an inner model of the axioms of ZF. This shows that CH (and AC) are consistent with ZF, assuming that ZF is itself consistent. This kind of relative consistency proof is needed since the consistency of ZF cannot be proved within ZF due to Gödel's incompleteness theorems (but it is widely believed to be true and can be proved in stronger set theories).
+Cohen showed that CH cannot be proven from the ZFC axioms, completing the overall independence proof. To prove his result, Cohen developed the method of forcing, which has become a standard tool in set theory. Essentially, this method begins with a model of ZF in which CH holds and constructs another model which contains more sets than the original in a way that CH does not hold in the new model. Cohen was awarded the Fields Medal in 1966 for his proof.

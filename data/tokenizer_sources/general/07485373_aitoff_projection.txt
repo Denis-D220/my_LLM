@@ -1,0 +1,146 @@
+The Aitoff projection is a modified azimuthal map projection proposed by David A. Aitoff in 1889. Based on the equatorial form of the azimuthal equidistant projection, Aitoff first halves longitudes, then projects according to the azimuthal equidistant, and then stretches the result horizontally into a 2:1 ellipse to compensate for having halved the longitudes.
+Expressed simply:
+
+  
+    
+      
+        x
+        =
+        2
+        
+          azeq
+          
+            x
+          
+        
+        ⁡
+        
+          (
+          
+            
+              
+                λ
+                2
+              
+            
+            ,
+            φ
+          
+          )
+        
+        ,
+        
+        y
+        =
+        
+          azeq
+          
+            y
+          
+        
+        ⁡
+        
+          (
+          
+            
+              
+                λ
+                2
+              
+            
+            ,
+            φ
+          
+          )
+        
+      
+    
+    {\displaystyle x=2\operatorname {azeq} _{x}\left({\frac {\lambda }{2}},\varphi \right),\qquad y=\operatorname {azeq} _{y}\left({\frac {\lambda }{2}},\varphi \right)}
+  
+
+where azeqx and azeqy are the x and y components of the equatorial azimuthal equidistant projection. Written out explicitly, the projection is:
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              2
+              cos
+              ⁡
+              φ
+              sin
+              ⁡
+              
+                
+                  λ
+                  2
+                
+              
+            
+            
+              sinc
+              ⁡
+              α
+            
+          
+        
+        ,
+        
+        y
+        =
+        
+          
+            
+              sin
+              ⁡
+              φ
+            
+            
+              sinc
+              ⁡
+              α
+            
+          
+        
+      
+    
+    {\displaystyle x={\frac {2\cos \varphi \sin {\frac {\lambda }{2}}}{\operatorname {sinc} \alpha }},\qquad y={\frac {\sin \varphi }{\operatorname {sinc} \alpha }}}
+  
+
+where
+
+  
+    
+      
+        α
+        =
+        arccos
+        ⁡
+        
+          (
+          
+            cos
+            ⁡
+            φ
+            cos
+            ⁡
+            
+              
+                λ
+                2
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \alpha =\arccos \left(\cos \varphi \cos {\frac {\lambda }{2}}\right)}
+  
+
+and sinc α is the unnormalized sinc function with the discontinuity removed. In all of these formulas, λ is the longitude from the central meridian and φ is the latitude.
+Three years later, Ernst Hermann Heinrich Hammer suggested the use of the Lambert azimuthal equal-area projection in the same manner as Aitoff, producing the Hammer projection. While Hammer was careful to cite Aitoff, some authors have mistakenly referred to the Hammer projection as the Aitoff projection.

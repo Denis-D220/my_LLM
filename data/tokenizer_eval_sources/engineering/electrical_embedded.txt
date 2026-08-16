@@ -1,0 +1,153 @@
+ELECTRICAL AND EMBEDDED SYSTEMS ENGINEERING
+
+Electrical engineering concerns the generation, transmission, conversion, measurement, and control of electrical energy and signals. Embedded systems engineering is the branch that places computation inside a physical product, where a processor senses the environment, decides, and acts on it under constraints of cost, power, size, timing, and reliability that a general-purpose computer never faces.
+
+The two are inseparable in practice. A modern motor drive contains power semiconductors, magnetics, sensing circuits, a microcontroller running a control loop, communication interfaces, and safety logic. Designing it requires circuit theory, semiconductor behavior, digital design, firmware, control theory, and an understanding of thermal and electromagnetic effects. This document surveys that territory from fundamentals through practical system design.
+
+FUNDAMENTAL QUANTITIES AND CIRCUIT LAWS
+
+Charge is the fundamental electrical quantity, measured in coulombs. Current is the rate of charge flow, measured in amperes, where one ampere equals one coulomb per second. Voltage is energy per unit charge, measured in volts, and represents the potential difference driving current. Power is the product of voltage and current, measured in watts. Energy is the integral of power over time, measured in joules or, commercially, in kilowatt-hours.
+
+Resistance opposes current flow and is measured in ohms. Ohm's law states that voltage equals current times resistance for a linear resistive element. Power dissipated in a resistor equals voltage times current, which can be rewritten as current squared times resistance or voltage squared divided by resistance. The current-squared form explains why conductor sizing and connection quality matter so much: doubling current quadruples heating, and a loose connection with elevated resistance concentrates that heating in one place.
+
+Kirchhoff's current law states that the algebraic sum of currents entering any node is zero, which is conservation of charge. Kirchhoff's voltage law states that the algebraic sum of voltages around any closed loop is zero, which is conservation of energy. Together with the element relationships, these two laws are sufficient to analyze any lumped circuit, and every systematic analysis method is a bookkeeping scheme built on them.
+
+Nodal analysis applies the current law at each node, taking node voltages as unknowns, and is well suited to circuits with many parallel branches. Mesh analysis applies the voltage law around each independent loop, taking loop currents as unknowns, and suits planar circuits with many series elements. Both produce linear systems solvable by standard matrix methods, which is exactly how circuit simulators operate internally.
+
+Series resistances add directly. Parallel resistances combine as the reciprocal of the sum of reciprocals, and for two resistors this reduces to the product over the sum. A voltage divider splits voltage in proportion to resistance and is the most frequently used circuit fragment in all of electronics, appearing in biasing networks, sensor interfaces, and feedback paths. A current divider splits current in inverse proportion to resistance.
+
+Thevenin's theorem states that any linear two-terminal network can be replaced by a single voltage source in series with a single resistance, as seen from those terminals. Norton's theorem gives the equivalent current source in parallel with the same resistance. These equivalents dramatically simplify analysis of a load connected to a complicated source, and they formalize the concept of output impedance. Maximum power transfer to a load occurs when load resistance equals source resistance, though this is rarely the design goal in power systems, where efficiency matters more than transferred power and load resistance is therefore kept much higher.
+
+Superposition states that in a linear circuit, the response to multiple independent sources equals the sum of the responses to each source acting alone with the others suppressed. It is invaluable for separating a signal from a bias, and its failure in nonlinear circuits is precisely why nonlinear analysis is harder.
+
+ENERGY STORAGE AND TRANSIENT BEHAVIOR
+
+A capacitor stores energy in an electric field between conductors separated by a dielectric. Its current is proportional to the rate of change of voltage, so a capacitor opposes sudden voltage change and behaves as an open circuit at direct current and a short circuit at very high frequency. Stored energy equals one half the capacitance times voltage squared.
+
+An inductor stores energy in a magnetic field produced by current in a coil. Its voltage is proportional to the rate of change of current, so an inductor opposes sudden current change and behaves as a short at direct current and an open circuit at very high frequency. Stored energy equals one half the inductance times current squared. The energy stored in an inductor is the reason that interrupting current in an inductive load produces a large voltage spike, and why flyback diodes are placed across relay coils and motor windings.
+
+An RC circuit charges and discharges exponentially with time constant equal to resistance times capacitance. After one time constant the response has completed about sixty-three percent of its change; after five time constants it is within one percent of final value. An RL circuit behaves analogously with time constant equal to inductance divided by resistance. These first-order responses appear everywhere: in debounce circuits, in sensor filtering, in gate drive, and in the rise time of any signal driving a capacitive load.
+
+Second-order RLC circuits exhibit three regimes determined by the damping ratio. Overdamped circuits return to equilibrium slowly without overshoot. Critically damped circuits return as quickly as possible without overshoot. Underdamped circuits oscillate with decaying amplitude at a frequency near the natural resonant frequency. Quality factor measures how lightly damped a resonant circuit is and equivalently how narrow its bandwidth. These same three regimes describe mechanical suspensions and control loops, and recognizing the shared mathematics saves considerable effort.
+
+ALTERNATING CURRENT ANALYSIS
+
+Alternating current varies sinusoidally with time. Root-mean-square values are used because they give the equivalent heating effect of a direct current: for a sinusoid, the RMS value is the peak divided by the square root of two, so a nominal 230-volt supply has a peak near 325 volts, a fact that governs component voltage ratings.
+
+Phasor analysis converts sinusoidal steady-state problems into algebra. Each sinusoid is represented by a complex number encoding amplitude and phase, and each element is represented by an impedance: resistance for a resistor, one over j-omega-C for a capacitor, and j-omega-L for an inductor. Kirchhoff's laws then apply exactly as in direct current analysis, with complex arithmetic replacing real arithmetic. This technique is what makes filter design and power system analysis tractable.
+
+Impedance has magnitude and phase. In a purely resistive circuit, voltage and current are in phase. In a capacitive circuit current leads voltage by ninety degrees; in an inductive circuit it lags by ninety degrees. Real power performs useful work; reactive power circulates without net transfer; apparent power is their vector sum. Power factor, the ratio of real to apparent power, matters commercially because distribution equipment must be sized for apparent power while customers are typically billed for real energy, so poor power factor imposes cost on the network and is often penalized or corrected with capacitor banks.
+
+Frequency response describes how a circuit treats different frequencies. A low-pass filter passes low frequencies and attenuates high ones above a cutoff, defined as the frequency where output power falls to half, corresponding to about minus three decibels. High-pass, band-pass, and band-stop filters follow the same logic. Bode plots display magnitude in decibels and phase in degrees against logarithmic frequency, and their straight-line asymptotic approximations allow rapid mental estimation. A single pole contributes a slope of minus twenty decibels per decade and a phase shift approaching minus ninety degrees, and counting poles and zeros gives a quick picture of overall behavior.
+
+Transformers couple two windings through a shared magnetic circuit, scaling voltage by the turns ratio and current inversely. They provide galvanic isolation and enable efficient long-distance transmission, since raising voltage lowers current and therefore lowers resistive loss quadratically. Practical transformers exhibit leakage inductance, winding resistance, and core losses from hysteresis and eddy currents, which is why cores are laminated or made of ferrite at high frequency.
+
+SEMICONDUCTOR DEVICES
+
+Semiconductors have conductivity between conductors and insulators and, critically, conductivity that can be controlled. Doping with donor atoms produces n-type material with mobile electrons; doping with acceptor atoms produces p-type material with mobile holes. Joining them creates a p-n junction with a depletion region and a built-in potential barrier.
+
+A diode conducts readily in forward bias above roughly 0.7 volts for silicon, or about 0.3 volts for Schottky types, and blocks in reverse bias until breakdown. Applications include rectification, reverse-polarity protection, clamping, and freewheeling. Zener diodes operate deliberately in reverse breakdown to provide a voltage reference. Light-emitting diodes convert current into photons and require current limiting because their forward voltage varies little with current. Photodiodes convert light into current and form the basis of optical sensing and communication.
+
+Bipolar junction transistors are current-controlled devices in which a small base current controls a much larger collector current, with the ratio given by the current gain. They operate in cutoff, active, or saturation regions and remain useful for analog amplification, current sources, and level shifting.
+
+Field-effect transistors are voltage-controlled. The MOSFET is the dominant device in both digital and power electronics. Applying voltage to an insulated gate creates a conductive channel between drain and source. In switching applications the relevant parameters are on-resistance, which sets conduction loss, gate charge, which sets switching loss and drive requirements, and breakdown voltage. Because the gate is capacitive, driving it fast requires substantial peak current, which is why dedicated gate driver circuits exist. Insulated gate bipolar transistors combine an easy-to-drive gate with low conduction loss at high voltage and dominate in high-power motor drives.
+
+Operational amplifiers are high-gain differential amplifiers used almost exclusively with negative feedback. The two idealizing rules simplify analysis enormously: no current flows into the inputs, and the feedback drives the input voltage difference to zero. From these follow the standard configurations. The inverting amplifier has gain equal to minus the ratio of feedback to input resistance. The non-inverting amplifier has gain equal to one plus that ratio. The voltage follower provides unity gain with very high input impedance, isolating a weak source from a demanding load. Difference and instrumentation amplifiers reject common-mode noise, which is essential for reading small sensor signals in electrically noisy environments. Integrators, differentiators, active filters, comparators, and precision rectifiers are all variations on the same feedback principle.
+
+Real operational amplifiers depart from the ideal in ways that matter: finite gain-bandwidth product limits high-frequency accuracy, input offset voltage and bias current introduce errors in precision applications, slew rate limits large-signal response, and output stages cannot always swing to the supply rails. Selecting a device means matching these non-idealities to the application rather than seeking the best specification on every axis.
+
+DIGITAL LOGIC
+
+Digital systems represent information as discrete voltage levels, which confers noise immunity, since small disturbances do not change the interpreted value. Binary is used because two states are easy to distinguish reliably.
+
+Combinational logic produces outputs determined solely by present inputs. The basic gates are AND, OR, NOT, NAND, NOR, XOR, and XNOR. NAND and NOR are each functionally complete, meaning any logic function can be built from either alone, which historically simplified manufacturing. Boolean algebra manipulates logic expressions, and De Morgan's theorems, stating that the complement of a product is the sum of complements and vice versa, are used constantly to restructure logic into a preferred gate type.
+
+Karnaugh maps minimize expressions of a few variables graphically by grouping adjacent minterms; larger problems are handled by algorithmic minimization inside synthesis tools. Standard combinational blocks include multiplexers, which select one of several inputs; decoders, which activate one of several outputs; encoders; comparators; and adders, from the half adder through the ripple-carry adder to the carry-lookahead adder that trades gate count for speed.
+
+Sequential logic depends on past inputs as well as present ones, requiring memory. Latches are level-sensitive; flip-flops are edge-triggered and are the standard storage element in synchronous design. Registers store multi-bit values, shift registers move data serially, and counters divide frequency and track events.
+
+Synchronous design clocks all state elements from a common signal, which makes timing analysis tractable. Setup time requires data to be stable before the clock edge; hold time requires it to remain stable afterward. Violating either produces metastability, in which an output settles unpredictably. Signals crossing between clock domains must therefore be synchronized deliberately, typically through two-stage synchronizers for single bits and asynchronous FIFOs or handshakes for multi-bit data. Clock domain crossing errors are among the most difficult digital faults to diagnose because they are intermittent and depend on relative clock phase.
+
+Finite state machines formalize sequential behavior as a set of states, transitions triggered by inputs, and outputs. Moore machines produce outputs depending only on the current state; Mealy machines produce outputs depending on state and inputs, which can reduce state count at the cost of outputs that respond within the same cycle. State machines are the standard way to structure both hardware controllers and embedded firmware, and expressing behavior as an explicit state machine usually exposes ambiguities that prose specifications hide.
+
+MICROCONTROLLERS AND EMBEDDED ARCHITECTURE
+
+A microcontroller integrates a processor core, memory, and peripherals on a single chip. Unlike a general-purpose computer it is designed for direct interaction with hardware, deterministic timing, and low power.
+
+Memory is typically split between non-volatile flash holding program code and constants, and volatile RAM holding variables and stack. Some devices include EEPROM or emulate it in flash for configuration data that must survive power loss. Memory is scarce compared with desktop computing, and embedded programming style reflects that: static allocation is preferred, dynamic allocation is often prohibited outright to avoid fragmentation and unbounded latency, and stack depth is analyzed rather than assumed.
+
+Peripherals do the work that would otherwise consume processor time. General-purpose input and output pins read and drive digital signals, configurable for pull-up or pull-down resistors, drive strength, and interrupt generation. Timers count clock cycles to measure intervals, generate periodic interrupts, produce pulse-width modulation, and capture the timing of external events. Pulse-width modulation controls average power delivered to motors, heaters, and lights by varying duty cycle at a frequency high enough that the load responds to the average rather than the individual pulses.
+
+Analog-to-digital converters translate continuous voltages into numbers. Key parameters are resolution in bits, sampling rate, and accuracy, which is degraded by noise, reference stability, and nonlinearity. The Nyquist criterion requires sampling at more than twice the highest signal frequency; violating it causes aliasing, in which high-frequency content masquerades as low-frequency content and cannot be removed afterward. An analog anti-aliasing filter before the converter is therefore mandatory rather than optional. Digital-to-analog converters perform the reverse and are used for waveform generation and analog control outputs.
+
+Interrupts allow the processor to respond to events without polling. When an interrupt occurs, the processor saves context, executes a handler, and resumes. Handlers should be short, should avoid blocking operations, and should communicate with main code through carefully managed shared state, since a variable modified in an interrupt and read in main code must be declared appropriately and accessed atomically. Priority levels and nesting determine which events preempt which, and getting this wrong produces latency problems that appear only under specific load conditions.
+
+Direct memory access transfers data between memory and peripherals without processor involvement, which is essential for high-throughput interfaces and for maintaining responsiveness while streaming data.
+
+COMMUNICATION INTERFACES
+
+Embedded systems rarely operate alone, and a substantial portion of design effort concerns getting data between devices reliably.
+
+UART provides simple asynchronous serial communication with no shared clock, relying on both ends agreeing on baud rate and framing. It is easy to implement and debug, which keeps it popular for diagnostics and simple links, but it does not scale to many devices.
+
+SPI is a synchronous interface with separate clock, data-in, data-out, and chip-select lines. It is fast, full duplex, and simple in hardware, at the cost of requiring an additional select line per peripheral. It suits displays, memory devices, and high-rate sensors.
+
+I2C uses only two wires, a clock and a bidirectional data line, with devices addressed by number, allowing many peripherals on one bus. It is slower and more complex in protocol, involving start and stop conditions, acknowledgment bits, clock stretching, and arbitration. Bus capacitance and pull-up resistor selection materially affect reliability, and a device that hangs while holding the data line low can lock the entire bus, which is why recovery procedures are worth implementing.
+
+CAN was developed for automotive use and is designed for electrically hostile environments. It uses differential signaling for noise immunity, message-based addressing rather than node addressing, non-destructive bitwise arbitration so that the highest-priority message proceeds without collision loss, and built-in error detection with automatic retransmission and fault confinement. These properties make it appropriate for safety-relevant distributed control.
+
+USB, Ethernet, and wireless interfaces including Bluetooth Low Energy, Wi-Fi, and various low-power wide-area technologies connect embedded devices to larger networks. Each brings a protocol stack whose memory footprint, power profile, and certification requirements must be considered early, since retrofitting connectivity late in a design is expensive.
+
+FIRMWARE AND REAL-TIME BEHAVIOR
+
+Firmware is the software running on an embedded processor, and it operates under constraints unusual in general software engineering: hard memory limits, direct hardware manipulation, timing requirements, and the frequent impossibility of updating deployed units easily.
+
+The simplest structure is a super-loop that repeatedly polls inputs and updates outputs, with interrupts handling time-critical events. This works well for modest systems and has the virtue of being easy to reason about. As complexity grows, cooperative schedulers or state machine frameworks provide more structure while preserving determinism.
+
+A real-time operating system introduces tasks with priorities, preemptive scheduling, and primitives for synchronization and communication including semaphores, mutexes, queues, and event flags. Real-time does not mean fast; it means predictable. A hard real-time system must meet every deadline, since a missed deadline constitutes failure, as in an airbag controller or a motor commutation loop. A soft real-time system tolerates occasional misses with degraded quality, as in audio streaming.
+
+Concurrency introduces characteristic hazards. Race conditions occur when the outcome depends on timing between concurrent accesses to shared data. Deadlock occurs when tasks wait on one another circularly. Priority inversion occurs when a high-priority task waits on a resource held by a low-priority task that is itself preempted by a medium-priority task, and it is addressed by priority inheritance protocols. These failures are timing-dependent and therefore intermittent, which makes them far harder to find than ordinary logic errors and argues strongly for designs that minimize shared mutable state.
+
+Watchdog timers guard against firmware hangs. The software must periodically reset the watchdog; failure to do so triggers a system reset. Correct use requires the reset to occur only when the system is genuinely healthy, which usually means requiring several independent subsystems to check in rather than resetting the watchdog from a timer interrupt that would continue running even if the main application had stopped.
+
+Bootloaders enable firmware updates in the field. A robust design keeps the bootloader itself immutable, verifies image integrity and authenticity before committing, and supports rollback so that an interrupted or corrupt update does not leave a device unrecoverable. Update security matters because an unauthenticated update path is a complete compromise of the device.
+
+POWER SUPPLY DESIGN
+
+Every embedded system needs regulated power, and supply problems account for a substantial share of field failures.
+
+Linear regulators produce a clean lower voltage by dissipating the difference as heat. They are simple, quiet, and appropriate where the voltage drop and current are both small. Efficiency equals the ratio of output to input voltage, so dropping twelve volts to three at appreciable current wastes most of the input as heat.
+
+Switching regulators store energy in an inductor and transfer it in packets, achieving efficiencies commonly above ninety percent. Buck converters step voltage down, boost converters step it up, and buck-boost topologies do either. Isolated topologies including flyback and forward converters add a transformer for safety isolation. The cost of switching regulation is complexity and switching noise, which requires careful layout: high-current switching loops must be kept physically small, input and output capacitors placed close to the relevant pins, and the feedback path routed away from noisy nodes.
+
+Decoupling capacitors placed near each integrated circuit supply the transient current demanded during switching, which the main supply cannot deliver quickly enough through inductive traces. Omitting or misplacing them produces intermittent faults that resist diagnosis because the symptoms depend on activity patterns.
+
+Battery-powered designs require attention to average current rather than peak. Sleep modes reduce consumption by orders of magnitude by stopping clocks and disabling peripherals, with wake-up from timer, pin change, or communication activity. A device drawing ten milliamperes continuously and one drawing ten milliamperes for one millisecond per second differ in battery life by roughly a factor of a thousand, so duty cycling usually dominates every other efficiency measure.
+
+CIRCUIT BOARD DESIGN AND ELECTROMAGNETIC COMPATIBILITY
+
+At the frequencies present in modern digital systems, wires are not ideal conductors. Every trace has inductance, adjacent traces have mutual capacitance, and a trace whose length is a meaningful fraction of the signal wavelength behaves as a transmission line requiring controlled impedance and termination.
+
+Ground design is central. A continuous ground plane provides a low-impedance return path directly beneath each signal, minimizing loop area and thus both emission and susceptibility. Splitting ground planes without careful thought forces return currents to detour, enlarging loops and creating the very problems the split was intended to prevent. Mixed analog and digital designs require particular care to keep noisy digital return currents out of sensitive analog references.
+
+Electromagnetic compatibility has two aspects: a device must not emit excessive interference, and it must tolerate interference from its environment. Techniques include filtering at every interface, shielding of sensitive or noisy sections, slowing edge rates where fast edges are not needed, spread-spectrum clocking, and physical separation of aggressor and victim circuits. Compliance testing is a legal requirement in most markets, and failures discovered at that stage are expensive because they often require board changes rather than firmware changes.
+
+Protection circuits guard against real-world abuse. Electrostatic discharge protection diodes shunt transient energy at connectors. Transient voltage suppressors handle surges on power and communication lines. Reverse polarity protection prevents damage from incorrect connection. Current limiting and fusing contain fault energy. Optical or magnetic isolation separates circuits at different potentials and is mandatory where mains voltages meet user-accessible interfaces.
+
+TESTING, RELIABILITY, AND VALIDATION
+
+Testing spans several levels. Unit testing verifies individual firmware functions, ideally on a host machine with hardware access abstracted behind interfaces that can be substituted. Integration testing verifies interaction between modules. Hardware-in-the-loop testing runs real firmware on real hardware against a simulated plant, allowing fault conditions to be exercised safely and repeatably. Environmental testing subjects units to temperature extremes, humidity, vibration, and shock. Compliance testing verifies conformance to electrical safety and electromagnetic standards.
+
+Instruments matter. A multimeter measures steady voltage, current, and resistance. An oscilloscope displays waveforms against time and is indispensable for timing and signal integrity work. A logic analyzer captures many digital channels and decodes protocols. A spectrum analyzer displays frequency content and is used for interference and radio work. In-circuit debuggers provide breakpoints, single stepping, and memory inspection on the target processor itself.
+
+Reliability engineering estimates failure rates and designs to reduce them. The bathtub curve describes elevated early failures from manufacturing defects, a long flat period of random failures, and rising wear-out failures at end of life. Burn-in screens the first region. Derating components, operating them well below rated limits, extends the second. Electrolytic capacitors, connectors, relays, and anything subject to thermal cycling dominate the third. Since component lifetime falls sharply with temperature, thermal design is a reliability activity rather than merely a performance one.
+
+Safety-critical systems add formal requirements. Functional safety standards define integrity levels according to the severity, exposure, and controllability of potential hazards, and impose corresponding requirements on development process, diagnostic coverage, and redundancy. Techniques include redundant channels with comparison, self-tests at startup and during operation, defined safe states entered on fault detection, and independent monitoring hardware that can shut down the system if the main processor misbehaves.
+
+THE DESIGN PROCESS IN PRACTICE
+
+A well-run embedded project begins with requirements that are specific and testable, distinguishing what the system must do from how it will do it. Architecture then partitions functionality between hardware and software, a decision that is expensive to revisit later. Component selection considers availability and lifecycle as seriously as specification, since a part that cannot be sourced in production volume is not a viable choice regardless of its merits.
+
+Prototyping reduces risk early. Development boards allow firmware work to begin before custom hardware exists. Early prototypes should include test points, debug interfaces, and provision for rework, since the first board revision is never the last. Bring-up proceeds incrementally: verify power rails before applying power to processors, confirm clocks before expecting code to run, and validate each peripheral individually before integrating.
+
+Documentation carries the design forward. Schematics, board layout files, bills of materials, interface specifications, test procedures, and rationale for non-obvious decisions determine whether the product can be maintained, manufactured, and revised by people other than its original designer. In embedded work this matters more than in most fields, because products often remain in service for a decade or more, long after the original team has moved on and the original tools have become difficult to obtain.

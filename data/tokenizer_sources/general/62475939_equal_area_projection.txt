@@ -1,0 +1,544 @@
+In cartography, an equivalent, authalic, or equal-area projection is a map projection that preserves relative area measure between any and all map regions. Equivalent projections are widely used for thematic maps showing scenario distribution such as population, farmland distribution, forested areas, and so forth, because an equal-area map does not change apparent density of the phenomenon being mapped.
+By Gauss's Theorema Egregium, an equal-area projection cannot be conformal. This implies that an equal-area projection inevitably distorts shapes. Even though a point or points or a path or paths on a map might have no distortion, the greater the area of the region being mapped, the greater and more obvious the distortion of shapes inevitably becomes.
+
+Description
+In order for a map projection of the sphere to be equal-area, its generating formulae must meet this Cauchy-Riemann-like condition:
+
+  
+    
+      
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              φ
+            
+          
+        
+        ⋅
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              λ
+            
+          
+        
+        −
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              λ
+            
+          
+        
+        ⋅
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              φ
+            
+          
+        
+        =
+        s
+        ⋅
+        cos
+        ⁡
+        φ
+      
+    
+    {\displaystyle {\frac {\partial y}{\partial \varphi }}\cdot {\frac {\partial x}{\partial \lambda }}-{\frac {\partial y}{\partial \lambda }}\cdot {\frac {\partial x}{\partial \varphi }}=s\cdot \cos \varphi }
+  
+
+where 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ is constant throughout the map. Here, 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ represents latitude; 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ represents longitude; and 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ are the projected (planar) coordinates for a given 
+  
+    
+      
+        (
+        φ
+        ,
+        λ
+        )
+      
+    
+    {\displaystyle (\varphi ,\lambda )}
+  
+ coordinate pair.
+
+For example, the sinusoidal projection is a very simple equal-area projection. Its generating formulae are:
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                R
+                ⋅
+                λ
+                cos
+                ⁡
+                φ
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                R
+                ⋅
+                φ
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=R\cdot \lambda \cos \varphi \\y&=R\cdot \varphi \end{aligned}}}
+  
+
+where 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ is the radius of the globe. Computing the partial derivatives,
+
+  
+    
+      
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              φ
+            
+          
+        
+        =
+        −
+        R
+        ⋅
+        λ
+        ⋅
+        sin
+        ⁡
+        φ
+        ,
+        
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              λ
+            
+          
+        
+        =
+        R
+        ⋅
+        cos
+        ⁡
+        φ
+        ,
+        
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              φ
+            
+          
+        
+        =
+        R
+        ,
+        
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              λ
+            
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle {\frac {\partial x}{\partial \varphi }}=-R\cdot \lambda \cdot \sin \varphi ,\quad {\frac {\partial x}{\partial \lambda }}=R\cdot \cos \varphi ,\quad {\frac {\partial y}{\partial \varphi }}=R,\quad {\frac {\partial y}{\partial \lambda }}=0}
+  
+
+and so
+
+  
+    
+      
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              φ
+            
+          
+        
+        ⋅
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              λ
+            
+          
+        
+        −
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              λ
+            
+          
+        
+        ⋅
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              φ
+            
+          
+        
+        =
+        R
+        ⋅
+        R
+        ⋅
+        cos
+        ⁡
+        φ
+        −
+        0
+        ⋅
+        (
+        −
+        R
+        ⋅
+        λ
+        ⋅
+        sin
+        ⁡
+        φ
+        )
+        =
+        
+          R
+          
+            2
+          
+        
+        ⋅
+        cos
+        ⁡
+        φ
+        =
+        s
+        ⋅
+        cos
+        ⁡
+        φ
+      
+    
+    {\displaystyle {\frac {\partial y}{\partial \varphi }}\cdot {\frac {\partial x}{\partial \lambda }}-{\frac {\partial y}{\partial \lambda }}\cdot {\frac {\partial x}{\partial \varphi }}=R\cdot R\cdot \cos \varphi -0\cdot (-R\cdot \lambda \cdot \sin \varphi )=R^{2}\cdot \cos \varphi =s\cdot \cos \varphi }
+  
+
+with 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ taking the value of the constant 
+  
+    
+      
+        
+          R
+          
+            2
+          
+        
+      
+    
+    {\displaystyle R^{2}}
+  
+.
+For an equal-area map of the ellipsoid, the corresponding differential condition that must be met is:
+
+  
+    
+      
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              φ
+            
+          
+        
+        ⋅
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              λ
+            
+          
+        
+        −
+        
+          
+            
+              ∂
+              y
+            
+            
+              ∂
+              λ
+            
+          
+        
+        ⋅
+        
+          
+            
+              ∂
+              x
+            
+            
+              ∂
+              φ
+            
+          
+        
+        =
+        s
+        ⋅
+        cos
+        ⁡
+        φ
+        ⋅
+        
+          
+            
+              (
+              1
+              −
+              
+                e
+                
+                  2
+                
+              
+              )
+            
+            
+              (
+              1
+              −
+              
+                e
+                
+                  2
+                
+              
+              
+                sin
+                
+                  2
+                
+              
+              ⁡
+              φ
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial y}{\partial \varphi }}\cdot {\frac {\partial x}{\partial \lambda }}-{\frac {\partial y}{\partial \lambda }}\cdot {\frac {\partial x}{\partial \varphi }}=s\cdot \cos \varphi \cdot {\frac {(1-e^{2})}{(1-e^{2}\sin ^{2}\varphi )^{2}}}}
+  
+
+where 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ is the eccentricity of the ellipsoid of revolution.
+
+Statistical grid
+
+The term "statistical grid" refers to a discrete grid (global or local) of an equal-area surface representation, used for data visualization, geocode and statistical spatial analysis.
+
+List of equal-area projections
+These are some projections that preserve area:
+
+Azimuthal
+Lambert azimuthal equal-area
+Wiechel (pseudoazimuthal)
+Conic
+Albers
+Lambert equal-area conic projection
+Pseudoconical
+Bonne
+Bottomley
+Werner
+Cylindrical (with latitude of no distortion)
+Lambert cylindrical equal-area (0°)
+Behrmann (30°)
+Hobo–Dyer (37°30′)
+Gall–Peters (45°)
+Pseudocylindrical
+Boggs eumorphic
+Collignon
+Eckert II, IV and VI
+Equal Earth
+Goode's homolosine
+Mollweide
+Sinusoidal
+Tobler hyperelliptical
+Other
+Eckert-Greifendorff
+McBryde-Thomas Flat-Polar Quartic Projection
+Hammer
+Strebe 1995
+Snyder equal-area projection, used for geodesic grids.

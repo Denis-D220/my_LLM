@@ -1,0 +1,6724 @@
+In general relativity and quantum gravity, the Gibbons–Hawking–York boundary term is a term that needs to be added to the Einstein–Hilbert action when the underlying spacetime manifold has a boundary.
+The Einstein–Hilbert action is the basis for the most elementary variational principle from which the field equations of general relativity can be defined. However, the use of the Einstein–Hilbert action is appropriate only when the underlying spacetime manifold 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+ is closed, i.e. a manifold which is both compact and without boundary. In the event that the manifold has a boundary 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle \partial {\mathcal {M}}}
+  
+, the action should be supplemented by a boundary term so that the variational principle is well-defined.
+The necessity of such a boundary term was first realised by James W. York and later refined in a minor way by Gary Gibbons and Stephen Hawking.
+For a manifold that is not closed, the appropriate action is
+
+  
+    
+      
+        
+          
+            
+              S
+            
+          
+          
+            
+              E
+              H
+            
+          
+        
+        +
+        
+          
+            
+              S
+            
+          
+          
+            
+              G
+              H
+              Y
+            
+          
+        
+        =
+        
+          
+            1
+            
+              16
+              π
+            
+          
+        
+        
+          ∫
+          
+            
+              M
+            
+          
+        
+        
+          
+            d
+          
+          
+            4
+          
+        
+        x
+        
+        
+          
+            −
+            g
+          
+        
+        R
+        +
+        
+          
+            1
+            
+              8
+              π
+            
+          
+        
+        
+          ∫
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        
+          
+            d
+          
+          
+            3
+          
+        
+        y
+        
+        ϵ
+        
+          
+            h
+          
+        
+        K
+        ,
+      
+    
+    {\displaystyle {\mathcal {S}}_{\mathrm {EH} }+{\mathcal {S}}_{\mathrm {GHY} }={\frac {1}{16\pi }}\int _{\mathcal {M}}\mathrm {d} ^{4}x\,{\sqrt {-g}}R+{\frac {1}{8\pi }}\int _{\partial {\mathcal {M}}}\mathrm {d} ^{3}y\,\epsilon {\sqrt {h}}K,}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              S
+            
+          
+          
+            
+              E
+              H
+            
+          
+        
+      
+    
+    {\displaystyle {\mathcal {S}}_{\mathrm {EH} }}
+  
+ is the Einstein–Hilbert action, 
+  
+    
+      
+        
+          
+            
+              S
+            
+          
+          
+            
+              G
+              H
+              Y
+            
+          
+        
+      
+    
+    {\displaystyle {\mathcal {S}}_{\mathrm {GHY} }}
+  
+ is the Gibbons–Hawking–York boundary term, 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle h_{ab}}
+  
+ is the induced metric (see section below on definitions) on the boundary, 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ its determinant, 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ is the trace of the second fundamental form, 
+  
+    
+      
+        ϵ
+      
+    
+    {\displaystyle \epsilon }
+  
+ is equal to 
+  
+    
+      
+        +
+        1
+      
+    
+    {\displaystyle +1}
+  
+ where the normal to 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle \partial {\mathcal {M}}}
+  
+ is spacelike and 
+  
+    
+      
+        −
+        1
+      
+    
+    {\displaystyle -1}
+  
+ where the normal to 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle \partial {\mathcal {M}}}
+  
+ is timelike, and 
+  
+    
+      
+        
+          y
+          
+            a
+          
+        
+      
+    
+    {\displaystyle y^{a}}
+  
+ are the coordinates on the boundary. Varying the action with respect to the metric 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle g_{\alpha \beta }}
+  
+, subject to the condition
+
+  
+    
+      
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          
+            
+              |
+            
+          
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        =
+        0
+        ,
+      
+    
+    {\displaystyle \delta g_{\alpha \beta }{\big |}_{\partial {\mathcal {M}}}=0,}
+  
+
+gives the Einstein equations; the addition of the boundary term means that in performing the variation, the geometry of the boundary encoded in the transverse metric 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle h_{ab}}
+  
+ is fixed (see section below). There remains ambiguity in the action up to an arbitrary functional of the induced metric 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle h_{ab}}
+  
+.
+That a boundary term is needed in the gravitational case is because 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+, the gravitational Lagrangian density, contains second derivatives of the metric tensor. This is a non-typical feature of field theories, which are usually formulated in terms of Lagrangians that involve first derivatives of fields to be varied over only.
+The GHY term is desirable, as it possesses a number of other key features. When passing to the Hamiltonian formalism, it is necessary to include the GHY term in order to reproduce the correct Arnowitt–Deser–Misner energy (ADM energy). The term is required to ensure the path integral (a la Hawking) for quantum gravity has the correct composition properties. When calculating black hole entropy using the Euclidean semiclassical approach, the entire contribution comes from the GHY term. This term has had more recent applications in loop quantum gravity in calculating transition amplitudes and background-independent scattering amplitudes.
+In order to determine a finite value for the action, one may have to subtract off a surface term for flat spacetime:
+
+  
+    
+      
+        
+          S
+          
+            E
+            H
+          
+        
+        +
+        
+          S
+          
+            G
+            H
+            Y
+            ,
+            0
+          
+        
+        =
+        
+          
+            1
+            
+              16
+              π
+            
+          
+        
+        
+          ∫
+          
+            
+              M
+            
+          
+        
+        
+          
+            d
+          
+          
+            4
+          
+        
+        x
+        
+        
+          
+            −
+            g
+          
+        
+        R
+        +
+        
+          
+            1
+            
+              8
+              π
+            
+          
+        
+        
+          ∫
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        
+          
+            d
+          
+          
+            3
+          
+        
+        y
+        
+        ϵ
+        
+          
+            h
+          
+        
+        K
+        −
+        
+          
+            1
+            
+              8
+              π
+            
+          
+        
+        
+          ∫
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        
+          
+            d
+          
+          
+            3
+          
+        
+        y
+        
+        ϵ
+        
+          
+            h
+          
+        
+        
+          K
+          
+            0
+          
+        
+        ,
+      
+    
+    {\displaystyle S_{EH}+S_{GHY,0}={\frac {1}{16\pi }}\int _{\mathcal {M}}\mathrm {d} ^{4}x\,{\sqrt {-g}}R+{\frac {1}{8\pi }}\int _{\partial {\mathcal {M}}}\mathrm {d} ^{3}y\,\epsilon {\sqrt {h}}K-{1 \over 8\pi }\int _{\partial {\mathcal {M}}}\mathrm {d} ^{3}y\,\epsilon {\sqrt {h}}K_{0},}
+  
+
+where 
+  
+    
+      
+        
+          K
+          
+            0
+          
+        
+      
+    
+    {\displaystyle K_{0}}
+  
+ is the extrinsic curvature of the boundary imbedded flat spacetime. As 
+  
+    
+      
+        
+          
+            h
+          
+        
+      
+    
+    {\displaystyle {\sqrt {h}}}
+  
+ is invariant under variations of 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle g_{\alpha \beta }}
+  
+, this addition term does not affect the field equations; as such, this is referred to as the non-dynamical term.
+
+Introduction to hyper-surfaces
+
+Defining hyper-surfaces
+In a four-dimensional spacetime manifold, a hypersurface is a three-dimensional submanifold that can be either timelike, spacelike, or null.
+A particular hyper-surface 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+ can be selected either by imposing a constraint on the coordinates
+
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            α
+          
+        
+        )
+        =
+        0
+        ,
+      
+    
+    {\displaystyle f(x^{\alpha })=0,}
+  
+
+or by giving parametric equations,
+
+  
+    
+      
+        
+          x
+          
+            α
+          
+        
+        =
+        
+          x
+          
+            α
+          
+        
+        (
+        
+          y
+          
+            a
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle x^{\alpha }=x^{\alpha }(y^{a}),}
+  
+
+where 
+  
+    
+      
+        
+          y
+          
+            a
+          
+        
+        (
+        a
+        =
+        1
+        ,
+        2
+        ,
+        3
+        )
+      
+    
+    {\displaystyle y^{a}(a=1,2,3)}
+  
+ are coordinates intrinsic to the hyper-surface.
+For example, a two-sphere in three-dimensional Euclidean space can be described either by
+
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            α
+          
+        
+        )
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          y
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            2
+          
+        
+        −
+        
+          r
+          
+            2
+          
+        
+        =
+        0
+        ,
+      
+    
+    {\displaystyle f(x^{\alpha })=x^{2}+y^{2}+z^{2}-r^{2}=0,}
+  
+
+where 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is the radius of the sphere, or by
+
+  
+    
+      
+        x
+        =
+        r
+        sin
+        ⁡
+        θ
+        cos
+        ⁡
+        ϕ
+        ,
+        
+        y
+        =
+        r
+        sin
+        ⁡
+        θ
+        sin
+        ⁡
+        ϕ
+        ,
+        
+        z
+        =
+        r
+        cos
+        ⁡
+        θ
+        ,
+      
+    
+    {\displaystyle x=r\sin \theta \cos \phi ,\quad y=r\sin \theta \sin \phi ,\quad z=r\cos \theta ,}
+  
+
+where 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+ and 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ are intrinsic coordinates.
+
+Hyper-surface orthogonal vector fields
+We take the metric convention (-,+,...,+). We start with the family of hyper-surfaces given by
+
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            α
+          
+        
+        )
+        =
+        C
+      
+    
+    {\displaystyle f(x^{\alpha })=C}
+  
+
+where different members of the family correspond to different values of the constant 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+. Consider two neighbouring points 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ and 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ with coordinates 
+  
+    
+      
+        
+          x
+          
+            α
+          
+        
+      
+    
+    {\displaystyle x^{\alpha }}
+  
+ and 
+  
+    
+      
+        
+          x
+          
+            α
+          
+        
+        +
+        d
+        
+          x
+          
+            α
+          
+        
+      
+    
+    {\displaystyle x^{\alpha }+dx^{\alpha }}
+  
+, respectively, lying in the same hyper-surface. We then have to first order
+
+  
+    
+      
+        C
+        =
+        f
+        (
+        
+          x
+          
+            α
+          
+        
+        +
+        d
+        
+          x
+          
+            α
+          
+        
+        )
+        =
+        f
+        (
+        
+          x
+          
+            α
+          
+        
+        )
+        +
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              
+                x
+                
+                  α
+                
+              
+            
+          
+        
+        d
+        
+          x
+          
+            α
+          
+        
+        .
+      
+    
+    {\displaystyle C=f(x^{\alpha }+dx^{\alpha })=f(x^{\alpha })+{\partial f \over \partial x^{\alpha }}dx^{\alpha }.}
+  
+
+Subtracting off 
+  
+    
+      
+        C
+        =
+        f
+        (
+        
+          x
+          
+            α
+          
+        
+        )
+      
+    
+    {\displaystyle C=f(x^{\alpha })}
+  
+ from this equation gives
+
+  
+    
+      
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              
+                x
+                
+                  α
+                
+              
+            
+          
+        
+        d
+        
+          x
+          
+            α
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle {\partial f \over \partial x^{\alpha }}dx^{\alpha }=0}
+  
+
+at 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+. This implies that 
+  
+    
+      
+        
+          f
+          
+            ,
+            α
+          
+        
+      
+    
+    {\displaystyle f_{,\alpha }}
+  
+ is normal to the hyper-surface. A unit normal 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+      
+    
+    {\displaystyle n_{\alpha }}
+  
+ can be introduced in the case where the hyper-surface is not null. This is defined by
+
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            α
+          
+        
+        ≡
+        ϵ
+        =
+        
+          
+            {
+            
+              
+                
+                  −
+                  1
+                
+                
+                  
+                    if 
+                  
+                  Σ
+                  
+                     is spacelike
+                  
+                
+              
+              
+                
+                  +
+                  1
+                
+                
+                  
+                    if 
+                  
+                  Σ
+                  
+                     is timelike
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle n^{\alpha }n_{\alpha }\equiv \epsilon ={\begin{cases}-1&{\text{if }}\Sigma {\text{ is spacelike}}\\+1&{\text{if }}\Sigma {\text{ is timelike}}\end{cases}}}
+  
+
+and we require that 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+      
+    
+    {\displaystyle n^{\alpha }}
+  
+ point in the direction of increasing 
+  
+    
+      
+        f
+        :
+        
+          n
+          
+            α
+          
+        
+        
+          f
+          
+            ,
+            α
+          
+        
+        >
+        0
+      
+    
+    {\displaystyle f:n^{\alpha }f_{,\alpha }>0}
+  
+. It can then easily be checked that 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+      
+    
+    {\displaystyle n_{\alpha }}
+  
+ is given by
+
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+        =
+        
+          
+            
+              ϵ
+              
+                
+              
+              
+                f
+                
+                  ,
+                  α
+                
+              
+            
+            
+              (
+              ϵ
+              
+                
+              
+              
+                g
+                
+                  α
+                  β
+                
+              
+              
+                f
+                
+                  ,
+                  α
+                
+              
+              
+                f
+                
+                  ,
+                  β
+                
+              
+              
+                )
+                
+                  
+                    1
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle n_{\alpha }={\epsilon {\,}f_{,\alpha } \over (\epsilon {\,}g^{\alpha \beta }f_{,\alpha }f_{,\beta })^{1 \over 2}}}
+  
+
+if the hyper-surface either spacelike or timelike.
+
+Induced and transverse metric
+The three vectors
+
+  
+    
+      
+        
+          e
+          
+            a
+          
+          
+            α
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  
+                    x
+                    
+                      α
+                    
+                  
+                
+                
+                  ∂
+                  
+                    y
+                    
+                      a
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        
+        a
+        =
+        1
+        ,
+        2
+        ,
+        3
+      
+    
+    {\displaystyle e_{a}^{\alpha }=\left({\partial x^{\alpha } \over \partial y^{a}}\right)_{\partial {\mathcal {M}}}\quad a=1,2,3}
+  
+
+are tangential to the hyper-surface.
+The induced metric is the three-tensor 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle h_{ab}}
+  
+ defined by
+
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+        =
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          e
+          
+            a
+          
+          
+            α
+          
+        
+        
+          e
+          
+            b
+          
+          
+            β
+          
+        
+        .
+      
+    
+    {\displaystyle h_{ab}=g_{\alpha \beta }e_{a}^{\alpha }e_{b}^{\beta }.}
+  
+
+This acts as a metric tensor on the hyper-surface in the 
+  
+    
+      
+        
+          y
+          
+            a
+          
+        
+      
+    
+    {\displaystyle y^{a}}
+  
+ coordinates. For displacements confined to the hyper-surface (so that 
+  
+    
+      
+        
+          x
+          
+            α
+          
+        
+        =
+        
+          x
+          
+            α
+          
+        
+        (
+        
+          y
+          
+            a
+          
+        
+        )
+      
+    
+    {\displaystyle x^{\alpha }=x^{\alpha }(y^{a})}
+  
+)
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  s
+                  
+                    2
+                  
+                
+              
+              
+                
+                =
+                
+                  g
+                  
+                    α
+                    β
+                  
+                
+                d
+                
+                  x
+                  
+                    α
+                  
+                
+                d
+                
+                  x
+                  
+                    β
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  g
+                  
+                    α
+                    β
+                  
+                
+                
+                  (
+                  
+                    
+                      
+                        
+                          ∂
+                          
+                            x
+                            
+                              α
+                            
+                          
+                        
+                        
+                          ∂
+                          
+                            y
+                            
+                              a
+                            
+                          
+                        
+                      
+                    
+                    d
+                    
+                      y
+                      
+                        a
+                      
+                    
+                  
+                  )
+                
+                
+                  (
+                  
+                    
+                      
+                        
+                          ∂
+                          
+                            x
+                            
+                              β
+                            
+                          
+                        
+                        
+                          ∂
+                          
+                            y
+                            
+                              b
+                            
+                          
+                        
+                      
+                    
+                    d
+                    
+                      y
+                      
+                        b
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  (
+                  
+                    
+                      g
+                      
+                        α
+                        β
+                      
+                    
+                    
+                      e
+                      
+                        a
+                      
+                      
+                        α
+                      
+                    
+                    
+                      e
+                      
+                        b
+                      
+                      
+                        β
+                      
+                    
+                  
+                  )
+                
+                d
+                
+                  y
+                  
+                    a
+                  
+                
+                d
+                
+                  y
+                  
+                    b
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  h
+                  
+                    a
+                    b
+                  
+                
+                d
+                
+                  y
+                  
+                    a
+                  
+                
+                d
+                
+                  y
+                  
+                    b
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}ds^{2}&=g_{\alpha \beta }dx^{\alpha }dx^{\beta }\\&=g_{\alpha \beta }\left({\frac {\partial x^{\alpha }}{\partial y^{a}}}dy^{a}\right)\left({\frac {\partial x^{\beta }}{\partial y^{b}}}dy^{b}\right)\\&=\left(g_{\alpha \beta }e_{a}^{\alpha }e_{b}^{\beta }\right)dy^{a}dy^{b}\\&=h_{ab}dy^{a}dy^{b}\end{aligned}}}
+  
+
+Because the three vectors 
+  
+    
+      
+        
+          e
+          
+            1
+          
+          
+            α
+          
+        
+        ,
+        
+          e
+          
+            2
+          
+          
+            α
+          
+        
+        ,
+        
+          e
+          
+            3
+          
+          
+            α
+          
+        
+      
+    
+    {\displaystyle e_{1}^{\alpha },e_{2}^{\alpha },e_{3}^{\alpha }}
+  
+ are tangential to the hyper-surface,
+
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+        
+          e
+          
+            a
+          
+          
+            α
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle n_{\alpha }e_{a}^{\alpha }=0}
+  
+
+where 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+      
+    
+    {\displaystyle n_{\alpha }}
+  
+ is the unit vector (
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            α
+          
+        
+        =
+        ±
+        1
+      
+    
+    {\displaystyle n_{\alpha }n^{\alpha }=\pm 1}
+  
+) normal to the hyper-surface,
+we can introduce what is called the transverse metric
+
+  
+    
+      
+        
+          h
+          
+            α
+            β
+          
+        
+        =
+        
+          g
+          
+            α
+            β
+          
+        
+        −
+        ϵ
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            β
+          
+        
+        .
+      
+    
+    {\displaystyle h_{\alpha \beta }=g_{\alpha \beta }-\epsilon n_{\alpha }n_{\beta }.}
+  
+
+It isolates the part of the metric that is transverse to the normal 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+      
+    
+    {\displaystyle n^{\alpha }}
+  
+.
+It is easily seen that this four-tensor
+
+  
+    
+      
+        
+          
+            
+              h
+              
+                α
+              
+            
+          
+          
+            β
+          
+        
+        =
+        
+          
+            
+              δ
+              
+                α
+              
+            
+          
+          
+            β
+          
+        
+        −
+        ϵ
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            β
+          
+        
+      
+    
+    {\displaystyle {h^{\alpha }}_{\beta }={\delta ^{\alpha }}_{\beta }-\epsilon n^{\alpha }n_{\beta }}
+  
+
+projects out the part of a four-vector transverse to the normal 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+      
+    
+    {\displaystyle n^{\alpha }}
+  
+ as
+
+  
+    
+      
+        
+          
+            
+              h
+              
+                α
+              
+            
+          
+          
+            β
+          
+        
+        
+          n
+          
+            β
+          
+        
+        =
+        (
+        
+          
+            
+              δ
+              
+                α
+              
+            
+          
+          
+            β
+          
+        
+        −
+        ϵ
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            β
+          
+        
+        )
+        
+          n
+          
+            β
+          
+        
+        =
+        (
+        
+          n
+          
+            α
+          
+        
+        −
+        
+          ϵ
+          
+            2
+          
+        
+        
+          n
+          
+            α
+          
+        
+        )
+        =
+        0
+        
+        
+          and 
+        
+        
+        
+          i
+          f
+        
+        
+        
+          w
+          
+            α
+          
+        
+        
+          n
+          
+            α
+          
+        
+        =
+        0
+        
+        
+          t
+          h
+          e
+          n
+        
+        
+        
+          
+            
+              h
+              
+                α
+              
+            
+          
+          
+            β
+          
+        
+        
+          w
+          
+            β
+          
+        
+        =
+        
+          w
+          
+            α
+          
+        
+        .
+      
+    
+    {\displaystyle {h^{\alpha }}_{\beta }n^{\beta }=({\delta ^{\alpha }}_{\beta }-\epsilon n^{\alpha }n_{\beta })n^{\beta }=(n^{\alpha }-\epsilon ^{2}n^{\alpha })=0\quad {\text{and }}\;\mathrm {if} \quad w^{\alpha }n_{\alpha }=0\quad \mathrm {then} \quad {h^{\alpha }}_{\beta }w^{\beta }=w^{\alpha }.}
+  
+
+We have
+
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+        =
+        
+          h
+          
+            α
+            β
+          
+        
+        
+          e
+          
+            a
+          
+          
+            α
+          
+        
+        
+          e
+          
+            b
+          
+          
+            β
+          
+        
+        .
+      
+    
+    {\displaystyle h_{ab}=h_{\alpha \beta }e_{a}^{\alpha }e_{b}^{\beta }.}
+  
+
+If we define 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle h^{ab}}
+  
+ to be the inverse of 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle h_{ab}}
+  
+, it is easy to check
+
+  
+    
+      
+        
+          h
+          
+            α
+            β
+          
+        
+        =
+        
+          h
+          
+            a
+            b
+          
+        
+        
+          e
+          
+            a
+          
+          
+            α
+          
+        
+        
+          e
+          
+            b
+          
+          
+            β
+          
+        
+      
+    
+    {\displaystyle h^{\alpha \beta }=h^{ab}e_{a}^{\alpha }e_{b}^{\beta }}
+  
+
+where
+
+  
+    
+      
+        
+          h
+          
+            α
+            β
+          
+        
+        =
+        
+          g
+          
+            α
+            β
+          
+        
+        −
+        ϵ
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            β
+          
+        
+        .
+      
+    
+    {\displaystyle h^{\alpha \beta }=g^{\alpha \beta }-\epsilon n^{\alpha }n^{\beta }.}
+  
+
+Note that variation subject to the condition
+
+  
+    
+      
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          
+            
+              |
+            
+          
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        =
+        0
+        ,
+      
+    
+    {\displaystyle \delta g_{\alpha \beta }{\big |}_{\partial {\mathcal {M}}}=0,}
+  
+
+implies that 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+        =
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          e
+          
+            a
+          
+          
+            α
+          
+        
+        
+          e
+          
+            b
+          
+          
+            β
+          
+        
+      
+    
+    {\displaystyle h_{ab}=g_{\alpha \beta }e_{a}^{\alpha }e_{b}^{\beta }}
+  
+, the induced metric on 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle \partial {\mathcal {M}}}
+  
+, is held fixed during the variation. See also  for clarification on 
+  
+    
+      
+        δ
+        
+          h
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle \delta h_{\alpha \beta }}
+  
+ and 
+  
+    
+      
+        δ
+        
+          n
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \delta n_{\alpha }}
+  
+ etc.
+
+On proving the main result
+In the following subsections we will first compute the variation of the Einstein–Hilbert term and then the variation of the boundary term, and show that their sum results in
+
+  
+    
+      
+        δ
+        
+          S
+          
+            T
+            O
+            T
+            A
+            L
+          
+        
+        =
+        δ
+        
+          S
+          
+            E
+            H
+          
+        
+        +
+        δ
+        
+          S
+          
+            G
+            H
+            Y
+          
+        
+        =
+        
+          
+            1
+            
+              16
+              π
+            
+          
+        
+        
+          ∫
+          
+            
+              M
+            
+          
+        
+        
+          G
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          
+            −
+            g
+          
+        
+        
+          d
+          
+            4
+          
+        
+        x
+      
+    
+    {\displaystyle \delta S_{TOTAL}=\delta S_{EH}+\delta S_{GHY}={\frac {1}{16\pi }}\int _{\mathcal {M}}G_{\alpha \beta }\delta g^{\alpha \beta }{\sqrt {-g}}d^{4}x}
+  
+
+where 
+  
+    
+      
+        
+          G
+          
+            α
+            β
+          
+        
+        =
+        
+          R
+          
+            α
+            β
+          
+        
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          g
+          
+            α
+            β
+          
+        
+        R
+      
+    
+    {\displaystyle G_{\alpha \beta }=R_{\alpha \beta }-{1 \over 2}g_{\alpha \beta }R}
+  
+ is the Einstein tensor, which produces the correct left-hand side to the Einstein field equations, without the cosmological term, which however is trivial to include by replacing 
+  
+    
+      
+        
+          S
+          
+            E
+            H
+          
+        
+      
+    
+    {\displaystyle S_{EH}}
+  
+ with
+
+  
+    
+      
+        
+          
+            1
+            
+              16
+              π
+            
+          
+        
+        
+          ∫
+          
+            
+              M
+            
+          
+        
+        (
+        R
+        −
+        2
+        Λ
+        )
+        
+          
+            −
+            g
+          
+        
+        
+          d
+          
+            4
+          
+        
+        x
+      
+    
+    {\displaystyle {1 \over 16\pi }\int _{\mathcal {M}}(R-2\Lambda ){\sqrt {-g}}d^{4}x}
+  
+
+where 
+  
+    
+      
+        Λ
+      
+    
+    {\displaystyle \Lambda }
+  
+ is the cosmological constant.
+In the third subsection we elaborate on the meaning of the non-dynamical term.
+
+Variation of the Einstein–Hilbert term
+We will use the identity
+
+  
+    
+      
+        δ
+        
+          
+            −
+            g
+          
+        
+        ≡
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          
+            −
+            g
+          
+        
+        
+          g
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+        ,
+      
+    
+    {\displaystyle \delta {\sqrt {-g}}\equiv -{1 \over 2}{\sqrt {-g}}g_{\alpha \beta }\delta g^{\alpha \beta },}
+  
+
+and the Palatini identity:
+
+  
+    
+      
+        δ
+        
+          R
+          
+            α
+            β
+          
+        
+        ≡
+        
+          ∇
+          
+            μ
+          
+        
+        (
+        δ
+        
+          Γ
+          
+            α
+            β
+          
+          
+            μ
+          
+        
+        )
+        −
+        
+          ∇
+          
+            β
+          
+        
+        (
+        δ
+        
+          Γ
+          
+            α
+            μ
+          
+          
+            μ
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle \delta R_{\alpha \beta }\equiv \nabla _{\mu }(\delta \Gamma _{\alpha \beta }^{\mu })-\nabla _{\beta }(\delta \Gamma _{\alpha \mu }^{\mu }),}
+  
+
+which are both obtained in the article Einstein–Hilbert action.
+We consider the variation of the Einstein–Hilbert term:
+
+  
+    
+      
+        
+          
+            
+              
+                (
+                16
+                π
+                )
+                δ
+                
+                  S
+                  
+                    E
+                    H
+                  
+                
+              
+              
+                
+                =
+                
+                  ∫
+                  
+                    
+                      M
+                    
+                  
+                
+                δ
+                
+                  (
+                  
+                    
+                      g
+                      
+                        α
+                        β
+                      
+                    
+                    
+                      R
+                      
+                        α
+                        β
+                      
+                    
+                    
+                      
+                        −
+                        g
+                      
+                    
+                  
+                  )
+                
+                
+                  d
+                  
+                    4
+                  
+                
+                x
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∫
+                  
+                    
+                      M
+                    
+                  
+                
+                
+                  (
+                  
+                    
+                      R
+                      
+                        α
+                        β
+                      
+                    
+                    
+                      
+                        −
+                        g
+                      
+                    
+                    δ
+                    
+                      g
+                      
+                        α
+                        β
+                      
+                    
+                    +
+                    
+                      g
+                      
+                        α
+                        β
+                      
+                    
+                    
+                      R
+                      
+                        α
+                        β
+                      
+                    
+                    δ
+                    
+                      
+                        −
+                        g
+                      
+                    
+                    +
+                    
+                      
+                        −
+                        g
+                      
+                    
+                    
+                      g
+                      
+                        α
+                        β
+                      
+                    
+                    δ
+                    
+                      R
+                      
+                        α
+                        β
+                      
+                    
+                  
+                  )
+                
+                
+                  d
+                  
+                    4
+                  
+                
+                x
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∫
+                  
+                    
+                      M
+                    
+                  
+                
+                
+                  (
+                  
+                    
+                      R
+                      
+                        α
+                        β
+                      
+                    
+                    −
+                    
+                      
+                        1
+                        2
+                      
+                    
+                    
+                      g
+                      
+                        α
+                        β
+                      
+                    
+                    R
+                  
+                  )
+                
+                δ
+                
+                  g
+                  
+                    α
+                    β
+                  
+                
+                
+                  
+                    −
+                    g
+                  
+                
+                
+                  d
+                  
+                    4
+                  
+                
+                x
+                +
+                
+                  ∫
+                  
+                    
+                      M
+                    
+                  
+                
+                
+                  g
+                  
+                    α
+                    β
+                  
+                
+                δ
+                
+                  R
+                  
+                    α
+                    β
+                  
+                
+                
+                  
+                    −
+                    g
+                  
+                
+                
+                  d
+                  
+                    4
+                  
+                
+                x
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}(16\pi )\delta S_{EH}&=\int _{\mathcal {M}}\delta \left(g^{\alpha \beta }R_{\alpha \beta }{\sqrt {-g}}\right)d^{4}x\\&=\int _{\mathcal {M}}\left(R_{\alpha \beta }{\sqrt {-g}}\delta g^{\alpha \beta }+g^{\alpha \beta }R_{\alpha \beta }\delta {\sqrt {-g}}+{\sqrt {-g}}g^{\alpha \beta }\delta R_{\alpha \beta }\right)d^{4}x\\&=\int _{\mathcal {M}}\left(R_{\alpha \beta }-{1 \over 2}g_{\alpha \beta }R\right)\delta g^{\alpha \beta }{\sqrt {-g}}d^{4}x+\int _{\mathcal {M}}g^{\alpha \beta }\delta R_{\alpha \beta }{\sqrt {-g}}d^{4}x.\end{aligned}}}
+  
+
+The first term gives us what we need for the left-hand side of the Einstein field equations. We must account for the second term.
+By the Palatini identity
+
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+        δ
+        
+          R
+          
+            α
+            β
+          
+        
+        =
+        δ
+        
+          
+            
+              V
+              
+                μ
+              
+            
+          
+          
+            ;
+            μ
+          
+        
+        ,
+        
+        δ
+        
+          V
+          
+            μ
+          
+        
+        =
+        
+          g
+          
+            α
+            β
+          
+        
+        δ
+        
+          Γ
+          
+            α
+            β
+          
+          
+            μ
+          
+        
+        −
+        
+          g
+          
+            α
+            μ
+          
+        
+        δ
+        
+          Γ
+          
+            α
+            β
+          
+          
+            β
+          
+        
+        .
+      
+    
+    {\displaystyle g^{\alpha \beta }\delta R_{\alpha \beta }=\delta {V^{\mu }}_{;\mu },\qquad \delta V^{\mu }=g^{\alpha \beta }\delta \Gamma _{\alpha \beta }^{\mu }-g^{\alpha \mu }\delta \Gamma _{\alpha \beta }^{\beta }.}
+  
+
+We will need Stokes theorem in the form:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  ∫
+                  
+                    
+                      M
+                    
+                  
+                
+                
+                  
+                    
+                      A
+                      
+                        μ
+                      
+                    
+                  
+                  
+                    ;
+                    μ
+                  
+                
+                
+                  
+                    −
+                    g
+                  
+                
+                
+                  d
+                  
+                    4
+                  
+                
+                x
+              
+              
+                
+                =
+                
+                  ∫
+                  
+                    
+                      M
+                    
+                  
+                
+                (
+                
+                  
+                    −
+                    g
+                  
+                
+                
+                  A
+                  
+                    μ
+                  
+                
+                
+                  )
+                  
+                    ,
+                    μ
+                  
+                
+                
+                  d
+                  
+                    4
+                  
+                
+                x
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∮
+                  
+                    ∂
+                    
+                      
+                        M
+                      
+                    
+                  
+                
+                
+                  A
+                  
+                    μ
+                  
+                
+                d
+                
+                  Σ
+                  
+                    μ
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∮
+                  
+                    ∂
+                    
+                      
+                        M
+                      
+                    
+                  
+                
+                ϵ
+                
+                  A
+                  
+                    μ
+                  
+                
+                
+                  n
+                  
+                    μ
+                  
+                
+                
+                  
+                    
+                      |
+                    
+                    h
+                    
+                      |
+                    
+                  
+                
+                
+                  d
+                  
+                    3
+                  
+                
+                y
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\int _{\mathcal {M}}{A^{\mu }}_{;\mu }{\sqrt {-g}}d^{4}x&=\int _{\mathcal {M}}({\sqrt {-g}}A^{\mu })_{,\mu }d^{4}x\\&=\oint _{\partial {\mathcal {M}}}A^{\mu }d\Sigma _{\mu }\\&=\oint _{\partial {\mathcal {M}}}\epsilon A^{\mu }n_{\mu }{\sqrt {|h|}}d^{3}y\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        
+          n
+          
+            μ
+          
+        
+      
+    
+    {\displaystyle n_{\mu }}
+  
+ is the unit normal to 
+  
+    
+      
+        
+          ∂
+          
+            
+              M
+            
+          
+        
+      
+    
+    {\displaystyle \partial _{\mathcal {M}}}
+  
+ and 
+  
+    
+      
+        ϵ
+        ≡
+        
+          n
+          
+            μ
+          
+        
+        
+          n
+          
+            μ
+          
+        
+        =
+        ±
+        1
+      
+    
+    {\displaystyle \epsilon \equiv n^{\mu }n_{\mu }=\pm 1}
+  
+, and 
+  
+    
+      
+        
+          y
+          
+            a
+          
+        
+      
+    
+    {\displaystyle y^{a}}
+  
+ are coordinates on the boundary. And 
+  
+    
+      
+        d
+        
+          Σ
+          
+            μ
+          
+        
+        =
+        ϵ
+        
+          n
+          
+            μ
+          
+        
+        d
+        Σ
+      
+    
+    {\displaystyle d\Sigma _{\mu }=\epsilon n_{\mu }d\Sigma }
+  
+ where 
+  
+    
+      
+        d
+        Σ
+        =
+        
+          |
+        
+        h
+        
+          
+            |
+          
+          
+            
+              1
+              2
+            
+          
+        
+        
+          d
+          
+            3
+          
+        
+        y
+      
+    
+    {\displaystyle d\Sigma =|h|^{1 \over 2}d^{3}y}
+  
+ where 
+  
+    
+      
+        h
+        =
+        det
+        [
+        
+          h
+          
+            a
+            b
+          
+        
+        ]
+      
+    
+    {\displaystyle h=\det[h_{ab}]}
+  
+, is an invariant three-dimensional volume element on the hyper-surface. In our particular case we take 
+  
+    
+      
+        
+          A
+          
+            μ
+          
+        
+        =
+        δ
+        
+          V
+          
+            μ
+          
+        
+      
+    
+    {\displaystyle A^{\mu }=\delta V^{\mu }}
+  
+.
+We now evaluate 
+  
+    
+      
+        δ
+        
+          V
+          
+            μ
+          
+        
+        
+          n
+          
+            μ
+          
+        
+      
+    
+    {\displaystyle \delta V^{\mu }n_{\mu }}
+  
+ on the boundary 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle \partial {\mathcal {M}}}
+  
+, keeping in mind that on 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+        ,
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+        =
+        0
+        =
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle \partial {\mathcal {M}},\delta g_{\alpha \beta }=0=\delta g^{\alpha \beta }}
+  
+. Taking this into account we have
+
+  
+    
+      
+        δ
+        
+          Γ
+          
+            α
+            β
+          
+          
+            μ
+          
+        
+        
+          
+            
+              |
+            
+          
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          g
+          
+            μ
+            ν
+          
+        
+        (
+        δ
+        
+          g
+          
+            ν
+            α
+            ,
+            β
+          
+        
+        +
+        δ
+        
+          g
+          
+            ν
+            β
+            ,
+            α
+          
+        
+        −
+        δ
+        
+          g
+          
+            α
+            β
+            ,
+            ν
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle \delta \Gamma _{\alpha \beta }^{\mu }{\big |}_{\partial {\mathcal {M}}}={\frac {1}{2}}g^{\mu \nu }(\delta g_{\nu \alpha ,\beta }+\delta g_{\nu \beta ,\alpha }-\delta g_{\alpha \beta ,\nu }).}
+  
+
+It is useful to note that
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  g
+                  
+                    α
+                    μ
+                  
+                
+                δ
+                
+                  Γ
+                  
+                    α
+                    β
+                  
+                  
+                    β
+                  
+                
+                
+                  
+                    
+                      |
+                    
+                  
+                  
+                    ∂
+                    
+                      
+                        M
+                      
+                    
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    1
+                    2
+                  
+                
+                
+                  g
+                  
+                    α
+                    μ
+                  
+                
+                
+                  g
+                  
+                    β
+                    ν
+                  
+                
+                (
+                δ
+                
+                  g
+                  
+                    ν
+                    α
+                    ,
+                    β
+                  
+                
+                +
+                δ
+                
+                  g
+                  
+                    ν
+                    β
+                    ,
+                    α
+                  
+                
+                −
+                δ
+                
+                  g
+                  
+                    α
+                    β
+                    ,
+                    ν
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    1
+                    2
+                  
+                
+                
+                  g
+                  
+                    μ
+                    ν
+                  
+                
+                
+                  g
+                  
+                    α
+                    β
+                  
+                
+                (
+                δ
+                
+                  g
+                  
+                    ν
+                    α
+                    ,
+                    β
+                  
+                
+                +
+                δ
+                
+                  g
+                  
+                    α
+                    β
+                    ,
+                    ν
+                  
+                
+                −
+                δ
+                
+                  g
+                  
+                    ν
+                    β
+                    ,
+                    α
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}g^{\alpha \mu }\delta \Gamma _{\alpha \beta }^{\beta }{\big |}_{\partial {\mathcal {M}}}&={1 \over 2}g^{\alpha \mu }g^{\beta \nu }(\delta g_{\nu \alpha ,\beta }+\delta g_{\nu \beta ,\alpha }-\delta g_{\alpha \beta ,\nu })\\&={1 \over 2}g^{\mu \nu }g^{\alpha \beta }(\delta g_{\nu \alpha ,\beta }+\delta g_{\alpha \beta ,\nu }-\delta g_{\nu \beta ,\alpha })\end{aligned}}}
+  
+
+where in the second line we have swapped around 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ and 
+  
+    
+      
+        ν
+      
+    
+    {\displaystyle \nu }
+  
+ and used that the metric is symmetric. It is then not difficult to work out 
+  
+    
+      
+        δ
+        
+          V
+          
+            μ
+          
+        
+        =
+        
+          g
+          
+            μ
+            ν
+          
+        
+        
+          g
+          
+            α
+            β
+          
+        
+        (
+        δ
+        
+          g
+          
+            ν
+            β
+            ,
+            α
+          
+        
+        −
+        δ
+        
+          g
+          
+            α
+            β
+            ,
+            ν
+          
+        
+        )
+      
+    
+    {\displaystyle \delta V^{\mu }=g^{\mu \nu }g^{\alpha \beta }(\delta g_{\nu \beta ,\alpha }-\delta g_{\alpha \beta ,\nu })}
+  
+.
+So now
+
+  
+    
+      
+        
+          
+            
+              
+                δ
+                
+                  V
+                  
+                    μ
+                  
+                
+                
+                  n
+                  
+                    μ
+                  
+                
+                
+                  
+                    
+                      |
+                    
+                  
+                  
+                    ∂
+                    
+                      
+                        M
+                      
+                    
+                  
+                
+              
+              
+                
+                =
+                
+                  n
+                  
+                    μ
+                  
+                
+                
+                  g
+                  
+                    α
+                    β
+                  
+                
+                (
+                δ
+                
+                  g
+                  
+                    μ
+                    β
+                    ,
+                    α
+                  
+                
+                −
+                δ
+                
+                  g
+                  
+                    α
+                    β
+                    ,
+                    μ
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                
+                  n
+                  
+                    μ
+                  
+                
+                (
+                ϵ
+                
+                  n
+                  
+                    α
+                  
+                
+                
+                  n
+                  
+                    β
+                  
+                
+                +
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                )
+                (
+                δ
+                
+                  g
+                  
+                    μ
+                    β
+                    ,
+                    α
+                  
+                
+                −
+                δ
+                
+                  g
+                  
+                    α
+                    β
+                    ,
+                    μ
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                
+                  n
+                  
+                    μ
+                  
+                
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                (
+                δ
+                
+                  g
+                  
+                    μ
+                    β
+                    ,
+                    α
+                  
+                
+                −
+                δ
+                
+                  g
+                  
+                    α
+                    β
+                    ,
+                    μ
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\delta V^{\mu }n_{\mu }{\big |}_{\partial {\mathcal {M}}}&=n^{\mu }g^{\alpha \beta }(\delta g_{\mu \beta ,\alpha }-\delta g_{\alpha \beta ,\mu })\\&=n^{\mu }(\epsilon n^{\alpha }n^{\beta }+h^{\alpha \beta })(\delta g_{\mu \beta ,\alpha }-\delta g_{\alpha \beta ,\mu })\\&=n^{\mu }h^{\alpha \beta }(\delta g_{\mu \beta ,\alpha }-\delta g_{\alpha \beta ,\mu })\end{aligned}}}
+  
+
+where in the second line we used the identity 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+        =
+        ϵ
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            β
+          
+        
+        +
+        
+          h
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle g^{\alpha \beta }=\epsilon n^{\alpha }n^{\beta }+h^{\alpha \beta }}
+  
+, and in the third line we have used the anti-symmetry in 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ and 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+. As 
+  
+    
+      
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle \delta g_{\alpha \beta }}
+  
+ vanishes everywhere on the boundary 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+        ,
+      
+    
+    {\displaystyle \partial {\mathcal {M}},}
+  
+ its tangential derivatives must also vanish: 
+  
+    
+      
+        δ
+        
+          g
+          
+            α
+            β
+            ,
+            γ
+          
+        
+        
+          e
+          
+            c
+          
+          
+            γ
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle \delta g_{\alpha \beta ,\gamma }e_{c}^{\gamma }=0}
+  
+. It follows that 
+  
+    
+      
+        
+          h
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            μ
+            β
+            ,
+            α
+          
+        
+        =
+        
+          h
+          
+            a
+            b
+          
+        
+        
+          e
+          
+            a
+          
+          
+            α
+          
+        
+        
+          e
+          
+            b
+          
+          
+            β
+          
+        
+        δ
+        
+          g
+          
+            μ
+            β
+            ,
+            α
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle h^{\alpha \beta }\delta g_{\mu \beta ,\alpha }=h^{ab}e_{a}^{\alpha }e_{b}^{\beta }\delta g_{\mu \beta ,\alpha }=0}
+  
+. So finally we have
+
+  
+    
+      
+        
+          n
+          
+            μ
+          
+        
+        δ
+        
+          V
+          
+            μ
+          
+        
+        
+          
+            
+              |
+            
+          
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        =
+        −
+        
+          h
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            α
+            β
+            ,
+            μ
+          
+        
+        
+          n
+          
+            μ
+          
+        
+        .
+      
+    
+    {\displaystyle n_{\mu }\delta V^{\mu }{\big |}_{\partial {\mathcal {M}}}=-h^{\alpha \beta }\delta g_{\alpha \beta ,\mu }n^{\mu }.}
+  
+
+Gathering the results we obtain
+
+  
+    
+      
+        (
+        16
+        π
+        )
+        δ
+        
+          S
+          
+            E
+            H
+          
+        
+        =
+        
+          ∫
+          
+            
+              M
+            
+          
+        
+        
+          G
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          
+            −
+            g
+          
+        
+        
+          d
+          
+            4
+          
+        
+        x
+        −
+        
+          ∮
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        ϵ
+        
+          h
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            α
+            β
+            ,
+            μ
+          
+        
+        
+          n
+          
+            μ
+          
+        
+        
+          
+            h
+          
+        
+        
+          d
+          
+            3
+          
+        
+        y
+        
+        E
+        q
+        1.
+      
+    
+    {\displaystyle (16\pi )\delta S_{EH}=\int _{\mathcal {M}}G_{\alpha \beta }\delta g^{\alpha \beta }{\sqrt {-g}}d^{4}x-\oint _{\partial {\mathcal {M}}}\epsilon h^{\alpha \beta }\delta g_{\alpha \beta ,\mu }n^{\mu }{\sqrt {h}}d^{3}y\quad Eq1.}
+  
+
+We next show that the above boundary term will be cancelled by the variation of 
+  
+    
+      
+        
+          S
+          
+            G
+            H
+            Y
+          
+        
+      
+    
+    {\displaystyle S_{GHY}}
+  
+.
+
+Variation of the boundary term
+We now turn to the variation of the 
+  
+    
+      
+        
+          S
+          
+            G
+            H
+            Y
+          
+        
+      
+    
+    {\displaystyle S_{GHY}}
+  
+ term. Because the induced metric is fixed on 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+        ,
+      
+    
+    {\displaystyle \partial {\mathcal {M}},}
+  
+ the only quantity to be varied is 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ is the trace of the extrinsic curvature.
+We have
+
+  
+    
+      
+        
+          
+            
+              
+                K
+              
+              
+                
+                =
+                
+                  
+                    
+                      n
+                      
+                        α
+                      
+                    
+                  
+                  
+                    ;
+                    α
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  g
+                  
+                    α
+                    β
+                  
+                
+                
+                  n
+                  
+                    α
+                    ;
+                    β
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  (
+                  
+                    ϵ
+                    
+                      n
+                      
+                        α
+                      
+                    
+                    
+                      n
+                      
+                        β
+                      
+                    
+                    +
+                    
+                      h
+                      
+                        α
+                        β
+                      
+                    
+                  
+                  )
+                
+                
+                  n
+                  
+                    α
+                    ;
+                    β
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                
+                  n
+                  
+                    α
+                    ;
+                    β
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                (
+                
+                  n
+                  
+                    α
+                    ,
+                    β
+                  
+                
+                −
+                
+                  Γ
+                  
+                    α
+                    β
+                  
+                  
+                    γ
+                  
+                
+                
+                  n
+                  
+                    γ
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}K&={n^{\alpha }}_{;\alpha }\\&=g^{\alpha \beta }n_{\alpha ;\beta }\\&=\left(\epsilon n^{\alpha }n^{\beta }+h^{\alpha \beta }\right)n_{\alpha ;\beta }\\&=h^{\alpha \beta }n_{\alpha ;\beta }\\&=h^{\alpha \beta }(n_{\alpha ,\beta }-\Gamma _{\alpha \beta }^{\gamma }n_{\gamma })\end{aligned}}}
+  
+
+where we have used that 
+  
+    
+      
+        0
+        =
+        (
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            α
+          
+        
+        
+          )
+          
+            ;
+            β
+          
+        
+      
+    
+    {\displaystyle 0=(n^{\alpha }n_{\alpha })_{;\beta }}
+  
+ implies 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+        
+          n
+          
+            α
+            ;
+            β
+          
+        
+        =
+        0.
+      
+    
+    {\displaystyle n^{\alpha }n_{\alpha ;\beta }=0.}
+  
+ So the variation of 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ is
+
+  
+    
+      
+        
+          
+            
+              
+                δ
+                K
+              
+              
+                
+                =
+                −
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                δ
+                
+                  Γ
+                  
+                    α
+                    β
+                  
+                  
+                    γ
+                  
+                
+                
+                  n
+                  
+                    γ
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                −
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                
+                  n
+                  
+                    γ
+                  
+                
+                
+                  
+                    1
+                    2
+                  
+                
+                
+                  g
+                  
+                    γ
+                    σ
+                  
+                
+                
+                  (
+                  
+                    δ
+                    
+                      g
+                      
+                        σ
+                        α
+                        ,
+                        β
+                      
+                    
+                    +
+                    δ
+                    
+                      g
+                      
+                        σ
+                        β
+                        ,
+                        α
+                      
+                    
+                    −
+                    δ
+                    
+                      g
+                      
+                        α
+                        β
+                        ,
+                        σ
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                −
+                
+                  
+                    1
+                    2
+                  
+                
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                
+                  (
+                  
+                    δ
+                    
+                      g
+                      
+                        μ
+                        α
+                        ,
+                        β
+                      
+                    
+                    +
+                    δ
+                    
+                      g
+                      
+                        μ
+                        β
+                        ,
+                        α
+                      
+                    
+                    −
+                    δ
+                    
+                      g
+                      
+                        α
+                        β
+                        ,
+                        μ
+                      
+                    
+                  
+                  )
+                
+                
+                  n
+                  
+                    μ
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    1
+                    2
+                  
+                
+                
+                  h
+                  
+                    α
+                    β
+                  
+                
+                δ
+                
+                  g
+                  
+                    α
+                    β
+                    ,
+                    μ
+                  
+                
+                
+                  n
+                  
+                    μ
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\delta K&=-h^{\alpha \beta }\delta \Gamma _{\alpha \beta }^{\gamma }n_{\gamma }\\&=-h^{\alpha \beta }n_{\gamma }{\frac {1}{2}}g^{\gamma \sigma }\left(\delta g_{\sigma \alpha ,\beta }+\delta g_{\sigma \beta ,\alpha }-\delta g_{\alpha \beta ,\sigma }\right)\\&=-{1 \over 2}h^{\alpha \beta }\left(\delta g_{\mu \alpha ,\beta }+\delta g_{\mu \beta ,\alpha }-\delta g_{\alpha \beta ,\mu }\right)n^{\mu }\\&={\frac {1}{2}}h^{\alpha \beta }\delta g_{\alpha \beta ,\mu }n^{\mu }\end{aligned}}}
+  
+
+where we have used the fact that the tangential derivatives of 
+  
+    
+      
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle \delta g_{\alpha \beta }}
+  
+ vanish on 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+        .
+      
+    
+    {\displaystyle \partial {\mathcal {M}}.}
+  
+ We have obtained
+
+  
+    
+      
+        (
+        16
+        π
+        )
+        δ
+        
+          S
+          
+            G
+            H
+            Y
+          
+        
+        =
+        
+          ∮
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        ϵ
+        
+          h
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            α
+            β
+            ,
+            μ
+          
+        
+        
+          n
+          
+            μ
+          
+        
+        
+          
+            h
+          
+        
+        
+          d
+          
+            3
+          
+        
+        y
+      
+    
+    {\displaystyle (16\pi )\delta S_{GHY}=\oint _{\partial {\mathcal {M}}}\epsilon h^{\alpha \beta }\delta g_{\alpha \beta ,\mu }n^{\mu }{\sqrt {h}}d^{3}y}
+  
+
+which cancels the second integral on the right-hand side of Eq. 1. The total variation of the gravitational action is:
+
+  
+    
+      
+        δ
+        
+          S
+          
+            T
+            O
+            T
+            A
+            L
+          
+        
+        =
+        
+          
+            1
+            
+              16
+              π
+            
+          
+        
+        
+          ∫
+          
+            
+              M
+            
+          
+        
+        
+          G
+          
+            α
+            β
+          
+        
+        δ
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          
+            −
+            g
+          
+        
+        
+          d
+          
+            4
+          
+        
+        x
+        .
+      
+    
+    {\displaystyle \delta S_{TOTAL}={1 \over 16\pi }\int _{\mathcal {M}}G_{\alpha \beta }\delta g^{\alpha \beta }{\sqrt {-g}}d^{4}x.}
+  
+
+This produces the correct left-hand side of the Einstein equations. This proves the main result.
+This result was generalised to fourth-order theories of gravity on manifolds with boundaries in 1983 and published in 1985.
+
+The non-dynamical term
+We elaborate on the role of
+
+  
+    
+      
+        
+          S
+          
+            0
+          
+        
+        =
+        
+          
+            1
+            
+              8
+              π
+            
+          
+        
+        
+          ∮
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        ϵ
+        
+          K
+          
+            0
+          
+        
+        
+          |
+        
+        h
+        
+          
+            |
+          
+          
+            
+              1
+              2
+            
+          
+        
+        
+          d
+          
+            3
+          
+        
+        y
+      
+    
+    {\displaystyle S_{0}={1 \over 8\pi }\oint _{\partial {\mathcal {M}}}\epsilon K_{0}|h|^{1 \over 2}d^{3}y}
+  
+
+in the gravitational action. As already mentioned above, because this term only depends on 
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle h_{ab}}
+  
+, its variation with respect to 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle g_{\alpha \beta }}
+  
+ gives zero and so does not effect the field equations, its purpose is to change the numerical value of the action. As such we will refer to it as the non-dynamical term.
+Let us assume that 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+    {\displaystyle g_{\alpha \beta }}
+  
+ is a solution of the vacuum field equations, in which case the Ricci scalar 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ vanishes. The numerical value of the gravitational action is then
+
+  
+    
+      
+        S
+        =
+        
+          
+            1
+            
+              8
+              π
+            
+          
+        
+        
+          ∮
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        ϵ
+        K
+        
+          |
+        
+        h
+        
+          
+            |
+          
+          
+            
+              1
+              2
+            
+          
+        
+        
+          d
+          
+            3
+          
+        
+        y
+        ,
+      
+    
+    {\displaystyle S={1 \over 8\pi }\oint _{\partial {\mathcal {M}}}\epsilon K|h|^{1 \over 2}d^{3}y,}
+  
+
+where we are ignoring the non-dynamical term for the moment. Let us evaluate this for flat spacetime. Choose the boundary 
+  
+    
+      
+        ∂
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle \partial {\mathcal {M}}}
+  
+ to consist of two hyper-surfaces of constant time value 
+  
+    
+      
+        t
+        =
+        
+          t
+          
+            1
+          
+        
+        ,
+        
+          t
+          
+            2
+          
+        
+      
+    
+    {\displaystyle t=t_{1},t_{2}}
+  
+ and a large three-cylinder at 
+  
+    
+      
+        r
+        =
+        
+          r
+          
+            0
+          
+        
+      
+    
+    {\displaystyle r=r_{0}}
+  
+ (that is, the product of a finite interval and a three-sphere of radius 
+  
+    
+      
+        
+          r
+          
+            0
+          
+        
+      
+    
+    {\displaystyle r_{0}}
+  
+). We have 
+  
+    
+      
+        K
+        =
+        0
+      
+    
+    {\displaystyle K=0}
+  
+ on the hyper-surfaces of constant time. On the three cylinder, in coordinates intrinsic to the hyper-surface, the line element is
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  s
+                  
+                    2
+                  
+                
+              
+              
+                
+                =
+                −
+                d
+                
+                  t
+                  
+                    2
+                  
+                
+                +
+                
+                  r
+                  
+                    0
+                  
+                  
+                    2
+                  
+                
+                d
+                
+                  Ω
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                −
+                d
+                
+                  t
+                  
+                    2
+                  
+                
+                +
+                
+                  r
+                  
+                    0
+                  
+                  
+                    2
+                  
+                
+                (
+                d
+                
+                  θ
+                  
+                    2
+                  
+                
+                +
+                
+                  sin
+                  
+                    2
+                  
+                
+                ⁡
+                θ
+                d
+                
+                  ϕ
+                  
+                    2
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}ds^{2}&=-dt^{2}+r_{0}^{2}d\Omega ^{2}\\&=-dt^{2}+r_{0}^{2}(d\theta ^{2}+\sin ^{2}\theta d\phi ^{2})\end{aligned}}}
+  
+
+meaning the induced metric is
+
+  
+    
+      
+        
+          h
+          
+            a
+            b
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  −
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    r
+                    
+                      0
+                    
+                    
+                      2
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  
+                    r
+                    
+                      0
+                    
+                    
+                      2
+                    
+                  
+                  
+                    sin
+                    
+                      2
+                    
+                  
+                  ⁡
+                  θ
+                
+              
+            
+            ]
+          
+        
+        .
+      
+    
+    {\displaystyle h_{ab}={\begin{bmatrix}-1&0&0\\0&r_{0}^{2}&0\\0&0&r_{0}^{2}\sin ^{2}\theta \end{bmatrix}}.}
+  
+
+so that 
+  
+    
+      
+        
+          |
+        
+        h
+        
+          
+            |
+          
+          
+            
+              1
+              2
+            
+          
+        
+        =
+        
+          r
+          
+            0
+          
+          
+            2
+          
+        
+        sin
+        ⁡
+        θ
+      
+    
+    {\displaystyle |h|^{1 \over 2}=r_{0}^{2}\sin \theta }
+  
+. The unit normal is 
+  
+    
+      
+        
+          n
+          
+            α
+          
+        
+        =
+        
+          ∂
+          
+            α
+          
+        
+        r
+      
+    
+    {\displaystyle n_{\alpha }=\partial _{\alpha }r}
+  
+, so 
+  
+    
+      
+        K
+        =
+        
+          
+            
+              n
+              
+                α
+              
+            
+          
+          
+            ;
+            α
+          
+        
+        =
+        2
+        
+          /
+        
+        
+          r
+          
+            0
+          
+        
+      
+    
+    {\displaystyle K={n^{\alpha }}_{;\alpha }=2/r_{0}}
+  
+. Then
+
+  
+    
+      
+        
+          ∮
+          
+            ∂
+            
+              
+                M
+              
+            
+          
+        
+        ϵ
+        K
+        
+          |
+        
+        h
+        
+          
+            |
+          
+          
+            
+              1
+              2
+            
+          
+        
+        
+          d
+          
+            3
+          
+        
+        y
+        =
+        
+          ∫
+          
+            
+              t
+              
+                1
+              
+            
+          
+          
+            
+              t
+              
+                2
+              
+            
+          
+        
+        d
+        t
+        
+          ∫
+          
+            0
+          
+          
+            2
+            π
+          
+        
+        d
+        φ
+        
+          ∫
+          
+            0
+          
+          
+            π
+          
+        
+        d
+        θ
+        
+          (
+          
+            
+              2
+              
+                r
+                
+                  0
+                
+              
+            
+          
+          )
+        
+        (
+        
+          r
+          
+            0
+          
+          
+            2
+          
+        
+        sin
+        ⁡
+        θ
+        )
+        =
+        8
+        π
+        
+          r
+          
+            0
+          
+        
+        (
+        
+          t
+          
+            2
+          
+        
+        −
+        
+          t
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle \oint _{\partial {\mathcal {M}}}\epsilon K|h|^{1 \over 2}d^{3}y=\int _{t_{1}}^{t_{2}}dt\int _{0}^{2\pi }d\varphi \int _{0}^{\pi }d\theta \left({2 \over r_{0}}\right)(r_{0}^{2}\sin \theta )=8\pi r_{0}(t_{2}-t_{1})}
+  
+
+and diverges as 
+  
+    
+      
+        
+          r
+          
+            0
+          
+        
+        →
+        ∞
+      
+    
+    {\displaystyle r_{0}\to \infty }
+  
+, that is, when the spatial boundary is pushed to infinity, even when the 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+ is bounded by two hyper-surfaces of constant time. One would expect the same problem for curved spacetimes that are asymptotically flat (there is no problem if the spacetime is compact). This problem is remedied by the non-dynamical term. The difference 
+  
+    
+      
+        
+          S
+          
+            G
+            H
+            Y
+          
+        
+        −
+        
+          S
+          
+            0
+          
+        
+      
+    
+    {\displaystyle S_{GHY}-S_{0}}
+  
+ will be well defined in the limit 
+  
+    
+      
+        
+          r
+          
+            0
+          
+        
+        →
+        ∞
+      
+    
+    {\displaystyle r_{0}\to \infty }
+  
+.
+
+Variation of modified gravity terms
+
+There are many theories which attempt to modify General Relativity in different ways, for example f(R) gravity replaces R, the Ricci scalar in the Einstein–Hilbert action with a function f(R). Guarnizo et al. found the boundary term for a general f(R) theory. 
+They found that the "modified action in the metric formalism of f(R) gravity plus a Gibbons–York–Hawking like boundary term must be written as:"
+
+  
+    
+      
+        
+          S
+          
+            m
+            o
+            d
+          
+        
+        =
+        
+          
+            1
+            
+              2
+              κ
+            
+          
+        
+        
+          ∫
+          
+            V
+          
+        
+        
+          d
+          
+            4
+          
+        
+        x
+        
+          
+            −
+            g
+          
+        
+        f
+        (
+        R
+        )
+        +
+        2
+        
+          ∫
+          
+            ∂
+            V
+          
+        
+        
+          d
+          
+            3
+          
+        
+        y
+        ϵ
+        
+          |
+        
+        h
+        
+          |
+        
+        
+          f
+          ′
+        
+        (
+        R
+        )
+        K
+      
+    
+    {\displaystyle S_{mod}={\frac {1}{2\kappa }}\int _{V}d^{4}x{\sqrt {-g}}f(R)+2\int _{\partial V}d^{3}y\epsilon |h|f'(R)K}
+  
+
+where 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        R
+        )
+        ≡
+        
+          
+            
+              d
+              f
+              (
+              R
+              )
+            
+            
+              d
+              R
+            
+          
+        
+      
+    
+    {\displaystyle f'(R)\equiv {\frac {df(R)}{dR}}}
+  
+.
+By using the ADM decomposition and introducing extra auxiliary fields, in 2009 Deruelle et al. found a method to find the boundary term for "gravity theories whose Lagrangian is an arbitrary function of the Riemann tensor." This method can be used to find the GHY boundary terms for Infinite derivative gravity.
+
+A path-integral approach to quantum gravity
+As mentioned at the beginning, the GHY term is required to ensure the path integral (a la Hawking et al.) for quantum gravity has the correct composition properties.
+This older approach to path-integral quantum gravity had a number of difficulties and unsolved problems. The starting point in this approach is Feynman's idea that one can represent the amplitude
+
+  
+    
+      
+        ⟨
+        
+          g
+          
+            2
+          
+        
+        ,
+        
+          ϕ
+          
+            2
+          
+        
+        ,
+        
+          Σ
+          
+            2
+          
+        
+        
+          |
+        
+        
+          g
+          
+            1
+          
+        
+        ,
+        
+          ϕ
+          
+            1
+          
+        
+        ,
+        
+          Σ
+          
+            1
+          
+        
+        ⟩
+      
+    
+    {\displaystyle \langle g_{2},\phi _{2},\Sigma _{2}|g_{1},\phi _{1},\Sigma _{1}\rangle }
+  
+
+to go from the state with metric 
+  
+    
+      
+        
+          g
+          
+            1
+          
+        
+      
+    
+    {\displaystyle g_{1}}
+  
+ and matter fields 
+  
+    
+      
+        
+          ϕ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \phi _{1}}
+  
+ on a surface 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+ to a state with metric 
+  
+    
+      
+        
+          g
+          
+            2
+          
+        
+      
+    
+    {\displaystyle g_{2}}
+  
+ and matter fields 
+  
+    
+      
+        
+          ϕ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \phi _{2}}
+  
+ on a surface 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+, as a sum over all field configurations 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ and 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ which take the boundary values of the fields on the surfaces 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+ and 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+. We write
+
+  
+    
+      
+        ⟨
+        
+          g
+          
+            2
+          
+        
+        ,
+        
+          ϕ
+          
+            2
+          
+        
+        ,
+        
+          Σ
+          
+            2
+          
+        
+        
+          |
+        
+        
+          g
+          
+            1
+          
+        
+        ,
+        
+          ϕ
+          
+            1
+          
+        
+        ,
+        
+          Σ
+          
+            1
+          
+        
+        ⟩
+        =
+        ∫
+        
+          
+            D
+          
+        
+        [
+        g
+        ,
+        ϕ
+        ]
+        exp
+        ⁡
+        (
+        i
+        S
+        [
+        g
+        ,
+        ϕ
+        ]
+        )
+      
+    
+    {\displaystyle \langle g_{2},\phi _{2},\Sigma _{2}|g_{1},\phi _{1},\Sigma _{1}\rangle =\int {\mathcal {D}}[g,\phi ]\exp(iS[g,\phi ])}
+  
+
+where 
+  
+    
+      
+        
+          
+            D
+          
+        
+        [
+        g
+        ,
+        ϕ
+        ]
+      
+    
+    {\displaystyle {\mathcal {D}}[g,\phi ]}
+  
+ is a measure on the space of all field configurations 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ and 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+, 
+  
+    
+      
+        S
+        [
+        g
+        ,
+        ϕ
+        ]
+      
+    
+    {\displaystyle S[g,\phi ]}
+  
+ is the action of the fields, and the integral is taken over all fields which have the given values on 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+ and 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+.
+It is argued that one need only specify the three-dimensional induced metric 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ on the boundary.
+Now consider the situation where one makes the transition from metric 
+  
+    
+      
+        
+          h
+          
+            1
+          
+        
+      
+    
+    {\displaystyle h_{1}}
+  
+, on a surface 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+, to a metric 
+  
+    
+      
+        
+          h
+          
+            2
+          
+        
+      
+    
+    {\displaystyle h_{2}}
+  
+, on a surface 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+ and then on to a metric 
+  
+    
+      
+        
+          h
+          
+            3
+          
+        
+      
+    
+    {\displaystyle h_{3}}
+  
+ on a later surface 
+  
+    
+      
+        
+          Σ
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \Sigma _{3}}
+  
+
+One would like to have the usual composition rule
+
+  
+    
+      
+        ⟨
+        
+          h
+          
+            3
+          
+        
+        ,
+        
+          Σ
+          
+            3
+          
+        
+        
+          |
+        
+        
+          h
+          
+            1
+          
+        
+        ,
+        
+          Σ
+          
+            1
+          
+        
+        ⟩
+        =
+        
+          ∑
+          
+            
+              h
+              
+                2
+              
+            
+          
+        
+        ⟨
+        
+          h
+          
+            3
+          
+        
+        ,
+        
+          Σ
+          
+            3
+          
+        
+        
+          |
+        
+        
+          h
+          
+            2
+          
+        
+        ,
+        
+          Σ
+          
+            2
+          
+        
+        ⟩
+        ⟨
+        
+          h
+          
+            2
+          
+        
+        ,
+        
+          Σ
+          
+            2
+          
+        
+        
+          |
+        
+        
+          h
+          
+            1
+          
+        
+        ,
+        
+          Σ
+          
+            1
+          
+        
+        ⟩
+      
+    
+    {\displaystyle \langle h_{3},\Sigma _{3}|h_{1},\Sigma _{1}\rangle =\sum _{h_{2}}\langle h_{3},\Sigma _{3}|h_{2},\Sigma _{2}\rangle \langle h_{2},\Sigma _{2}|h_{1},\Sigma _{1}\rangle }
+  
+
+expressing that the amplitude to go from the initial to final state to be obtained by summing over all states on the intermediate surface 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+.
+Let 
+  
+    
+      
+        
+          g
+          
+            1
+          
+        
+      
+    
+    {\displaystyle g_{1}}
+  
+ be the metric between 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+ and 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+ and 
+  
+    
+      
+        
+          g
+          
+            2
+          
+        
+      
+    
+    {\displaystyle g_{2}}
+  
+ be the metric between 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+ and 
+  
+    
+      
+        
+          Σ
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \Sigma _{3}}
+  
+. Although the induced metric of 
+  
+    
+      
+        
+          g
+          
+            1
+          
+        
+      
+    
+    {\displaystyle g_{1}}
+  
+ and 
+  
+    
+      
+        
+          g
+          
+            2
+          
+        
+      
+    
+    {\displaystyle g_{2}}
+  
+ will agree on 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+, the normal derivative of 
+  
+    
+      
+        
+          g
+          
+            1
+          
+        
+      
+    
+    {\displaystyle g_{1}}
+  
+ at 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+ will not in general be equal to that of 
+  
+    
+      
+        
+          g
+          
+            2
+          
+        
+      
+    
+    {\displaystyle g_{2}}
+  
+ at 
+  
+    
+      
+        
+          Σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Sigma _{2}}
+  
+. Taking the implications of this into account, it can then be shown that the composition rule will hold if and only if we include the GHY boundary term.
+In the next section it is demonstrated how this path integral approach to quantum gravity leads to the concept of black hole temperature and intrinsic quantum mechanical entropy.
+
+Calculating black-hole entropy using the Euclidean semi-classical approach
+
+Application in loop quantum gravity
+
+Transition amplitudes and the Hamilton's principal function
+In the quantum theory, the object that corresponds to the Hamilton's principal function is the transition amplitude. Consider gravity defined on a compact region of spacetime, with the topology of a four dimensional ball. The boundary of this region is a three-dimensional space with the topology of a three-sphere, which we call 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+. In pure gravity without cosmological constant, since the Ricci scalar vanishes on solutions of Einstein's equations, the bulk action vanishes and the Hamilton's principal function is given entirely in terms of the boundary term,
+
+  
+    
+      
+        S
+        [
+        q
+        ]
+        =
+        
+          ∫
+          
+            Σ
+          
+        
+        
+          K
+          
+            a
+            b
+          
+        
+        [
+        q
+        ]
+        
+          q
+          
+            a
+            b
+          
+        
+        
+          
+            q
+          
+        
+        
+        
+          d
+          
+            3
+          
+        
+        σ
+      
+    
+    {\displaystyle S[q]=\int _{\Sigma }K^{ab}[q]q_{ab}{\sqrt {q}}\;d^{3}\sigma }
+  
+
+where 
+  
+    
+      
+        
+          K
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle K^{ab}}
+  
+ is the extrinsic curvature of the boundary, 
+  
+    
+      
+        
+          q
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle q_{ab}}
+  
+ is the three-metric induced on the boundary, and 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+ are coordinates on the boundary.
+The functional 
+  
+    
+      
+        S
+        [
+        q
+        ]
+      
+    
+    {\displaystyle S[q]}
+  
+ is a highly non-trivial functional to compute; this is because the extrinsic curvature 
+  
+    
+      
+        
+          K
+          
+            a
+            b
+          
+        
+        [
+        q
+        ]
+      
+    
+    {\displaystyle K^{ab}[q]}
+  
+ is determined by the bulk solution singled out by the boundary intrinsic geometry. As such 
+  
+    
+      
+        
+          K
+          
+            a
+            b
+          
+        
+        [
+        q
+        ]
+      
+    
+    {\displaystyle K^{ab}[q]}
+  
+ is non-local. Knowing the general dependence of 
+  
+    
+      
+        
+          K
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle K^{ab}}
+  
+ from 
+  
+    
+      
+        
+          q
+          
+            a
+            b
+          
+        
+      
+    
+    {\displaystyle q_{ab}}
+  
+ is equivalent to knowing the general solution of the Einstein equations.
+
+Background-independent scattering amplitudes
+Loop quantum gravity is formulated in a background-independent language. No spacetime is assumed a priori, but rather it is built up by the states of theory themselves –  however scattering amplitudes are derived from 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-point functions (Correlation function (quantum field theory)) and these, formulated in conventional quantum field theory, are functions of points of a background space-time. The relation between the background-independent formalism and the conventional formalism of quantum field theory on a given spacetime is far from obvious, and it is far from obvious how to recover low-energy quantities from the full background-independent theory. One would like to derive the 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-point functions of the theory from the background-independent formalism, in order to compare them with the standard perturbative expansion of quantum general relativity and therefore check that loop quantum gravity yields the correct low-energy limit.
+A strategy for addressing this problem has been suggested; the idea is to study the boundary amplitude, or transition amplitude of a compact region of spacetime, namely a path integral over a finite space-time region, seen as a function of the boundary value of the field. In conventional quantum field theory, this boundary amplitude is well-defined and codes the physical information of the theory; it does so in quantum gravity as well, but in a fully background-independent manner. A generally covariant definition of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-point functions can then be based on the idea that the distance between physical points –  arguments of the 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-point function is determined by the state of the gravitational field on the boundary of the spacetime region considered.
+The key observation is that in gravity the boundary data include the gravitational field, hence the geometry of the boundary, hence all relevant relative distances and time separations. In other words, the boundary formulation realizes very elegantly in the quantum context the complete identification between spacetime geometry and dynamical fields.

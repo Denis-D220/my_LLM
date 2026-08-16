@@ -1,0 +1,4805 @@
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 2 
+
+These formulas are equivalent in order to the following five theorems: ad- 
+dition is commutative; multiplication is commutative; addition is associative; 
+multiplication is associative; multiplication is distributive with respect to addi- 
+tion. 
+
+EXERCISES 
+
+1. Prove the following relations: 
+
+1 + 2 + 3. .. + n=^^i^ 
+l + 3 + 5 + ... + (2n- 1) = n', 
+
+1^ + 2^ + 3^ + . . . + n^ = Mll+}y\ ' = (1 + 2 + . . . + n)^ 
+
+2. Find the sum of each of the following series: 
+
+1^ +2' +3^+... + n', 
+
+i' +3' +5''+... + (2n- 1)', 
+
+1^ +3-^ + 5^+... + (2n- 1)^ 
+
+3. Discover and establish the law suggested by the equations 1" =0 + 1,2" = 1 + 3, 
+3^ = 3 + 6, 4^ = 6 + 10, ...; by the equations 1 = 1^ 3 + 5 = 2^, 7 + 9 + 11 = 3^, 
+13 + 15 + 17 + 19 = 4^ .... 
+
+1.2 Definition of Divisibility. The Unit 
+
+Definitions. An integer a is said to be divisible by an integer b if there exists 
+an integer c such that a = be. It is clear from this definition that a is also 
+divisible by c. The integers b and c are said to be divisors or factors of a; and 
+a is said to be a multiple of b or of c. The process of finding two integers b and 
+c such that be is equal to a given integer a is called the process of resolving a 
+into factors or of factoring a; and a is said to be resolved into factors or to be 
+factored. 
+
+We have the following fundamental theorems: 
+
+I. If b is a divisor of a and c is a divisor of b, then e is a divisor of a. 
+Since 6 is a divisor of a there exists an integer /3 such that a = bj3. Since c is 
+
+a divisor of b there exists an integer 7 such that b = ej. Substituting this value 
+of b in the equation a = 67 we have a = cj(3. But from theorem III of § ?? it 
+follows that 7/3 is an integer; hence, c is a divisor of a, as was to be proved. 
+
+II. If c is a divisor of both a and b, then c is a divisor of the sum of a and b. 
+From the hypothesis of the theorem it follows that integers a and /3 exist 
+
+such that 
+
+a = ea, b = cj3. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 3 
+
+Adding, we have 
+
+a -\- b = ca -\- c(3 = c{a + /?) = c5, 
+
+where 5 is an integer. Hence, c is a divisor of a + 6. 
+
+III. If c is a divisor of both a and b, then c is a divisor of the difference of a 
+and b. 
+
+The proof is analogous to that of the preceding theorem. 
+
+Definitions. If a and h are both divisible by c, then c is said to be a 
+common divisor or a common factor of a and h. Every two integers have the 
+common factor 1. The greatest integer which divides both a and b is called the 
+greatest common divisor of a and b. More generally, we define in a similar way 
+a common divisor and the greatest common divisor of n integers ai, 02, . . ., a„. 
+
+Definitions. If an integer a is a multiple of each of two or more integers it 
+is called a common multiple of these integers. The product of any set of integers 
+is a common multiple of the set. The least integer which is a multiple of each 
+of two or more integers is called their least common multiple. 
+
+It is evident that the integer 1 is a divisor of every integer and that it is the 
+only integer which has this property. It is called the unit. 
+
+Definition. Two or more integers which have no common factor except 1 
+are said to be prime to each other or to be relatively prime. 
+
+Definition. If a set of integers is such that no two of them have a common 
+divisor besides 1 they are said to be prime each to each. 
+
+EXERCISES 
+
+1. Prove that n^ — n is divisible by 6 for every positive integer n. 
+
+2. If the product of four consecutive integers is increased by 1 the result is a square 
+number. 
+
+3. Show that 2**"+^ + 1 has a factor different from itself and 1 when n is a positive 
+integer. 
+
+1.3 Prime Numbers. The Sieve of Eratosthenes 
+
+Definition. If an integer p is different from 1 and has no divisor except itself 
+and 1 it is said to be a prime number or to be a prime. 
+
+Definition. An integer which has at least one divisor other than itself and 
+1 is said to be a composite number or to be composite. 
+All integers are thus divided into three classes: 
+
+1. The unit; 
+
+2. Prime numbers; 
+
+3. Composite numbers. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 4 
+
+We have seen that the first class contains only a single number. The third 
+class evidently contains an infinitude of numbers; for, it contains all the numbers 
+2^, 2^, 2^, ... In the next section we shall show that the second class also contains 
+an infinitude of numbers. We shall now show that every number of the third class 
+contains one of the second class as a factor, by proving the following theorem: 
+
+I. Every integer greater than 1 has a prime factor. 
+
+Let m be any integer which is greater than 1. We have to show that it has a 
+prime factor. If m is prime there is the prime factor ni itself. If m is not prime 
+we have 
+
+ni = niini2 
+
+where nii and TO2 are positive integers both of which are less than m. If either 
+nil or ?Ti2 is prime we have thus obtained a prime factor of ni. If neither of 
+these numbers is prime, then write 
+
+mi = niim2, nii > 1,TO2 > 1- 
+
+Both m'l and m'2 are factors of m and each of them is less than nii . Either we 
+have not found in m'l or ni'2 a prime factor of m or the process can be continued 
+by separating one of these numbers into factors. Since for any given ni there is 
+evidently only a finite number of such steps possible, it is clear that we must 
+finally arrive at a prime factor of ni. From this conclusion, the theorem follows 
+immediately. 
+
+Eratosthenes has given a useful means of finding the prime numbers which 
+are less than any given integer m. It may be described as follows: 
+
+Every prime except 2 is odd. Hence if we write down every odd number 
+from 3 up to 771 we shall have it the list every prime less than m except 2. Now 
+3 is prime. Leave it in the list; but beginning to count from 3 strike out every 
+third number in the list. Thus every number divisible by 3, except 3 itself, 
+is cancelled. Then begin from 5 and cancel every fifth number. Then begin 
+from from the next uncancelled number, namely 7, and strike out every seventh 
+number. Then begin from the next uncancelled number, namely 11, and strike 
+out every eleventh number. Proceed in this way up to m. The uncancelled 
+numbers remaining will be the odd primes not greater than m. 
+
+It is obvious that this process of cancellation need not be carried altogether 
+so far as indicated; for if p is a prime greater than ^/m^ the cancellation of 
+any p number from p will be merely a repetition of cancellations effected by 
+means of another factor smaller than p, as one my see by the use of the following 
+theorem. 
+
+II. An integer m is prime if it has no prime factor equal or less than I , where 
+I is the greatest integer whose square is equal to or less than m. 
+
+Since m has no prime factor less than /, it follows from theorem I that is has 
+no factor but unity less than /. Hence, if m is not prime it must be the product 
+of two numbers each greater than /; and hence it must be equal to or greater 
+than (/+ 1)^. This contradicts the hypothesis on /; and hence we conclude that 
+m is prime. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 5 
+
+EXERCISE 
+
+By means of the method of Eratosthenes determine the primes less than 200. 
+
+1.4 The Number of Primes is Infinite 
+
+I. The number of primes is infinite. 
+
+We shall prove this theorem by supposing that the number of primes is not 
+infinite and showing that this leads to a contradiction. If the number of primes 
+is not infinite there is a greatest prime number, which we shall denote by p. 
+Then form the number 
+
+N =l-2-3- ...-p+l. 
+
+Now by theorem 1 of § ?? A^ has a prime divisor q. But every non-unit divisor 
+of N is obviously greater than p. Hence q is greater than p, in contradiction to 
+the conclusion that p is the greatest prime. Thus the proof of the theorem is 
+complete. 
+
+In a similar way we may prove the following theorem: 
+
+II. Among the integers of the arithmetic progression 5, 11, 17, 23, . . ., there 
+is an infinite number of primes. 
+
+If the number of primes in this sequence is not infinite there is a greatest 
+prime number in the sequence; supposing that this greatest prime number exists 
+we shall denote it by p. Then the number N ^ 
+
+A^= 1 •2-3- ...-p- 1, 
+
+is not divisible by any number less than or equal to p. This number N ^ which 
+is of the form 6n — 1, has a prime factor. If this factor is of the form 6fc — 1 we 
+have already reached a contradiction, and our theorem is proved. If the prime 
+is of the form 6fci + 1 the complementary factor is of the form 6fc2 — 1. Every 
+prime factor of 6fc2 — 1 is greater than p. Hence we may treat 6^2 — 1 as we did 
+6n— 1, and with a like result. Hence we must ultimately reach a prime factor of 
+the form Gfcs— 1; for, otherwise, we should have 6n— 1 expressed as a product of 
+prime factors all of the form 6i+ 1 — a result which is clearly impossible. Hence 
+we must in any case reach a contradiction of the hypothesis. Thus the theorem 
+is proved. 
+
+The preceding results are special cases of the following more general theorem: 
+
+III. Among the integers of the arithmetic progression a, a-\-d, a-\-2d, a + Sd, 
+. . ., there is an infinite number of primes, provided that a and b are relatively 
+prime. 
+
+For the special case given in theorem II we have an elementary proof; but 
+for the general theorem the proof is difficult. We shall not give it here. 
+
+EXERCISES 
+
+1. Prove that there is an infinite number of primes of the form 4n — 1. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 6 
+
+2. Show that an odd prime number can be represented as the difference of two 
+squares in one and in only one way. 
+
+3. The expression m'' — rf , in which m and n are integers and p is a prime, is 
+either prime to p or is divisible by p^ . 
+
+4. Prove that any prime number except 2 and 3 is of one of the forms 6n + l, 6n— 1. 
+
+1.5 The Fundamental Theorem of Euclid 
+
+If a and b are any two positive integers there exist integers q and r,q>0,0^ 
+r < b, such that 
+
+a = qb -\- r. 
+
+If a is a multiple of b the theorem is at once verified, r being in this case 
+
+0. If a is not a multiple of b it must lie between two consecutive multiples of 6; 
+that is, there exists a q such that 
+
+qb< a< {q+l)b. 
+
+Hence there is an integer r, < r < 6, such that a = qb-\- r. In case b is greater 
+than a it is evident that g = and r = a. Thus the proof of the theorem is 
+complete. 
+
+1.6 Divisibility by a Prime Number 
+
+1. If p is a prime number and m is any integer, then m either is divisible by p 
+or is prime to p. 
+
+This theorem follows at once from the fact that the only divisors of p are 1 
+and p. 
+
+II. The product of two integers each less than a given prime number p is not 
+divisible by p. 
+
+Let a be a number which is less than p and suppose that 6 is a number less 
+than p such that ab is divisible by p, and let b be the least number for which ab 
+is so divisible. Evidently there exists an integer ni such that 
+
+mb < p < (m + 1)6. 
+
+Then p — mb < b. Since ab is divisible by p it is clear that mob is divisible by p; 
+so is ap also; and hence their difference ap — mab, = a{p — mb), is divisible by 
+p. That is, the product of a by an integer less than b is divisible by p, contrary 
+to the assumption that b is the least integer such that ab is divisible by p. The 
+assumption that the theorem is not true has thus led to a contradiction; and 
+thus the theorem is proved. 
+
+III. // neither of two integers is divisible by a given prime number p their 
+product is not divisible by p. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 7 
+
+Let a and b be two integers neither of which is divisible by the prime p. 
+According to the fundamental theorem of Euclid there exist integers m, n, a, (3 
+such that 
+
+a = mp + a, < a < p, 
+
+b = np + l3, < l3 <p. 
+
+Then 
+
+ah = {mp + a){np + /3) = (mnp -\- a -\- j3)p + a(3. 
+
+If now we suppose ah to be divisible by p we have a(3 divisible by p. This 
+contradicts II, since a and /3 are less than p. Hence ah is not divisible by p. 
+
+By an application of this theorem to the continued product of several factors, 
+the following result is readily obtained: 
+
+IV. If no one of several integers is divisible by a given prime p their product 
+is not divisible by p. 
+
+1.7 The Unique Factorization Theorem 
+
+I. Every integer greater than unity can be represented in one and in only one 
+way as a product of prime numbers. 
+
+In the first place we shall show that it is always possible to resolve a given 
+integer m greater than unity into prime factors by a finite number of operations. 
+In the proof of theorem I, § ??, we showed how to find a prime factor pi of m 
+by a finite number of operations. Let us write 
+
+ni = pimi. 
+
+If TOi is not unity we may now find a prime factor p2 of mi. Then we may write 
+
+m = pimi = piP2m2. 
+
+If TO2 is not unity we may apply to it the same process as that applied to mi 
+and thus obtain a third prime factor of m. Since mi > m2 > TO3 > ... it is 
+clear that after a finite number of operations we shall arrive at a decomposition 
+of m into prime factors. Thus we shall have 
+
+m = P1P2 ■■■Pt 
+
+where pi, P27 • ■ -j Pr are prime numbers. We have thus proved the first part 
+of our theorem, which says that the decomposition of an integer (greater than 
+unity) into prime factors is always possible. 
+
+Let us now suppose that we have also a decomposition of m into prime 
+factors as follows: 
+
+TO = qiq2 ...Qs- 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 8 
+
+Then we have 
+
+PiP2 ■■■Pr = gi<?2 ---qs- 
+
+Now pi divides the first member of this equation. Hence it also divides the 
+second member of the equation. But pi is prime; and therefore by theorem IV 
+of the preceding section we see that pi divides some one of the factors g; we 
+suppose that pi is a factor of qi. It must then be equal to qi. Hence we have 
+
+P2P3-- -Pr = 9293 • --qs- 
+
+By the same argument we prove that p2 is equal to some q, say 52- Then we 
+have 
+
+P3P4:---Pr = qsqi- --qs- 
+
+Evidently the process may be continued until one side of the equation is reduced 
+to 1. The other side must also be reduced to 1 at the same time. Hence it follows 
+that the two decompositions of m are in fact identical. 
+This completes the proof of the theorem. 
+
+The result which we have thus demonstrated is easily the most important 
+theorem in the theory of integers. It can also be stated in a different form more 
+convenient for some purposes: 
+
+II. Every non-unit positive integer m can be represented in one and in only 
+one way in the form 
+
+'« = Pl P2 ■■■Pn 
+
+where pi, p2, . . ., Pn are different primes and ai, a2, ■ ■ ■, ctn o-Te positive inte- 
+gers. 
+
+This comes immediately from the preceding representation of m in the form 
+TO = P1P2 ■ ■ -Pr by combining into a power of pi all the primes which are equal 
+to pi. 
+
+Corollary 1. If a and b are relatively prime integers and c is divisible by 
+both a and b, then c is divisible by ab. 
+
+Corollary 2. // a and b are each prime to c then ab is prime to c. 
+
+Corollary 3. // a is prime to c and ab is divisible by c, then b is divisible 
+by c. 
+
+1.8 The Divisors of an Integer 
+
+The following theorem is an immediate corollary of the results in the preceding 
+section: 
+
+I. All the divisors of m, 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 9 
+
+are of the form 
+
+and every such number is a divisor of m. 
+
+From this it is clear that every divisor of m is included once and only once 
+among the terms of the product 
+
+{1+Pn+Pl + ---+Pn"), 
+
+when this product is expanded by multiplication. It is obvious that the number 
+of terms in the expansion is (ai + l)(a2 + 1) . . . {a„ + 1). Hence we have the 
+theorem: 
+
+II. The number of divisors of m is (ai + l)(a2 + 1) . . . («« + 1). 
+Again we have 
+
+Pi ^ 
+
+Hence, 
+
+III. The sum, of the divisors of m is 
+
+p^'+^ - 1 p^'+^ - 1 p°'+^ - 1 
+
+Pi - 1 P2 - 1 " Pi- I ' 
+
+In a similar manner we may prove the following theorem: 
+
+IV. The sum of the h powers of the divisors of m is 
+
+Pi ~ ^ Pn ~ i 
+
+v\-i ' ■ " ' pJi - 1 
+
+EXERCISES 
+
+1. Find numbers x such that the sum of the divisors of x is a perfect square. 
+
+2. Show that the sum of the divisors of each of the following integers is twice the 
+integer itself: 6, 28, 496, 8128, 33550336. Find other integers x such that the 
+sum of the divisors of x is a multiple of x. 
+
+3. Prove that the sum of two odd squares cannot be a square. 
+
+4. Prove that the cube of any integer is the difference of the squares of two integers. 
+
+5. In order that a number shall be the sum of consecutive integers, it is necessary 
+and sufficient that it shall not be a power of 2. 
+
+6. Show that there exist no integers x and y (zero excluded) such that y^ = 2x^. 
+Hence, show that there does not exist a rational fraction whose square is 2. 
+
+7. The number m = p"^p"^ ' ' ' Pn" , where the p's are different primes and the 
+a's are positive integers, may be separated into relatively prime factors in 2"^^ 
+different ways. 
+
+8. The product of the divisors of m is \/m^' where v is the number of divisors of 
+m. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 10 
+
+1.9 The Greatest Common Factor of Two or 
+More Integers 
+
+Let m and n be two positive integers such that m is greater than n. Then, 
+according to the fundamental theorem of Euchd, we can form the set of equations 
+
+m = qn -\- ni, < ni < n, 
+
+n = qini + n2, < n2 < ni, 
+
+m = 92^2 + f^3, < ^3 < 712, 
+
+nk-2 = Qk-ink-i + rik, < Uk < Uk-i, 
+
+rik-i = qknk- 
+
+If TO is a multiple of n we write n = no, fc = 0, in the above equations. 
+
+Definition. The process of reckoning involved in determining the above 
+set of equations is called the Euclidian Algorithm. 
+
+I. The number nk to which the Euclidian algorithm leads is the greatest 
+common divisor of to. and n. 
+
+In order to prove this theorem we have to show two things: 
+
+1) That rik is a divisor of both to and n; 
+
+2) That the greatest common divisor d of to. and n is a divisor of Uk ■ 
+
+To prove the first statement we examine the above set of equations, working 
+from the last to the first. From the last equation we see that nk is a divisor 
+of rik-i- Using this result we see that the second member of next to the last 
+equation is divisible by Uk Hence its first member nk-2 niust be divisible by nk- 
+Proceeding in this way step by step we show that 712 and ni, and finally that n 
+and 771, are divisible by nk- 
+
+For the second part of the proof we employ the same set of equations and 
+work from the first one to the last one. Let d be any common divisor of to and 
+n. From the first equation we see that d is a divisor of ni . Then from the second 
+equation it follows that d is a divisor of ^2. Proceeding in this way we show 
+finally that d is a divisor of rik- Hence any common divisor, and in particular 
+the greatest common divisor, of to. and n is a factor of nk ■ 
+
+This completes the proof of the theorem. 
+
+Corollary. Every common divisor of m and n is a factor of their greatest 
+common divisor. 
+
+II. Any number ni in the above set of equations is the difference of multiples 
+of m and n. 
+
+From the first equation we have 
+
+ni = m — qn 
+
+so that the theorem is true for i = I. We shall suppose that the theorem is true 
+for every subscript up to i — 1 and prove it true for the subscript i. Thus by 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 11 
+
+hypothesis we have"'^ 
+
+ni-2 = ±(ai-2TO - A-2"'), 
+rii-i = =F(ai-im - /3i_in). 
+
+Substituting in the equation 
+
+ni = -Qi-irin-i + ni^2 
+
+we have a result of the form 
+
+rii = ±(aim- Pin). 
+
+From this we conclude at once to the truth of the theorem. 
+
+Since nk is the greatest common divisor of m and n, we have as a corollary 
+the following important theorem: 
+
+III. // d is the greatest common divisor of the positive integers m and n, then 
+there exist positive integers a and (3 such that 
+
+am — (3n = ±d. 
+
+If we consider the particular case in which m and n are relatively prime, 
+so that d = 1, we see that there exist positive integers a and /? such that 
+am — f3n = ±1. Obviously, if m and n have a common divisor d, greater than 
+1, there do not exist integers a and (3 satisfying this relation; for, if so, d would 
+be a divisor of the first member of the equation and not of the second. Thus we 
+have the following theorem: 
+
+IV. A necessary and sufficient condition that m and n are relatively prime 
+is that there exist integers a and f3 such that am — j3n = ±1. 
+
+The theory of the greatest common divisor of three or more numbers is based 
+directly on that of the greatest common divisor of two numbers; consequently 
+it does not require to be developed in detail. 
+
+EXERCISES 
+
+1. If d is the greatest common divisor of m and n, then m/d and n/d are relatively 
+prime. 
+
+2. If d is the greatest common divisor of m and n and k is prime to n, then d is 
+the greatest common divisor of km and n. 
+
+3. The number of multiplies of 6 in the sequence a, 2a, 3a, •••, ba is equal to the 
+greatest common divisor of a and h. 
+
+4. If the sum or the difference of two irreducible fractions is an integer, the denom- 
+inators of the fractions are equal. 
+
+5. The algebraic sum of any number of irreducible fractions, whose denominators 
+are prime each to each, cannot be an integer. 
+
+
+
+^If i = 2 we must replace n^_2 by n. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 12 
+
+6*. The number of divisions to be effected in finding the greatest common divisor of 
+two numbers by the Euclidian algorithm does not exceed five times the number 
+of digits in the smaller number (when this number is written in the usual scale 
+of 10). 
+
+1.10 The Least Common Multiple of Two or 
+More Integers 
+
+I. The common multiples of two or more numbers are the multiples of their least 
+common multiple. 
+
+This may be readily proved by means of the unique factorization theorem. 
+The method is obvious. We shall, however, give a proof independent of this 
+theorem. 
+
+Consider first the case of two numbers; denote them by m and n and their 
+greatest common divisor by d. Then we have 
+
+TO = dji, n = dv, 
+
+where fi and v are relatively prime integers. The common multiples sought are 
+multiples of m and are all comprised in the numbers am = adfi, where a is 
+any integer whatever. In order that these numbers shall be multiples of n it is 
+necessary and sufficient that adfi shall be a multiple of dz/; that is, that afi shall 
+be a multiple of v; that is, that a shall be a multiple of v, since /i and v are 
+relatively prime. Writing a = Sv we have as the multiples in question the set 
+5djii> where 6 is an arbitrary integer. This proves the theorem for the case of 
+two numbers; for dfiv is evidently the least common multiple of m and n. 
+
+We shall now extend the proposition to any number of integers m,n,p,q, . . .. 
+The multiples in question must be common multiples of m and n and hence of 
+their least common multiple fi. Then the multiples must be multiples of /i 
+and p and hence of their least common multiple fii. But /ii is evidently the 
+least common multiple of m, n,p. Continuing in a similar manner we may show 
+that every multiple in question is a multiple of /^, the least common multiple 
+of TO, n,p, q, ■ . ■■ And evidently every such number is a multiple of each of the 
+numbers m,n,p,q, . . .. 
+
+Thus the proof of the theorem is complete. 
+
+When the two integers to. and n are relatively prime their greatest common 
+divisor is 1 and their least common multiple is their product. Again if p is prime 
+to both TO and n it is prime to their product mn; and hence the least common 
+multiple of to., n, p is in this case mnp. Continuing in a similar manner we have 
+the theorem: 
+
+II. The least common multiple of several integers, prime each to each, is 
+equal to their product. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 13 
+
+EXERCISES 
+
+1. In order that a common multiple of n numbers shall be the least, it is necessary 
+and sufficient that the quotients obtained by dividing it successively by the 
+numbers shall be relatively prime. 
+
+2. The product of n numbers is equal to the product of their legist common multiple 
+by the greatest common divisor of their products n — 1 at a time. 
+
+3. The least common multiple of n numbers is equal to any common multiple M 
+divided by the greatest common divisor of the quotients obtained on dividing 
+this common multiple by each of the numbers. 
+
+4. The product of n numbers is equal to the product of their greatest common 
+divisor by the least common multiple of the products of the numbers taken 
+n — 1 at a time. 
+
+
+
+1.11 Scales of Notation 
+
+I. // m and n are positive integers and n > 1, then m can be represented in 
+terms of n in one and in only one way in the form 
+
+m = aon + ain ^ + . . . + ah-in + ah, 
+
+
+
+where 
+
+
+
+ao 7^ 0, ^ Oi < n, i = 0, 1, 2, . 
+
+
+
+That such a representation of m exists is readily proved by means of the 
+fundamental theorem of Euclid. For we have 
+
+m = Hon + a/i, ^ a^ < n, 
+
+no = nin + an-i, ^ an-i < n, 
+
+ni = n2n + ah-2, ^ ah-2 < n, 
+
+
+
+nh-3 = nh-2n + 02, ^ 02 < n, 
+
+nh-2 = nh-in + ai, ^ ai < n, 
+
+n-h-i = flo, < ao < n. 
+
+If the value of n/j_i given in the last of these equations is substituted in the 
+second last we have 
+
+nh-2 = aon + ai. 
+
+This with the preceding gives 
+
+nh-3 = aon^ + ain + 02. 
+
+Substituting from this in the preceding and continuing the process we have 
+finally 
+
+m = oon + ain ^ + . . . + ah-in + ah, 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 14 
+
+a representation of m in the form specified in the theorem. 
+
+To prove that this representation is unique, we shall suppose that m has the 
+representation 
+
+m = bon'' + bin^^^ + ... + bk-in + bu, 
+where 
+
+60 7^ 0, < 6i < n, « = 0, 1, 2, . . . , fc, 
+and show that the two representations are identical. We have 
+
+aQ-n^ + . . . + ah-in + ah = b^n^ + . . . + bk-in + bk- 
+
+
+
+Then 
+
+
+
+a^n^ + . . . + ah-\n - {bon'' + . . . + bk-in) = bk - ah- 
+
+
+
+The first member is divisible by n. Hence the second is also. But the second 
+member is less than n in absolute value; and hence, in order to be divisible by 
+n, it must be zero. That is, bk = ah- Dividing the equation through by n and 
+transposing we have 
+
+aon'*"^ + . . . + ah-2n - {bon''^^ + . . . + bk-2n) = bk-i - au-i- 
+
+It may now be seen that bk-i = ah-i- It is evident that this process may be 
+continued until either the a's are all eliminated from the equation or the fe's are 
+all eliminated. But it is obvious that when one of these sets is eliminated the 
+other is also. Hence, h = k. Also, every a equals the b which multiplies the 
+same power of n as the corresponding a. That is, the two representations of m 
+are identical. Hence the representation in the theorem is unique. 
+
+From this theorem it follows as a special case that any positive integer can 
+be represented in one and in only one way in the scale of 10; that is, in the 
+familiar Hindoo notation. It can also be represented in one and in only one way 
+in any other scale. Thus 
+
+120759 = 1 • 7*^ + • 7^ + 1 • 7"* + 2 • 7-V • 72 + 3 • 7I + 2. 
+
+Or, using a subscript to denote the scale of notation, this may be written 
+
+(120759)10 = (1012032)7. 
+
+For the case in which n (of theorem I) is equal to 2, the only possible values 
+for the a's are and 1. Hence we have at once the following theorem: 
+
+II. Any positive integer can be represented in one and in only one way as a 
+sum of different powers of 2. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 
+
+
+
+15 
+
+
+
+EXERCISES 
+
+1. Any positive integer can be represented as an aggregate of different powers of 3, 
+the terms in the aggregate being combined by the signs + and — appropriately 
+chosen. 
+
+2. Let m and n be two positive integers of which n is the smaher and suppose that 
+2' < n < 2 . By means of the representation of m and n in the scale of 2 
+prove that the number of divisions to be effected in finding the greatest common 
+divisor of m and n by the Euclidian algorithm does not exceed 2k. 
+
+
+
+1.12 Highest Power of a Prime p Contained in 
+
+
+
+n 
+
+
+
+Let n be any positive integer and p any prime number not greater than n. We 
+inquire as to what is the highest power p'^ of the prime p contained in n\. 
+In solving this problem we shall find it convenient to employ the notation 
+
+
+
+to denote the greatest integer a such that as < r. With this notation it is 
+evident that we have 
+
+
+
+(1) 
+
+
+
+and more generally 
+
+
+
+pi 
+
+
+
+pJ 
+
+
+
+i+j 
+
+
+
+If now we use H{x} to denote the index of the highest power oi p contained 
+in an integer x, it is clear that we have 
+
+
+
+H{n\} = H {p-2p-3p 
+
+
+
+P 
+
+
+
+since only multiples of p contain the factor p. Hence 
+
+
+
+H{nl} 
+
+
+
+Hll-2. 
+
+
+
+Applying the same process to the i7-function in the second member and remem- 
+bering relation (1) it is easy to see that we have 
+
+
+
+H{n\} = 
+
+
+
+n 
+.P. 
+
+
++ h[p-2p- 
+
+
+
+
+n 
+
+-2 
+
+
+4 
+
+
+n 
+.P. 
+
+
++ 
+
+
+n 
+
+
+-I 
+
+
+•1- 
+
+
+2-3 
+
+
+
+
+n 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 
+
+
+
+16 
+
+
+
+Continuing the process we have finahy 
+H{nl} = 
+
+
+
+n 
+.P. 
+
+
++ 
+
+
+n 
+
+
++ 
+
+
+n 
+
+y. 
+
+
+
+the series on the right containing evidently only a finite number of terms different 
+from zero. Thus we have the theorem: 
+
+I. The index of the highest power of a prime p contained in n! is 
+
+
+
+n 
+.P. 
+
+
++ 
+
+
+n 
+
+
++ 
+
+
+n 
+p3 
+
+
+
+The theorem just obtained may be written in a different form, more conve- 
+nient for certain of its applications. Let n be expressed in the scale of p in the 
+form 
+
+
+
+where 
+
+
+
+n = aop'^ + aip^ ^ + . . . + ah^ip + a^. 
+
+
+
+Then evidently 
+
+
+
+ao 7^ 0, ^ fli < p, i = 0, 1, 2, . 
+
+
+
+= aop'^ ^+aip'^ "^ + . . . + ah-2P+ ah-i, 
+
+
+
+= ao/ ^+01/ ^ + ... + ah-2, 
+
+
+
+Adding these equations member by member and combining the second members 
+in columns as written, we have 
+
+
+
+ai(/-^ - 1) 
+
+
+
+n 
+.P. 
+
+
++ 
+
+
+n 
+
+y. 
+
+
++ 
+
+
+n 
+
+y. 
+
+
+
+E 
+
+i=0 
+
+
+
+p-l 
+
+
+
+_ aop + aip'^ ^ + . . . + a/j - (ao + ai + . . . + a/i) 
+
+p — 1 
+_ n- {aQ + ai + . .. + ah) 
+
+Comparing this result with theorem I we have the following theorem: 
+II. // n is represented in the scale of p in the form 
+
+n = aop^ + aip^^^ + . . . + a/j. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 
+
+
+
+17 
+
+
+
+where p is prime and 
+
+oo 7^ 0, S ai < p, i = 0, 1, 2, . . . , /i, 
+then the index of the highest power of p contained in n\ is 
+
+n - {ao + ai + . . . + ah) 
+
+
+
+Note the simple form of the theorem for the case p = 2; in this case the 
+denominator p — I is unity. 
+
+We shah make a single application of these theorems by proving the following 
+theorem: 
+
+III. // n, a, j3, . . ., X are any positive integers such that n = a-\- P -\- . . .-\- X, 
+then 
+
+«!/?!... A! ^^^ 
+
+is an integer. 
+
+Let p be any prime factor of the denominator of the fraction (A). To prove 
+the theorem it is sufficient to show that the index of the highest power of p 
+contained in the numerator is at least as great as the index of the highest power 
+of p contained in the denominator. This index for the denominator is the sum 
+of the expressions 
+
+
+
+<y 
+
+
+
+
+o- 
+
+
+
+
+CI 
+
+
+■ 
+
+
+
+
++ 
+
+
+y 
+
+
++ 
+
+
+p3 
+
+
++ ... 
+
+
+Vv\ 
+
+
+
+
+
+
+
+
+r/3] 
+
+
+
+
+\d] 
+
+
+
+
+l3^ 
+
+
+
+
+— 
+
+
++ 
+
+
+[p'\ 
+
+
++ 
+
+
+p3 
+
+
++ ... 
+
+
+L^J 
+
+
+
+
+
+
+
+
+
+"A" 
+.P. 
+
+
++ 
+
+
+"A" 
+
+y_ 
+
+
++ 
+
+
+"A" 
+y_ 
+
+
+
+(B) 
+
+
+
+The corresponding index for the numerator is 
+
+
+
+But, since n = a -\- jS - 
+
+
+
+n 
+.P. 
+
+
++ 
+
+
+n 
+y_ 
+
+
++ 
+
+
+n 
+y_ 
+
+
+
+(C) 
+
+
+
++ A, it is evident that 
+
+
+
+n 
+
+
+- 
+
+
+n 
+
+
+
+
+\ B] 
+
+
+
+
+
+
+[•^1 
+
+
+— 
+
+
+> 
+
+
+— 
+
+
++ 
+
+
+
+
+
++ . 
+
+
+.+ 
+
+
+
+
+
+[p>\ 
+
+
+
+
+IP' \ 
+
+
+
+
+IP' \ 
+
+
+
+
+
+
+IP' \ 
+
+
+
+From this and the expressions in (B) and (C) it follows that the index of the 
+highest power of any prime p in the numerator of (A) is equal to or greater than 
+the index of the highest power of p contained in its denominator. The theorem 
+now follows at once. 
+
+Corollary. The product of n consecutive integers is divisible by n\. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 18 
+
+EXERCISES 
+
+1. Show that the highest power of 2 contained in 1000! is 2^^"*; in 1900! is 2^**^^. 
+Show that the highest power of 7 contained in 10000! is 7''-^^^ ^ 
+
+2. Find the highest power of 72 contained in 1000! 
+
+3. Show that 1000! ends with 249 zeros. 
+
+4. Show that there is no number n such that 3'' is the highest power of 3 contained 
+in n\. 
+
+5. Find the smallest number n such that the highest power of 5 contained in n! is 
+5^^. What other numbers have the same property? 
+
+6. If n = rs, r and s being positive integers, show that n! is divisible by (r!)" by 
+{s\Y; by the least common multiple of (r!)" and {s\Y . 
+
+7. If n = a + /3 + p<7 + rs, where a, f3,p,q,r,s, are positive integers, then n! is 
+divisible by 
+
+a!/3!(q!r(s!r. 
+
+8. When m and n are two relatively prime positive integers the quotient 
+
+_ (m + n + 1)! 
+mini 
+
+as an integer. 
+
+9*. If m and n are positive integers, then each of the quotients 
+
+_ {mny. _ (2m)!(2n)! 
+
+n\{m\)" m\n\{m -\- ny. 
+
+is an integer. Generalize to k integers m, n,p, . . .. 
+
+10*. If n = a + /3+pg + rs where a, l3,p,q,r, s are positive integers, then n! is divisible 
+by 
+
+a\l3\r\p\{q\y{s\y. 
+
+11*. Show that 
+
+(rsty. 
+
+
+
+t!(s!)*(r!)='' 
+is an integer (r, s,t being positive integers). Generalize to the case of n integers 
+
+
+
+1.13 Remarks Concerning Prime Numbers 
+
+We have seen that the number of primes is infinite. But the integers which have 
+actually been identified as prime are finite in number. Moreover, the question 
+as to whether a large number, as for instance 2^^^ — 1, is prime is in general 
+very difficult to answer. Among the large primes actually identified as such are 
+the following: 
+
+2«i-l, 2^5-5+1, 2«9-l, 2^27 _i. 
+
+
+
+CHAPTER 1. ELEMENTARY PROPERTIES OF INTEGERS 19 
+
+No analytical expression for the representation of prime numbers has yet 
+been discovered. Fermat believed, though he confessed that he was unable to 
+prove, that he had found such an analytical expression in 
+
+2^" +1. 
+
+Euler showed the error of this opinion by finding that 641 is a factor of this 
+number for the case when n = 5. 
+
+The subject of prime numbers is in general one of exceeding difficulty. In 
+fact it is an easy matter to propose problems about prime numbers which no 
+one has been able to solve. Some of the simplest of these are the following: 
+
+1. Is there an infinite number of pairs of primes differing by 2? 
+
+2. Is every even number (other than 2) the sum of two primes or the sum of 
+a prime and the unit? 
+
+3. Is every even number the difference of two primes or the difference of 1 
+and a prime number? 
+
+4. To find a prime number greater than a given prime. 
+
+5. To find the prime number which follows a given prime. 
+
+6. To find the number of primes not greater than a given number. 
+
+7. To compute directly the n prime number, when n is given. 
+
+
+
+Chapter 2 
+
+ON THE INDICATOR OF 
+AN INTEGER 
+
+2.1 Definition. Indicator of a Prime Power 
+
+Definition. If m is any given positive integer the number of positive integers 
+not greater than m and prime to it is called the indicator of to. It is usually 
+denoted by (j){m)^ and is sometimes called Euler's 0- function of to. More rarely, 
+it has been given the name of totient of to.. 
+As examples we have 
+
+<A(1) = 1, ^{2) = 1, 0(3) = 2, 0(4) = 2. 
+
+If p is a prime number it is obvious that 
+
+(p{p) =p- 1; 
+
+for each of the integers 1, 2, 3, . . ., p — 1 is prime to p. 
+
+Instead of taking m = p let us assume that m = p", where a is a positive 
+integer, and seek the value of (p{p"). Obviously, every number of the set 1, 2, 
+3, . . ., p" either is divisible by p or is prime to p" . The number of integers in 
+the set divisible by p is p"^^ . Hence p" — p"^^ of them are prime to p. Hence 
+4'{p'^) = p" — p"^^. Therefore 
+
+If p is any prime number and a is any positive integer, then 
+
+2.2 The Indicator of a Product 
+
+I. // /i and V are any two relatively prime positive integers, then 
+
+4>{l^v) = (p{fi)(p{u). 
+
+20 
+
+
+
+CHAPTER 2. ON THE INDICATOR OF AN INTEGER 
+
+
+
+21 
+
+
+
+1 
+
+
+2 
+
+
+3 ... 
+
+
+h . 
+
+
+ji 
+
+
+M+1 
+
+
+M + 2 
+
+
+fi + 3 ... 
+
+
+Ii + h . 
+
+
+. 2/^ 
+
+
+2m +1 
+
+
+2^ + 2 
+
+
+2fi + 3 ... 
+
+
+2fi + h . 
+
+
+. 3/. 
+
+
+
+In order to prove this theorem let us write all the integers up to jiv in a 
+rectangular array as follows: 
+
+
+
+(A) 
+
+
+
+If a number h in the first line of this array has a factor in common with /i 
+then every number in the same column with h has a factor in common with ji. 
+On the other hand if h is prime to /x, so is every number in the column with 
+h at the top. But the number of integers in the first row prime to ji is 0(/x). 
+Hence the number of columns containing integers prime to ji is 4>{ij) and every 
+integer in these columns is prime to ji. 
+
+Let us now consider what numbers in one of these columns are prime to v] 
+for instance, the column with h at the top. We wish to determine how many 
+integers of the set 
+
+
+
+ft., ji + h, 2fi + h, 
+
+
+
+{v- l)ii+h 
+
+
+
+are prime to v. Write 
+
+
+
+s^+ h= qsV + Vg 
+
+where s ranges over the numbers s = 0, 1, 2, . . . , v—1 and Q ^ rg < v. Clearly 
+s^ + ft is or is not prime to v according as r^ is or is not prime to v. Our problem 
+is then reduced to that of determining how many of the quantities r^ are prime 
+to v. 
+
+First let us notice that all the numbers r,, are different; for, if r^ = rt then 
+from 
+
+sii+h= qsV + ra, t/j. + h = qti' + n, 
+
+we have by subtraction that (s — t)fj, is divisible by z/. But /x is prime to v and s 
+and t are each less than i>. Hence (s — t)fi can be a multiple of v only by being 
+zero; that is, s must equal t. Hence no two of the remainders r^ can be equal. 
+
+Now the remainders r^ are v in number, are all zero or positive, each is less 
+than v, and they are all distinct. Hence they are in some order the numbers 0, 
+1,2, . . ., z^ — 1. The number of integers in this set prime to v is evidently 4>{v). 
+
+Hence it follows that in any column of the array (A) in which the numbers 
+are prime to fi there are just 4>{i') numbers which are prime to v. That is, in 
+this column there are just 4>{v) numbers which are prime to iii>. But there are 
+(p{p) such columns. Hence the number of integers in the array (A) prime to fiv 
+is 0(/x)0(z/). 
+
+But from the definition of the 0-function it follows that the number of inte- 
+gers in the array (A) prime to fiv is <f>{jiv). Hence, 
+
+
+
+CHAPTER 2. ON THE INDICATOR OF AN INTEGER 22 
+
+which is the theorem to be proved. 
+
+Corollary. In the series ofn consecutive terms of an arithmetical progres- 
+sion the common difference of which is prime to n, the number of terms prime 
+to n is </)(«). 
+
+From theorem I we have readily the following more general result: 
+
+II. // TOi, 7712, . . . , rrik are k positive integers which are prime each to each, 
+then 
+
+4>{mim2 . . .nik) = (/)(mi)(/)(m2) . . .0(mfc). 
+
+
+
+2.3 The Indicator of any Positive Integer 
+
+From the results of §§?? and ?? we have an immediate proof of the following 
+fundamental theorem: 
+
+Ifm = Pi^P2^ ■ ■ -Pn" where pi,p2, . . . ,Pn are different primes and cti, a2, . . . , «„ 
+are positive integers, then 
+
+(j){m) = TO ( 1 - — ] ( 1 -—]... (l - — 
+V PiJ \ P2j \ Pn 
+
+For, 
+
+^{m) = cl>{p^^)cb{pr-)...cb{pZ") 
+
+.„.(i_i)(i_i)...(i_i 
+
+V PlJ \ P2j V Pn 
+
+On account of the great importance of this theorem we shall give a second 
+demonstration of it. 
+
+It is clear that the number of integers less than m and divisible by pi is 
+
+ni 
+Pi 
+
+The number of integers less than ni and divisible by p2 is 
+
+ni 
+P2 
+
+The number of integers less than m and divisible by p\P2 is 
+
+
+
+P\P2 
+
+
+
+CHAPTER 2. ON THE INDICATOR OF AN INTEGER 23 
+
+Hence the number of integers less than m and divisible by either pi or p2 is 
+
+mm m 
+
+
+
+Pi P2 P1P2 
+Hence the number of integers less than m and prime to piP2 is 
+
+mm m A 1 \ A 1 
+
+m 1 =777.1 1 
+
+Pi P2 P1P2 V PiJ \ P2 
+
+We shall now show that if the number of integers less than m and prime to 
+P1P2 ■ ■ -Pi, where i is less than n, is 
+
+V PiJ \ P2J \ Pi 
+
+then the number of integers less than m and prime to piP2 ■ ■ -PiPi+i is 
+m(l--Vl-- )...(1 
+
+
+
+PlJ \ P2) V Pi+l 
+
+From this our theorem will follow at once by induction. 
+
+From our hypothesis it follows that the number of integers less than m and 
+divisible by at least one of the primes pi, p2j • • v Pi is 
+
+m(l - — V. Yl- - 
+
+
+
+P\J V Pi 
+
+
+
+Era v-^ m v-^ m , , ^ 
+> + > . . . , (A) 
+Pi ^^ P1P2 ^^ P1P2P3 
+
+where the summation in each case runs over all numbers of the type indicated, 
+the subscripts of the p's being equal to or less than i. 
+
+Let us consider the integers less than m and having the factor Pi+i but not 
+having any of the factors pi, p2, ■ ■ ., Pi- Their number is 
+
+
+
+-(E--E — + E^^---l w 
+
+
+
+Pi+l Pi+l l^^Pl ^^ P1P2 ^^ P1P2P3 
+
+where the summation signs have the same significance as before. For the number 
+in question is evidently -^^3_ minus the number of integers not greater than ^^^ 
+and divisible by at least one of the primes pi, p2, . . ., pi. 
+
+If we add (A) and (B) we have the number of integers less than m and 
+divisible by one at least of the numbers pi, p2, . . ., Pi+i. Hence the number of 
+integers less than m and prime to pi, p2, . . ., Pi+i is 
+
+
+
+- + E;-3:-E 
+
+
+
+Pl ^^ P1P2 ^^ P1P2P3 
+
+
+
+CHAPTER 2. ON THE INDICATOR OF AN INTEGER 24 
+
+where now in the summations the subscripts run from 1 to i + 1 . This number 
+is clearly equal to 
+
+,„M-iVi-iV.Yi ' 
+
+
+
+PiJ \ P2J \ Pi+i 
+
+From this result, as we have seen above, our theorem follows at once by induc- 
+tion. 
+
+
+
+2.4 Sum of the Indicators of the Divisors of a 
+Number 
+
+We shall first prove the following lemma: 
+
+Lemma. If d is any divisor of m and m = nd, the number of integers not 
+greater than m which have with m the greatest common divisor d is 4>{n). 
+
+Every integer not greater than m and having the divisor d is contained in 
+the set d, 2d, Sd, . . ., nd. The number of these integers which have with m the 
+greatest common divisor d is evidently the same as the number of integers of 
+the set 1,2, . . ., n which are prime to ^, or n; for ad and n have or have not the 
+greatest common divisor d according as a is or is not prime to ^ = n. Hence 
+the number in question is (j^in). 
+
+From this lemma follows readily the proof of the following theorem: 
+
+If di, d2, ■■ ■, dr are the different divisors of m, then 
+
+4>{di) + (t>{d2) + . . . + (t>{dr) = m. 
+Let us define integers mi, ni2, • • ., m^ by the relations 
+
+m = dimi = d2'ni2 = . . . = dr-rrir. 
+
+Now consider the set of m positive integers not greater than to, and classify 
+them as follows into r classes. Place in the first class those integers of the set 
+which have with m the greatest common divisor to-i; their number is <t){di), 
+as may be seen from the lemma. Place in the second class those integers of 
+the set which have with to the greatest common divisor 7712; their number is 
+4>{d2). Proceeding in this way throughout, we place finally in the last class 
+those integers of the set which have with m the greatest common divisor to^! 
+their number is 4>{dr). It is evident that every integer in the set falls into one 
+and into just one of these r classes. Hence the total number to of integers in the 
+set is (pidi) + (pidr) + ■ . ■ + (pidr)- From this the theorem follows immediately. 
+
+EXERCISES 
+
+1. Show that the indicator of any integer greater than 2 is even. 
+
+2. Prove that the number of irreducible fractions not greater than 1 and with 
+denominator equal to n is </'(n). 
+
+
+
+CHAPTER 2. ON THE INDICATOR OF AN INTEGER 25 
+
+3. Prove that the number of irreducible fractions not greater than 1 and with 
+denominators not greater than n is 
+
+0(l) + 0(2) + ,^(3) + ... + 0(n). 
+
+4. Show that the sum of the integers less than n and prime to n is ^ncj>{n) if n > 1. 
+
+5. Find ten values of x such that 4>{x) = 24. 
+
+6. Find seventeen values of x such that 0(x) = 72. 
+
+7. Find three values of n for which there is no x satisfying the equation (^(a:) = 2n. 
+
+8. Show that if the equation 
+
+0(x) = n 
+
+has one solution it always has a second solution, n being given and x being the 
+unknown. 
+
+9. Prove that all the solutions of the equation 
+
+4>ix) = 4n — 2,n > 1, 
+
+are of the form p" and 2p°' , where p is a prime of the form 4s — 1 . 
+10. How many integers prime to n are there in the set 
+
+(a) l-2,2-3,3-4, ...,n(n + l)? 
+
+(b) 1 • 2 • 3, 2 • 3 • 4, 3 • 4 • 5, . . . , n(n + l)(n + 2)? 
+
+/ \ 1^ 2^ !^4 Ti(n+1) 9 
+
+[C) 2 ! 2 ' 2 ' ■ ■ ■ ' 2 
+
+(A) l'2-3 2-3-4 3-4-5 n{n+l){n + 2) ^ 
+
+11*. Find a method for determining all the solutions of the equation 
+
+(f){x) = n, 
+
+where n is given and x is to be sought. 
+
+12*. A number theory function 4>{n) is defined for every positive integer n; and for 
+every such number n it satisfies the relation 
+
+(l>idi) + (I)id2) + . . . + <t>idr) = n, 
+where di,d2, ■ ■ ■ ,dr are the divisors of n. From this property alone show that 
+
+V PiJ \ P2J V Pk 
+where pi,p2, ■ ■ ■ ,Pk are the different prime factors of n. 
+
+
+
+Chapter 3 
+
+ELEMENTARY 
+PROPERTIES OF 
+CONGRUENCES 
+
+3.1 Congruences Modulo m 
+
+Definitions. If a and h are any two integers, positive or zero or negative, 
+whose difference is divisible by m, a and h are said to be congruent modulo 
+TO, or congruent for the modulus to,, or congruent according to the modulus to. 
+Each of the numbers a and h is said to be a residue of the other. 
+
+To express the relation thus defined we may write 
+
+
+
+where c is an integer (positive or zero or negative). It is more convenient, 
+however, to use a special notation due to Gauss, and to write 
+
+a = b mod m, 
+
+an expression which is read a is congruent to b modulo m, or a is congruent 
+to b for the modulus to., or a is congruent to b according to the modulus to. 
+This notation has the advantage that it involves only the quantities which are 
+essential to the idea involved, whereas in the preceding expression we had the 
+irrelevant integer c. The Gaussian notation is of great value and convenience 
+in the study of the theory of divisibility. In the present chapter we develop 
+some of the fundamental elementary properties of congruences. It will be seen 
+that many theorems concerning equations are likewise true of congruences with 
+fixed modulus; and it is this analogy with equations which gives congruences 
+(as such) one of their chief claims to attention. 
+
+As immediate consequences of our definitions we have the following funda- 
+mental theorems: 
+
+26 
+
+
+
+CHAPTER 3. ELEMENTARY PROPERTIES OF CONGRUENCES 27 
+
+I. If a = c mod m, b = c mod m, then a = b mod m; that is, for a given 
+modulus, numbers congruent to the same number are congruent to each other. 
+
+For, by hypothesis, a — c= cim, b — c = C2m, where ci and C2 are integers. 
+Then by subtraction we have a — b = {ci — C2)m; whence a = b mod m. 
+
+II. If a = b mod m, a = (3 mod to, t/ien a ± a = b ± (3 mod ?7i; t/iat 
+is, congruences with the sam,e modulus may be added or subtracted member by 
+member. 
+
+For, by hypothesis, a — b = cim, a — (3 = C2to; whence (a ± a) — (6 ± /?) = 
+(ci ± C2)to. Hence a± a = b ± [3 mod to. 
+
+III. If a = b mod to., t/iew ca = cb mod ?7i, c 6eing' any integer whatever. 
+The proof is obvious and need not be stated. 
+
+IV. If a = b mod m, a = (3 mod to, then aa = bj3 mod to.; t/iat is, two 
+congruences with the same modulus may be multiplied member by member. 
+
+For, we have a = 6+cito, a = (3-\-C2m. Multiplying these equations member 
+by member we have aa = b[3 + m{bc2 + (3ci + ciC2to). Hence aa = b(3 mod to. 
+
+A repeated use of this theorem gives the following result: 
+
+Y. If a = b mod to, then a" = 6" mod m where n is any positive integer. 
+
+As a corollary of theorems II, III and V we have the following more general 
+result: 
+
+VI. // f{x) denotes any polynomial in x with coefficients which are integers 
+(positive or zero or negative) and if further a = b mod m, then 
+
+f(a) = f(b) mod m. 
+
+3.2 Solutions of Congruences by Trial 
+
+Let /(x) be any polynomial in x with coefficients which are integers (positive 
+or negative or zero) . Then if x and c are any two integers it follows from the 
+last theorem of the preceding section that 
+
+f{x) = fix + cm) mod to.. (1) 
+
+Hence if a is any value of x for which the congruence 
+
+f{x) = mod m. (2) 
+
+is satisfied, then the congruence is also satisfied for x = a -\- cm, where c is any 
+integer whatever. The numbers a + cm are said to form a solution (or to be 
+a root) of the congruence, c being a variable integer. Any one of the integers 
+a-\-cm may be taken as the representative of the solution. We shall often speak 
+of one of these numbers as the solution itself. 
+
+Among the integers in a solution of the congruence (2) there is evidently one 
+which is positive and not greater than m. Hence all solutions of a congruence 
+of the type (2) may be found by trial, a substitution of each of the numbers 
+
+
+
+CHAPTER 3. ELEMENTARY PROPERTIES OF CONGRUENCES 28 
+
+1, 2, . . . , m being made for x. It is clear also that m is the maximum number 
+of solutions which (2) can have whatever be the function f{x). By means of an 
+example it is easy to show that this maximum number of solutions is not always 
+possessed by a congruence; in fact, it is not even necessary that the congruence 
+have a solution at all. 
+
+This is illustrated by the example 
+
+X —3 = mod 5. 
+
+In order to show that no solution is possible it is necessary to make trial only 
+of the values 1, 2, 3, 4, 5 for x. A direct substitution verifies the conclusion that 
+none of them satisfies the congruence; and hence that the congruence has no 
+solution at all. 
+
+On the other hand the congruence 
+
+X — X = mod 5 
+
+has the solutions a; = 1, 2, 3, 4, 5 as one readily verifies; that is, this congruence 
+has five solutions — the maximum number possible in accordance with the results 
+obtained above. 
+
+EXERCISES 
+
+1. Show that (a + bY = a'' -\- if mod p where a and b are any integers and p is any 
+prime. 
+
+2. From the preceding result prove that a'' = a mod p for every integer a. 
+
+3. Find all the solutions of each of the congruences x^^ = x mod ll,x^° = 1 mod 
+11, x' = 1 mod 11. 
+
+
+
+3.3 Properties of Congruences Relative to Divi- 
+sion 
+
+The properties of congruences relative to addition, subtraction and multiplica- 
+tion are entirely analogous to the properties of algebraic equations. But the 
+properties relative to division are essentially different. These we shall now give. 
+
+I. // two numbers are congruent modulo m they are congruent modulo d, 
+where d is any divisor of m. 
+
+For, from a = b mod m, we have a = b -\- cm = b -\- c'd. Hence a = b mod d. 
+
+II. // two numbers are congruent for different moduli they are congruent for 
+a modulus which is the least common multiple of the given moduli. 
+
+The proof is obvious, since the difference of the given numbers is divisible 
+by each of the moduli. 
+
+III. When the two members of a congruence are multiples of an integer c 
+prime to the modulus, each member of the congruence may be divided by c. 
+
+
+
+CHAPTER 3. ELEMENTARY PROPERTIES OF CONGRUENCES 29 
+
+For, if ca = cb mod m then ca — cb is divisible by m. Since c is prime to m 
+it follows that a — 6 is divisible by m. Hence a = b mod m. 
+
+IV. // the two members of a congruence are divisible by an integer c, hav- 
+ing with the modulus the greatest common divisor 5, one obtains a congruence 
+equivalent to the given congruence by dividing the two members by c and the 
+modulus by d. 
+
+By hypothesis ac = 6c mod m, c = 5ci, m = 5mi. Hence c{a — b) is 
+divisible by m. A necessary and sufficient condition for this is evidently that 
+ci(a — b) is divisible by mi. This leads at once to the desired result. 
+
+3.4 Congruences with a Prime Modulus 
+
+The congruence^ 
+
+oqx" + aix"^ + . . . + a„ = mod p, oq ^ mod p 
+
+where p is a prime number and the a 's are any integers, has not more than n 
+solutions. 
+
+Denote the first member of this congruence by f{x) so that the congruence 
+may be written 
+
+/(x) = mod p (1) 
+
+Suppose that a is a root of the congruence, so that 
+
+/(a) = mod p. 
+
+Then we have 
+
+f{x) = f{x) - f{a) mod p. 
+
+But, from algebra, f{x) — f{a) is divisible by x — a. Let {x — a)" be the highest 
+power of X — a contained in f{x) — f{a). Then we may write 
+
+/(x)-/(a) = (x-a)°/i(x), (2) 
+
+where fi{x) is evidently a polynomial with integral coefficients. Hence we have 
+
+f{x) = {x- a)"/i(x) mod p. (3) 
+
+We shall say that a occurs a times as a solution of (1); or that the congruence 
+has a solutions each equal to a. 
+
+Now suppose that congruence (1) has a root b such that b ^ a mod p. Then 
+from (3) we have 
+
+/(6) = (6-a)"/i(6)modp. 
+
+
+
+■'■The sign ^ is read is not congruent to. 
+
+
+
+CHAPTER 3. ELEMENTARY PROPERTIES OF CONGRUENCES 30 
+
+But 
+
+f{b) = mod p, {b — a)" ^ mod p. 
+Hence, since p is a prime number, we must have 
+
+/i(fe) = mod p. 
+
+By an argument similar to that just used above, we may show that /i(x) — 
+/i(6) may be written in the form 
+
+f,{x)-h{b) = {x-bfMx), 
+where /3 is some positive integer. Then we have 
+
+f{x) = {x-a)"{x-bff2ix) mod p. 
+
+Now this process can be continued until either all the solutions of (1) are 
+exhausted or the second member is a product of linear factors multiplied by the 
+integer ag. In the former case there will be fewer than n solutions of (1), so that 
+our theorem is true for this case. In the other case we have 
+
+f{x) = ao{x - a)°(a; - bf . . . {x - l)^ mod p. 
+
+We have now n solutions of (1): a counted a times, b counted /? times, . . . , I 
+counted A times; « + /?+. .. + A = n. 
+
+Now let rj be any solution of (1). Then 
+
+f{rj) = aoiri - arir] - bf . . . {rj - l)^ = mod p. 
+
+Since p is prime it follows now that some one of the factors rj — a,?]— b, ...,7] — I 
+is divisible by p. Hence r] coincides with one of the solutions a,b, c, . . . ,1. That 
+is, (1) can have only the n solutions already found. 
+This completes the proof of the theorem. 
+
+EXERCISES 
+
+1. Construct a congruence of the form 
+
+aox" + aix"^ + . . . + a„ = mod m, ao ^ mod m, 
+
+having more than n solutions and thus show that the limitation to a prime 
+modulus in the theorem of this section is essential. 
+
+2. Prove that 
+
+x" - 1 = (x - l)(x - 2)(x - ,3)(x - 4)(x - 5)(x - 6) mod 7 
+
+for every integer x. 
+
+3. How many solutions has the congruence x^ = 1 mod 11? the congruence x^ = 
+2 mod 11? 
+
+
+
+CHAPTER 3. ELEMENTARY PROPERTIES OF CONGRUENCES 31 
+
+3.5 Linear Congruences 
+
+From the theorem of the preceding section it fohows that the congruence 
+
+ax = c mod p, a ^ mod p, 
+
+where p is a prime number, has not more than one solution. In this section we 
+shah prove that it always has a solution. More generally, we shall consider the 
+congruence 
+
+ax = c mod m 
+
+where m is any integer. The discussion will be broken up into parts for conve- 
+nience in the proofs. 
+
+I. The congruence 
+
+ax = I mod m, (1) 
+
+in which a and m are relatively prime, has one and only one solution. 
+
+The question as to the existence and number of the solutions of (1) is equiva- 
+lent to the question as to the existence and number of integer pairs x, y satisfying 
+the equation, 
+
+ax — my =1, (2) 
+
+the integers x being incongruent modulo m. Since a and ni are relatively prime 
+it follows from theorem IV of § ?? that there exists a solution of equation (2). 
+Let x = a and y = (3 he a particular solution of (2) and let x = a and y = (3 he 
+any solution of (2). Then we have 
+
+aa — niP = 1, 
+aa — niP = 1; 
+
+whence 
+
+a{a — a) — m{[3 — /?) = 0. 
+
+Hence a— a is divisible by m, since a and m are relatively prime. That is, a = a 
+mod m. Hence a and a are representatives of the same solution of (1). Hence 
+(1) has one and only one solution, as was to be proved. 
+
+II. The solution x = a of the congruence ax = I mod m, in which a and m 
+are relatively prime, is prime to m. 
+
+For, if aa — 1 is divisible by to, a is divisible by no factor of m except 1 . 
+
+III. The congruence 
+
+ax = c mod m (3) 
+
+in which a and m and also c and m are relatively prime, has one and only one 
+solution. 
+
+Let X = 7 be the unique solution of the congruence ex = I mod m. Then 
+we have ajx = cj = I mod m. Now, by I we see that there is one and only one 
+
+
+
+CHAPTER 3. ELEMENTARY PROPERTIES OF CONGRUENCES 32 
+
+solution of the congruence a^x = 1 mod m; and from this the theorem fohows 
+at once. 
+
+Suppose now that a is prime to m but that c and m have the greatest common 
+divisor 5 which is different from 1. Then it is easy to see that any solution x 
+of the congruence ax = c mod m must be divisible by S. The question of the 
+existence of solutions of the congruence ax = c mod m is then equivalent to the 
+question of the existence of solutions of the congruence 
+
+X c m 
+
+where | is the unknown integer. From III it follows that this congruence has 
+a unique solution | = a. Hence the congruence ax ^ c mod m has the unique 
+solution X = 5a. Thus we have the following theorem: 
+
+IV. The congruence ax = c mod m, in which a and m are relatively prime, 
+has one and only one solution. 
+
+Corollary. The congruence ax = c mod p, a ^ mod p, where p is a 
+prime number, has one and only one solution. 
+
+It remains to examine the case of the congruence ax = c mod m in which a 
+and m have the greatest common divisor d. It is evident that there is no solution 
+unless c also contains this divisor d. Then let us suppose that a = ad, c = 'yd, 
+m = jid. Then for every x such that ax = c mod m we have ax = 7 mod ^; 
+and conversely every x satisfying the latter congruence also satisfies the former. 
+Now ax = 7 mod 11, has only one solution. Let /? be a non-negative number less 
+than yU, which satisfies the congruence ax = 7 mod 11. All integers which satisfy 
+this congruence are then of the form /? + jiv, where v is an integer. Hence all 
+integers satisfying the congruence ax = c mod m are of the form [3 -\- jiv; and 
+every such integer is a representative of a solution of this congruence. It is clear 
+that the numbers 
+
+A p + ii, /J+2/X, ..., p+{d-l),i (A) 
+
+are incongruent modulo m while every integer of the form (3 -\- iiv is congruent 
+modulo TO to a number of the set (A). Hence the congruence ax = c mod m has 
+the d solutions (A). 
+
+This leads us to an important theorem which includes all the other theorems 
+of this section as special cases. It may be stated as follows: 
+
+V. Let 
+
+ax = c mod to 
+
+be any linear congruence and let a and m have the greatest common divisor 
+d{d > 1). Then a necessary and sufficient condition for the existence of solutions 
+of the congruence is that c be divisible by d. If this condition is satisfied the 
+congruence has just d solutions, and all the solutions are congruent modulo 
+m/d. 
+
+
+
+CHAPTER 3. ELEMENTARY PROPERTIES OF CONGRUENCES 33 
+
+EXERCISES 
+
+1. Find the remainder when 2''° is divided by 31; when 2^*^ is divided by 31. 
+
+2. Show that 2^° + 1 has the factor 641. 
+
+3. Prove that a number is a multiple of 9 if and only if the sum of its digits is a 
+multiple of 9. 
+
+4. Prove that a number is a multiple of 11 if and only if the sum of the digits in the 
+odd numbered places diminished by the sum of the digits in the even numbered 
+places is a multiple of 11. 
+
+
+
+Chapter 4 
+
+THE THEOREMS OF 
+FERMAT AND WILSON 
+
+4.1 Fermat's General Theorem 
+
+Let m be any positive integer and let 
+
+ai, 02, . . ., a^(^rn) (A) 
+
+be the set of (/)(m) positive integers not greater than m and prime to m. Let a 
+be any integer prime to m and form the set of integers 
+
+aai, 002, • • ■ , aa^(^jn^ (B) 
+
+No number aai of the set (B) is congruent to a number ooj, unless j = i; for, 
+from 
+
+aai = aflj mod m 
+
+we have o^ = Oj mod m; whence ai = aj since both o^ and oj are positive and 
+not greater than m. Therefore j = i. Furthermore, every number of the set (B) 
+is congruent to some number of the set (A). Hence we have congruences of the 
+form 
+
+ooi = Ojj mod m, 
+002 = 0^2 mod m, 
+
+
+
+aa^(rn) = ai^(„, mod m. 
+
+No two numbers in the second members are equal, since aai ^ ooj unless i = j. 
+Hence the numbers a^^, o^, , . . . , ai are the numbers ai, 02, . . . , a^fjj^\ in 
+some order. Therefore, if we multiply the above system of congruences together 
+
+
+
+34 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 35 
+
+member by member and divide each member of the resulting congruence by 
+ai ■ a2 ■ ■ ■ aMjn) (which is prime to m), we have 
+
+a<^(™) = 1 mod m. 
+
+This result is known as Fermat's general theorem. It may be stated as follows: 
+// m is any positive integer and a is any integer prime to m, then 
+
+a^m) = I mod m. 
+
+Corollary 1. If a is any integer not divisible by a prime number p, then 
+
+oF^ = 1 mod p. 
+Corollary 2. If p is any prime number and a is any integer, then 
+
+a^ = a mod p. 
+
+4.2 Euler's Proof of the Simple Fermat Theorem 
+
+The theorem of Cor. 1, § ??, is often spoken of as the simple Fermat theorem. 
+It was first announced by Fermat in 1679, but without proof. The first proof of 
+it was given by Euler in 1736. This proof may be stated as follows: 
+From the Binomial Theorem it follows readily that 
+
+(a +l)P = aP + l mod p 
+
+
+
+p\ 
+
+
+
+r\{p — r)! ' 
+
+
+
+< r < p, 
+
+
+
+is obviously divisible by p. Subtracting a -\- I from each side of the foregoing 
+congruence, we have 
+
+(a +iy -{a+l) = aP -a mod p. 
+
+Hence if a^ — a is divisible by p, so is (a + 1)'' — (a + 1). But 1^ — 1 is divisible 
+by p. Hence 2^ — 2 is divisible by p; and then 3*' — 3; and so on. Therefore, in 
+general, we have 
+
+a^ = a mod p. 
+
+If a is prime to p this gives a^^ = 1 mod p, as was to be proved. 
+
+If instead of the Binomial Theorem one employs the Polynomial Theorem, 
+an even simpler proof is obtained. For, from the latter theorem, we have readily 
+
+(ai + a2 + • • • + cxa)^ = a j" + 0^2 + ■ • ■ + Q^a niod p. 
+
+Putting ai = q;2 = • ■ • = c^a = 1 we have 
+
+a^ = a mod p, 
+from which the theorem follows as before. 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 36 
+
+4.3 Wilson's Theorem 
+
+From the simple Fermat theorem it fohows that the congruence 
+
+x^^ = 1 mod p 
+
+has the p — I solutions 1, 2, 3, . . ., p — 1. Hence from the discussion in §?? it 
+follows that 
+
+x^^ = {x — l){x — 2) . . . (x — p — 1) mod p, 
+
+this relation being satisfied for every value of x. Putting x = we have 
+
+(-1) = (-l)P"^ • 1 •2-3...^^n: mod p. 
+
+If p is an odd prime this leads to the congruence 
+
+
+
+1-2-3...P -1 + 1 = mod p. 
+
+Now for p = 2 this congruence is evidently satisfied. Hence we have the Wilson 
+theorem: 
+
+Every prime number p satisfies the relation 
+
+
+
+l-2-3...p+l + l = mod p. 
+
+An interesting proof of this theorem on wholly different principles may be 
+given. Let p points be distributed at equal intervals on the circumference of a 
+circle. The whole number of j>gons which can be formed by joining up these p 
+points in every possible order is evidently 
+
+lp(p_l)(p_2)...3.2.1; 
+
+for the first vertex can be chosen in p ways, the second in p — 1 ways, . . ., 
+the {p — 1) in two ways, and the last in one way; and in counting up thus 
+we have evidently counted each polygon 2p times, once for each vertex and for 
+each direction from the vertex around the polygon. Of the total number of 
+polygons -^{p— 1) are regular (convex or stellated) so that a revolution through 
+
+brings each of these into coincidence with its former position. The number 
+
+of remaining j>gons must be divisible by p; for with each such p-gon we may 
+associate the p — I p-gons which can be obtained from it by rotating it through 
+successive angles of 560_ 'j'jjj^^ jg 
+
+to p 7 
+
+—p(p- l)(p-2)...3-2- I- -(p-l) = Omodp. 
+2p 2 
+
+Hence 
+
+{p- l)(p-2)...3-2- l-p+l = Omodp; 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 37 
+
+and from this it follows that 
+
+
+
+1-2. ..p— 1 + 1 = mod p, 
+
+
+
+as was to be proved. 
+
+4.4 The Converse of Wilson's Theorem 
+
+Wilson's theorem is noteworthy in that its converse is also true. The converse 
+may be stated as follows: 
+
+Every integer n such that the congruence 
+
+
+
+l-2-3...n— 1 + 1 = mod n 
+
+is satisfied is a prime number. 
+
+For, if n is not prime, there is some divisor d of n different from 1 and less 
+than n. For such a d we have 1-2-3 ... n — 1 = mod d; so that 1-2 . . .n — 1 + 1 ^ 
+mod d; and hence 1-2. ..n— 1 + 1 = mod n. Since this contradicts our 
+hypothesis the truth of the theorem follows. 
+
+Wilson's theorem and its converse may be combined into the following ele- 
+gant theorem: 
+
+A necessary and sufficient condition that an integer n is prime is that 
+
+
+
+l-2-3...n— 1 + 1 = mod n. 
+
+Theoretically this furnishes a complete and elegant test as to whether a given 
+number is prime. But, practically, the labor of applying it is so great that it is 
+useless for verifying large primes. 
+
+4.5 Impossibihty of 1-2-3-n — 1 + 1 = n^ for 
+n > 5. 
+
+In this section we shall prove the following theorem: 
+There exists no integer k for which the equation 
+
+
+
+l-2-3---n-l + l = n'= 
+
+is true when n is greater than 5. 
+
+If n contains a divisor d different from 1 and n, the equation is obviously 
+false; for the second member is divisible by d while the first is not. Hence we 
+need to prove the theorem only for primes n. 
+
+Transposing 1 to the second member and dividing by n — 1 we have 
+
+
+
+fc-l , „fc-2 
+
+
+
+l-2-3---n-2 = n""-' + n''-'' + . . . + n + 1. 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 38 
+
+If n > 5 the product on the left contains both the factor 2 and the factor | (n— 1) ; 
+that is, the first member contains the factor n—l. But the second member does 
+not contain this factor, since for n = 1 the expression n + . . . n + 1 is equal 
+to k =/= 0. Hence the theorem follows at once. 
+
+4.6 Extension of Fermat's Theorem 
+
+The object of this section is to extend Fermat's general theorem and incidentally 
+to give a new proof of it. We shall base this proof on the simple Fermat theorem, 
+of which we have already given a simple independent proof. This theorem asserts 
+that for every prime p and integer a not divisible by p, we have the congruence 
+
+a^^ = 1 mod p. 
+
+Then let us write 
+
+aP-^ = l + hp. (1) 
+
+Raising each member of this equation to the p power we may write the result 
+in the form 
+
+aP(p-^) = I + hip^ . (2) 
+
+where hi is an integer. Hence 
+
+By raising each member of (2) to the p power we can readily show that 
+
+aP'ip-^) = Imod/. 
+
+It is now easy to see that we shall have in general 
+
+aP'^'iP-^) = Imodp". 
+
+where a is a positive integer; that is, 
+
+a't'ip") = Imodp". 
+
+For the special case when p is 2 this result can be extended. For this case 
+(1) becomes 
+
+a=l + 2h. 
+Squaring we have 
+
+a^ = l + 4:h{h+l). 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 39 
+
+Hence, 
+
+a^ = l + 8hi, (3) 
+
+where hi is an integer. Therefore 
+
+a^ = lmod22. 
+
+
+
+Squaring (3) we have 
+
+
+
+a^ = 1 + 2^h2 
+
+
+
+c?' = 1 mod 2'^. 
+It is now easy to see that we shah have in general 
+
+
+
+a 
+
+
+
+2° ' = 1 mod 2" 
+
+
+
+if a > 2. That is, 
+
+05-^(2°) = 1 jnod2° if a> 2. (4.1) 
+
+Now in terms of the ^-function let us define a new function X{m) as follows: 
+
+A(2°) = (/)(2") if a = 0,1, 2; 
+
+A(2°) = ^,/.(2") if a > 2; 
+
+A(|3") = (f>{p") Up is an odd prime; 
+A(2>rPr---P^) = M, 
+
+where M is the least common multiple of 
+
+A(2"),A(p°0,A(pr),...,A(p^), 
+
+2,pi,p2, ■ ■ ■ ,Pn being different primes. 
+Denote by m the number 
+
+m = 2y^^pr----pZ"- 
+
+Let a be any number prime to m. From our preceding results we have 
+
+a^(2°) = iniod2«, 
+a^iPi') = Imodp^S 
+aMP2') = lmodp^^ 
+
+a^(P»") = Imodp^". 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 40 
+
+Now any one of these congruences remains true if both of its members are 
+raised to the same positive integral power, whatever that power may be. Then 
+let us raise both members of the first congruence to the power jr^', both 
+
+members of the second congruence to the power . /Tj , ; . . .; both members of 
+
+the last congruence to the power , /™A . Then we have 
+
+a^(™) = l modp^S 
+
+
+
+a^(™) = 1 modp"". 
+
+From these congruences we have immediately 
+
+aHm) = I j^od m. 
+
+We may state this result in full in the following theorem: 
+
+// a and m are any two relatively prime positive integers, the congruence 
+
+is satisfied. 
+
+As an excellent example to show the possible difference between the exponent 
+X{m) in this theorem and the exponent (j){m) in Fermat's general theorem, let 
+us take 
+
+m = 2*^ • 3^ • 5 • 7 • 13 • 17 • 19 • 37 • 73. 
+Here 
+
+A(m) = 2'*-32, 0(m) = 23i.3i°. 
+
+In a later chapter we shall show that there is no exponent v less than A (to) 
+for which the congruence 
+
+a'^ = 1 mod m 
+
+is verified for every integer a prime to m. 
+
+From our theorem, as stated above, Fermat's general theorem follows as a 
+corollary, since A (to) is obviously a factor of (f>{m), 
+
+<?i(TO) = </.(2")0(p«O...0(K"). 
+EXERCISES 
+
+1. Show that a^'' = 1 mod 16320, for every a which is prime to 16320. 
+
+2. Show that a^^ = 1 mod 65520, for every a which is prime to 65520. 
+3*. Find one or more composite numbers P such that 
+
+a ^ = 1 mod P 
+
+for every a prime to P. (Compare this problem with the next section.) 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 41 
+
+4.7 On the Converse of Fermat's Simple Theo- 
+rem 
+
+The fact that the converse of Wilson's theorem is a true proposition leads one 
+naturally to inquire whether the converse of Fermat's simple theorem is true. 
+Thus, we may ask the question: Does the existence of the congruence 2"^^ = 
+1 mod n require that n be a prime number? The Chinese answered this question 
+in the affirmative and the answer passed unchallenged among them for many 
+years. An example is sufficient to show that the theorem is not true. We shall 
+show that 
+
+2^"^° = 1 mod 341 
+
+although 341 = 11 • 31, is not a prime number. Now 2^" — 1 = 3 • 11 • 31. 
+Hence 2^" = 1 mod 341. Hence 2^^° = 1 mod 341. From this it follows that 
+the direct converse of Fermat's theorem is not true. The following theorem, 
+however, which is a converse with an extended hypothesis, is readily proved. 
+
+// there exists an integer a such that 
+
+a"^ = 1 mod n 
+
+and if further there does not exist an integer v less than n— \ such that 
+
+a'' = I mod n, 
+
+then the integer n is a prime number. 
+
+For, if n is not prime, 4>{n) < n—l. Then for v = 4>{n) we have a'^ = I mod n, 
+contrary to the hypothesis of the theorem. 
+
+4.8 Apphcation of Previous Results to Linear 
+Congruences 
+
+The theorems of the present chapter afford us a ready means of writing down a 
+solution of the congruence 
+
+ax = c mod m. (1) 
+
+We shall consider only the case in which a and m are relatively prime, since the 
+general case is easily reducible to this one, as we saw in the preceding chapter. 
+Since a and m are relatively prime we have the congruences 
+
+a^(™) = 1, a-^^™) = 1 mod m. 
+Hence either of the numbers x, 
+
+A(m)-1 <h(m)-l 
+
+X = ca ^ ' , X = ca^^ ' , 
+is a representative of the solution of (1). Hence the following theorem: 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 42 
+
+ax = c mod m 
+
+is any linear congruence in which a and m are relatively prime, then either of 
+the numbers x. 
+
+
+
+is a representative of the solution of the congruence. 
+
+The former representative of the solution is the more convenient of the two, 
+since the power of a is in general much less in this case than in the other. 
+
+EXERCISE 
+
+Find a solution of 7x = 1 mod 2'^ • 3 • 5 • 17. Note the greater facility in applying 
+the first of the above representatives of the solution rather than the second. 
+
+4.9 Application of the Preceding Results to the 
+Theory of Quadratic Residues 
+
+In this section we shall apply the preceding results of this chapter to the problem 
+of finding the solutions of congruences of the form 
+
+az + /3z + 7 = mod ji 
+
+where a, /3, 7, ji are integers. These are called quadratic congruences. 
+
+The problem of the solution of the quadratic congruence (1) can be reduced 
+to that of the solution of a simpler form of congruence as follows: Congruence 
+(1) is evidently equivalent to the congruence 
+
+Aa^z^ + AaPz + 4q;7 = mod Aa^. (1) 
+
+But this may be written in the form 
+
+{2az + /3)^ = 0^ - Aa^ mod Aafi. 
+
+
+
+Now if we put 
+
+
+
+and 
+
+
+
+2az -\- f3 = X mod Aafi (2) 
+
+
+
+/? — 4q;7 = a, Aafi = m, 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 43 
+
+we have 
+
+
+
+„2 
+
+
+
+d m. (3) 
+
+
+
+X = a moa m 
+
+We have thus reduced the problem of solving the general congruence (1) to 
+that of solving the binomial congruence (3) and the linear congruence (2) . The 
+solution of the latter may be effected by means of the results of §??. We shall 
+therefore confine ourselves now to a study of congruence (3). We shall make 
+a further limitation by assuming that a and m are relatively prime, since it is 
+obvious that the more general case is readily reducible to this one. 
+The example 
+
+X = 3 mod 5 
+
+shows at once that the congruence (3) does not always have a solution. First 
+of all, then, it is necessary to find out in what cases (3) has a solution. Before 
+taking up the question it will be convenient to introduce some definitions. 
+
+Definitions. An integer a is said to be a quadratic residue modulo m or a 
+quadratic non-residue modulo m according as the congruence 
+
+X = a mod m 
+
+has or has not a solution. We shall confine our attention to the case when 
+TO > 2. 
+
+We shall now prove the following theorem: 
+
+I. If a and m are relatively prime integers, a necessary condition that a is a 
+quadratic residue modulo to is that 
+
+Suppose that the congruence x^ = a mod m has the solution x = a. Then 
+a'^ = a mod m. Hence 
+
+,A(m) = „1A(™) 
+
+Since a is prime to to it is clear from a^ = a mod m that a is prime to to,. 
+Hence a^™> = 1 mod m. Therefore we have 
+
+1 = a2^(™) mod TO. 
+
+That is, this is a necessary condition in order that a shall be a quadratic residue 
+modulo m. 
+
+In a similar way one may prove the following theorem: 
+
+II. // a and m are relatively prime integers, a necessary condition that a is 
+a quadratic residue modulo m is that 
+
+a50(™) = 1 mod TO. 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 44 
+
+When TO is a prime number p each of the above results takes the fohowing 
+form: If a is prime to p and is a quadratic residue modulo p, then 
+
+Q,2(p-i) = 1 niod p. 
+
+We shall now prove the following more complete theorem, without the use of I 
+or II. 
+
+III. If p is an odd prime number and a is an integer not divisible by p, then 
+a is a quadratic residue or a quadratic non-residue modulo p according as 
+
+^2(P-1)=_^1 or a2(P"^) = -1 modp. 
+
+This is called Euler's criterion. 
+
+Given a number a, not divisible by p, we have to determine whether or not 
+the congruence 
+
+x = a mod p 
+has a solution. Let r be any number of the set 
+
+1, 2, 3, ..., p-l (A) 
+
+and consider the congruence 
+
+rx = o mod p. (4-2) 
+
+This has always one and just one solution x equal to a number s of the set (A). 
+Two cases can arise: either for every r of the set (A) the corresponding s is 
+different from r or for some r of the set (A) the corresponding s is equal to r. 
+The former is the case when a is a quadratic non-residue modulo p; the latter 
+is the case when a is a quadratic residue modulo p. We consider the two cases 
+separately. 
+
+In the first case the numbers of the set (A) go in pairs such that the product 
+of the numbers in the pair is congruent to a modulo p. Hence, taking the product 
+of all \{p — 1) pairs, we have 
+
+
+
+1 •2-3...P- 1 = +a2'-P-'> modp 
+
+
+
+But 
+
+
+
+He 
+
+
+
+l-2-3...|3— 1 = — 1 mod p. 
+
+
+
+\(p-i) 
+
+
+
+a2(P ^) = -1 modp, 
+
+
+
+CHAPTER 4. THE THEOREMS OF FERMAT AND WILSON 45 
+
+whence the truth of one part of the theorem. 
+
+In the other case, namely that in which some r and corresponding s are 
+equal, we have for this r 
+
+r = a mod p 
+and 
+
+(p — r) = a mod p. 
+
+Since x"^ = a mod p has at most two solutions it follows that all the integers in 
+the set (A) except r and p— r fall in pairs such that the product of the numbers 
+in each pair is congruent to a modulo p. Hence, taking the product of all these 
+pairs, which are |(|3 — 1) — 1 in number, and multiplying by r{p — r) we have 
+
+l-2-3---p— l = (p — r)ra^^^^ ^^ mod p 
+= —r a^^P^ ' mod p 
+= -aa^^P^^)^^ modp 
+= —a^^P^^> modp. 
+
+
+
+Since l-2-3---p— 1 = modp we have 
+
+a2(p-i) = -1-1 modp 
+
+whence the truth of another part of the theorem. 
+Thus the proof of the entire theorem is complete. 
+
+
+
+Chapter 5 
+
+PRIMITIVE ROOTS 
+MODULO m. 
+
+
+
+5.1 Exponent of an Integer Modulo m 
+
+Let 
+
+fli, 02, • • • , a^(m) (A) 
+
+be the set of (f>{m) positive integers not greater than m and prime to m; and 
+let a denote any integer of the set (A). Now any positive integral power of a 
+is prime to m and hence is congruent modulo m to a number of the set (A). 
+Hence, among all the powers of a there must be two, say a" and a", n > i>, 
+which, are congruent to the same integer of the set (A) . These two powers are 
+then congruent to each other; that is, 
+
+a = a mod m 
+
+Since a"^ is prime to m the members of this congruence may be divided by a'^ . 
+Thus we have 
+
+a"^" = 1 mod m. 
+
+That is, among the powers of a there is one at least which is congruent to 1 
+modulo m. 
+
+Now, in the set of all powers of a which are congruent to 1 modulo m there is 
+one in which the exponent is less than in any other of the set. Let the exponent 
+of this power be d, so that a is the lowest power of a such that 
+
+a = 1 mod m. (1) 
+
+We shall now show that if a" = 1 mod m, then a is a multiple of d. Let us 
+write 
+
+a = dd + f3, OS 13 <d. 
+46 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 47 
+
+Then 
+
+a" = I mod m, (2) 
+
+a'^^ = 1 mod m, (3) 
+
+the last congruence being obtained by raising (1) to the power 5. From (3) we 
+have 
+
+^dS+^ = a^ mod m; 
+
+
+
+a = 1 mod m. 
+
+Hence /3 = 0, for otherwise d is not the exponent of the lowest power of a which 
+is congruent to 1 modulo m. Hence d is a divisor of a. 
+
+These results may be stated as follows: 
+
+I. // m is any integer and a is any integer prime to m, then there exists an 
+integer d such that 
+
+a = 1 mod m 
+while there is no integer /? less than d for which 
+
+a = 1 mod m. 
+Further, a necessary and sufficient condition that 
+
+a'' = I mod m 
+
+is that v is a multiple of d. 
+
+Definition. The integer d which is thus uniquely determined when the two 
+relatively prime integers a and m are given is called the exponent of a modulo 
+m. Also, d is said to be the exponent to which a belongs modulo m. 
+
+Now, in every case we have 
+
+o-^^™) = 1, a^(™) = 1 mod m, 
+
+if a and m are relatively prime. Hence from the preceding theorem we have at 
+once the following: 
+
+n. The exponent d to which a belongs modulo m is a divisor of both (f>{m) 
+and X{m). 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 48 
+
+5.2 Another Proof of Fermat's General Theo- 
+rem 
+
+In this section we shall give an independent proof of the theorem that the 
+exponent d of a modulo to is a divisor of (f>{m) ; from this result we have obviously 
+a new proof of Fermat's theorem itself. 
+
+We retain the notation of the preceding section. We shall first prove the 
+following theorem: 
+
+I. The numbers 
+
+1, a, a^, ..., a"-^ (A) 
+
+are incongruent each to each modulo to. 
+
+For, if a" = a'^ mod to-, where '^ a < d and ^ /? < d, a > /?, we have 
+a"^^ = 1 mod TO, so that d is not the exponent to which a belongs modulo m, 
+contrary to hypothesis. 
+
+Now any number of the set (A) is congruent to some number of the set 
+
+ai, a2, .. ., a0(™). (B) 
+
+Let us undertake to separate the numbers (B) into classes after the following 
+manner: Let the first class consist of the numbers 
+
+"1, ^2, ••■, "a-i, (I) 
+
+where at is the number of the set (B) to which a* is congruent modulo m. 
+
+If the class (I) does not contain all the numbers of the set (B), let a^ be 
+any number of the set (B) not contained in (I) and form the following set of 
+numbers: 
+
+aofli, aiUi, a2ai, ..., ad-iOi- (H') 
+
+We shall now show that no number of this set is congruent to a number of class 
+(I). For, if so, we should have a congruence of the form 
+
+aiaj = ak mod to; 
+hence 
+
+aia-' = a mod to, 
+so that 
+
+ma''' = a^^"^^^ mod to; 
+
+
+
+-1!'+'^-^ mod 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 49 
+
+so that ai would belong to the set (I) contrary to hypothesis. 
+
+Now the numbers of the set (II') are all congruent to numbers of the set 
+(B); and no two are congruent to the same number of this set. For, if so, we 
+should have two numbers of (IF) congruent; that is, a^ai = ajUi mod to, or 
+a/j = Qfj mod m; and this we have seen to be impossible. 
+
+Now let the numbers of the set (B) to which the numbers of the set (IF) are 
+congruent be in order the following: 
+
+/3o, A, /32, ..., Pd-i- (II) 
+
+These numbers constitute our class (II). 
+
+If classes (I) and (II) do not contain all the numbers of the set (B), let aj be 
+a number of the set (B) not contained in either of the classes (I) and (II): and 
+form the set of numbers 
+
+OiQaj, aiaj, a2aj, . . . , ad-icij- (HI') 
+
+Just as in the preceding case it may be shown that no number of this set is 
+congruent to a number of class (I) and that the numbers of (IIF) are incongruent 
+each to each. We shall also show that no number of (IIF) is congruent to 
+a number of class (II). For, if so, we should have a^Oj = /3j mod ?7i. Hence 
+a aj = a ai mod m; or aj = a + mod m, from which it follows that aj is of 
+class (II), contrary to hypothesis. 
+
+Now let the numbers of the set (B) to which the numbers of the set (IIF) 
+are congruent be in order the following: 
+
+70, 71, 72, ••■, 7d-i- (III) 
+
+These numbers form our class (III). 
+
+It is now evident that the process may be continued until all the numbers 
+of the set (B) have been separated into classes, each class containing d integers, 
+thus: 
+
+(I) ao, ai, a2, •■•, "d-i, 
+
+(II) /3o, A, /32, ..., /?d-i, 
+
+(III) 70, 71, 72, •■•, Id-i, 
+
+
+
+( ) Ao, Ai, A2, ..., Xd-i- 
+
+The set (B), which consists of (j){m) integers, has thus been separated into 
+classes, each class containing d integers. Hence we conclude that d is a divisor 
+of <f>{m). Thus we have a second proof of the theorem: 
+
+II. // a and m are any two relatively prime integers and d is the exponent to 
+which a belongs modulo m, then d is a divisor of <f){m). 
+
+In our classification of the numbers (B) into the rectangular array above we 
+have proved much more than theorem II; in fact, theorem II is to be regarded as 
+one only of the consequences of the more general result contained in the array. 
+
+If we raise each member of the congruence 
+
+
+
+a"^ = 1 mod 
+
+
+
+m 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 50 
+
+to the (integral) power (j){m)/d, the preceding theorem leads immediately to an 
+independent proof of Fermat's general theorem. 
+
+5.3 Definition of Primitive Roots 
+
+Definition. Let a and m be two relatively prime integers. If the exponent to 
+which a belongs modulo m is 4>{m), a is said to be a primitive root modulo m 
+(or a primitive root of m). 
+
+In a previous chapter we saw that the congruence 
+
+is verified by every pair of relatively prime integers a and m. Hence, primitive 
+roots can exist only for such a modulus m as satisfies the equation 
+
+(f>{m) = \{m). (1) 
+
+We shall show later that this is also sufficient for the existence of primitive roots. 
+
+From the relation which exists in general between the (/)-function and the 
+A-function in virtue of the definition of the latter, it follows that (1) can be 
+satisfied only when m ia a prime power or is twice an odd prime power. 
+
+Suppose ffist that m is a power of 2, say m = 2" . Then (1) is satisfied only 
+if « = 0, 1, 2. For a = or 1, 1 itself is a primitive root. For a = 2, 3 is a 
+primitive root. We have therefore left to examine only the cases 
+
+m = p", m = 2p" 
+
+where p is an odd prime number. The detailed study of these cases follows in 
+the next sections. 
+
+
+
+5.4 Primitive roots modulo p. 
+
+We have seen that if p is a prime number and d is the exponent to which a 
+belongs modulo p, then d is a divisor of 4>{p) = p — I. Now, let 
+
+di , 6^2 , da , . . . , dj. 
+
+be all the divisors oi p — I and let i!j{di) denote the number of integers of the 
+set 
+
+1, 2, 3, ..., p-1 
+
+which belong to the exponent di . If there is no integer of the set belonging to 
+this exponent, then tpidi) = 0. 
+
+Evidently every integer of the set belongs to some one and only one of the 
+exponents di,d2, ■ . . ,dr. Hence we have the relation 
+
+^{di)+i,{d2) + ... + i>{dr)=p-l. (1) 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 51 
+
+But 
+
+Hdi)+Hd2) + .-. + ^{dr)=p-l. (2) 
+
+If then we can show that 
+
+Hdi) S Hd,) (3) 
+
+for i = 1, 2, . . . , r, it will follow from a comparison of (1) and (2) that 
+
+ip(di) = cj){di). 
+
+Accordingly, we shall examine into the truth of (3). 
+Now the congruence 
+
+
+
+„di 
+
+
+
+X 
+
+
+
+1 mod p (4) 
+
+
+
+has not more than di roots. If no root of this congruence belongs to the exponent 
+di, then if tpidi) = and therefore in this case we have tpidi) < 4>{di). On the 
+other hand if a is a root of (4) belonging to the exponent d^, then 
+
+a, a^,a^, . . . jc''* (5) 
+
+are a set of di incongruent roots of (4) ; and hence they are the complete set of 
+roots of (4). 
+
+But it is easy to see that a does or does not belong to the exponent di 
+according as k is or is not prime to di ; for, if a belongs to the exponent t, then 
+t is the least integer such that kt is a multiple of di. Consequently the number 
+of roots in the set (5) belonging to the exponent di is (j^idi). That is, in this 
+case i!j{di) = (j^idi). Hence in general i!j{di) ^ 4>{di) Therefore from (1) and (2) 
+we conclude that 
+
+i^{di) = (p{di), i = l, 2, ..., r. 
+
+The result thus obtained may be stated in the form of the following theorem: 
+
+I. If p is a prime number and d is any divisor of p — 1, then the number of 
+integers belonging to the exponent d modulo p is (j){d). 
+
+In particular: 
+
+II. There exist primitive roots modulo p and their number is il){p — i). 
+
+5.5 Primitive Roots Modulo p^, p an Odd Prime 
+
+In proving that there exist primitive roots modulo p", where p is an odd prime 
+and a > 1, we shall need the following theorem: 
+
+I. There always exists a primitive root 7 modulo p for which jP^^ is not 
+divisible by p^ . 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 52 
+
+Let g be any primitive root modulo p. If g^^^ is not divisible by p'^ our 
+theorem is verified. Then suppose that g^^^ — 1 is divisible by p^, so that we 
+have 
+
+gP-^ - 1 = fcp2 
+
+where k is an integer. Then put 
+
+j = g + xp 
+
+where x is an integer. Then ^ = g mod p, and hence 
+
+7'' = g'^ mod p; 
+whence we conclude that 7 is a primitive root modulo p. But 
+
+7-^ - 1 = 9^-' - 1 + ^.-^XP + ^"-'l^l'-'^ ^-'^V + . . . 
+= p[kp+ P^gP-^x + ^P^^^f^gP-^x^p + . 
+
+Hence 
+
+jP-^ -1= p{-gP-'^x) mod p^ . 
+
+Therefore it is evident that x can be so chosen that 7^^^ — 1 is not divisible by 
+p . Hence there exists a primitive root 7 modulo p such that ^p — 1 is not 
+divisible by p^. Q. E. D. 
+
+We shall now prove that this integer 7 is a primitive root modulo p", where 
+a is any positive integer. 
+If 
+
+7=1 mod p. 
+
+then A: is a multiple of p — 1, since 7 is a primitive root modulo p. Hence, if 
+
+7'' = 1 mod p", 
+
+then fc is a multiple of j3 — 1 . 
+Now, write 
+
+7P-1 = l + hp. 
+
+Since 7^^^ is not divisible by p^, it follows that h is prime to p. If we raise each 
+member of this equation to the power l3p°'^^ , a > 2, we have 
+
+where / is an integer. Then if 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 53 
+
+/3 must be divisible by p. Therefore the exponent of the lowest power of 7 
+which is congruent to 1 modulo p" is divisible by p"^^ . But we have seen that 
+this exponent is also divisible by p — 1. Hence the exponent of 7 modulo p" is 
+p"^^{p — 1) since 4'{p°') = p°'^^{p — 1). That is, 7 is a primitive root modulo 
+p". 
+
+It is easy to see that no two numbers of the set 
+
+7,7^7^...,7P""'(P-l) (A) 
+
+are congruent modulo p"; for, if so, 7 would belong modulo p" to an exponent 
+less than p"^^{p — 1) and would therefore not be a primitive root modulo p". 
+Now every number in the set (A) is prime to p"; their number is 4>{p") = 
+p"^^{p —1)- Hence the numbers of the set (A) are congruent in some order to 
+the numbers of the set (B): 
+
+ai, 02, as, ..., apc-i(p_i), (B) 
+
+where the integers (B) are the positive integers less than p" and prime to p" . 
+But any number of the set (B) is a solution of the congruence 
+
+
+
+'(p-i) 
+
+
+
+Imodp". (1) 
+
+
+
+Further, every solution of this congruence is prime to p" . Hence the integers (B) 
+are a complete set of solutions of (1). Therefore the integers (A) are a complete 
+set of solutions of (1). But it is easy to see that an integer 7 of the set (A) 
+is or is not a primitive root modulo p" according as k is or is not prime to 
+p"^^{p— !)• Hence the number of primitive roots modulo p" is (f){p"^^{p— 1)}. 
+The results thus obtained may be stated as follows: 
+
+n. // p is any odd prime number and a is any positive integer, then there 
+exist primitive roots modulo p" and their number is (/<{(/)(|3")}. 
+
+5.6 Primitive Roots Modulo 2p", p an Odd Prime 
+
+In this section we shall prove the following theorem: 
+
+If p is any odd prime number and a is any positive integer, then there exist 
+primitive roots modulo 2p" and their number is (/<{(/)(2p")}. 
+
+Since 2p" is even it follows that every primitive root modulo 2p" is an 
+odd number. Any odd primitive root modulo p° is obviously a primitive root 
+modulo 2p" . Again, if 7 is an even primitive root modulo p" then 7 + p" is a 
+primitive root modulo 2p". It is evident that these two classes contain (without 
+repetition) all the primitive roots modulo 2p" . Hence the theorem follows as 
+stated above. 
+
+
+
+5.7 Recapitulation 
+
+The results which we have obtained in §§??-?? inclusive may be gathered into 
+the following theorem: 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 54 
+
+In order that there shall exist primitive roots modulo m, it is necessary and 
+sufficient that m shall have one of the values 
+
+m= l,2,4,p",2p" 
+
+where p is an odd prime and a is a positive integer. 
+
+If m has one of these values then the number of primitive roots modulo m is 
+0{(/)(m)}. 
+
+5.8 Primitive A-roots 
+
+In the preceding sections of this chapter we have developed the theory of primi- 
+tive roots in the way in which it is usually presented. But if one approaches the 
+subject from a more general point of view the results which may be obtained 
+are more general and at the same time more elegant. It is our purpose in this 
+section to develop the more general theory. 
+
+We have seen that if a and m are any two relatively prime positive integers, 
+then 
+
+aHm) = I j^od m. 
+
+Consequently there is no integer belonging modulo m to an exponent greater 
+than X{m). It is natural to enquire if there are any integers a which belong 
+to the exponent A (to). It turns out that the question is to be answered in the 
+afRrmative, as we shall show. Accordingly, we introduce the following definition: 
+
+Definition. If a^™-* is the lowest power of a which is congruent to 1 modulo 
+TO, a is said to be a primitive A- root modulo to. We shall also say that it is a 
+primitive A-root of the congruence x^™' = 1 mod to. To distinguish we may 
+speak of the usual primitive root as a primitive 0-root modulo m. 
+
+From the theory of primitive (?i)-roots already developed it follows that prim- 
+itive A-roots always exist when to. is a power of any odd prime, and also when 
+TO = 1, 2, 4; for, for such values of m we have A(to.) = <j)(rn). 
+
+We shall next show that primitive A-roots exist when ?7i = 2", a > 2, by 
+showing that 5 is such a root. It is necessary and sufficient to prove that 5 
+belongs modulo 2" to the exponent 2"^^ = A(2"). Let d be the exponent to 
+which 5 belongs modulo 2". Then from theorem II of §?? it follows that d is 
+a divisor of 2"^^ = A(2"). Hence if d is different from 2"^^ it is 2"^^ or is a 
+divisor of 2"^^. Hence if we can show that 5^ is not congruent to 1 modulo 
+2" we will have proved that 5 belongs to the exponent 2"^^. But, clearly, 
+
+52°"' = (1 + 22)2°"' ^ ^ _^ 2"-i + / • 2", 
+
+where / is an integer. Hence 
+
+52°"' ^ 1 mod 2". 
+Hence 5 belongs modulo 2" to the exponent A(2"). 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 55 
+
+By means of these special results we are now in position to prove readily the 
+following general theorem which includes them as special cases: 
+
+I. For every congruence of the form 
+
+
+
+X 
+
+
+
+^(") = 1 mod 
+
+
+
+a solution g exists which is a primitive X-root, and for any such solution g there 
+are (}>{X{m)} primitive roots congruent to powers of g. 
+
+If any primitive A-root g exists, g"^ is or is not a primitive A-root according 
+as v is or is not prime to A(m); and therefore the number of primitive A-roots 
+which are congruent to powers of any such root g is <f>{X{m)}. 
+
+The existence of a primitive A-root in every case may easily be shown by 
+induction. In case ?7i is a power of a prime the theorem has already been 
+established. We will suppose that it is true when m is the product of powers of 
+r different primes and show that it is true when m is the product of powers of 
+r + 1 different primes; from this will follow the theorem in general. 
+
+Put m = Pi^P2^ . ■ -p^^p^V^^ , n = Pi^P2^ ■ . ■Pr'': and let h he a primitive 
+A-root of 
+
+x^(") = 1 mod n. (1) 
+
+Then 
+
+
+
+ny 
+
+
+
+is a form of the same root if y is an integer. 
+Likewise, if c is any primitive A-root of 
+
+
+
+x\p:ir)^l modp^;r (2) 
+
+
+
+a form of this root is 
+
+
+
+Ctr + l , 
+
+
+
+C + Pr+1 Z 
+
+
+
+where z is any integer. 
+
+Now, if y and z can be chosen so that 
+
+h+ny = c + p^^\ z 
+
+the number in either member of this equation will be a common primitive A- 
+root of congruences (1) and (2); that is, a common primitive A-root of the two 
+congruences may always be obtained provided that the equation 
+
+Pi ■■■Pr y- Pr+l Z=C-h 
+
+has always a solution in which y and z are integers. That this equation has such 
+a solution follows readily from theorem III of §??; for, if c — /i is replaced by 
+1, the new equation has a solution y, z; and therefore for y and z we may take 
+y = y{c- h), z = z{c- h). 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 56 
+
+Now let gi be a common primitive A-root of congruences (1) and (2) and 
+write 
+
+g'' = I mod m, 
+
+where v is to be the smallest exponent for which the congruence is true. Since g 
+is a primitive A-root of (1) z^ is a multiple of A(p"^ . . .p"^). Since 5' is a primitive 
+A-root of (2) i^ is a multiple of A [p"V\^). Hence it is a multiple of X{m). But 
+gK™-) = 1 niod m; therefore u = \{m). That is, g is a primitive A-root modulo 
+m. 
+
+The theorem as stated now follows at once by induction. 
+
+There is nothing in the preceding argument to indicate that the primitive 
+A-roots modulo m are all in a single set obtained by taking powers of some root 
+g; in fact it is not in general true when m contains more than one prime factor. 
+
+By taking powers of a primitive A-root g modulo m one obtains (f){X{m)} 
+different primitive A-roots modulo m. It is evident that if 7 is any one of these 
+primitive A-roots, then the same set is obtained again by taking the powers of 
+7. We may say then that the set thus obtained is the set belonging to g. 
+
+II. // \(m) > 2 the product of the 0{A(m)} primitive X-roots in the set 
+belonging to any primitive X-root g is congruent to 1 modulo m. 
+These primitive A-roots are 
+
+5, g"', 6-"=, ..., 5=^ 
+where 
+
+1, Cl, C2, . . ., c„ 
+
+
+
+are the integers less than X{m) and prime to A(m). If any one of these is c 
+another is A(m) — c, since A (to) > 2. Hence 
+
+1 + Cl + C2 + . . . + c^ = mod A(to). 
+Therefore 
+
+gl+c,+C2+...+c^ = 1 mod TO. 
+
+From this the theorem follows. 
+
+Corollary. The product of all the primitive X-roots modulo m is congruent 
+to 1 modulo m when X{m) > 2. 
+
+EXERCISES 
+
+1. If Xi is the largest value of x satisfying the equation A(x) = a, where a is a given 
+integer, then any solution X2 of the equation is a factor of Xi. 
+
+2*. Obtain an effective rule for solving the equation A(x) = a. 
+
+
+
+CHAPTER 5. PRIMITIVE ROOTS MODULO M. 57 
+
+3*. Obtain an effective rule for solving the equation 0(a;) = a. 
+
+4. A necessary and sufficient condition that a^^^ = 1 mod P for every integer a 
+prime to P is that P = 1 mod A(P). 
+
+5. If a ^^ = 1 mod P for every a prime to P, then (1) P does not contain a square 
+factor other than 1, (2) P either is prime or contains at least three different prime 
+factors. 
+
+6. Let p be a prime number. If a is a root of the congruence x'' = 1 mod p and a 
+is a root of the congruence x = 1 mod p, then aa is a root of the congruence 
+X =1 mod p. If a is a primitive root of the first congruence and a of the 
+second and if d and S are relatively prime, then aa is a primitive root of the 
+congruence x =1 mod p. 
+
+
+
+Chapter 6 
+
+OTHER TOPICS 
+
+
+
+6.1 Introduction 
+
+The theory of numbers is a vast discipHne and no single volume can adequately 
+treat of it in all of its phases. A short book can serve only as an introduction; 
+but where the field is so vast such an introduction is much needed. That is the 
+end which the present volume is intended to serve; and it will best accomplish 
+this end if, in addition to the detailed theory already developed, some account 
+is given of the various directions in which the matter might be carried further. 
+
+To do even this properly it is necessary to limit the number of subjects con- 
+sidered. Consequently we shall at once lay aside many topics of interest which 
+would find a place in an exhaustive treatise. We shall say nothing, for instance, 
+about the vast domain of algebraic numbers, even though this is one of the most 
+fascinating subjects in the whole field of mathematics. Consequently, we shall 
+not refer to any of the extensive theory connected with the division of the circle 
+into equal parts. Again, we shall leave unmentioned many topics connected 
+with the theory of positive integers; such, for instance, is the frequency of prime 
+numbers in the ordered system of integers — a subject which contains in itself 
+an extensive and elegant theory. 
+
+In §§??-?? we shall speak briefly of each of the following topics: theory 
+of quadratic residues, Galois imaginaries, arithmetic forms, analytical theory of 
+numbers. Each of these alone would require a considerable volume for its proper 
+development. All that we can do is to indicate the nature of the problem in 
+each case and in some cases to give a few of the fundamental results. 
+
+In the remaining three sections we shall give a brief introduction to the theory 
+of Diophantine equations, developing some of the more elementary properties 
+of certain special cases. We shall carry this far enough to indicate the nature 
+of the problem connected with the now famous Last Theorem of Fermat. The 
+earlier sections of this chapter are not required as a preliminary to reading this 
+latter part. 
+
+
+
+58 
+
+
+
+CHAPTER 6. OTHER TOPICS 59 
+
+6.2 Theory of Quadratic Residues 
+
+Let a and m be any two relatively prime integers. In §?? we agreed to say 
+that a is a quadratic residue modulo to or a quadratic non-residue modulo to 
+according as the congruence 
+
+X = a mod m 
+
+has or has not a solution. We saw that if to. is chosen equal to an odd prime 
+number p, then a is a quadratic residue modulo p or a quadratic non-residue 
+modulo p according as 
+
+
+
+a 
+
+
+
+5(P-i) = 1 or ai(P-i) = -1 mod p. 
+
+
+
+This is known as Euler's criterion. 
+
+It is convenient to employ the Legendre symbol 
+
+a 
+P 
+
+to denote the quadratic character of a with respect to p. This symbol is to have 
+the value +1 or the value —1 according as a is a quadratic residue modulo p 
+or a quadratic non-residue modulo p. We shall now derive some of the funda- 
+mental properties of this symbol, understanding always that the numbers in the 
+numerator and the denominator are relatively prime. 
+
+From the definition of quadratic residues and non-residues it is obvious that 
+
+— = - if a = b mod p. (1) 
+
+pj \pj 
+
+It is easy to prove in general that 
+
+a\ f b\ fab 
+
+
+
+p J \p J \ P J 
+This comes readily from Euler's criterion. We have to consider the three cases 
+
+p) ' \p) ' \p) ' \p) 
+
+pJ ' \pJ 
+
+The method will be sufficiently illustrated by the treatment of the last case. 
+Here we have 
+
+Q,2(p-i) = _l modp, b^^P^^^ = -1 mod p. 
+Multiplying these two congruences together member by member we have 
+
+(a6)2(p-i) = Imodp, 
+
+
+
+CHAPTER 6. OTHER TOPICS 60 
+
+whence 
+
+ab\ f '^\ [^ 
+
+P J \pj \P 
+
+as was to be proved. 
+
+If TO is any number prime to p and we write to. as the product of factors 
+
+TO = e • 2" • q'q"q"' ■ ■ ■ 
+
+where q' , g", q'" , . . . are odd primes, a is zero or a positive integer and e is +1 
+or —1 according as to. is positive or negative, we have 
+
+pj \pJ \pJ \pJ\pJ\pJ"' 
+as one shows easily by repeated appHcation of relation (2) . Obviously, 
+
+1^ 
+
+
+
+= 1. 
+
+Hence, it follows from (3) that we can readily determine the quadratic character 
+of TO with respect to the odd prime p, that is, the value of 
+
+
+
+P 
+provided that we know the value of each of the expressions 
+
+v)' ©• ©• 
+
+where q is an odd prime. 
+
+The first of these can be evaluated at once by means of Euler's criterion; for, 
+we have 
+
+
+
+and hence 
+
+
+
+(—^ =(-l)5(P-i)modp 
+
+
+
+Thus we have the following result: The number —1 is a quadratic residue of 
+every prime number of the form 4fc + 1 and a quadratic non-residue of every 
+prime number of the form 4A: + 3. 
+
+The value of the second symbol in (4) is given by the formula 
+
+2V(_i)i(P^-i). 
+Pj 
+
+
+
+CHAPTER 6. OTHER TOPICS 61 
+
+The theorem contained in this equation may be stated in the following words: 
+The number 2 is a quadratic residue of every prime number of either of the 
+forms 8A; + 1 , 8A: + 7; it is a quadratic non- residue of every prime number of 
+either of the forms 8fc + 3, 8fc + 5. 
+
+The proof of this result is not so immediate as that of the preceding one. 
+To evaluate the third expression in (4) is still more difficult. We shall omit the 
+demonstration in both of these cases. For the latter we have the very elegant 
+relation 
+
+
+
+fP\ fl\ =(_1)J(P-1)(9-1). 
+
+
+
+This equation states the law which connects the quadratic character of q with 
+respect to p with the quadratic character of p with respect to q. It is known as 
+the Law of Quadratic Reciprocity. About fifty proofs of it have been given. Its 
+history has been a very interesting one; see Bachmann's Niedere Zablentheorie, 
+Teil I, pp. 180-318, especially pp. 200-206. 
+
+For a further account of this beautiful and interesting subject we refer the 
+reader to Bachmann, loc. cit., and to the memoirs to which this author gives 
+reference. 
+
+6.3 Galois Imaginaries 
+
+If one is working in the domain of real numbers the equation 
+
+x^ + 1 = 
+
+has no solution; for there is no real number whose square is —1. If, however, 
+one enlarges the "number system" so as to include not only all real numbers but 
+all complex numbers as well, then it is true that every algebraic equation has a 
+root. It is on account of the existence of this theorem for the enlarged domain 
+that much of the general theory of algebra takes the elegant form in which we 
+know it. 
+
+The question naturally arises as to whether we can make a similar extension 
+in the case of congruences. The congruence 
+
+
+
+„2 
+
+
+
+= 3 mod 5 
+
+
+
+has no solution, if we employ the term solution in the sense in which we have so 
+far used it. But we may if we choose introduce an imaginary quantity, or mark, 
+j such that 
+
+j = 3 mod 5, 
+
+just as in connection with the equation x + 1 = we would introduce the 
+symbol i having the property expressed by the equation 
+
+
+
+CHAPTER 6. OTHER TOPICS 62 
+
+It is found to be possible to introduce in this way a general set of imaginaries 
+satisfying congruences with prime moduli; and the new quantities or marks have 
+the property of combining according to the laws of algebra. 
+
+The quantities so introduced are called Galois imaginaries. 
+
+We cannot go into a development of the important theory which is introduced 
+in this way. We shall be content with indicating two directions in which it leads. 
+
+In the first place there is the general Galois field theory which is of funda- 
+mental importance in the study of certain finite groups. It may be developed 
+from the point of view indicated here. An excellent exposition, along somewhat 
+different lines, is to be found in Dickson's Linear Groups with an Exposition of 
+the Galois Field Theory. 
+
+Again, the whole matter may be looked upon from the geometric point 
+of view. In this way we are led to the general theory of finite geometries, 
+that is, geometries in which there is only a finite number of points. For a 
+development of the ideas which arise here see Veblen and Young's Projective 
+Geometry and the memoir by Veblen and Bussey in the Transactions of the 
+American Mathematical Society, vol. 7, pp. 241-259. 
+
+6.4 Arithmetic Forms 
+
+The simplest arithmetic form is ax-\-b where a and b are fixed integers different 
+from zero and x is a variable integer. By varying x in this case we have the terms 
+of an arithmetic progression. We have already referred to Dirichlet's celebrated 
+theorem which asserts that the form ax -\- b has an infinite number of prime 
+values if only a and b are relatively prime. This is an illustration of one type of 
+theorem connected with arithmetic forms in general, namely, those in which it 
+is asserted that numbers of a given form have in addition a given property. 
+
+Another type of theorem is illustrated by a result stated in §??, provided 
+that we look at that result in the proper way. We saw that the number 2 is a 
+quadratic residue of every prime of either of the forms 8fc + 1 and 8k -\- 7 and a 
+quadratic non-residue of every prime of either of the forms 8/c + 3 and 8fc + 5. We 
+may state that result as follows: A given prime number of either of the forms 
+8fc + 1 and 8fc + 7 is a divisor of some number of the form x^ — 2, where x is an 
+integer; no prime number of either of the forms 8fc + 3 and 8fc + 5 is a divisor of 
+a number of the form x^ — 2, where x is an integer. 
+
+The result just stated is a theorem in a discipline of vast extent, namely, 
+the theory of quadratic forms. Here a large number of questions arise among 
+which are the following: What numbers can be represented in a given form? 
+What is the character of the divisors of a given form? As a special case of the 
+first we have the question as to what numbers can be represented as the sum of 
+three squares. To this category belong also the following two theorems: Every 
+positive integer is the sum of four squares of integers; every prime number of 
+the form 4n + 1 may be represented (and in only one way) as the sum of two 
+squares. 
+
+For an extended development of the theory of quadratic forms we refer the 
+
+
+
+CHAPTER 6. OTHER TOPICS 63 
+
+reader to Bachmann's Arithmetik der Quadratischen Formen of which the first 
+part has appeared in a volume of nearly seven hundred pages. 
+
+It is clear that one may further extend the theory of arithmetic forms by 
+investigating the properties of those of the third and higher degrees. Naturally 
+the development of this subject has not been carried so far as that of quadratic 
+forms; but there is a considerable number of memoirs devoted to various parts of 
+this extensive field, and especially to the consideration of various special forms. 
+
+Probably the most interesting of these special forms are the following: 
+
+n _ an 
+
+a + p , = a + a p + ■ ■ ■ + p , 
+
+a — p 
+
+where a and j3 are relatively prime integers, or, more generally, where a and 
+/3 are the roots of the quadratic equation x'^ — ux + v = where u and v are 
+relatively prime integers. A development of the theory of these forms has been 
+given by the present author in a memoir published in 1913 in the Annals of 
+Mathematics, vol. 13, pp. 30-70. 
+
+6.5 Analytical theory of numbers 
+
+Let us consider the function 
+
+
+
+1 
+
+
+
+It is clear that we have 
+
+
+
+CXD - CXD 
+
+fe=0 ^^ ^ > k=0 
+
+CXD 
+
+= J2g{s)x% 
+
+s=0 
+
+where G(0) = 1 and G{s) (for s greater than 0) is the number of ways in which 
+the positive integer s may be separated into like or distinct summands each of 
+which is a power of 2. 
+We have readily 
+
+
+
+oo 
+
+2° 
+
+
+
+(1 - x) ^ Gis)x'' = (1 - x)P{x) = P{x') = J2 
+
+s=0 s=0 
+
+whence 
+
+G(2s+l) = G(2s) = G(2s-l) + G{s), (A) 
+
+as one readily verifies by equating coefficients of like powers of x. From this we 
+have in particular 
+
+G(0) = 1, G'(l) = 1, G(2) = 2, (3(3) = 2, 
+^(4) = 4, ^(5) = 4, G(6) = 6, G(7) = 6. 
+
+
+
+CHAPTER 6. OTHER TOPICS 64 
+
+Thus in (A) we have recurrence relations by means of which we may readily 
+reckon out the values of the number theoretic function G{s). Thus we may 
+determine the number of ways in which a given positive integer s may be rep- 
+resented as a sum of powers of 2. 
+
+We have given this example as an elementary illustration of the analytical 
+theory of numbers, that is, of that part of the theory of numbers in which one 
+employs (as above) the theory of a continuous variable or some analogous theory 
+in order to derive properties of sets of integers. This general subject has been 
+developed in several directions. For a systematic account of it the reader is 
+referred to Bachmann's Analytische Zahlentheorie. 
+
+6.6 Diophantine equations 
+
+If /(x, y, z, . . .) is a polynomial in the variables x, y, z, . . . with integral coeffi- 
+cients, then the equation 
+
+f{x,y,z,...) = 
+
+is called a Diophantine equation when we look at it from the point of view of 
+determining the integers (or the positive integers) x,y,z,... which satisfy it. 
+Similarly, if we have several such functions fi{x,y,z, . . .), in number less than 
+the number of variables x, y, z, . . ., then the set of equations 
+
+fi{x,y,z,...) = 0, i = i,2,..., 
+
+is said to be a Diophantine system of equations. Any set of integers x,y, z, . . . 
+which satisfies the equation [system] is said to be a solution of the equation 
+[system] . 
+
+We may likewise define Diophantine inequalities by replacing the sign of 
+equality above by the sign of inequality. But little has been done toward devel- 
+oping a theory of Diophantine inequalities. Even for Diophantine equations the 
+theory is in a rather fragmentary state. 
+
+In the next two sections we shall illustrate the nature of the ideas and the 
+methods of the theory of Diophantine equations by developing some of the 
+results for two important special cases. 
+
+6.7 Pythagorean triangles 
+
+Definitions. If three positive integers x, j/, z satisfy the relation 
+
+x2 + y2 = ^2 (^-) 
+
+they are said to form a Pythagorean triangle or a numerical right triangle; z is 
+called the hypotenuse of the triangle and x and y are called its legs. The area 
+of the triangle is said to be ^xy. 
+
+
+
+CHAPTER 6. OTHER TOPICS 65 
+
+We shall determine the general form of the integers x, y, z, such that equation 
+(1) may be satisfied. Let us denote by v the greatest common divisor of x and 
+y in a particular solution of (1). Then z/ is a divisor of z and we may write 
+
+X = vu, y = vv, z = vw. 
+
+Substituting these values in (1) and reducing we have 
+
+u'^+v'^ = w'^, (2) 
+
+where w, v, w are obviously prime each to each, since u and v have the greatest 
+common divisor 1. 
+
+Now an odd square is of the form 4fc + 1. Hence the sum of two odd squares 
+is divisible by 2 but not by 4; and therefore the sum of two odd squares cannot 
+be a square. Hence one of the numbers w, v is even. Suppose that u is even and 
+write equation (2) in the form 
+
+u = (w — v){w + v). (3) 
+
+Every common divisor oi w — v and w -\- v ia a divisor of their difference 2v. 
+Therefore, since w and v are relatively prime, it follows that 2 is the greatest 
+common divisor oi w — v and w -\- v. Then from (3) we see that each of these 
+numbers is twice a square, so that we may write 
+
+w — V = 2b , w + V = 2a 
+
+where a and b are relatively prime integers. From these two equations and 
+equation (3) we have 
+
+w=a'^ + b'^, v = a^-h^, u = 2ab. (4) 
+
+Since u and v are relatively prime it is evident that one of the numbers a, b is 
+even and the other odd. 
+
+The forms of w, w, w given in (4) are necessary in order that (2) may be 
+satisfied. A direct substitution in (2) shows that this equation is indeed satisfied 
+by these values. Hence we have in (4) the general solution of (2) where u is 
+restricted to be even. A similar solution would be obtained if v were restricted 
+to be even. Therefore the general solution of (1) is 
+
+X = 2vab, y = v{a — b ), z = v{a + 6 ) 
+and 
+
+x = 2v{a^ -b^), y = 2uab, z = v{a^ + b^) 
+
+where a, b, v are arbitrary integers except that a and b are relatively prime and 
+one of them is even and the other odd. 
+
+By means of this general solution of (1) we shall now prove the following 
+theorem: 
+
+
+
+CHAPTER 6. OTHER TOPICS 66 
+
+I. There do not exist integers m, n, p, q, all different from zero, such that 
+
+2,2 2 2,2 2 /r\ 
+
+q+n=m,m+n=p. [bj 
+
+It is obvious that an equivalent theorem is the following: 
+
+II. There do not exist integers m, n, p, q, all different from zero such that 
+
+p^ +q^ = 2m^, p^ -q^ = 2n^ . (6) 
+
+Obviously, we may without loss of generality take m, n, p, q to be positive; 
+and this we do. 
+
+The method of proof is to assume the existence of integers satisfying equa- 
+tions (5) and (6) and to show that we are thus led to a contradiction. The 
+argument we give is an illustration of Fermat's famous method of "infinite de- 
+scent." 
+
+If any two of the numbers p, g, to, n have a common prime factor t, it follows 
+at once from (5) and (6) that all four of them have this factor. For, consider 
+an equation in (5) or in (6) in which these two numbers occur; this equation 
+contains a third number, and it is readily seen that this third number is divisible 
+by t. Then from one of the equations containing the fourth number it follows 
+that this fourth number is divisible by t. Now let us divide each equation of 
+system (6) through by t^\ the resulting system is of the same form as (6). If any 
+two numbers in this resulting system have a common prime factor ti, we may 
+divide through by t\\ and so on. Hence if a pair of simultaneous equations (6) 
+exists then there exists a pair of equations of the same form in which no two of 
+the numbers to, n, p, q have a common factor other than unity. Let this system 
+of equations be 
+
+2,2 o2 2 2o2 /'7\ 
+
+From the first equation in (7) it follows that pi and qi are both even or both 
+odd; and, since they are relatively prime, it follows that they are both odd. 
+Evidently pi > gi . Then we may write 
+
+p\ = q\ + 2a, 
+
+where a is a positive integer. If we substitute this value of pi in the first equation 
+of (7), the result may readily be put in the form 
+
+{qi + af + a^ = ml. (8) 
+
+Since gi and mi have no common prime factor it is easy to see from this equation 
+that a is prime to both gi and toi, and hence that no two of the numbers 
+gi + a, q;, TOi have a common factor. 
+
+Now we have seen that if a, 6, c are positive integers no two of which have 
+a common prime factor, while 
+
+
+
+a 
+
+
+
+2 ' 62 = c\ 
+
+
+
+CHAPTER 6. OTHER TOPICS 67 
+
+then there exist relatively prime integers r and s, r > s, such that 
+
+
+
+c = r + s , a = r — s , b = 2rs. 
+Hence from (8) we see that we may write 
+
+qi + a = 2rs, a = r — s (9) 
+
+or 
+
+qi + a = r — s ,a = 2rs. (10) 
+
+In either case we have 
+
+pl-ql = (pi - qi){pi + qi) = 2a ■ 2{qi + a) = 8rs{r^ - s^). 
+If we substitute in the second equation of (7) and divide by 2 we have 
+
+4rs(r — s ) = n^. 
+
+From this equation and the fact that r and s are relatively prime it follows 
+at once that r, s, r^ — s^ are all square numbers; say, 
+
+2 2 2 2 2 
+
+r = u, s = V , r — s = w . 
+Now r — s and r + s can have no common factor other than 1 or 2; hence from 
+
+w^ = (r^ - s^) = {r - s){r + s) = (u^ - w^)(u^ + v^) 
+we see that either 
+
+u^+v^ = 2wl, u^-v^ = 2wl (11) 
+
+or 
+
+2,2 2 22 2 
+
+U +V = Wi, U —V =^2- 
+
+And if it is the latter case which arises, then 
+
+wl+wl = 2u^, w\-wl = 2v'^. (12) 
+
+
+
+CHAPTER 6. OTHER TOPICS 68 
+
+Hence, assuming equations of the form (6) we are led either to equations (11) or 
+to equations (12); that is, we are led to new equations of the form with which 
+we started. Let us write the equations thus: 
+
+pl+ri = 2ml pl-ql = 2nl- (13) 
+
+that is, system (13) is identical with that one of systems (11), (12) which actually 
+arises. 
+
+Now from (9) and (10) and the relations pi = qi -\- 2a, r > s, we see that 
+
+pi = 2rs + r^ - s'^ > 2s^ + r^ - s^ = r^ + s^ = w'^ + v^ . 
+Hence u < pi. Also, 
+
+w^%w %r ^ s < r +s. 
+
+Hence w\ < p\. Since u and w\ are both less than p\ it follows that pi is less 
+than p\. Hence, obviously, p2 < p. Moreover, it is clear that all the numbers 
+P2 J <72 : "^2 1 ^2 are different from zero. 
+
+From these results we have the following conclusion: If we assume a system 
+of the form (6) we are led to a new system (13) of the same form; and in the 
+new system p2 is less than p. 
+
+Now if we start with (13) and carry out a similar argument we shall be led 
+to a new system 
+
+P3 + 4 = 2m|, pl-ql = 2n\, 
+
+with the relation pa < P2i starting from this last system we shall be led to a 
+new one of the same form, with a similar relation of inequality; and so on ad 
+infinitum. But, since there is only a finite number of positive integers less than 
+the given positive integer p this is impossible. We are thus led to a contradiction; 
+whence we conclude at once to the truth of H and likewise of I. 
+
+By means of theorems I and H we may readily prove the following theorem: 
+
+III. The area of a numerical right triangle is never a square number. 
+
+Let the sides and hypotenuse of a numerical right triangle be w, w, w, respec- 
+tively. The area of this triangle is i^'^v. If we assume this to be a square number 
+t^ we shall have the following simultaneous Diophantine equations 
+
+u^ + v'^ = w'^, uv = 2t^. (14) 
+
+We shall prove our theorem by showing that the assumption of such a system 
+leads to a contradiction. 
+
+If any two of the numbers u,v,w have a common prime factor p then the 
+remaining one also has this factor, as one sees readily from the first equation 
+in (14). From the second equation in (14) it follows that t also has the same 
+factor. Then if we put u = pui, v = pvi, w = pwi, t = pti, we have 
+
+Ui + Vi = Wy, uivi = 2ti, 
+
+
+
+CHAPTER 6. OTHER TOPICS 69 
+
+a system of the same form as (14). It is clear that we may start with this new 
+system and proceed in the same manner as before, and so on, until we arrive at 
+a system 
+
+u^ + v^ = w'^, uv = 2f, (15) 
+
+where u, v, w are prime each to each. 
+
+Now the general solution of the first equation (15) may be written in one of 
+the forms 
+
+u = 2ab, V = a — b , w = a + b 
+u = a b , V = 2ab, w = a + b . 
+
+Then from the second equation in (15) we have 
+
+? = ab{a'^ - b^) = ab{a -b){a + b). 
+
+It is easy to see that no two of the numbers a, b, a — b, a + 6 in the last member 
+of this equation have a common factor; for, if so, u and v would have a common 
+factor, contrary to hypothesis. Hence each of these four numbers is a square. 
+That is, we have equations of the form 
+
+a = m , b = n , a + b = p , a — b = q ; 
+whence 
+
+2 2 2 2,2 2 
+
+m — n = q , m + n = p . 
+
+But, according to theorem I, no such system of equations can exist. That is, 
+the assumption of equations (14) leads to a contradiction. Hence the theorem 
+follows as stated above. 
+
+6.8 The Equation x^ + y^ = z^. 
+
+The following theorem, which is commonly known as Fermat's Last Theorem, 
+was stated without proof by Fermat in the seventeenth century: 
+
+// n is an integer greater than 2 there do not exist integers x, y, z, all different 
+from zero, such that 
+
+x" + y" = z". (1) 
+
+No general proof of this theorem has yet been given. For various special 
+values of n the proof has been found; in particular, for every value of n not 
+greater than 100. 
+
+In the study of equation (1) it is convenient to make some preliminary re- 
+ductions. If there exists any particular solution of (1) there exists also a solution 
+in which x, y, z are prime each to each, as one may show readily by the method 
+employed in the first part of §??. Hence in proving the impossibility of equation 
+(1) it is sufficient to treat only the case in which x, y, z are prime each to each. 
+
+
+
+CHAPTER 6. OTHER TOPICS 70 
+
+Again, since n is greater than 2 it must contain the factor 4 or an odd prime 
+factor p. If n contains the factor p we write n = mp, whence we have 
+
+(x™)P + (y™)P= (z™f). 
+
+If n contains the factor 4 we write n = 4m, whence we have 
+
+(x™)4 + (j/™)4 = {z^)\ 
+
+From this we see that in order to prove the impossibihty of (1) in general it is 
+sufficient to prove it for the special cases when n is 4 and when n is an odd 
+prime p. For the latter case the proof has not been found. For the former case 
+we give a proof below. The theorem may be stated as follows: 
+
+I. There are no integers x, y, z, all different from zero, such that 
+
+x^ + y* = z\ 
+
+This is obviously a special case of the more general theorem: 
+
+II. There are no integers p, q, a, all different from zero, such that 
+
+p'-q' = a\ (2) 
+
+The latter theorem is readily proved by means of theorem III of §??. For, if 
+we assume an equation of the form (2), we have 
+
+/ 4 4\ 2 2 2 2 2 /-qn 
+
+{p-q)pq=pqa. (3) 
+
+But, obviously, 
+
+{2pv?+{p'-qr = ip'+<ir- (4) 
+
+Now, from (3) we see that the numerical right triangle determined by (4) has its 
+area p^q^ip^ — q'^) equal to the square number p^(fc?. But this is impossible. 
+Hence no equation of the form (2) exists. 
+
+EXERCISES 
+
+1. Show that the equation a* + 4/3^ = 7^ is impossible in integers a, /?, 7 all 
+of which are different from zero. 
+
+2. Show that the system p^ — <f = km^, p^ -\- q^ = kn^ impossible in integers 
+p, q, k, TO, n, all of which are different from zero. 
+
+3*. Show that neither of the equations m^ — 4n^ = ±t^ is possible in integers 
+TO, n, t, all of which are different from zero. 
+
+4*. Prove that the area of a numerical right triangle is not twice a square 
+number. 
+
+
+
+CHAPTER 6. OTHER TOPICS 71 
+
+5*. Prove that the equation m^ + n^ = a^ is not possible in integers to, n, a 
+ah of which are different from zero. 
+
+6*. In the numerical right triangle a^ + 6^ = c^, not more than one of the 
+numbers a, 6, c is a square. 
+
+7. Prove that the equation x + y^ = z'^ implies an equation of the form 
+TO'^+n'^ = 2'=-2tfc. 
+
+8. Find the general solution in integers of the equation x^ + 2y^ = t^ . 
+
+9. Find the general solution in integers of the equation x"^ + y"^ = z^. 
+10. Obtain solutions of each of the following Diophantine equations: 
+
+x^+y^ + z^ = 2*3, 
+x^ + 2y^ + 3z^ = t^, 
+
+x* + y* + Az^ = t\ 
+x^+y^ + z^ = 2t\ 
+
+
+
+Chapter 7 
+
+PROJECT GUTENBERG 
+"SMALL PRINT" 
+
+
+
+End Project Gutenberg's The Theory of Hiimbers, by Robert D. Carmichael 
+
+*** END OF THIS PROJECT GUTENBERG EBOOK THE THEORY OF NUMBERS *** 
+
+***** This file should be named 13693-pdf .pdf or 13693-pdf .zip ***** 
+This and all associated files of various formats will be found in: 
+http: //www. gutenberg. net/1/3/6/9/13693/ 
+
+Produced by David Starner, Joshua Hutchinson, John Hagerson, 
+and the Project Gutenberg On-line Distributed Proofreading Team. 
+
+Updated editions will replace the previous one — the old editions 
+will be renamed. 
+
+Creating the works from public domain print editions means that no 
+one owns a United States copyright in these works, so the Foundation 
+(and you!) can copy and distribute it in the United States without 
+permission and without paying copyright royalties. Special rules, 
+set forth in the General Terms of Use part of this license, apply to 
+copying and distributing Project Gutenberg- tm electronic works to 
+protect the PROJECT GUTENBERG-tm concept and trademark. Project 
+Gutenberg is a registered trademark, and may not be used if you 
+charge for the eBooks, unless you receive specific permission. If you 
+do not charge anything for copies of this eBook, complying with the 
+rules is very easy. You may use this eBook for nearly any purpose 
+such as creation of derivative works, reports, performances and 
+
+
+
+CHAPTER 7. PROJECT GUTENBERG "SMALL PRINT" 
+
+
+
+research. They may be modified and printed and given away — you may do 
+practically ANYTHING with public domain eBooks. Redistribution is 
+subject to the trademark license, especially commercial 
+redistribution. 
+
+
+
+*** START: FULL LICENSE *** 
+
+THE FULL PROJECT GUTENBERG LICENSE 
+
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK 
+
+To protect the Project Gutenberg-tm mission of promoting the free 
+distribution of electronic works, by using or distributing this work 
+(or any other work associated in any way with the phrase "Project 
+Gutenberg"), you agree to comply with all the terms of the Full Project 
+Gutenberg-tm License (available with this file or online at 
+http://gutenberg.net/license) . 
+
+
+
+Section 1. General Terms of Use and Redistributing Project Gutenberg-tm 
+electronic works 
+
+l.A. By reading or using any part of this Project Gutenberg-tm 
+electronic work, you indicate that you have read, luiderstand, agree to 
+and accept all the terms of this license and intellectual property 
+(trademark/copyright) agreement. If you do not agree to abide by all 
+the terms of this agreement, you must cease using and return or destroy 
+all copies of Project Gutenberg-tm electronic works in your possession. 
+If you paid a fee for obtaining a copy of or access to a Project 
+Gutenberg-tm electronic work and you do not agree to be bound by the 
+terms of this agreement, you may obtain a refund from the person or 
+entity to whom you paid the fee as set forth in paragraph I.E. 8. 
+
+l.B. "Project Gutenberg" is a registered trademark. It may only be 
+used on or associated in any way with an electronic work by people who 
+agree to be bound by the terms of this agreement. There are a few 
+things that you can do with most Project Gutenberg-tm electronic works 
+even without complying with the full terms of this agreement. See 
+paragraph l.C below. There are a lot of things you can do with Project 
+Gutenberg-tm electronic works if you follow the terms of this agreement 
+and help preserve free future access to Project Gutenberg-tm electronic 
+works. See paragraph l.E below. 
+
+l.C. The Project Gutenberg Literary Archive Foundation ("the Foundation" 
+or PGLAF) , owns a compilation copyright in the collection of Project 
+Gutenberg-tm electronic works. Nearly all the individual works in the 
+collection are in the public domain in the United States. If an 
+individual work is in the public domain in the United States and you are 
+located in the United States, we do not claim a right to prevent you from 
+
+
+
+CHAPTER 7. PROJECT GUTENBERG "SMALL PRINT" 
+
+copying, distributing, performing, displaying or creating derivative 
+works based on the work as long as all references to Project Gutenberg 
+are removed. Of course, we hope that you will support the Project 
+Gutenberg-tm mission of promoting free access to electronic works by 
+freely sharing Project Gutenberg-tm works in compliance with the terms of 
+this agreement for keeping the Project Gutenberg-tm name associated with 
+the work. You can easily comply with the terms of this agreement by 
+keeping this work in the same format with its attached full Project 
+Gutenberg-tm License when you share it without charge with others. 
+
+l.D. The copyright laws of the place where you are located also govern 
+what you can do with this work. Copyright laws in most countries are in 
+a constant state of change. If you are outside the United States, check 
+the laws of your country in addition to the terms of this agreement 
+before downloading, copying, displaying, performing, distributing or 
+creating derivative works based on this work or any other Project 
+Gutenberg-tm work. The Foimdation makes no representations concerning 
+the copyright status of any work in any country outside the United 
+States. 
+
+I.E. Unless you have removed all references to Project Gutenberg: 
+
+l.E.l. The following sentence, with active links to, or other immediate 
+access to, the full Project Gutenberg-tm License must appear prominently 
+whenever any copy of a Project Gutenberg-tm work (any work on which the 
+phrase "Project Gutenberg" appears, or with which the phrase "Project 
+Gutenberg" is associated) is accessed, displayed, performed, viewed, 
+copied or distributed: 
+
+This eBook is for the use of anyone anywhere at no cost and with 
+almost no restrictions whatsoever. You may copy it, give it away or 
+re-use it under the terms of the Project Gutenberg License included 
+with this eBook or online at www.gutenberg.net 
+
+I.E. 2. If an individual Project Gutenberg-tm electronic work is derived 
+from the public domain (does not contain a notice indicating that it is 
+posted with permission of the copyright holder) , the work can be copied 
+and distributed to anyone in the United States without paying any fees 
+or charges. If you are redistributing or providing access to a work 
+with the phrase "Project Gutenberg" associated with or appearing on the 
+work, you must comply either with the requirements of paragraphs l.E.l 
+through I.E. 7 or obtain permission for the use of the work and the 
+Project Gutenberg-tm trademark as set forth in paragraphs I.E. 8 or 
+I.E. 9. 
+
+I.E. 3. If an individual Project Gutenberg-tm electronic work is posted 
+with the permission of the copyright holder, your use and distribution 
+must comply with both paragraphs l.E.l through I.E. 7 and any additional 
+terms imposed by the copyright holder. Additional terms will be linked 
+to the Project Gutenberg-tm License for all works posted with the 
+
+
+
+CHAPTER 7. PROJECT GUTENBERG "SMALL PRINT" 
+
+permission of the copyright holder found at the beginning of this work. 
+
+I.E. 4. Do not unlink or detach or remove the full Project Gutenberg-tm 
+License terms from this work, or any files containing a part of this 
+work or any other work associated with Project Gutenberg-tm. 
+
+I.E. 5. Do not copy, display, perform, distribute or redistribute this 
+electronic work, or any part of this electronic work, without 
+prominently displaying the sentence set forth in paragraph l.E.l with 
+active links or immediate access to the full terms of the Project 
+Gutenberg-tm License. 
+
+I.E. 6. You may convert to and distribute this work in any binary, 
+compressed, marked up, nonproprietary or proprietary form, including any 
+word processing or hypertext form. However, if you provide access to or 
+distribute copies of a Project Gutenberg-tm work in a format other than 
+"Plain Vanilla ASCII" or other format used in the official version 
+posted on the official Project Gutenberg-tm web site (www.gutenberg.net), 
+you must, at no additional cost, fee or expense to the user, provide a 
+copy, a means of exporting a copy, or a means of obtaining a copy upon 
+request, of the work in its original "Plain Vanilla ASCII" or other 
+form. Any alternate format must include the full Project Gutenberg-tm 
+License as specified in paragraph l.E.l. 
+
+I.E. 7. Do not charge a fee for access to, viewing, displaying, 
+performing, copying or distributing any Project Gutenberg-tm works 
+luiless you comply with paragraph I.E. 8 or I.E. 9. 
+
+I.E. 8. You may charge a reasonable fee for copies of or providing 
+access to or distributing Project Gutenberg-tm electronic works provided 
+that 
+
+- You pay a royalty fee of 20°/. of the gross profits you derive from 
+
+the use of Project Gutenberg-tm works calculated using the method 
+you already use to calculate your applicable taxes. The fee is 
+owed to the owner of the Project Gutenberg-tm trademark, but he 
+has agreed to donate royalties under this paragraph to the 
+Project Gutenberg Literary Archive Foundation. Royalty payments 
+must be paid within 60 days following each date on which you 
+prepare (or are legally required to prepare) your periodic tax 
+returns. Royalty payments should be clearly marked as such and 
+sent to the Project Gutenberg Literary Archive Foundation at the 
+address specified in Section 4, "Information about donations to 
+the Project Gutenberg Literary Archive Foundation." 
+
+- You provide a full refimd of any money paid by a user who notifies 
+
+you in writing (or by e-mail) within 30 days of receipt that s/he 
+does not agree to the terms of the full Project Gutenberg-tm 
+License. You must require such a user to return or 
+destroy all copies of the works possessed in a physical mediiim 
+
+
+
+CHAPTER 7. PROJECT GUTENBERG "SMALL PRINT" 
+
+and discontinue all use of and all access to other copies of 
+Project Gutenberg-tm works. 
+
+- You provide, in accordance with paragraph 1.F.3, a full refund of any 
+
+money paid for a work or a replacement copy, if a defect in the 
+electronic work is discovered and reported to you within 90 days 
+of receipt of the work. 
+
+- You comply with all other terms of this agreement for free 
+
+distribution of Project Gutenberg-tm works. 
+
+I.E. 9. If you wish to charge a fee or distribute a Project Gutenberg-tm 
+electronic work or group of works on different terms than are set 
+forth in this agreement, you must obtain permission in writing from 
+both the Project Gutenberg Literary Archive Foundation and Michael 
+Hart, the owner of the Project Gutenberg-tm trademark. Contact the 
+Foundation as set forth in Section 3 below. 
+
+I.E. 
+
+l.F.l. Project Gutenberg volunteers and employees expend considerable 
+effort to identify, do copyright research on, transcribe and proofread 
+public domain works in creating the Project Gutenberg-tm 
+collection. Despite these efforts. Project Gutenberg-tm electronic 
+works, and the mediiim on which they may be stored, may contain 
+"Defects," such as, but not limited to, incomplete, inaccurate or 
+corrupt data, transcription errors, a copyright or other intellectual 
+property infringement, a defective or damaged disk or other medium, a 
+computer virus, or computer codes that damage or cannot be read by 
+your equipment . 
+
+l.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the "Right 
+of Replacement or Refund" described in paragraph 1.F.3, the Project 
+Gutenberg Literary Archive Foundation, the owner of the Project 
+Gutenberg-tm trademark, and any other party distributing a Project 
+Gutenberg-tm electronic work under this agreement, disclaim all 
+liability to you for damages, costs and expenses, including legal 
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT 
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE 
+PROVIDED IN PARAGRAPH F3. YOU AGREE THAT THE FOUNDATION, THE 
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE 
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR 
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH 
+DAMAGE. 
+
+l.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a 
+defect in this electronic work within 90 days of receiving it, you can 
+receive a refund of the money (if any) you paid for it by sending a 
+written explanation to the person you received the work from. If you 
+received the work on a physical medium, you must return the medium with 
+
+
+
+CHAPTER 7. PROJECT GUTENBERG "SMALL PRINT" 
+
+your written explanation. The person or entity that provided you with 
+the defective work may elect to provide a replacement copy in lieu of a 
+refund. If you received the work electronically, the person or entity 
+providing it to you may choose to give you a second opportunity to 
+receive the work electronically in lieu of a refund. If the second copy 
+is also defective, you may demand a refiuid in writing without further 
+opportimities to fix the problem. 
+
+l.F.4. Except for the limited right of replacement or refund set forth 
+in paragraph 1.F.3, this work is provided to you 'AS-IS', WITH NO OTHER 
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+WARRANTIES OF MERCHANTIBILITY OR FITNESS FOR ANY PURPOSE. 
+
+l.F.5. Some states do not allow disclaimers of certain implied 
+warranties or the exclusion or limitation of certain types of damages. 
+If any disclaimer or limitation set forth in this agreement violates the 
+law of the state applicable to this agreement, the agreement shall be 
+interpreted to make the maximum disclaimer or limitation permitted by 
+the applicable state law. The invalidity or unenforceability of any 
+provision of this agreement shall not void the remaining provisions. 
+
+l.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the 
+trademark owner, any agent or employee of the Foundation, anyone 
+providing copies of Project Gutenberg-tm electronic works in accordance 
+with this agreement, and any volimteers associated with the production, 
+promotion and distribution of Project Gutenberg-tm electronic works, 
+harmless from all liability, costs and expenses, including legal fees, 
+that arise directly or indirectly from any of the following which you do 
+or cause to occur: (a) distribution of this or any Project Gutenberg-tm 
+work, (b) alteration, modification, or additions or deletions to any 
+Project Gutenberg-tm work, and (c) any Defect you cause. 
+
+
+
+Section 2. Information about the Mission of Project Gutenberg-tm 
+
+Project Gutenberg-tm is synonymous with the free distribution of 
+electronic works in formats readable by the widest variety of computers 
+including obsolete, old, middle-aged and new computers. It exists 
+because of the efforts of hundreds of volunteers and donations from 
+people in all walks of life. 
+
+Volunteers and financial support to provide volunteers with the 
+assistance they need, is critical to reaching Project Gutenberg-tm' s 
+goals and ensuring that the Project Gutenberg-tm collection will 
+remain freely available for generations to come. In 2001, the Project 
+Gutenberg Literary Archive Foundation was created to provide a secure 
+and permanent future for Project Gutenberg-tm and future generations. 
+To learn more about the Project Gutenberg Literary Archive Foundation 
+and how your efforts and donations can help, see Sections 3 and 4 
+and the Foundation web page at http://www.pglaf.org. 
+
+
+
+CHAPTER 7. PROJECT GUTENBERG "SMALL PRINT" 
+
+
+
+Section 3. Information about the Project Gutenberg Literary Archive 
+Foundation 
+
+The Project Gutenberg Literary Archive Foundation is a non profit 
+501(c)(3) educational corporation organized under the laws of the 
+state of Mississippi and granted tax exempt status by the Internal 
+Revenue Service. The Foimdation's EIN or federal tax identification 
+number is 64-6221541. Its 501(c)(3) letter is posted at 
+http://pglaf.org/fundraising. Contributions to the Project Gutenberg 
+Literary Archive Foimdation are tax deductible to the full extent 
+permitted by U.S. federal laws and your state's laws. 
+
+The Foundation's principal office is located at 4557 Melan Dr. S. 
+Fairbanks, AK, 99712. , but its volunteers and employees are scattered 
+throughout numerous locations. Its business office is located at 
+809 North 1500 West, Salt Lake City, UT 84116, (801) 596-1887, email 
+business@pglaf.org. Email contact links and up to date contact 
+information can be found at the Foundation's web site and official 
+page at http://pglaf.org 
+
+For additional contact information: 
+Dr. Gregory B. Hewby 
+Chief Executive and Director 
+gbnewbySpglaf . org 
+
+Section 4. Information about Donations to the Project Gutenberg 
+Literary Archive Foimdation 
+
+Project Gutenberg-tm depends upon and cannot survive without wide 
+spread public support and donations to carry out its mission of 
+increasing the number of public domain and licensed works that can be 
+freely distributed in machine readable form accessible by the widest 
+array of equipment including outdated equipment. Many small donations 
+($1 to $5,000) are particularly important to maintaining tax exempt 
+status with the IRS. 
+
+The Foundation is committed to complying with the laws regulating 
+charities and charitable donations in all 50 states of the United 
+States. Compliance requirements are not uniform and it takes a 
+considerable effort, much paperwork and many fees to meet and keep up 
+with these requirements. We do not solicit donations in locations 
+where we have not received written confirmation of compliance. To 
+SEND DONATIONS or determine the status of compliance for any 
+particular state visit http://pglaf.org 
+
+While we cannot and do not solicit contributions from states where we 
+have not met the solicitation requirements, we know of no prohibition 
+against accepting unsolicited donations from donors in such states who 
+
+
+
+CHAPTER 7. PROJECT GUTENBERG "SMALL PRINT" 
+
+
+
+approach us with offers to donate. 
+
+International donations are gratefully accepted, but we cannot make 
+any statements concerning tax treatment of donations received from 
+outside the United States. U.S. laws alone swamp our small staff. 
+
+Please check the Project Gutenberg Web pages for current donation 
+methods and addresses. Donations are accepted in a number of other 
+ways including including checks, online payments and credit card 
+donations. To donate, please visit: http://pglaf.org/donate 
+
+
+
+Section 5. General Information About Project Gutenberg-tm electronic 
+works. 
+
+Professor Michael S. Hart is the originator of the Project Gutenberg-tm 
+concept of a library of electronic works that could be freely shared 
+with anyone. For thirty years, he produced and distributed Project 
+Gutenberg-tm eBooks with only a loose network of volunteer support . 
+
+Project Gutenberg-tm eBooks are often created from several printed 
+editions, all of which are confirmed as Public Domain in the U.S. 
+luiless a copyright notice is included. Thus, we do not necessarily 
+keep eBooks in compliance with any particular paper edition. 
+
+Most people start at our Web site which has the main PG search facility: 
+
+http: //www. gutenberg.net 
+
+This Web site includes information about Project Gutenberg-tm, 
+including how to make donations to the Project Gutenberg Literary 
+Archive Foundation, how to help produce our new eBooks, and how to 
+subscribe to our email newsletter to hear about new eBooks. 
+
+*** END: FULL LICENSE ***

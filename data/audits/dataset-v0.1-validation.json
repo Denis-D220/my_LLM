@@ -1,0 +1,241 @@
+{
+  "format": "llm_tokenized_dataset_validation",
+  "format_version": 1,
+  "created_at_utc": "2026-08-15T15:36:04.700191+00:00",
+  "duration_seconds": 279.396041,
+  "dataset": {
+    "path": "data\\tokenized\\v0.1",
+    "manifest_sha256": "25b34c751b97765537fb07e89dd9ca544458c984da8159ba6816a4087ea7a361"
+  },
+  "tokenizer": {
+    "path": "artifacts\\tokenizer-E011\\tokenizer.json",
+    "file_sha256": "6a0a07e08659aa070831ea6058d3588c8a2a312043c19dce8a0dc41d2ce35b96"
+  },
+  "options": {
+    "checksums": true,
+    "stream_scan": true,
+    "corpus_reproduction": true
+  },
+  "splits": {
+    "train": {
+      "tokens": 1083858263,
+      "windows": 529227,
+      "shards": 109,
+      "documents": 1148751,
+      "max_token_id": 23993,
+      "bos_count": 1148751,
+      "eos_count": 1148751
+    },
+    "validation": {
+      "tokens": 10870996,
+      "windows": 5308,
+      "shards": 2,
+      "documents": 11854,
+      "max_token_id": 23993,
+      "bos_count": 11854,
+      "eos_count": 11854
+    }
+  },
+  "decode_samples": {
+    "train": [
+      {
+        "window": 83446,
+        "characters": 5075,
+        "excerpt": "t oyununun əsas xüsusiyyəti sadə oyun və mürəkkəb qaydaların olmamasıdır. Hətta Mostbet bukmeker kontorunun saytında qeydiyyatdan keçmiş təcrübəsiz mərcçilər də onu oynamağa başlaya bilərlər. Casino Pin-Up idman mərclərini qəbul edir, onlayn canlı dilerləxüsusi yer tutur aviator.\nPin Up AZ klassik k"
+      },
+      {
+        "window": 113595,
+        "characters": 9108,
+        "excerpt": "What are the steps to playing roulette online?\nIt doesnt matter if the Scatters land on the payline, you will not be granted a lot of larger wins while you play as the payouts for a win are very low. Well also talk about the players who might prefer modern slot machines better than the classics of t"
+      },
+      {
+        "window": 486593,
+        "characters": 10243,
+        "excerpt": "balance.\nThe UK faces substantial threats to its biodiversity, driven by habitat loss, pollution, and climate change. Invasive species further complicate this issue, often outcompeting native plants and altering habitats. Implementing robust conservation strategies focused on enhancing and protectin"
+      }
+    ],
+    "validation": [
+      {
+        "window": 651,
+        "characters": 8384,
+        "excerpt": "bundles of safety traffic cones — plenty of cones here for anyone running job site or event traffic control.\nA loader will be available at pickup.\nCLOSING FORMAT: This auction will close in groups of similar items. Each group will close with extend-one, extend-all bidding within that group only.\nSee"
+      },
+      {
+        "window": 887,
+        "characters": 9999,
+        "excerpt": "gram.\nLeading news portal of Uzbekistan. News 24/7.\nUse of UzDaily.uz materials is permitted only with written permission from the editorial office. Internet mass media registration certificate № 248510 dated April 1, 2024. Founder: Daily Media Private Enterprise. Address: Yunusabad, 12-27-73, Tashk"
+      },
+      {
+        "window": 3801,
+        "characters": 11404,
+        "excerpt": ", to mute unwanted ads, and to measure the effectiveness of ads.\nOther uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.\ncookies.js session No description available.\nm 2 years No description available.<|eos|><|bos|>A Vendor List will become "
+      }
+    ]
+  },
+  "checks": [
+    {
+      "check": "geometry.frozen",
+      "status": "PASS",
+      "detail": "context 2048, windows of 2049, stride 2048, no padding"
+    },
+    {
+      "check": "geometry.storage",
+      "status": "PASS",
+      "detail": "uint16 little-endian token storage"
+    },
+    {
+      "check": "tokenizer.vocab_size",
+      "status": "PASS",
+      "detail": "24,000, agreed by the manifest and the tokenizer file"
+    },
+    {
+      "check": "tokenizer.state_sha256",
+      "status": "PASS",
+      "detail": "tokenizer.json is the exact tokenizer the shards were built with"
+    },
+    {
+      "check": "train.storage",
+      "status": "PASS",
+      "detail": "109 shards: every shard SHA-256 and the full stream digest verified"
+    },
+    {
+      "check": "validation.storage",
+      "status": "PASS",
+      "detail": "2 shards: every shard SHA-256 and the full stream digest verified"
+    },
+    {
+      "check": "train.window_count",
+      "status": "PASS",
+      "detail": "529,227 windows, matching the manifest"
+    },
+    {
+      "check": "train.window_count_derivation",
+      "status": "PASS",
+      "detail": "(1,083,858,263 - 1) // 2048 = 529,227"
+    },
+    {
+      "check": "train.token_count",
+      "status": "PASS",
+      "detail": "1,083,858,263 tokens"
+    },
+    {
+      "check": "train.item_contract",
+      "status": "PASS",
+      "detail": "11 windows: shape (2048,), int64, x[1:] == y[:-1], ids in range"
+    },
+    {
+      "check": "train.shard_boundaries",
+      "status": "PASS",
+      "detail": "108 spanning windows across 108 internal boundaries read whole and stay aligned"
+    },
+    {
+      "check": "validation.window_count",
+      "status": "PASS",
+      "detail": "5,308 windows, matching the manifest"
+    },
+    {
+      "check": "validation.window_count_derivation",
+      "status": "PASS",
+      "detail": "(10,870,996 - 1) // 2048 = 5,308"
+    },
+    {
+      "check": "validation.token_count",
+      "status": "PASS",
+      "detail": "10,870,996 tokens"
+    },
+    {
+      "check": "validation.item_contract",
+      "status": "PASS",
+      "detail": "11 windows: shape (2048,), int64, x[1:] == y[:-1], ids in range"
+    },
+    {
+      "check": "validation.shard_boundaries",
+      "status": "PASS",
+      "detail": "1 spanning windows across 1 internal boundaries read whole and stay aligned"
+    },
+    {
+      "check": "train.token_ids_in_range",
+      "status": "PASS",
+      "detail": "all 1,083,858,263 ids < 24,000 (max observed 23,993), so uint16 storage is exact"
+    },
+    {
+      "check": "train.document_framing_counts",
+      "status": "PASS",
+      "detail": "1,148,751 BOS and 1,148,751 EOS, one pair per declared document"
+    },
+    {
+      "check": "train.document_framing_order",
+      "status": "PASS",
+      "detail": "BOS and EOS strictly alternate across the whole stream"
+    },
+    {
+      "check": "train.stream_endpoints",
+      "status": "PASS",
+      "detail": "stream opens with BOS and closes with EOS"
+    },
+    {
+      "check": "train.no_accidental_special_parsing",
+      "status": "PASS",
+      "detail": "none of the 7 non-boundary special tokens appear anywhere in the stream"
+    },
+    {
+      "check": "validation.token_ids_in_range",
+      "status": "PASS",
+      "detail": "all 10,870,996 ids < 24,000 (max observed 23,993), so uint16 storage is exact"
+    },
+    {
+      "check": "validation.document_framing_counts",
+      "status": "PASS",
+      "detail": "11,854 BOS and 11,854 EOS, one pair per declared document"
+    },
+    {
+      "check": "validation.document_framing_order",
+      "status": "PASS",
+      "detail": "BOS and EOS strictly alternate across the whole stream"
+    },
+    {
+      "check": "validation.stream_endpoints",
+      "status": "PASS",
+      "detail": "stream opens with BOS and closes with EOS"
+    },
+    {
+      "check": "validation.no_accidental_special_parsing",
+      "status": "PASS",
+      "detail": "none of the 7 non-boundary special tokens appear anywhere in the stream"
+    },
+    {
+      "check": "splits.streams_distinct",
+      "status": "PASS",
+      "detail": "train and validation stream digests differ"
+    },
+    {
+      "check": "splits.identities_distinct",
+      "status": "PASS",
+      "detail": "train and validation document-identity digests differ"
+    },
+    {
+      "check": "splits.totals",
+      "status": "PASS",
+      "detail": "1,160,605 documents across 1,160,605 split groups",
+      "data": {
+        "train_documents": 1148751,
+        "validation_documents": 11854,
+        "train_groups": 1148751,
+        "validation_groups": 11854
+      }
+    },
+    {
+      "check": "splits.reproduce_from_corpus",
+      "status": "PASS",
+      "detail": "the split re-derives exactly from the frozen corpus at seed 2026, fraction 0.01; train and validation are document-disjoint"
+    }
+  ],
+  "summary": {
+    "total": 30,
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 0,
+    "result": "PASS"
+  }
+}

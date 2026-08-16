@@ -1,0 +1,42 @@
+GraphQL is a data query and manipulation language that allows specifying what data is to be retrieved ("declarative data fetching") or modified. A GraphQL server can process a client query using data from separate sources and present the results in a unified graph. The language is not tied to any specific database or storage engine. There are several open-source runtime engines for GraphQL.
+
+History
+Facebook started GraphQL development in 2012 and released a draft specification and reference implementation as open source in 2015. In 2018, GraphQL was moved to the newly established GraphQL Foundation, hosted by the non-profit Linux Foundation.
+On February 9, 2018, the GraphQL Schema Definition Language became part of the specification.
+Many popular public APIs adopted GraphQL as the default way to access them. These include public APIs of Facebook, GitHub, Yelp, Shopify, Google Directions API and many others.
+There is an annual GraphQL Conference featuring new developments of the protocol and organizations successfully using GraphQL. The event is hosted by the GraphQL Foundation with previous organizers incl. Prisma, Hygraph, Commercetools.
+
+Design
+GraphQL supports reading, writing (mutating), and subscribing to changes to data (realtime updates – commonly implemented using WebSockets). A GraphQL service is created by defining types with fields, then providing functions to resolve the data for each field. The types and fields make up what is known as the schema definition. The functions that retrieve and map the data are called resolvers.
+After being validated against the schema, a GraphQL query is executed by the server. The server returns a result that mirrors the shape of the original query, typically as JSON.
+
+Type system
+
+With GraphQL, a business domain is modeled as a graph by defining a schema; within this schema, different types of nodes and their relations are defined.
+The GraphQL type system describes what data can be queried from the API. The collection of those capabilities is referred to as the service's schema and clients can use that schema to send queries to the API that return predictable results.
+The root type of a GraphQL schema, Query by default, contains all of the fields that can be queried. Other types define the objects and fields that the GraphQL server can return. There are several base types, called scalars, to represent things like strings, numbers, and IDs.
+
+Fields are defined as nullable by default, and a trailing exclamation mark can be used to make a field non-nullable (required). A field can be defined as a list by wrapping the field's type in square brackets (for example, authors: [String]).
+
+Queries
+A GraphQL query defines the exact shape of the data needed by the client.Once validated and executed by the GraphQL server, the data is returned in the same shape.
+
+Mutations
+A GraphQL mutation allows for data to be created, updated, or deleted. Mutations generally contain variables, which allow data to be passed into the server from the client. The mutation also defines the shape of the data that will be returned to the client after the operation is complete.
+
+The variables are passed as an object with fields that match the variable names in the mutation.Once the operation is complete, the GraphQL server will return data matching the shape defined by the mutation.
+
+Subscriptions
+GraphQL also supports live updates sent from the server to client in an operation called a subscription. Again, the client defines the shape of the data that it needs whenever an update is made.When a mutation is made through the GraphQL server that updates the associated field, data is sent to all subscribed clients in the format setup through the subscription.
+
+Versioning
+While there's nothing that prevents a GraphQL service from being versioned just like any other API, GraphQL takes a strong opinion on avoiding versioning by providing the tools for the continuous evolution of a GraphQL schema.
+The @deprecated built-in directive is used within the type system definition language to indicate deprecated portions of a GraphQL service's schema, such as deprecated fields on a type or deprecated enum values.
+GraphQL only returns the data that's explicitly requested, so new capabilities can be added via new types or new fields on existing types without creating a breaking change. This has led to a common practice of always avoiding breaking changes and serving a versionless API.
+
+Comparison to other query languages
+GraphQL does not provide a full-fledged graph query language such as SPARQL, or even in dialects of SQL that support transitive closure.  For example, a GraphQL interface that reports the parents of an individual cannot return, in a single query, the set of all their ancestors.
+
+Testing
+GraphQL APIs can be tested manually or with automated tools issuing GraphQL requests and verifying the correctness of the results. Automatic test generation is also possible. New requests may be produced through search-based techniques due to a typed schema and introspection capabilities.
+Some of the software tools used for testing GraphQL implementations include Postman, Beeceptor, GraphiQL, Apollo Studio, GraphQL Hive, GraphQL Editor, and Step CI.

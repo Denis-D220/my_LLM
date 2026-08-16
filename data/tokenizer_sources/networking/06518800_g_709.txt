@@ -1,0 +1,13 @@
+ITU-T Recommendation G.709 Interfaces for the Optical Transport Network (OTN) describes a means of communicating data over an optical network. It is a standardized method for transparent transport of services over optical wavelengths in DWDM systems. It is also known as Optical Transport Hierarchy (OTH) standard. The first edition of this protocol was approved in 2001.
+The G.709 OTUk signal is positioned as a server layer signal for various client signals, e.g. SDH/SONET, ATM, IP, Ethernet, Fibre Channel and OTN ODUk (where k=0, 1, 2, 2e, 3, 3e2, 4 or flex). Work on support for InfiniBand and Common Public Radio Interface client signals is currently in progress.
+The frame structure defined in G.709 is constructed of 4 areas:
+
+OPUk is the area in which payload is mapped.
+ODUk contains the OPUk with additional overhead bytes (e.g. TTI, BIP8, GCC1/2, TCM etc.).
+OTUk is the section and includes framing, TTI, BIP8 and GCC0 bytes.
+FEC – The standard FEC code (described in G.975) is a Reed–Solomon coding calculated across the payload (OPU) columns. This allows detection and correction of bit errors due to signal impairments during transmission. The FEC code also extends the distance the optical signal can travel before requiring regeneration.
+G.709 offers advanced OAM&P capabilities such as Tandem Connection Monitoring (TCM), End to End performance monitoring, connectivity monitoring, signal quality supervision and General Communication Channel (GCC).
+
+Typical client signals and corresponding G.709 rates
+
+Unlike SDH/SONET, the line rate is increased by maintaining the G.709 frame structure (4 rows x 4080 columns) and decreasing the frame period (in SDH/SONET the frame structure is increased and the frame period of 125 μs is maintained).

@@ -1,0 +1,66 @@
+The Intel 8279 is a keyboard and display controller developed for interfacing to Intel 8085, 8086 and 8088 microprocessors.  The industrial version of ID8279 was available for USD $30.70 in quantities of 100.  Its important features are:
+
+Simultaneous keyboard and display operations.
+Scanned keyboard mode.
+Scanned sensor mode.
+8-character keyboard FIFO.
+Right or left entry 16-byte display RAM.
+Programmable scan timing.
+Used for Interaction between keyboard and different microprocessor.
+Keyboard section:
+
+The keyboard section consists of eight return lines RL0 - RL7 that can be used to form the columns of a keyboard matrix.
+It has two additional inputs : shift and control/strobe. The keys are automatically debounced.
+The two operating modes of keyboard section are 2-key lockout and n-key rollover.
+In the 2-key lockout mode, if two keys are pressed simultaneously, only the first key is recognized.
+In the N-key rollover mode, simultaneous keys are recognized and their codes are stored in FIFO.
+The keyboard section also has an 8 x 8 FIFO (First In First Out) RAM.
+The FIFO can store eight key codes in the scan keyboard mode. The status of the shift key and control key are also stored along with key code. The 8279 generates an interrupt signal when there is an entry in FIFO.
+In sensor matrix mode, the state (i.e., open/close status) of 64 switches is stored in FIFO RAM. If the state of any of the switches changes, then the 8279 asserts IRQ as high to interrupt the processor.
+Display section:
+
+The display section has eight output lines divided into two groups A0-A3 and B0-B3.
+The output lines can be used either as a single group of eight lines or as two groups of four lines, in conjunction with the scan lines for a multiplexed display.
+The output lines are connected to the anodes through driver transistors in case of common cathode 7-segment LEDs.
+The cathodes are connected to scan lines through driver transistors.
+The display can be blanked by BD (low) line.
+The display section consists of 16 x 8 display RAM. The CPU can read from or write into any location of the display RAM.
+Scan section:
+
+The scan section has a scan counter and four scan lines, SL0 to SL3.
+In decoded scan mode, the output of the scan lines will be similar to a 2-to-4 decoder.
+In encoded scan mode, the output of scan lines will be binary count, and an external decoder should be used to convert the binary count to decoded output.
+The scan lines are common for keyboard and display.
+The scan lines are used to form the rows of a matrix keyboard and also connected to digit drivers of a multiplexed display, to turn ON/OFF.
+CPU interface section:
+
+The CPU interface section takes care of data transfer between the 8279 and the processor.
+This section has eight bidirectional data lines DB0 to DB7 for data transfer between 8279 and CPU.
+It has a single address line to select the data buffer (A0=0) or the control register (A0=1)of the 8279.
+The control signals WR (active low), RD (active low), CS (active low) and A0 are used for read/write to 8279.
+It has an interrupt request line IRQ, for interrupt driven data transfer with processor.
+The internal clock frequency of the 8279 is nominally 100 kHz. An internal prescaler divides an externally applied clock by an integer between 2 and 31 (both inclusive) to produce the internal clock.
+The RESET signal sets the 8279 in 16-character display with two -key lockout keyboard modes.
+
+Interfacing of 8279 with 8085
+In a microprocessor based system, when a keyboard and a 7-segment LED display are interfaced using ports or latches then the processor has to carry the following task.
+
+Keyboard scanning
+Key debouncing
+Key code generation
+Sending display code to LED
+Display refreshing
+
+Operating modes
+The basic input modes of 8279 are
+
+Scanned keyboard
+Scanned sensor matrix
+Strobed input
+Display Modes
+The two basic output modes are
+
+Left Entry (Typewriter type)
+Right Entry (Calculator type)
+full datasheet link:
+http://www.futurlec.com/Datasheet/80Series/8279.pdf

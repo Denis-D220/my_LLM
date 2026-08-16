@@ -1,0 +1,13 @@
+In solid mechanics, shearing forces are unaligned forces acting on one part of a body in a specific direction, and another part of the body in the opposite direction. When the forces are collinear (aligned with each other), they are called tension forces or compression forces. Shear force can also be defined in terms of planes: "If a plane is passed through a body, a force acting along this plane is called a shear force or shearing force."
+
+Force required to shear steel
+This section calculates the force required to cut a piece of material with a shearing action. The relevant information is the area of the material being sheared, i.e. the area across which the shearing action takes place, and the shear strength of the material. A round bar of steel is used as an example. The shear strength is calculated from the tensile strength using a factor which relates the two strengths. In this case 0.6 applies to the example steel, known as EN8 bright, although it can vary from 0.58 to 0.62 depending on application.
+EN8 bright has a tensile strength of 800 MPa and mild steel, for comparison, has a tensile strength of 400 MPa.
+To calculate the force to shear a 25 mm diameter bar of EN8 bright steel;
+
+area of the bar in mm2 = (12.52)(π) ≈ 490.8 mm2
+0.8 kN/mm2 × 490.8 mm2 = 392.64 kN ≈ 40 tonne-force
+40 tonne-force × 0.6 (to change force from tensile to shear) = 24 tonne-force
+When working with a riveted or tensioned bolted joint, the strength comes from friction between the materials bolted together. Bolts are correctly torqued to maintain the friction. The shear force only becomes relevant when the bolts are not torqued.
+A bolt with property class 12.9 has a tensile strength of 1200 MPa (1 MPa = 1 N/mm2) or 1.2 kN/mm2 and the yield strength is 0.90 times tensile strength, 1080 MPa in this case.
+A bolt with property class 4.6 has a tensile strength of 400 MPa (1 MPa = 1 N/mm2) or 0.4 kN/mm2 and yield strength is 0.60 times tensile strength, 240 MPa in this case.

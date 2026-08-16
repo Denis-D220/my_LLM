@@ -1,0 +1,17 @@
+The universal integrated circuit card (UICC) is the physical smart card (integrated circuit card) used in mobile terminals in 2G (GSM), 3G (UMTS), 4G (LTE), and 5G networks. The UICC ensures the integrity and security of all kinds of personal data, and it typically holds a few hundred kilobytes.
+The official definition for UICC is found in ETSI TR 102 216, where it is defined as a "smart card that conforms to the specifications written and maintained by the ETSI Smart Card Platform project". In addition, the definition has a note that states that "UICC is neither an abbreviation nor an acronym".
+NIST SP 800-101 Rev. 1 and NIST Computer Security Resource Center Glossary state that, "A UICC may be referred to as a SIM, USIM, RUIM or CSIM, and is used interchangeably with those terms", though this is an over-simplification. The primary component of a UICC is a SIM card.
+
+Design
+A UICC consists of a CPU, ROM, RAM, EEPROM and I/O circuits. Early versions consisted of the whole full-size (85 × 54 mm, ISO/IEC 7810 ID-1) smart card. Soon the race for smaller telephones called for a smaller version of the card. The card was cropped down to 25 × 15 mm (ISO/IEC 7810 ID-000), as illustrated.
+
+2G versus 3G
+In 2G networks, the SIM card and SIM application were bound together, so that "SIM card" could mean the physical card, or any physical card with the SIM application.
+In a GSM network, the UICC contains a SIM application and in a UMTS network, it contains a USIM application. A UICC may contain several applications, making it possible for the same smart card to give access to both GSM and UMTS networks, and also provide storage of a phone book and other applications. It is also possible to access a GSM network using a USIM application and it is possible to access UMTS networks using a SIM application with mobile terminals prepared for this. With the UMTS release 5 a new application, the IP multimedia Services Identity Module (ISIM) is required for services in the IMS. The telephone book is a separate application and not part of either subscriber identity module.
+In a cdmaOne/CDMA2000 ("CDMA") network, the UICC contains a CSIM application, in addition to 3GPP USIM and SIM applications.  A card with all 3 features is called a removable user identity card, or  R-UIM.  Thus, the R-UIM card can be inserted into CDMA, GSM, or UMTS handsets, and will work in all three cases.
+In 3G networks, it is a mistake to speak of a USIM, CSIM, or SIM card, as all three are applications running on a UICC card.
+
+Usage
+Since the card slot is standardized, a subscriber can easily move their wireless account and phone number from one handset to another. This will also transfer their phone book and text messages. Similarly, usually a subscriber can change carriers by inserting a new carrier's UICC card into their existing handset. However, it is not always possible because some carriers (e.g., in U.S.) SIM-lock the phones that they sell, preventing rival carriers' cards from being used.
+The use and content of the card can be protected by use of PIN codes. One code, PIN1, can be defined to control normal use of the phone. Another code, PIN2, can be set, to allow the use of special functions (like limiting outbound telephone calls to a list of numbers). PUK1 and PUK2 is used to reset PIN1 and PIN2 respectively.
+The integration of the ETSI framework and the Application management framework of GlobalPlatform is standardized in the UICC configuration.

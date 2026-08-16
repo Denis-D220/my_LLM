@@ -1,0 +1,29 @@
+Model synthesis (also wave function collapse or 'wfc') is a family of constraint-solving algorithms commonly used in procedural generation, especially in the video game industry.
+
+Some video games known to have utilized variants of the algorithm include Bad North, Townscaper, and Caves of Qud.
+The first example of this type of algorithm was described by Paul Merrell, who termed it 'model synthesis' first in his 2007 i3D paper  and also presented at the 2008 SIGGRAPH conference and his 2009 PhD thesis. The name 'wave function collapse' later became the popular name for a variant of that algorithm, after an implementation by Maxim Gumin was published in 2016 on a GitHub repository with that name. Gumin's implementation significantly popularised this style of algorithm, with it becoming widely adopted and adapted by technical artists and game developers over the following years.
+There were a number of inspirations to Gumin's implementation, including Merrell's PhD dissertation, and convolutional neural network style transfer. The popular name for the algorithm, 'wave function collapse', is from an analogy drawn between the algorithm's method and the concept of superposition and observation in quantum mechanics. Some innovations present in Gumin's implementation included the usage of overlapping patterns, allowing a single image to be used as an input to the algorithm.
+Some have speculated that the reason Gumin's implementation proved more popular than Merrell's, may have been due to the 'model synthesis' implementation's lower accessibility, its 3D focus, or perhaps the general public's computing constraints at the time.
+One of the differences between Merrell & Gumin's implementation and 'wave function collapse' lies in the decision of which cell to 'collapse' next. Merrell's implementation uses a scanline approach, whereas Gumin's always selects as next cell the one with the lowest entropy.
+
+Description
+The WFC or 'model synthesis' algorithm has some variants. Gumin and Merrell's implementations are described below, and other variants are noted:
+
+Gumin's implementation
+The input bitmap is read, and the patterns present within the bitmap are counted.
+An array is created with the dimensions of the output desired.
+Each cell of the array is initialized in an 'unobserved' state
+The following steps are repeated:
+The cell with the lowest number of possible output states is located
+'Collapse' this cell into one of its possible states according to the rules
+Check that all cells are still valid and follow the rules
+Once all cells are 'collapsed' into a definite state, return the output. If the output is illegal, discard it, and repeat the process until legal.
+
+Merrell's implementation
+Merrell's earlier implementation is substantially the same as Gumin's with some minor differences. 
+(1) In Merrell's version, there is no requirement to select the cell with the lowest number of possible output states for collapse. Instead, a scanline approach is adopted. According to Merrell, this results in a lower failure rate of the model without any negative effect on quality. Some commentators have noted however that the scanline approach to 'collapse' tends to result in directional artifacts.
+(2) Merrell's approach performs the algorithm in chunks, rather than all-at-once. This approach greatly reduces the failure rate for many large complex models; especially in a 3D space.
+
+Developments
+In April 2023 Shaad Alaka and Rafael Bidarra of Delft University proposed 'Hierarchical Semantic wave function collapse'. Essentially, the algorithm is modified to work beyond simple, unstructured sets of tiles. Prior to their work, all WFC algorithm variants operated on a flat set of tile choices per cell.
+Their generalised approach organizes tile-sets into a hierarchy, consisting of abstract nodes called 'meta-tiles', and terminating nodes called 'leaf tiles'. For example, on the first pass, WFC might make a certain tile a meta-tile of 'castle' type; which on a second pass will be collapsed into other tiles based on a rule, e.g. a 'wall' or 'grass' tile.

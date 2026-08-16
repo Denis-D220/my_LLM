@@ -1,0 +1,1637 @@
+In mathematics, injections, surjections, and bijections are classes of functions distinguished by the manner in which arguments (input expressions from the domain) and images (output expressions from the codomain) are related or mapped to each other.
+A function maps elements from its domain to elements in its codomain. Given a function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+:
+
+The function is injective, or one-to-one, if each element of the codomain is mapped to by at most one element of the domain, or equivalently, if distinct elements of the domain map to distinct elements in the codomain. An injective function is also called an injection. Notationally:
+
+  
+    
+      
+        ∀
+        x
+        ,
+        
+          x
+          ′
+        
+        ∈
+        X
+        ,
+        f
+        (
+        x
+        )
+        =
+        f
+        (
+        
+          x
+          ′
+        
+        )
+        
+        ⟹
+        
+        x
+        =
+        
+          x
+          ′
+        
+        ,
+      
+    
+    {\displaystyle \forall x,x'\in X,f(x)=f(x')\implies x=x',}
+  
+
+or, equivalently (using logical transposition),
+
+  
+    
+      
+        ∀
+        x
+        ,
+        
+          x
+          ′
+        
+        ∈
+        X
+        ,
+        x
+        ≠
+        
+          x
+          ′
+        
+        
+        ⟹
+        
+        f
+        (
+        x
+        )
+        ≠
+        f
+        (
+        
+          x
+          ′
+        
+        )
+        .
+      
+    
+    {\displaystyle \forall x,x'\in X,x\neq x'\implies f(x)\neq f(x').}
+  
+
+The function is surjective, or onto, if each element of the codomain is mapped to by at least one element of the domain; that is, if the image and the codomain of the function are equal. A surjective function is a surjection. Notationally:
+
+  
+    
+      
+        ∀
+        y
+        ∈
+        Y
+        ,
+        ∃
+        x
+        ∈
+        X
+        ,
+        y
+        =
+        f
+        (
+        x
+        )
+        .
+      
+    
+    {\displaystyle \forall y\in Y,\exists x\in X,y=f(x).}
+  
+
+The function is bijective (one-to-one and onto, one-to-one correspondence, or invertible) if each element of the codomain is mapped to by exactly one element of the domain; that is, if the function is both injective and surjective. A bijective function is also called a bijection. That is, combining the definitions of injective and surjective,
+
+  
+    
+      
+        ∀
+        y
+        ∈
+        Y
+        ,
+        ∃
+        !
+        x
+        ∈
+        X
+        ,
+        y
+        =
+        f
+        (
+        x
+        )
+        ,
+      
+    
+    {\displaystyle \forall y\in Y,\exists !x\in X,y=f(x),}
+  
+
+where 
+  
+    
+      
+        ∃
+        !
+        x
+      
+    
+    {\displaystyle \exists !x}
+  
+ means "there exists exactly one x".
+In any case (for any function), the following holds:
+
+  
+    
+      
+        ∀
+        x
+        ∈
+        X
+        ,
+        ∃
+        !
+        y
+        ∈
+        Y
+        ,
+        y
+        =
+        f
+        (
+        x
+        )
+        .
+      
+    
+    {\displaystyle \forall x\in X,\exists !y\in Y,y=f(x).}
+  
+
+An injective function need not be surjective (not all elements of the codomain may be associated with arguments), and a surjective function need not be injective (some images may be associated with more than one argument). The four possible combinations of injective and surjective features are illustrated in the adjacent diagrams.
+
+Injection
+
+A function is injective (one-to-one) if each possible element of the codomain is mapped to by at most one argument. Equivalently, a function is injective if it maps distinct arguments to distinct images. An injective function is an injection. The formal definition is the following.
+
+The function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+ is injective, if for all 
+  
+    
+      
+        x
+        ,
+        
+          x
+          ′
+        
+        ∈
+        X
+      
+    
+    {\displaystyle x,x'\in X}
+  
+, 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        f
+        (
+        
+          x
+          ′
+        
+        )
+        ⇒
+        x
+        =
+        
+          x
+          ′
+        
+        .
+      
+    
+    {\displaystyle f(x)=f(x')\Rightarrow x=x'.}
+  
+
+The following are some facts related to injections:
+
+A function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+ is injective if and only if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is empty or 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is left-invertible; that is, there is a function 
+  
+    
+      
+        g
+        :
+        f
+        (
+        X
+        )
+        →
+        X
+      
+    
+    {\displaystyle g\colon f(X)\to X}
+  
+ such that 
+  
+    
+      
+        g
+        ∘
+        f
+        =
+      
+    
+    {\displaystyle g\circ f=}
+  
+ identity function on X. Here, 
+  
+    
+      
+        f
+        (
+        X
+        )
+      
+    
+    {\displaystyle f(X)}
+  
+ is the image of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+.
+Since every function is surjective when its codomain is restricted to its image, every injection induces a bijection onto its image. More precisely, every injection 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+ can be factored as a bijection followed by an inclusion as follows. Let 
+  
+    
+      
+        
+          f
+          
+            R
+          
+        
+        :
+        X
+        →
+        f
+        (
+        X
+        )
+      
+    
+    {\displaystyle f_{R}\colon X\rightarrow f(X)}
+  
+ be 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ with codomain restricted to its image, and let 
+  
+    
+      
+        i
+        :
+        f
+        (
+        X
+        )
+        →
+        Y
+      
+    
+    {\displaystyle i\colon f(X)\to Y}
+  
+ be the inclusion map from 
+  
+    
+      
+        f
+        (
+        X
+        )
+      
+    
+    {\displaystyle f(X)}
+  
+ into 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+. Then 
+  
+    
+      
+        f
+        =
+        i
+        ∘
+        
+          f
+          
+            R
+          
+        
+      
+    
+    {\displaystyle f=i\circ f_{R}}
+  
+. A dual factorization is given for surjections below.
+The composition of two injections is again an injection, but if 
+  
+    
+      
+        g
+        ∘
+        f
+      
+    
+    {\displaystyle g\circ f}
+  
+ is injective, then it can only be concluded that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is injective (see figure).
+Every embedding is injective.
+
+Surjection
+
+A function is surjective or onto if each element of the codomain is mapped to by at least one element of the domain. In other words, each element of the codomain has a non-empty preimage. Equivalently, a function is surjective if its image is equal to its codomain. A surjective function is a surjection. The formal definition is the following.
+
+The function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+ is surjective, if for all 
+  
+    
+      
+        y
+        ∈
+        Y
+      
+    
+    {\displaystyle y\in Y}
+  
+, there is 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  
+ such that 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        y
+        .
+      
+    
+    {\displaystyle f(x)=y.}
+  
+
+The following are some facts related to surjections:
+
+A function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+ is surjective if and only if it is right-invertible; that is, if and only if there is a function 
+  
+    
+      
+        g
+        :
+        Y
+        →
+        X
+      
+    
+    {\displaystyle g\colon Y\to X}
+  
+ such that 
+  
+    
+      
+        f
+        ∘
+        g
+        =
+      
+    
+    {\displaystyle f\circ g=}
+  
+ identity function on 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+. (This statement is equivalent to the axiom of choice.)
+By collapsing all arguments mapping to a given fixed image, every surjection induces a bijection from a quotient set of its domain to its codomain. More precisely, given a function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, define an equivalence relation on the domain of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, such that x and y are equivalent if and only if they have the same image under 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+; then the equivalence classes of this relation are the preimages under 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ of the elements of the image of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+. As all elements of any one of these equivalence classes are mapped by 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ on the same element of the codomain, this induces a bijection between the quotient set by this equivalence relation (the set of the equivalence classes) and the image of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ (which is its codomain when 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is surjective). Moreover, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is the composition of the canonical projection from 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ to the quotient set, and the bijection between the quotient set and the codomain of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+.
+The composition of two surjections is again a surjection, but if 
+  
+    
+      
+        g
+        ∘
+        f
+      
+    
+    {\displaystyle g\circ f}
+  
+ is surjective, then it can only be concluded that 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is surjective (see figure).
+
+Bijection
+
+A function is bijective if it is both injective and surjective. A bijective function is also called a bijection or a one-to-one correspondence (not to be confused with one-to-one function, which refers to injection). A function is bijective if and only if every possible image is mapped to by exactly one argument. This equivalent condition is formally expressed as follows:
+
+The function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+ is bijective, if for all 
+  
+    
+      
+        y
+        ∈
+        Y
+      
+    
+    {\displaystyle y\in Y}
+  
+, there is a unique 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  
+ such that 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        y
+        .
+      
+    
+    {\displaystyle f(x)=y.}
+  
+
+The following are some facts related to bijections:
+
+A function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  
+ is bijective if and only if it is invertible; that is, there is a function 
+  
+    
+      
+        g
+        :
+        Y
+        →
+        X
+      
+    
+    {\displaystyle g\colon Y\to X}
+  
+ such that 
+  
+    
+      
+        g
+        ∘
+        f
+        =
+      
+    
+    {\displaystyle g\circ f=}
+  
+ identity function on 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        f
+        ∘
+        g
+        =
+      
+    
+    {\displaystyle f\circ g=}
+  
+ identity function on 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+. This function maps each image to its unique preimage.
+The composition of two bijections is again a bijection, but if 
+  
+    
+      
+        g
+        ∘
+        f
+      
+    
+    {\displaystyle g\circ f}
+  
+ is a bijection, then it can only be concluded that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is injective and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is surjective (see the figure at right and the remarks above regarding injections and surjections).
+The bijections from a set to itself form a group under composition, called the symmetric group.
+
+Cardinality
+Suppose that one wants to define what it means for two sets to "have the same number of elements". One way to do this is to say that two sets "have the same number of elements", if and only if all the elements of one set can be paired with the elements of the other, in such a way that each element is paired with exactly one element. Accordingly, one can define two sets to "have the same number of elements"—if there is a bijection between them. In which case, the two sets are said to have the same cardinality.
+Likewise, one can say that set 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ "has fewer than or the same number of elements" as set 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+, if there is an injection from 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+; one can also say that set 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ "has fewer than the number of elements" in set 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+, if there is an injection from 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ to 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+, but not a bijection between 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+.
+
+Examples
+It is important to specify the domain and codomain of each function, since by changing these, functions which appear to be the same may have different properties. 
+
+Injective and surjective (bijective)
+The identity function idX for every non-empty set X, and thus specifically 
+  
+    
+      
+        
+          R
+        
+        →
+        
+          R
+        
+        :
+        x
+        ↦
+        x
+        .
+      
+    
+    {\displaystyle \mathbf {R} \to \mathbf {R} :x\mapsto x.}
+  
+
+  
+    
+      
+        
+          
+            R
+          
+          
+            +
+          
+        
+        →
+        
+          
+            R
+          
+          
+            +
+          
+        
+        :
+        x
+        ↦
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} ^{+}\to \mathbf {R} ^{+}:x\mapsto x^{2}}
+  
+, and thus also its inverse 
+  
+    
+      
+        
+          
+            R
+          
+          
+            +
+          
+        
+        →
+        
+          
+            R
+          
+          
+            +
+          
+        
+        :
+        x
+        ↦
+        
+          
+            x
+          
+        
+        .
+      
+    
+    {\displaystyle \mathbf {R} ^{+}\to \mathbf {R} ^{+}:x\mapsto {\sqrt {x}}.}
+  
+
+The exponential function 
+  
+    
+      
+        exp
+        :
+        
+          R
+        
+        →
+        
+          
+            R
+          
+          
+            +
+          
+        
+        :
+        x
+        ↦
+        
+          
+            e
+          
+          
+            x
+          
+        
+      
+    
+    {\displaystyle \exp \colon \mathbf {R} \to \mathbf {R} ^{+}:x\mapsto \mathrm {e} ^{x}}
+  
+ (that is, the exponential function with its codomain restricted to its image), and thus also its inverse the natural logarithm 
+  
+    
+      
+        ln
+        :
+        
+          
+            R
+          
+          
+            +
+          
+        
+        →
+        
+          R
+        
+        :
+        x
+        ↦
+        ln
+        ⁡
+        
+          x
+        
+        .
+      
+    
+    {\displaystyle \ln \colon \mathbf {R} ^{+}\to \mathbf {R} :x\mapsto \ln {x}.}
+  
+ Here, 
+  
+    
+      
+        
+          
+            R
+          
+          
+            +
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} ^{+}}
+  
+ denotes the positive real numbers.
+
+  
+    
+      
+        
+          R
+        
+        →
+        
+          R
+        
+        :
+        x
+        ↦
+        
+          x
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} \to \mathbf {R} :x\mapsto x^{3}}
+  
+
+Injective and non-surjective
+The exponential function 
+  
+    
+      
+        exp
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+        :
+        x
+        ↦
+        
+          
+            e
+          
+          
+            x
+          
+        
+        .
+      
+    
+    {\displaystyle \exp \colon \mathbf {R} \to \mathbf {R} :x\mapsto \mathrm {e} ^{x}.}
+  
+
+Non-injective and surjective
+
+  
+    
+      
+        
+          R
+        
+        →
+        
+          R
+        
+        :
+        x
+        ↦
+        (
+        x
+        −
+        1
+        )
+        x
+        (
+        x
+        +
+        1
+        )
+        =
+        
+          x
+          
+            3
+          
+        
+        −
+        x
+        .
+      
+    
+    {\displaystyle \mathbf {R} \to \mathbf {R} :x\mapsto (x-1)x(x+1)=x^{3}-x.}
+  
+
+  
+    
+      
+        
+          R
+        
+        →
+        [
+        −
+        1
+        ,
+        1
+        ]
+        :
+        x
+        ↦
+        sin
+        ⁡
+        (
+        x
+        )
+        .
+      
+    
+    {\displaystyle \mathbf {R} \to [-1,1]:x\mapsto \sin(x).}
+  
+
+Non-injective and non-surjective
+
+  
+    
+      
+        
+          R
+        
+        →
+        
+          R
+        
+        :
+        x
+        ↦
+        sin
+        ⁡
+        (
+        x
+        )
+        .
+      
+    
+    {\displaystyle \mathbf {R} \to \mathbf {R} :x\mapsto \sin(x).}
+  
+
+  
+    
+      
+        
+          R
+        
+        →
+        
+          R
+        
+        :
+        x
+        ↦
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} \to \mathbf {R} :x\mapsto x^{2}}
+  
+
+Properties
+For every function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, let 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ be a subset of the domain and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ a subset of the codomain. One has always 
+  
+    
+      
+        X
+        ⊂
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        f
+        (
+        X
+        )
+        )
+      
+    
+    {\displaystyle X\subset f^{-1}(f(X))}
+  
+ and 
+  
+    
+      
+        f
+        (
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        Y
+        )
+        )
+        ⊂
+        Y
+      
+    
+    {\displaystyle f(f^{-1}(Y))\subset Y}
+  
+, where 
+  
+    
+      
+        f
+        (
+        X
+        )
+      
+    
+    {\displaystyle f(X)}
+  
+ is the image of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        Y
+        )
+      
+    
+    {\displaystyle f^{-1}(Y)}
+  
+ is the preimage of 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ under 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+. If 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is injective, then 
+  
+    
+      
+        X
+        =
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        f
+        (
+        X
+        )
+        )
+      
+    
+    {\displaystyle X=f^{-1}(f(X))}
+  
+, and if 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is surjective, then 
+  
+    
+      
+        f
+        (
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        Y
+        )
+        )
+        =
+        Y
+      
+    
+    {\displaystyle f(f^{-1}(Y))=Y}
+  
+.
+For every function 
+  
+    
+      
+        h
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle h:X\to Y}
+  
+, one can define a surjection 
+  
+    
+      
+        H
+        :
+        X
+        →
+        h
+        (
+        X
+        )
+        :
+        x
+        ↦
+        h
+        (
+        x
+        )
+      
+    
+    {\displaystyle H:X\to h(X):x\mapsto h(x)}
+  
+ and an injection 
+  
+    
+      
+        I
+        :
+        h
+        (
+        X
+        )
+        →
+        Y
+        :
+        y
+        ↦
+        y
+      
+    
+    {\displaystyle I:h(X)\to Y:y\mapsto y}
+  
+. It follows that ⁠
+  
+    
+      
+        h
+        =
+        I
+        ∘
+        H
+      
+    
+    {\displaystyle h=I\circ H}
+  
+⁠. This decomposition as the composition of a surjection and an injection is unique up to an isomorphism, in the sense that, given such a decomposition, there is a unique bijection 
+  
+    
+      
+        φ
+        :
+        h
+        (
+        X
+        )
+        →
+        H
+        (
+        X
+        )
+      
+    
+    {\displaystyle \varphi :h(X)\to H(X)}
+  
+ such that 
+  
+    
+      
+        H
+        (
+        x
+        )
+        =
+        φ
+        (
+        h
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle H(x)=\varphi (h(x))}
+  
+ and 
+  
+    
+      
+        I
+        (
+        φ
+        (
+        h
+        (
+        x
+        )
+        )
+        )
+        =
+        h
+        (
+        x
+        )
+      
+    
+    {\displaystyle I(\varphi (h(x)))=h(x)}
+  
+  for every 
+  
+    
+      
+        x
+        ∈
+        X
+        .
+      
+    
+    {\displaystyle x\in X.}
+  
+
+Category theory
+In the category of sets, injections, surjections, and bijections correspond precisely to monomorphisms, epimorphisms, and isomorphisms, respectively.
+
+History
+The Oxford English Dictionary records the use of the word injection as a noun by S. Mac Lane in Bulletin of the American Mathematical Society (1950), and injective as an adjective by Eilenberg and Steenrod in Foundations of Algebraic Topology (1952).
+However, it was not until the French Bourbaki group coined the injective-surjective-bijective terminology (both as nouns and adjectives) that they achieved widespread adoption.

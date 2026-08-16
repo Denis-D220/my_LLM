@@ -1,0 +1,707 @@
+The effective potential (also known as effective potential energy) combines multiple, perhaps opposing, effects into a single potential. In its basic form, it is the sum of the "opposing" centrifugal potential energy with the potential energy of a dynamical system. It may be used to determine the orbits of planets (both Newtonian and relativistic) and to perform semi-classical atomic calculations, and often allows problems to be reduced to fewer dimensions.
+
+Definition
+
+The basic form of the potential 
+  
+    
+      
+        
+          U
+          
+            eff
+          
+        
+      
+    
+    {\displaystyle U_{\text{eff}}}
+  
+ is defined as
+
+  
+    
+      
+        
+          U
+          
+            eff
+          
+        
+        (
+        
+          r
+        
+        )
+        =
+        
+          
+            
+              L
+              
+                2
+              
+            
+            
+              2
+              μ
+              
+                r
+                
+                  2
+                
+              
+            
+          
+        
+        +
+        U
+        (
+        
+          r
+        
+        )
+        ,
+      
+    
+    {\displaystyle U_{\text{eff}}(\mathbf {r} )={\frac {L^{2}}{2\mu r^{2}}}+U(\mathbf {r} ),}
+  
+
+where
+
+L is the angular momentum,
+r is the distance between the two masses,
+μ is the reduced mass of the two bodies (approximately equal to the mass of the orbiting body if one mass is much larger than the other),
+U(r) is the general form of the potential.
+The effective force, then, is the negative gradient of the effective potential:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    F
+                  
+                  
+                    eff
+                  
+                
+              
+              
+                
+                =
+                −
+                ∇
+                
+                  U
+                  
+                    eff
+                  
+                
+                (
+                
+                  r
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      L
+                      
+                        2
+                      
+                    
+                    
+                      μ
+                      
+                        r
+                        
+                          3
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        r
+                      
+                      ^
+                    
+                  
+                
+                −
+                ∇
+                U
+                (
+                
+                  r
+                
+                )
+                ,
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbf {F} _{\text{eff}}&=-\nabla U_{\text{eff}}(\mathbf {r} )\\&={\frac {L^{2}}{\mu r^{3}}}{\hat {\mathbf {r} }}-\nabla U(\mathbf {r} ),\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              
+                r
+              
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\hat {\mathbf {r} }}}
+  
+ denotes a unit vector in the radial direction.
+
+Important properties
+There are many useful features of the effective potential, such as
+
+  
+    
+      
+        
+          U
+          
+            eff
+          
+        
+        ≤
+        E
+        .
+      
+    
+    {\displaystyle U_{\text{eff}}\leq E.}
+  
+
+To find the radius of a circular orbit, simply minimize the effective potential with respect to 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+, or equivalently set the net force to zero and then solve for 
+  
+    
+      
+        
+          r
+          
+            0
+          
+        
+      
+    
+    {\displaystyle r_{0}}
+  
+:
+
+  
+    
+      
+        
+          
+            
+              d
+              
+                U
+                
+                  eff
+                
+              
+            
+            
+              d
+              r
+            
+          
+        
+        =
+        0.
+      
+    
+    {\displaystyle {\frac {dU_{\text{eff}}}{dr}}=0.}
+  
+
+After solving for 
+  
+    
+      
+        
+          r
+          
+            0
+          
+        
+      
+    
+    {\displaystyle r_{0}}
+  
+, plug this back into 
+  
+    
+      
+        
+          U
+          
+            eff
+          
+        
+      
+    
+    {\displaystyle U_{\text{eff}}}
+  
+ to find the maximum value of the effective potential 
+  
+    
+      
+        
+          U
+          
+            eff
+          
+          
+            max
+          
+        
+      
+    
+    {\displaystyle U_{\text{eff}}^{\text{max}}}
+  
+.
+A circular orbit may be either stable or unstable. If it is unstable, a small perturbation could destabilize the orbit, but a stable orbit would return to equilibrium. To determine the stability of a circular orbit, determine the concavity of the effective potential. If the concavity is positive,
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  2
+                
+              
+              
+                U
+                
+                  eff
+                
+              
+            
+            
+              d
+              
+                r
+                
+                  2
+                
+              
+            
+          
+        
+        >
+        0
+        ,
+      
+    
+    {\displaystyle {\frac {d^{2}U_{\text{eff}}}{dr^{2}}}>0,}
+  
+
+the orbit is stable.
+The frequency of small oscillations, using basic Hamiltonian analysis, is
+
+  
+    
+      
+        ω
+        =
+        
+          
+            
+              
+                U
+                
+                  eff
+                
+                ″
+              
+              m
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \omega ={\sqrt {\frac {U_{\text{eff}}''}{m}}},}
+  
+
+where the double prime indicates the second derivative of the effective potential with respect to 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ and is evaluated at a minimum.
+
+Gravitational potential
+
+Consider a particle of mass m orbiting a much heavier object of mass M. Assume Newtonian mechanics, which is both classical and non-relativistic. The conservation of energy and angular momentum give two constants E and L, which have values
+
+  
+    
+      
+        E
+        =
+        
+          
+            1
+            2
+          
+        
+        m
+        
+          (
+          
+            
+              
+                
+                  
+                    r
+                    ˙
+                  
+                
+              
+              
+                2
+              
+            
+            +
+            
+              r
+              
+                2
+              
+            
+            
+              
+                
+                  
+                    ϕ
+                    ˙
+                  
+                
+              
+              
+                2
+              
+            
+          
+          )
+        
+        −
+        
+          
+            
+              G
+              m
+              M
+            
+            r
+          
+        
+        ,
+      
+    
+    {\displaystyle E={\frac {1}{2}}m\left({\dot {r}}^{2}+r^{2}{\dot {\phi }}^{2}\right)-{\frac {GmM}{r}},}
+  
+
+  
+    
+      
+        L
+        =
+        m
+        
+          r
+          
+            2
+          
+        
+        
+          
+            
+              ϕ
+              ˙
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle L=mr^{2}{\dot {\phi }},}
+  
+
+when the motion of the larger mass is negligible. In these expressions,
+
+  
+    
+      
+        
+          
+            
+              r
+              ˙
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {r}}}
+  
+ is the derivative of r with respect to time,
+
+  
+    
+      
+        
+          
+            
+              ϕ
+              ˙
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {\phi }}}
+  
+ is the angular velocity of mass m,
+G is the gravitational constant,
+E is the total energy,
+L is the angular momentum.
+Only two variables are needed, since the motion occurs in a plane. Substituting the second expression into the first and rearranging gives
+
+  
+    
+      
+        m
+        
+          
+            
+              
+                r
+                ˙
+              
+            
+          
+          
+            2
+          
+        
+        =
+        2
+        E
+        −
+        
+          
+            
+              L
+              
+                2
+              
+            
+            
+              m
+              
+                r
+                
+                  2
+                
+              
+            
+          
+        
+        +
+        
+          
+            
+              2
+              G
+              m
+              M
+            
+            r
+          
+        
+        =
+        2
+        E
+        −
+        
+          
+            1
+            
+              r
+              
+                2
+              
+            
+          
+        
+        
+          (
+          
+            
+              
+                
+                  L
+                  
+                    2
+                  
+                
+                m
+              
+            
+            −
+            2
+            G
+            m
+            M
+            r
+          
+          )
+        
+        ,
+      
+    
+    {\displaystyle m{\dot {r}}^{2}=2E-{\frac {L^{2}}{mr^{2}}}+{\frac {2GmM}{r}}=2E-{\frac {1}{r^{2}}}\left({\frac {L^{2}}{m}}-2GmMr\right),}
+  
+
+  
+    
+      
+        
+          
+            1
+            2
+          
+        
+        m
+        
+          
+            
+              
+                r
+                ˙
+              
+            
+          
+          
+            2
+          
+        
+        =
+        E
+        −
+        
+          U
+          
+            eff
+          
+        
+        (
+        r
+        )
+        ,
+      
+    
+    {\displaystyle {\frac {1}{2}}m{\dot {r}}^{2}=E-U_{\text{eff}}(r),}
+  
+
+where
+
+  
+    
+      
+        
+          U
+          
+            eff
+          
+        
+        (
+        r
+        )
+        =
+        
+          
+            
+              L
+              
+                2
+              
+            
+            
+              2
+              m
+              
+                r
+                
+                  2
+                
+              
+            
+          
+        
+        −
+        
+          
+            
+              G
+              m
+              M
+            
+            r
+          
+        
+      
+    
+    {\displaystyle U_{\text{eff}}(r)={\frac {L^{2}}{2mr^{2}}}-{\frac {GmM}{r}}}
+  
+
+is the effective potential. The original two-variable problem has been reduced to a one-variable problem. For many applications the effective potential can be treated exactly like the potential energy of a one-dimensional system: for instance, an energy diagram using the effective potential determines turning points and locations of stable and unstable equilibria. A similar method may be used in other applications, for instance, determining orbits in a general relativistic Schwarzschild metric.
+Effective potentials are widely used in various condensed matter subfields, e.g. the Gauss-core potential (Likos 2002, Baeurle 2004) and the screened Coulomb potential (Likos 2001).

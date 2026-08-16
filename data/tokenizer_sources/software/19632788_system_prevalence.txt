@@ -1,0 +1,13 @@
+System prevalence is a simple software architectural pattern that combines system images (snapshots) and transaction journaling to provide speed, performance scalability, transparent persistence and transparent live mirroring of computer system state.
+In a prevalent system, state is kept in memory in native format, all transactions are journaled and System images are regularly saved to disk.
+System images and transaction journals can be stored in language-specific serialization format for speed or in portable formats for cross-language consumption.
+The first usage of the term and generic, publicly available implementation of a system prevalence layer was Prevayler, written for Java by Klaus Wuestefeld in 2001.
+
+Advantages
+Simply keeping system state in RAM in its normal, natural, language-specific format is orders of magnitude faster and more programmer-friendly than the multiple conversions that are needed when it is stored and retrieved from a DBMS.
+As an example, Martin Fowler describes "The LMAX Architecture" with a transaction-journal and system-image (snapshot) based business system at its core, which can process 6 million transactions per second on a single thread.
+
+Requirement
+A prevalent system needs enough memory to hold its entire state in RAM (the "prevalent hypothesis"). Prevalence advocates claim this is continuously alleviated by decreasing RAM prices, and the fact that many business databases are small enough already to fit in memory.
+Programmers need skill in working with business state natively in RAM, rather than using explicit API calls for storage and queries for retrieval.
+The system's events must be capturable for journaling.

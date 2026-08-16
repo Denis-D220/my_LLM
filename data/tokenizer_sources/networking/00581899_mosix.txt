@@ -1,0 +1,45 @@
+MOSIX is a proprietary distributed operating system. Although early versions were based on older UNIX systems, since 1999 it focuses on Linux clusters and grids. In a MOSIX cluster/grid there is no need to modify or to link applications with any library, to copy files or login to remote nodes, or even to assign processes to different nodes – it is all done automatically, like in an SMP.
+
+History
+MOSIX has been researched and developed since 1977 at The Hebrew University of Jerusalem by the research team of Prof. Amnon Barak. So far, ten major versions have been developed. The first version, called MOS, for Multicomputer OS, (1981–83) was based on Bell Lab's Seventh Edition Unix and ran on a cluster of PDP-11 computers. Later versions were based on Unix System V Release 2 (1987–89) and ran on a cluster of VAX and NS32332-based computers, followed by a BSD/OS-derived version (1991–93) for a cluster of 486/Pentium computers. Since 1999 MOSIX is tuned to Linux for x86 platforms.
+
+MOSIX2
+The second version of MOSIX, called MOSIX2, compatible with Linux-2.6 and 3.0 kernels. MOSIX2 is implemented as an OS virtualization layer that provides users and applications with a single system image with the Linux run-time environment. It allows applications to run in remote nodes as if they run locally. Users run their regular (sequential and parallel) applications while MOSIX transparently and automatically seeks resources and migrates processes among nodes to improve the overall performance.
+MOSIX2 can manage a cluster and a multicluster (grid) as well as workstations and other shared resources. Flexible management of a grid allows owners of clusters to share their computational resources, while still preserving their autonomy over their own clusters and their ability to disconnect their nodes from the grid at any time, without disrupting already running programs.
+A MOSIX grid can extend indefinitely as long as there is trust between its cluster owners. This must include guarantees that guest applications will not be modified while running in remote clusters and that no hostile computers can be connected to the local network. Nowadays these requirements are standard within clusters and organizational grids.
+MOSIX2 can run in native mode or in a virtual machine (VM). In native mode, performance is better, but it requires modifications to the base Linux kernel, whereas a VM can run on top of any unmodified operating system that supports virtualization, including Microsoft Windows, Linux and Mac OS X.
+MOSIX2 is most suitable for running compute intensive applications with low to moderate amount of input/output (I/O). Tests of MOSIX2 show that the performance of several such applications over a 1 Gbit/s campus grid is nearly identical to that of a single cluster.
+
+Main features
+Provides aspects of a single-system image:
+Users can login on any node and do not need to know where their programs run.
+No need to modify or link applications with special libraries.
+No need to copy files to remote nodes.
+Automatic resource discovery and workload distribution by process migration:
+Load-balancing.
+Migrating processes from slower to faster nodes and from nodes that run out of free memory.
+Migratable sockets for direct communication between migrated processes.
+Secure run time environment (sandbox) for guest processes.
+Live queuing – queued jobs preserve their full generic Linux environment.
+Batch jobs.
+Checkpoint and recovery.
+Tools: automatic installation and configuration scripts, on-line monitors.
+
+MOSIX for HPC
+MOSIX is most suitable for running HPC applications with low to moderate amount of I/O. Tests of MOSIX show that the performance of several such applications over a 1 Gbit/s campus grid is nearly identical to that of a single cluster. It is particularly suitable for:
+
+Efficient utilization of grid-wide resources, by automatic resource discovery and load-balancing.
+Running applications with unpredictable resource requirements or run times.
+Running long processes, which are automatically sent to grid nodes and are migrated back when these nodes are disconnected from the grid.
+Combining nodes of different speeds, by migrating processes among nodes based on their respective speeds, current load, and available memory.
+A few examples:
+
+Scientific applications – genomic, protein sequences, molecular dynamics, quantum dynamics, nano-technology and other parallel HPC applications.
+Engineering applications – CFD, weather forecasting, crash simulations, oil industry, ASIC design, pharmaceutical and other HPC applications.
+
+MOSIX4
+MOSIX4 was released in July 2014. As of version 4, MOSIX doesn't require kernel patching.
+
+openMosix
+After MOSIX became proprietary software in late 2001, Moshe Bar forked the last free version and started the openMosix project on February 10, 2002.
+On July 15, 2007, Bar decided to end the openMosix project effective March 1, 2008, claiming that "the increasing power and availability of low cost multi-core processors is rapidly making single-system image (SSI) clustering less of a factor in computing". These plans were reconfirmed in March 2008. The LinuxPMI project is continuing development of the former openMosix code.

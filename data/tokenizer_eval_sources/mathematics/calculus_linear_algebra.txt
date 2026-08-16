@@ -1,0 +1,153 @@
+CALCULUS AND LINEAR ALGEBRA: THE MATHEMATICS OF CHANGE AND STRUCTURE
+
+Two subjects dominate the mathematical toolkit of the physical sciences, engineering, economics, statistics, and computing. Calculus is the mathematics of continuous change: it describes how quantities vary, accumulates the effect of varying quantities, and connects the two operations through a single unifying theorem. Linear algebra is the mathematics of structure in many dimensions: it describes systems of linear relationships, the transformations that act on them, and the special directions along which those transformations behave simply.
+
+The two subjects are usually taught separately and then rejoined. Multivariable calculus requires the language of vectors and matrices. Differential equations are analyzed through eigenvalues. Optimization uses gradients, which are vectors, and second-derivative tests, which are matrices. Numerical computation reduces almost every continuous problem to a linear algebra problem eventually. Understanding either subject well means understanding where it meets the other.
+
+PART ONE: CALCULUS
+
+LIMITS AND CONTINUITY
+
+Calculus begins with the limit, which formalizes the idea of approaching a value without necessarily reaching it. The statement that the limit of f(x) as x approaches a equals L means that f(x) can be made arbitrarily close to L by taking x sufficiently close to a, without requiring anything about the value of f at a itself.
+
+The precise definition uses two quantities. For every positive epsilon, there exists a positive delta such that whenever 0 < |x - a| < delta, it follows that |f(x) - L| < epsilon. The epsilon measures how close the output must be; the delta measures how close the input must be to guarantee it. The order of the quantifiers is essential: epsilon is given first, and delta may depend on it.
+
+Limits allow expressions that are undefined at a point to be assigned a sensible value nearby. The function (x^2 - 1)/(x - 1) is undefined at x = 1 because both numerator and denominator vanish. Factoring gives (x - 1)(x + 1)/(x - 1), which equals x + 1 for every x other than 1. The limit as x approaches 1 is therefore 2, even though the function has no value there.
+
+Several standard limits recur. The limit of sin(x)/x as x approaches 0 is 1. The limit of (1 - cos x)/x as x approaches 0 is 0. The limit of (1 + 1/n)^n as n grows without bound is e, approximately 2.71828. These are the seeds from which the derivatives of the trigonometric and exponential functions grow.
+
+Indeterminate forms such as 0/0 and infinity/infinity signal that more work is needed rather than that the limit fails to exist. L'Hôpital's rule states that if f and g both approach 0 or both approach infinity, and the limit of f'(x)/g'(x) exists, then the limit of f(x)/g(x) equals it. Applied to sin(x)/x at 0, the rule gives cos(x)/1, which approaches 1.
+
+A function is continuous at a point when three conditions hold: the function is defined there, the limit exists there, and the two agree. Continuity is what allows intuitive geometric reasoning to be trusted. The Intermediate Value Theorem states that a function continuous on a closed interval takes every value between its endpoint values somewhere inside; this is why a sign change in a continuous function guarantees a root, which is the basis of the bisection method for numerical root-finding. The Extreme Value Theorem states that a continuous function on a closed bounded interval attains a maximum and a minimum, which guarantees that optimization problems on such domains actually have solutions.
+
+THE DERIVATIVE
+
+The derivative measures instantaneous rate of change. It is defined as the limit of the difference quotient: f'(x) equals the limit as h approaches 0 of [f(x + h) - f(x)]/h. Geometrically it is the slope of the tangent line. Physically, if position is s(t), then velocity is s'(t) and acceleration is s''(t). Economically, if total cost is C(q), then marginal cost is C'(q).
+
+Notation varies by context. Lagrange notation writes f'(x). Leibniz notation writes dy/dx, which has the advantage of displaying the variables involved and behaving suggestively under the chain rule. Newton's dot notation is common in mechanics for derivatives with respect to time.
+
+The basic rules follow from the definition. The power rule states that the derivative of x^n is n·x^(n-1) for any real n. The constant multiple rule states that the derivative of c·f is c·f'. The sum rule states that the derivative of f + g is f' + g'. The product rule states that the derivative of f·g is f'·g + f·g'. The quotient rule states that the derivative of f/g is (f'·g - f·g')/g^2. The chain rule states that the derivative of f(g(x)) is f'(g(x))·g'(x), and it is the rule most often applied and most often mishandled.
+
+Derivatives of the standard functions should be known immediately. The derivative of sin x is cos x. The derivative of cos x is -sin x. The derivative of tan x is sec^2 x. The derivative of e^x is e^x, the property that makes the exponential function fundamental. The derivative of ln x is 1/x for positive x. The derivative of a^x is a^x · ln a. The derivative of arctan x is 1/(1 + x^2). The derivative of arcsin x is 1/sqrt(1 - x^2).
+
+Implicit differentiation handles relations that are not solved for one variable. Differentiating x^2 + y^2 = 25 with respect to x gives 2x + 2y·(dy/dx) = 0, so dy/dx = -x/y. This yields the slope of the tangent to a circle without ever expressing y as a function of x. Related-rates problems use the same technique with time as the independent variable: if a ladder of fixed length leans against a wall and the base slides outward at a known rate, differentiating the Pythagorean relation with respect to time relates the two speeds.
+
+Differentiability implies continuity, but not conversely. The absolute value function is continuous at zero yet has no derivative there, because the left and right difference quotients approach different values. Corners, cusps, vertical tangents, and discontinuities are the four ways differentiability can fail.
+
+APPLICATIONS OF THE DERIVATIVE
+
+Optimization is the most common application. At an interior maximum or minimum of a differentiable function, the derivative is zero. Such points are called critical points, and they include maxima, minima, and saddle-like inflections, so a further test is required. The first derivative test examines whether f' changes sign from positive to negative, indicating a local maximum, or negative to positive, indicating a local minimum. The second derivative test examines the sign of f'' at the critical point: positive indicates a local minimum because the curve is concave up, negative indicates a local maximum, and zero is inconclusive.
+
+The second derivative also describes concavity directly. Where f'' is positive the graph is concave up; where negative, concave down. A point where concavity changes is an inflection point. In applications, the second derivative often carries independent meaning: acceleration in mechanics, convexity in finance, curvature in geometry.
+
+Mean Value Theorem: if f is continuous on a closed interval and differentiable on its interior, there is at least one interior point where the instantaneous rate equals the average rate over the interval. This is the theoretical foundation for many results that appear obvious, including the fact that a function with zero derivative everywhere on an interval must be constant, which in turn is why antiderivatives are unique only up to an additive constant.
+
+Linear approximation uses the tangent line to estimate nearby values: f(x) is approximately f(a) + f'(a)(x - a) for x near a. This is the first step of a Taylor series, and it underlies error propagation in measurement, small-angle approximations in physics, and the linearization of nonlinear systems in control engineering.
+
+Newton's method uses derivatives to solve equations numerically. Starting from a guess x_n, the next estimate is x_(n+1) = x_n - f(x_n)/f'(x_n). Under favorable conditions the number of correct digits roughly doubles at each step, which makes the method extremely efficient, though it can fail or diverge if the initial guess is poor or the derivative is near zero.
+
+THE INTEGRAL
+
+Integration answers a different question: given a rate of change, what is the accumulated total? The definite integral of f from a to b is defined as a limit of Riemann sums. The interval is divided into n subintervals, the function is sampled in each, each sample is multiplied by the subinterval width, and the products are summed. As the partition is refined so that the largest subinterval width approaches zero, the sums converge to the integral for any function that is continuous or has only finitely many discontinuities.
+
+Geometrically the definite integral is signed area between the curve and the horizontal axis, counting area below the axis as negative. Physically it accumulates: the integral of velocity over time is displacement, the integral of power over time is energy, the integral of a probability density over an interval is a probability, and the integral of force over distance is work.
+
+The Fundamental Theorem of Calculus links the two operations and is the central result of the subject. Its first part states that if F is defined as the integral of f from a fixed lower limit a up to x, then F'(x) = f(x); differentiation undoes accumulation. Its second part states that if F is any antiderivative of f, then the definite integral of f from a to b equals F(b) - F(a). This converts area computation, which is defined by an awkward limiting process, into antiderivative evaluation, which is a matter of pattern recognition.
+
+Techniques of integration are essentially techniques for recognizing antiderivatives. Substitution reverses the chain rule: setting u = g(x) with du = g'(x) dx converts an integral of f(g(x))·g'(x) into an integral of f(u). Integration by parts reverses the product rule and states that the integral of u dv equals uv minus the integral of v du; it is the method of choice when the integrand is a product of unlike functions, such as x·e^x or ln x. Partial fractions decompose a rational function into simpler pieces whose antiderivatives are logarithms and arctangents. Trigonometric substitution converts expressions containing sqrt(a^2 - x^2), sqrt(a^2 + x^2), or sqrt(x^2 - a^2) into trigonometric integrals by exploiting the Pythagorean identities.
+
+Improper integrals extend the definition to infinite intervals or unbounded integrands by taking limits. The integral of 1/x^2 from 1 to infinity converges to 1, while the integral of 1/x over the same range diverges. The distinction matters in probability, where a density must integrate to a finite total, and in physics, where a divergent integral usually signals that a model has been pushed beyond its domain of validity.
+
+Numerical integration handles integrands with no elementary antiderivative, which is the common case in practice. The trapezoidal rule approximates the function by straight segments; Simpson's rule uses parabolic segments and converges considerably faster; Gaussian quadrature chooses both sample points and weights optimally and achieves high accuracy with few evaluations.
+
+Applications of the definite integral extend well beyond area. Volumes of revolution can be computed by the disk method or the shell method. Arc length integrates sqrt(1 + (f')^2). Surface area, center of mass, moment of inertia, fluid pressure on a submerged surface, and the average value of a function over an interval all reduce to setting up an appropriate integral, and the difficulty is almost always in the setup rather than the evaluation.
+
+SEQUENCES AND SERIES
+
+An infinite series sums infinitely many terms. It converges when its sequence of partial sums approaches a finite limit. The geometric series with ratio r converges to a/(1 - r) when |r| < 1 and diverges otherwise. The harmonic series, the sum of 1/n, diverges despite its terms approaching zero, which shows that terms shrinking to zero is necessary but not sufficient for convergence. The p-series, the sum of 1/n^p, converges exactly when p > 1.
+
+Convergence tests include the comparison test, the limit comparison test, the ratio test, the root test, the integral test, and the alternating series test. The ratio test is the workhorse for series involving factorials or exponentials: if the limit of the ratio of consecutive terms in absolute value is less than one, the series converges absolutely.
+
+Power series represent functions as infinite polynomials. The Taylor series of f about a point a is the sum over n of f^(n)(a)·(x - a)^n / n!. When a is zero it is called a Maclaurin series. Standard expansions include e^x as the sum of x^n/n!, sin x as x - x^3/3! + x^5/5! - ..., cos x as 1 - x^2/2! + x^4/4! - ..., and 1/(1 - x) as the sum of x^n for |x| < 1. Each series converges within a radius of convergence determined by the nearest singularity in the complex plane, which is why the series for 1/(1 + x^2) has radius one despite the function being perfectly well behaved for all real x.
+
+Taylor series make transcendental functions computable, justify the approximations used throughout physics, and provide the error terms that quantify how good those approximations are. The remainder after n terms can be bounded, which converts an approximation into a rigorous estimate with known accuracy.
+
+MULTIVARIABLE CALCULUS
+
+Functions of several variables require extended tools. The partial derivative of f with respect to x holds all other variables fixed and differentiates as usual. The gradient collects the partial derivatives into a vector, and it points in the direction of steepest increase with magnitude equal to the maximum rate of increase. The directional derivative in a unit direction u equals the dot product of the gradient with u.
+
+The total differential approximates change from all variables at once: df is approximately (∂f/∂x)dx + (∂f/∂y)dy. This is the basis of error propagation in experimental science, where uncertainties in several measured inputs combine into an uncertainty in a computed output.
+
+Critical points of a multivariable function occur where the gradient vanishes. Classification uses the Hessian, the matrix of second partial derivatives. If the Hessian is positive definite the point is a local minimum, if negative definite a local maximum, and if it has both positive and negative eigenvalues the point is a saddle. Here the two halves of this subject meet explicitly: a calculus question is answered by a linear algebra computation.
+
+Constrained optimization uses Lagrange multipliers. To optimize f subject to a constraint g = c, one solves the system in which the gradient of f equals lambda times the gradient of g, together with the constraint itself. Geometrically, at an optimum the level surface of the objective is tangent to the constraint surface, so their gradients are parallel. The multiplier lambda has an interpretation of its own: it is the rate at which the optimal value changes as the constraint is relaxed, known as the shadow price in economics.
+
+Multiple integrals accumulate over regions in two or three dimensions. Iterated integration evaluates them one variable at a time, and the order can often be exchanged, which sometimes converts an intractable integral into an easy one. Changing coordinates to polar, cylindrical, or spherical systems frequently simplifies both the integrand and the region, at the cost of introducing a Jacobian factor that accounts for how the coordinate change distorts area or volume.
+
+Vector calculus completes the subject. The divergence of a vector field measures net outward flux per unit volume; the curl measures circulation per unit area. The theorems of Green, Stokes, and Gauss each relate an integral over a region to an integral over its boundary, generalizing the Fundamental Theorem of Calculus to higher dimensions. These theorems are the mathematical form of the conservation laws in fluid dynamics and electromagnetism, and Maxwell's equations are most compactly written in their language.
+
+DIFFERENTIAL EQUATIONS
+
+A differential equation relates a function to its derivatives, and solving one means finding the functions that satisfy the relation. First-order separable equations can be rearranged so that each variable appears with its own differential and then integrated separately. First-order linear equations are solved with an integrating factor. Second-order linear equations with constant coefficients are solved by substituting an exponential trial solution, which converts the differential equation into a polynomial characteristic equation whose roots determine the behavior.
+
+The three cases of the characteristic equation correspond to physically distinct regimes. Distinct real roots produce overdamped decay. A repeated real root produces critical damping, the fastest return to equilibrium without oscillation. Complex conjugate roots produce damped oscillation, with the real part setting the decay rate and the imaginary part setting the frequency. A mass on a spring with a damper, an RLC circuit, and a vehicle suspension are all described by the same equation and exhibit the same three regimes, which is a good illustration of how mathematical structure unifies physically dissimilar systems.
+
+PART TWO: LINEAR ALGEBRA
+
+VECTORS AND VECTOR SPACES
+
+A vector is an object that can be added to another vector and scaled by a number. In concrete terms it is often a list of numbers, but the abstraction matters because polynomials, functions, matrices, and solutions of differential equations all satisfy the same axioms and therefore inherit the same theory.
+
+A vector space over the real numbers is a set closed under addition and scalar multiplication, satisfying associativity, commutativity of addition, existence of a zero vector and additive inverses, and the distributive and identity properties for scalars. A subspace is a subset that is itself a vector space, which requires only that it contain the zero vector and be closed under both operations.
+
+The span of a set of vectors is the collection of all their linear combinations. A set is linearly independent when the only linear combination equal to the zero vector is the one with all coefficients zero; equivalently, when no vector in the set can be written in terms of the others. A basis is a linearly independent set that spans the space, and the dimension is the number of vectors in any basis. Every basis of a given space has the same size, which makes dimension well defined.
+
+The dot product of two vectors multiplies corresponding components and sums them. It equals the product of the magnitudes times the cosine of the angle between the vectors, which means it is zero exactly when the vectors are orthogonal. It gives the length of a vector as the square root of its dot product with itself, and it produces the projection of one vector onto another. The cross product, defined only in three dimensions, produces a vector perpendicular to both inputs with magnitude equal to the area of the parallelogram they span.
+
+MATRICES AND LINEAR SYSTEMS
+
+A matrix is a rectangular array of numbers, but it is better understood as a representation of a linear transformation. Matrix multiplication is defined so that the product of two matrices represents the composition of the corresponding transformations. This definition explains why the operation is associative but not commutative, and why the inner dimensions must match.
+
+A system of linear equations can be written as Ax = b, with A the coefficient matrix, x the vector of unknowns, and b the vector of constants. Gaussian elimination reduces the augmented matrix to row echelon form through three elementary row operations: swapping rows, scaling a row by a nonzero constant, and adding a multiple of one row to another. Back substitution then extracts the solution. Reducing further to reduced row echelon form makes the solution readable directly.
+
+Three outcomes are possible. The system may have a unique solution, infinitely many solutions when free variables remain, or no solution when elimination produces a contradictory row stating that zero equals a nonzero value. The rank of a matrix is the number of pivots, equivalently the dimension of its column space. The rank-nullity theorem states that rank plus nullity equals the number of columns, where nullity is the dimension of the null space, the set of vectors mapped to zero.
+
+The four fundamental subspaces associated with a matrix are the column space, the null space, the row space, and the left null space. The column space is the set of achievable outputs, so Ax = b is solvable exactly when b lies in it. The null space describes the ambiguity in the solution: if a particular solution exists, the full solution set is that particular solution plus any element of the null space.
+
+The determinant is a scalar assigned to a square matrix. It equals the signed volume scaling factor of the associated transformation. It is zero exactly when the matrix is singular, meaning the transformation collapses space into a lower dimension and cannot be inverted. Determinants can be computed by cofactor expansion, which is impractical for large matrices, or by row reduction while tracking the effect of each operation, which is efficient. Useful properties include that the determinant of a product is the product of the determinants, and that the determinant of a triangular matrix is the product of its diagonal entries.
+
+The inverse of a square matrix A, when it exists, satisfies A·A^(-1) = I. A matrix is invertible if and only if its determinant is nonzero, its rank equals its dimension, its columns are linearly independent, its null space contains only the zero vector, and zero is not one of its eigenvalues. These conditions are all equivalent, and recognizing them as restatements of one another rather than separate facts is a large part of understanding the subject.
+
+LINEAR TRANSFORMATIONS
+
+A linear transformation preserves addition and scalar multiplication. Every such transformation between finite-dimensional spaces can be represented by a matrix once bases are chosen, and the matrix entries are the images of the basis vectors written in coordinates. Rotation, reflection, scaling, shearing, and projection are all linear; translation is not, which is why computer graphics uses homogeneous coordinates that embed translations into a larger linear framework.
+
+Change of basis expresses the same transformation in different coordinates. If P is the matrix whose columns are the new basis vectors expressed in old coordinates, then a transformation with matrix A in old coordinates has matrix P^(-1)AP in the new ones. Two matrices related this way are called similar, and they represent the same underlying transformation seen from different vantage points. Similar matrices share determinant, trace, rank, and eigenvalues, since those quantities describe the transformation rather than the coordinate system.
+
+EIGENVALUES AND EIGENVECTORS
+
+An eigenvector of a matrix A is a nonzero vector whose direction is unchanged by the transformation: A·v = lambda·v for some scalar lambda, the eigenvalue. Eigenvectors identify the directions along which a complicated transformation acts as simple stretching.
+
+Eigenvalues are found by solving the characteristic equation det(A - lambda·I) = 0, a polynomial of degree equal to the matrix dimension. Each eigenvalue's eigenvectors are then found by solving (A - lambda·I)v = 0, which is a null space computation.
+
+When a matrix has a full set of linearly independent eigenvectors it can be diagonalized as A = PDP^(-1), where D is diagonal with the eigenvalues and P has the eigenvectors as columns. Diagonalization makes powers trivial, since A^n = PD^nP^(-1) and raising a diagonal matrix to a power simply raises each diagonal entry. This is what makes eigenvalue analysis so effective for iterated processes: population models, Markov chains, and the long-run behavior of linear recurrences all reduce to asking which eigenvalue has the largest magnitude, because that direction eventually dominates.
+
+Symmetric matrices are particularly well behaved. The spectral theorem guarantees that a real symmetric matrix has real eigenvalues and an orthonormal basis of eigenvectors, so it can be diagonalized by an orthogonal matrix. This underlies principal component analysis in statistics, normal mode analysis in mechanical vibration, and the classification of quadratic forms.
+
+Positive definiteness, meaning all eigenvalues are positive, characterizes quadratic forms that are always positive, Hessians at genuine minima, and covariance matrices of non-degenerate distributions. Checking positive definiteness through leading principal minors or through an attempted Cholesky factorization is a routine numerical test.
+
+ORTHOGONALITY, PROJECTION, AND LEAST SQUARES
+
+An orthonormal set consists of mutually perpendicular unit vectors. Expressing a vector in an orthonormal basis is easy because each coefficient is simply a dot product, with no system to solve. The Gram-Schmidt process converts any independent set into an orthonormal one by successively subtracting projections onto the vectors already produced, and it yields the QR factorization used throughout numerical linear algebra.
+
+Projection onto a subspace finds the closest point in that subspace to a given vector, with the error orthogonal to the subspace. This geometric fact solves the least squares problem. When Ax = b has no exact solution because there are more equations than unknowns, the best approximate solution minimizes the length of the residual and satisfies the normal equations A^T·A·x = A^T·b. Linear regression is exactly this computation, which is why regression coefficients, projections, and orthogonality are the same idea in three vocabularies.
+
+The singular value decomposition factors any matrix, square or not, as U·Sigma·V^T, with U and V orthogonal and Sigma diagonal with nonnegative entries called singular values. It reveals rank, provides the best low-rank approximation to a matrix in a precise sense, defines the pseudoinverse used for ill-posed systems, and quantifies numerical conditioning through the ratio of largest to smallest singular value. It is the most broadly useful matrix factorization, appearing in data compression, recommendation systems, signal processing, and dimensionality reduction.
+
+WHERE THE TWO SUBJECTS MEET
+
+The connection between calculus and linear algebra is not incidental. Differentiation is itself a linear operator, since the derivative of a sum is the sum of derivatives and constants factor out. Linear differential equations are therefore linear algebra problems on infinite-dimensional function spaces, and their solution sets are subspaces whose dimension equals the order of the equation.
+
+Numerical methods make the union explicit. Discretizing a differential equation on a grid converts it into a large linear system. Optimizing a nonlinear function iteratively requires the gradient, a vector, and the Hessian, a matrix, and each step solves a linear system. Fitting a model to data minimizes a differentiable loss over a parameter vector, combining calculus for the derivatives with linear algebra for the structure. The training of modern machine learning models is precisely this combination executed at very large scale: gradients computed by the chain rule, applied to parameters organized as matrices, evaluated through repeated matrix multiplication.
+
+Understanding both subjects together, rather than as separate courses, is what makes them usable. Calculus supplies the language of change and accumulation; linear algebra supplies the language of many interacting quantities. Nearly every quantitative model of the world requires both at once.

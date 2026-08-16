@@ -1,0 +1,31 @@
+Rclone is an open source, multi threaded, command line computer program to manage or migrate content on cloud and other high latency storage. Its capabilities include sync, transfer, crypt, cache, union, compress and mount. The rclone website lists supported backends including S3 and Google Drive.
+Rclone is well known for its rclone sync and rclone mount commands. It provides further management functions analogous to those ordinarily used for files on local disks, but which tolerate some intermittent and unreliable service. Rclone is commonly used with media servers such as Plex, Emby or Jellyfin to stream content direct from consumer file storage services.
+Official Ubuntu, Debian, Fedora, Gentoo, Arch, Brew, Chocolatey, and other package managers include rclone.
+
+History
+
+Nick Craig-Wood was inspired by rsync. Concerns about the noise and power costs arising from home computer servers prompted him to embrace cloud storage and he began developing rclone as open source software in 2012 under the name swiftsync.
+Rclone was promoted to stable version 1.00 in July 2014.
+In May 2017, Amazon Drive barred new users of rclone and other upload utilities, citing security concerns. Amazon Drive had been advertised as offering unlimited storage for £55 per year. Amazon's AWS S3 service continues to support new rclone users.
+The original rclone logo was updated in September 2018.
+In March 2020, Nick Craig-Wood resigned from Memset Ltd, a cloud hosting company he founded, to focus on open source software.
+Amazon's AWS April 2020 public sector blog explained how the Fred Hutch Cancer Research Center were using rclone in their Motuz tool to migrate very large biomedical research datasets in and out of AWS S3 object stores.
+In November 2020, rclone was updated to correct a weakness in the way it generated passwords. Passwords for encrypted remotes can be generated randomly by rclone or supplied by the user. In all versions of rclone from 1.49.0 to 1.53.2 the seed value for generated passwords was based on the number of seconds elapsed in the day, and therefore not truly random. CVE-2020-28924 recommended users upgrade to the latest version of rclone and check the passwords protecting their encrypted remotes.
+Release 1.55 of rclone in March 2021 included features sponsored by CERN and their CS3MESH4EOSC project. The work was EU funded to promote vendor-neutral application programming interfaces and protocols for synchronisation and sharing of academic data on cloud storage.
+
+Backends and commands
+Rclone supports the following services as backends. There are others, built on standard protocols such as WebDAV or S3, that work. WebDAV backends do not support rclone functionality dependent on server side checksum or modtime.
+
+Remotes are usually defined interactively from these backends, local disk, or memory (as S3), with rclone config. Rclone can further wrap those remotes with one or more of alias, chunk, compress, crypt or union, remotes.
+Once defined, the remotes are referenced by other rclone commands interchangeably with the local drive. Remote names are followed by a colon to distinguish them from local drives. For example, a remote example_remote containing a folder, or pseudofolder, myfolder is referred to within a command as a path example_remote:/myfolder.
+
+Academic evaluation
+
+In 2018, University of Kentucky researchers published a conference paper comparing use of rclone and other command line, cloud data transfer agents for big data. The paper was published as a result of funding by the National Science Foundation.
+Later that year, University of Utah's Center for High Performance Computing examined the impact of rclone options on data transfer rates.
+
+Use in cybercrime
+
+May 2020 reports stated rclone had been used by hackers to exploit Diebold Nixdorf ATMs with ProLock ransomware. The FBI issued a Flash Alert MI-000125-MW on May 4, 2020, in relation to the compromise. They issued a further, related alert 20200901–001 in September 2020. Attackers had exfiltrated / encrypted data from organisations involved in healthcare, construction, finance, and legal services. Multiple US government agencies, and industrial entities were affected. Researchers established the hackers spent about a month exploring the breached networks, using rclone to archive stolen data to cloud storage, before encrypting the target system. Reported targets included LaSalle County, and the city of Novi Sad.
+The FBI warned January 2021, in Private Industry Notification 20210106–001, of extortion activity using Egregor ransomware and rclone. Organisations worldwide had been threatened with public release of exfiltrated data. In some cases rclone had been disguised under the name svchost. Bookseller Barnes & Noble, US retailer Kmart, games developer Ubisoft and the Vancouver metro system have been reported as victims.
+An April 2021, cybersecurity investigation into SonicWall VPN zero-day vulnerability SNWLID-2021-0001 by FireEye's Mandiant team established attackers UNC2447 used rclone for reconnaissance and exfiltration of victims' files. Cybersecurity and Infrastructure Security Agency Analysis Report AR21-126A confirmed this use of rclone in FiveHands ransomware attacks.

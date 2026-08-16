@@ -1,0 +1,177 @@
+The TL431 integrated circuit (IC) is a three-terminal adjustable precise shunt voltage regulator. With the use of an external voltage divider, a TL431 can regulate voltages ranging from 2.495 to 36 V, at currents up 100 mA. The typical initial deviation of reference voltage from the nominal 2.495 V level is measured in millivolts, the maximum worst-case deviation is measured in tens of millivolts. The circuit can control power transistors directly; combinations of the TL431 with power MOS transistors are used in high efficiency, very low dropout linear regulators. The TL431 is the de facto industry standard error amplifier circuit for switched-mode power supplies with optoelectronic coupling of the input and output networks.
+Texas Instruments introduced the TL431 in 1977. In the 21st century, the original TL431 remains in production along with a multitude of clones and derivatives (TLV431, TL432, ATL431, KA431, LM431, TS431, 142ЕН19 and others). These functionally similar circuits may differ considerably in die size and layout, precision and speed characteristics, minimal operating currents, safe operating areas, and specific voltage reference.
+
+Construction and operation
+
+The TL431 is functionally equivalent to an ideal npn bipolar transistor switch with a stable 2.495 V switching threshold and no apparent hysteresis. "Base", "collector" and "emitter" of this "transistor" are traditionally called reference (R or REF), cathode (C) and anode (A). The positive control voltage, VREF, is applied between reference input and the anode; the output current, ICA, flows from the cathode to the anode.
+On a functional level the TL431 contains an open-loop operational amplifier that compares the input control voltage with a 2.495 V voltage reference. This, however, is merely an abstraction: both functions are inextricably linked inside the TL431's front end. There is no physical 2.495 V source: the actual internal reference is provided by a 1.2 V Widlar bandgap (transistors T3, T4, T5), driven by the input emitter followers T1, T6. This enables correct operation even when the cathode-anode voltage drops below 2.495 V, down to around 2.0 V minimum. The differential amplifier is made of two current sources (T8, T9); the positive difference of their currents sinks into the base of T10. The output open collector transistor, T11, can sink currents up to 100 mA, and is protected from polarity reversal with a reverse diode. The circuit does not provide protection against excessive current or overheating.
+
+Current–voltage relationship
+
+When VREF is safely below the 2.495 V threshold (point A on current-voltage curve), the output transistor is off. Residual cathode-anode current ICA, feeding the front-end circuit, stays within 100 and 200 μA. When VREF approaches the threshold, the ICA rises to 300–500 μA, but the output transistor remains off. Upon reaching its threshold (point B), the output transistor begins to conduct (turn on), and the ICA begins rising at a rate of around 30 mA/V. When VREF exceeds the threshold by around 3 mV, and ICA reaches 500–600 μA (point C), transconductance sharply jumps to 1.0–1.4 A/V. Above this point the TL431 operates in its normal, high transconductance mode and may be conveniently approximated with a differential voltage to single-ended current converter model. The current rises until the negative feedback loop connecting the cathode with the control input stabilizes VREF at some point above the threshold. This point (Vref) is, strictly speaking, the reference voltage of the complete regulator. Alternatively, the TL431 may operate without feedback as a voltage comparator, or with positive feedback as a Schmitt trigger; in such applications ICA is limited only by the anode load and the power supply capacity.
+Reference input current IREF is independent of ICA and fairly constant, at around 2 μA. The network feeding reference input should be able to source at least twice this amount (4 μA or more); operation with hanging REF input is prohibited but will not damage the TL431 directly. It will survive an open circuit at any pin, a short circuit to ground of any pin, or a short circuit between any pair of pins, provided that the voltages across the pins remain within safety limits.
+
+Precision
+
+The nominal reference voltage, VREF=2.495 V, stated in a datasheet, is tested in zener mode at an ambient temperature of +25 °C (77 °F), and ICA=10 mA. The threshold voltage and the boundary between low-transconductance and high-transconductance modes are not specified and not tested. The actual VREF maintained by a specific TL431 in a real-world application may be higher or lower than 2.495 V, depending on four factors:
+
+Individual initial deviation of a specific chip. For different grades of the TL431, deviation at normal conditions is within ±0.5%, ±1%, or ±2%;
+Temperature. Thermal plot of a bandgap reference voltage has a hump-like shape. By design, the hump is centered on +25 °C (77 °F), where VREF=2.495 V; above and below +25 °C (77 °F), VREF gently decreases by a few millivolts. However, if a specific IC deviates substantially from the norm, the hump shifts to lower or higher temperatures; in the worst outliers it degenerates into a monotonously rising or falling curve. 
+Owing to finite output impedance, changes in VCA voltage affect ICA and, indirectly, VREF, just like they do in transistors or triodes. For a given fixed ICA, a 1 V rise in VCA must be offset with ≈1.4 mV (2.7 mV worst-case maximum) decrease in VREF. The ratio μ = 1 V / 1.4 mV ≈ 300–1000, or ≈ 50–60 dB is the theoretical maximum open-loop voltage gain at DC and low frequencies;
+Owing to finite transconductance, a rise in ICA causes a rise in VREF at a rate of 0.5–1 mV/mA.
+
+Speed and stability
+The open-loop frequency response of a TL431 can be reliably approximated as a first-order low-pass filter. The dominant pole is provided by a relatively large compensation capacitor in the output stage. An equivalent model contains an ideal 1 A/V voltage-to-current converter, shunted with a 70 nF capacitor. For a typical cathode load of 230 Ω, this translates to an open-loop cutoff frequency of 10 kHz and unity gain frequency of 2 MHz. Owing to various second-order effects, the actual unity gain frequency is only 1 MHz; in practice, the difference between 1 and 2 MHz is unimportant.
+The slew rates of ICA, VCA and the settling time of VREF are not specified. According to Texas Instruments, the power-on transient lasts for around 2 μs. Initially, VCA quickly rises to ≈2 V, and then locks at this level for around 1 μs. Charging internal capacitances to steady-state voltages takes up 0.5–1 μs more.
+Capacitive cathode loads (CL) may cause instability and oscillation. According to stability boundary charts in the original datasheet, the TL431 is absolutely stable when CL is less than 1 nF or greater than 10 μF. Inside the 1 nF–10 μF range, the likelihood of oscillation depends on the combination of CL, ICA and VCA. The worst-case scenario occurs at low ICA and VCA. On the contrary, combinations of high ICA and high VCA, when the TL431 operates close to its maximum dissipation rating, are absolutely stable. However, even a regulator designed for high ICA and high VCA may oscillate at power-on, when VCA has not yet risen to a steady-state level.
+In a 2014 application note, Texas Instruments admitted that their stability boundary charts are unreasonably optimistic. They describe a "typical" IC sample at zero phase margin; in practice, robust designs should target at least 30 degree phase margin. Usually, inserting a series resistance between the cathode and load capacitance, effectively increasing the latter's ESR, is sufficient for suppressing unwanted oscillations. The series resistance introduces a low-frequency zero at a relatively low frequency, cancelling most of the unwanted phase lag that was caused by load capacitance alone. Minimal values of series resistors lie between 1 Ω (high CL) and 1 kΩ (low CL, high VCA).
+
+Applications
+
+Linear regulators
+
+Fixed Zener Mode
+The simplest TL431 regulator circuit is made by shorting the control input to the cathode. The resulting two-terminal network has a zener-like current–voltage characteristic, with a stable threshold voltage VREF≈2.5 V, and low-frequency impedance of around 0.2 Ω. Impedance begins to grow at around 100 kHz and reaches 10 Ω at around 10 MHz.
+
+Variable Zener Mode
+Regulation of voltages higher than 2.5 V requires an external voltage divider. With divider resistors R2 and R1, the cathode voltage and the output impedance increase 
+  
+    
+      
+        1
+        +
+        
+          
+            
+              
+                R
+                2
+              
+              
+                R
+                1
+              
+            
+          
+        
+      
+    
+    {\displaystyle 1+{\tfrac {R2}{R1}}}
+  
+ times. The maximum sustained, regulated voltage may not exceed 36 V; the maximum cathode-anode voltage is limited to 37 V. Historically, the TL431 was designed and manufactured with this application in mind, and was advertised as an "extremely attractive replacement for high cost, temperature-compensated zeners".
+
+Additional Pass Transistor
+Adding an emitter follower converts a shunt regulator into a series regulator. Efficiency is mediocre because single npn-type transistors or Darlington pairs require fairly a high collector-emitter voltage drop. A single common-emitter pnp-type transistor can operate correctly in saturation mode, with only ≈0.25 V voltage drop, but also with impractically high base currents. A compound pnp-type transistor does not need as much drive current, but it requires at least a 1 V voltage drop. An N-channel power MOSFET device enables the best combination of low drive current, very low dropout voltage, and stability. However, low-dropout MOSFET operation requires an additional high-side voltage source (ΔU in schematic) for driving the gate. ΔU can be obviated if a depletion mode MOSFET is used.
+Closed-loop regulator circuits using the TL431 are always designed to operate in high transconductance mode, with ICA no less than 1 mA (point D on the current-voltage curve). For better control loop stability, optimal ICA should be set at around 5 mA, although this may compromise overall efficiency.
+
+Switched-mode power supplies
+
+In the 21st century, the TL431, loaded with an optocoupler's light-emitting diode (LED), is the de facto industry standard solution for regulated switched-mode power supplies (SMPS). A resistive voltage divider driving the control input of the TL431, and the LED's cathode are normally connected to the regulator's output; the optocoupler's phototransistor is connected to the control input of the pulse-width modulation (PWM) controller. Resistor R3 (around 1 kΩ), shunting the LED, helps keep ICA above the 1 mA threshold. In a typical power supply/charger supplied with a laptop computer, average ICA is set at around 1.5 mA, including a 0.5 mA LED current and a 1 mA shunt current (2012 data).
+Design of a robust, efficient and stable SMPS with a TL431 is a common but complex task. In the simplest possible configuration, frequency compensation is maintained by an integrating network C1R4. In addition to this explicit compensation network, the frequency response of the control loop is affected by the output smoothing capacitor, the TL431 itself, and the parasitic capacitance of the phototransistor. The TL431 is governed by not one, but two control loops: the main, "slow lane" loop connected to an output capacitor with a voltage divider, and a secondary "fast lane" connected to the output rail with an LED. The IC, loaded with the very low impedance of the LED, operates as a current source; undesirable voltage ripple passes from the output rail to the cathode almost unimpeded. This "fast lane" dominates at mid-band frequencies (ca. 10 kHz–1 MHz), and is usually broken by decoupling the LED from the output capacitor with a zener diode or a low-pass filter.
+
+Voltage comparators
+
+The simplest TL431-based comparator circuit requires a single external resistor to limit ICA at around 5 mA. Operation at lesser currents is undesirable because of longer turn-off transients. Turn-on delay depends mostly on the difference between input and threshold voltage (overdrive voltage); higher overdrive speeds up the turn-on process. Optimal transient speed is attained at 10% (≈250 mV) overdrive and source impedance of 10 kΩ or less.
+On-state VCA drops to around 2 V, which is too high logic 'low' level for all but 15 V metal gate CMOS logic gates, and requires level conversion with a resistive voltage divider, or replacing the TL431 with a low-voltage alternative like the TLV431.
+TL431-based comparators and invertors can be easily cascaded following the rules of relay logic. For example, a two-stage window voltage monitor will turn on (switching from high-state to low-state output) when
+
+  
+    
+      
+        
+          U
+          
+            R
+            E
+            F
+          
+        
+        (
+        1
+        +
+        R
+        3
+        
+          /
+        
+        R
+        4
+        )
+        <
+        
+          U
+          
+            I
+            N
+          
+        
+        <
+        
+          U
+          
+            R
+            E
+            F
+          
+        
+        (
+        1
+        +
+        R
+        1
+        
+          /
+        
+        R
+        2
+        )
+      
+    
+    {\displaystyle U_{REF}(1+R3/R4)<U_{IN}<U_{REF}(1+R1/R2)}
+  
+,
+provided that 
+  
+    
+      
+        R
+        1
+        
+          /
+        
+        R
+        2
+      
+    
+    {\displaystyle R1/R2}
+  
+ is larger than 
+  
+    
+      
+        R
+        3
+        
+          /
+        
+        R
+        4
+      
+    
+    {\displaystyle R3/R4}
+  
+ so that the spread between two trip voltages is wide enough.
+
+Undocumented modes
+The inherently unstable TL431 may operate as a voltage-controlled oscillator for frequencies ranging from a few kHz to 1.5 MHz. The frequency range and control law of such an oscillator strongly depends on the particular make of TL431. Chips made by different manufacturers are usually not interchangeable.
+A pair of TL431s may replace transistors in a symmetrical astable multivibrator for frequencies ranging from under 1 Hz to around 50 kHz. This, again, is an undocumented and potentially unsafe mode, with periodical capacitor charge currents flowing through input stage protection diodes (T2 on the schematic).
+
+Variants, clones and derivatives
+
+Integrated circuits marketed by various manufacturers as TL431, or having similar designations like KA431 or TS431, may differ substantially from the Texas Instruments original. Sometimes the difference may only be revealed by testing in undocumented modes; sometimes it is publicly declared in datasheets. For example, the Vishay TL431 has abnormally high (ca. 75 dB) DC voltage gain, which starts to roll off at 100 Hz; at frequencies above 10 kHz gain falls back to standard and reaches unity at the standard 1 MHz frequency. The SG6105 SMPS controller contains two independent regulators marked as TL431, but their maximum ICA and VCA are only 16 V and 30 mA, respectively; the manufacturer does not test these regulators for precision.
+The obsolete TL430 was an ugly sister  of the TL431, manufactured by Texas Instruments in a through-hole package only, and having a VREF of 2.75 V. Its bandgap reference was not thermally compensated, and was less precise than that of the TL431; the output stage had no protection diode. The surface-mount TL432 is electrically the same as the TL431, but has a different pinout.
+In 2015, Texas Instruments announced the ATL431, an improved derivative of the TL431 for very high efficiency switch-mode regulators that has a VREF of 2.5 V instead of 2.495 V. The recommended minimum operating current is only 35 μA (standard TL431: 1 mA); the maximum ICA and VCA are the same as standard (100 mA and 36 V). Unity gain frequency is reduced to 250 kHz to attenuate high frequency ripples so they are not fed back to the controller. The ATL431 has a very different instability area. At low voltages and currents it is absolutely stable with any practical capacitive load, provided the capacitors are of a high-quality, low-impedance type. The minimal recommended value of the series decoupling resistor is 250 Ω (standard TL431: 1 Ω).
+Apart from the TL431 and its descendants, as of 2015, only two shunt regulator ICs found wide use in the industry. Both types have similar functionality and applications, but different internal circuits, different reference levels, maximum currents and voltages:
+
+The bipolar LMV431 by Texas Instruments has a VREF of 1.24 V and is capable of regulating voltages up to 30 V at currents from 80 μA to 30 mA;
+The low-voltage CMOS NCP100 by ON Semiconductor has a VREF of 0.7 V and is capable of regulating voltages up to 6 V at currents from 100 μA to 20 mA.

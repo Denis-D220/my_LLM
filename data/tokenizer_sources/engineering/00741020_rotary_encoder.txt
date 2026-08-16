@@ -1,0 +1,107 @@
+A rotary encoder, also called a shaft encoder, is an electro-mechanical device that converts the angular position or motion of a shaft or axle to analog or digital output signals.
+There are two main types of rotary encoder: absolute and incremental.  The output of an absolute encoder indicates the current shaft position, making it an angle transducer. The output of an incremental encoder provides information about the motion of the shaft, which typically is processed elsewhere into information such as position, speed and distance.
+Rotary encoders are used in a wide range of applications that require monitoring or control, or both, of mechanical systems, including industrial controls, robotics, photographic lenses, computer input devices such as optomechanical mice and trackballs, controlled stress rheometers, and rotating radar platforms.
+
+Technologies
+
+Mechanical: Also known as conductive encoders. A series of circumferential copper tracks etched onto a PCB is used to encode the information via contact brushes sensing the conductive areas. Mechanical encoders are economical but susceptible to mechanical wear. They are common in human interfaces such as digital multimeters.
+Optical: This uses a light shining onto a photodiode through slits in a disc, commonly metal, glass, or plastic. Reflective versions also exist. This is one of the most common technologies. Optical encoders are very sensitive to dust.
+On-Axis Magnetic: This technology typically uses a specially magnetized 2 pole neodymium magnet attached to the motor shaft. Because it can be fixed to the end of the shaft, it can work with motors that only have 1 shaft extending out of the motor body. The accuracy can vary from a few degrees to under 1 degree. Resolutions can be as low as 1 degree or as high as 0.09 degree (4000 CPR, Count per Revolution). Poorly designed internal interpolation can cause output jitter, but this can be overcome with internal sample averaging.
+Off-Axis Magnetic: This technology typically employs the use of rubber bonded ferrite magnets attached to a metal hub. This offers flexibility in design and low cost for custom applications. Due to the flexibility in many off axis encoder chips they can be programmed to accept any number of pole widths so the chip can be placed in any position required for the application. Magnetic encoders operate in harsh environments where optical encoders would fail to work.
+
+Basic types
+
+Absolute
+An absolute encoder maintains position information when power is removed from the encoder. The position of the encoder is available immediately on applying power. The relationship between the encoder value and the physical position of the controlled machinery is set at assembly; the system does not need to return to a calibration point to maintain position accuracy.
+An absolute encoder has multiple code rings with various binary weightings which provide a data word representing the absolute position of the encoder within one revolution. This type of encoder is often referred to as a parallel absolute encoder.
+A multi-turn absolute rotary encoder includes additional code wheels and toothed wheels. A high-resolution wheel measures the fractional rotation, and lower-resolution geared code wheels record the number of whole revolutions of the shaft.
+
+Incremental
+
+An incremental encoder will immediately report changes in position, which is an essential capability in some applications. However, it does not report or keep track of absolute position. As a result, the mechanical system monitored by an incremental encoder may have to be homed (moved to a fixed reference point) to initialize absolute position measurements.
+
+Absolute encoder
+
+Absolute rotary encoder
+
+Construction
+Digital absolute encoders produce a unique digital code for each distinct angle of the shaft. They come in two basic types: optical and mechanical.
+
+Mechanical absolute encoders
+A metal disc containing a set of concentric rings of openings is fixed to an insulating disc, which is rigidly fixed to the shaft. A row of sliding contacts is fixed to a stationary object so that each contact wipes against the metal disc at a different distance from the shaft. As the disc rotates with the shaft, some of the contacts touch metal, while others fall in the gaps where the metal has been cut out. The metal sheet is connected to a source of electric current, and each contact is connected to a separate electrical sensor. The metal pattern is designed so that each possible position of the axle creates a unique binary code in which some of the contacts are connected to the current source (i.e. switched on) and others are not (i.e. switched off).
+Brush-type contacts are susceptible to wear, and consequently mechanical encoders are typically found in low-speed applications such as manual volume or tuning controls in a radio receiver.
+
+Optical absolute encoders
+The optical encoder's disc is made of glass or plastic with transparent and opaque areas.  A light source and photo detector array reads the optical pattern that results from the disc's position at any one time.
+The Gray code is often used.
+This code can be read by a controlling device, such as a microprocessor or microcontroller to determine the angle of the shaft.
+The absolute analog type produces a unique dual analog code that can be translated into an absolute angle of the shaft.
+
+Magnetic absolute encoders
+The magnetic encoder uses a series of magnetic poles (2 or more) to represent the encoder position to a magnetic sensor (typically magneto-resistive or Hall Effect). The magnetic sensor reads the magnetic pole positions.
+This code can be read by a controlling device, such as a microprocessor or microcontroller to determine the angle of the shaft, similar to an optical encoder.
+The absolute analog type produces a unique dual analog code that can be translated into an absolute angle of the shaft (by using a special algorithm).
+Due to the nature of recording magnetic effects, these encoders may be optimal to use in conditions where other types of encoders may fail due to dust or debris accumulation. Magnetic encoders are also relatively insensitive to vibrations, minor misalignment, or shocks.
+
+Brushless motor commutation
+Built-in rotary encoders are used to indicate the angle of the motor shaft in permanent magnet brushless motors, which are commonly used on CNC machines, robots, and other industrial equipment. In such cases, the encoder serves as a feedback device that plays a vital role in proper equipment operation. Brushless motors require electronic commutation, which often is implemented in part by using rotor magnets as a low-resolution absolute encoder (typically six or twelve pulses per revolution). The resulting shaft angle information is conveyed to the servo drive to enable it to energize the proper stator winding at any moment in time.
+
+Capacitive absolute encoders
+An asymmetrical shaped disc is rotated within the encoder. This disc will change the capacitance between two electrodes which can be measured and calculated back to an angular value.
+
+Absolute multi-turn encoder
+A multi-turn encoder can detect and store more than one revolution. The term absolute multi-turn encoder is generally used if the encoder will detect movements of its shaft even if the encoder is not provided with external power.
+
+Battery-powered multi-turn encoder
+This type of encoder uses a battery for retaining the counts across power cycles. It uses energy conserving electrical design to detect the movements.
+
+Geared multi-turn encoder
+These encoders use a train of gears to mechanically store the number of revolutions. The position of the single gears is detected with one of the above-mentioned technologies.
+
+Self-powered multi-turn encoder
+These encoders use the principle of energy harvesting to generate energy from the moving shaft. This principle, introduced in 2007, uses a Wiegand sensor to produce electricity sufficient to power the encoder and write the turns count to non-volatile memory.
+
+Ways of encoding shaft position
+
+Standard binary encoding
+
+An example of a binary code, in an extremely simplified encoder with only three contacts, is shown below.
+
+In general, where there are n contacts, the number of distinct positions of the shaft is 2n.  In this example, n is 3, so there are 2³ or 8 positions.
+In the above example, the contacts produce a standard binary count as the disc rotates.  However, this has the drawback that if the disc stops between two adjacent sectors, or the contacts are not perfectly aligned, it can be impossible to determine the angle of the shaft.  To illustrate this problem, consider what happens when the shaft angle changes from 179.9° to 180.1° (from sector 3 to sector 4).  At some instant, according to the above table, the contact pattern changes from off-on-on to on-off-off.  However, this is not what happens in reality.  In a practical device, the contacts are never perfectly aligned, so each switches at a different moment.  If contact 1 switches first, followed by contact 3 and then contact 2, for example, the actual sequence of codes is:
+
+off-on-on (starting position)
+on-on-on (first, contact 1 switches on)
+on-on-off (next, contact 3 switches off)
+on-off-off (finally, contact 2 switches off)
+Now look at the sectors corresponding to these codes in the table.  In order, they are 3, 7, 6 and then 4.  So, from the sequence of codes produced, the shaft appears to have jumped from sector 3 to sector 7, then gone backwards to sector 6, then backwards again to sector 4, which is where we expected to find it.  In many situations, this behaviour is undesirable and could cause the system to fail.  For example, if the encoder were used in a robot arm, the controller would think that the arm was in the wrong position, and try to correct the error by turning it through 180°, perhaps causing damage to the arm.
+
+Gray encoding
+
+To avoid the above problem, Gray coding is used.  This is a system of binary counting in which any two adjacent codes differ by only one bit position.  For the three-contact example given above, the Gray-coded version would be as follows.
+
+In this example, the transition from sector 3 to sector 4, like all other transitions, involves only one of the contacts changing its state from on to off or vice versa.  This means that the sequence of incorrect codes shown in the previous illustration cannot happen.
+
+Single-track Gray encoding
+If the designer moves a contact to a different angular position (but at the same distance from the center shaft), then the corresponding "ring pattern" needs to be rotated the same angle to give the same output. If the most significant bit (the inner ring in Figure 1) is rotated enough, it exactly matches the next ring out. Since both rings are then identical, the inner ring can be omitted, and the sensor for that ring moved to the remaining, identical ring (but offset at that angle from the other sensor on that ring). Those two sensors on a single ring make a quadrature encoder with a single ring.
+It is possible to arrange several sensors around a single track (ring) so that consecutive positions differ at only a single sensor; the result is the single-track Gray code encoder.
+
+Data output methods
+Depending on the device and manufacturer, an absolute encoder may use any of several signal types and communication protocols to transmit data, including parallel binary, analog signals (current or voltage), and serial bus systems such as SSI, BiSS, Heidenhain EnDat, Sick-Stegmann Hiperface, DeviceNet, Modbus, Profibus, CANopen and EtherCAT, which typically employ Ethernet or RS-422/RS-485 physical layers.
+
+Incremental encoder
+
+The rotary incremental encoder is the most widely used of all rotary encoders due to its ability to provide real-time position information. The measurement resolution of an incremental encoder is not limited in any way by its two internal, incremental movement sensors; one can find in the market incremental encoders with up to 10,000 counts per revolution, or more.
+Rotary incremental encoders report position changes without being prompted to do so, and they convey this information at data rates which are orders of magnitude faster than those of most types of absolute shaft encoders. Because of this, incremental encoders are commonly used in applications that require precise measurement of position and velocity.
+A rotary incremental encoder may use mechanical, optical or magnetic sensors to detect rotational position changes. The mechanical type is commonly employed as a manually operated "digital potentiometer" control on electronic equipment. For example, modern home and car stereos typically use mechanical rotary encoders as volume controls. Encoders with mechanical sensors require switch debouncing and consequently are limited in the rotational speeds they can handle. The optical type is used when higher speeds are encountered or a higher degree of precision is required.
+A rotary incremental encoder has two output signals, A and B, which issue a periodic digital waveform in quadrature when the encoder shaft rotates. This is similar to sine encoders, which output sinusoidal waveforms in quadrature (i.e., sine and cosine), thus combining the characteristics of an encoder and a resolver. The waveform frequency indicates the speed of shaft rotation and the number of pulses indicates the distance moved, whereas the A-B phase relationship indicates the direction of rotation.
+Some rotary incremental encoders have an additional "index" output (typically labeled Z), which emits a pulse when the shaft passes through a particular angle. Once every rotation, the Z signal is asserted, typically always at the same angle, until the next AB state change. This is commonly used in radar systems and other applications that require a registration signal when the encoder shaft is located at a particular reference angle.
+Unlike absolute encoders, an incremental encoder does not keep track of, nor do its outputs indicate the absolute position of the mechanical system to which it is attached. Consequently, to determine the absolute position at any particular moment, it is necessary to "track" the absolute position with an incremental encoder interface which typically includes a bidirectional electronic counter.
+Inexpensive incremental encoders are used in mechanical computer mice. Typically, two encoders are used: one to sense left-right motion and another to sense forward-backward motion.
+
+Rotary (Angle) Pulse Encoder
+
+A Rotary (Angle) Pulse Encoder has a SPDT switch for each direction, with each one only operating in the direction of travel. Each turn indent in one direction causes the SPDT switch associated with that direction only to toggle. 
+
+Other pulse-output rotary encoders
+Rotary encoders with a single output (i.e. tachometers) cannot be used to sense direction of motion but are suitable for measuring speed and for measuring position when the direction of travel is constant. In certain applications they may be used to measure distance of motion (e.g. feet of movement).

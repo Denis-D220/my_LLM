@@ -1,0 +1,4706 @@
+Propositional logic is a branch of classical logic. It is also called statement logic, sentential calculus, propositional calculus, sentential logic, or sometimes zeroth-order logic. Sometimes, it is called first-order propositional logic to contrast it with System F, but it is distinct from first-order logic. It deals with propositions (which can be true or false) and relations between propositions, including the construction of arguments based on them. Compound propositions are formed by connecting propositions by logical connectives representing the truth functions of conjunction, disjunction, implication, biconditional, and negation. Some sources include other connectives, as in the table below.
+Unlike first-order logic, propositional logic does not deal with non-logical objects, predicates about them, or quantifiers. However, all the machinery of propositional logic is included in first-order logic and higher-order logics. In this sense, propositional logic is the foundation of first-order logic and higher-order logic.
+Propositional logic is typically studied with a formal language, in which propositions are represented by letters, which are called propositional variables. These are then used, together with symbols for connectives, to make propositional formulas. Because of this, the propositional variables are called atomic formulas of a formal propositional language. While the atomic propositions are typically represented by letters of the alphabet, there is a variety of notations to represent the logical connectives. For the benefit of readers who may only be used to a different variant notation for the logical connectives, the following table shows the main notational variants for each of the connectives in propositional logic. Other notations have been used historically, such as Polish notation. For the history of each of these symbols, see the respective articles as well as the article "Logical connective".
+
+The most thoroughly researched branch of propositional logic is classical truth-functional propositional logic, in which formulas are interpreted as having precisely one of two possible truth values, the truth value of true or the truth value of false. The principle of bivalence and the law of excluded middle are upheld. By comparison with first-order logic, truth-functional propositional logic is considered to be zeroth-order logic.
+
+History
+
+Although propositional logic had been hinted by earlier philosophers, Chrysippus is often credited with development of a deductive system for propositional logic as his main achievement in the 3rd century BC which was expanded by his successor Stoics. The logic was focused on propositions. This was different from the traditional syllogistic logic, which focused on terms. However, most of the original writings were lost and, at some time between the 3rd and 6th century CE, Stoic logic faded into oblivion, to be resurrected only in the 20th century, in the wake of the (re)-discovery of propositional logic.
+Symbolic logic, which would come to be important to refine propositional logic, was first developed by the 17th/18th-century mathematician Gottfried Leibniz, whose calculus ratiocinator was, however, unknown to the larger logical community. Consequently, many of the advances achieved by Leibniz were recreated by logicians like George Boole and Augustus De Morgan, completely independent of Leibniz.
+Gottlob Frege's predicate logic builds upon propositional logic, and has been described as combining "the distinctive features of syllogistic logic and propositional logic." Consequently, predicate logic ushered in a new era in logic's history; however, advances in propositional logic were still made after Frege, including natural deduction, truth trees and truth tables. Natural deduction was invented by Gerhard Gentzen and Stanisław Jaśkowski. Truth trees were invented by Evert Willem Beth. The invention of truth tables, however, is of uncertain attribution.
+Within works by Frege and Bertrand Russell, are ideas influential to the invention of truth tables. The actual tabular structure (being formatted as a table), itself, is generally credited to either Ludwig Wittgenstein or Emil Post (or both, independently). Besides Frege and Russell, others credited with having ideas preceding truth tables include Philo, Boole, Charles Sanders Peirce, and Ernst Schröder. Others credited with the tabular structure include Jan Łukasiewicz, Alfred North Whitehead, William Stanley Jevons, John Venn, and Clarence Irving Lewis. Ultimately, some have concluded, like John Shosky, that "It is far from clear that any one person should be given the title of 'inventor' of truth-tables".
+
+Sentences
+
+Propositional logic, as currently studied in universities, is a specification of a standard of logical consequence in which only the meanings of propositional connectives are considered in evaluating the conditions for the truth of a sentence, or whether a sentence logically follows from some other sentence or group of sentences.
+
+Declarative sentences
+Propositional logic deals with statements, which are defined as declarative sentences having truth value. Examples of statements might include:
+
+Wikipedia is a free online encyclopedia that anyone can edit.
+London is the capital of England.
+All Wikipedia editors speak at least three languages.
+Declarative sentences are contrasted with questions, such as "What is Wikipedia?", and imperative statements, such as "Please add citations to support the claims in this article.". Such non-declarative sentences have no truth value, and are only dealt with in nonclassical logics, called erotetic and imperative logics.
+
+Compounding sentences with connectives
+
+In propositional logic, a statement can contain one or more other statements as parts. Compound sentences are formed from simpler sentences and express relationships among the constituent sentences. This is done by combining them with logical connectives: the main types of compound sentences are negations, conjunctions, disjunctions, implications, and biconditionals, which are formed by using the corresponding connectives to connect propositions. In English, these connectives are expressed by the words "and" (conjunction), "or" (disjunction), "not" (negation), "if" (material conditional), and "if and only if" (biconditional). Examples of such compound sentences might include:
+
+Wikipedia is a free online encyclopedia that anyone can edit, and millions already have. (conjunction)
+It is not true that all Wikipedia editors speak at least three languages. (negation)
+Either London is the capital of England, or London is the capital of the United Kingdom, or both. (disjunction)
+If sentences lack any logical connectives, they are called simple sentences, or atomic sentences; if they contain one or more logical connectives, they are called compound sentences, or molecular sentences.
+Sentential connectives are a broader category that includes logical connectives. Sentential connectives are any linguistic particles that bind sentences to create a new compound sentence, or that inflect a single sentence to create a new sentence. A logical connective, or propositional connective, is a kind of sentential connective with the characteristic feature that, when the original sentences it operates on are (or express) propositions, the new sentence that results from its application also is (or expresses) a proposition. Philosophers disagree about what exactly a proposition is, as well as about which sentential connectives in natural languages should be counted as logical connectives. Sentential connectives are also called sentence-functors, and logical connectives are also called truth-functors.
+
+Arguments
+
+An argument is defined as a pair of things, namely a set of sentences, called the premises, and a sentence, called the conclusion. The conclusion is claimed to follow from the premises, and the premises are claimed to support the conclusion.
+
+Example argument
+The following is an example of an argument within the scope of propositional logic:
+
+Premise 1: If it's raining, then it's cloudy.
+Premise 2: It's raining.
+Conclusion: It's cloudy.
+The logical form of this argument is known as modus ponens, which is a classically valid form. So, in classical logic, the argument is valid, although it may or may not be sound, depending on the meteorological facts in a given context. This example argument will be reused when explaining § Formalization.
+
+Validity and soundness
+
+An argument is valid if, and only if, it is necessary that, if all its premises are true, its conclusion is true. Alternatively, an argument is valid if, and only if, it is impossible for all the premises to be true while the conclusion is false.
+Validity is contrasted with soundness. An argument is sound if, and only if, it is valid and all its premises are true. Otherwise, it is unsound.
+Logic, in general, aims to precisely specify valid arguments. This is done by defining a valid argument as one in which its conclusion is a logical consequence of its premises, which, when this is understood as semantic consequence, means that there is no case in which the premises are true but the conclusion is not true – see § Semantics below.
+
+Formalization
+Propositional logic is typically studied through a formal system in which formulas of a formal language are interpreted to represent propositions. This formal language is the basis for proof systems, which allow a conclusion to be derived from premises if, and only if, it is a logical consequence of them. This section will show how this works by formalizing the § Example argument. The formal language for a propositional calculus will be fully specified in § Language, and an overview of proof systems will be given in § Proof systems.
+
+Propositional variables
+
+Since propositional logic is not concerned with the structure of propositions beyond the point where they cannot be decomposed any more by logical connectives, it is typically studied by replacing such atomic (indivisible) statements with letters of the alphabet, which are interpreted as variables representing statements (propositional variables). With propositional variables, the § Example argument would then be symbolized as follows:
+
+Premise 1: 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+
+Premise 2: 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+
+Conclusion: 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+
+When P is interpreted as "It's raining" and Q as "it's cloudy" these symbolic expressions correspond exactly with the original expression in natural language. Not only that, but they will also correspond with any other inference with the same logical form.
+When a formal system is used to represent formal logic, only statement letters (usually capital roman letters such as 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+, 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ and 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+) are represented directly. The natural language propositions that arise when they're interpreted are outside the scope of the system, and the relation between the formal system and its interpretation is likewise outside the formal system itself.
+
+Gentzen notation
+If we assume that the validity of modus ponens has been accepted as an axiom, then the same § Example argument can also be depicted like this:
+
+  
+    
+      
+        
+          
+            
+              P
+              →
+              Q
+              ,
+              P
+            
+            Q
+          
+        
+      
+    
+    {\displaystyle {\frac {P\to Q,P}{Q}}}
+  
+
+This method of displaying it is Gentzen's notation for natural deduction and sequent calculus. The premises are shown above a line, called the inference line, separated by a comma, which indicates combination of premises. The conclusion is written below the inference line. The inference line represents syntactic consequence, sometimes called deductive consequence, which is also symbolized with ⊢. So the above can also be written in one line as 
+  
+    
+      
+        P
+        →
+        Q
+        ,
+        P
+        ⊢
+        Q
+      
+    
+    {\displaystyle P\to Q,P\vdash Q}
+  
+.
+Syntactic consequence is contrasted with semantic consequence, which is symbolized with ⊧. In this case, the conclusion follows syntactically because the natural deduction inference rule of modus ponens has been assumed. For more on inference rules, see the sections on proof systems below.
+
+Language
+
+The language (commonly called 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+) of a propositional calculus is defined in terms of:
+
+a set of primitive symbols, called atomic formulas, atomic sentences, atoms, placeholders, prime formulas, proposition letters, sentence letters, or variables, and
+a set of operator symbols, called connectives, logical connectives, logical operators, truth-functional connectives, truth-functors, or propositional connectives.
+A well-formed formula is any atomic formula, or any formula that can be built up from atomic formulas by means of operator symbols according to the rules of the grammar. The language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+, then, is defined either as being identical to its set of well-formed formulas, or as containing that set (together with, for instance, its set of connectives and variables).
+Usually the syntax of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ is defined recursively by just a few definitions, as seen next; some authors explicitly include parentheses as punctuation marks when defining their language's syntax, while others use them without comment.
+
+Syntax
+Given a set of atomic propositional variables 
+  
+    
+      
+        
+          p
+          
+            1
+          
+        
+      
+    
+    {\displaystyle p_{1}}
+  
+, 
+  
+    
+      
+        
+          p
+          
+            2
+          
+        
+      
+    
+    {\displaystyle p_{2}}
+  
+, 
+  
+    
+      
+        
+          p
+          
+            3
+          
+        
+      
+    
+    {\displaystyle p_{3}}
+  
+, ..., and a set of propositional connectives 
+  
+    
+      
+        
+          c
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle c_{1}^{1}}
+  
+, 
+  
+    
+      
+        
+          c
+          
+            2
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle c_{2}^{1}}
+  
+, 
+  
+    
+      
+        
+          c
+          
+            3
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle c_{3}^{1}}
+  
+, ..., 
+  
+    
+      
+        
+          c
+          
+            1
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle c_{1}^{2}}
+  
+, 
+  
+    
+      
+        
+          c
+          
+            2
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle c_{2}^{2}}
+  
+, 
+  
+    
+      
+        
+          c
+          
+            3
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle c_{3}^{2}}
+  
+, ..., 
+  
+    
+      
+        
+          c
+          
+            1
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle c_{1}^{3}}
+  
+, 
+  
+    
+      
+        
+          c
+          
+            2
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle c_{2}^{3}}
+  
+, 
+  
+    
+      
+        
+          c
+          
+            3
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle c_{3}^{3}}
+  
+, ..., a formula of propositional logic is defined recursively by these definitions:
+
+Definition 1: Atomic propositional variables are formulas.
+Definition 2: If 
+  
+    
+      
+        
+          c
+          
+            n
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle c_{n}^{m}}
+  
+ is a propositional connective, and 
+  
+    
+      
+        ⟨
+      
+    
+    {\displaystyle \langle }
+  
+A, B, C, …
+  
+    
+      
+        ⟩
+      
+    
+    {\displaystyle \rangle }
+  
+ is a sequence of m, possibly but not necessarily atomic, possibly but not necessarily distinct, formulas, then the result of applying 
+  
+    
+      
+        
+          c
+          
+            n
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle c_{n}^{m}}
+  
+ to 
+  
+    
+      
+        ⟨
+      
+    
+    {\displaystyle \langle }
+  
+A, B, C, …
+  
+    
+      
+        ⟩
+      
+    
+    {\displaystyle \rangle }
+  
+ is a formula.
+Definition 3: Nothing else is a formula.
+Writing the result of applying 
+  
+    
+      
+        
+          c
+          
+            n
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle c_{n}^{m}}
+  
+ to 
+  
+    
+      
+        ⟨
+      
+    
+    {\displaystyle \langle }
+  
+A, B, C, ...
+  
+    
+      
+        ⟩
+      
+    
+    {\displaystyle \rangle }
+  
+ in functional notation, as 
+  
+    
+      
+        
+          c
+          
+            n
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle c_{n}^{m}}
+  
+(A, B, C, ...), we have the following as examples of well-formed formulas:
+
+  
+    
+      
+        
+          p
+          
+            5
+          
+        
+      
+    
+    {\displaystyle p_{5}}
+  
+
+  
+    
+      
+        
+          c
+          
+            3
+          
+          
+            2
+          
+        
+        (
+        
+          p
+          
+            2
+          
+        
+        ,
+        
+          p
+          
+            9
+          
+        
+        )
+      
+    
+    {\displaystyle c_{3}^{2}(p_{2},p_{9})}
+  
+
+  
+    
+      
+        
+          c
+          
+            3
+          
+          
+            2
+          
+        
+        (
+        
+          p
+          
+            1
+          
+        
+        ,
+        
+          c
+          
+            2
+          
+          
+            1
+          
+        
+        (
+        
+          p
+          
+            3
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle c_{3}^{2}(p_{1},c_{2}^{1}(p_{3}))}
+  
+
+  
+    
+      
+        
+          c
+          
+            1
+          
+          
+            3
+          
+        
+        (
+        
+          p
+          
+            4
+          
+        
+        ,
+        
+          p
+          
+            6
+          
+        
+        ,
+        
+          c
+          
+            2
+          
+          
+            2
+          
+        
+        (
+        
+          p
+          
+            1
+          
+        
+        ,
+        
+          p
+          
+            2
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle c_{1}^{3}(p_{4},p_{6},c_{2}^{2}(p_{1},p_{2}))}
+  
+
+  
+    
+      
+        
+          c
+          
+            4
+          
+          
+            2
+          
+        
+        (
+        
+          c
+          
+            1
+          
+          
+            1
+          
+        
+        (
+        
+          p
+          
+            7
+          
+        
+        )
+        ,
+        
+          c
+          
+            3
+          
+          
+            1
+          
+        
+        (
+        
+          p
+          
+            8
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle c_{4}^{2}(c_{1}^{1}(p_{7}),c_{3}^{1}(p_{8}))}
+  
+
+  
+    
+      
+        
+          c
+          
+            2
+          
+          
+            3
+          
+        
+        (
+        
+          c
+          
+            1
+          
+          
+            2
+          
+        
+        (
+        
+          p
+          
+            3
+          
+        
+        ,
+        
+          p
+          
+            4
+          
+        
+        )
+        ,
+        
+          c
+          
+            2
+          
+          
+            1
+          
+        
+        (
+        
+          p
+          
+            5
+          
+        
+        )
+        ,
+        
+          c
+          
+            3
+          
+          
+            2
+          
+        
+        (
+        
+          p
+          
+            6
+          
+        
+        ,
+        
+          p
+          
+            7
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle c_{2}^{3}(c_{1}^{2}(p_{3},p_{4}),c_{2}^{1}(p_{5}),c_{3}^{2}(p_{6},p_{7}))}
+  
+
+  
+    
+      
+        
+          c
+          
+            3
+          
+          
+            1
+          
+        
+        (
+        
+          c
+          
+            1
+          
+          
+            3
+          
+        
+        (
+        
+          p
+          
+            2
+          
+        
+        ,
+        
+          p
+          
+            3
+          
+        
+        ,
+        
+          c
+          
+            2
+          
+          
+            2
+          
+        
+        (
+        
+          p
+          
+            4
+          
+        
+        ,
+        
+          p
+          
+            5
+          
+        
+        )
+        )
+        )
+      
+    
+    {\displaystyle c_{3}^{1}(c_{1}^{3}(p_{2},p_{3},c_{2}^{2}(p_{4},p_{5})))}
+  
+
+What was given as Definition 2 above, which is responsible for the composition of formulas, is referred to by Colin Howson as the principle of composition. It is this recursion in the definition of a language's syntax which justifies the use of the word "atomic" to refer to propositional variables, since all formulas in the language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ are built up from the atoms as ultimate building blocks. Composite formulas (all formulas besides atoms) are called molecules, or molecular sentences. (This is an imperfect analogy with chemistry, since a chemical molecule may sometimes have only one atom, as in monatomic gases.)
+The definition that "nothing else is a formula", given above as Definition 3, excludes any formula from the language which is not specifically required by the other definitions in the syntax. In particular, it excludes infinitely long formulas from being well-formed. It is sometimes called the Closure Clause.
+
+CF grammar in BNF
+An alternative to the syntax definitions given above is to write a context-free (CF) grammar for the language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ in Backus-Naur form (BNF). This is more common in computer science than in philosophy. It can be done in many ways, of which a particularly brief one, for the common set of five connectives, is this single clause:
+
+  
+    
+      
+        ϕ
+        ::=
+        
+          a
+          
+            1
+          
+        
+        ,
+        
+          a
+          
+            2
+          
+        
+        ,
+        …
+         
+        
+          |
+        
+         
+        ¬
+        ϕ
+         
+        
+          |
+        
+         
+        ϕ
+         
+        &
+         
+        ψ
+         
+        
+          |
+        
+         
+        ϕ
+        ∨
+        ψ
+         
+        
+          |
+        
+         
+        ϕ
+        →
+        ψ
+         
+        
+          |
+        
+         
+        ϕ
+        ↔
+        ψ
+      
+    
+    {\displaystyle \phi ::=a_{1},a_{2},\ldots ~|~\neg \phi ~|~\phi ~\&~\psi ~|~\phi \vee \psi ~|~\phi \rightarrow \psi ~|~\phi \leftrightarrow \psi }
+  
+
+This clause, due to its self-referential nature (since 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ is in some branches of the definition of 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+), also acts as a recursive definition, and therefore specifies the entire language. To expand it to add modal operators, one need only add ... 
+  
+    
+      
+        
+          |
+        
+         
+        ◻
+        ϕ
+         
+        
+          |
+        
+         
+        ◊
+        ϕ
+      
+    
+    {\displaystyle |~\Box \phi ~|~\Diamond \phi }
+  
+ to the end of the clause.
+
+Constants and schemata
+Mathematicians sometimes distinguish between propositional constants, propositional variables, and schemata. Propositional constants represent some particular proposition, while propositional variables range over the set of all atomic propositions. Schemata, or schematic letters, however, range over all formulas. (Schematic letters are also called metavariables.) It is common to represent propositional constants by A, B, and C, propositional variables by P, Q, and R, and schematic letters are often Greek letters, most often φ, ψ, and χ.
+However, some authors recognize only two "propositional constants" in their formal system: the special symbol 
+  
+    
+      
+        ⊤
+      
+    
+    {\displaystyle \top }
+  
+, called "truth", which always evaluates to True, and the special symbol 
+  
+    
+      
+        ⊥
+      
+    
+    {\displaystyle \bot }
+  
+, called "falsity", which always evaluates to False. Other authors also include these symbols, with the same meaning, but consider them to be "zero-place truth-functors", or equivalently, "nullary connectives".
+
+Semantics
+
+To serve as a model of the logic of a given natural language, a formal language must be semantically interpreted. In classical logic, all propositions evaluate to exactly one of two truth-values: True or False. For example, "Wikipedia is a free online encyclopedia that anyone can edit" evaluates to True, while "Wikipedia is a paper encyclopedia" evaluates to False.
+In other respects, the following formal semantics can apply to the language of any propositional logic, but the assumptions that there are only two semantic values (bivalence), that only one of the two is assigned to each formula in the language (noncontradiction), and that every formula gets assigned a value (excluded middle), are distinctive features of classical logic. To learn about nonclassical logics with more than two truth-values, and their unique semantics, one may consult the articles on "Many-valued logic", "Three-valued logic", "Finite-valued logic", and "Infinite-valued logic".
+
+Interpretation (case) and argument
+
+For a given language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+, an interpretation, valuation, Boolean valuation, or case, is an assignment of semantic values to each formula of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+. For a formal language of classical logic, a case is defined as an assignment, to each formula of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+, of one or the other, but not both, of the truth values, namely truth (T, or 1) and falsity (F, or 0). An interpretation that follows the rules of classical logic is sometimes called a Boolean valuation. An interpretation of a formal language for classical logic is often expressed in terms of truth tables. Since each formula is only assigned a single truth-value, an interpretation may be viewed as a function, whose domain is 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+, and whose range is its set of semantic values 
+  
+    
+      
+        
+          
+            V
+          
+        
+        =
+        {
+        
+          
+            T
+          
+        
+        ,
+        
+          
+            F
+          
+        
+        }
+      
+    
+    {\displaystyle {\mathcal {V}}=\{{\mathsf {T}},{\mathsf {F}}\}}
+  
+, or 
+  
+    
+      
+        
+          
+            V
+          
+        
+        =
+        {
+        1
+        ,
+        0
+        }
+      
+    
+    {\displaystyle {\mathcal {V}}=\{1,0\}}
+  
+.
+For 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ distinct propositional symbols there are 
+  
+    
+      
+        
+          2
+          
+            n
+          
+        
+      
+    
+    {\displaystyle 2^{n}}
+  
+ distinct possible interpretations. For any particular symbol 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+, for example, there are 
+  
+    
+      
+        
+          2
+          
+            1
+          
+        
+        =
+        2
+      
+    
+    {\displaystyle 2^{1}=2}
+  
+ possible interpretations: either 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is assigned T, or 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is assigned F. And for the pair 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+, 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ there are 
+  
+    
+      
+        
+          2
+          
+            2
+          
+        
+        =
+        4
+      
+    
+    {\displaystyle 2^{2}=4}
+  
+ possible interpretations: either both are assigned T, or both are assigned F, or 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is assigned T and 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ is assigned F, or 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is assigned F and 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ is assigned T. Since 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ has 
+  
+    
+      
+        
+          ℵ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \aleph _{0}}
+  
+, that is, denumerably many propositional symbols, there are 
+  
+    
+      
+        
+          2
+          
+            
+              ℵ
+              
+                0
+              
+            
+          
+        
+        =
+        
+          
+            c
+          
+        
+      
+    
+    {\displaystyle 2^{\aleph _{0}}={\mathfrak {c}}}
+  
+, and therefore uncountably many distinct possible interpretations of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ as a whole.
+Where 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ is an interpretation and 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ and 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ represent formulas, the definition of an argument, given in § Arguments, may then be stated as a pair 
+  
+    
+      
+        ⟨
+        {
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        
+          φ
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          φ
+          
+            n
+          
+        
+        }
+        ,
+        ψ
+        ⟩
+      
+    
+    {\displaystyle \langle \{\varphi _{1},\varphi _{2},\varphi _{3},...,\varphi _{n}\},\psi \rangle }
+  
+, where 
+  
+    
+      
+        {
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        
+          φ
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          φ
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle \{\varphi _{1},\varphi _{2},\varphi _{3},...,\varphi _{n}\}}
+  
+ is the set of premises and 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ is the conclusion. The definition of an argument's validity, i.e. its property that 
+  
+    
+      
+        {
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        
+          φ
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          φ
+          
+            n
+          
+        
+        }
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \{\varphi _{1},\varphi _{2},\varphi _{3},...,\varphi _{n}\}\models \psi }
+  
+, can then be stated as its absence of a counterexample, where a counterexample is defined as a case 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ in which the argument's premises 
+  
+    
+      
+        {
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        
+          φ
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          φ
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle \{\varphi _{1},\varphi _{2},\varphi _{3},...,\varphi _{n}\}}
+  
+ are all true but the conclusion 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ is not true. As will be seen in § Semantic truth, validity, consequence, this is the same as to say that the conclusion is a semantic consequence of the premises.
+
+Propositional connective semantics
+An interpretation assigns semantic values to atomic formulas directly. Molecular formulas are assigned a function of the value of their constituent atoms, according to the connective used; the connectives are defined in such a way that the truth-value of a sentence formed from atoms with connectives depends on the truth-values of the atoms that they're applied to, and only on those. This assumption is referred to by Colin Howson as the assumption of the truth-functionality of the connectives.
+
+Semantics via truth tables
+
+Since logical connectives are defined semantically only in terms of the truth values that they take when the propositional variables that they're applied to take either of the two possible truth values, the semantic definition of the connectives is usually represented as a truth table for each of the connectives, as seen below:
+
+This table covers each of the main five logical connectives: conjunction (here notated 
+  
+    
+      
+        p
+        ∧
+        q
+      
+    
+    {\displaystyle p\land q}
+  
+), disjunction (p ∨ q), implication (p → q), biconditional (p ↔ q) and negation, (¬p, or ¬q, as the case may be). It is sufficient for determining the semantics of each of these operators. For more truth tables for more different kinds of connectives, see the article "Truth table".
+
+Semantics via assignment expressions
+Some authors write out the connective semantics using a list of statements instead of a table. In this format, where 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        φ
+        )
+      
+    
+    {\displaystyle {\mathcal {I}}(\varphi )}
+  
+ is the interpretation of 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+, the five connectives are defined as:
+
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        ¬
+        P
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(\neg P)={\mathsf {T}}}
+  
+ if, and only if, 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        )
+        =
+        
+          
+            F
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P)={\mathsf {F}}}
+  
+
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        ∧
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P\land Q)={\mathsf {T}}}
+  
+ if, and only if, 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P)={\mathsf {T}}}
+  
+ and 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(Q)={\mathsf {T}}}
+  
+
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        ∨
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P\lor Q)={\mathsf {T}}}
+  
+ if, and only if, 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P)={\mathsf {T}}}
+  
+ or 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(Q)={\mathsf {T}}}
+  
+
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        →
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P\to Q)={\mathsf {T}}}
+  
+ if, and only if, it is true that, if 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P)={\mathsf {T}}}
+  
+, then 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(Q)={\mathsf {T}}}
+  
+
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        ↔
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P\leftrightarrow Q)={\mathsf {T}}}
+  
+ if, and only if, it is true that 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        P
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(P)={\mathsf {T}}}
+  
+ if, and only if, 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        Q
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(Q)={\mathsf {T}}}
+  
+
+Instead of 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        φ
+        )
+      
+    
+    {\displaystyle {\mathcal {I}}(\varphi )}
+  
+, the interpretation of 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ may be written out as 
+  
+    
+      
+        
+          |
+        
+        φ
+        
+          |
+        
+      
+    
+    {\displaystyle |\varphi |}
+  
+, or, for definitions such as the above, 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        φ
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(\varphi )={\mathsf {T}}}
+  
+ may be written simply as the English sentence "
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is given the value 
+  
+    
+      
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathsf {T}}}
+  
+". Yet other authors may prefer to speak of a Tarskian model 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {M}}}
+  
+ for the language, so that instead they'll use the notation 
+  
+    
+      
+        
+          
+            M
+          
+        
+        ⊨
+        φ
+      
+    
+    {\displaystyle {\mathfrak {M}}\models \varphi }
+  
+, which is equivalent to saying 
+  
+    
+      
+        
+          
+            I
+          
+        
+        (
+        φ
+        )
+        =
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}(\varphi )={\mathsf {T}}}
+  
+, where 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ is the interpretation function for 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {M}}}
+  
+.
+
+Connective definition methods
+Some of these connectives may be defined in terms of others: for instance, implication, 
+  
+    
+      
+        p
+        →
+        q
+      
+    
+    {\displaystyle p\rightarrow q}
+  
+, may be defined in terms of disjunction and negation, as 
+  
+    
+      
+        ¬
+        p
+        ∨
+        q
+      
+    
+    {\displaystyle \neg p\lor q}
+  
+; and disjunction may be defined in terms of negation and conjunction, as 
+  
+    
+      
+        ¬
+        (
+        ¬
+        p
+        ∧
+        ¬
+        q
+      
+    
+    {\displaystyle \neg (\neg p\land \neg q}
+  
+). In fact, a truth-functionally complete system, in the sense that all and only the classical propositional tautologies are theorems, may be derived using only disjunction and negation (as Russell, Whitehead, and Hilbert did), or using only implication and negation (as Frege did), or using only conjunction and negation, or even using only a single connective for "not and" (the Sheffer stroke), as Jean Nicod did. A joint denial connective (logical NOR) will also suffice, by itself, to define all other connectives. Besides NOR and NAND, no other connectives have this property.
+Some authors, namely Howson and Cunningham, distinguish equivalence from the biconditional. (As to equivalence, Howson calls it "truth-functional equivalence", while Cunningham calls it "logical equivalence".) Equivalence is symbolized with ⇔ and is a metalanguage symbol, while a biconditional is symbolized with ↔ and is a logical connective in the object language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+. Regardless, an equivalence or biconditional is true if, and only if, the formulas connected by it are assigned the same semantic value under every interpretation. Other authors often do not make this distinction, and may use the word "equivalence", and/or the symbol ⇔, to denote their object language's biconditional connective.
+
+Semantic truth, validity, consequence
+Given 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ and 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ as formulas (or sentences) of a language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+, and 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ as an interpretation (or case) of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+, then the following definitions apply:
+
+Truth-in-a-case: A sentence 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ is true under an interpretation 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ if 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ assigns the truth value T to 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+. If 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+, then 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ is called a model of 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+.
+Falsity-in-a-case: 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is false under an interpretation 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ if, and only if, 
+  
+    
+      
+        ¬
+        φ
+      
+    
+    {\displaystyle \neg \varphi }
+  
+ is true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+. This is the "truth of negation" definition of falsity-in-a-case. Falsity-in-a-case may also be defined by the "complement" definition: 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is false under an interpretation 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ if, and only if, 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is not true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+. In classical logic, these definitions are equivalent, but in nonclassical logics, they are not.
+Semantic consequence: A sentence 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ is a semantic consequence (
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+) of a sentence 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ if there is no interpretation under which 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is true and 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ is not true.
+Valid formula (tautology): A sentence 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ is logically valid (
+  
+    
+      
+        ⊨
+        φ
+      
+    
+    {\displaystyle \models \varphi }
+  
+), or a tautology, if it is true under every interpretation, or true in every case.
+Consistent sentence: A sentence of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ is consistent if it is true under at least one interpretation. It is inconsistent if it is not consistent. An inconsistent formula is also called self-contradictory, and said to be a self-contradiction, or simply a contradiction, although this latter name is sometimes reserved specifically for statements of the form 
+  
+    
+      
+        (
+        p
+        ∧
+        ¬
+        p
+        )
+      
+    
+    {\displaystyle (p\land \neg p)}
+  
+.
+For interpretations (cases) 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ of 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+, these definitions are sometimes given:
+
+Complete case: A case 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ is complete if, and only if, either 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is true-in-
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ or 
+  
+    
+      
+        ¬
+        φ
+      
+    
+    {\displaystyle \neg \varphi }
+  
+ is true-in-
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+, for any 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ in 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+.
+Consistent case: A case 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ is consistent if, and only if, there is no 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ in 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+ such that both 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ and 
+  
+    
+      
+        ¬
+        φ
+      
+    
+    {\displaystyle \neg \varphi }
+  
+ are true-in-
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+.
+For classical logic, which assumes that all cases are complete and consistent, the following theorems apply:
+
+For any given interpretation, a given formula is either true or false under it.
+No formula is both true and false under the same interpretation.
+
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ if, and only if, 
+  
+    
+      
+        ¬
+        φ
+      
+    
+    {\displaystyle \neg \varphi }
+  
+ is false under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+; 
+  
+    
+      
+        ¬
+        φ
+      
+    
+    {\displaystyle \neg \varphi }
+  
+ is true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ if, and only if, 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is not true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+.
+If 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ and 
+  
+    
+      
+        (
+        φ
+        →
+        ψ
+        )
+      
+    
+    {\displaystyle (\varphi \to \psi )}
+  
+ are both true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+, then 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ is true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+.
+If 
+  
+    
+      
+        ⊨
+        φ
+      
+    
+    {\displaystyle \models \varphi }
+  
+ and 
+  
+    
+      
+        ⊨
+        (
+        φ
+        →
+        ψ
+        )
+      
+    
+    {\displaystyle \models (\varphi \to \psi )}
+  
+, then 
+  
+    
+      
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \models \psi }
+  
+.
+
+  
+    
+      
+        (
+        φ
+        →
+        ψ
+        )
+      
+    
+    {\displaystyle (\varphi \to \psi )}
+  
+ is true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+ if, and only if, either 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is not true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+, or 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ is true under 
+  
+    
+      
+        
+          
+            I
+          
+        
+      
+    
+    {\displaystyle {\mathcal {I}}}
+  
+.
+
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+ if, and only if, 
+  
+    
+      
+        (
+        φ
+        →
+        ψ
+        )
+      
+    
+    {\displaystyle (\varphi \to \psi )}
+  
+ is logically valid, that is, 
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+ if, and only if, 
+  
+    
+      
+        ⊨
+        (
+        φ
+        →
+        ψ
+        )
+      
+    
+    {\displaystyle \models (\varphi \to \psi )}
+  
+.
+
+Proof systems
+
+Proof systems in propositional logic can be broadly classified into semantic proof systems and syntactic proof systems, according to the kind of logical consequence that they rely on: semantic proof systems rely on semantic consequence (
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+), whereas syntactic proof systems rely on syntactic consequence (
+  
+    
+      
+        φ
+        ⊢
+        ψ
+      
+    
+    {\displaystyle \varphi \vdash \psi }
+  
+). Semantic consequence deals with the truth values of propositions in all possible interpretations, whereas syntactic consequence concerns the derivation of conclusions from premises based on rules and axioms within a formal system. This section gives a very brief overview of the kinds of proof systems, with anchors to the relevant sections of this article on each one, as well as to the separate Wikipedia articles on each one.
+
+Semantic proof systems
+
+Semantic proof systems rely on the concept of semantic consequence, symbolized as 
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+, which indicates that if 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is true, then 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ must also be true in every possible interpretation.
+
+Truth tables
+
+A truth table is a semantic proof method used to determine the truth value of a propositional logic expression in every possible scenario. By exhaustively listing the truth values of its constituent atoms, a truth table can show whether a proposition is true, false, tautological, or contradictory. See § Semantic proof via truth tables.
+
+Semantic tableaux
+
+A semantic tableau is another semantic proof technique that systematically explores the truth of a proposition. It constructs a tree where each branch represents a possible interpretation of the propositions involved. If every branch leads to a contradiction, the original proposition is considered to be a contradiction, and its negation is considered a tautology. See § Semantic proof via tableaux.
+
+Syntactic proof systems
+
+Syntactic proof systems, in contrast, focus on the formal manipulation of symbols according to specific rules. The notion of syntactic consequence, 
+  
+    
+      
+        φ
+        ⊢
+        ψ
+      
+    
+    {\displaystyle \varphi \vdash \psi }
+  
+, signifies that 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ can be derived from 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ using the rules of the formal system.
+
+Axiomatic systems
+
+A Hilbert-style axiomatic system, or Hilbert system, is a set of axioms or assumptions from which other statements (theorems) are logically derived. In propositional logic, axiomatic systems define a base set of propositions considered to be self-evidently true, and theorems are proved by applying deduction rules to these axioms. See § Syntactic proof via axioms.
+
+Natural deduction
+
+Natural deduction is a syntactic method of proof that emphasizes the derivation of conclusions from premises through the use of intuitive rules reflecting ordinary reasoning. Each rule reflects a particular logical connective and shows how it can be introduced or eliminated. See § Syntactic proof via natural deduction.
+
+Sequent calculus
+
+The sequent calculus is a formal system that represents logical deductions as sequences or "sequents" of formulas. Developed by Gerhard Gentzen, this approach focuses on the structural properties of logical deductions and provides a powerful framework for proving statements within propositional logic.
+
+Semantic proof via truth tables
+
+Taking advantage of the semantic concept of validity (truth in every interpretation), it is possible to prove a formula's validity by using a truth table, which gives every possible interpretation (assignment of truth values to variables) of a formula. If, and only if, all the lines of a truth table come out true, the formula is semantically valid (true in every interpretation). Further, if (and only if) 
+  
+    
+      
+        ¬
+        φ
+      
+    
+    {\displaystyle \neg \varphi }
+  
+ is valid, then 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is inconsistent.
+For instance, this table shows that "p → (q ∨ r → (r → ¬p))" is not valid:
+
+The computation of the last column of the third line may be displayed as follows:
+
+Further, using the theorem that 
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+ if, and only if, 
+  
+    
+      
+        (
+        φ
+        →
+        ψ
+        )
+      
+    
+    {\displaystyle (\varphi \to \psi )}
+  
+ is valid, we can use a truth table to prove that a formula is a semantic consequence of a set of formulas: 
+  
+    
+      
+        {
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        
+          φ
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          φ
+          
+            n
+          
+        
+        }
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \{\varphi _{1},\varphi _{2},\varphi _{3},...,\varphi _{n}\}\models \psi }
+  
+ if, and only if, we can produce a truth table that comes out all true for the formula 
+  
+    
+      
+        
+          (
+          
+            
+              (
+              
+                
+                  ⋀
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    n
+                  
+                
+                
+                  φ
+                  
+                    i
+                  
+                
+              
+              )
+            
+            →
+            ψ
+          
+          )
+        
+      
+    
+    {\displaystyle \left(\left(\bigwedge _{i=1}^{n}\varphi _{i}\right)\rightarrow \psi \right)}
+  
+ (that is, if 
+  
+    
+      
+        ⊨
+        
+          (
+          
+            
+              (
+              
+                
+                  ⋀
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    n
+                  
+                
+                
+                  φ
+                  
+                    i
+                  
+                
+              
+              )
+            
+            →
+            ψ
+          
+          )
+        
+      
+    
+    {\displaystyle \models \left(\left(\bigwedge _{i=1}^{n}\varphi _{i}\right)\rightarrow \psi \right)}
+  
+).
+
+Semantic proof via tableaux
+
+Since truth tables have 2n lines for n variables, they can be tiresomely long for large values of n. Analytic tableaux are a more efficient, but nevertheless mechanical, semantic proof method; they take advantage of the fact that "we learn nothing about the validity of the inference from examining the truth-value distributions which make either the premises false or the conclusion true: the only relevant distributions when considering deductive validity are clearly just those which make the premises true or the conclusion false."
+Analytic tableaux for propositional logic are fully specified by the rules that are stated in schematic form below. These rules use "signed formulas", where a signed formula is an expression 
+  
+    
+      
+        T
+        X
+      
+    
+    {\displaystyle TX}
+  
+ or 
+  
+    
+      
+        F
+        X
+      
+    
+    {\displaystyle FX}
+  
+, where 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a (unsigned) formula of the language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+.  (Informally, 
+  
+    
+      
+        T
+        X
+      
+    
+    {\displaystyle TX}
+  
+ is read "
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is true", and 
+  
+    
+      
+        F
+        X
+      
+    
+    {\displaystyle FX}
+  
+ is read "
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is false".)  Their formal semantic definition is that "under any interpretation, a signed formula 
+  
+    
+      
+        T
+        X
+      
+    
+    {\displaystyle TX}
+  
+ is called true if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is true, and false if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is false, whereas a signed formula 
+  
+    
+      
+        F
+        X
+      
+    
+    {\displaystyle FX}
+  
+ is called false if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is true, and true if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is false."
+
+  
+    
+      
+        
+          
+            
+              
+              
+                1
+                )
+                
+                
+                  
+                    
+                      T
+                      ∼
+                      X
+                    
+                    
+                      F
+                      X
+                    
+                  
+                
+                
+              
+              
+              
+                
+                  
+                    
+                      F
+                      ∼
+                      X
+                    
+                    
+                      T
+                      X
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  
+                    
+                      s
+                      p
+                      a
+                      c
+                      e
+                      r
+                    
+                  
+                
+              
+            
+            
+              
+              
+                2
+                )
+                
+                
+                  
+                    
+                      T
+                      (
+                      X
+                      ∧
+                      Y
+                      )
+                    
+                    
+                      
+                        
+                          T
+                          X
+                        
+                      
+                      
+                        
+                          T
+                          Y
+                        
+                      
+                    
+                  
+                
+                
+              
+              
+              
+                
+                  
+                    
+                      F
+                      (
+                      X
+                      ∧
+                      Y
+                      )
+                    
+                    
+                      F
+                      X
+                      
+                        |
+                      
+                      F
+                      Y
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  
+                    
+                      s
+                      p
+                      a
+                      c
+                      e
+                      r
+                    
+                  
+                
+              
+            
+            
+              
+              
+                3
+                )
+                
+                
+                  
+                    
+                      T
+                      (
+                      X
+                      ∨
+                      Y
+                      )
+                    
+                    
+                      T
+                      X
+                      
+                        |
+                      
+                      T
+                      Y
+                    
+                  
+                
+                
+              
+              
+              
+                
+                  
+                    
+                      F
+                      (
+                      X
+                      ∨
+                      Y
+                      )
+                    
+                    
+                      
+                        
+                          F
+                          X
+                        
+                      
+                      
+                        
+                          F
+                          Y
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  
+                    
+                      s
+                      p
+                      a
+                      c
+                      e
+                      r
+                    
+                  
+                
+              
+            
+            
+              
+              
+                4
+                )
+                
+                
+                  
+                    
+                      T
+                      (
+                      X
+                      ⊃
+                      Y
+                      )
+                    
+                    
+                      F
+                      X
+                      
+                        |
+                      
+                      T
+                      Y
+                    
+                  
+                
+                
+              
+              
+              
+                
+                  
+                    
+                      F
+                      (
+                      X
+                      ⊃
+                      Y
+                      )
+                    
+                    
+                      
+                        
+                          T
+                          X
+                        
+                      
+                      
+                        
+                          F
+                          Y
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&1)\quad {\frac {T\sim X}{FX}}\quad &&{\frac {F\sim X}{TX}}\\{\phantom {spacer}}\\&2)\quad {\frac {T(X\land Y)}{\begin{matrix}TX\\TY\end{matrix}}}\quad &&{\frac {F(X\land Y)}{FX|FY}}\\{\phantom {spacer}}\\&3)\quad {\frac {T(X\lor Y)}{TX|TY}}\quad &&{\frac {F(X\lor Y)}{\begin{matrix}FX\\FY\end{matrix}}}\\{\phantom {spacer}}\\&4)\quad {\frac {T(X\supset Y)}{FX|TY}}\quad &&{\frac {F(X\supset Y)}{\begin{matrix}TX\\FY\end{matrix}}}\end{aligned}}}
+  
+
+In this notation, rule 2 means that 
+  
+    
+      
+        T
+        (
+        X
+        ∧
+        Y
+        )
+      
+    
+    {\displaystyle T(X\land Y)}
+  
+ yields both 
+  
+    
+      
+        T
+        X
+        ,
+        T
+        Y
+      
+    
+    {\displaystyle TX,TY}
+  
+, whereas 
+  
+    
+      
+        F
+        (
+        X
+        ∧
+        Y
+        )
+      
+    
+    {\displaystyle F(X\land Y)}
+  
+ branches into 
+  
+    
+      
+        F
+        X
+        ,
+        F
+        Y
+      
+    
+    {\displaystyle FX,FY}
+  
+. The notation is to be understood analogously for rules 3 and 4. Often, in tableaux for classical logic, the signed formula notation is simplified so that 
+  
+    
+      
+        T
+        φ
+      
+    
+    {\displaystyle T\varphi }
+  
+ is written simply as 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+, and 
+  
+    
+      
+        F
+        φ
+      
+    
+    {\displaystyle F\varphi }
+  
+ as 
+  
+    
+      
+        ¬
+        φ
+      
+    
+    {\displaystyle \neg \varphi }
+  
+, which accounts for naming rule 1 the "Rule of Double Negation".
+One constructs a tableau for a set of formulas by applying the rules to produce more lines and tree branches until every line has been used, producing a complete tableau. In some cases, a branch can come to contain both 
+  
+    
+      
+        T
+        X
+      
+    
+    {\displaystyle TX}
+  
+ and 
+  
+    
+      
+        F
+        X
+      
+    
+    {\displaystyle FX}
+  
+ for some 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+, which is to say, a contradiction. In that case, the branch is said to close. If every branch in a tree closes, the tree itself is said to close. In virtue of the rules for construction of tableaux, a closed tree is a proof that the original formula, or set of formulas, used to construct it was itself self-contradictory, and therefore false. Conversely, a tableau can also prove that a logical formula is tautologous: if a formula is tautologous, its negation is a contradiction, so a tableau built from its negation will close.
+To construct a tableau for an argument 
+  
+    
+      
+        ⟨
+        {
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        
+          φ
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          φ
+          
+            n
+          
+        
+        }
+        ,
+        ψ
+        ⟩
+      
+    
+    {\displaystyle \langle \{\varphi _{1},\varphi _{2},\varphi _{3},...,\varphi _{n}\},\psi \rangle }
+  
+, one first writes out the set of premise formulas, 
+  
+    
+      
+        {
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        
+          φ
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          φ
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle \{\varphi _{1},\varphi _{2},\varphi _{3},...,\varphi _{n}\}}
+  
+, with one formula on each line, signed with 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ (that is, 
+  
+    
+      
+        T
+        φ
+      
+    
+    {\displaystyle T\varphi }
+  
+ for each 
+  
+    
+      
+        T
+        φ
+      
+    
+    {\displaystyle T\varphi }
+  
+ in the set); and together with those formulas (the order is unimportant), one also writes out the conclusion, 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+, signed with 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ (that is, 
+  
+    
+      
+        F
+        ψ
+      
+    
+    {\displaystyle F\psi }
+  
+). One then produces a truth tree (analytic tableau) by using all those lines according to the rules. A closed tree will be proof that the argument was valid, in virtue of the fact that 
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+ if, and only if, 
+  
+    
+      
+        {
+        φ
+        ,
+        ∼
+        ψ
+        }
+      
+    
+    {\displaystyle \{\varphi ,\sim \psi \}}
+  
+ is inconsistent (also written as 
+  
+    
+      
+        φ
+        ,
+        ∼
+        ψ
+        ⊨
+      
+    
+    {\displaystyle \varphi ,\sim \psi \models }
+  
+).
+
+List of classically valid argument forms
+Using semantic checking methods, such as truth tables or semantic tableaux, to check for tautologies and semantic consequences, it can be shown that, in classical logic, the following classical argument forms are semantically valid, i.e., these tautologies and semantic consequences hold. We use 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ ⟚ 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ to denote equivalence of 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ and 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+, that is, as an abbreviation for both 
+  
+    
+      
+        φ
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \varphi \models \psi }
+  
+ and 
+  
+    
+      
+        ψ
+        ⊨
+        φ
+      
+    
+    {\displaystyle \psi \models \varphi }
+  
+; as an aid to reading the symbols, a description of each formula is given. The description reads the symbol ⊧ (called the "double turnstile") as "therefore", which is a common reading of it, although many authors prefer to read it as "entails", or as "models".
+
+Syntactic proof via natural deduction
+Natural deduction, since it is a method of syntactical proof, is specified by providing inference rules (also called rules of proof) for a language with the typical set of connectives 
+  
+    
+      
+        {
+        −
+        ,
+        &
+        ,
+        ∨
+        ,
+        →
+        ,
+        ↔
+        }
+      
+    
+    {\displaystyle \{-,\&,\lor ,\to ,\leftrightarrow \}}
+  
+; no axioms are used other than these rules. The rules are covered below, and a proof example is given afterwards.
+
+Notation styles
+Different authors vary to some extent regarding which inference rules they give, which will be noted. More striking to the look and feel of a proof, however, is the variation in notation styles. The § Gentzen notation, which was covered earlier for a short argument, can actually be stacked to produce large tree-shaped natural deduction proofs—not to be confused with "truth trees", which is another name for analytic tableaux. There is also a style due to Stanisław Jaśkowski, where the formulas in the proof are written inside various nested boxes, and there is a simplification of Jaśkowski's style due to Fredric Fitch (Fitch notation), where the boxes are simplified to simple horizontal lines beneath the introductions of suppositions, and vertical lines to the left of the lines that are under the supposition. Lastly, there is the only notation style which will actually be used in this article, which is due to Patrick Suppes, but was much popularized by E.J. Lemmon and Benson Mates. This method has the advantage that, graphically, it is the least intensive to produce and display, which made it a natural choice for the editor who wrote this part of the article, who did not understand the complex LaTeX commands that would be required to produce proofs in the other methods.
+A proof, then, laid out in accordance with the Suppes–Lemmon notation style, is a sequence of lines containing sentences, where each sentence is either an assumption, or the result of applying a rule of proof to earlier sentences in the sequence. Each line of proof is made up of a sentence of proof, together with its annotation, its assumption set, and the current line number. The assumption set lists the assumptions on which the given sentence of proof depends, which are referenced by the line numbers. The annotation specifies which rule of proof was applied, and to which earlier lines, to yield the current sentence. See the § Natural deduction proof example.
+
+Inference rules
+Natural deduction inference rules, due ultimately to Gentzen, are given below. There are ten primitive rules of proof, which are the rule assumption, plus four pairs of introduction and elimination rules for the binary connectives, and the rule reductio ad adbsurdum. Disjunctive Syllogism can be used as an easier alternative to the proper ∨-elimination, and MTT and DN are commonly given rules, although they are not primitive.
+
+Natural deduction proof example
+The proof below derives 
+  
+    
+      
+        −
+        P
+      
+    
+    {\displaystyle -P}
+  
+ from 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+ and 
+  
+    
+      
+        −
+        Q
+      
+    
+    {\displaystyle -Q}
+  
+ using only MPP and RAA, which shows that MTT is not a primitive rule, since it can be derived from those two other rules.
+
+Syntactic proof via axioms
+
+It is possible to perform proofs axiomatically, which means that certain tautologies are taken as self-evident and various others are deduced from them using modus ponens as an inference rule, as well as a rule of substitution, which permits replacing any well-formed formula with any substitution-instance of it. Alternatively, one uses axiom schemas instead of axioms, and no rule of substitution is used.
+This section gives the axioms of some historically notable axiomatic systems for propositional logic. For more examples, as well as metalogical theorems that are specific to such axiomatic systems (such as their completeness and consistency), see the article Axiomatic system (logic).
+
+Frege's Begriffsschrift
+Although axiomatic proof has been used since the famous Ancient Greek textbook, Euclid's Elements of Geometry, in propositional logic it dates back to Gottlob Frege's 1879 Begriffsschrift. Frege's system used only implication and negation as connectives. It had six axioms:
+
+Proposition 1: 
+  
+    
+      
+        a
+        →
+        (
+        b
+        →
+        a
+        )
+      
+    
+    {\displaystyle a\to (b\to a)}
+  
+
+Proposition 2: 
+  
+    
+      
+        (
+        c
+        →
+        (
+        b
+        →
+        a
+        )
+        )
+        →
+        (
+        (
+        c
+        →
+        b
+        )
+        →
+        (
+        c
+        →
+        a
+        )
+        )
+      
+    
+    {\displaystyle (c\to (b\to a))\to ((c\to b)\to (c\to a))}
+  
+
+Proposition 8: 
+  
+    
+      
+        (
+        d
+        →
+        (
+        b
+        →
+        a
+        )
+        )
+        →
+        (
+        b
+        →
+        (
+        d
+        →
+        a
+        )
+        )
+      
+    
+    {\displaystyle (d\to (b\to a))\to (b\to (d\to a))}
+  
+
+Proposition 28: 
+  
+    
+      
+        (
+        b
+        →
+        a
+        )
+        →
+        (
+        ¬
+        a
+        →
+        ¬
+        b
+        )
+      
+    
+    {\displaystyle (b\to a)\to (\neg a\to \neg b)}
+  
+
+Proposition 31: 
+  
+    
+      
+        ¬
+        ¬
+        a
+        →
+        a
+      
+    
+    {\displaystyle \neg \neg a\to a}
+  
+
+Proposition 41: 
+  
+    
+      
+        a
+        →
+        ¬
+        ¬
+        a
+      
+    
+    {\displaystyle a\to \neg \neg a}
+  
+
+These were used by Frege together with modus ponens and a rule of substitution (which was used but never precisely stated) to yield a complete and consistent axiomatization of classical truth-functional propositional logic.
+
+Łukasiewicz's P2
+Jan Łukasiewicz showed that, in Frege's system, "the third axiom is superfluous since it can be derived from the preceding two axioms, and that the last three axioms can be replaced by the single sentence 
+  
+    
+      
+        C
+        C
+        N
+        p
+        N
+        q
+        C
+        q
+        p
+      
+    
+    {\displaystyle CCNpNqCqp}
+  
+". Which, taken out of Łukasiewicz's Polish notation into modern notation, means 
+  
+    
+      
+        (
+        ¬
+        p
+        →
+        ¬
+        q
+        )
+        →
+        (
+        q
+        →
+        p
+        )
+      
+    
+    {\displaystyle (\neg p\rightarrow \neg q)\rightarrow (q\rightarrow p)}
+  
+. Hence, Łukasiewicz is credited with this system of three axioms:
+
+  
+    
+      
+        p
+        →
+        (
+        q
+        →
+        p
+        )
+      
+    
+    {\displaystyle p\to (q\to p)}
+  
+
+  
+    
+      
+        (
+        p
+        →
+        (
+        q
+        →
+        r
+        )
+        )
+        →
+        (
+        (
+        p
+        →
+        q
+        )
+        →
+        (
+        p
+        →
+        r
+        )
+        )
+      
+    
+    {\displaystyle (p\to (q\to r))\to ((p\to q)\to (p\to r))}
+  
+
+  
+    
+      
+        (
+        ¬
+        p
+        →
+        ¬
+        q
+        )
+        →
+        (
+        q
+        →
+        p
+        )
+      
+    
+    {\displaystyle (\neg p\to \neg q)\to (q\to p)}
+  
+
+Just like Frege's system, this system uses a substitution rule and uses modus ponens as an inference rule. The exact same system was given (with an explicit substitution rule) by Alonzo Church, who referred to it as the system P2 and helped popularize it.
+
+Schematic form of P2
+One may avoid using the rule of substitution by giving the axioms in schematic form, using them to generate an infinite set of axioms. Hence, using Greek letters to represent schemata (metalogical variables that may stand for any well-formed formulas), the axioms are given as:
+
+  
+    
+      
+        φ
+        →
+        (
+        ψ
+        →
+        φ
+        )
+      
+    
+    {\displaystyle \varphi \to (\psi \to \varphi )}
+  
+
+  
+    
+      
+        (
+        φ
+        →
+        (
+        ψ
+        →
+        χ
+        )
+        )
+        →
+        (
+        (
+        φ
+        →
+        ψ
+        )
+        →
+        (
+        φ
+        →
+        χ
+        )
+        )
+      
+    
+    {\displaystyle (\varphi \to (\psi \to \chi ))\to ((\varphi \to \psi )\to (\varphi \to \chi ))}
+  
+
+  
+    
+      
+        (
+        ¬
+        φ
+        →
+        ¬
+        ψ
+        )
+        →
+        (
+        ψ
+        →
+        φ
+        )
+      
+    
+    {\displaystyle (\neg \varphi \to \neg \psi )\to (\psi \to \varphi )}
+  
+
+The schematic version of P2 is attributed to John von Neumann, and is used in the Metamath "set.mm" formal proof database. It has also been attributed to Hilbert, and named 
+  
+    
+      
+        
+          
+            H
+          
+        
+      
+    
+    {\displaystyle {\mathcal {H}}}
+  
+ in this context.
+
+Proof example in P2
+As an example, a proof of 
+  
+    
+      
+        A
+        →
+        A
+      
+    
+    {\displaystyle A\to A}
+  
+ in P2 is given below. First, the axioms are given names:
+
+(A1) 
+  
+    
+      
+        (
+        p
+        →
+        (
+        q
+        →
+        p
+        )
+        )
+      
+    
+    {\displaystyle (p\to (q\to p))}
+  
+
+(A2) 
+  
+    
+      
+        (
+        (
+        p
+        →
+        (
+        q
+        →
+        r
+        )
+        )
+        →
+        (
+        (
+        p
+        →
+        q
+        )
+        →
+        (
+        p
+        →
+        r
+        )
+        )
+        )
+      
+    
+    {\displaystyle ((p\to (q\to r))\to ((p\to q)\to (p\to r)))}
+  
+
+(A3) 
+  
+    
+      
+        (
+        (
+        ¬
+        p
+        →
+        ¬
+        q
+        )
+        →
+        (
+        q
+        →
+        p
+        )
+        )
+      
+    
+    {\displaystyle ((\neg p\to \neg q)\to (q\to p))}
+  
+
+And the proof is as follows:
+
+  
+    
+      
+        A
+        →
+        (
+        (
+        B
+        →
+        A
+        )
+        →
+        A
+        )
+      
+    
+    {\displaystyle A\to ((B\to A)\to A)}
+  
+       (instance of (A1))
+
+  
+    
+      
+        (
+        A
+        →
+        (
+        (
+        B
+        →
+        A
+        )
+        →
+        A
+        )
+        )
+        →
+        (
+        (
+        A
+        →
+        (
+        B
+        →
+        A
+        )
+        )
+        →
+        (
+        A
+        →
+        A
+        )
+        )
+      
+    
+    {\displaystyle (A\to ((B\to A)\to A))\to ((A\to (B\to A))\to (A\to A))}
+  
+       (instance of (A2))
+
+  
+    
+      
+        (
+        A
+        →
+        (
+        B
+        →
+        A
+        )
+        )
+        →
+        (
+        A
+        →
+        A
+        )
+      
+    
+    {\displaystyle (A\to (B\to A))\to (A\to A)}
+  
+       (from (1) and (2) by modus ponens)
+
+  
+    
+      
+        A
+        →
+        (
+        B
+        →
+        A
+        )
+      
+    
+    {\displaystyle A\to (B\to A)}
+  
+       (instance of (A1))
+
+  
+    
+      
+        A
+        →
+        A
+      
+    
+    {\displaystyle A\to A}
+  
+       (from (4) and (3) by modus ponens)
+
+Solvers
+One notable difference between propositional calculus and predicate calculus is that satisfiability of a propositional formula is decidable. Deciding satisfiability of propositional logic formulas is an NP-complete problem. However, practical methods exist (e.g., DPLL algorithm, 1962; Chaff algorithm, 2001) that are very fast for many useful cases. Recent work has extended the SAT solver algorithms to work with propositions containing arithmetic expressions; these are the SMT solvers.

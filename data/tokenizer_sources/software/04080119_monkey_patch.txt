@@ -1,0 +1,24 @@
+Monkey patch is the act of dynamically modifying the runtime code (not the source code) of a dynamic programming language, and it is the information (data/code) used to modify the runtime code. Monkey patching adds or replaces programming aspects like methods, classes, attributes, and functions in memory. Modifying the runtime code allows for modifying the behavior of third-party software without maintaining a modified version of the source code.
+The term monkey patch seems to have come from an earlier term, guerrilla patch, which referred to changing code sneakily – and possibly incompatibly with other such patches – at runtime. The word guerrilla, nearly homophonous with gorilla, became monkey, possibly to make the patch sound less intimidating.
+Despite the name's suggestion, a monkey patch is sometimes the official method of extending a program. For example, web browsers such as Firefox and Internet Explorer used to encourage this, although today browsers (including Firefox) support extension differently.
+Monkey patch varies depending upon context. In Ruby, Python, and other languages, monkey patch refers only to dynamic modification of a class or module at runtime, motivated by the intent to patch existing third-party code as a workaround to a bug or feature which does not act as desired. Other forms of modifying classes at runtime have different names. For example, in Zope and Plone, security patches are often delivered using dynamic class modification, but they are called hot fixes.
+
+Pitfalls
+Some pitfalls of monkey patching:
+
+Incompatibility
+A new release of the patched software may break the patch. For this reason, a monkey patch may be conditional and thus only applied if appropriate.
+
+Overwriting
+If the same method is patched multiple times, then only the last one is used; the other patches have no effect, unless monkey patches are written with a pattern like alias_method_chain.
+
+Confusion
+A monkey patch creates a discrepancy between the source code and actual behavior that can confuse developers. For example, the Linux kernel detects proprietary and other third-party modules such as the Nvidia driver, which tamper with kernel structures, so that developers will not waste their time trying to debug a problem that they cannot fix.
+
+Chaos
+A monkey patch can contain malicious code that attacks the program, or other patches. For example, in 2009, Giorgio Maone, developer of NoScript, attacked the Adblock Plus extension for Firefox, adding exceptions so that advertisements on his websites would work. The offending code also made sure that if the user attempted to remove the exceptions, they would be added again. An escalating war ensued with new adblock rules pushed to users, followed by Maone sabotaging them, which eventually led to Mozilla stepping in to change policies regarding add-ons.
+
+Examples
+The following monkey patches the value of pi in the standard Python math library to make it compliant with the Indiana pi bill.
+
+The next time Python is started, the value of pi will be what it was before the patch: 3.141592653589793.

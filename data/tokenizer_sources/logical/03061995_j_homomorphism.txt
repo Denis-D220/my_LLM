@@ -1,0 +1,466 @@
+In mathematics, the J-homomorphism is a mapping from the homotopy groups of the special orthogonal groups to the homotopy groups of spheres. It was defined by George W. Whitehead (1942), extending a construction of Heinz Hopf (1935).
+
+Definition
+Whitehead's original homomorphism is defined geometrically, and gives a homomorphism
+
+  
+    
+      
+        J
+        :
+        
+          π
+          
+            r
+          
+        
+        (
+        
+          S
+          O
+        
+        (
+        q
+        )
+        )
+        →
+        
+          π
+          
+            r
+            +
+            q
+          
+        
+        (
+        
+          S
+          
+            q
+          
+        
+        )
+      
+    
+    {\displaystyle J\colon \pi _{r}(\mathrm {SO} (q))\to \pi _{r+q}(S^{q})}
+  
+
+of abelian groups for integers q, and 
+  
+    
+      
+        r
+        ≥
+        2
+      
+    
+    {\displaystyle r\geq 2}
+  
+. (Hopf defined this for the special case 
+  
+    
+      
+        q
+        =
+        r
+        +
+        1
+      
+    
+    {\displaystyle q=r+1}
+  
+.)
+The J-homomorphism can be defined as follows. 
+An element of the special orthogonal group SO(q) can be regarded as a map
+
+  
+    
+      
+        
+          S
+          
+            q
+            −
+            1
+          
+        
+        →
+        
+          S
+          
+            q
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle S^{q-1}\rightarrow S^{q-1}}
+  
+
+and the homotopy group 
+  
+    
+      
+        
+          π
+          
+            r
+          
+        
+        (
+        SO
+        ⁡
+        (
+        q
+        )
+        )
+      
+    
+    {\displaystyle \pi _{r}(\operatorname {SO} (q))}
+  
+) consists of homotopy classes of maps from the r-sphere to SO(q).
+Thus an element of 
+  
+    
+      
+        
+          π
+          
+            r
+          
+        
+        (
+        SO
+        ⁡
+        (
+        q
+        )
+        )
+      
+    
+    {\displaystyle \pi _{r}(\operatorname {SO} (q))}
+  
+ can be represented by a map
+
+  
+    
+      
+        
+          S
+          
+            r
+          
+        
+        ×
+        
+          S
+          
+            q
+            −
+            1
+          
+        
+        →
+        
+          S
+          
+            q
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle S^{r}\times S^{q-1}\rightarrow S^{q-1}}
+  
+
+Applying the Hopf construction to this gives a map
+
+  
+    
+      
+        
+          S
+          
+            r
+            +
+            q
+          
+        
+        =
+        
+          S
+          
+            r
+          
+        
+        ∗
+        
+          S
+          
+            q
+            −
+            1
+          
+        
+        →
+        S
+        (
+        
+          S
+          
+            q
+            −
+            1
+          
+        
+        )
+        =
+        
+          S
+          
+            q
+          
+        
+      
+    
+    {\displaystyle S^{r+q}=S^{r}*S^{q-1}\rightarrow S(S^{q-1})=S^{q}}
+  
+
+in 
+  
+    
+      
+        
+          π
+          
+            r
+            +
+            q
+          
+        
+        (
+        
+          S
+          
+            q
+          
+        
+        )
+      
+    
+    {\displaystyle \pi _{r+q}(S^{q})}
+  
+, which Whitehead defined as the image of the element of 
+  
+    
+      
+        
+          π
+          
+            r
+          
+        
+        (
+        SO
+        ⁡
+        (
+        q
+        )
+        )
+      
+    
+    {\displaystyle \pi _{r}(\operatorname {SO} (q))}
+  
+ under the J-homomorphism.
+Taking a limit as q tends to infinity gives the stable J-homomorphism in stable homotopy theory:
+
+  
+    
+      
+        J
+        :
+        
+          π
+          
+            r
+          
+        
+        (
+        
+          S
+          O
+        
+        )
+        →
+        
+          π
+          
+            r
+          
+          
+            S
+          
+        
+        ,
+      
+    
+    {\displaystyle J\colon \pi _{r}(\mathrm {SO} )\to \pi _{r}^{S},}
+  
+
+where 
+  
+    
+      
+        
+          S
+          O
+        
+      
+    
+    {\displaystyle \mathrm {SO} }
+  
+ is the infinite special orthogonal group, and the right-hand side is the r-th stable stem of the stable homotopy groups of spheres.
+
+Image of the J-homomorphism
+The image of the J-homomorphism was described by Frank Adams (1966), assuming the Adams conjecture of Adams (1963) which was proved by Daniel Quillen (1971), as follows. The group 
+  
+    
+      
+        
+          π
+          
+            r
+          
+        
+        (
+        SO
+        )
+      
+    
+    {\displaystyle \pi _{r}(\operatorname {SO} )}
+  
+ is given by Bott periodicity. It is always cyclic; and if r is positive, it is of order 2 if r is 0 or 1 modulo 8, infinite if r is 3 or 7 modulo 8, and order 1 otherwise (Switzer 1975, p. 488). In particular the image of the stable J-homomorphism is cyclic. The stable homotopy groups 
+  
+    
+      
+        
+          π
+          
+            r
+          
+          
+            S
+          
+        
+      
+    
+    {\displaystyle \pi _{r}^{S}}
+  
+ are the direct sum of the (cyclic) image of the J-homomorphism, and the kernel of the Adams e-invariant (Adams 1966), a homomorphism from the stable homotopy groups to 
+  
+    
+      
+        
+          Q
+        
+        
+          /
+        
+        
+          Z
+        
+      
+    
+    {\displaystyle \mathbb {Q} /\mathbb {Z} }
+  
+. If r is 0 or 1 mod 8 and positive, the order of the image is 2 (so in this case the J-homomorphism is injective). If r is 3 or 7 mod 8, the image is a cyclic group of order equal to the denominator of 
+  
+    
+      
+        
+          B
+          
+            2
+            n
+          
+        
+        
+          /
+        
+        4
+        n
+      
+    
+    {\displaystyle B_{2n}/4n}
+  
+, where 
+  
+    
+      
+        
+          B
+          
+            2
+            n
+          
+        
+      
+    
+    {\displaystyle B_{2n}}
+  
+ is a Bernoulli number. In the remaining cases where r is 2, 4, 5, or 6 mod 8 the image is trivial because 
+  
+    
+      
+        
+          π
+          
+            r
+          
+        
+        (
+        SO
+        )
+      
+    
+    {\displaystyle \pi _{r}(\operatorname {SO} )}
+  
+ is trivial.
+
+Applications
+Michael Atiyah (1961) introduced the group J(X) of a space X, which for X a sphere is the image of the J-homomorphism in a suitable dimension.
+The cokernel of the J-homomorphism 
+  
+    
+      
+        J
+        :
+        
+          π
+          
+            n
+          
+        
+        (
+        
+          S
+          O
+        
+        )
+        →
+        
+          π
+          
+            n
+          
+          
+            S
+          
+        
+      
+    
+    {\displaystyle J\colon \pi _{n}(\mathrm {SO} )\to \pi _{n}^{S}}
+  
+ appears in the group Θn of h-cobordism classes of oriented homotopy n-spheres (Kosinski (1992)).

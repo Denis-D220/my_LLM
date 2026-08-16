@@ -1,0 +1,699 @@
+Drainage density is a quantity used to describe physical parameters of a drainage basin. First described by Robert E. Horton, drainage density is defined as the total length of channel in a drainage basin divided by the total area, represented by the equation
+
+  
+    
+      
+        
+          D
+          
+            d
+          
+        
+        =
+        
+          
+            
+              ∑
+              
+                L
+              
+            
+            
+              A
+              
+                b
+                a
+                s
+                i
+                n
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle D_{d}={\frac {\sum {L}}{A_{basin}}}.}
+  
+
+The quantity represents the average length of channel per unit area of catchment and has units 
+  
+    
+      
+        
+          
+            
+              [
+              L
+              ]
+            
+            
+              [
+              
+                L
+                
+                  2
+                
+              
+              ]
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\left[L\right]}{\left[L^{2}\right]}}}
+  
+, which is often reduced to 
+  
+    
+      
+        
+          [
+          
+            L
+            
+              −
+              1
+            
+          
+          ]
+        
+      
+    
+    {\displaystyle \left[L^{-1}\right]}
+  
+.
+Drainage density depends upon both climate and physical characteristics of the drainage basin. Soil permeability (infiltration difficulty) and underlying rock type affect the runoff in a watershed; impermeable ground or exposed bedrock will lead to an increase in surface water runoff and therefore to more frequent streams. Rugged regions or those with high relief will also have a higher drainage density than other drainage basins if the other characteristics of the basin are the same.
+When determining the total length of streams in a basin, both perennial and ephemeral streams should be considered. If a drainage basin contained only ephemeral streams, then the drainage density by the equation above would be calculated to be zero if the total length of streams was calculated using only perennial streams. Ignoring ephemeral streams in the calculations does not consider the behavior of the basin during flood events and is therefore not completely representative of the drainage characteristics of the basin.
+Drainage density is indicative of infiltration and permeability of a drainage basin, and relates to the shape of the hydrograph. Drainage density depends upon both climate and physical characteristics of the drainage basin.
+High drainage densities also mean a high bifurcation ratio.
+
+Inverse of drainage density as a physical quantity
+Drainage density can be used to approximate the average length of overland flow in a catchment. Horton (1945) used the following equation as an approximation to describe the average length of overland flow as a function of drainage density:
+
+  
+    
+      
+        
+          l
+          
+            O
+          
+        
+        =
+        
+          
+            1
+            
+              2
+              
+                D
+                
+                  d
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle l_{O}={\frac {1}{2D_{d}}},}
+  
+
+where 
+  
+    
+      
+        
+          l
+          
+            0
+          
+        
+      
+    
+    {\displaystyle l_{0}}
+  
+ is the length of overland flow and 
+  
+    
+      
+        
+          D
+          
+            d
+          
+        
+      
+    
+    {\displaystyle D_{d}}
+  
+ is the drainage density of the catchment.
+Considering the geometry of channels on the hillslope, Horton also proposed the following equation
+
+  
+    
+      
+        
+          l
+          
+            O
+          
+        
+        =
+        
+          
+            1
+            
+              2
+              
+                D
+                
+                  d
+                
+              
+              
+                
+                  1
+                  −
+                  
+                    
+                      (
+                      
+                        
+                          
+                            s
+                            
+                              c
+                            
+                          
+                          
+                            s
+                            
+                              g
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle l_{O}={\frac {1}{2D_{d}{\sqrt {1-\left({\frac {s_{c}}{s_{g}}}\right)^{2}}}}},}
+  
+
+where 
+  
+    
+      
+        
+          s
+          
+            c
+          
+        
+      
+    
+    {\displaystyle s_{c}}
+  
+ is the channel slope and 
+  
+    
+      
+        
+          s
+          
+            g
+          
+        
+      
+    
+    {\displaystyle s_{g}}
+  
+ is the average slope of the ground in the area.
+
+Elementary components of drainage basins
+A drainage basin can be characterized by three elementary quantities: channels, the hillslope area associated with those channels, and the source areas. The channels are the well-defined segments that efficiently carry water through the catchment. Labeling these features as "channels" rather than "streams" indicates that there need not be a continuous flow of water to capture the behavior of this region as a conduit of water. According to Arthur Strahler's stream ordering system, the channels are not defined to be any single order or range of orders. Channels of lower orders combine to form higher-order channels. The associated hillslope areas are the hillslopes that slope directly into the channels. Precipitation that enters the system on the hillslope areas and is not lost to infiltration or evapotranspiration enters the channels. The source areas are concave regions of hillslope that are associated with a single channel. Precipitation entering a source area that is not lost to infiltration or evapotranspiration flows through the source area and enters the channel at the channel's head. Source areas and the hillslope areas associated with channels are differentiated by source areas draining through the channel head, while the associated hillslope areas drain into the rest of the stream. According to Strahler's stream ordering system, all source areas drain into a primary channel, by the definition of a primary channel.
+Bras et al. (1991) describe the conditions that are necessary for channel formation. Channel formation is a concept intimately tied to the formation and evolution of a drainage system and influence the drainage density of catchment. The relation they propose determines the behavior of a given hillslope in response to a small perturbation. They propose the following equation as a relation between source area, source slope, and the sediment flux through this source area:
+
+  
+    
+      
+        a
+        
+          
+            
+              ∂
+              F
+            
+            
+              ∂
+              S
+            
+          
+        
+        
+          
+            
+              d
+              S
+            
+            
+              d
+              a
+            
+          
+        
+        =
+        F
+        −
+        a
+        
+          
+            
+              ∂
+              F
+            
+            
+              ∂
+              a
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle a{\frac {\partial F}{\partial S}}{\frac {dS}{da}}=F-a{\frac {\partial F}{\partial a}},}
+  
+
+where F is the sediment flux, S is the slope of the source area, and a is the source area. The right-hand side of this relation determines channel stability or instability. If the right-hand side of the equation is greater than zero, then the hillslope is stable, and small perturbations such as small erosive events do no develop into channels. Conversely, if the right-hand side of the equation is less than zero, then Bras et al. determine the hillslope to be unstable, and small erosive structures, such as rills, will tend to grow and form a channel and increase the drainage density of a basin. In this sense, "unstable" is not used in the sense of the gradient of the hillslope being greater than the angle of repose and therefore susceptible to mass wasting, but rather fluvial erosive processes such as sheet flow or channel flow tend to incise and erode to form a singular channel. Therefore, the characteristics of the source area, or potential source area, influence the drainage density and evolution of a drainage basin.
+
+Relation to water balance
+Drainage density is tied to the water balance equation:
+
+  
+    
+      
+        
+          
+            
+              d
+              V
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        R
+        +
+        
+          G
+          
+            i
+          
+        
+        −
+        
+          G
+          
+            o
+          
+        
+        −
+        
+          G
+          
+            s
+          
+        
+        −
+        E
+        T
+        −
+        
+          Q
+          
+            w
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {dV}{dt}}=R+G_{i}-G_{o}-G_{s}-ET-Q_{w},}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              d
+              V
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {dV}{dt}}}
+  
+ is the change in reservoir storage, R is precipitation, ET is evapotranspiration, Gi and Go are the respective groundwater flux into and out of the basin, Gs is the groundwater discharge into streams, and Qw is groundwater discharge from the basin through wells. Drainage density relates to the storage and runoff terms. Drainage density relates to the efficiency by which water is carried over the landscape. Water is carried through channels much faster than over hillslopes, as saturated overland flow is slower due to being thinned out and obstructed by vegetation or pores in the ground. Consequently, a drainage basin with a relatively higher drainage density will be more efficiently drained than a lower-density one. Because of the more extensive drainage system in a higher-density basin, precipitation entering the basement will, on average, travel a shorter distance over the slower hillslopes before reaching the faster-flowing channels and exit the basin through the channels in less time. Conversely, precipitation entering a lower-drainage-density basin will take longer to exit the basin due to travelling over the slower hillslope longer.
+In his 1963 paper on drainage density and streamflow, Charles Carlston found that baseflow into streams is inversely related to the drainage density of the drainage basin:
+
+  
+    
+      
+        
+          Q
+          
+            b
+            a
+            s
+            e
+            f
+            l
+            o
+            w
+          
+        
+        ∝
+        
+          
+            
+              D
+              
+                d
+              
+            
+          
+          
+            −
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle Q_{baseflow}\propto {D_{d}}^{-2}.}
+  
+
+This equation represents the effect of drainage density on infiltration. As drainage density increases, baseflow discharge into a stream decreases for a given basin because there is less infiltration to contribute to baseflow. More of the water entering the drainage basin during and immediately following a rainfall event exits quickly through streams and does not become infiltration to contribute to baseflow discharge. Gregory and Walling (1968) found that the average discharge through a drainage basin is proportional to the square of drainage density:
+
+  
+    
+      
+        
+          Q
+          
+            r
+            u
+            n
+            o
+            f
+            f
+          
+        
+        ∝
+        
+          D
+          
+            d
+          
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle Q_{runoff}\propto D_{d}^{2}.}
+  
+
+This relation illustrates that a higher-drainage-density environment transports water more efficiently through the basin. In a relatively low-drainage-density environment, the lower average discharge results predicted by this relation would be the result of the surface runoff spending more time travelling over hillslope and having a larger time for infiltration to occur. The increased infiltration results in a decreased surface runoff according to the water balance equation.
+These two equations agree with each other and follow the water balance equation. According to the equations, in a basin with high drainage density, the contribution of surface runoff to stream discharge will be high, while that from baseflow will be low. Conversely, a stream in a low-drainage-density system will have a larger contribution from baseflow and a smaller contribution from overland flow.
+
+Relation to hydrographs
+The discharge through the central stream draining a catchment reflects the drainage density, which makes it a useful diagnostic for predicting the flooding behavior of a catchment following a storm event due to being intimately tied to the hydrograph. The material that overland flow travels over is one factor that influences the speed that water can flow out of a catchment. Water flows significantly slower over hillslopes compared to channels. According to Horton's interpretation of half of the inverse of drainage density as the average length of overland flow implies that overland flow in high-drainage environments will reach a fast-flowing channel faster over a shorter range. On the hydrograph, the peak is higher and occurs over a shorter range. This more compact and higher peak is often referred to as being "flashy".
+The timing of the hydrograph in relation to the peak of the hyetograph is influenced by the drainage density. The water that enters a high-drainage watershed during a storm will reach a channel relatively fast and travel in the high-velocity channels to the outlet of the watershed in a relatively short time. Conversely, the water entering a low-drainage-density basin will, on average, have to travel a longer distance over the low-velocity hillslope to reach the channels. As a result, the water will require more time to reach the exit of the catchment. The lag time between the peak of the hyetograph and the hydrograph is then inversely related to drainage density; as drainage density increases, water is more efficiently drained from the basin and the lag time decreases.
+Another impact on the hydrograph that drainage density has is a steeper falling limb following the storm event due to its impact on both overland flow and baseflow. The falling limb occurs after the peak of the hydrograph curve and is when overland flow is decreasing back to ambient levels. In higher-drainage systems, the overland flow reaches the channels quicker, resulting in a narrower spread in the falling limb. Baseflow is the other contributor to the hydrograph. The peak of baseflow to the channels will occur after the quick-flow peak because groundwater flow is much slower than quick-flow. Because the baseflow peak occurs after the quick-flow peak, the baseflow peak influences the shape of the falling limb. According to the proportionality put forth by Gregory and Walling, as drainage density increases, the contribution of baseflow to the falling limb of the hydrograph diminishes. During a storm event in a high-drainage-density basin, there is little water that infiltrates into the ground as infiltration because water spends less time flowing over the surface in the catchment before exiting through the central channel. Because there is little water that enters the water as infiltration, baseflow will contribute only a small part to falling limb. The falling limb is thus quite steep. Conversely, a low-drainage system will have a shallower falling limb. According to Gregory and Walling's relation, the decrease in drainage density results in an increase in baseflow to the channels and a more gradual decrease in the hydrograph.
+
+Formula for drainage density
+
+Montgomery and Dietrich (1989)
+Montgomery and Dietrich (1989) determined the following equation for drainage density by observing drainage basins in the Tennessee Valley, California:
+
+  
+    
+      
+        D
+        =
+        
+          
+            
+              
+                w
+                
+                  s
+                
+              
+              
+                ρ
+                
+                  w
+                
+              
+              
+                R
+                
+                  0
+                
+              
+            
+            
+              
+                W
+                
+                  ∗
+                
+              
+              
+                ρ
+                
+                  s
+                
+              
+              
+                K
+                
+                  z
+                
+              
+               
+              s
+              i
+              n
+               
+              θ
+              c
+              o
+              s
+               
+              θ
+            
+          
+        
+        
+          
+            [
+            
+              1
+              −
+              
+                (
+                
+                  
+                    
+                      t
+                      a
+                      n
+                      θ
+                    
+                    
+                      t
+                      a
+                      n
+                      ψ
+                    
+                  
+                
+                )
+              
+            
+            ]
+          
+          
+            −
+            1
+          
+        
+        ,
+      
+    
+    {\displaystyle D={\frac {w_{s}\rho _{w}R_{0}}{W^{\ast }\rho _{s}K_{z}\ sin\ \theta cos\ \theta }}\left[1-\left({\frac {tan\theta }{tan\psi }}\right)\right]^{-1},}
+  
+
+where ws is the mean source width, ρw is the density of water, R0 is the average precipitation rate, W* is the width of the channel head, ρs is the saturated bulk density of the soil, Kz is the vertical saturated hydraulic conductivity, θ is the slope at the channel head, and ψ is the soil angle of internal friction.
+R0, the average precipitation term, shows the dependence of drainage density on climate. With all other factors being constant, an increase in precipitation in the drainage basin results in an increase in drainage density. A decrease in precipitation, such as in an arid environment, results in a lower drainage density. The equation also shows the dependence on the physical characteristics and lithology of the drainage basin. Materials with a low hydraulic conductivities, such as clay or solid rock, would result in a higher-drainage-density system. Because of the low hydraulic conductivity, there is little water lost to infiltration, and that water exits the system as runoff and can contribute to erosion. In a basin with a higher vertical hydraulic conductivity, water more effectively infiltrates into the ground and does not contribute to saturated overland flow erosion, resulting in a less-developed channel system and therefore lower drainage density.
+
+Relation to the mean annual flood
+Charles Carlston (1963) determined an equation to express the mean annual flood runoff, Q2.33, for a given drainage basin as a function of drainage density. Carlston found a correlation between the two quantities when plotting data from 15 drainage basins and determined the equation
+
+  
+    
+      
+        
+          Q
+          
+            2.33
+          
+        
+        =
+        1.3
+        
+          D
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle Q_{2.33}=1.3D^{2},}
+  
+
+where Q is in units of cubic feet per second per square mile and Dd is in units of inverse miles. From that equation, it is concluded that a drainage basin will adjust itself through erosion such that this equation is satisfied.
+
+Effect of vegetation on drainage density
+The presence of vegetation in a drainage basin has multiple effects on the drainage density. Vegetation prevents landslides in the source area of a basin that would result in channel formation as well as decrease the range of drainage density values regardless of soil composition.
+Vegetation stabilizes the unstable source area in basin and prevents channel initiation. Plants stabilize the hillslope that they grow in, which results in physical erosion processes such as rain splash, dry ravel, or freezing and thawing processes. While there is significant variation between species, plant roots grow in underground networks that holds the soil in place. Because the soil is held in place, it is less prone to erosion from those physical methods. Hillslope diffusion was found to decrease exponentially with vegetation cover. By stabilizing the hillslope in the source area of the basins, channel initiation is less likely. The erosional processes that may lead to channel initiation are prevented. The increased soil strength also protects against surface runoff erosion, which hinders channel evolution once it has begun.
+At the basin scale, there are fewer channels in the basin, and the drainage density is lower than an unvegetated system. However, the effect of the vegetation on decreasing the drainage density is not unbounded. At high vegetative coverage, the effect of increasing the coverage diminishes. This effect imposes an upper limit to the total reduction in drainage density that vegetation can result in.
+Vegetation also narrows the range of drainage density values for basins of various soil composition. Unvegetated basins can have a large range in drainage densities, from low to high. Drainage density is related to the ease at which channels can form. According to Montgomery and Dietrich's equation, drainage density is a function of vertical hydraulic conductivity. Coarse-grained sediments like sand would have a higher hydraulic conductivity and are predicted by the equation to form a relatively higher-drainage-density system than a system formed by finer silt with a lower hydraulic conductivity.
+Forest fires play an indirect role in a basin's drainage density. Forest fires, both natural and unnatural, destroy some or all of the existing vegetation, which removes the stability that the plants and their roots provide. Newly destabilized hillslopes in the basin are then susceptible to channel formation processes, and the drainage density of the basin may increase until the vegetation grows back to the previous state. The type of plants and the associated depth and density of the plant roots determine how strongly the soil is held in place as well as the intensity of the forest fire in killing and removing the vegetation. Computer simulations have validated that drainage density will be higher in regions that have more frequent forest fires.
+
+Effect of climate change on drainage density
+Drainage density may also be influenced by climate change. Langbein and Schumm (1958)9 propose an equation for the rate of sediment discharge through catchment as a function of precipitation rate:
+
+  
+    
+      
+        P
+        =
+        
+          
+            
+              a
+              
+                R
+                
+                  α
+                
+              
+            
+            
+              1
+              +
+              b
+              
+                R
+                
+                  γ
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle P={\frac {aR^{\alpha }}{1+bR^{\gamma }}},}
+  
+
+where P is sediment yield, R is the average effective rainfall, α ≈ 2.3, γ ≈ 3.33, and a and b vary depending on units. The graph of this equation has a maximum between 10–14 inches (250–360 mm) and sharp declines on either side of the peak. At lower effective rainfalls, sediment discharge is lower because there is less rainfall to erode the hillslope. At greater effective rainfalls, the decrease in sediment yield is interpreted to be the result of increasing vegetation cover. Increasing precipitation supports denser vegetation coverage and prevents overland flow and other methods of physical erosion. This finding is consistent with the Istanbulluoglu and Bras' findings on the effect of vegetation on erosion and channel formation.
+
+The Caineville Badlands
+
+The badlands of Caineville, Utah, are often cited as a region of extremely high drainage density. The region features steep slopes, high relief, an arid climate, and a complete absence of vegetation. Because the slopes of hillslopes are often greater than the angle of repose, the dominant erosional process in the Caineville badlands is mass wasting. There is no vegetation to provide stability to the slopes and increase the angle of repose and prevent mass wasting. The regions below the angle of repose, however, are still generally at a significant angle, and hillslope diffusion, according to the following relation, is still a significant source of erosion:
+
+  
+    
+      
+        
+          
+            
+              ∂
+              z
+            
+            
+              ∂
+              t
+            
+          
+        
+        =
+        
+          K
+          
+            s
+          
+        
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              z
+            
+            
+              ∂
+              
+                x
+                
+                  2
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {\partial z}{\partial t}}=K_{s}{\frac {\partial ^{2}z}{\partial x^{2}}},}
+  
+
+where Ks is a coefficient of diffusivity of the hillslope, z is the elevation of the hillslope, and x is horizontal distance.
+The range of drainage densities in the Caineville Badlands illustrates the complicated nature of drainage densities in low-precipitation environments. In a study on the region, Alan Howard (1996) found that the effect of increasing relief angles in different basins did not have a constant effect on the drainage density. For regions of relatively low relief, drainage density and relief are positively correlated. This occurs until a threshold is reached at a higher relief ratio, when an increase the slope ratio is accompanied by a decrease in drainage density. This is interpreted by Howard to be a result of the critical source area needed to support a channel increasing. At a higher slope, the erosion is faster and more efficiently funneled through fewer channels. The smaller number of channels results in a smaller drainage density for the basin.
+
+This qualitative topographic map of a section of the Caineville Badlands shows the extensive drainage network in the arid environment. Relating to Montgomery and Dietrich's definition of the elementary parts of a drainage basin, the source area for each of the channels is relatively very small, resulting in a large number of channels forming. The image of the Caineville Badlands displays the lack of vegetation and numerous channels. The Caineville Badlands are located in an arid environment, receiving an average of 125 millimeters (4.9 in) of precipitation per year. This low precipitation contrasts with Montgomery and Dietrich's equation of drainage density, which predicts that drainage density should be low where rainfall is low. This behavior is more consistent with Langbein and Schumm's expression of erosion rate as a function of rainfall. According to the equation, erosion will increase with precipitation up to a point where the precipitation can support stabilizing vegetation. The lack of vegetation present in the image of the Caineville Badlands implies that the rainfall rate of this region is below the critical rainfall amount at which vegetation can be supported.

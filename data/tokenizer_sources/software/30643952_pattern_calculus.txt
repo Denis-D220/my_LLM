@@ -1,0 +1,30 @@
+Pattern calculus bases all computation on pattern matching of a very general kind.  Like lambda calculus, it supports a
+uniform treatment of function evaluation. Also, it allows functions to be
+passed as arguments and returned as results. In addition, pattern calculus supports
+uniform access to the internal structure of arguments, be they pairs
+or lists or trees. Also, it allows patterns to be passed as arguments and
+returned as results.  Uniform access is illustrated by a
+pattern-matching function size that computes the size of an
+arbitrary data structure. In the notation of the programming language
+bondi, it is given by the recursive function
+
+The second, or default case x -> 1 matches the pattern x
+against the argument and returns 1.  This
+case is used only if the matching failed in the first case.  The
+first, or special case matches against any compound, such
+as a non-empty list, or pair. Matching binds x to the left component
+and y to the right component. Then the body of the case adds the
+sizes of these components together.
+Similar techniques yield generic queries for searching and updating. Combining recursion and decomposition in this way yields path polymorphism.
+The ability to pass patterns as parameters (pattern polymorphism) is illustrated by defining a 
+generic eliminator.  Suppose given constructors Leaf for creating
+the leaves of a tree, and Count for converting numbers into
+counters. The corresponding eliminators are then
+
+For example, elimLeaf (Leaf 3) evaluates to 3 as does elimCount (Count 3).
+These examples can be produced by applying the generic eliminator
+elim to the constructors in question. It is defined by
+
+Now elim Leaf evaluates to | {y} Leaf y -> y which is equivalent to elimLeaf. Also elim Count is equivalent to elimCount.
+In general, the curly braces {} contain the bound variables of the
+pattern, so that x is free and y is bound in | {y} x y -> y.

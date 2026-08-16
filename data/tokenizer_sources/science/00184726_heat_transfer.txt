@@ -1,0 +1,660 @@
+Heat transfer is a discipline of thermal engineering that concerns the generation, use, conversion, and exchange of thermal energy (heat) between physical systems. Heat transfer is classified into various mechanisms, such as thermal conduction, thermal convection, thermal radiation, transfer of energy by phase changes, and evaporative cooling. Engineers also consider the transfer of mass of differing chemical species (mass transfer in the form of advection), either cold or hot, to achieve heat transfer. While these mechanisms have distinct characteristics, they often occur simultaneously in the same system.
+Heat conduction, also called diffusion, is the direct microscopic exchanges of kinetic energy of particles (such as molecules) or quasiparticles (such as lattice waves) through the boundary between two systems. When an object is at a different temperature from another body or its surroundings, heat flows so that the body and the surroundings reach the same temperature, at which point they are in thermal equilibrium. Such spontaneous heat transfer always occurs from a region of high temperature to another region of lower temperature, as described in the second law of thermodynamics.
+Heat convection occurs when the bulk flow of a fluid (gas or liquid) carries its heat through the fluid. All convective processes also move heat partly by diffusion, as well. The flow of fluid may be forced by external processes, or sometimes (in gravitational fields) by buoyancy forces caused when thermal energy expands the fluid (for example in a fire plume), thus influencing its own transfer. The latter process is often called "natural convection". The former process is often called "forced convection." In this case, the fluid is forced to flow by use of a pump, fan, or other mechanical means.
+Thermal radiation occurs through a vacuum or any transparent medium (solid or fluid or gas). It is the transfer of energy by means of photons or electromagnetic waves governed by the same laws.
+
+Overview
+
+Heat transfer is the energy exchanged between materials (solid/liquid/gas) as a result of a temperature difference. The thermodynamic free energy is the amount of work that a thermodynamic system can perform. Enthalpy is a thermodynamic potential, designated by the letter "H", that is the sum of the internal energy of the system (U) plus the product of pressure (P) and volume (V). Joule is a unit to quantify energy, work, or the amount of heat.
+Heat transfer is a process function (or path function), as opposed to functions of state; therefore, the amount of heat transferred in a thermodynamic process that changes the state of a system depends on how that process occurs, not only the net difference between the initial and final states of the process.
+Thermodynamic and mechanical heat transfer is calculated with the heat transfer coefficient, the proportionality between the heat flux and the thermodynamic driving force for the flow of heat. Heat flux is a quantitative, vectorial representation of heat flow through a surface.
+In engineering contexts, the term heat is taken as synonymous with thermal energy. This usage has its origin in the historical interpretation of heat as a fluid (caloric) that can be transferred by various causes, and that is also common in the language of laymen and everyday life.
+The transport equations for thermal energy (Fourier's law), mechanical momentum (Newton's law for fluids), and mass transfer (Fick's laws of diffusion) are similar, and analogies among these three transport processes have been developed to facilitate the prediction of conversion from any one to the others.
+Thermal engineering concerns the generation, use, conversion, storage, and exchange of heat transfer. As such, heat transfer is involved in almost every sector of the economy. Heat transfer is classified into various mechanisms, such as thermal conduction, thermal convection, thermal radiation, and transfer of energy by phase changes.
+
+Mechanisms
+
+The fundamental modes of heat transfer are:
+
+Advection
+Advection is the transport mechanism of a fluid from one location to another, and is dependent on motion and momentum of that fluid.
+Conduction or diffusion
+The transfer of energy between objects that are in physical contact. Thermal conductivity is the property of a material to conduct heat and is evaluated primarily in terms of Fourier's law for heat conduction.
+Convection
+The transfer of energy between an object and its environment, due to fluid motion. The average temperature is a reference for evaluating properties related to convective heat transfer.
+Radiation
+The transfer of energy by the emission of electromagnetic radiation.
+
+Advection
+By transferring matter, energy—including thermal energy—is moved by the physical transfer of a hot or cold object from one place to another. This can be as simple as placing hot water in a bottle and heating a bed, or the movement of an iceberg in changing ocean currents. A practical example is thermal hydraulics. This can be described by the formula:
+
+  
+    
+      
+        
+          ϕ
+          
+            q
+          
+        
+        =
+        v
+        ρ
+        
+          c
+          
+            p
+          
+        
+        Δ
+        T
+      
+    
+    {\displaystyle \phi _{q}=v\rho c_{p}\Delta T}
+  
+
+where
+
+  
+    
+      
+        
+          ϕ
+          
+            q
+          
+        
+      
+    
+    {\displaystyle \phi _{q}}
+  
+ is heat flux (W/m2),
+
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is density (kg/m3),
+
+  
+    
+      
+        
+          c
+          
+            p
+          
+        
+      
+    
+    {\displaystyle c_{p}}
+  
+ is heat capacity at constant pressure (J/kg·K),
+
+  
+    
+      
+        Δ
+        T
+      
+    
+    {\displaystyle \Delta T}
+  
+ is the difference in temperature (K),
+
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ is velocity (m/s).
+
+Conduction
+
+On a microscopic scale, heat conduction occurs as hot, rapidly moving or vibrating atoms and molecules interact with neighboring atoms and molecules, transferring some of their energy (heat) to these neighboring particles. In other words, heat is transferred by conduction when adjacent atoms vibrate against one another, or as electrons move from one atom to another. Conduction is the most significant means of heat transfer within a solid or between solid objects in thermal contact. Fluids—especially gases—are less conductive. Thermal contact conductance is the study of heat conduction between solid bodies in contact. The process of heat transfer from one place to another place without the movement of particles is called conduction, such as when placing a hand on a cold glass of water—heat is conducted from the warm skin to the cold glass, but if the hand is held a few inches from the glass, little conduction would occur since air is a poor conductor of heat. Steady-state conduction is an idealized model of conduction that happens when the temperature difference driving the conduction is constant so that after a time, the spatial distribution of temperatures in the conducting object does not change any further (see Fourier's law). In steady state conduction, the amount of heat entering a section is equal to amount of heat coming out, since the temperature change (a measure of heat energy) is zero. An example of steady state conduction is the heat flow through walls of a warm house on a cold day—inside the house is maintained at a high temperature and, outside, the temperature stays low, so the transfer of heat per unit time stays near a constant rate determined by the insulation in the wall and the spatial distribution of temperature in the walls will be approximately constant over time.
+Transient conduction (see Heat equation) occurs when the temperature within an object changes as a function of time. Analysis of transient systems is more complex, and analytic solutions of the heat equation are only valid for idealized model systems. Practical applications are generally investigated using numerical methods, approximation techniques, or empirical study.
+
+Convection
+
+The flow of fluid may be forced by external processes, or sometimes (in gravitational fields) by buoyancy forces caused when thermal energy expands the fluid (for example in a fire plume), thus influencing its own transfer. The latter process is often called "natural convection". All convective processes also move heat partly by diffusion, as well. Another form of convection is forced convection. In this case, the fluid is forced to flow by using a pump, fan, or other mechanical means.
+Convective heat transfer, or simply, convection, is the transfer of heat from one place to another by the movement of fluids, a process that is essentially the transfer of heat via mass transfer. The bulk motion of fluid enhances heat transfer in many physical situations, such as between a solid surface and the fluid. Convection is usually the dominant form of heat transfer in liquids and gases. Although sometimes discussed as a third method of heat transfer, convection is usually used to describe the combined effects of heat conduction within the fluid (diffusion) and heat transference by bulk fluid flow streaming. The process of transport by fluid streaming is known as advection, but pure advection is a term that is generally associated only with mass transport in fluids, such as advection of pebbles in a river. In the case of heat transfer in fluids, where transport by advection in a fluid is always also accompanied by transport via heat diffusion (also known as heat conduction) the process of heat convection is understood to refer to the sum of heat transport by advection and diffusion/conduction.
+Free, or natural, convection occurs when bulk fluid motions (streams and currents) are caused by buoyancy forces that result from density variations due to variations of temperature in the fluid. Forced convection is a term used when the streams and currents in the fluid are induced by external means—such as fans, stirrers, and pumps—creating an artificially induced convection current.
+
+Convection-cooling
+
+Convective cooling is sometimes described as Newton's law of cooling:
+
+The rate of heat loss of a body is proportional to the temperature difference between the body and its surroundings. However, by definition, the validity of Newton's law of cooling requires that the rate of heat loss from convection be a linear function of ("proportional to") the temperature difference that drives heat transfer, and in convective cooling this is sometimes not the case. In general, convection is not linearly dependent on temperature gradients, and in some cases is strongly nonlinear. In these cases, Newton's law does not apply.
+
+Convection vs. conduction
+In a body of fluid that is heated from underneath its container, conduction, and convection can be considered to compete for dominance. If heat conduction is too great, fluid moving down by convection is heated by conduction so fast that its downward movement will be stopped due to its buoyancy, while fluid moving up by convection is cooled by conduction so fast that its driving buoyancy will diminish. On the other hand, if heat conduction is very low, a large temperature gradient may be formed and convection might be very strong.
+The Rayleigh number (
+  
+    
+      
+        
+          R
+          a
+        
+      
+    
+    {\displaystyle \mathrm {Ra} }
+  
+) is the product of the Grashof (
+  
+    
+      
+        
+          G
+          r
+        
+      
+    
+    {\displaystyle \mathrm {Gr} }
+  
+) and Prandtl (
+  
+    
+      
+        
+          P
+          r
+        
+      
+    
+    {\displaystyle \mathrm {Pr} }
+  
+) numbers. It is a measure that determines the relative strength of conduction and convection.
+
+  
+    
+      
+        
+          R
+          a
+        
+        =
+        
+          G
+          r
+        
+        ⋅
+        
+          P
+          r
+        
+        =
+        
+          
+            
+              g
+              Δ
+              ρ
+              
+                L
+                
+                  3
+                
+              
+            
+            
+              μ
+              α
+            
+          
+        
+        =
+        
+          
+            
+              g
+              β
+              Δ
+              T
+              
+                L
+                
+                  3
+                
+              
+            
+            
+              ν
+              α
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Ra} =\mathrm {Gr} \cdot \mathrm {Pr} ={\frac {g\Delta \rho L^{3}}{\mu \alpha }}={\frac {g\beta \Delta TL^{3}}{\nu \alpha }}}
+  
+
+where
+
+g is the acceleration due to gravity,
+ρ is the density with 
+  
+    
+      
+        Δ
+        ρ
+      
+    
+    {\displaystyle \Delta \rho }
+  
+ being the density difference between the lower and upper ends,
+μ is the dynamic viscosity,
+α is the Thermal diffusivity,
+β is the volume thermal expansivity (sometimes denoted α elsewhere),
+T is the temperature,
+ν is the kinematic viscosity, and
+L is characteristic length.
+The Rayleigh number can be understood as the ratio between the rate of heat transfer by convection to the rate of heat transfer by conduction; or, equivalently, the ratio between the corresponding timescales (i.e. conduction timescale divided by convection timescale), up to a numerical factor. This can be seen as follows, where all calculations are up to numerical factors depending on the geometry of the system.
+The buoyancy force driving the convection is roughly 
+  
+    
+      
+        g
+        Δ
+        ρ
+        
+          L
+          
+            3
+          
+        
+      
+    
+    {\displaystyle g\Delta \rho L^{3}}
+  
+, so the corresponding pressure is roughly 
+  
+    
+      
+        g
+        Δ
+        ρ
+        L
+      
+    
+    {\displaystyle g\Delta \rho L}
+  
+. In steady state, this is canceled by the shear stress due to viscosity, and therefore roughly equals 
+  
+    
+      
+        μ
+        V
+        
+          /
+        
+        L
+        =
+        μ
+        
+          /
+        
+        
+          T
+          
+            conv
+          
+        
+      
+    
+    {\displaystyle \mu V/L=\mu /T_{\text{conv}}}
+  
+, where V is the typical fluid velocity due to convection and 
+  
+    
+      
+        
+          T
+          
+            conv
+          
+        
+      
+    
+    {\displaystyle T_{\text{conv}}}
+  
+ the order of its timescale. The conduction timescale, on the other hand, is of the order of 
+  
+    
+      
+        
+          T
+          
+            cond
+          
+        
+        =
+        
+          L
+          
+            2
+          
+        
+        
+          /
+        
+        α
+      
+    
+    {\displaystyle T_{\text{cond}}=L^{2}/\alpha }
+  
+.
+Convection occurs when the Rayleigh number is above 1,000–2,000.
+
+Radiation
+
+Radiative heat transfer is the transfer of energy via thermal radiation, i.e., electromagnetic waves. It occurs across vacuum or any transparent medium (solid or fluid or gas). Thermal radiation is emitted by all objects at temperatures above absolute zero, due to random movements of atoms and molecules in matter. Since these atoms and molecules are composed of charged particles (protons and electrons), their movement results in the emission of electromagnetic radiation which carries away energy. Radiation is typically only important in engineering applications for very hot objects, or for objects with a large temperature difference.
+When the objects and distances separating them are large in size and compared to the wavelength of thermal radiation, the rate of transfer of radiant energy is best described by the Stefan-Boltzmann equation:
+
+  
+    
+      
+        
+          ϕ
+          
+            q
+          
+        
+        =
+        ϵ
+        σ
+        
+          T
+          
+            4
+          
+        
+        .
+      
+    
+    {\displaystyle \phi _{q}=\epsilon \sigma T^{4}.}
+  
+
+For radiative transfer between two objects, the equation is as follows:
+
+  
+    
+      
+        
+          ϕ
+          
+            q
+          
+        
+        =
+        ϵ
+        σ
+        F
+        (
+        
+          T
+          
+            a
+          
+          
+            4
+          
+        
+        −
+        
+          T
+          
+            b
+          
+          
+            4
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle \phi _{q}=\epsilon \sigma F(T_{a}^{4}-T_{b}^{4}),}
+  
+
+where
+
+  
+    
+      
+        
+          ϕ
+          
+            q
+          
+        
+      
+    
+    {\displaystyle \phi _{q}}
+  
+ is the heat flux,
+
+  
+    
+      
+        ϵ
+      
+    
+    {\displaystyle \epsilon }
+  
+ is the emissivity (unity for a black body),
+
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+ is the Stefan–Boltzmann constant,
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is the view factor between two surfaces a and b, and
+
+  
+    
+      
+        
+          T
+          
+            a
+          
+        
+      
+    
+    {\displaystyle T_{a}}
+  
+ and 
+  
+    
+      
+        
+          T
+          
+            b
+          
+        
+      
+    
+    {\displaystyle T_{b}}
+  
+ are the absolute temperatures (in kelvins or degrees Rankine) for the two objects.
+The blackbody limit established by the Stefan-Boltzmann equation can be exceeded when the objects exchanging thermal radiation or the distances separating them are comparable in scale or smaller than the dominant thermal wavelength. The study of these cases is called near-field radiative heat transfer.
+Radiation from the sun, or solar radiation, can be harvested for heat and power. Unlike conductive and convective forms of heat transfer, thermal radiation – arriving within a narrow-angle i.e. coming from a source much smaller than its distance – can be concentrated in a small spot by using reflecting mirrors, which is exploited in concentrating solar power generation or a burning glass. For example, the sunlight reflected from mirrors heats the PS10 solar power tower and during the day it can heat water to 285 °C (545 °F).
+The reachable temperature at the target is limited by the temperature of the hot source of radiation. (T4-law lets the reverse flow of radiation back to the source rise.) The (on its surface) somewhat 4000 K hot sun allows to reach coarsely 3000 K (or 3000 °C, which is about 3273 K) at a small probe in the focus spot of a big concave, concentrating mirror of the Mont-Louis Solar Furnace in France.
+
+Phase transition
+
+Phase transition or phase change, takes place in a thermodynamic system from one phase or state of matter to another one by heat transfer. Phase change examples are the melting of ice or the boiling of water.
+The Mason equation explains the growth of a water droplet based on the effects of heat transport on evaporation and condensation.
+Phase transitions involve the four fundamental states of matter:
+
+Solid – Deposition, freezing, and solid-to-solid transformation.
+Liquid – Condensation and melting / fusion.
+Gas – Boiling / evaporation, recombination/ deionization, and sublimation.
+Plasma – Ionization.
+
+Boiling
+
+The boiling point of a substance is the temperature at which the vapor pressure of the liquid equals the pressure surrounding the liquid and the liquid evaporates resulting in an abrupt change in vapor volume.
+In a closed system, saturation temperature and boiling point mean the same thing. The saturation temperature is the temperature for a corresponding saturation pressure at which a liquid boils into its vapor phase. The liquid can be said to be saturated with thermal energy. Any addition of thermal energy results in a phase transition.
+At standard atmospheric pressure and low temperatures, no boiling occurs and the heat transfer rate is controlled by the usual single-phase mechanisms. As the surface temperature is increased, local boiling occurs and vapor bubbles nucleate, grow into the surrounding cooler fluid, and collapse. This is sub-cooled nucleate boiling, and is a very efficient heat transfer mechanism. At high bubble generation rates, the bubbles begin to interfere and the heat flux no longer increases rapidly with surface temperature (this is the departure from nucleate boiling, or DNB).
+At similar standard atmospheric pressure and high temperatures, the hydrodynamically quieter regime of film boiling is reached. Heat fluxes across the stable vapor layers are low but rise slowly with temperature. Any contact between the fluid and the surface that may be seen probably leads to the extremely rapid nucleation of a fresh vapor layer ("spontaneous nucleation"). At higher temperatures still, a maximum in the heat flux is reached (the critical heat flux, or CHF).
+The Leidenfrost Effect demonstrates how nucleate boiling slows heat transfer due to gas bubbles on the heater's surface. As mentioned, gas-phase thermal conductivity is much lower than liquid-phase thermal conductivity, so the outcome is a kind of "gas thermal barrier".
+
+Condensation
+Condensation occurs when a vapor is cooled and changes its phase to a liquid. During condensation, the latent heat of vaporization must be released. The amount of heat is the same as that absorbed during vaporization at the same fluid pressure.
+There are several types of condensation:
+
+Homogeneous condensation, as during the formation of fog.
+Condensation in direct contact with subcooled liquid.
+Condensation on direct contact with a cooling wall of a heat exchanger: This is the most common mode used in industry:  Dropwise condensation is difficult to sustain reliably; therefore, industrial equipment is normally designed to operate in filmwise condensation mode.
+
+Melting
+
+Melting is a thermal process that results in the phase transition of a substance from a solid to a liquid. The internal energy of a substance is increased, typically through heat or pressure, resulting in a rise of its temperature to the melting point, at which the ordering of ionic or molecular entities in the solid breaks down to a less ordered state and the solid liquefies. Molten substances generally have reduced viscosity with elevated temperature; an exception to this maxim is the element sulfur, whose viscosity increases to a point due to polymerization and then decreases with higher temperatures in its molten state.
+
+Modeling approaches
+Heat transfer can be modeled in various ways.
+
+Heat equation
+The heat equation is an important partial differential equation that describes the distribution of heat (or temperature variation) in a given region over time. In some cases, exact solutions of the equation are available; in other cases the equation must be solved numerically using computational methods such as DEM-based models for thermal/reacting particulate systems (as critically reviewed by Peng et al.).
+
+Lumped system analysis
+Lumped system analysis often reduces the complexity of the equations to one first-order linear differential equation, in which case heating and cooling are described by a simple exponential solution, often referred to as Newton's law of cooling.
+System analysis by the lumped capacitance model is a common approximation in transient conduction that may be used whenever heat conduction within an object is much faster than heat conduction across the boundary of the object. This is a method of approximation that reduces one aspect of the transient conduction system—that within the object—to an equivalent steady-state system. That is, the method assumes that the temperature within the object is completely uniform, although its value may change over time.
+In this method, the ratio of the conductive heat resistance within the object to the convective heat transfer resistance across the object's boundary, known as the Biot number, is calculated. For small Biot numbers, the approximation of spatially uniform temperature within the object can be used: it can be presumed that heat transferred into the object has time to uniformly distribute itself, due to the lower resistance to doing so, as compared with the resistance to heat entering the object.
+
+Climate models
+Climate models study the radiant heat transfer by using quantitative methods to simulate the interactions of the atmosphere, oceans, land surface, and ice.
+
+Engineering
+
+Heat transfer has broad application to the functioning of numerous devices and systems. Heat-transfer principles may be used to preserve, increase, or decrease temperature in a wide variety of circumstances. Heat transfer methods are used in numerous disciplines, such as automotive engineering, thermal management of electronic devices and systems, climate control, insulation, materials processing, chemical engineering and power station engineering.
+
+Insulation, radiance and resistance
+Thermal insulators are materials specifically designed to reduce the flow of heat by limiting conduction, convection, or both. Thermal resistance is a heat property and the measurement by which an object or material resists to heat flow (heat per time unit or thermal resistance) to temperature difference.
+Radiance, or spectral radiance, is a measure of the quantity of radiation that passes through or is emitted. Radiant barriers are materials that reflect radiation, and therefore reduce the flow of heat from radiation sources. Good insulators are not necessarily good radiant barriers, and vice versa. Metal, for instance, is an excellent reflector and a poor insulator.
+The effectiveness of a radiant barrier is indicated by its reflectivity, which is the fraction of radiation reflected. A material with a high reflectivity (at a given wavelength) has a low emissivity (at that same wavelength), and vice versa. At any specific wavelength, reflectivity=1 - emissivity. An ideal radiant barrier would have a reflectivity of 1, and would therefore reflect 100 percent of incoming radiation. Vacuum flasks, or Dewars, are silvered to approach this ideal. In the vacuum of space, satellites use multi-layer insulation, which consists of many layers of aluminized (shiny) Mylar to greatly reduce radiation heat transfer and control satellite temperature.
+
+Devices
+
+A heat engine is a system that performs the conversion of a flow of thermal energy (heat) to mechanical energy to perform mechanical work. A thermocouple is a temperature-measuring device and a widely used type of temperature sensor for measurement and control, and can also be used to convert heat into electric power. A thermoelectric cooler is a solid-state electronic device that pumps (transfers) heat from one side of the device to the other when an electric current is passed through it. It is based on the Peltier effect. A thermal diode or thermal rectifier is a device that causes heat to flow preferentially in one direction.
+
+Heat exchangers
+A heat exchanger is used for more efficient heat transfer or to dissipate heat. Heat exchangers are widely used in refrigeration, air conditioning, space heating, power generation, and chemical processing. One common example of a heat exchanger is a car's radiator, in which the hot coolant fluid is cooled by the flow of air over the radiator's surface.
+Common types of heat exchanger flows include parallel flow, counter flow, and cross flow. In parallel flow, both fluids move in the same direction while transferring heat; in counter flow, the fluids move in opposite directions; and in cross flow, the fluids move at right angles to each other. Common types of heat exchangers include shell and tube, double pipe, extruded finned pipe, spiral fin pipe, u-tube, and stacked plate. Each type has certain advantages and disadvantages over other types.
+A heat sink is a component that transfers heat generated within a solid material to a fluid medium, such as air or a liquid. Examples of heat sinks are the heat exchangers used in refrigeration and air conditioning systems or the radiator in a car. A heat pipe is another heat-transfer device that combines thermal conductivity and phase transition to efficiently transfer heat between two solid interfaces.
+
+Applications
+
+Architecture
+Efficient energy use is the goal to reduce the amount of energy required in heating or cooling. In architecture, condensation and air currents can cause cosmetic or structural damage. An energy audit can help to assess the implementation of recommended corrective procedures. For instance, insulation improvements, air sealing of structural leaks, or the addition of energy-efficient windows and doors.
+
+Smart meter is a device that records electric energy consumption in intervals.
+Thermal transmittance is the rate of transfer of heat through a structure divided by the difference in temperature across the structure. It is expressed in watts per square meter per kelvin, or W/(m2K). Well-insulated parts of a building have a low thermal transmittance, whereas poorly-insulated parts of a building have a high thermal transmittance.
+Thermostat is a device to monitor and control temperature.
+
+Climate engineering
+
+Climate engineering consists of carbon dioxide removal and solar radiation management. Since the amount of carbon dioxide determines the radiative balance of Earth's atmosphere, carbon dioxide removal techniques can be applied to reduce the radiative forcing. Solar radiation management is the attempt to absorb less solar radiation to offset the effects of greenhouse gases.
+An alternative method is passive daytime radiative cooling, which enhances terrestrial heat flow to outer space through the infrared window (8–13 μm). Rather than merely blocking solar radiation, this method increases outgoing longwave infrared (LWIR) thermal radiation heat transfer with the extremely cold temperature of outer space (~2.7 K) to lower ambient temperatures while requiring zero energy input.
+
+Greenhouse effect
+
+The greenhouse effect is a process by which thermal radiation from a planetary surface is absorbed by atmospheric greenhouse gases and clouds, and is re-radiated in all directions, resulting in a reduction in the amount of thermal radiation reaching space relative to what would reach space in the absence of absorbing materials. This reduction in outgoing radiation leads to a rise in the temperature of the surface and troposphere until the rate of outgoing radiation again equals the rate at which heat arrives from the Sun.
+
+In the human body
+
+The principles of heat transfer in engineering systems can be applied to the human body to determine how the body transfers heat. Heat is produced in the body by the continuous metabolism of nutrients which provides energy for the systems of the body. The human body must maintain a consistent internal temperature to maintain healthy bodily functions. Therefore, excess heat must be dissipated from the body to keep it from overheating. When a person engages in elevated levels of physical activity, the body requires additional fuel which increases the metabolic rate and the rate of heat production. The body must then use additional methods to remove the additional heat produced to keep the internal temperature at a healthy level.
+Heat transfer by convection is driven by the movement of fluids over the surface of the body. This convective fluid can be either a liquid or a gas. For heat transfer from the outer surface of the body, the convection mechanism is dependent on the surface area of the body, the velocity of the air, and the temperature gradient between the surface of the skin and the ambient air. The normal temperature of the body is approximately 37 °C. Heat transfer occurs more readily when the temperature of the surroundings is significantly less than the normal body temperature. This concept explains why a person feels cold when not enough covering is worn when exposed to a cold environment. Clothing can be considered an insulator which provides thermal resistance to heat flow over the covered portion of the body. This thermal resistance causes the temperature on the surface of the clothing to be less than the temperature on the surface of the skin. This smaller temperature gradient between the surface temperature and the ambient temperature will cause a lower rate of heat transfer than if the skin were not covered.
+To ensure that one portion of the body is not significantly hotter than another portion, heat must be distributed evenly through the bodily tissues. Blood flowing through blood vessels acts as a convective fluid and helps to prevent any buildup of excess heat inside the tissues of the body. This flow of blood through the vessels can be modeled as pipe flow in an engineering system. The heat carried by the blood is determined by the temperature of the surrounding tissue, the diameter of the blood vessel, the thickness of the fluid, the velocity of the flow, and the heat transfer coefficient of the blood. The velocity, blood vessel diameter, and fluid thickness can all be related to the Reynolds Number, a dimensionless number used in fluid mechanics to characterize the flow of fluids.
+Latent heat loss, also known as evaporative heat loss, accounts for a large fraction of heat loss from the body. When the core temperature of the body increases, the body triggers sweat glands in the skin to bring additional moisture to the surface of the skin. The liquid is then transformed into vapor which removes heat from the surface of the body. The rate of evaporation heat loss is directly related to the vapor pressure at the skin surface and the amount of moisture present on the skin. Therefore, the maximum of heat transfer will occur when the skin is completely wet. The body continuously loses water by evaporation but the most significant amount of heat loss occurs during periods of increased physical activity.
+
+Cooling techniques
+
+Evaporative cooling
+
+Evaporative cooling happens when water vapor is added to the surrounding air. The energy needed to evaporate the water is taken from the air in the form of sensible heat and converted into latent heat, while the air remains at a constant enthalpy. Latent heat describes the amount of heat that is needed to evaporate the liquid; this heat comes from the liquid itself and the surrounding gas and surfaces. The greater the difference between the two temperatures, the greater the evaporative cooling effect. When the temperatures are the same, no net evaporation of water in the air occurs; thus, there is no cooling effect.
+
+Laser cooling
+In quantum physics, laser cooling is used to achieve temperatures of near absolute zero (−273.15 °C, −459.67 °F) of atomic and molecular samples to observe unique quantum effects that can only occur at this heat level.
+
+Doppler cooling is the most common method of laser cooling.
+Sympathetic cooling is a process in which particles of one type cool particles of another type. Typically, atomic ions that can be directly laser-cooled are used to cool nearby ions or atoms. This technique allows the cooling of ions and atoms that cannot be laser-cooled directly.
+
+Magnetic cooling
+
+Magnetic evaporative cooling is a process for lowering the temperature of a group of atoms, after pre-cooled by methods such as laser cooling. Magnetic refrigeration cools below 0.3K, by making use of the magnetocaloric effect.
+
+Radiative cooling
+Radiative cooling is the process by which a body loses heat by radiation. Outgoing energy is an important effect in the Earth's energy budget. In the case of the Earth-atmosphere system, it refers to the process by which long-wave (infrared) radiation is emitted to balance the absorption of short-wave (visible) energy from the Sun. The thermosphere (top of atmosphere) cools to space primarily by infrared energy radiated by carbon dioxide (CO2) at 15 μm and by nitric oxide (NO) at 5.3 μm. Convective transport of heat and evaporative transport of latent heat both remove heat from the surface and redistribute it in the atmosphere.
+
+Thermal energy storage
+Thermal energy storage includes technologies for collecting and storing energy for later use. It may be employed to balance energy demand between day and nighttime. The thermal reservoir may be maintained at a temperature above or below that of the ambient environment. Applications include space heating, domestic or process hot water systems, or generating electricity.
+
+History
+
+Newton's law of cooling
+
+In 1701, Isaac Newton anonymously published an article in Philosophical Transactions noting (in modern terms) that the rate of temperature change of a body is proportional to the difference in temperatures (graduum caloris, "degrees of heat") between the body and its surroundings. The phrase "temperature change" was later replaced with "heat loss", and the relationship was named Newton's law of cooling. In general, the law is valid only if the temperature difference is small and the heat transfer mechanism remains the same.
+
+Thermal conduction
+In heat conduction, the law is valid only if the thermal conductivity of the warmer body is independent of temperature. The thermal conductivity of most materials is only weakly dependent on temperature, so in general the law holds true.
+
+Thermal convection
+In convective heat transfer, the law is valid for forced air or pumped fluid cooling, where the properties of the fluid do not vary strongly with temperature, but it is only approximately true for buoyancy-driven convection, where the velocity of the flow increases with temperature difference.
+
+Thermal radiation
+In the case of heat transfer by thermal radiation, Newton's law of cooling holds only for very small temperature differences.
+
+Thermal conductivity of different metals
+
+In a 1780 letter to Benjamin Franklin, Dutch-born British scientist Jan Ingenhousz relates an experiment which enabled him to rank seven different metals according to their thermal conductivities:
+
+You remembre you gave me a wire of five metals all drawn thro the same hole Viz. one, of gould, one of silver, copper steel and iron. I supplyed here the two others Viz. the one of tin the other of lead. I fixed these seven wires into a wooden frame at an equal distance of one an other ... I dipt the seven wires into this melted wax as deep as the wooden frame ... By taking them out they were covred with a coat of wax ... When I found that this crust was there about of an equal thikness upon all the wires, I placed them all in a glased earthen vessel full of olive oil heated to some degrees under boiling, taking care that each wire was dipt just as far in the oil as the other ... Now, as they had been all dipt alike at the same time in the same oil, it must follow, that the wire, upon which the wax had been melted the highest, had been the best conductor of heat. ... Silver conducted heat far the best of all other metals, next to this was copper, then gold, tin, iron, steel, Lead.
+
+Benjamin Thompson's experiments on heat transfer
+
+During the years 1784 – 1798, the British physicist Benjamin Thompson (Count Rumford) lived in Bavaria, reorganizing the Bavarian army for the Prince-elector Charles Theodore among other official and charitable duties. The Elector gave Thompson access to the facilities of the Electoral Academy of Sciences in Mannheim. During his years in Mannheim and later in Munich, Thompson made a large number of discoveries and inventions related to heat.
+
+Conductivity experiments
+
+"New Experiments upon Heat"
+In 1785 Thompson performed a series of thermal conductivity experiments, which he describes in great detail in the Philosophical Transactions article "New Experiments upon Heat" from 1786. The fact that good electrical conductors are often also good heat conductors and vice versa must have been well known at the time, for Thompson mentions it in passing. He intended to measure the relative conductivities of mercury, water, moist air, "common air" (dry air at normal atmospheric pressure), dry air of various rarefication, and a "Torricellian vacuum".
+
+From the striking analogy between the electric fluid and heat respecting their conductors and non-conductors (having found that bodies, in general, which are conductors of the electric fluid, are likewise good conductors of heat, and, on the contrary, that electric bodies, or such as are bad conductors of the electric fluid, are likewise bad conductors of heat), I was led to imagine that the Torricellian vacuum, which is known to afford so ready a passage to the electric fluid, would also have afforded a ready passage to heat.
+
+For these experiments, Thompson employed a thermometer inside a large, closed glass tube. Under the circumstances described, heat may—unbeknownst to Thompson—have been transferred more by radiation than by conduction. These were his results.
+After the experiments, Thompson was surprised to observe that a vacuum was a significantly poorer heat conductor than air "which of itself is reckoned among the worst", but only a very small difference between common air and rarefied air. He also noted the great difference between dry air and moist air, and the great benefit this affords.
+
+I cannot help observing, with what infinite wisdom and goodness Divine Providence appears to have guarded us against the evil effects of excessive heat and cold in the atmosphere; for if it were possible for the air to be equally damp during the severe cold of the winter ... as it sometimes is in summer, its conducing power, and consequently its apparent coldness ... would become quite intolerable; but, happily for us, its power to hold water in solution is diminished, and with it its power to rob us of our animal heat.Every body knows how very disagreeable a very moderate degree of cold is when the air is very damp; and from hence it appears, why the thermometer is not always a just measure of the apparent or sensible heat of the atmosphere. If colds ... are occasioned by our bodies being robbed of our animal heat, the reason is plain why those disorders prevail most during the cold autumnal rains, and upon the breaking up of the frost in the spring. It is likewise plain [why] ... inhabiting damp houses, is so very dangerous; and why the evening air is so pernicious in summer ... and why it is not so during the hard frosts of winter.
+
+Temperature vs. sensible heat
+Thompson concluded with some comments on the important difference between temperature and sensible heat.
+
+The ... sensation of hot or cold depends not intirely upon the temperature of the body exciting in us those sensations ... but upon the quantity of heat it is capable of communicating to us, or receiving from us ... and this depends in a great measure upon the conducing powers of the bodies in question. The sensation of hot is the entrance of heat into our bodies; that of cold is its exit ... This is another proof that the thermometer cannot be a just measure of sensible heat ... or rather, that the touch does not afford us a just indication of ... real temperatures.
+
+Coining of the term "convection"
+
+In the 1830s, in The Bridgewater Treatises, the term convection is attested in a scientific sense. In treatise VIII by William Prout, in the book on chemistry, it says:This motion of heat takes place in three ways, which a common fire-place very well illustrates. If, for instance, we place a thermometer directly before a fire, it soon begins to rise, indicating an increase of temperature. In this case the heat has made its way through the space between the fire and the thermometer, by the process termed radiation. If we place a second thermometer in contact with any part of the grate, and away from the direct influence of the fire, we shall find that this thermometer also denotes an increase of temperature; but here the heat must have travelled through the metal of the grate, by what is termed conduction. Lastly, a third thermometer placed in the chimney, away from the direct influence of the fire, will also indicate a considerable increase of temperature; in this case a portion of the air, passing through and near the fire, has become heated, and has carried up the chimney the temperature acquired from the fire. There is at present no single term in our language employed to denote this third mode of the propagation of heat; but we venture to propose for that purpose, the term convection, [in footnote: [Latin] Convectio, a carrying or conveying] which not only expresses the leading fact, but also accords very well with the two other terms.Later, in the same treatise VIII, in the book on meteorology, the concept of convection is also applied to "the process by which heat is communicated through water".

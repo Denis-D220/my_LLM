@@ -1,0 +1,469 @@
+A ternary  numeral system (also called base 3 or trinary) has three as its base. 
+Although ternary most often refers to a system in which the three digits are all non-negative numbers (specifically 0, 1, and 2), the adjective also lends its name to the balanced ternary system. Comprising the digits −1, 0 and +1, balanced ternary is widely used in comparison logic and ternary computers.
+
+Information units
+
+Trit
+A ternary digit is a trit (trinary digit), analogously to a bit. One trit is equivalent to log2 3 (about 1.58496) bits of information. Under classical hardware assumptions, base-3 is theoretically more efficient than binary in terms of radix economy, as 3 is the closest integer to Euler's number (e).
+
+Tribble
+Analogous to the binary nibble, a tribble consists of 3 trits. It can hold 27 distinct states (33 = 27), which is roughly equivalent to 4.75 bits of information. Because it has exactly 27 states, a tribble is conveniently represented by a single character in a septemvigesimal (base-27) alphanumeric notation.
+
+Tryte
+Analogous to a binary byte, a tryte is typically defined as 6 or 9 trits. Early ternary computers, such as the Soviet Setun, defined a tryte to be six trits. A six-trit tryte holds 36 = 729 states, carrying approximately 9.5 bits of information—significantly more than the standard 8-bit binary byte (256 states). Modern theoretical architectures often favor a 9-trit tryte (39 = 19,683 states), as it cleanly divides into three tribbles.
+
+Word
+A ternary word represents the standard register width for a given ternary architecture. The Setun computer, for instance, operated using an 18-trit word with 9-trit command and memory architectures.
+
+Macro units
+When scaling to larger data storage capacities, ternary computing nomenclature splits into two distinct conventions depending on the hardware architecture:
+
+Native ternary scaling: In a pure ternary system, macro-units scale by powers of 3 rather than the powers of 2 (1,024) or 10 (1,000) used in binary and decimal systems. A kilotryte (KT) in this system is exactly 310 (59,049) trytes. Following this pattern, a megatryte (MT) is 320 trytes, and a gigatryte (GT) is 330 trytes.
+Binary-compatible scaling: In hybrid systems designed to interface directly with existing binary infrastructure, engineers often map ternary groupings to standard binary sizes. Because 5 trits (243 states) fit efficiently within an 8-bit byte (256 states), traditional binary SI prefixes are sometimes applied directly to tryte blocks, making a kilotryte equal to 1,024 trytes, and a megatryte equal to 1,048,576 trytes.
+
+Comparison to other bases
+Representations of integer numbers in ternary do not get uncomfortably lengthy as quickly as in binary. For example, decimal 36510 or senary 14056 corresponds to binary 1011011012 (nine bits) and to ternary 1111123 (six trits). However, they are still far less compact than the corresponding representations in bases such as decimal – see below for a compact way to codify ternary using nonary (base 9) and septemvigesimal (base 27).
+
+As for rational numbers, ternary offers a convenient way to represent ⁠1/3⁠ similar to senary (as opposed to its cumbersome representation as an infinite string of recurring digits in decimal); but a major drawback is that, in turn, ternary does not offer a finite representation for ⁠1/2⁠ (nor for ⁠1/4⁠, ⁠1/8⁠, etc.), because 2 has a prime factor that is not a factor of the base; as with base two, one-tenth (decimal ⁠1/10⁠, senary ⁠1/14⁠) is not representable exactly (that would need e.g. decimal); nor is one-sixth (senary ⁠1/10⁠, decimal ⁠1/6⁠).
+
+Sum of the digits in ternary as opposed to binary
+The value of a binary number with n bits that are all 1 is 2n − 1.
+Similarly, for a number 
+  
+    
+      
+        N
+        (
+        b
+        ,
+        d
+        )
+      
+    
+    {\displaystyle N(b,d)}
+  
+ with base 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ and 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ digits, all of which are the maximal digit value 
+  
+    
+      
+        b
+        −
+        1
+      
+    
+    {\displaystyle b-1}
+  
+, we can write the geometric progression:
+
+  
+    
+      
+        
+          
+            
+              
+                N
+                (
+                b
+                ,
+                d
+                )
+              
+              
+                
+                =
+                (
+                b
+                −
+                1
+                )
+                
+                  b
+                  
+                    d
+                    −
+                    1
+                  
+                
+                +
+                (
+                b
+                −
+                1
+                )
+                
+                  b
+                  
+                    d
+                    −
+                    2
+                  
+                
+                +
+                ⋯
+                +
+                (
+                b
+                −
+                1
+                )
+                
+                  b
+                  
+                    0
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                (
+                b
+                −
+                1
+                )
+                (
+                
+                  b
+                  
+                    d
+                    −
+                    1
+                  
+                
+                +
+                
+                  b
+                  
+                    d
+                    −
+                    2
+                  
+                
+                +
+                ⋯
+                +
+                1
+                )
+              
+            
+            
+              
+              
+                
+                =
+                (
+                b
+                −
+                1
+                )
+                M
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}N(b,d)&=(b-1)b^{d-1}+(b-1)b^{d-2}+\dots +(b-1)b^{0}\\&=(b-1)(b^{d-1}+b^{d-2}+\dots +1)\\&=(b-1)M.\end{aligned}}}
+  
+
+Multiplying 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ by 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ yields:
+
+  
+    
+      
+        b
+        M
+        =
+        
+          b
+          
+            d
+          
+        
+        +
+        
+          b
+          
+            d
+            −
+            1
+          
+        
+        +
+        ⋯
+        +
+        
+          b
+          
+            1
+          
+        
+      
+    
+    {\displaystyle bM=b^{d}+b^{d-1}+\dots +b^{1}}
+  
+
+Subtracting 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ from 
+  
+    
+      
+        b
+        M
+      
+    
+    {\displaystyle bM}
+  
+ isolates the boundary values:
+
+  
+    
+      
+        b
+        M
+        −
+        M
+        =
+        
+          b
+          
+            d
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle bM-M=b^{d}-1}
+  
+
+  
+    
+      
+        M
+        =
+        
+          
+            
+              
+                b
+                
+                  d
+                
+              
+              −
+              1
+            
+            
+              b
+              −
+              1
+            
+          
+        
+      
+    
+    {\displaystyle M={\frac {b^{d}-1}{b-1}}}
+  
+
+Substituting this back into the original equation for 
+  
+    
+      
+        N
+        (
+        b
+        ,
+        d
+        )
+      
+    
+    {\displaystyle N(b,d)}
+  
+ demonstrates that the maximum value for any base matches the boundary behavior of binary:
+
+  
+    
+      
+        N
+        (
+        b
+        ,
+        d
+        )
+        =
+        (
+        b
+        −
+        1
+        )
+        
+          (
+          
+            
+              
+                
+                  b
+                  
+                    d
+                  
+                
+                −
+                1
+              
+              
+                b
+                −
+                1
+              
+            
+          
+          )
+        
+        =
+        
+          b
+          
+            d
+          
+        
+        −
+        1.
+      
+    
+    {\displaystyle N(b,d)=(b-1)\left({\frac {b^{d}-1}{b-1}}\right)=b^{d}-1.}
+  
+
+For a three-digit ternary number, 
+  
+    
+      
+        N
+        (
+        3
+        ,
+        3
+        )
+        =
+        
+          3
+          
+            3
+          
+        
+        −
+        1
+        =
+        26
+        =
+        (
+        2
+        ×
+        
+          3
+          
+            2
+          
+        
+        )
+        +
+        (
+        2
+        ×
+        
+          3
+          
+            1
+          
+        
+        )
+        +
+        (
+        2
+        ×
+        
+          3
+          
+            0
+          
+        
+        )
+        =
+        18
+        +
+        6
+        +
+        2
+      
+    
+    {\displaystyle N(3,3)=3^{3}-1=26=(2\times 3^{2})+(2\times 3^{1})+(2\times 3^{0})=18+6+2}
+  
+.
+
+Compact ternary representation: base 9 and 27
+
+Nonary  (base 9, each digit is two ternary digits) or septemvigesimal (base 27, each digit is three ternary digits) can be used for compact representation of ternary, similar to how octal and hexadecimal systems are used in place of binary.
+
+Practical use
+
+In certain analog logic, the state of the circuit is often expressed ternary. This is most commonly seen in CMOS circuits, and also in transistor–transistor logic with totem-pole output. The output is said to either be low (grounded), high, or open (high-Z). In this configuration the output of the circuit is actually not connected to any voltage reference at all. Where the signal is usually grounded to a certain reference, or at a certain voltage level, the state is said to be high impedance because it is open and serves its own reference. Thus, the actual voltage level is sometimes unpredictable.
+A rare "ternary point" in common use occurs in defensive statistics in American baseball (specifically for pitchers) to denote fractional parts of an inning. Because an offensive team is allowed three outs per half-inning, each out represents exactly one-third of a defensive inning and is colloquially written as a decimal point followed by the number of outs. 
+For example, if a player pitches all of the 4th, 5th, and 6th innings, and records exactly 2 outs in the 7th inning, their innings pitched (IP) statistic would be listed as 3.2. This represents ⁠3+2/3⁠ innings pitched (a notation sometimes preferred by traditional record keepers). In this specific sport context, only the fractional part of the number is structurally calculated in base 3.
+Ternary numbers can be used to convey self-similar structures like the Sierpinski triangle or the Cantor set conveniently. Additionally, it turns out that the ternary representation is useful for defining the Cantor set and related point sets, because of the way the Cantor set is constructed. The Cantor set consists of the points from 0 to 1 that have a ternary expression that does not contain any instance of the digit 1. Any terminating expansion in the ternary system is equivalent to the expression that is identical up to the term preceding the last non-zero term followed by the term one less than the last non-zero term of the first expression, followed by an infinite tail of twos. For example: 0.1020 is equivalent to 0.1012222... because the expansions are the same until the "two" of the first expression, the two was decremented in the second expansion, and trailing zeros were replaced with trailing twos in the second expression.
+Ternary is the integer base with the lowest radix economy, followed closely by binary and quaternary. This is due to its proximity to the mathematical constant e. It has been used for some computing systems because of this efficiency. It is also used to represent three-option trees, such as phone menu systems, which allow a simple path to any branch.
+
+Balanced ternary advantages
+When implemented as balanced ternary (comprising the digits −1, 0, and +1), the numeral system offers distinct computational advantages over binary. Most notably, balanced ternary eliminates the need for an explicit sign bit, as the sign of a number is inherently determined by its most significant non-zero digit. Furthermore, mathematical negation is highly efficient, requiring only a simple entrywise inversion of symbols (swapping +1s and −1s) rather than the complex two's complement operations required by binary hardware.
+A form of redundant binary representation called a binary signed-digit number system, a form of signed-digit representation, is sometimes used in low-level software and hardware to accomplish fast addition of integers because it can eliminate carries.
+
+Binary-coded ternary
+Simulation of ternary computers using binary computers, or interfacing between ternary and binary computers, can involve use of binary-coded ternary (BCT) numbers, with two or three bits used to encode each trit. BCT encoding is analogous to binary-coded decimal (BCD) encoding. If the trit values 0, 1 and 2 are encoded 00, 01 and 10, conversion in either direction between binary-coded ternary and binary can be done in logarithmic time. A library of C code supporting BCT arithmetic is available.

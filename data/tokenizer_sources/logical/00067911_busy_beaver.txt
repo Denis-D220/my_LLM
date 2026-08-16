@@ -1,0 +1,1419 @@
+In theoretical computer science, the busy beaver game aims to find a terminating program of a given size that (depending on definition) either produces the most output possible, or runs for the longest number of steps. Since an endlessly looping program producing infinite output or running for infinite time is easily conceived, such programs are excluded from the game. Rather than traditional programming languages, the programs used in the game are n-state Turing machines, one of the first mathematical models of computation.
+Turing machines consist of an infinite tape, and a finite set of states which serve as the program's "source code". Producing the most output is defined as writing the largest number of 1s on the tape, also referred to as achieving the highest score, and running for the longest time is defined as taking the longest number of steps to halt. The n-state busy beaver game consists of finding the longest-running or highest-scoring Turing machine which has n states and eventually halts. Such machines are assumed to start on a blank tape, and the tape is assumed to contain only zeros and ones (a binary Turing machine). The objective of the game is to program a set of transitions between states aiming for the highest score or longest running time while making sure the machine will halt eventually.
+Deciding the running time or score of the nth busy beaver is noncomputable. In fact, both the functions Σ(n) and S(n) eventually become larger than any computable function. This has implications in computability theory, the halting problem, and complexity theory. The concept of a busy beaver was first introduced by Tibor Radó in his 1962 paper, "On Non-Computable Functions".
+An implication of the busy beaver game is that, if it were possible to compute the functions Σ(n) and S(n) for all n, then this would resolve all mathematical conjectures that can be reduced to a halting problem, e.g., into a form of "does ⟨this Turing machine⟩ halt". For example, there is a 25-state Turing machine that checks Goldbach's conjecture for each number and halts on a counterexample; if this machine did not halt after running for S(25) steps, then it must run forever, resolving the conjecture. Many other problems, including the Riemann hypothesis (744 states) and the consistency of ZF set theory (745 states), can be expressed in a similar form, where at most a countably infinite number of cases need to be checked.
+
+Technical definition
+The n-state busy beaver game (or BB-n game), introduced in Tibor Radó's 1962 paper, involves a class of Turing machines, each member of which is required to meet the following design specifications:
+
+"Running" the machine consists of starting in the starting state, with the current tape cell being any cell of a blank (all-0) tape, and then iterating the transition function until the Halt state is entered (if ever). If and only if the machine eventually halts, then the number of 1s finally remaining on the tape is called the machine's score. An n-th busy beaver, BB-n or simply "busy beaver" is a Turing machine that wins the n-state busy beaver game. Depending on definition, it either attains the highest score (denoted by Σ(n)), or runs for the longest time (S(n)), among all other possible n-state competing Turing machines.
+
+Example
+The rules for one 1-state Turing machine might be:
+
+In state 1, if the current symbol is 0, write a 1, move one space to the right, and transition to state 1
+In state 1, if the current symbol is 1, write a 0, move one space to the right, and transition to HALT
+This Turing machine would move to the right, swapping the value of all the bits it passes. Since the starting tape is all 0s, it would make an unending string of ones. This machine would not be a busy beaver contender because it runs forever on a blank tape.
+
+Functions
+In his original 1962 paper, Radó defined two functions related to the busy beaver game: the score function Σ(n) and the shifts function S(n). Both take a number of Turing machine states 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and output the maximum score attainable by a Turing machine of that number of states by some measure. The score function Σ(n) gives the maximum number of 1s an 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-state Turing machine can output before halting, while the shifts function S(n) gives the maximum number of shifts (or equivalently steps, because each step includes a shift) that an 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-state Turing machine can undergo before halting. He proved that both of these functions were noncomputable, because they each grew faster than any computable function. The function BB(n) has been defined to be either of these functions, so that notation is not used in this article.
+A number of other uncomputable functions can also be defined based on measuring the performance of Turing machines in other ways than time or maximal number of ones. For example:
+
+The function 
+  
+    
+      
+        
+          num
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{num}}(n)}
+  
+ is defined to be the maximum number of contiguous ones a halting Turing machine can write on a blank tape. In other words, this is the largest unary number a Turing machine of n states can write on a tape.
+The function 
+  
+    
+      
+        
+          space
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{space}}(n)}
+  
+ is defined to be the maximal number of tape squares a halting Turing machine can read (i.e., visit) before halting. This includes the starting square, but not a square that the machine only reaches after the halt transition (if the halt transition is annotated with a move direction), because that square does not influence the machine's behaviour. This is the maximal space complexity of an n-state Turing machine.
+These four functions together stand in the relation 
+  
+    
+      
+        
+          num
+        
+        (
+        n
+        )
+        ≤
+        Σ
+        (
+        n
+        )
+        ≤
+        
+          space
+        
+        (
+        n
+        )
+        ≤
+        S
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{num}}(n)\leq \Sigma (n)\leq {\text{space}}(n)\leq S(n)}
+  
+. More functions can also be defined by operating the game on different computing machines, such as 3-symbol Turing machines, non-deterministic Turing machines, the lambda calculus (sequence A333479 in the OEIS) or even arbitrary programming languages.
+
+Score function Σ
+The score function quantifies the maximum score attainable by a busy beaver on a given measure. This is a noncomputable function, because it grows asymptotically faster than any computable function.
+The score function, 
+  
+    
+      
+        Σ
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle \Sigma :\mathbb {N} \to \mathbb {N} }
+  
+, is defined so that 
+  
+    
+      
+        Σ
+        (
+        n
+        )
+      
+    
+    {\displaystyle \Sigma (n)}
+  
+ is the maximum attainable score (the maximum number of 1s finally on the tape) among all halting 2-symbol 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-state Turing machines of the above-described type, when started on a blank tape.
+It is clear that 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+ is a well-defined function: for every n, there are at most finitely many n-state Turing machines as above, up to isomorphism, hence at most finitely many possible running times.p. 880
+According to the score-based definition, any n-state 2-symbol Turing machine M for which σ(M) = Σ(n) (i.e., which attains the maximum score) is called a busy beaver.  For each n, there exist at least 4(n − 1)! n-state busy beavers. (Given any n-state busy beaver, another is obtained by merely changing the shift direction in a halting transition, a third by reversing all shift directions uniformly, and a fourth by reversing the halt direction of the all-swapped busy beaver.  Furthermore, a permutation of all states except Start and Halt produces a machine that attains the same score.  Theoretically, there could be more than one kind of transition leading to the halting state, but in practice it would be wasteful, because there is only one sequence of state transitions producing the sought-after result.)
+
+Non-computability
+Radó's 1962 paper proved that if 
+  
+    
+      
+        f
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f:\mathbb {N} \to \mathbb {N} }
+  
+ is any computable function, then Σ(n) > f(n) for all sufficiently large n, and hence that Σ is not a computable function.
+Moreover, this implies that it is undecidable by a general algorithm whether an arbitrary Turing machine is a busy beaver. (Such an algorithm cannot exist, because its existence would allow Σ to be computed, which is a proven impossibility. In particular, such an algorithm could be used to construct another algorithm that would compute Σ as follows: for any given n, each of the finitely many n-state 2-symbol Turing machines would be tested until an n-state busy beaver is found; this busy beaver machine would then be simulated to determine its score, which is by definition Σ(n).)
+Even though Σ(n) is an uncomputable function, there are some small n for which it is possible to obtain its values and prove that they are correct. It is not hard to show that Σ(0) = 0, Σ(1) = 1, Σ(2) = 4, and with progressively more difficulty it can be shown that Σ(3) = 6, Σ(4) = 13 and Σ(5) = 4098 (sequence A028444 in the OEIS). Σ(n) has not yet been determined for any instance of n > 5, although lower bounds have been established (see the Known values section below).
+
+Complexity and unprovability of Σ
+A variant of Kolmogorov complexity is defined as follows:  The complexity of a number n is the smallest number of states needed for a BB-class Turing machine that halts with a single block of n consecutive 1s on an initially blank tape. The corresponding variant of Chaitin's incompleteness theorem states that, in the context of a given axiomatic system for the natural numbers, there exists a number k such that no specific number can be proven to have complexity greater than k, and hence that no specific upper bound can be proven for Σ(k) (the latter is because "the complexity of n is greater than k" would be proven if n > Σ(k) were proven). As mentioned in the cited reference, for any axiomatic system of "ordinary mathematics" the least value k for which this is true is far less than 10⇈10; consequently, in the context of ordinary mathematics, neither the value nor any upper-bound of Σ(10⇈10) can be proven. (Gödel's first incompleteness theorem is illustrated by this result: in an axiomatic system of ordinary mathematics, there is a true-but-unprovable sentence of the form Σ(10⇈10) = n, and there are infinitely many true-but-unprovable sentences of the form Σ(10⇈10) < n.)
+
+Maximum shifts function S
+In addition to the function Σ, Radó [1962] introduced another extreme function for Turing machines, the maximum shifts function, S, defined as follows:
+
+s(M) = the number of shifts M makes before halting, for any M ∈ En,
+S(n) = max{s(M) | M ∈ En} = the largest number of shifts made by any halting n-state 2-symbol Turing machine.
+Because normal Turing machines are required to have a shift in each and every transition or "step" (including any transition to a Halt state), the max-shifts function is at the same time a max-steps function.
+Radó showed that S is noncomputable for the same reason that Σ is noncomputable – it grows faster than any computable function. He proved this simply by noting that for each n, S(n) ≥ Σ(n). Each shift may write a 0 or a 1 on the tape, while Σ counts a subset of the shifts that wrote a 1, namely the ones that had not been overwritten by the time the Turing machine halted; consequently, S grows at least as fast as Σ, which had already been proved to grow faster than any computable function.
+The following connection between Σ and S was used by Lin & Radó (Computer Studies of Turing Machine Problems, 1965) to prove that Σ(3) = 6 and that S(3) = 21: For a given n, if S(n) is known then all n-state Turing machines can (in principle) be run for up to S(n) steps, at which point any machine that has not yet halted will never halt.  At that point, by observing which machines have halted with the most 1s on the tape (i.e., the busy beavers), one obtains from their tapes the value of Σ(n). The approach used by Lin & Radó for the case of n = 3 was to conjecture that S(3) = 21 (after unsuccessfully conjecturing 18), then to simulate all the essentially different 3-state machines (82,944 machines, equal to 21034) for up to 21 steps. They found 26,073 machines that halted, including one that halted only after 21 steps. By analyzing the behavior of the machines that had not halted within 21 steps, they succeeded in showing that none of those machines would ever halt, most of them following a certain pattern. This proved the conjecture that S(3) = 21, and also determined that Σ(3) = 6, which was attained by several machines, all halting after 11 to 14 steps.
+In 2016, Adam Yedidia and Scott Aaronson obtained the first (explicit) upper bound on the minimum n for which S(n) is unprovable in ZFC. To do so they constructed a 7910-state Turing machine whose behavior cannot be proven based on the usual axioms of set theory (Zermelo–Fraenkel set theory with the axiom of choice), under reasonable consistency hypotheses (stationary Ramsey property, equivalent to the existence of arbitrarily large subtle cardinals). Stefan O'Rear then reduced it to 1919 states, with the dependency on the stationary Ramsey property eliminated, and later to 748 states. In July 2023, Riebel reduced it to 745 states. Further improvements are reported on the BB Challenge web site.
+
+Proof for uncomputability of S(n) and Σ(n)
+
+Suppose that S(n) is a computable function and let EvalS denote a Turing machine evaluating S(n). Given a tape with n 1s it will produce S(n) 1s on the tape and then halt. Let Clean denote a Turing machine cleaning the sequence of 1s initially written on the tape. Let Double denote a Turing machine evaluating function n + n. Given a tape with n 1s it will produce 2n 1s on the tape and then halt. 
+Let us create the composition Double | EvalS | Clean and let n0 be the number of states of this machine. Let Create_n0 denote a Turing machine creating n0 1s on an initially blank tape. This machine may be constructed in a trivial manner to have n0 states (the state i writes 1, moves the head right and switches to state i + 1, except the state n0, which halts). Let N denote the sum n0 + n0.
+Let BadS denote the composition Create_n0 | Double | EvalS | Clean. Notice that this machine has N states. Starting with an initially blank tape it first creates a sequence of n0 1s and then doubles it, producing a sequence of N 1s. Then EvalS will produce S(N) 1s on tape, and at last it will clear all 1s and then halt. But the phase of cleaning will continue at least S(N) steps, so the time of working of BadS is strictly greater than S(N), which contradicts to the definition of the function S(n).
+The uncomputability of Σ(n) may be proved in a similar way. In the above proof, one must exchange the machine EvalS with EvalΣ and Clean with Increment — a simple TM, searching for a first 0 on the tape and replacing it with 1.
+The uncomputability of S(n) can also be established by reference to the blank tape halting problem. The blank tape halting problem is the problem of deciding for any Turing machine whether or not it will halt when started on an empty tape.  The blank tape halting problem is equivalent to the standard halting problem and so it is also uncomputable.  If S(n) was computable, then we could solve the blank tape halting problem simply by running any given Turing machine with n states for S(n) steps;  if it has still not halted, it never will.  So, since the blank tape halting problem is not computable, it follows that S(n) must likewise be uncomputable.
+
+Uncomputability of space(n) and num(n)
+Both 
+  
+    
+      
+        
+          space
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{space}}(n)}
+  
+ and 
+  
+    
+      
+        
+          num
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{num}}(n)}
+  
+ functions are uncomputable. This can be shown for 
+  
+    
+      
+        
+          space
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{space}}(n)}
+  
+ by noting that every tape square a Turing machine writes a one to, it must also visit: in other words, 
+  
+    
+      
+        Σ
+        (
+        n
+        )
+        ≤
+        
+          space
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle \Sigma (n)\leq {\text{space}}(n)}
+  
+.  The 
+  
+    
+      
+        
+          num
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{num}}(n)}
+  
+ function can be shown to be incomputable by proving, for example, that 
+  
+    
+      
+        
+          space
+        
+        (
+        n
+        )
+        <
+        
+          num
+        
+        (
+        3
+        n
+        +
+        3
+        )
+      
+    
+    {\displaystyle {\text{space}}(n)<{\text{num}}(3n+3)}
+  
+: this can be done by designing an (3n+3)-state Turing machine which simulates the n-state space champion, and then uses it to write at least 
+  
+    
+      
+        
+          space
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\text{space}}(n)}
+  
+ contiguous ones to the tape.
+
+Generalizations
+Analogs of the shift function can be simply defined in any programming language, given that the programs can be described by bit-strings, and a program's number of steps can be counted. For example, the busy beaver game can also be generalized to two dimensions using Turing machines on two-dimensional tapes, or to Turing machines that are allowed to stay in the same place as well as move to the left and right. Alternatively a "busy beaver function" for diverse models of computation can be defined with Kolmogorov complexity. This is done by taking 
+  
+    
+      
+        
+          B
+          B
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {BB}(n)}
+  
+ to be the largest integer 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ such that 
+  
+    
+      
+        
+          K
+          
+            L
+          
+        
+        (
+        m
+        )
+        ≤
+        n
+      
+    
+    {\displaystyle K_{L}(m)\leq n}
+  
+, where 
+  
+    
+      
+        
+          K
+          
+            L
+          
+        
+        (
+        m
+        )
+      
+    
+    {\displaystyle K_{L}(m)}
+  
+ is the length of the shortest program in 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ that outputs 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+: 
+  
+    
+      
+        
+          B
+          B
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {BB}(n)}
+  
+ is thereby the largest integer a program with length 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ or less can output in 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+.
+The longest running 6-state, 2-symbol machine which has the additional property of reversing the tape value at each step produces 6147 1s after 47339970 steps. So for the Reversal Turing Machine (RTM) class, SRTM(6) ≥ 47339970 and ΣRTM(6) ≥ 6147. Likewise we could define an analog to the Σ function for register machines as the largest number which can be present in any register on halting, for a given number of instructions.
+
+Different numbers of symbols
+A simple generalization is the extension to Turing machines with m symbols instead of just two (0 and 1). For example, a trinary Turing machine with m = 3 symbols would have the symbols 0, 1, and 2. The generalization to Turing machines with n states and m symbols defines the following generalized busy beaver functions:
+
+Σ(n, m): the largest number of non-zeros printable by an n-state, m-symbol machine started on an initially blank tape before halting, and
+S(n, m): the largest number of steps taken by an n-state, m-symbol machine started on an initially blank tape before halting.
+For example, the longest-running 3-state 3-symbol machine found so far runs 119112334170342540 steps before halting.
+
+Nondeterministic Turing machines
+
+The problem can be extended to nondeterministic Turing machines by looking for the system with the most states across all branches or the branch with the longest number of steps. The question of whether a given NDTM will halt is still computationally irreducible, and the computation required to find an NDTM busy beaver is significantly greater than the deterministic case, since there are multiple branches that need to be considered. For a 2-state, 2-color system with p cases or rules, the table to the right gives the maximum number of steps before halting and maximum number of unique states created by the NDTM.
+
+Applications
+
+Open mathematical problems
+In addition to posing a rather challenging mathematical game, the busy beaver functions Σ(n) and S(n) offer an entirely new approach to solving pure mathematics problems. Many open problems in mathematics could in theory, but not in practice, be solved in a systematic way given the value of S(n) for a sufficiently large n. Theoretically speaking, the value of S(n) encodes the answer to all mathematical conjectures that can be checked in infinite time by a Turing machine with less than or equal to n states.
+Consider any 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+ conjecture (see Arithmetical hierarchy): any conjecture that could be disproven via a counterexample among a countable number of cases (e.g. Goldbach's conjecture). Write a computer program that sequentially tests this conjecture for increasing values. In the case of Goldbach's conjecture, we would consider every even number ≥ 4 sequentially and test whether or not it is the sum of two prime numbers. Suppose this program is simulated on an n-state Turing machine. If it finds a counterexample (an even number ≥ 4 that is not the sum of two primes in our example), it halts and indicates that. However, if the conjecture is true, then our program will never halt. (This program halts only if it finds a counterexample.)
+Now, this program is simulated by an n-state Turing machine, so if we know S(n) we can decide (in a finite amount of time) whether or not it will ever halt by simply running the machine that many steps.  And if, after S(n) steps, the machine does not halt, we know that it never will and thus that there are no counterexamples to the given conjecture (i.e., no even numbers that are not the sum of two primes).  This would prove the conjecture to be true. Thus specific values (or upper bounds) for S(n) could be, in theory, used to systematically solve many open problems in mathematics.
+However, current results on the busy beaver problem suggest that this will not be practical for two reasons:
+
+It is extremely hard to prove values for the busy beaver function (and the max shift function). Every known exact value of S(n) was proven by enumerating every n-state Turing machine and proving whether or not each halts. One would have to calculate S(n) by some less direct method for it to actually be useful.
+The values of S(n) and other busy beaver functions get very large, very quickly. While the value of S(5) is only 47,176,870, the value of S(6) is more than  
+  
+    
+      
+        
+          
+          
+            
+              
+              
+                
+                  
+                  
+                    
+                      
+                      
+                        9
+                      
+                    
+                    2
+                  
+                
+                2
+              
+            
+          
+        
+        2
+      
+    
+    {\displaystyle ^{^{^{^{9}2}2}}2}
+  
+, i.e. 2 tetrated to the 2 tetrated to the 2 tetrated to the 9 which is at least 2 pentated to the 5. The value of S(25), which is the number of steps the program with the smallest known number of states that solves the Goldbach conjecture would need to be run to give a conclusive answer (in case it does not halt earlier), is incomprehensibly huge, and not remotely possible to write down, much less run a machine for, in the observable universe.
+
+Consistency of theories
+Another property of S(n) is that no arithmetically sound, computably axiomatized theory can prove all of the function's values. Specifically, given a computable and arithmetically sound theory 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, there is a number 
+  
+    
+      
+        
+          n
+          
+            T
+          
+        
+      
+    
+    {\displaystyle n_{T}}
+  
+ such that for all 
+  
+    
+      
+        n
+        ≥
+        
+          n
+          
+            T
+          
+        
+      
+    
+    {\displaystyle n\geq n_{T}}
+  
+, no statement of the form 
+  
+    
+      
+        S
+        (
+        n
+        )
+        =
+        k
+      
+    
+    {\displaystyle S(n)=k}
+  
+ can be proved in 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+. This implies that for each theory there is a specific largest value of S(n) that it can prove. This is true because for every such 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, a Turing machine with 
+  
+    
+      
+        
+          n
+          
+            T
+          
+        
+      
+    
+    {\displaystyle n_{T}}
+  
+ states can be designed to enumerate every possible proof in 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+. If the theory is inconsistent, then all false statements are provable, and the Turing machine can be given the condition to halt if, and only if, it finds a proof of, for example, 
+  
+    
+      
+        0
+        =
+        1
+      
+    
+    {\displaystyle 0=1}
+  
+. Any theory that proves the value of 
+  
+    
+      
+        S
+        (
+        
+          n
+          
+            T
+          
+        
+        )
+      
+    
+    {\displaystyle S(n_{T})}
+  
+ proves its own consistency, violating Gödel's second incompleteness theorem. This can be used to place various theories on a scale, for example the various large cardinal axioms in ZFC: if each theory 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is assigned as its number 
+  
+    
+      
+        
+          n
+          
+            T
+          
+        
+      
+    
+    {\displaystyle n_{T}}
+  
+, theories with larger values of 
+  
+    
+      
+        
+          n
+          
+            T
+          
+        
+      
+    
+    {\displaystyle n_{T}}
+  
+ prove the consistency of those below them, placing all such theories on a countably infinite scale.
+
+Notable examples
+A 745-state binary Turing machine has been constructed that halts if and only if ZFC is inconsistent.
+A 744-state Turing machine has been constructed that halts if and only if the Riemann hypothesis is false.
+A 43-state Turing machine was constructed that halts if and only if Goldbach's conjecture is false. This was further reduced to a 27-state machine, then a 25-state machine, and later formally proved and verified in the Lean 4 theorem proving language.
+A 15-state Turing machine has been constructed that halts if and only if the following conjecture formulated by Paul Erdős in 1979 is false: for all n > 8 there is at least one digit 2 in the base 3 representation of 2n.
+A 6-state Turing machine has been discovered that halts if and only if repeated applications of 
+  
+    
+      
+        
+          x
+          
+            n
+            +
+            1
+          
+        
+        =
+        
+          ⌊
+          
+            
+              
+                3
+                
+                  x
+                  
+                    n
+                  
+                
+              
+              2
+            
+          
+          ⌋
+        
+        +
+        2
+      
+    
+    {\textstyle x_{n+1}=\left\lfloor {\frac {3x_{n}}{2}}\right\rfloor +2}
+  
+ starting from 4 ever produces twice as many odd values as even values. It was later named "Antihydra".
+
+Physical Church–Turing thesis
+The growth properties of the Busy Beaver function have implications for the behaviour of physical systems, assuming the truth of the physical Church–Turing thesis. If the physical Church–Turing thesis holds, and all physically computable functions are Turing-computable, then no directly measurable physical quantity can grow faster than the Busy Beaver function, as no Turing-computable function can grow faster than it. Simple functions of 
+  
+    
+      
+        B
+        B
+        (
+        n
+        )
+      
+    
+    {\displaystyle BB(n)}
+  
+ would also impose a lower limit on growth rates, as well as upper and lower bounds on rates of convergence.
+
+Known results
+
+Lower bounds
+
+Green machines
+In 1964 Milton Green developed a lower bound for the 1s-counting variant of the busy beaver function that was published in the proceedings of the 1964 IEEE symposium on switching circuit theory and logical design. Heiner Marxen and Jürgen Buntrock described it as "a non-trivial (not primitive recursive) lower bound". This lower bound can be calculated but is too complex to state as a single expression in terms of n. This was done with a set of Turing machines, each of which demonstrated the lower bound for a certain n. When n = 8 the method gives
+
+  
+    
+      
+        Σ
+        (
+        8
+        )
+        ≥
+        3
+        ×
+        (
+        7
+        ×
+        
+          3
+          
+            92
+          
+        
+        −
+        1
+        )
+        
+          /
+        
+        2
+        ≈
+        8.248
+        ×
+        
+          10
+          
+            44
+          
+        
+        .
+      
+    
+    {\displaystyle \Sigma (8)\geq 3\times (7\times 3^{92}-1)/2\approx 8.248\times 10^{44}.}
+  
+
+In contrast, the best current (as of 2026) lower bound on 
+  
+    
+      
+        Σ
+        (
+        6
+        )
+      
+    
+    {\displaystyle \Sigma (6)}
+  
+ is 
+  
+    
+      
+        2
+        ↑↑↑
+        5
+      
+    
+    {\displaystyle 2\uparrow \uparrow \uparrow 5}
+  
+, where the 
+  
+    
+      
+        ↑
+      
+    
+    {\displaystyle \uparrow }
+  
+'s represent Knuth's up-arrow notation. This represents 
+  
+    
+      
+        2
+        ↑↑
+        2
+        ↑↑
+        2
+        ↑↑
+        4
+      
+    
+    {\displaystyle 2\uparrow \uparrow 2\uparrow \uparrow 2\uparrow \uparrow 4}
+  
+. The value of 
+  
+    
+      
+        Σ
+        (
+        8
+        )
+      
+    
+    {\displaystyle \Sigma (8)}
+  
+ is probably much larger than that.
+Green's lower bound was shown by a recursive construction of a series of Turing machines, each of which was made of a smaller one with two additional states that repeatedly applied the smaller machine to the input tape. Defining the value of the ⁠
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+⁠-state busy-beaver competitor on a tape containing 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ ones to be 
+  
+    
+      
+        
+          B
+          
+            N
+          
+        
+        (
+        m
+        )
+      
+    
+    {\displaystyle B_{N}(m)}
+  
+ (the ultimate output of each machine being its value on 
+  
+    
+      
+        m
+        =
+        0
+      
+    
+    {\displaystyle m=0}
+  
+, because a blank tape has 0 ones), the recursion relations are as follows:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  B
+                  
+                    N
+                  
+                
+                (
+                0
+                )
+              
+              
+                
+                =
+                1
+                ,
+              
+            
+            
+              
+                
+                  B
+                  
+                    1
+                  
+                
+                (
+                m
+                )
+              
+              
+                
+                =
+                m
+                +
+                1
+                ,
+              
+            
+            
+              
+                
+                  B
+                  
+                    N
+                  
+                
+                (
+                m
+                )
+              
+              
+                
+                =
+                1
+                +
+                
+                  B
+                  
+                    N
+                    −
+                    2
+                  
+                
+                (
+                1
+                +
+                
+                  B
+                  
+                    N
+                  
+                
+                (
+                m
+                −
+                1
+                )
+                )
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}B_{N}(0)&=1,\\B_{1}(m)&=m+1,\\B_{N}(m)&=1+B_{N-2}(1+B_{N}(m-1)).\end{aligned}}}
+  
+
+This leads to two formulas for calculating the lower bound 
+  
+    
+      
+        G
+        (
+        N
+        )
+      
+    
+    {\displaystyle G(N)}
+  
+ given by the ⁠
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+⁠th machine:
+
+  
+    
+      
+        
+          
+            
+              
+                G
+                (
+                N
+                )
+              
+              
+                
+                =
+                
+                  B
+                  
+                    N
+                    −
+                    2
+                  
+                
+                (
+                
+                  B
+                  
+                    N
+                    −
+                    2
+                  
+                
+                (
+                1
+                )
+                )
+                
+                   for odd 
+                
+                N
+                ,
+                
+                   and
+                
+              
+            
+            
+              
+                G
+                (
+                N
+                )
+              
+              
+                
+                =
+                1
+                +
+                
+                  B
+                  
+                    N
+                    −
+                    3
+                  
+                
+                (
+                1
+                +
+                
+                  B
+                  
+                    N
+                    −
+                    3
+                  
+                
+                (
+                1
+                )
+                )
+                
+                   for even 
+                
+                N
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}G(N)&=B_{N-2}(B_{N-2}(1)){\text{ for odd }}N,{\text{ and}}\\G(N)&=1+B_{N-3}(1+B_{N-3}(1)){\text{ for even }}N.\end{aligned}}}
+  
+
+Green's lower bound ⁠
+  
+    
+      
+        G
+        (
+        N
+        )
+      
+    
+    {\displaystyle G(N)}
+  
+⁠ can also be related to the Ackermann function. In particular,
+
+  
+    
+      
+        A
+        (
+        N
+        ,
+        N
+        )
+        <
+        G
+        (
+        4
+        N
+        +
+        3
+        )
+        <
+        A
+        (
+        2
+        N
+        +
+        1
+        ,
+        4
+        )
+      
+    
+    {\displaystyle A(N,N)<G(4N+3)<A(2N+1,4)}
+  
+
+for all positive integers ⁠
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+⁠.
+
+Relationships between busy beaver functions
+Trivially, S(n) ≥ Σ(n) because a machine that writes Σ(n) ones must take at least Σ(n) steps to do so. It is possible to give a number of upper bounds on the time S(n) with the number of ones Σ(n):
+
+  
+    
+      
+        S
+        (
+        n
+        )
+        ≤
+        (
+        n
+        +
+        1
+        )
+        ×
+        Σ
+        (
+        5
+        n
+        )
+        ×
+        
+          2
+          
+            Σ
+            (
+            5
+            n
+            )
+          
+        
+      
+    
+    {\displaystyle S(n)\leq (n+1)\times \Sigma (5n)\times 2^{\Sigma (5n)}}
+  
+   (Radó)
+
+  
+    
+      
+        S
+        (
+        n
+        )
+        ≤
+        Σ
+        (
+        9
+        n
+        )
+      
+    
+    {\displaystyle S(n)\leq \Sigma (9n)}
+  
+   (Buro)
+
+  
+    
+      
+        S
+        (
+        n
+        )
+        ≤
+        (
+        2
+        n
+        −
+        1
+        )
+        ×
+        Σ
+        (
+        3
+        n
+        +
+        3
+        )
+      
+    
+    {\displaystyle S(n)\leq (2n-1)\times \Sigma (3n+3)}
+  
+   (Ben-Amram, Julstrom and Zwick)
+By defining num(n) to be the maximum number of ones an n-state Turing machine is allowed to output contiguously, rather than in any position (the largest unary number it can output), it is possible to show that
+
+  
+    
+      
+        
+          
+            
+              
+                num
+                ⁡
+                (
+                n
+                )
+              
+              
+                
+                <
+                Σ
+                (
+                n
+                )
+              
+            
+            
+              
+                S
+                (
+                n
+                )
+              
+              
+                
+                <
+                num
+                ⁡
+                (
+                n
+                +
+                o
+                (
+                n
+                )
+                )
+              
+            
+            
+              
+                S
+                (
+                n
+                )
+              
+              
+                
+                <
+                num
+                ⁡
+                (
+                3
+                n
+                +
+                6
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\operatorname {num} (n)&<\Sigma (n)\\S(n)&<\operatorname {num} (n+o(n))\\S(n)&<\operatorname {num} (3n+6)\end{aligned}}}
+  
+
+Ben-Amram and Petersen, 2002, also give an asymptotically improved bound on S(n). There exists a constant c such that for all n ≥ 2,
+
+  
+    
+      
+        S
+        (
+        n
+        )
+        ≤
+        Σ
+        
+          (
+          
+            n
+            +
+            
+              ⌈
+              
+                
+                  
+                    8
+                    n
+                  
+                  
+                    
+                      log
+                      
+                        2
+                      
+                    
+                    ⁡
+                    n
+                  
+                
+              
+              ⌉
+            
+            +
+            c
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle S(n)\leq \Sigma \left(n+\left\lceil {\frac {8n}{\log _{2}n}}\right\rceil +c\right).}
+  
+
+Exact values and lower and upper bounds
+The following table lists the exact values and some known lower bounds for S(n), Σ(n), and several other busy beaver functions. In this table, 2-symbol Turing machines are used. Entries listed as "?" are at least as large as other entries to the left (because all n-state machines are also (n+1) state machines), and no larger than entries above them (because S(n) ≥ space(n) ≥ Σ(n) ≥ num(n)). So, space(6) is known to be greater than 2
+  
+    
+      
+        ↑↑↑
+      
+    
+    {\displaystyle \uparrow \uparrow \uparrow }
+  
+5, as space(n) ≥ Σ(n) and Σ(6) > 2
+  
+    
+      
+        ↑↑↑
+      
+    
+    {\displaystyle \uparrow \uparrow \uparrow }
+  
+5. 47176870 is an upper bound for space(5), because S(5) = 47176870 () and S(n) ≥ space(n). 4098 is an upper bound for num(5), because Σ(5) = 4098 and Σ(n) ≥ num(n). The last entry listed as "?" is num(6), because Σ(6) > 2
+  
+    
+      
+        ↑↑↑
+      
+    
+    {\displaystyle \uparrow \uparrow \uparrow }
+  
+5, but Σ(n) ≥ num(n), same for num(7).
+
+The 5-state busy beaver was discovered by Heiner Marxen and Jürgen Buntrock in 1989, but only proved to be the winning fifth busy beaver in 2024 by an online amateur mathematical collective, using a proof formalized in Rocq.
+
+List of busy beavers
+
+These are tables of rules for Turing machines that generate Σ(1) and S(1), Σ(2) and S(2), Σ(3) (but not S(3)), Σ(4) and S(4), Σ(5) and S(5), and the best known lower bound for Σ(6) and S(6).
+In the tables, columns represent the current state and rows represent the current symbol read from the tape. Each table entry is a string of three characters, indicating the symbol to write onto the tape, the direction to move, and the new state (in that order). The halt state is shown as H.
+Each machine begins in state A with an infinite tape that contains all 0s. Thus, the initial symbol read from the tape is a 0.
+Result key: (starts at the position overlined, halts at the position underlined)
+
+Result: 0 0 1 0 0 (1 step, one "1" total)
+
+Result: 0 0 1 1 1 1 0 0 (6 steps, four "1"s total)
+
+Result: 0 0 1 1 1 1 1 1 0 0 (14 steps, six "1"s total).
+This is one of several nonequivalent machines giving six 1s. Unlike the previous machines, this one is a busy beaver for Σ, but not for S. (S(3) = 21, and the machine obtains only five 1s.)
+
+Result: 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 (107 steps, thirteen "1"s total)
+
+Result: 4098 "1"s with 8191 "0"s interspersed in 47,176,870 steps.
+Note in the image to the right how this solution is similar qualitatively to the evolution of some cellular automata.
+
+Result: more than 2↑↑↑5 "1"s in more than 2↑↑↑5 steps, where 2↑↑↑5 = 2↑↑2↑↑2↑↑2↑↑2 and ↑↑ represents tetration.
+
+Visualizations
+In the following table, the rules for each busy beaver (maximizing Σ) are represented visually, with orange squares corresponding to a "1" on the tape, and white corresponding to "0". The position of the head is indicated by the black ovoid, with the orientation of the head representing the state. Individual tapes are laid out horizontally, with time progressing from top to bottom. The halt state is represented by a rule which maps one state to itself (head doesn't move).

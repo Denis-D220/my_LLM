@@ -1,0 +1,26 @@
+Well-known text representation of coordinate reference systems (WKT or WKT-CRS) is a text markup language for representing spatial reference systems and transformations between spatial reference systems. The formats were originally defined by the Open Geospatial Consortium (OGC) and described in their Simple Feature Access and Well-known text representation of coordinate reference systems specifications. The current standard definition is ISO 19162:2019, which supersedes version ISO 19162:2015.
+
+Version history
+This WKT format was initially defined by the Open Geospatial Consortium (OGC) in 1999, then extended in 2001. This format, also defined in ISO 19125-1:2004, is sometime known as "WKT 1". Later, evolution of the Coordinate Reference System conceptual model, new requirements and inconsistencies in implementation of WKT 1 format between different software have encouraged the revision of that format. The updated "Well-known text representation of coordinate reference systems" standard, sometime known as "WKT 2", was adopted by the Open Geospatial Consortium in 2015. This standard is published conjointly by the International Organization for Standardization as ISO 19162:2015.
+Confusingly, the original 2015 "WKT 2" standard has a version number 1 for the new, stricter WKT-CRS specification. A newer revision called WKT-CRS 2 was published in 2018, with the ISO version being ISO 19162:2019.
+
+Backward compatibility
+A software capable to read coordinate reference systems in WKT 2 format can also read many (but not all) equivalent systems in WKT 1 format. Some caveats exist, notably the removal of the TOWGS84 element which is replaced by the BOUNDCRS element. Another caveat is about the units of measurement. Some of them were unspecified in oldest WKT 1 specifications (for example the PRIMEM unit), which has led to different interpretations by different software. Those units of measurement have been clarified in the 2001 update and the WKT 2 specification is consistent with that clarification. But not all software has followed the 2001 clarification.
+
+ESRI vs OGC
+Esri, which also participated in writing the WKT 2 specification, had a few variations on OGC's WKT 1 specification, making it stricter and contain less ambiguities. As a result, some databases differentiate between "OGC WKT" and "ESRI WKT" representations. The problem is largely resolved in WKT 2, as it is better-defined. One distinction is that it does not have TOWGS84, much like WKT 2.
+
+Coordinate reference systems
+WKT can describe coordinate reference systems.
+For example, the WKT below describes a two-dimensional geographic coordinate reference system with a latitude axis first, then a longitude axis. The coordinate system is related to Earth by the WGS84 geodetic datum:
+
+The WKT format can describe not only geographic coordinate reference systems, but also geocentric, projected, vertical, temporal and engineering ones (for example a coordinate reference system attached to a boat). The standard describes how to combine those coordinate reference systems together.
+
+Coordinate operations
+A WKT format is defined to describe the operation methods and parameters used to convert or transform coordinates between two different coordinate reference systems. The WKT 1 and WKT 2 formats are incompatible regarding coordinate operations, because of differences in the modelling. Below is an example of a concatenation of two WKT 1 transformation descriptions, where the Mercator projection is applied first and then an affine transform is applied on the result:
+
+Below is an example of a datum shift operation in WKT 2 format. Contrarily to an equivalent description in WKT 1 format, the WKT 2 description specifies the source and target coordinate reference systems, together with the domain of validity and the accuracy (in metres) that we can expect from this operation:
+
+APIs that provide support
+Apache Spatial Information System: parses and formats WKT versions 1 and 2 for coordinate reference systems and coordinate operations
+PROJ

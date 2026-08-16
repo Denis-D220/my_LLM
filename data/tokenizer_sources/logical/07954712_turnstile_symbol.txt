@@ -1,0 +1,461 @@
+In mathematical logic and computer science the symbol ⊢ (
+  
+    
+      
+        ⊢
+      
+    
+    {\displaystyle \vdash }
+  
+) has taken the name turnstile because of its resemblance to a typical turnstile. It is also referred to as tee and is often read as "yields", "proves", "satisfies" or "entails".
+
+Interpretations
+The turnstile represents a binary relation. It has several different interpretations in different contexts:
+
+In epistemology, Per Martin-Löf (1996) analyzes the 
+  
+    
+      
+        ⊢
+      
+    
+    {\displaystyle \vdash }
+  
+ symbol thus: "...[T]he combination of Frege's Urteilsstrich, judgement stroke [ | ], and Inhaltsstrich, content stroke [—], came to be called the assertion sign." Frege's notation for a judgement of some content A
+
+  
+    
+      
+        ⊢
+        A
+      
+    
+    {\displaystyle \vdash A}
+  
+
+can then be read
+I know A is true.
+In the same vein, a conditional assertion
+
+  
+    
+      
+        P
+        ⊢
+        Q
+      
+    
+    {\displaystyle P\vdash Q}
+  
+
+can be read as:
+From P, I know that Q
+In metalogic, the study of formal languages; the turnstile represents syntactic consequence (or "derivability"). This is to say, that it shows that one string can be derived from another in a single step, according to the transformation rules (i.e. the syntax) of some given formal system. As such, the expression
+
+  
+    
+      
+        P
+        ⊢
+        Q
+      
+    
+    {\displaystyle P\vdash Q}
+  
+
+means that Q is derivable from P in the system.
+Consistent with its use for derivability, a "⊢" followed by an expression without anything preceding it denotes a theorem, which is to say that the expression can be derived from the rules using an empty set of axioms. As such, the expression
+
+  
+    
+      
+        ⊢
+        Q
+      
+    
+    {\displaystyle \vdash Q}
+  
+
+means that Q is a theorem in the system.
+In proof theory, the turnstile is used to denote "provability" or "derivability". For example, if T is a formal theory and S is a particular sentence in the language of the theory then
+
+  
+    
+      
+        T
+        ⊢
+        S
+      
+    
+    {\displaystyle T\vdash S}
+  
+
+means that S is provable from T. This usage is demonstrated in the article on propositional calculus. The syntactic consequence of provability should be contrasted to semantic consequence, denoted by the double turnstile symbol 
+  
+    
+      
+        ⊨
+      
+    
+    {\displaystyle \models }
+  
+. One says that 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is a semantic consequence of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, or 
+  
+    
+      
+        T
+        ⊨
+        S
+      
+    
+    {\displaystyle T\models S}
+  
+, when all possible valuations in which 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is true, 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is also true. For propositional logic, it may be shown that semantic consequence 
+  
+    
+      
+        ⊨
+      
+    
+    {\displaystyle \models }
+  
+ and derivability 
+  
+    
+      
+        ⊢
+      
+    
+    {\displaystyle \vdash }
+  
+ are equivalent to one-another. That is, propositional logic is sound (
+  
+    
+      
+        ⊢
+      
+    
+    {\displaystyle \vdash }
+  
+ implies 
+  
+    
+      
+        ⊨
+      
+    
+    {\displaystyle \models }
+  
+) and complete (
+  
+    
+      
+        ⊨
+      
+    
+    {\displaystyle \models }
+  
+ implies 
+  
+    
+      
+        ⊢
+      
+    
+    {\displaystyle \vdash }
+  
+)
+In sequent calculus, the turnstile is used to denote a sequent. A sequent 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        ,
+        
+        …
+        ,
+        
+          A
+          
+            m
+          
+        
+        
+        ⊢
+        
+        
+          B
+          
+            1
+          
+        
+        ,
+        
+        …
+        ,
+        
+          B
+          
+            n
+          
+        
+      
+    
+    {\displaystyle A_{1},\,\dots ,A_{m}\,\vdash \,B_{1},\,\dots ,B_{n}}
+  
+ asserts that, if all the antecedents 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        ,
+        
+        …
+        ,
+        
+          A
+          
+            m
+          
+        
+      
+    
+    {\displaystyle A_{1},\,\dots ,A_{m}}
+  
+ are true, then at least one of the consequents 
+  
+    
+      
+        
+          B
+          
+            1
+          
+        
+        ,
+        
+        …
+        ,
+        
+          B
+          
+            n
+          
+        
+      
+    
+    {\displaystyle B_{1},\,\dots ,B_{n}}
+  
+ must be true.
+In the typed lambda calculus, the turnstile is used to separate typing assumptions from the typing judgment.
+In category theory, a reversed turnstile (
+  
+    
+      
+        ⊣
+      
+    
+    {\displaystyle \dashv }
+  
+), as in 
+  
+    
+      
+        F
+        ⊣
+        G
+      
+    
+    {\displaystyle F\dashv G}
+  
+, is used to indicate that the functor F is left adjoint to the functor G. More rarely, a turnstile (
+  
+    
+      
+        ⊢
+      
+    
+    {\displaystyle \vdash }
+  
+), as in 
+  
+    
+      
+        G
+        ⊢
+        F
+      
+    
+    {\displaystyle G\vdash F}
+  
+, is used to indicate that the functor G is right adjoint to the functor F.
+ In APL the symbol is called "right tack" and represents the ambivalent right identity function where both X⊢Y and ⊢Y are Y. The reversed symbol "⊣" is called "left tack" and represents the analogous left identity where X⊣Y is X and ⊣Y is Y.
+In combinatorics, 
+  
+    
+      
+        λ
+        ⊢
+        n
+      
+    
+    {\displaystyle \lambda \vdash n}
+  
+ means that λ is a partition of the integer n.
+In Hewlett-Packard's HP-41C/CV/CX and HP-42S series of calculators, the symbol (at code point 127 in the FOCAL character set) is called "Append character" and is used to indicate that the following characters will be appended to the alpha register rather than replacing the existing contents of the register. The symbol is also supported (at code point 148) in a modified variant of the HP Roman-8 character set used by other HP calculators.
+On the Casio fx-92 Collège 2D and fx-92+ Spéciale Collège calculators, the symbol represents the modulo operator; entering 
+  
+    
+      
+        5
+        ⊢
+        2
+      
+    
+    {\displaystyle 5\vdash 2}
+  
+ will produce an answer of 
+  
+    
+      
+        Q
+        =
+        2
+        ;
+        R
+        =
+        1
+      
+    
+    {\displaystyle Q=2;R=1}
+  
+, where Q is the quotient and R is the remainder.
+In model theory, 
+  
+    
+      
+        φ
+        ⊢
+        ψ
+      
+    
+    {\displaystyle \varphi \vdash \psi }
+  
+ means 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ entails 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+, every model of 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is a model of 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+.
+
+Typography
+In TeX, the turnstile symbol 
+  
+    
+      
+        ⊢
+      
+    
+    {\displaystyle \vdash }
+  
+ is obtained from the command \vdash. 
+In Unicode, the turnstile symbol (⊢) is called right tack and is at code point U+22A2. (Code point U+22A6 is named assertion sign (⊦).) 
+
+U+22A2 ⊢ RIGHT TACK (&RightTee;, &vdash;)
+= turnstile
+= proves, implies, yields
+= reducible
+U+22A3 ⊣ LEFT TACK (&dashv;, &LeftTee;)
+= reverse turnstile
+= non-theorem, does not yield
+U+22AC ⊬ DOES NOT PROVE (&nvdash;)
+≡ U+22A2 ⊢ RIGHT TACK U+0338 ̸ COMBINING LONG SOLIDUS OVERLAY
+On a typewriter, a turnstile can be composed from a vertical bar (|) and a dash (–). 
+In LaTeX there is a turnstile package which issues this sign in many ways, and is capable of putting labels below or above it, in the correct places.
+
+Similar graphemes
+꜔ (U+A714) Modifier Letter Mid Left-Stem Tone Bar
+├ (U+251C) Box Drawings Light Vertical And Right
+ㅏ (U+314F) Hangul Letter A
+Ͱ (U+0370) Greek Capital Letter Heta
+ͱ (U+0371) Greek Small Letter Heta
+Ⱶ (U+2C75) Latin Capital Letter Half H
+ⱶ (U+2C76) Latin Small Letter Half H
+⎬ (U+23AC) Right Curly Bracket Middle Piece

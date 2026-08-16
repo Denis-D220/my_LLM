@@ -1,0 +1,15 @@
+Distributed Relational Database Architecture (DRDA) is a database interoperability standard from The Open Group.
+DRDA describes the architecture for distributed relational databases. It defines the rules for accessing the distributed data, but it does not provide the actual application programming interfaces (APIs) to perform the access. It was first used in DB2 2.3.
+DRDA was designed by a work group within IBM in the period 1988 to 1994. The messages, protocols, and structural components of DRDA are defined by the Distributed Data Management Architecture.
+
+Components
+Application Requester (AR). The AR accepts SQL requests from an application and sends them to the appropriate application servers for processing. Using this function, application programs can access remote data.
+Application Server (AS). The AS receives requests from application requesters and processes them. The AS acts upon the portions that can be processed and forwards the remainder to database servers for subsequent processing. The AR and the AS communicate through a protocol called the Application Support Protocol which handles data representation conversion.
+Database Server (DS). The DS receives requests from AS or other DS servers. The DS supports distributed requests and will forward parts of the request to collaborating DS in order to fulfill the request. The AS and the DS among themselves communicate through a protocol called the Database Support Protocol.
+
+Databases supporting DRDA
+Apache Derby (Java RDBMS)
+IBM Db2
+Informix Dynamic Server v11.10
+Oracle Database Gateway for DRDA -  enables Oracle database to act as a DRDA client, accessing remote non-Oracle databases (primarily DB2)
+Oracle Database Provider for DRDA - enables Oracle database to act as a DRDA server, providing Oracle database access to remote clients  (e.g. IBM i systems using DB2/400 DRDA client library)

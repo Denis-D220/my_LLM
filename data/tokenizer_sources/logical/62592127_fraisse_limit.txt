@@ -1,0 +1,1153 @@
+In mathematical logic, specifically in the discipline of model theory, the Fraïssé limit (also called the Fraïssé construction or Fraïssé amalgamation) is a method used to construct (infinite) mathematical structures from their (finite) substructures. It is a special example of the more general concept of a direct limit in a category. The technique was developed in the 1950s by its namesake, French logician Roland Fraïssé.
+The main point of Fraïssé's construction is to show how one can approximate a (countable) structure by its finitely generated substructures. Given a class 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ of finite relational structures, if 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ satisfies certain properties (described below), then there exists a unique countable structure 
+  
+    
+      
+        Flim
+        ⁡
+        (
+        
+          K
+        
+        )
+      
+    
+    {\displaystyle \operatorname {Flim} (\mathbf {K} )}
+  
+, called the Fraïssé limit of 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+, which contains all the elements of 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ as substructures.
+The general study of Fraïssé limits and related notions is sometimes called Fraïssé theory. This field has seen wide applications to other parts of mathematics, including topological dynamics, functional analysis, and Ramsey theory.
+
+Finitely generated substructures and age
+Fix a language 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+. By an 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+-structure, we mean a logical structure having signature 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+.
+Given an 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+-structure 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+ with domain 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+, and a subset 
+  
+    
+      
+        A
+        ⊆
+        M
+      
+    
+    {\displaystyle A\subseteq M}
+  
+, we use 
+  
+    
+      
+        ⟨
+        A
+        
+          ⟩
+          
+            
+              M
+            
+          
+        
+      
+    
+    {\displaystyle \langle A\rangle ^{\mathcal {M}}}
+  
+ to denote the least substructure of 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+ whose domain contains 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ (i.e. the closure of 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ under all the function and constant symbols in 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+).
+A substructure 
+  
+    
+      
+        
+          
+            N
+          
+        
+      
+    
+    {\displaystyle {\mathcal {N}}}
+  
+ of 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+ is then said to be finitely generated if 
+  
+    
+      
+        
+          
+            N
+          
+        
+        =
+        ⟨
+        A
+        
+          ⟩
+          
+            
+              M
+            
+          
+        
+      
+    
+    {\displaystyle {\mathcal {N}}=\langle A\rangle ^{\mathcal {M}}}
+  
+ for some finite subset 
+  
+    
+      
+        A
+        ⊆
+        M
+      
+    
+    {\displaystyle A\subseteq M}
+  
+. The age of 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+, denoted 
+  
+    
+      
+        Age
+        ⁡
+        (
+        
+          
+            M
+          
+        
+        )
+      
+    
+    {\displaystyle \operatorname {Age} ({\mathcal {M}})}
+  
+, is the class of all finitely generated substructures of 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+.
+One can prove that any class 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ that is the age of some structure satisfies the following two conditions:
+Hereditary property (HP)
+
+If 
+  
+    
+      
+        A
+        ∈
+        
+          K
+        
+      
+    
+    {\displaystyle A\in \mathbf {K} }
+  
+ and 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is a finitely generated substructure of 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, then 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is isomorphic to some structure in 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+.
+Joint embedding property (JEP)
+
+If 
+  
+    
+      
+        A
+        ,
+        B
+        ∈
+        
+          K
+        
+      
+    
+    {\displaystyle A,B\in \mathbf {K} }
+  
+, then there exists 
+  
+    
+      
+        C
+        ∈
+        
+          K
+        
+      
+    
+    {\displaystyle C\in \mathbf {K} }
+  
+ such that both 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ and 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ are embeddable in 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+.
+
+Fraïssé's theorem
+
+As above, we noted that for any 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+-structure 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}}
+  
+, 
+  
+    
+      
+        Age
+        ⁡
+        (
+        
+          
+            M
+          
+        
+        )
+      
+    
+    {\displaystyle \operatorname {Age} ({\mathcal {M}})}
+  
+ satisfies the HP and JEP. Fraïssé proved a sort-of-converse result: when 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ is any non-empty, countable set of finitely generated 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}}
+  
+-structures that has the above two properties, then it is the age of some countable structure.
+Furthermore, suppose that 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ happens to satisfy the following additional properties.
+Amalgamation property (AP)
+
+For any structures 
+  
+    
+      
+        A
+        ,
+        B
+        ,
+        C
+        ∈
+        
+          K
+        
+      
+    
+    {\displaystyle A,B,C\in \mathbf {K} }
+  
+, such that there exist embeddings 
+  
+    
+      
+        f
+        :
+        A
+        →
+        B
+      
+    
+    {\displaystyle f:A\to B}
+  
+, 
+  
+    
+      
+        g
+        :
+        A
+        →
+        C
+      
+    
+    {\displaystyle g:A\to C}
+  
+, there exists a structure 
+  
+    
+      
+        D
+        ∈
+        
+          K
+        
+      
+    
+    {\displaystyle D\in \mathbf {K} }
+  
+ and embeddings 
+  
+    
+      
+        
+          f
+          ′
+        
+        :
+        B
+        →
+        D
+      
+    
+    {\displaystyle f':B\to D}
+  
+, 
+  
+    
+      
+        
+          g
+          ′
+        
+        :
+        C
+        →
+        D
+      
+    
+    {\displaystyle g':C\to D}
+  
+ such that 
+  
+    
+      
+        
+          f
+          ′
+        
+        ∘
+        f
+        =
+        
+          g
+          ′
+        
+        ∘
+        g
+      
+    
+    {\displaystyle f'\circ f=g'\circ g}
+  
+ (i.e. they coincide on the image of A in both structures).
+Essential countability (EC)
+
+Up to isomorphism, there are countably many structures in 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+.
+In that case, we say that K is a Fraïssé class, and there is a unique (up to isomorphism), countable, homogeneous structure 
+  
+    
+      
+        Flim
+        ⁡
+        (
+        
+          K
+        
+        )
+      
+    
+    {\displaystyle \operatorname {Flim} (\mathbf {K} )}
+  
+ whose age is exactly 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+. This structure is called the Fraïssé limit of 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+.
+Here, homogeneous means that any isomorphism 
+  
+    
+      
+        π
+        :
+        A
+        →
+        B
+      
+    
+    {\displaystyle \pi :A\to B}
+  
+ between two finitely generated substructures 
+  
+    
+      
+        A
+        ,
+        B
+        ∈
+        
+          K
+        
+      
+    
+    {\displaystyle A,B\in \mathbf {K} }
+  
+ can be extended to an automorphism of the whole structure.
+
+Examples
+The archetypal example is the class 
+  
+    
+      
+        
+          F
+          C
+          h
+        
+      
+    
+    {\displaystyle \mathbf {FCh} }
+  
+ of all finite linear orderings, for which the Fraïssé limit is a dense linear order without endpoints (i.e. no smallest nor largest element). By Cantor's isomorphism theorem, up to isomorphism, this is always equivalent to the structure 
+  
+    
+      
+        ⟨
+        
+          Q
+        
+        ,
+        <
+        ⟩
+      
+    
+    {\displaystyle \langle \mathbb {Q} ,<\rangle }
+  
+, i.e. the rational numbers with the usual ordering.
+As a non-example, note that neither 
+  
+    
+      
+        ⟨
+        
+          N
+        
+        ,
+        <
+        ⟩
+      
+    
+    {\displaystyle \langle \mathbb {N} ,<\rangle }
+  
+ nor 
+  
+    
+      
+        ⟨
+        
+          Z
+        
+        ,
+        <
+        ⟩
+      
+    
+    {\displaystyle \langle \mathbb {Z} ,<\rangle }
+  
+ are the Fraïssé limit of 
+  
+    
+      
+        
+          F
+          C
+          h
+        
+      
+    
+    {\displaystyle \mathbf {FCh} }
+  
+. This is because, although both of them are countable and have 
+  
+    
+      
+        
+          F
+          C
+          h
+        
+      
+    
+    {\displaystyle \mathbf {FCh} }
+  
+ as their age, neither one is homogeneous. To see this, consider the substructures 
+  
+    
+      
+        
+          
+            ⟨
+          
+        
+        {
+        1
+        ,
+        3
+        }
+        ,
+        <
+        
+          
+            ⟩
+          
+        
+      
+    
+    {\displaystyle {\big \langle }\{1,3\},<{\big \rangle }}
+  
+ and 
+  
+    
+      
+        
+          
+            ⟨
+          
+        
+        {
+        5
+        ,
+        6
+        }
+        ,
+        <
+        
+          
+            ⟩
+          
+        
+      
+    
+    {\displaystyle {\big \langle }\{5,6\},<{\big \rangle }}
+  
+, and the isomorphism 
+  
+    
+      
+        1
+        ↦
+        5
+        ,
+         
+        3
+        ↦
+        6
+      
+    
+    {\displaystyle 1\mapsto 5,\ 3\mapsto 6}
+  
+ between them. This cannot be extended to an automorphism of 
+  
+    
+      
+        ⟨
+        
+          N
+        
+        ,
+        <
+        ⟩
+      
+    
+    {\displaystyle \langle \mathbb {N} ,<\rangle }
+  
+ or 
+  
+    
+      
+        ⟨
+        
+          Z
+        
+        ,
+        <
+        ⟩
+      
+    
+    {\displaystyle \langle \mathbb {Z} ,<\rangle }
+  
+, since there is no element to which we could map 
+  
+    
+      
+        2
+      
+    
+    {\displaystyle 2}
+  
+, while still preserving the order.
+Another example is the class 
+  
+    
+      
+        
+          G
+          p
+          h
+        
+      
+    
+    {\displaystyle \mathbf {Gph} }
+  
+ of all finite graphs, whose Fraïssé limit is the Rado graph.
+For any prime p, the Fraïssé limit of the class of finite fields of characteristic p is the algebraic closure 
+  
+    
+      
+        
+          
+            
+              
+                F
+              
+              ¯
+            
+          
+          
+            p
+          
+        
+      
+    
+    {\displaystyle {\overline {\mathbb {F} }}_{p}}
+  
+.
+The Fraïssé limit of the class of finite abelian p-groups is 
+  
+    
+      
+        
+          Z
+        
+        (
+        
+          p
+          
+            ∞
+          
+        
+        
+          )
+          
+            (
+            ω
+            )
+          
+        
+      
+    
+    {\displaystyle \mathbb {Z} (p^{\infty })^{(\omega )}}
+  
+ (the direct sum of countably many copies of the Prüfer group). The Fraïssé limit of the class of all finite abelian groups is 
+  
+    
+      
+        
+          ⨁
+          
+            p
+            
+               prime
+            
+          
+        
+        
+          Z
+        
+        (
+        
+          p
+          
+            ∞
+          
+        
+        
+          )
+          
+            (
+            ω
+            )
+          
+        
+        ≃
+        (
+        
+          Q
+        
+        
+          /
+        
+        
+          Z
+        
+        
+          )
+          
+            (
+            ω
+            )
+          
+        
+      
+    
+    {\displaystyle \bigoplus _{p{\text{ prime}}}\mathbb {Z} (p^{\infty })^{(\omega )}\simeq (\mathbb {Q} /\mathbb {Z} )^{(\omega )}}
+  
+.
+The Fraïssé limit of the class of all finite groups is Hall's universal group.
+The Fraïssé limit of the class of nontrivial finite Boolean algebras is the unique countable atomless Boolean algebra.
+
+ω-categoricity and quantifier elimination
+The class 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ under consideration is called uniformly locally finite if for every 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, there is a uniform bound on the size of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-generated (substructures of) structures in 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+. If the language of 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ is finite the Fraïssé limit of 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ is ω-categorical if and only if 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ is uniformly locally finite. If 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ is uniformly locally finite, then the Fraïssé limit of 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ has quantifier elimination.
+If the language of 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ is finite, and consists only of relations and constants, then 
+  
+    
+      
+        
+          K
+        
+      
+    
+    {\displaystyle \mathbf {K} }
+  
+ is uniformly locally finite automatically.
+For example, the class of finite dimensional vector spaces over a fixed field is always a Fraïssé class, but it is uniformly locally finite only if the field is finite.
+The class of finite Boolean algebras is uniformly locally finite, whereas the classes of finite fields of a given characteristic, or finite groups or abelian groups, are not, as 1-generated structures in these classes may have arbitrarily large finite size.

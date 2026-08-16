@@ -1,0 +1,206 @@
+# C++ Templates and Generic Programming
+
+### Compile-Time Polymorphism, Type Traits, and the Cost of Abstraction
+
+---
+
+## I. What a Template Actually Is
+
+A C++ template is not a generic function. It is a *recipe for generating* functions and classes, consumed by the compiler at each point of use. Writing `template <typename T> T max(T a, T b)` produces no code at all. Writing `max(3, 7)` causes the compiler to substitute `int` for `T` and emit a concrete `max<int>`. This process is **instantiation**, and understanding that it happens per-type explains nearly everything about templates: why they live in headers, why error messages are enormous, why they can be faster than virtual dispatch, and why they can bloat a binary.
+
+```cpp
+template <typename T>
+constexpr T max(const T& a, const T& b) {
+    return (a < b) ? b : a;
+}
+
+auto i = max(3, 7);          // instantiates max<int>
+auto d = max(2.5, 1.5);      // instantiates max<double>
+auto s = max(std::string{"a"}, std::string{"b"});  // max<std::string>
+```
+
+The requirement on `T` is implicit: it must support `operator<` and be copy-constructible. Nothing declares this. If `T` fails to satisfy it, the error appears deep inside the template body rather than at the call site — the historical reason template diagnostics were so notoriously bad, and the problem that concepts were introduced to solve.
+
+Template argument deduction determines `T` from the call. Deduction is not conversion: `max(3, 7.0)` fails because `T` deduces to `int` from one argument and `double` from the other. The fixes are explicit instantiation `max<double>(3, 7.0)`, two type parameters, or a deduced return type.
+
+---
+
+## II. Class Templates and Member Functions
+
+Class templates parameterize an entire type. The standard library is built from them.
+
+```cpp
+template <typename T, std::size_t N>
+class StaticVector {
+public:
+    using value_type = T;
+    using iterator   = T*;
+
+    constexpr std::size_t capacity() const noexcept { return N; }
+    std::size_t size() const noexcept { return size_; }
+
+    void push_back(const T& value) {
+        if (size_ >= N) throw std::out_of_range("StaticVector full");
+        data_[size_++] = value;
+    }
+
+    T&       operator[](std::size_t i)       { return data_[i]; }
+    const T& operator[](std::size_t i) const { return data_[i]; }
+
+    iterator begin() noexcept { return data_; }
+    iterator end()   noexcept { return data_ + size_; }
+
+private:
+    T data_[N]{};
+    std::size_t size_ = 0;
+};
+
+StaticVector<int, 16> v;
+```
+
+Note `std::size_t N`: templates accept **non-type parameters** — integers, enums, pointers, and since C++20 certain class types. `StaticVector<int, 16>` and `StaticVector<int, 32>` are entirely unrelated types with no conversion between them. This is the mechanism behind `std::array<T, N>`, and behind compile-time dimensional analysis where units are encoded in the type.
+
+Member functions of a class template are themselves templates and are instantiated lazily — only if called. A member that would not compile for a given `T` costs nothing provided nobody calls it. This is why `std::vector<T>::sort` does not exist but many containers have members usable only for some instantiations.
+
+---
+
+## III. Specialization
+
+**Full specialization** replaces the generic definition for one specific set of arguments.
+
+```cpp
+template <typename T>
+struct Serializer {
+    static std::string to_string(const T& v) { return std::to_string(v); }
+};
+
+template <>
+struct Serializer<bool> {
+    static std::string to_string(bool v) { return v ? "true" : "false"; }
+};
+
+template <>
+struct Serializer<std::string> {
+    static std::string to_string(const std::string& v) { return "\"" + v + "\""; }
+};
+```
+
+**Partial specialization** applies to a family of arguments and is available for class templates but *not* for function templates, a restriction that surprises people regularly. The workaround for functions is overloading or dispatching to a specialized class.
+
+```cpp
+template <typename T>
+struct is_pointer_like : std::false_type {};
+
+template <typename T>
+struct is_pointer_like<T*> : std::true_type {};
+
+template <typename T>
+struct is_pointer_like<std::unique_ptr<T>> : std::true_type {};
+```
+
+Specialization is how the standard library handles `std::vector<bool>` — a decision now widely regarded as a mistake, because it makes `vector<bool>` fail to satisfy the container requirements the rest of the library assumes.
+
+---
+
+## IV. Variadic Templates and Parameter Packs
+
+Variadic templates accept any number of type arguments. The pack is expanded with `...`.
+
+```cpp
+template <typename... Args>
+void log(const Args&... args) {
+    (std::cout << ... << args) << '\n';   // C++17 fold expression
+}
+
+log("count=", 42, " ratio=", 0.5);
+```
+
+Before fold expressions, packs were consumed by recursion with a base case:
+
+```cpp
+void print() {}                      // terminator
+
+template <typename Head, typename... Tail>
+void print(const Head& h, const Tail&... t) {
+    std::cout << h;
+    if constexpr (sizeof...(t) > 0) std::cout << ", ";
+    print(t...);
+}
+```
+
+`sizeof...(t)` yields the pack size at compile time. `if constexpr` discards the untaken branch entirely rather than merely skipping it at runtime, so the discarded branch need not even compile for the current instantiation — the feature that eliminated most tag-dispatch boilerplate.
+
+Perfect forwarding preserves value category through a wrapper:
+
+```cpp
+template <typename T, typename... Args>
+std::unique_ptr<T> make(Args&&... args) {
+    return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
+}
+```
+
+`Args&&` in a deduced context is a **forwarding reference**, not an rvalue reference. It binds to both lvalues and rvalues via reference collapsing, and `std::forward` restores the original category so that movable arguments are moved rather than copied. Using `std::move` here instead would be a bug: it would steal from lvalues the caller still owns.
+
+---
+
+## V. Type Traits and SFINAE
+
+Type traits are compile-time queries and transformations over types, conventionally exposing `::value` or `::type`.
+
+```cpp
+static_assert(std::is_integral_v<int>);
+static_assert(!std::is_integral_v<double>);
+static_assert(std::is_same_v<std::remove_const_t<const int>, int>);
+```
+
+**SFINAE** — Substitution Failure Is Not An Error — states that if substituting template arguments produces an invalid type in the immediate context of a declaration, that candidate is silently removed from overload resolution rather than causing a compile error. This turns the overload set into a compile-time conditional.
+
+```cpp
+template <typename T,
+          std::enable_if_t<std::is_integral_v<T>, int> = 0>
+std::string describe(T) { return "integral"; }
+
+template <typename T,
+          std::enable_if_t<std::is_floating_point_v<T>, int> = 0>
+std::string describe(T) { return "floating point"; }
+```
+
+SFINAE works, but it is verbose, error-prone, and produces terrible diagnostics. Concepts replaced it.
+
+---
+
+## VI. Concepts
+
+C++20 concepts state requirements directly and check them at the call site.
+
+```cpp
+template <typename T>
+concept Numeric = std::is_arithmetic_v<T>;
+
+template <typename T>
+concept Container = requires(T c) {
+    typename T::value_type;
+    { c.begin() } -> std::input_or_output_iterator;
+    { c.end()   } -> std::input_or_output_iterator;
+    { c.size()  } -> std::convertible_to<std::size_t>;
+};
+
+template <Container C>
+void describe(const C& c) {
+    std::cout << "container of size " << c.size() << '\n';
+}
+
+auto sum(Numeric auto a, Numeric auto b) { return a + b; }
+```
+
+The `requires` clause enumerates valid expressions and their required result properties. When a call fails, the compiler reports which requirement was not satisfied instead of dumping a fifty-line instantiation backtrace. Concepts also participate in overload resolution by **subsumption**: a more constrained overload is preferred over a less constrained one, which replaces most tag dispatch.
+
+---
+
+## VII. Practical Costs
+
+Templates are not free. Every distinct instantiation emits distinct code, so `std::vector<Widget>` and `std::vector<Gadget>` share nothing but source text. In large codebases this **code bloat** measurably increases binary size and instruction cache pressure. The standard mitigation is to factor type-independent logic into a non-template base — `std::vector` implementations often share a single `void*`-based core beneath the typed interface.
+
+Compile time is the other cost. Instantiation is repeated in every translation unit that uses a template, then deduplicated by the linker. Heavy template use in widely included headers is the dominant cause of slow C++ builds. `extern template` declarations suppress redundant instantiation, and C++20 modules address the underlying repetition more fundamentally.
+
+The compensating benefit is that abstraction is resolved before the program runs. `std::sort` with a lambda comparator inlines the comparison into the sort loop and routinely outperforms C's `qsort`, which must make an indirect call per comparison. This is the central bargain of C++ generic programming: pay at compile time, and the abstraction costs nothing at runtime.

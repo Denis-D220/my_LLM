@@ -1,0 +1,1617 @@
+Compound interest is interest accumulated from a principal sum and previously accumulated interest. It is the result of reinvesting or retaining interest that would otherwise be paid out, or of the accumulation of debts from a borrower.
+Compound interest is contrasted with simple interest, where previously accumulated interest is not added to the principal amount of the current period. Compounded interest depends on the simple interest rate applied and the frequency at which the interest is compounded.
+
+Compounding frequency
+The compounding frequency is the number of times per given unit of time the accumulated interest is capitalized, on a regular basis. The frequency could be yearly, half-yearly, quarterly, monthly, weekly, daily, continuously, or not at all until maturity.
+For example, monthly capitalization with interest expressed as an annual rate means that the compounding frequency is 12, with time periods measured in months.
+
+Annual equivalent rate
+To help consumers compare retail financial products more fairly and easily, many countries require financial institutions to disclose the annual compound interest rate on deposits or advances on a comparable basis. The interest rate on an annual equivalent basis may be referred to variously in different markets as effective annual percentage rate (EAPR), annual equivalent rate (AER), effective interest rate, effective annual rate, annual percentage yield  and other terms. The effective annual rate is the total accumulated interest that would be payable up to the end of one year, divided by the principal sum. These rates are usually the annualised compound interest rate alongside charges other than interest, such as taxes and other fees.
+
+Examples
+
+The interest on corporate bonds and government bonds is usually payable twice yearly. The amount of interest paid every six months is the disclosed interest rate divided by two and multiplied by the principal. The yearly compounded rate is higher than the disclosed rate.
+Canadian mortgage loans are generally compounded semi-annually with monthly or more frequent payments.
+U.S. mortgages use an amortizing loan, not compound interest. With these loans, an amortization schedule is used to determine how to apply payments toward principal and interest.  Interest generated on these loans is not added to the principal, but rather is paid off monthly as the payments are applied.
+It is sometimes mathematically simpler, for example, in the valuation of derivatives, to use continuous compounding. Continuous compounding in pricing these instruments is a natural consequence of Itô calculus, where financial derivatives are valued at ever-increasing frequency, until the limit is approached and the derivative is valued in continuous time.
+
+History
+
+Compound interest was known to ancient civilisations, but the first traces of mathematicians analysing it are from medieval era. A clay tablet from Babylon, dating from about 2000–1700 B.C., might be the first display of the compound interest problem.
+Compound interest when charged by lenders was once regarded as the worst kind of usury and was severely condemned by Roman law and the common laws of many other countries.
+The Florentine merchant Francesco Balducci Pegolotti provided a table of compound interest in his book Pratica della mercatura of about 1340. It gives the interest on 100 lire, for rates from 1% to 8%, for up to 20 years. The Summa de arithmetica of Luca Pacioli (1494) gives the Rule of 72, stating that to find the number of years for an investment at compound interest to double, one should divide the interest rate into 72.
+Richard Witt's book Arithmeticall Questions, published in 1613, was a landmark in the history of compound interest. It was wholly devoted to the subject (previously called anatocism), whereas previous writers had usually treated compound interest briefly in just one chapter in a mathematical textbook. Witt's book gave tables based on 10% (the maximum rate of interest allowable on loans) and other rates for different purposes, such as the valuation of property leases. Witt was a London mathematical practitioner and his book is notable for its clarity of expression, depth of insight, and accuracy of calculation, with 124 worked examples.
+Jacob Bernoulli discovered the constant 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ in 1683 by studying a question about compound interest.
+In the 19th century, and possibly earlier, Persian merchants used a slightly modified linear Taylor approximation to the monthly payment formula that could be computed easily in their heads.
+
+Calculation
+
+Periodic compounding
+The total accumulated value, including the principal sum 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ plus compounded interest 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, is given by the formula:
+
+  
+    
+      
+        A
+        =
+        P
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  r
+                  n
+                
+              
+            
+            )
+          
+          
+            t
+            n
+          
+        
+      
+    
+    {\displaystyle A=P\left(1+{\frac {r}{n}}\right)^{tn}}
+  
+
+where:
+
+A is the final amount
+P is the original principal sum
+r is the nominal annual interest rate
+n is the compounding frequency (1: annually, 12: monthly, 52: weekly, 365: daily)
+t is the overall length of time the interest is applied (expressed using the same time units as r, usually years).
+The total compound interest generated is the final amount minus the initial principal, since the final amount is equal to principal plus interest:
+
+  
+    
+      
+        I
+        =
+        P
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  r
+                  n
+                
+              
+            
+            )
+          
+          
+            t
+            n
+          
+        
+        −
+        P
+      
+    
+    {\displaystyle I=P\left(1+{\frac {r}{n}}\right)^{tn}-P}
+  
+
+Accumulation function
+Since the principal P is simply a coefficient, it is often dropped for simplicity, and the resulting accumulation function is used instead. The accumulation function shows what $1 grows to after any length of time. The accumulation function for compound interest is:
+  
+    
+      
+        a
+        (
+        t
+        )
+        =
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  r
+                  n
+                
+              
+            
+            )
+          
+          
+            t
+            n
+          
+        
+      
+    
+    {\displaystyle a(t)=\left(1+{\frac {r}{n}}\right)^{tn}}
+  
+
+Continuous compounding
+
+When the number of compounding periods per year increases without limit, continuous compounding occurs, in which case the effective annual rate approaches an upper limit of er − 1. Continuous compounding can be regarded as letting the compounding period become infinitesimally small, achieved by taking the limit as n goes to infinity. The amount after t periods of continuous compounding can be expressed in terms of the initial amount P0 as:
+
+  
+    
+      
+        P
+        (
+        t
+        )
+        =
+        
+          P
+          
+            0
+          
+        
+        
+          e
+          
+            r
+            t
+          
+        
+        .
+      
+    
+    {\displaystyle P(t)=P_{0}e^{rt}.}
+  
+
+Force of interest
+As the number of compounding periods 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ tends to infinity in continuous compounding, the continuous compound interest rate is referred to as the force of interest 
+  
+    
+      
+        δ
+      
+    
+    {\displaystyle \delta }
+  
+. For any continuously differentiable accumulation function a(t), the force of interest, or more generally the logarithmic or continuously compounded return, is a function of time as follows:
+
+  
+    
+      
+        
+          δ
+          
+            t
+          
+        
+        =
+        
+          
+            
+              
+                a
+                ′
+              
+              (
+              t
+              )
+            
+            
+              a
+              (
+              t
+              )
+            
+          
+        
+        =
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        ln
+        ⁡
+        a
+        (
+        t
+        )
+      
+    
+    {\displaystyle \delta _{t}={\frac {a'(t)}{a(t)}}={\frac {d}{dt}}\ln a(t)}
+  
+
+This is the logarithmic derivative of the accumulation function.
+Conversely:
+
+  
+    
+      
+        a
+        (
+        t
+        )
+        =
+        
+          e
+          
+            
+              ∫
+              
+                0
+              
+              
+                t
+              
+            
+            
+              δ
+              
+                s
+              
+            
+            
+            d
+            s
+          
+        
+        
+        ,
+      
+    
+    {\displaystyle a(t)=e^{\int _{0}^{t}\delta _{s}\,ds}\,,}
+  
+ (Since 
+  
+    
+      
+        a
+        (
+        0
+        )
+        =
+        1
+      
+    
+    {\displaystyle a(0)=1}
+  
+, this can be viewed as a particular case of a product integral.)
+When the above formula is written in differential equation format, then the force of interest is simply the coefficient of amount of change:
+
+  
+    
+      
+        d
+        a
+        (
+        t
+        )
+        =
+        
+          δ
+          
+            t
+          
+        
+        a
+        (
+        t
+        )
+        
+        d
+        t
+      
+    
+    {\displaystyle da(t)=\delta _{t}a(t)\,dt}
+  
+
+For compound interest with a constant annual interest rate r, the force of interest is a constant, and the accumulation function of compounding interest in terms of force of interest is a simple power of e:
+
+  
+    
+      
+        δ
+        =
+        ln
+        ⁡
+        (
+        1
+        +
+        r
+        )
+      
+    
+    {\displaystyle \delta =\ln(1+r)}
+  
+ or
+
+  
+    
+      
+        a
+        (
+        t
+        )
+        =
+        
+          e
+          
+            t
+            δ
+          
+        
+      
+    
+    {\displaystyle a(t)=e^{t\delta }}
+  
+
+The force of interest is less than the annual effective interest rate, but more than the annual effective discount rate. It is the reciprocal of the e-folding time.
+A way of modeling the force of inflation is with Stoodley's formula: 
+  
+    
+      
+        
+          δ
+          
+            t
+          
+        
+        =
+        p
+        +
+        
+          
+            s
+            
+              1
+              +
+              r
+              s
+              
+                e
+                
+                  s
+                  t
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \delta _{t}=p+{s \over {1+rse^{st}}}}
+  
+ where p, r and s are estimated.
+
+Compounding basis
+
+To convert an interest rate from one compounding basis to another compounding basis, so that
+
+  
+    
+      
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  
+                    r
+                    
+                      1
+                    
+                  
+                  
+                    n
+                    
+                      1
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            
+              n
+              
+                1
+              
+            
+          
+        
+        =
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  
+                    r
+                    
+                      2
+                    
+                  
+                  
+                    n
+                    
+                      2
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            
+              n
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle \left(1+{\frac {r_{1}}{n_{1}}}\right)^{n_{1}}=\left(1+{\frac {r_{2}}{n_{2}}}\right)^{n_{2}}}
+  
+
+use
+
+  
+    
+      
+        
+          r
+          
+            2
+          
+        
+        =
+        
+          [
+          
+            
+              
+                (
+                
+                  1
+                  +
+                  
+                    
+                      
+                        r
+                        
+                          1
+                        
+                      
+                      
+                        n
+                        
+                          1
+                        
+                      
+                    
+                  
+                
+                )
+              
+              
+                
+                  
+                    n
+                    
+                      1
+                    
+                  
+                  
+                    n
+                    
+                      2
+                    
+                  
+                
+              
+            
+            −
+            1
+          
+          ]
+        
+        
+          
+            n
+            
+              2
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle r_{2}=\left[\left(1+{\frac {r_{1}}{n_{1}}}\right)^{\frac {n_{1}}{n_{2}}}-1\right]{n_{2}},}
+  
+
+where r1 is the interest rate with compounding frequency n1, and r2 is the interest rate with compounding frequency n2.
+When interest is continuously compounded, use
+
+  
+    
+      
+        δ
+        =
+        n
+        ln
+        ⁡
+        
+          
+            (
+            
+              1
+              +
+              
+                
+                  r
+                  n
+                
+              
+            
+            )
+          
+        
+        ,
+      
+    
+    {\displaystyle \delta =n\ln {\left(1+{\frac {r}{n}}\right)},}
+  
+
+where 
+  
+    
+      
+        δ
+      
+    
+    {\displaystyle \delta }
+  
+ is the interest rate on a continuous compounding basis, and
+r is the stated interest rate with a compounding frequency n.
+
+Monthly amortized loan or mortgage payments
+
+The interest on loans and mortgages that are amortized—that is, have a smooth monthly payment until the loan has been paid off—is often compounded monthly. The formula for payments is found from the following argument.
+
+Exact formula for monthly payment
+An exact formula for the monthly payment (
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+) is
+
+  
+    
+      
+        c
+        =
+        
+          
+            
+              r
+              P
+            
+            
+              1
+              −
+              
+                
+                  1
+                  
+                    (
+                    1
+                    +
+                    r
+                    
+                      )
+                      
+                        n
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle c={\frac {rP}{1-{\frac {1}{(1+r)^{n}}}}}}
+  
+
+or equivalently
+
+  
+    
+      
+        c
+        =
+        
+          
+            
+              r
+              P
+            
+            
+              1
+              −
+              
+                e
+                
+                  −
+                  n
+                  ln
+                  ⁡
+                  (
+                  1
+                  +
+                  r
+                  )
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle c={\frac {rP}{1-e^{-n\ln(1+r)}}}}
+  
+
+where:
+
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ = monthly payment
+
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ = principal
+
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ = monthly interest rate
+
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ = number of payment periods
+
+Spreadsheet formula
+In spreadsheets, the PMT() function is used.  The syntax is:
+
+PMT(interest_rate, number_payments, present_value, future_value, [Type])
+
+Approximate formula for monthly payment
+A formula that is accurate to within a few percent can be found by noting that for typical U.S. note rates (
+  
+    
+      
+        I
+        <
+        8
+        %
+      
+    
+    {\displaystyle I<8\%}
+  
+ and terms 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+=10–30 years), the monthly note rate is small compared to 1. 
+  
+    
+      
+        r
+        <<
+        1
+      
+    
+    {\displaystyle r<<1}
+  
+ so that the 
+  
+    
+      
+        ln
+        ⁡
+        (
+        1
+        +
+        r
+        )
+        ≈
+        r
+      
+    
+    {\displaystyle \ln(1+r)\approx r}
+  
+ which yields the simplification:
+
+  
+    
+      
+        c
+        ≈
+        
+          
+            
+              P
+              r
+            
+            
+              1
+              −
+              
+                e
+                
+                  −
+                  n
+                  r
+                
+              
+            
+          
+        
+        =
+        
+          
+            P
+            n
+          
+        
+        
+          
+            
+              n
+              r
+            
+            
+              1
+              −
+              
+                e
+                
+                  −
+                  n
+                  r
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle c\approx {\frac {Pr}{1-e^{-nr}}}={\frac {P}{n}}{\frac {nr}{1-e^{-nr}}}}
+  
+
+which suggests defining auxiliary variables
+
+  
+    
+      
+        Y
+        ≡
+        n
+        r
+        =
+        I
+        T
+      
+    
+    {\displaystyle Y\equiv nr=IT}
+  
+
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+        ≡
+        
+          
+            P
+            n
+          
+        
+        .
+      
+    
+    {\displaystyle c_{0}\equiv {\frac {P}{n}}.}
+  
+
+Here 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+      
+    
+    {\displaystyle c_{0}}
+  
+ is the monthly payment required for a zero–interest loan paid off in 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ installments. In terms of these variables the approximation can be written 
+  
+    
+      
+        c
+        ≈
+        
+          c
+          
+            0
+          
+        
+        
+          
+            Y
+            
+              1
+              −
+              
+                e
+                
+                  −
+                  Y
+                
+              
+            
+          
+        
+      
+    
+    {\textstyle c\approx c_{0}{\frac {Y}{1-e^{-Y}}}}
+  
+.
+Let 
+  
+    
+      
+        X
+        =
+        
+          
+            1
+            2
+          
+        
+        Y
+      
+    
+    {\textstyle X={\frac {1}{2}}Y}
+  
+.
+The expansion 
+  
+    
+      
+        c
+        ≈
+        
+          c
+          
+            0
+          
+        
+        
+          (
+          
+            1
+            +
+            X
+            +
+            
+              
+                
+                  X
+                  
+                    2
+                  
+                
+                3
+              
+            
+          
+          )
+        
+      
+    
+    {\textstyle c\approx c_{0}\left(1+X+{\frac {X^{2}}{3}}\right)}
+  
+ is valid to better than 1% provided 
+  
+    
+      
+        X
+        ≤
+        1
+      
+    
+    {\displaystyle X\leq 1}
+  
+.
+
+Example of mortgage payment
+For a $120,000 mortgage with a term of 30 years and a note rate of 4.5%, payable monthly, we find:
+
+  
+    
+      
+        T
+        =
+        30
+      
+    
+    {\displaystyle T=30}
+  
+
+  
+    
+      
+        I
+        =
+        0.045
+      
+    
+    {\displaystyle I=0.045}
+  
+
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+        =
+        
+          
+            
+              $
+              120
+              ,
+              000
+            
+            360
+          
+        
+        =
+        $
+        333.33
+      
+    
+    {\displaystyle c_{0}={\frac {\$120,000}{360}}=\$333.33}
+  
+
+which gives
+
+  
+    
+      
+        X
+        =
+        
+          
+            1
+            2
+          
+        
+        I
+        T
+        =
+        .675
+      
+    
+    {\displaystyle X={\frac {1}{2}}IT=.675}
+  
+
+so that
+
+  
+    
+      
+        c
+        ≈
+        
+          c
+          
+            0
+          
+        
+        
+          (
+          
+            1
+            +
+            X
+            +
+            
+              
+                1
+                3
+              
+            
+            
+              X
+              
+                2
+              
+            
+          
+          )
+        
+        =
+        $
+        333.33
+        (
+        1
+        +
+        .675
+        +
+        
+          .675
+          
+            2
+          
+        
+        
+          /
+        
+        3
+        )
+        =
+        $
+        608.96
+      
+    
+    {\displaystyle c\approx c_{0}\left(1+X+{\frac {1}{3}}X^{2}\right)=\$333.33(1+.675+.675^{2}/3)=\$608.96}
+  
+
+The exact payment amount is 
+  
+    
+      
+        c
+        =
+        $
+        608.02
+      
+    
+    {\displaystyle c=\$608.02}
+  
+ so the approximation is an overestimate of about a sixth of a percent.
+
+Monthly deposits
+Given a principal deposit and a recurring deposit, the total return of an investment can be calculated via the compound interest gained per unit of time. If required, the interest on additional non-recurring and recurring deposits can also be defined within the same formula (see below).
+
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ = principal deposit
+
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ = rate of return (monthly)
+
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ = monthly deposit, and
+
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ = time, in months
+The compound interest for each deposit is:
+
+  
+    
+      
+        
+          M
+          ′
+        
+        =
+        M
+        (
+        1
+        +
+        r
+        
+          )
+          
+            t
+          
+        
+      
+    
+    {\displaystyle M'=M(1+r)^{t}}
+  
+
+Adding all recurring deposits over the total period t, (i starts at 0 if deposits begin with the investment of principal; i starts at 1 if deposits begin the next month):
+
+  
+    
+      
+        
+          M
+          ′
+        
+        =
+        
+          ∑
+          
+            i
+            =
+            0
+          
+          
+            t
+            −
+            1
+          
+        
+        
+          M
+          (
+          1
+          +
+          r
+          
+            )
+            
+              t
+              −
+              i
+            
+          
+        
+      
+    
+    {\displaystyle M'=\sum _{i=0}^{t-1}{M(1+r)^{t-i}}}
+  
+
+Recognizing the geometric series: 
+  
+    
+      
+        
+          M
+          ′
+        
+        =
+        M
+        
+          ∑
+          
+            i
+            =
+            0
+          
+          
+            t
+            −
+            1
+          
+        
+        (
+        1
+        +
+        r
+        
+          )
+          
+            t
+          
+        
+        
+          
+            1
+            
+              (
+              1
+              +
+              r
+              
+                )
+                
+                  i
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle M'=M\sum _{i=0}^{t-1}(1+r)^{t}{\frac {1}{(1+r)^{i}}}}
+  
+ and applying the closed-form formula (common ratio: 
+  
+    
+      
+        1
+        
+          /
+        
+        (
+        1
+        +
+        r
+        )
+      
+    
+    {\displaystyle 1/(1+r)}
+  
+):
+
+  
+    
+      
+        
+          P
+          ′
+        
+        =
+        M
+        
+          
+            
+              (
+              1
+              +
+              r
+              
+                )
+                
+                  t
+                
+              
+              −
+              1
+            
+            r
+          
+        
+        +
+        P
+        (
+        1
+        +
+        r
+        
+          )
+          
+            t
+          
+        
+      
+    
+    {\displaystyle P'=M{\frac {(1+r)^{t}-1}{r}}+P(1+r)^{t}}
+  
+
+If two or more types of deposits occur (either recurring or non-recurring), the compound value earned can be represented as
+
+  
+    
+      
+        
+          Value
+        
+        =
+        M
+        
+          
+            
+              (
+              1
+              +
+              r
+              
+                )
+                
+                  t
+                
+              
+              −
+              1
+            
+            r
+          
+        
+        +
+        P
+        (
+        1
+        +
+        r
+        
+          )
+          
+            t
+          
+        
+        +
+        k
+        
+          
+            
+              (
+              1
+              +
+              r
+              
+                )
+                
+                  t
+                  −
+                  x
+                
+              
+              −
+              1
+            
+            r
+          
+        
+        +
+        C
+        (
+        1
+        +
+        r
+        
+          )
+          
+            t
+            −
+            y
+          
+        
+      
+    
+    {\displaystyle {\text{Value}}=M{\frac {(1+r)^{t}-1}{r}}+P(1+r)^{t}+k{\frac {(1+r)^{t-x}-1}{r}}+C(1+r)^{t-y}}
+  
+
+where C is each lump sum and k are non-monthly recurring deposits, respectively, and x and y are the differences in time between a new deposit and the total period t is modeling.
+A practical estimate for reverse calculation of the rate of return when the exact date and amount of each recurring deposit is not known, a formula that assumes a uniform recurring monthly deposit over the period, is:
+
+  
+    
+      
+        r
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    P
+                    ′
+                  
+                  −
+                  P
+                  −
+                  ∑
+                  
+                    M
+                  
+                
+                
+                  P
+                  +
+                  ∑
+                  
+                    M
+                  
+                  
+                    /
+                  
+                  2
+                
+              
+            
+            )
+          
+          
+            1
+            
+              /
+            
+            t
+          
+        
+      
+    
+    {\displaystyle r=\left({\frac {P'-P-\sum {M}}{P+\sum {M}/2}}\right)^{1/t}}
+  
+ or 
+  
+    
+      
+        r
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    P
+                    ′
+                  
+                  −
+                  ∑
+                  
+                    M
+                  
+                  
+                    /
+                  
+                  2
+                
+                
+                  P
+                  +
+                  ∑
+                  
+                    M
+                  
+                  
+                    /
+                  
+                  2
+                
+              
+            
+            )
+          
+          
+            1
+            
+              /
+            
+            t
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle r=\left({\frac {P'-\sum {M}/2}{P+\sum {M}/2}}\right)^{1/t}-1}

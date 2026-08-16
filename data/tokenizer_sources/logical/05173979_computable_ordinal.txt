@@ -1,0 +1,668 @@
+In mathematics, specifically computability and set theory, a computable (or recursive) ordinal is an ordinal number that can be represented as a computable well-ordering of natural numbers.
+
+Definition
+An ordinal ⁠
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+⁠ is computable if there exists a computable well-ordering ⁠
+  
+    
+      
+        ≺
+      
+    
+    {\displaystyle \prec }
+  
+⁠ of a computable subset ⁠
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+⁠ of the natural numbers having the order type ⁠
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+⁠. This means that given any ⁠
+  
+    
+      
+        x
+        ∈
+        
+          N
+        
+      
+    
+    {\displaystyle x\in \mathbb {N} }
+  
+⁠ it is decidable whether ⁠
+  
+    
+      
+        x
+        ∈
+        S
+      
+    
+    {\displaystyle x\in S}
+  
+⁠, and given any ⁠
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        S
+      
+    
+    {\displaystyle x,y\in S}
+  
+⁠ it is decidable whether ⁠
+  
+    
+      
+        x
+        ≺
+        y
+      
+    
+    {\displaystyle x\prec y}
+  
+⁠. Alternatively, this condition can be characterized with a single Turing machine that decides whether ⁠
+  
+    
+      
+        x
+        ∈
+        S
+        ∧
+        y
+        ∈
+        S
+        ∧
+        x
+        ⪯
+        y
+      
+    
+    {\displaystyle x\in S\land y\in S\land x\preceq y}
+  
+⁠ for any ⁠
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        
+          N
+        
+      
+    
+    {\displaystyle x,y\in \mathbb {N} }
+  
+⁠.
+Another equivalent definition states that ⁠
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+⁠ is computable if it either is finite or is the order type of a computable well-ordering of all natural numbers. This equivalence holds because, if ⁠
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+⁠ is infinite and computable, then one can compute a bijection ⁠
+  
+    
+      
+        f
+        :
+        
+          N
+        
+        →
+        S
+      
+    
+    {\displaystyle f:\mathbb {N} \to S}
+  
+⁠ by letting ⁠
+  
+    
+      
+        f
+        (
+        n
+        )
+      
+    
+    {\displaystyle f(n)}
+  
+⁠ be the ⁠
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+⁠th element of ⁠
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+⁠ in the usual ordering of the natural numbers; the search always halts because ⁠
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+⁠ is infinite. If ⁠
+  
+    
+      
+        ⟨
+        S
+        ,
+        ≺
+        ⟩
+      
+    
+    {\displaystyle \langle S,\prec \rangle }
+  
+⁠ is a computable well-ordering with order type ⁠
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+⁠, then defining ⁠
+  
+    
+      
+        x
+        
+          ≺
+          
+            f
+          
+        
+        y
+      
+    
+    {\displaystyle x\prec _{f}y}
+  
+⁠ iff ⁠
+  
+    
+      
+        f
+        (
+        x
+        )
+        ≺
+        f
+        (
+        y
+        )
+      
+    
+    {\displaystyle f(x)\prec f(y)}
+  
+⁠ gives a computable well-ordering ⁠
+  
+    
+      
+        ⟨
+        
+          N
+        
+        ,
+        
+          ≺
+          
+            f
+          
+        
+        ⟩
+      
+    
+    {\displaystyle \langle \mathbb {N} ,\prec _{f}\rangle }
+  
+⁠ with the same order type.
+
+Examples
+All computable ordinals are by definition countable. Conversely, for many countable ordinals, the "natural" witnesses for countability are also witnesses for computability. For example, the natural ordering ⁠
+  
+    
+      
+        <
+      
+    
+    {\displaystyle <}
+  
+⁠ of all natural numbers has order type ⁠
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+⁠. Since there exists a Turing machine that decides ⁠
+  
+    
+      
+        x
+        <
+        y
+      
+    
+    {\displaystyle x<y}
+  
+⁠, this means that ⁠
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+⁠ is a computable ordinal.
+As another example, the following is the "canonical" construction of a well-ordering ⁠
+  
+    
+      
+        ≺
+      
+    
+    {\displaystyle \prec }
+  
+⁠ of all natural numbers with order type ⁠
+  
+    
+      
+        ω
+        +
+        ω
+      
+    
+    {\displaystyle \omega +\omega }
+  
+⁠:
+
+  
+    
+      
+        
+          
+            
+              
+                0
+              
+              
+                2
+              
+              
+                4
+              
+              
+                6
+              
+              
+                8
+              
+              
+                …
+              
+              
+                1
+              
+              
+                3
+              
+              
+                5
+              
+              
+                7
+              
+              
+                9
+              
+              
+                …
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{matrix}0&2&4&6&8&\dots &1&3&5&7&9&\dots \end{matrix}}}
+  
+
+An algorithm that decides ⁠
+  
+    
+      
+        x
+        ≺
+        y
+      
+    
+    {\displaystyle x\prec y}
+  
+⁠ can be as follows: Return true if ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ is even and ⁠
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+⁠ is odd, false if ⁠
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+⁠ is odd and ⁠
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+⁠ is even, and otherwise return ⁠
+  
+    
+      
+        x
+        <
+        y
+      
+    
+    {\displaystyle x<y}
+  
+⁠. Therefore ⁠
+  
+    
+      
+        ω
+        +
+        ω
+      
+    
+    {\displaystyle \omega +\omega }
+  
+⁠ is also computable. In fact, with similar constructions, it can be shown that the successor of a computable ordinal and the sum, product, and power of a pair of computable ordinals are all computable.
+The set of all computable ordinals is closed downwards, i.e., if ⁠
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+⁠ is computable and ⁠
+  
+    
+      
+        β
+        <
+        α
+      
+    
+    {\displaystyle \beta <\alpha }
+  
+⁠, then ⁠
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  
+⁠ is computable too. This is because any well-ordering ⁠
+  
+    
+      
+        ⟨
+        S
+        ,
+        ≺
+        ⟩
+      
+    
+    {\displaystyle \langle S,\prec \rangle }
+  
+⁠ with order type ⁠
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+⁠ has an initial segment ⁠
+  
+    
+      
+        ⟨
+        
+          S
+          ′
+        
+        ,
+        ≺
+        ⟩
+      
+    
+    {\displaystyle \langle S',\prec \rangle }
+  
+⁠ with order type ⁠
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  
+⁠, where ⁠
+  
+    
+      
+        
+          S
+          ′
+        
+        =
+        {
+        x
+        ∈
+        S
+        ∣
+        x
+        ≺
+        
+          x
+          
+            β
+          
+        
+        }
+      
+    
+    {\displaystyle S'=\{x\in S\mid x\prec x_{\beta }\}}
+  
+⁠ (for some fixed ⁠
+  
+    
+      
+        
+          x
+          
+            β
+          
+        
+        ∈
+        S
+      
+    
+    {\displaystyle x_{\beta }\in S}
+  
+⁠) is a computable subset of ⁠
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+⁠ if ⁠
+  
+    
+      
+        ≺
+      
+    
+    {\displaystyle \prec }
+  
+⁠ is computable.
+
+Church–Kleene ordinal
+The supremum of all computable ordinals is called the Church–Kleene ordinal, the first nonrecursive ordinal, and denoted by 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            
+              C
+              K
+            
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{\mathsf {CK}}}
+  
+. The Church–Kleene ordinal is a limit ordinal. An ordinal is computable if and only if it is smaller than 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            
+              C
+              K
+            
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{\mathsf {CK}}}
+  
+. Since there are only countably many computable binary relations, there are also only countably many computable ordinals. Thus, 
+  
+    
+      
+        
+          ω
+          
+            1
+          
+          
+            
+              C
+              K
+            
+          
+        
+      
+    
+    {\displaystyle \omega _{1}^{\mathsf {CK}}}
+  
+ is countable.
+The computable ordinals are exactly the ordinals that have an ordinal notation in Kleene's 
+  
+    
+      
+        
+          
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}}
+  
+.

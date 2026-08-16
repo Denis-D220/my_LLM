@@ -1,0 +1,56 @@
+Ion is a data serialization language developed by Amazon. It may be represented by either a human-readable text form or a compact binary form. The text form is a superset of JSON; thus, any valid JSON document is also a valid Ion document.
+
+Data types
+As a superset of JSON, Ion includes the following data types
+
+null: An empty value (for JSON compatibility)
+bool: Boolean values
+string: Unicode text literals
+list: Ordered heterogeneous collection of Ion values (extension of JSON array)
+struct: Unordered collection of key/value pairs (extension of JSON object)
+The nebulous JSON 'number' type is strictly defined in Ion to be one of
+
+int: Signed integers of arbitrary size
+float: 64-bit IEEE binary-encoded floating point numbers
+decimal: Decimal-encoded real numbers of arbitrary precision
+Ion adds these types:
+
+timestamp: Date/time/time zone moments of arbitrary precision
+symbol: Unicode symbolic atoms (a.k.a. identifiers), stored as interned strings in binary format
+blob: Binary data of user-defined encoding
+clob: Text data of user-defined encoding
+sexp: Nested list of values (equivalent to an S-expression) with application-defined semantics
+Each Ion type supports a null variant, indicating a lack of value while maintaining a strict type (e.g., null.int, null.struct).
+The Ion format permits attaching one or more annotations (i.e. a list of symbols) to any value. Such annotations may be used as metadata for otherwise opaque data (such as a blob).
+
+Implementations
+Amazon supported library implementations
+C#
+Go Lang
+Python
+JS
+
+Examples
+
+Sample document
+Features seen in JavaScript and JSON5:
+
+Features unique to Ion:
+
+Uses
+Amazon's Quantum Ledger Database (QLDB) stores data in Ion documents.
+PartiQL, an open source SQL-based query language also by Amazon, is built upon Ion. PartiQL supported queries are used by QLDB, S3Select.
+
+Tooling and extensions
+Ion Path Extractor API aims to combine the convenience of a DOM API with the speed of a streaming API.
+IDE support
+Eclipse
+IntelliJ
+Jackson data format module for Ion
+Apache Hive SerDe for Ion
+Ion Schema
+Specification
+Implementations
+Ion Hash defines an algorithm for constructing a hash for any Ion value, given a user-provided hash function capable of taking binary data of arbitrary length.
+Specification
+Implementations

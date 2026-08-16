@@ -1,0 +1,42 @@
+In mathematics and theoretical computer science, a set constraint is an equation or an inequation between sets of terms.
+Similar to systems of (in)equations between numbers, methods are studied for solving systems of set constraints. 
+Different approaches admit different operators (like "∪", "∩", "\", and function application) on sets and different (in)equation relations (like "=", "⊆", and "⊈") between set expressions.
+Systems of set constraints are useful to describe (in particular infinite) sets of ground terms.
+They arise in program analysis, abstract interpretation, and type inference.
+
+Relation to regular tree grammars
+Each regular tree grammar can be systematically transformed into a system of set inclusions such that its minimal solution corresponds to the tree language of the grammar.
+For example, the grammar (terminal and nonterminal symbols indicated by lower and upper case initials, respectively) with the rules
+
+is transformed to the set inclusion system (constants and variables indicated by lower and upper case initials, respectively):
+
+This system has a minimal solution, viz. ("L(N)" denoting the tree language corresponding to the nonterminal N in the above tree grammar):
+
+The maximal solution of the system is trivial; it assigns the set of all terms to every variable.
+
+Literature
+Aiken, A. (1995). Set Constraints: Results, Applications and Future Directions (Technical report). Univ. Berkeley.
+Aiken, A., Kozen, D., Vardi, M., Wimmers, E.L. (May 1993). The Complexity of Set Constraints (Technical report). Computer Science Department, Cornell University. 93–1352.{{cite tech report}}:  CS1 maint: multiple names: authors list (link)
+Aiken, A., Kozen, D., Vardi, M., Wimmers, E.L. (1994). "The Complexity of Set Constraints". Computer Science Logic'93. LNCS. Vol. 832. Springer. pp. 1–17.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+Aiken, A., Wimmers, E.L. (1992). "Solving Systems of Set Constraints (Extended Abstract)". Seventh Annual IEEE Symposium on Logic in Computer Science. pp. 329–340.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+Bachmair, Leo, Ganzinger, Harald, Waldmann, Uwe (1992). Set Constraints are the Monadic Class (Technical report). Max-Planck-Institut für Informatik. p. 13. CiteSeerX 10.1.1.32.3739. MPI-I-92-240. {{cite tech report}}: Cite uses deprecated parameter |citeseerx= (help)CS1 maint: multiple names: authors list (link)
+Bachmair, Leo, Ganzinger, Harald, Waldmann, Uwe (1993). "Set Constraints are the Monadic Class". Eight Annual IEEE Symposium on Logic in Computer Science. pp. 75–83.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+Charatonik, W. (Sep 1994). "Set Constraints in Some Equational Theories". Proc. 1st Int. Conf. on Constraints in Computational Logics (CCL). LNCS. Vol. 845. Springer. pp. 304–319.
+Charatonik, Witold; Podelski, Andreas (2002). "Set Constraints with Intersection". Information and Computation. 179 (2): 213–229. doi:10.1006/inco.2001.2952.
+Charatonik, W., Podelski, A. (1998). Tobias Nipkow (ed.). Co-definite Set Constraints. LNCS 1379. Springer-Verlag. pp. 211–225.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+Charatonik, W., Talbot, J.-M. (2002). Tison, S. (ed.). Atomic Set Constraints with Projection. LNCS 2378. Springer. pp. 311–325.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+Gilleron, R., Tison, S., Tommasi, M. (1993). "Solving Systems of Set Constraints using Tree Automata". 10th Annual Symposium on Theoretical Aspects of Computer Science. LNCS. Vol. 665. Springer. pp. 505–514.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+Heintze, N., Jaffar, J. (1990). "A Decision Procedure for a Class of Set Constraints (Extended Abstract)". Fifth Annual IEEE Symposium on Logic in Computer Science. pp. 42–51.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+Heintze, N., Jaffar, J. (Feb 1991). A Decision Procedure for a Class of Set Constraints (Technical report). School of Computer Science, Carnegie Mellon University.{{cite tech report}}:  CS1 maint: multiple names: authors list (link)
+Kozen, D. (1993). "Logical Aspects of Set Constraints" (PDF). Computer Science Logic'93. LNCS. Vol. 832. pp. 175–188.
+Kozen, D. (1994). "Set Constraints and Logic Programming". CCL. LNCS. Vol. 845.
+Dexter Kozen (1998). "Set Constraints and Logic Programming". Information and Computation. 142: 2–25. doi:10.1006/inco.1997.2694.
+Uribe, T.E. (1992). "Sorted Unification Using Set Constraints". Proc. CADE–11. LNCS. Vol. 607. pp. 163–177.
+
+Literature on negative constraints
+Aiken, A., Kozen, D., Wimmers, E.L. (Jun 1993). Decidability of Systems of Set Constraints with Negative Constraints (Technical report). Computer Science Department, Cornell University. 93–1362.{{cite tech report}}:  CS1 maint: multiple names: authors list (link)
+Charatonik, W., Pacholski, L. (Jul 1994). "Negative Set Constraints with Equality". Ninth Annual IEEE Symposium on Logic in Computer Science. pp. 128–136.{{cite book}}:  CS1 maint: multiple names: authors list (link)
+R. Gilleron; S. Tison; M. Tommasi (1993). "Solving Systems of Set Constraints with Negated Subset Relationships". Proceedings of the 34th Symp. on Foundations of Computer Science. pp. 372–380.
+Gilleron, R., Tison, S., Tommasi, M. (1993). Solving Systems of Set Constraints with Negated Subset Relationships (Technical report). Laboratoire d'Informatique Fondamentale de Lille. IT 247.{{cite tech report}}:  CS1 maint: multiple names: authors list (link)
+Stefansson, K. (Aug 1993). Systems of Set Constraints with Negative Constraints are NEXPTIME-Complete (Technical report). Computer Science Department, Cornell University. 93–1380.
+Stefansson, K. (1994). "Systems of Set Constraints with Negative Constraints are NEXPTIME-Complete". Ninth Annual IEEE Symposium on Logic in Computer Science. pp. 137–141.

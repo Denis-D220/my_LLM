@@ -1,0 +1,950 @@
+Minimalist grammars are a class of formal grammars that aim to provide a more rigorous, usually proof-theoretic, formalization of Chomskyan Minimalist program than is normally provided in the mainstream Minimalist literature. A variety of particular formalizations exist, most of them developed by Edward Stabler, Alain Lecomte, Christian Retoré, or combinations thereof. 
+
+Lecomte and Retoré's extensions of the Lambek Calculus
+Lecomte and Retoré (2001)  introduce a formalism that modifies that core of the Lambek Calculus to allow for movement-like processes to be described without resort to the combinatorics of Combinatory categorial grammar. The formalism is presented in proof-theoretic terms. Differing only slightly in notation from Lecomte and Retoré (2001), we can define a minimalist grammar as a 3-tuple 
+  
+    
+      
+        G
+        =
+        (
+        C
+        ,
+        F
+        ,
+        L
+        )
+      
+    
+    {\displaystyle G=(C,F,L)}
+  
+, where 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is a set of "categorial" features, 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is a set of "functional" features (which come in two flavors, "weak", denoted simply 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, and "strong", denoted 
+  
+    
+      
+        f
+        ∗
+      
+    
+    {\displaystyle f*}
+  
+), and 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ is a set of lexical atoms, denoted as pairs 
+  
+    
+      
+        w
+        :
+        t
+      
+    
+    {\displaystyle w:t}
+  
+, where 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+ is some phonological/orthographic content, and 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ is a syntactic type defined recursively as follows:
+
+all features in 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ and 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ are (atomic) types, and
+if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are types, so are 
+  
+    
+      
+        X
+        
+          /
+        
+        Y
+      
+    
+    {\displaystyle X/Y}
+  
+, 
+  
+    
+      
+        X
+        ∖
+        Y
+      
+    
+    {\displaystyle X\backslash Y}
+  
+, and 
+  
+    
+      
+        X
+        ∘
+        Y
+      
+    
+    {\displaystyle X\circ Y}
+  
+.
+We can now define 6 inference rules:
+
+  
+    
+      
+        ⊢
+        w
+        :
+        X
+      
+    
+    {\displaystyle \vdash w:X}
+  
+, for all 
+  
+    
+      
+        w
+        :
+        X
+        ∈
+        L
+      
+    
+    {\displaystyle w:X\in L}
+  
+
+  
+    
+      
+        w
+        :
+        X
+        ⊢
+        w
+        :
+        X
+      
+    
+    {\displaystyle w:X\vdash w:X}
+  
+, for all 
+  
+    
+      
+        w
+        :
+        X
+        ∉
+        L
+      
+    
+    {\displaystyle w:X\notin L}
+  
+
+  
+    
+      
+        
+          
+            
+              Γ
+              ⊢
+              a
+              :
+              X
+              
+                /
+              
+              Y
+              
+              
+                Γ
+                ′
+              
+              ⊢
+              b
+              :
+              Y
+            
+            
+              Γ
+              ;
+              
+                Γ
+                ′
+              
+              ⊢
+              a
+              b
+              :
+              X
+            
+          
+        
+        [
+        
+          /
+        
+        E
+        ]
+      
+    
+    {\displaystyle {\frac {\Gamma \vdash a:X/Y\qquad \Gamma '\vdash b:Y}{\Gamma ;\Gamma '\vdash ab:X}}[/E]}
+  
+
+  
+    
+      
+        
+          
+            
+              
+                Γ
+                ′
+              
+              ⊢
+              b
+              :
+              Y
+              
+              Γ
+              ⊢
+              a
+              :
+              X
+              ∖
+              Y
+            
+            
+              
+                Γ
+                ′
+              
+              ;
+              Γ
+              ⊢
+              b
+              a
+              :
+              X
+            
+          
+        
+        [
+        ∖
+        E
+        ]
+      
+    
+    {\displaystyle {\frac {\Gamma '\vdash b:Y\qquad \Gamma \vdash a:X\backslash Y}{\Gamma ';\Gamma \vdash ba:X}}[\backslash E]}
+  
+
+  
+    
+      
+        
+          
+            
+              Γ
+              ;
+              
+                Γ
+                ′
+              
+              ⊢
+              α
+            
+            
+              Γ
+              ,
+              
+                Γ
+                ′
+              
+              ⊢
+              α
+            
+          
+        
+        e
+        n
+        t
+        r
+        o
+        p
+        y
+      
+    
+    {\displaystyle {\frac {\Gamma ;\Gamma '\vdash \alpha }{\Gamma ,\Gamma '\vdash \alpha }}entropy}
+  
+
+  
+    
+      
+        
+          
+            
+              Γ
+              ⊢
+              a
+              :
+              X
+              ∘
+              Y
+              
+              Δ
+              ,
+              b
+              :
+              X
+              ,
+              c
+              :
+              Y
+              ,
+              
+                Δ
+                ′
+              
+              ⊢
+              d
+              :
+              Z
+            
+            
+              Δ
+              ,
+              Γ
+              ,
+              
+                Δ
+                ′
+              
+              ⊢
+              d
+              [
+              b
+              :=
+              a
+              ,
+              c
+              :=
+              a
+              ]
+              :
+              Z
+            
+          
+        
+        [
+        ∘
+        E
+        ]
+      
+    
+    {\displaystyle {\frac {\Gamma \vdash a:X\circ Y\qquad \Delta ,b:X,c:Y,\Delta '\vdash d:Z}{\Delta ,\Gamma ,\Delta '\vdash d[b:=a,c:=a]:Z}}[\circ E]}
+  
+
+The first rule merely makes it possible to use lexical items with no extra assumptions. The second rule is just a means of introducing assumptions into the derivation. The third and fourth rules just perform directional feature checking, combining the assumptions required to build the subparts that are being combined. The entropy rule presumably allows the ordered sequents to be broken up into unordered sequents. And finally, the last rule implements "movement" by means of assumption elimination.
+The last rule can be given a number of different interpretations in order to fully mimic movement of the normal sort found in the Minimalist Program. The account given by Lecomte and Retoré (2001) is that if one of the product types is a strong functional feature, then the phonological/orthographic content associated with that type on the right is substituted with the content of the a, and the other is substituted with the empty string; whereas if neither is strong, then the phonological/orthographic content is substituted for the category feature, and the empty string is substituted for the weak functional feature. That is, we can rephrase the rule as two sub-rules as follows:
+
+  
+    
+      
+        
+          
+            
+              Γ
+              ⊢
+              a
+              :
+              X
+              ∘
+              
+                Y
+                
+                  ∗
+                
+              
+              
+              Δ
+              ,
+              b
+              :
+              X
+              ,
+              c
+              :
+              
+                Y
+                
+                  ∗
+                
+              
+              ,
+              
+                Δ
+                ′
+              
+              ⊢
+              d
+              :
+              Z
+            
+            
+              Δ
+              ,
+              Γ
+              ,
+              
+                Δ
+                ′
+              
+              ⊢
+              d
+              [
+              b
+              :=
+              ϵ
+              ,
+              c
+              :=
+              a
+              ]
+              :
+              Z
+            
+          
+        
+        [
+        ∘
+        
+          E
+          
+            s
+            t
+            r
+            o
+            n
+            g
+          
+        
+        ]
+      
+    
+    {\displaystyle {\frac {\Gamma \vdash a:X\circ Y^{*}\qquad \Delta ,b:X,c:Y^{*},\Delta '\vdash d:Z}{\Delta ,\Gamma ,\Delta '\vdash d[b:=\epsilon ,c:=a]:Z}}[\circ E_{strong}]}
+  
+ where 
+  
+    
+      
+        X
+        ∈
+        C
+        ,
+        
+          Y
+          
+            ∗
+          
+        
+        ∈
+        F
+      
+    
+    {\displaystyle X\in C,Y^{*}\in F}
+  
+
+  
+    
+      
+        
+          
+            
+              Γ
+              ⊢
+              a
+              :
+              X
+              ∘
+              Y
+              
+              Δ
+              ,
+              b
+              :
+              X
+              ,
+              c
+              :
+              Y
+              ,
+              
+                Δ
+                ′
+              
+              ⊢
+              d
+              :
+              Z
+            
+            
+              Δ
+              ,
+              Γ
+              ,
+              
+                Δ
+                ′
+              
+              ⊢
+              d
+              [
+              b
+              :=
+              a
+              ,
+              c
+              :=
+              ϵ
+              ]
+              :
+              Z
+            
+          
+        
+        [
+        ∘
+        
+          E
+          
+            w
+            e
+            a
+            k
+          
+        
+        ]
+      
+    
+    {\displaystyle {\frac {\Gamma \vdash a:X\circ Y\qquad \Delta ,b:X,c:Y,\Delta '\vdash d:Z}{\Delta ,\Gamma ,\Delta '\vdash d[b:=a,c:=\epsilon ]:Z}}[\circ E_{weak}]}
+  
+ where 
+  
+    
+      
+        X
+        ∈
+        C
+        ,
+        Y
+        ∈
+        F
+      
+    
+    {\displaystyle X\in C,Y\in F}
+  
+
+Another alternative would be to construct pairs in the /E and \E steps, and use the 
+  
+    
+      
+        ∘
+        E
+      
+    
+    {\displaystyle \circ E}
+  
+ rule as given, substituting the phonological/orthographic content a into the highest of the substitution positions, and the empty string in the rest of the positions. This would be more in line with the Minimalist Program, given that multiple movements of an item are possible, where only the highest position is "spelled out".
+
+Example
+As a simple example of this system, we can show how to generate the sentence who did John see with the following toy grammar:
+Let 
+  
+    
+      
+        G
+        =
+        (
+        {
+        N
+        ,
+        S
+        }
+        ,
+        {
+        W
+        }
+        ,
+        L
+        )
+      
+    
+    {\displaystyle G=(\{N,S\},\{W\},L)}
+  
+, where L contains the following words:
+
+  
+    
+      
+        
+          John
+        
+        :
+        N
+         
+      
+    
+    {\displaystyle {\text{John}}:N\ }
+  
+
+  
+    
+      
+        
+          see
+        
+        :
+        (
+        S
+        ∖
+        N
+        )
+        
+          /
+        
+        N
+      
+    
+    {\displaystyle {\text{see}}:(S\backslash N)/N}
+  
+
+  
+    
+      
+        
+          did
+        
+        :
+        (
+        S
+        ∖
+        W
+        )
+        
+          /
+        
+        S
+      
+    
+    {\displaystyle {\text{did}}:(S\backslash W)/S}
+  
+
+  
+    
+      
+        
+          who
+        
+        :
+        N
+        ∘
+        W
+      
+    
+    {\displaystyle {\text{who}}:N\circ W}
+  
+
+The proof for the sentence who did John see is therefore:
+
+  
+    
+      
+        
+          
+            
+              
+                ⊢
+                
+                  who
+                
+                :
+                N
+                ∘
+                W
+                
+                
+                  
+                    
+                      
+                        
+                          x
+                        
+                        :
+                        W
+                        ⊢
+                        
+                          x
+                        
+                        :
+                        W
+                        
+                        
+                          
+                            
+                              
+                                ⊢
+                                
+                                  did
+                                
+                                :
+                                (
+                                S
+                                ∖
+                                W
+                                )
+                                
+                                  /
+                                
+                                S
+                                
+                                
+                                  
+                                    
+                                      
+                                        ⊢
+                                        
+                                          John
+                                        
+                                        :
+                                        N
+                                        
+                                        
+                                          
+                                            
+                                              
+                                                
+                                                  y
+                                                
+                                                :
+                                                N
+                                                ⊢
+                                                
+                                                  y
+                                                
+                                                :
+                                                N
+                                                
+                                                ⊢
+                                                
+                                                  see
+                                                
+                                                :
+                                                (
+                                                S
+                                                ∖
+                                                N
+                                                )
+                                                
+                                                  /
+                                                
+                                                N
+                                              
+                                              
+                                                
+                                                  y
+                                                
+                                                :
+                                                N
+                                                ⊢
+                                                
+                                                  see y
+                                                
+                                                :
+                                                S
+                                                ∖
+                                                N
+                                              
+                                            
+                                          
+                                        
+                                        [
+                                        
+                                          /
+                                        
+                                        E
+                                        ]
+                                      
+                                      
+                                        
+                                          y
+                                        
+                                        :
+                                        N
+                                        ⊢
+                                        
+                                          John see y
+                                        
+                                        :
+                                        S
+                                      
+                                    
+                                  
+                                
+                                [
+                                ∖
+                                E
+                                ]
+                              
+                              
+                                
+                                  y
+                                
+                                :
+                                N
+                                ⊢
+                                
+                                  did John see y
+                                
+                                :
+                                S
+                                ∖
+                                W
+                              
+                            
+                          
+                        
+                        [
+                        
+                          /
+                        
+                        E
+                        ]
+                      
+                      
+                        
+                          x
+                        
+                        :
+                        W
+                        ,
+                        
+                          y
+                        
+                        :
+                        N
+                        ⊢
+                        
+                          x did John see y
+                        
+                        :
+                        S
+                      
+                    
+                  
+                
+                [
+                ∖
+                E
+                ]
+              
+              
+                ⊢
+                
+                  who did John see
+                
+                :
+                S
+              
+            
+          
+        
+        [
+        ∘
+        E
+        ]
+      
+    
+    {\displaystyle {\dfrac {\vdash {\text{who}}:N\circ W\quad {\dfrac {{\text{x}}:W\vdash {\text{x}}:W\quad {\dfrac {\vdash {\text{did}}:(S\backslash W)/S\quad {\dfrac {\vdash {\text{John}}:N\quad {\dfrac {{\text{y}}:N\vdash {\text{y}}:N\quad \vdash {\text{see}}:(S\backslash N)/N}{{\text{y}}:N\vdash {\text{see y}}:S\backslash N}}[/E]}{{\text{y}}:N\vdash {\text{John see y}}:S}}[\backslash E]}{{\text{y}}:N\vdash {\text{did John see y}}:S\backslash W}}[/E]}{{\text{x}}:W,{\text{y}}:N\vdash {\text{x did John see y}}:S}}[\backslash E]}{\vdash {\text{who did John see}}:S}}[\circ E]}

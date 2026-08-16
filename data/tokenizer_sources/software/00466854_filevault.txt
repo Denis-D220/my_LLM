@@ -1,0 +1,64 @@
+FileVault is a disk encryption program in Mac OS X 10.3 Panther (2003) and later. It performs on-the-fly encryption with volumes on Mac computers.
+
+Versions and key features
+FileVault was introduced with Mac OS X 10.3 Panther, and could only be applied to a user's home directory, not the startup volume. The operating system uses an encrypted sparse disk image (a large single file) to present a volume for the home directory. Mac OS X 10.5 Leopard and Mac OS X 10.6 Snow Leopard use more modern sparse bundle disk images which spread the data over 8 MB files (called bands) within a bundle. Apple refers to this original iteration of FileVault as "legacy FileVault".
+OS X 10.7 Lion and newer versions offer FileVault 2, which is a significant redesign. This encrypts the entire OS X startup volume and typically includes the home directory, abandoning the disk image approach. For this approach to disk encryption, authorised users' information is loaded from a separate non-encrypted boot volume (partition/slice type Apple_Boot).
+
+FileVault
+The original version of FileVault was added in Mac OS X Panther to encrypt a user's home directory.
+
+Master passwords and recovery keys
+When FileVault is enabled the system invites the user to create a master password for the computer. If a user password is forgotten, the master password or recovery key may be used to decrypt the files instead. FileVault recovery key is different from a Mac recovery key, which is a 24-character code used to reset your password or regain access to your Apple ID.
+
+Migration
+Migration of FileVault home directories is subject to two limitations:
+
+there must be no prior migration to the target computer
+the target must have no existing user accounts.
+If Migration Assistant has already been used or if there are user accounts on the target:
+
+before migration, FileVault must be disabled at the source.
+If transferring FileVault data from a previous Mac that uses 10.4 using the built-in utility to move data to a new machine, the data continues to be stored in the old sparse image format, and the user must turn FileVault off and then on again to re-encrypt in the new sparse bundle format.
+
+Manual encryption
+Instead of using FileVault to encrypt a user's home directory, using Disk Utility a user can create an encrypted disk image themselves and store any subset of their home directory in there (for example, ~/Documents/private). This encrypted image behaves similar to a FileVault encrypted home directory, but is under the user's maintenance.
+Encrypting only a part of a user's home directory might be problematic when applications need access to the encrypted files, which will not be available until the user mounts the encrypted image. This can be mitigated to a certain extent by making symbolic links for these specific files.
+
+Limitations and issues
+
+Backups
+
+Without Mac OS X Server, Time Machine will back up a FileVault home directory only while the user is logged out. In such cases, Time Machine is limited to backing up the home directory in its entirety. Using Mac OS X Server as a Time Machine destination, backups of FileVault home directories occur while users are logged in.
+Because FileVault restricts the ways in which other users' processes can access the user's content, some third party backup solutions can back up the contents of a user's FileVault home directory only if other parts of the computer (including other users' home directories) are excluded.
+
+Issues
+Several shortcomings were identified in legacy FileVault.  Its security can be broken by cracking either 1024-bit RSA or 3DES-EDE.
+Legacy FileVault used the CBC mode of operation (see disk encryption theory); FileVault 2 uses stronger XTS-AES mode. Another issue is storage of keys in the macOS "safe sleep" mode. A study published in 2008 found data remanence in dynamic random-access memory (DRAM), with data retention of seconds to minutes at room temperature and much longer times when memory chips were cooled to low temperature. The study authors were able to use a cold boot attack to recover cryptographic keys for several popular disk encryption systems, including FileVault, by taking advantage of redundancy in the way keys are stored after they have been expanded for efficient use, such as in key scheduling. The authors recommend that computers be powered down, rather than be left in a "sleep" state, when not in physical control by the owner.
+Early versions of FileVault automatically stored the user's passphrase in the system keychain, requiring the user to notice and manually disable this security hole.
+In 2006, following a talk at the 23rd Chaos Communication Congress titled Unlocking FileVault: An Analysis of Apple's Encrypted Disk Storage System, Jacob Appelbaum & Ralf-Philipp Weinmann released VileFault which decrypts encrypted Mac OS X disk image files.
+A free space wipe using Disk Utility left a large portion of previously deleted file remnants intact. Similarly, FileVault compact operations only wiped small parts of previously deleted data.
+
+FileVault 2
+
+Security
+FileVault uses the user's login password as the encryption passphrase. It uses the XTS-AES mode of AES with 128 bit blocks and a 256 bit key to encrypt the disk, as recommended by NIST. Only unlock-enabled users can start or unlock the drive. Once unlocked, other users may also use the computer until it is shut down.
+
+Performance
+The I/O performance penalty for using FileVault 2 was found to be in the order of around 3% when using CPUs with the AES instruction set, such as the Intel Core i, and OS X 10.10.3 Yosemite. Performance deterioration will be larger for CPUs without this instruction set, such as older Core CPUs.
+
+Master passwords and recovery keys
+When FileVault 2 is enabled while the system is running, the system creates and displays a recovery key for the computer, and optionally offers the user to store the key with Apple. The 120 bit recovery key is encoded with all letters and numbers 1 through 9, and read from /dev/random, and therefore relies on the security of the PRNG used in macOS. During a cryptanalysis in 2012, this mechanism was found safe.
+Changing the recovery key was not possible without re-encrypting the File Vault volume prior to OS X 10.9 when the fdesetup command added changerecovery.
+
+Validation
+Users who use FileVault 2 in OS X 10.9 and above can validate their key correctly works after encryption by running sudo fdesetup validaterecovery in Terminal after encryption has finished. The key must be in form xxxx-xxxx-xxxx-xxxx-xxxx-xxxx and will return true if correct.
+
+Starting the OS with FileVault 2 without a user account
+If a volume to be used for startup is erased and encrypted before clean installation of OS X 10.7.4 Lion or 10.8 Mountain Lion:
+
+there is a password for the volume
+the clean system will immediately behave as if FileVault was enabled after installation
+there is no recovery key, no option to store the key with Apple (but the system will behave as if a key was created)
+when the computer is started, Disk Password will appear at the EfiLoginUI – this may be used to unlock the volume and start the system
+the running system will present the traditional login window.
+Apple describes this type of approach as Disk Password—based DEK.

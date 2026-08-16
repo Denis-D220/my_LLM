@@ -1,0 +1,160 @@
+QUANTITATIVE LOGIC: REASONING WITH NUMBERS, RATES, AND UNCERTAINTY
+
+Quantitative reasoning is the disciplined use of numbers to answer questions about the world. It sits between pure mathematics and practical judgment. Pure mathematics asks what follows from axioms; quantitative reasoning asks what a number means, whether it is plausible, what it implies, and how much confidence it deserves. The skills involved are less about calculation than about interpretation: knowing what to compute, what units apply, what comparison is relevant, and where a figure could mislead.
+
+Most quantitative errors in practice are not arithmetic errors. They are errors of framing. A correctly computed percentage of the wrong base, a rate expressed per year when the data covered a month, an average that conceals a bimodal distribution, or a comparison between quantities measured differently will produce a confidently stated wrong answer that no amount of careful arithmetic would catch.
+
+UNITS AND DIMENSIONAL REASONING
+
+Every physical quantity carries a unit, and units obey algebra. This makes dimensional analysis one of the most powerful and least used error-detection tools available.
+
+The rule is straightforward: quantities may be added or subtracted only when their dimensions match, while multiplication and division produce new dimensions. Speed has dimensions of length divided by time. Multiplying speed by time yields length. Dividing energy by time yields power. If an equation produces dimensions that do not match on both sides, the equation is wrong, and this can be detected without knowing anything about the underlying subject.
+
+Unit conversion works by multiplying by ratios equal to one. To convert 90 kilometers per hour to meters per second, multiply by 1000 meters per kilometer and by one hour per 3600 seconds. The kilometers and hours cancel, leaving 25 meters per second. Writing the units explicitly and cancelling them makes conversion errors visible.
+
+Compound units repay attention. Fuel consumption expressed as liters per hundred kilometers and fuel economy expressed as kilometers per liter are reciprocally related, and this reciprocal relationship has a counterintuitive consequence. Improving a vehicle from 10 to 12.5 kilometers per liter saves more fuel over a given distance than improving another from 25 to 33 kilometers per liter, even though the second improvement looks larger as a percentage. The reason is that fuel consumed is proportional to the reciprocal, and reciprocals compress differences at the high end. Anyone comparing efficiency improvements needs to work in the units of the thing actually being conserved.
+
+Rates require a specified denominator. A statement that accidents rose by 15 percent means little without knowing whether the base is accidents per year, per vehicle, per kilometer traveled, or per hour of operation. Changing the denominator can reverse the direction of a comparison, and choosing a denominator is therefore a substantive analytical decision rather than a formatting one.
+
+Orders of magnitude deserve explicit attention. Writing quantities in scientific notation and thinking in powers of ten prevents the most damaging class of error, which is being wrong by a factor of a thousand rather than by a few percent. In most practical contexts, a quick estimate correct to within a factor of two is worth more than a precise calculation that is wrong by a factor of a thousand because a unit was misread.
+
+PROPORTIONAL REASONING
+
+Proportional reasoning underlies a large share of practical quantitative work, and it is more error-prone than its simplicity suggests.
+
+Two quantities are directly proportional when their ratio is constant: doubling one doubles the other. They are inversely proportional when their product is constant: doubling one halves the other. Identifying which relationship holds is the first step, and assuming direct proportionality where it does not hold is a standard error. If it takes one worker six hours to complete a task, it does not follow that six workers finish in one hour, because coordination overhead, task divisibility, and shared resources intervene. The mathematical model of inverse proportionality is only as good as the assumption of perfect divisibility that underlies it.
+
+Scaling relationships often follow powers rather than direct proportionality. If a shape is scaled by a factor k in every linear dimension, its surface area scales by k squared and its volume by k cubed. This single fact explains a remarkable range of phenomena. Large animals have proportionally smaller surface area relative to their mass, which affects heat loss and is why small mammals must eat far more relative to their size. Doubling the linear dimensions of a storage tank multiplies its capacity eightfold while multiplying its material cost only fourfold, which is why bulk storage and transport favor large units. The strength of a column scales with cross-sectional area while the weight it must carry scales with volume, which sets limits on how large structures built from a given material can be.
+
+Percentages require care about the base. A 20 percent increase followed by a 20 percent decrease does not return to the starting value: 100 becomes 120, and 20 percent of 120 is 24, leaving 96. Percentage changes compound multiplicatively, not additively. To reverse a 20 percent increase requires a decrease of about 16.7 percent.
+
+The distinction between percentage points and percent is not pedantry. If an interest rate moves from 4 percent to 6 percent, that is an increase of two percentage points, or an increase of 50 percent in relative terms. Reporting that mixes the two produces claims that are technically defensible and practically misleading, and it appears constantly in coverage of unemployment, interest rates, and vote shares.
+
+Compound growth is the repeated application of a growth factor. A quantity growing at rate r per period is multiplied by (1 + r) each period, so after n periods it has been multiplied by (1 + r) to the n. The rule of 72 provides a fast approximation of doubling time: divide 72 by the percentage growth rate to get the approximate number of periods required to double. At 6 percent, doubling takes roughly twelve periods; at 9 percent, roughly eight. The approximation works because the natural logarithm of 2 is approximately 0.693, and 72 is chosen for its convenient divisibility.
+
+The consequences of compounding over long horizons are routinely underestimated because human intuition is approximately linear. A quantity growing at 3 percent annually multiplies roughly nineteenfold over a century. This is why long-run projections are sensitive to small differences in assumed growth rates, and why any projection extending decades ahead should be treated as an illustration of an assumption rather than a forecast.
+
+ESTIMATION AND APPROXIMATE MODELING
+
+Estimation problems, often called Fermi problems, require producing a defensible approximate answer with little data by decomposing the question into factors that can each be estimated within a factor of a few.
+
+Consider estimating the annual electricity consumption of household refrigerators in a city of two million people. Decompose: roughly 600,000 to 700,000 households, call it 650,000; approximately one refrigerator each; a typical unit draws perhaps 150 watts averaged over its duty cycle, giving about 1.3 kilowatt-hours per day, or roughly 480 kilowatt-hours per year. Multiplying gives approximately 310 gigawatt-hours per year. Every input is uncertain, but the errors are partly independent and tend to offset rather than compound in the same direction, so the estimate is likely correct within a factor of two.
+
+Several principles make estimation reliable. Decompose until the factors are quantities you have some basis for judging. Prefer factors where you can bound the answer from both sides. Use round numbers, since spurious precision in intermediate steps creates false confidence. Sanity-check against an independent route to the same quantity where possible. And state the estimate with an explicit range rather than a single figure, because a single number invites treatment as a measurement.
+
+Bounding is often more valuable than estimating. Establishing that a quantity must lie between two values can settle a decision without determining the value precisely. If a proposed intervention cannot possibly save more than a small amount even under maximally favorable assumptions, the upper bound is decisive and no refinement is needed.
+
+Back-of-envelope checks should accompany every substantial calculation. Compute the answer a second way using different assumptions. Check the extreme cases: what should happen as an input goes to zero or grows very large? Check the sign and the units. Check the magnitude against something known. A financial model that implies a company will capture more revenue than its entire market contains an error somewhere, and the check requires no examination of the model's internals.
+
+RATES, FLOWS, AND ACCUMULATION
+
+Distinguishing stocks from flows prevents a large class of confusion. A stock is a quantity at a point in time: population, debt, inventory, reservoir volume. A flow is a rate of change: births per year, borrowing per year, shipments per week, inflow per second. Stocks have units of quantity; flows have units of quantity per time.
+
+A stock changes only through its flows, and its level at any time is the accumulation of past net flows. Several persistent public confusions trace to conflating the two. A falling deficit means debt is still increasing, only more slowly, because the deficit is a flow and the debt is a stock. Emissions falling year on year still means atmospheric concentration is rising, because concentration accumulates emissions. A reservoir with inflow exceeding outflow continues to fill regardless of whether the inflow is rising or falling.
+
+Stock-flow systems exhibit delays and inertia that produce characteristic behavior. A stock cannot change instantaneously. If a flow is adjusted, the stock responds gradually, and the response continues after the adjustment. This is why systems with long accumulation times overshoot: by the time the problem is visible in the stock, the flows that produced it have been operating for a long time, and stopping them does not reverse the accumulation.
+
+Little's law provides a compact relationship for queuing systems in steady state: the average number of items in a system equals the average arrival rate multiplied by the average time each item spends in the system. This holds with remarkable generality, independent of the distribution of arrivals or service times, and it allows any one of the three quantities to be inferred from the other two. If a clinic sees six patients per hour and each spends an average of forty minutes present, the average number of patients present is four.
+
+Utilization and waiting time are related non-linearly, which is one of the more counterintuitive facts in operations. As a system approaches full utilization, average waiting time rises steeply rather than linearly, approaching infinity as utilization approaches one hundred percent under variable arrivals. This means that a system running at 95 percent utilization has waiting times far more than proportionally worse than one at 80 percent. Systems that must be responsive cannot also be fully utilized, and planning for full utilization guarantees congestion.
+
+PROBABILITY AS QUANTIFIED UNCERTAINTY
+
+Probability assigns numbers between zero and one to the plausibility of outcomes. The axioms are minimal: probabilities are non-negative, the probability of the entire outcome space is one, and the probability of a union of mutually exclusive events is the sum of their probabilities. Everything else follows.
+
+The complement rule gives the probability of an event not occurring as one minus the probability of it occurring, which is frequently the easier route. Computing the probability of at least one occurrence among many trials is usually done by computing the probability of no occurrences and subtracting.
+
+For independent events, probabilities multiply. If a component fails with probability 0.01 in a year, and five such components are required to all function, the probability that all survive is 0.99 to the fifth power, approximately 0.951, so the system fails with probability about 4.9 percent. Note that this is close to but not equal to five times one percent; the approximation that small probabilities add is good when they are genuinely small and independent.
+
+Independence is an assumption, and it fails more often than it is checked. Components sharing a power supply, a maintenance crew, a design flaw, or an environment are not independent, and correlated failure is the mechanism behind most large system failures. Reliability calculations assuming independence typically understate risk by a large margin precisely in the tail that matters.
+
+Conditional probability expresses the probability of one event given that another has occurred, computed as the probability of both divided by the probability of the conditioning event. It is the formal tool for updating beliefs on evidence.
+
+Bayes' theorem inverts a conditional. Given the probability of evidence under a hypothesis, the prior probability of the hypothesis, and the overall probability of the evidence, it yields the probability of the hypothesis given the evidence. Its practical importance lies in the base rate.
+
+Consider a screening test for a condition present in one person per thousand. The test detects 99 percent of true cases and produces a false positive in 5 percent of unaffected people. A person tests positive. Among 100,000 people, 100 have the condition and about 99 test positive. The other 99,900 do not have it, and about 4,995 test positive falsely. Total positives are about 5,094, of which 99 are genuine, giving a probability of roughly 1.9 percent that a positive result indicates the condition. Most people, including many trained professionals, estimate this far higher because they attend to the test's accuracy and neglect the base rate. The general lesson is that when a condition is rare, even an accurate test produces mostly false positives, and this arithmetic governs screening policy, security alerting, fraud detection, and any classification problem with imbalanced classes.
+
+Expected value is the probability-weighted average of outcomes. It is the right basis for decisions repeated many times with consequences that are small relative to total resources. It is not automatically the right basis for one-off decisions with severe downside, because a positive expected value can accompany an unacceptable probability of ruin. Repeatedly accepting favorable bets that risk everything leads to eventual loss with probability approaching one, regardless of favorable expectation. This is why risk management attends to the distribution of outcomes and not only its mean.
+
+Variance and standard deviation measure spread. For sums of independent quantities, variances add, which means standard deviations grow with the square root of the number of terms rather than proportionally. This is the reason that averaging many independent measurements improves precision: the standard error of a mean falls as the square root of the sample size, so quadrupling the sample halves the error. It also explains why pooling independent risks reduces relative variability, which is the mathematical foundation of insurance.
+
+INTERPRETING DATA AND STATISTICS
+
+Descriptive statistics summarize, and every summary discards information. The mean is the arithmetic average and is sensitive to extreme values. The median is the middle value and is robust to them. The mode is the most common value. When a distribution is skewed, these diverge substantially, and choosing which to report is a consequential decision. Income distributions are right-skewed, so mean income substantially exceeds median income, and reporting the mean gives a misleading impression of the typical case.
+
+Averages of averages are generally wrong unless the groups are equal in size. Combining a 60 percent rate from a group of 1,000 with a 40 percent rate from a group of 100 does not give 50 percent; it gives approximately 58 percent, because the larger group must be weighted more heavily.
+
+Simpson's paradox is the phenomenon in which a trend present in every subgroup reverses when the groups are combined. It arises when group sizes differ and group membership correlates with both the exposure and the outcome. A treatment can have a higher success rate than an alternative in both mild and severe cases while having a lower overall success rate, if it is disproportionately used on severe cases. The paradox is not a statistical curiosity but a routine hazard in any aggregated comparison, and the resolution is always to identify the confounding variable and analyze within its levels.
+
+Correlation measures the strength of linear association and ranges from minus one to one. It does not establish causation. Possible explanations for an observed correlation include causation in the stated direction, causation in the reverse direction, a common cause affecting both, selection effects in how the data were gathered, and coincidence, which is guaranteed to produce some spurious correlations when many relationships are examined.
+
+Regression toward the mean produces spurious causal impressions constantly. When a measurement contains random variation, extreme values are likely to be followed by less extreme ones for purely statistical reasons. If an intervention is applied to the worst-performing cases, subsequent improvement will occur even if the intervention does nothing. This mechanism generates apparent effectiveness for a wide range of interventions applied at the point of maximum difficulty, and controlling for it requires a comparison group selected the same way.
+
+Selection and survivorship bias arise when the data available is not representative of the population of interest. Analyzing only the businesses that still exist, the patients who returned for follow-up, the aircraft that came back, or the customers who responded to a survey produces conclusions about survivors that do not generalize. The corrective is always to ask what would be missing from this dataset and whether its absence is related to the question being asked.
+
+Statistical significance is frequently misunderstood. A p-value is the probability of observing data at least as extreme as those obtained, assuming the null hypothesis is true. It is not the probability that the null hypothesis is true, and it is not a measure of effect size. A very small effect can be highly significant with a large sample, and an important effect can fail significance with a small one. Reporting effect sizes with confidence intervals conveys more than a significance verdict, because an interval shows both the estimate and its precision.
+
+Multiple comparisons inflate false positives. Testing twenty independent hypotheses at a five percent threshold produces on average one significant result by chance alone. When many outcomes, subgroups, or model specifications are examined, some will appear significant regardless of whether any real effect exists. Pre-specification of hypotheses, correction for multiple testing, and replication are the standard defenses.
+
+Absolute and relative risk convey very different impressions of the same fact. A treatment that reduces annual risk from 2 in 10,000 to 1 in 10,000 halves relative risk, a 50 percent reduction, while reducing absolute risk by 0.01 percentage points. Both descriptions are accurate. Relative risk is appropriate for comparing mechanisms across populations; absolute risk is what determines whether an intervention is worth its cost and side effects for an individual. Presentations that report only relative reduction consistently produce inflated perceptions of benefit.
+
+STRUCTURED PROBLEM SOLVING
+
+Complex quantitative problems yield to a consistent procedure.
+
+State precisely what is being asked, in units. Many problems dissolve at this step because the question turns out to be ambiguous, and clarifying it changes what needs computing.
+
+Identify what is known, what is assumed, and what must be derived, keeping these categories separate. Assumptions written down can be challenged and varied; assumptions embedded silently in a calculation cannot.
+
+Decompose into subproblems with clear interfaces, so each part can be checked independently. Solve the parts, then combine, tracking units throughout.
+
+Check the result by at least two independent methods: an order-of-magnitude estimate, extreme case behavior, dimensional consistency, and comparison to a known reference point.
+
+Perform sensitivity analysis. Vary each uncertain input across its plausible range and observe the effect on the answer. This identifies which uncertainties actually matter. Frequently one or two inputs dominate and the rest are irrelevant to the decision, which tells you where further investigation is worthwhile and where it is not.
+
+Report with appropriate precision. Reporting a result to six digits when the inputs are known to one significant figure conveys false confidence. The precision of a result cannot exceed the precision of its least precise input, and in multiplication and division the number of significant figures in the result should generally match the least precise factor.
+
+COMMON QUANTITATIVE TRAPS
+
+Several specific errors recur often enough to be worth listing explicitly.
+
+Comparing quantities measured on different bases, over different periods, or with different definitions, without adjustment. Nominal and inflation-adjusted figures cannot be compared directly across years, and neither can figures based on definitions that changed midway through the series.
+
+Extrapolating a trend beyond the range where the underlying mechanism holds. Growth that is exponential in an early phase is almost always constrained later, and projecting early-phase growth forward produces absurd results.
+
+Treating an average as typical when the distribution is skewed or multimodal. The average of a bimodal distribution may describe no actual case.
+
+Ignoring the denominator when comparing counts across groups of different sizes. Raw counts of anything track population size before they track anything else.
+
+Anchoring on a stated figure and adjusting insufficiently. Initial numbers exert influence on subsequent estimates even when they are known to be arbitrary, which is why generating an independent estimate before seeing someone else's is worthwhile.
+
+Confusing precision with accuracy. A figure quoted to many decimal places may be systematically wrong; precision describes reproducibility, accuracy describes correctness, and a biased instrument delivers precise inaccuracy indefinitely.
+
+Aggregating over heterogeneous groups in ways that mask opposing effects, the general form of which is Simpson's paradox.
+
+Failing to account for the base rate when interpreting a positive test, an alert, or a diagnostic signal.
+
+Assuming independence between events that share a common cause, which systematically understates the probability of simultaneous failure.
+
+WHY THIS MATTERS
+
+Quantitative reasoning is not primarily a technical skill. It is a form of intellectual honesty applied to numbers: insisting on knowing what a figure measures, over what population, compared to what, and with how much uncertainty. The arithmetic is usually easy. The discipline of asking what the arithmetic actually establishes is the part that requires practice, and it is the part that determines whether numbers illuminate a decision or merely decorate a conclusion reached some other way.
+
+
+APPENDIX: WORKED ESTIMATION PROBLEMS
+
+The following problems illustrate the method rather than the answers. In each, the aim is a figure correct within a factor of a few, reached through explicit assumptions that can be individually challenged.
+
+How much water does a city of two million people use per day for domestic purposes? Assume roughly 150 litres per person per day for drinking, cooking, washing, and sanitation in a developed setting. Two million multiplied by 150 litres gives 300 million litres, or 300,000 cubic metres, per day. That is about 3.5 cubic metres per second flowing continuously, which is a modest river. The estimate immediately makes clear why cities are built near reliable surface water or over productive aquifers, and why a supply interruption of even a day is a serious event.
+
+How many commercial aircraft are in the air over a large country at a typical midday moment? Suppose the country handles 25,000 flights per day and the average flight lasts 1.5 hours. The average number airborne equals daily flights multiplied by average duration divided by 24 hours, giving 25,000 times 1.5 divided by 24, or about 1,560. Because traffic is concentrated in daylight hours rather than spread evenly, the midday figure will exceed this average, perhaps by half again. This is an instance of a general rule: the ratio of flow to stock is a duration, and knowing any two of the three gives the third.
+
+What fraction of a household electricity bill comes from a single always-on appliance drawing 5 watts? Five watts continuously for a year is 5 multiplied by 8,760 hours, or 43,800 watt-hours, about 44 kilowatt-hours. Against a household consumption of 4,000 kilowatt-hours per year, that is roughly one percent. The calculation explains why standby power matters in aggregate across millions of devices while being nearly invisible on any individual bill, and why policy addressed it through equipment standards rather than through consumer choice.
+
+How long would it take to read every book published in a given year? If 500,000 books appear annually and an average book takes eight hours to read, the total is four million hours. A dedicated reader managing 2,000 hours per year would need 2,000 years. The point of such a calculation is not the number but its consequence: any individual necessarily reads a vanishing fraction of what exists, so selection mechanisms matter more than reading speed.
+
+APPENDIX: UNIT DISCIPLINE
+
+Carrying units through a calculation catches a large share of errors before they propagate. Units must be consistent on both sides of an equation, and any expression that adds quantities with different dimensions is wrong regardless of the arithmetic. Dividing energy by time yields power; multiplying power by time returns energy, which is why a kilowatt-hour is a quantity of energy and a kilowatt is a rate. Speed divided by time gives acceleration. Mass divided by volume gives density. When a result arrives in unfamiliar units, converting it into something with everyday meaning is usually worth the effort: a rate expressed in cubic metres per second becomes intuitive when restated as swimming pools per hour, and a budget expressed in billions becomes intuitive when restated per person per year.
+
+Order-of-magnitude notation supports this discipline. Writing quantities as a single digit multiplied by a power of ten makes the arithmetic trivial and keeps attention on the exponent, which is where the meaningful information usually resides. An estimate that is right to within a factor of three is frequently sufficient to decide whether an approach is feasible, and reaching it takes minutes rather than the weeks required for a precise figure that may answer a question no one needed settled that exactly.

@@ -1,0 +1,1315 @@
+The Tauc–Lorentz model is a mathematical formula for the frequency dependence of the complex-valued relative permittivity, sometimes referred to as the dielectric function. The model has been used to fit the complex refractive index of amorphous semiconductor materials at frequencies greater than their optical band gap. The dispersion relation bears the names of Jan Tauc and Hendrik Lorentz, whose previous works were combined by G. E. Jellison and F. A. Modine to create the model. The model was inspired, in part, by shortcomings of the Forouhi–Bloomer model, which is aphysical due to its incorrect asymptotic behavior and non-Hermitian character. Despite the inspiration, the Tauc–Lorentz model is itself aphysical due to being non-Hermitian and non-analytic in the upper half-plane.
+Further researchers have modified the model to address these shortcomings.
+
+Mathematical formulation
+The general form of the model is given by
+
+  
+    
+      
+        ε
+        (
+        E
+        )
+        =
+        
+          ε
+          
+            ∞
+          
+        
+        +
+        
+          χ
+          
+            T
+            L
+          
+        
+        (
+        E
+        )
+      
+    
+    {\displaystyle \varepsilon (E)=\varepsilon _{\infty }+\chi ^{TL}(E)}
+  
+
+where
+
+  
+    
+      
+        ε
+      
+    
+    {\displaystyle \varepsilon }
+  
+ is the relative permittivity,
+
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is the photon energy (related to the angular frequency by 
+  
+    
+      
+        E
+        =
+        ℏ
+        ω
+      
+    
+    {\displaystyle E=\hbar \omega }
+  
+),
+
+  
+    
+      
+        
+          ε
+          
+            ∞
+          
+        
+      
+    
+    {\displaystyle \varepsilon _{\infty }}
+  
+ is the value of the relative permittivity at infinite energy,
+
+  
+    
+      
+        
+          χ
+          
+            T
+            L
+          
+        
+      
+    
+    {\displaystyle \chi ^{TL}}
+  
+ is related to the electric susceptibility.
+The imaginary component of 
+  
+    
+      
+        
+          χ
+          
+            T
+            L
+          
+        
+        (
+        E
+        )
+      
+    
+    {\displaystyle \chi ^{TL}(E)}
+  
+ is formed as the product of the imaginary component of the Lorentz oscillator model and a model developed by Jan Tauc for the imaginary component of the relative permittivity near the bandgap of a material. The real component of 
+  
+    
+      
+        
+          χ
+          
+            T
+            L
+          
+        
+        (
+        E
+        )
+      
+    
+    {\displaystyle \chi ^{TL}(E)}
+  
+ is obtained via the Kramers-Kronig transform of its imaginary component. Mathematically, they are given by
+
+  
+    
+      
+        ℑ
+        
+          (
+          
+            
+              χ
+              
+                T
+                L
+              
+            
+            (
+            E
+            )
+          
+          )
+        
+        =
+        
+          
+            {
+            
+              
+                
+                  
+                    
+                      1
+                      E
+                    
+                  
+                  
+                    
+                      
+                        A
+                        
+                          E
+                          
+                            0
+                          
+                        
+                        C
+                        (
+                        E
+                        −
+                        
+                          E
+                          
+                            g
+                          
+                        
+                        
+                          )
+                          
+                            2
+                          
+                        
+                      
+                      
+                        (
+                        
+                          E
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          E
+                          
+                            0
+                          
+                          
+                            2
+                          
+                        
+                        
+                          )
+                          
+                            2
+                          
+                        
+                        +
+                        
+                          C
+                          
+                            2
+                          
+                        
+                        
+                          E
+                          
+                            2
+                          
+                        
+                      
+                    
+                  
+                  ,
+                
+                
+                  
+                    if 
+                  
+                  E
+                  >
+                  
+                    E
+                    
+                      g
+                    
+                  
+                
+              
+              
+                
+                  0
+                  ,
+                
+                
+                  
+                    if 
+                  
+                  E
+                  ≤
+                  
+                    E
+                    
+                      g
+                    
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle \Im \left(\chi ^{TL}(E)\right)={\begin{cases}{\frac {1}{E}}{\frac {AE_{0}C(E-E_{g})^{2}}{(E^{2}-E_{0}^{2})^{2}+C^{2}E^{2}}},&{\text{if }}E>E_{g}\\0,&{\text{if }}E\leq E_{g}\end{cases}}}
+  
+
+  
+    
+      
+        ℜ
+        
+          (
+          
+            
+              χ
+              
+                T
+                L
+              
+            
+            (
+            E
+            )
+          
+          )
+        
+        =
+        
+          
+            2
+            π
+          
+        
+        
+          ∫
+          
+            
+              E
+              
+                g
+              
+            
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              ξ
+              ℑ
+              
+                (
+                
+                  
+                    χ
+                    
+                      T
+                      L
+                    
+                  
+                  (
+                  ξ
+                  )
+                
+                )
+              
+            
+            
+              
+                ξ
+                
+                  2
+                
+              
+              −
+              
+                E
+                
+                  2
+                
+              
+            
+          
+        
+        d
+        ξ
+      
+    
+    {\displaystyle \Re \left(\chi ^{TL}(E)\right)={\frac {2}{\pi }}\int _{E_{g}}^{\infty }{\frac {\xi \Im \left(\chi ^{TL}(\xi )\right)}{\xi ^{2}-E^{2}}}d\xi }
+  
+
+where
+
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is a fitting parameter related to the strength of the Lorentzian oscillator,
+
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is a fitting parameter related to the broadening of the Lorentzian oscillator,
+
+  
+    
+      
+        
+          E
+          
+            0
+          
+        
+      
+    
+    {\displaystyle E_{0}}
+  
+ is a fitting parameter related to the resonant frequency of the Lorentzian oscillator,
+
+  
+    
+      
+        
+          E
+          
+            g
+          
+        
+      
+    
+    {\displaystyle E_{g}}
+  
+ is a fitting parameter related to the bandgap of the material.
+Computing the Kramers-Kronig transform,
+
+  
+    
+      
+        ℜ
+        
+          (
+          
+            
+              χ
+              
+                T
+                L
+              
+            
+            (
+            E
+            )
+          
+          )
+        
+        
+        
+      
+    
+    {\displaystyle \Re \left(\chi ^{TL}(E)\right)\,\!}
+  
+
+  
+    
+      
+        =
+        
+          
+            
+              A
+              C
+            
+            
+              π
+              
+                ζ
+                
+                  4
+                
+              
+            
+          
+        
+        
+          
+            
+              a
+              
+                
+                  l
+                  n
+                
+              
+            
+            
+              2
+              α
+              
+                E
+                
+                  0
+                
+              
+            
+          
+        
+        ln
+        ⁡
+        
+          
+            (
+            
+              
+                
+                  
+                    E
+                    
+                      0
+                    
+                    
+                      2
+                    
+                  
+                  +
+                  
+                    E
+                    
+                      g
+                    
+                    
+                      2
+                    
+                  
+                  +
+                  α
+                  
+                    E
+                    
+                      g
+                    
+                  
+                
+                
+                  
+                    E
+                    
+                      0
+                    
+                    
+                      2
+                    
+                  
+                  +
+                  
+                    E
+                    
+                      g
+                    
+                    
+                      2
+                    
+                  
+                  −
+                  α
+                  
+                    E
+                    
+                      g
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        
+        
+      
+    
+    {\displaystyle ={\frac {AC}{\pi \zeta ^{4}}}{\frac {a_{\mathrm {ln} }}{2\alpha E_{0}}}\ln {\left({\frac {E_{0}^{2}+E_{g}^{2}+\alpha E_{g}}{E_{0}^{2}+E_{g}^{2}-\alpha E_{g}}}\right)}\,\!}
+  
+
+  
+    
+      
+        −
+        
+          
+            A
+            
+              π
+              
+                ζ
+                
+                  4
+                
+              
+            
+          
+        
+        
+          
+            
+              a
+              
+                
+                  a
+                  t
+                  a
+                  n
+                
+              
+            
+            
+              E
+              
+                0
+              
+            
+          
+        
+        
+          [
+          
+            π
+            −
+            arctan
+            ⁡
+            
+              
+                (
+                
+                  
+                    
+                      α
+                      +
+                      2
+                      
+                        E
+                        
+                          g
+                        
+                      
+                    
+                    C
+                  
+                
+                )
+              
+            
+            +
+            arctan
+            ⁡
+            
+              
+                (
+                
+                  
+                    
+                      α
+                      −
+                      2
+                      
+                        E
+                        
+                          g
+                        
+                      
+                    
+                    C
+                  
+                
+                )
+              
+            
+          
+          ]
+        
+        
+        
+      
+    
+    {\displaystyle -{\frac {A}{\pi \zeta ^{4}}}{\frac {a_{\mathrm {atan} }}{E_{0}}}\left[\pi -\arctan {\left({\frac {\alpha +2E_{g}}{C}}\right)}+\arctan {\left({\frac {\alpha -2E_{g}}{C}}\right)}\right]\,\!}
+  
+
+  
+    
+      
+        +
+        2
+        
+          
+            
+              A
+              
+                E
+                
+                  0
+                
+              
+            
+            
+              π
+              
+                ζ
+                
+                  4
+                
+              
+              α
+            
+          
+        
+        
+          E
+          
+            g
+          
+        
+        
+          (
+          
+            
+              E
+              
+                2
+              
+            
+            −
+            
+              γ
+              
+                2
+              
+            
+          
+          )
+        
+        
+          [
+          
+            π
+            +
+            2
+            arctan
+            ⁡
+            
+              
+                (
+                
+                  2
+                  
+                    
+                      
+                        
+                          γ
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          E
+                          
+                            g
+                          
+                          
+                            2
+                          
+                        
+                      
+                      
+                        α
+                        C
+                      
+                    
+                  
+                
+                )
+              
+            
+          
+          ]
+        
+        
+        
+      
+    
+    {\displaystyle +2{\frac {AE_{0}}{\pi \zeta ^{4}\alpha }}E_{g}\left(E^{2}-\gamma ^{2}\right)\left[\pi +2\arctan {\left(2{\frac {\gamma ^{2}-E_{g}^{2}}{\alpha C}}\right)}\right]\,\!}
+  
+
+  
+    
+      
+        −
+        
+          
+            
+              A
+              
+                E
+                
+                  0
+                
+              
+              C
+            
+            
+              π
+              
+                ζ
+                
+                  4
+                
+              
+            
+          
+        
+        
+          
+            
+              
+                E
+                
+                  2
+                
+              
+              +
+              
+                E
+                
+                  g
+                
+                
+                  2
+                
+              
+            
+            E
+          
+        
+        ln
+        ⁡
+        
+          
+            (
+            
+              
+                
+                  |
+                  
+                    E
+                    −
+                    
+                      E
+                      
+                        g
+                      
+                    
+                  
+                  |
+                
+                
+                  E
+                  +
+                  
+                    E
+                    
+                      g
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        
+        
+      
+    
+    {\displaystyle -{\frac {AE_{0}C}{\pi \zeta ^{4}}}{\frac {E^{2}+E_{g}^{2}}{E}}\ln {\left({\frac {\left|E-E_{g}\right|}{E+E_{g}}}\right)}\,\!}
+  
+
+  
+    
+      
+        +
+        2
+        
+          
+            
+              A
+              
+                E
+                
+                  0
+                
+              
+              C
+            
+            
+              π
+              
+                ζ
+                
+                  4
+                
+              
+            
+          
+        
+        
+          E
+          
+            g
+          
+        
+        ln
+        ⁡
+        
+          
+            [
+            
+              
+                
+                  
+                    |
+                    
+                      E
+                      −
+                      
+                        E
+                        
+                          g
+                        
+                      
+                    
+                    |
+                  
+                  
+                    (
+                    
+                      E
+                      +
+                      
+                        E
+                        
+                          g
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        
+                          E
+                          
+                            0
+                          
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          E
+                          
+                            g
+                          
+                          
+                            2
+                          
+                        
+                      
+                      )
+                    
+                    
+                      2
+                    
+                  
+                  +
+                  
+                    E
+                    
+                      g
+                    
+                    
+                      2
+                    
+                  
+                  
+                    C
+                    
+                      2
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle +2{\frac {AE_{0}C}{\pi \zeta ^{4}}}E_{g}\ln {\left[{\frac {\left|E-E_{g}\right|\left(E+E_{g}\right)}{\sqrt {\left(E_{0}^{2}-E_{g}^{2}\right)^{2}+E_{g}^{2}C^{2}}}}\right]}}
+  
+
+where
+
+  
+    
+      
+        
+          a
+          
+            
+              l
+              n
+            
+          
+        
+        =
+        
+          (
+          
+            
+              E
+              
+                g
+              
+              
+                2
+              
+            
+            −
+            
+              E
+              
+                0
+              
+              
+                2
+              
+            
+          
+          )
+        
+        
+          E
+          
+            2
+          
+        
+        +
+        
+          E
+          
+            g
+          
+          
+            2
+          
+        
+        
+          C
+          
+            2
+          
+        
+        −
+        
+          E
+          
+            0
+          
+          
+            2
+          
+        
+        
+          (
+          
+            
+              E
+              
+                0
+              
+              
+                2
+              
+            
+            +
+            3
+            
+              E
+              
+                g
+              
+              
+                2
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle a_{\mathrm {ln} }=\left(E_{g}^{2}-E_{0}^{2}\right)E^{2}+E_{g}^{2}C^{2}-E_{0}^{2}\left(E_{0}^{2}+3E_{g}^{2}\right)}
+  
+,
+
+  
+    
+      
+        
+          a
+          
+            
+              a
+              t
+              a
+              n
+            
+          
+        
+        =
+        
+          (
+          
+            
+              E
+              
+                2
+              
+            
+            −
+            
+              E
+              
+                0
+              
+              
+                2
+              
+            
+          
+          )
+        
+        
+          (
+          
+            
+              E
+              
+                0
+              
+              
+                2
+              
+            
+            +
+            
+              E
+              
+                g
+              
+              
+                2
+              
+            
+          
+          )
+        
+        +
+        
+          E
+          
+            g
+          
+          
+            2
+          
+        
+        
+          C
+          
+            2
+          
+        
+      
+    
+    {\displaystyle a_{\mathrm {atan} }=\left(E^{2}-E_{0}^{2}\right)\left(E_{0}^{2}+E_{g}^{2}\right)+E_{g}^{2}C^{2}}
+  
+,
+
+  
+    
+      
+        α
+        =
+        
+          
+            4
+            
+              E
+              
+                0
+              
+              
+                2
+              
+            
+            −
+            
+              C
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle \alpha ={\sqrt {4E_{0}^{2}-C^{2}}}}
+  
+,
+
+  
+    
+      
+        γ
+        =
+        
+          
+            
+              E
+              
+                0
+              
+              
+                2
+              
+            
+            −
+            
+              C
+              
+                2
+              
+            
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle \gamma ={\sqrt {E_{0}^{2}-C^{2}/2}}}
+  
+,
+
+  
+    
+      
+        
+          ζ
+          
+            4
+          
+        
+        =
+        
+          
+            (
+            
+              
+                E
+                
+                  2
+                
+              
+              −
+              
+                γ
+                
+                  2
+                
+              
+            
+            )
+          
+          
+            2
+          
+        
+        +
+        
+          
+            
+              
+                α
+                
+                  2
+                
+              
+              
+                C
+                
+                  2
+                
+              
+            
+            4
+          
+        
+      
+    
+    {\displaystyle \zeta ^{4}=\left(E^{2}-\gamma ^{2}\right)^{2}+{\frac {\alpha ^{2}C^{2}}{4}}}
+  
+.

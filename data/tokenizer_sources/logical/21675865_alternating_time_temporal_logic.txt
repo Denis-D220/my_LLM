@@ -1,0 +1,52 @@
+In computer science, alternating-time temporal logic, or ATL, is a branching-time temporal logic that extends computation tree logic (CTL) to multiple players. ATL naturally describes computations of multi-agent systems and concurrent games. Quantification in ATL is over program-paths that are possible outcomes of games. ATL uses alternating-time formulas to construct model-checkers in order to address problems such as receptiveness, realizability, and controllability.
+
+Examples
+One can write logical formulas in ATL such as 
+  
+    
+      
+        ⟨
+        ⟨
+        {
+        a
+        ,
+        b
+        }
+        ⟩
+        ⟩
+        F
+        p
+      
+    
+    {\displaystyle \langle \langle \{a,b\}\rangle \rangle Fp}
+  
+ that expresses the fact that agents a and b have a strategy to ensure that the property p holds in the future, whatever the other agents of the system are performing.
+
+Extensions and variants
+ATL* is the extension of ATL, as CTL* extends CTL. ATL* allows to write more complex temporal objectives, for instance 
+  
+    
+      
+        ⟨
+        ⟨
+        {
+        a
+        ,
+        b
+        }
+        ⟩
+        ⟩
+        (
+        F
+        p
+        ∧
+        G
+        q
+        )
+      
+    
+    {\displaystyle \langle \langle \{a,b\}\rangle \rangle (Fp\land Gq)}
+  
+. Belardinelli et al. proposes a variant of ATL on finite traces. ATL has been extended with context, in order to store the current strategies played by the agents. ATL* is extended by strategy logic.
+ATL has been generalized to include epistemic features. In 2003, van der Hoek and Woodridge proposed ATEL: the logic ATL augmented with an epistemic operator from epistemic logic. In 2004, Pierre-Yves Schobbens proposed variants of ATL with imperfect recall.
+One cannot express properties about individual objectives in ATL. That is why, in 2010, Chatterjee, Henzinger and Piterman introduced strategy logic, a first-order logic in which strategies are first-order citizens. Strategy logic subsumes both ATL and ATL*.

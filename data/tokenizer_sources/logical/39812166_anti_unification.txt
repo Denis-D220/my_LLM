@@ -1,0 +1,1688 @@
+Anti-unification is the process of constructing a generalization common to two given symbolic expressions. As in unification, several frameworks are distinguished depending on which expressions (also called terms) are allowed, and which expressions are considered equal. If variables representing functions are allowed in an expression, the process is called "higher-order anti-unification", otherwise "first-order anti-unification". If the generalization is required to have an instance literally equal to each input expression, the process is called "syntactical anti-unification", otherwise "E-anti-unification", or "anti-unification modulo theory".
+An anti-unification algorithm should compute for given expressions a complete and minimal generalization set, that is, a set covering all generalizations and containing no redundant members, respectively. Depending on the framework, a complete and minimal generalization set may have one, finitely many, or possibly infinitely many members, or may not exist at all; it cannot be empty, since a trivial generalization exists in any case. For first-order syntactical anti-unification, Gordon Plotkin gave an algorithm that computes a complete and minimal singleton generalization set containing the so-called "least general generalization" (lgg).
+Anti-unification should not be confused with dis-unification. The latter means the process of solving systems of inequations, that is of finding values for the variables such that all given inequations are satisfied. This task is quite different from finding generalizations.
+
+Prerequisites
+Formally, an anti-unification approach presupposes 
+
+An infinite set V of variables. For higher-order anti-unification, it is convenient to choose V disjoint from the set of lambda-term bound variables.
+A set T of terms such that V ⊆ T. For first-order and higher-order anti-unification, T is usually the set of first-order terms (terms built from variable and function symbols) and lambda terms (terms containing some higher-order variables), respectively.
+An equivalence relation 
+  
+    
+      
+        ≡
+      
+    
+    {\displaystyle \equiv }
+  
+ on 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, indicating which terms are considered equal. For higher-order anti-unification, usually 
+  
+    
+      
+        t
+        ≡
+        u
+      
+    
+    {\displaystyle t\equiv u}
+  
+ if 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ and 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ are alpha equivalent. For first-order E-anti-unification, 
+  
+    
+      
+        ≡
+      
+    
+    {\displaystyle \equiv }
+  
+ reflects the background knowledge about certain function symbols; for example, if 
+  
+    
+      
+        ⊕
+      
+    
+    {\displaystyle \oplus }
+  
+ is considered commutative, 
+  
+    
+      
+        t
+        ≡
+        u
+      
+    
+    {\displaystyle t\equiv u}
+  
+ if 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ results from 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ by swapping the arguments of 
+  
+    
+      
+        ⊕
+      
+    
+    {\displaystyle \oplus }
+  
+ at some (possibly all) occurrences. If there is no background knowledge at all, then only literally, or syntactically, identical terms are considered equal.
+
+First-order term
+
+Given a set 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ of variable symbols, a set 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ of constant symbols and sets 
+  
+    
+      
+        
+          F
+          
+            n
+          
+        
+      
+    
+    {\displaystyle F_{n}}
+  
+ of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-ary function symbols, also called operator symbols, for each natural number 
+  
+    
+      
+        n
+        ≥
+        1
+      
+    
+    {\displaystyle n\geq 1}
+  
+, the set of (unsorted first-order) terms 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is recursively defined to be the smallest set with the following properties:
+
+every variable symbol is a term: V ⊆ T,
+every constant symbol is a term: C ⊆ T,
+from every n terms t1,...,tn, and every n-ary function symbol f ∈ Fn, a larger term 
+  
+    
+      
+        f
+        (
+        
+          t
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          t
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle f(t_{1},\ldots ,t_{n})}
+  
+ can be built.
+For example, if x ∈ V is a variable symbol, 1 ∈ C is a constant symbol, and add ∈ F2 is a binary function symbol, then x ∈ T, 1 ∈ T, and (hence) add(x,1) ∈ T by the first, second, and third term building rule, respectively. The latter term is usually written as x+1, using Infix notation and the more common operator symbol + for convenience.
+
+Higher-order term
+
+Substitution
+
+A substitution is a mapping  
+  
+    
+      
+        σ
+        :
+        V
+        ⟶
+        T
+      
+    
+    {\displaystyle \sigma :V\longrightarrow T}
+  
+ from variables to terms; the notation 
+  
+    
+      
+        {
+        
+          x
+          
+            1
+          
+        
+        ↦
+        
+          t
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            k
+          
+        
+        ↦
+        
+          t
+          
+            k
+          
+        
+        }
+      
+    
+    {\displaystyle \{x_{1}\mapsto t_{1},\ldots ,x_{k}\mapsto t_{k}\}}
+  
+ refers to a substitution mapping each variable 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+    {\displaystyle x_{i}}
+  
+ to the term 
+  
+    
+      
+        
+          t
+          
+            i
+          
+        
+      
+    
+    {\displaystyle t_{i}}
+  
+, for 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        k
+      
+    
+    {\displaystyle i=1,\ldots ,k}
+  
+, and every other variable to itself. Applying that substitution to a term t is written in postfix notation as 
+  
+    
+      
+        t
+        {
+        
+          x
+          
+            1
+          
+        
+        ↦
+        
+          t
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            k
+          
+        
+        ↦
+        
+          t
+          
+            k
+          
+        
+        }
+      
+    
+    {\displaystyle t\{x_{1}\mapsto t_{1},\ldots ,x_{k}\mapsto t_{k}\}}
+  
+; it means to (simultaneously) replace every occurrence of each variable 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+    {\displaystyle x_{i}}
+  
+ in the term t by 
+  
+    
+      
+        
+          t
+          
+            i
+          
+        
+      
+    
+    {\displaystyle t_{i}}
+  
+. The result tσ of applying a substitution σ to a term t is called an instance of that term t.
+As a first-order example, applying the substitution 
+  
+    
+      
+        {
+        x
+        ↦
+        h
+        (
+        a
+        ,
+        y
+        )
+        ,
+        z
+        ↦
+        b
+        }
+      
+    
+    {\displaystyle \{x\mapsto h(a,y),z\mapsto b\}}
+  
+ to the term 
+
+Generalization, specialization
+If a term 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ has an instance equivalent to a term 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+, that is, if 
+  
+    
+      
+        t
+        σ
+        ≡
+        u
+      
+    
+    {\displaystyle t\sigma \equiv u}
+  
+ for some substitution 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+, then 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ is called more general than 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+, and 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ is called more special than, or subsumed by, 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+. For example, 
+  
+    
+      
+        x
+        ⊕
+        a
+      
+    
+    {\displaystyle x\oplus a}
+  
+ is more general than 
+  
+    
+      
+        a
+        ⊕
+        b
+      
+    
+    {\displaystyle a\oplus b}
+  
+ if 
+  
+    
+      
+        ⊕
+      
+    
+    {\displaystyle \oplus }
+  
+ is commutative, since then 
+  
+    
+      
+        (
+        x
+        ⊕
+        a
+        )
+        {
+        x
+        ↦
+        b
+        }
+        =
+        b
+        ⊕
+        a
+        ≡
+        a
+        ⊕
+        b
+      
+    
+    {\displaystyle (x\oplus a)\{x\mapsto b\}=b\oplus a\equiv a\oplus b}
+  
+.
+If 
+  
+    
+      
+        ≡
+      
+    
+    {\displaystyle \equiv }
+  
+ is literal (syntactic) identity of terms, a term may be both more general and more special than another one only if both terms differ just in their variable names, not in their syntactic structure; such terms are called variants, or renamings of each other.
+For example, 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          z
+          
+            1
+          
+        
+        )
+        ,
+        
+          y
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle f(x_{1},a,g(z_{1}),y_{1})}
+  
+ is a variant of 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            2
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          z
+          
+            2
+          
+        
+        )
+        ,
+        
+          y
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle f(x_{2},a,g(z_{2}),y_{2})}
+  
+, since 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          z
+          
+            1
+          
+        
+        )
+        ,
+        
+          y
+          
+            1
+          
+        
+        )
+        {
+        
+          x
+          
+            1
+          
+        
+        ↦
+        
+          x
+          
+            2
+          
+        
+        ,
+        
+          y
+          
+            1
+          
+        
+        ↦
+        
+          y
+          
+            2
+          
+        
+        ,
+        
+          z
+          
+            1
+          
+        
+        ↦
+        
+          z
+          
+            2
+          
+        
+        }
+        =
+        f
+        (
+        
+          x
+          
+            2
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          z
+          
+            2
+          
+        
+        )
+        ,
+        
+          y
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle f(x_{1},a,g(z_{1}),y_{1})\{x_{1}\mapsto x_{2},y_{1}\mapsto y_{2},z_{1}\mapsto z_{2}\}=f(x_{2},a,g(z_{2}),y_{2})}
+  
+ and 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            2
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          z
+          
+            2
+          
+        
+        )
+        ,
+        
+          y
+          
+            2
+          
+        
+        )
+        {
+        
+          x
+          
+            2
+          
+        
+        ↦
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          y
+          
+            2
+          
+        
+        ↦
+        
+          y
+          
+            1
+          
+        
+        ,
+        
+          z
+          
+            2
+          
+        
+        ↦
+        
+          z
+          
+            1
+          
+        
+        }
+        =
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          z
+          
+            1
+          
+        
+        )
+        ,
+        
+          y
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle f(x_{2},a,g(z_{2}),y_{2})\{x_{2}\mapsto x_{1},y_{2}\mapsto y_{1},z_{2}\mapsto z_{1}\}=f(x_{1},a,g(z_{1}),y_{1})}
+  
+.
+However, 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          z
+          
+            1
+          
+        
+        )
+        ,
+        
+          y
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle f(x_{1},a,g(z_{1}),y_{1})}
+  
+ is not a variant of 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            2
+          
+        
+        ,
+        a
+        ,
+        g
+        (
+        
+          x
+          
+            2
+          
+        
+        )
+        ,
+        
+          x
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle f(x_{2},a,g(x_{2}),x_{2})}
+  
+, since no substitution can transform the latter term into the former one, although 
+  
+    
+      
+        {
+        
+          x
+          
+            1
+          
+        
+        ↦
+        
+          x
+          
+            2
+          
+        
+        ,
+        
+          z
+          
+            1
+          
+        
+        ↦
+        
+          x
+          
+            2
+          
+        
+        ,
+        
+          y
+          
+            1
+          
+        
+        ↦
+        
+          x
+          
+            2
+          
+        
+        }
+      
+    
+    {\displaystyle \{x_{1}\mapsto x_{2},z_{1}\mapsto x_{2},y_{1}\mapsto x_{2}\}}
+  
+ achieves the reverse direction.
+The latter term is hence properly more special than the former one.
+A substitution 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+ is more special than, or subsumed by, a substitution 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ if 
+  
+    
+      
+        x
+        σ
+      
+    
+    {\displaystyle x\sigma }
+  
+ is more special than 
+  
+    
+      
+        x
+        τ
+      
+    
+    {\displaystyle x\tau }
+  
+ for each variable 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+.
+For example, 
+  
+    
+      
+        {
+        x
+        ↦
+        f
+        (
+        u
+        )
+        ,
+        y
+        ↦
+        f
+        (
+        f
+        (
+        u
+        )
+        )
+        }
+      
+    
+    {\displaystyle \{x\mapsto f(u),y\mapsto f(f(u))\}}
+  
+ is more special than 
+  
+    
+      
+        {
+        x
+        ↦
+        z
+        ,
+        y
+        ↦
+        f
+        (
+        z
+        )
+        }
+      
+    
+    {\displaystyle \{x\mapsto z,y\mapsto f(z)\}}
+  
+, since 
+  
+    
+      
+        f
+        (
+        u
+        )
+      
+    
+    {\displaystyle f(u)}
+  
+ and 
+  
+    
+      
+        f
+        (
+        f
+        (
+        u
+        )
+        )
+      
+    
+    {\displaystyle f(f(u))}
+  
+ is more special than 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+ and 
+  
+    
+      
+        f
+        (
+        z
+        )
+      
+    
+    {\displaystyle f(z)}
+  
+, respectively.
+
+Anti-unification problem, generalization set
+An anti-unification problem is a pair 
+  
+    
+      
+        ⟨
+        
+          t
+          
+            1
+          
+        
+        ,
+        
+          t
+          
+            2
+          
+        
+        ⟩
+      
+    
+    {\displaystyle \langle t_{1},t_{2}\rangle }
+  
+ of terms.
+A term 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ is a common generalization, or anti-unifier, of 
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+      
+    
+    {\displaystyle t_{1}}
+  
+ and 
+  
+    
+      
+        
+          t
+          
+            2
+          
+        
+      
+    
+    {\displaystyle t_{2}}
+  
+ if 
+  
+    
+      
+        t
+        
+          σ
+          
+            1
+          
+        
+        ≡
+        
+          t
+          
+            1
+          
+        
+      
+    
+    {\displaystyle t\sigma _{1}\equiv t_{1}}
+  
+ and 
+  
+    
+      
+        t
+        
+          σ
+          
+            2
+          
+        
+        ≡
+        
+          t
+          
+            2
+          
+        
+      
+    
+    {\displaystyle t\sigma _{2}\equiv t_{2}}
+  
+ for some substitutions 
+  
+    
+      
+        
+          σ
+          
+            1
+          
+        
+        ,
+        
+          σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \sigma _{1},\sigma _{2}}
+  
+.
+For a given anti-unification problem, a set 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ of anti-unifiers is called complete if each generalization subsumes some term 
+  
+    
+      
+        t
+        ∈
+        S
+      
+    
+    {\displaystyle t\in S}
+  
+; the set 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is called minimal if none of its members subsumes another one.
+
+First-order syntactical anti-unification
+The framework of first-order syntactical anti-unification is based on 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ being the set of first-order terms (over some given set 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ of variables, 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ of constants and 
+  
+    
+      
+        
+          F
+          
+            n
+          
+        
+      
+    
+    {\displaystyle F_{n}}
+  
+ of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-ary function symbols) and on 
+  
+    
+      
+        ≡
+      
+    
+    {\displaystyle \equiv }
+  
+ being syntactic equality.
+In this framework, each anti-unification problem 
+  
+    
+      
+        ⟨
+        
+          t
+          
+            1
+          
+        
+        ,
+        
+          t
+          
+            2
+          
+        
+        ⟩
+      
+    
+    {\displaystyle \langle t_{1},t_{2}\rangle }
+  
+ has a complete, and obviously minimal, singleton solution set 
+  
+    
+      
+        {
+        t
+        }
+      
+    
+    {\displaystyle \{t\}}
+  
+. 
+Its member 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ is called the least general generalization (lgg) of the problem, it has an instance syntactically equal to 
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+      
+    
+    {\displaystyle t_{1}}
+  
+ and another one syntactically equal to 
+  
+    
+      
+        
+          t
+          
+            2
+          
+        
+      
+    
+    {\displaystyle t_{2}}
+  
+.
+Any common generalization of  
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+      
+    
+    {\displaystyle t_{1}}
+  
+ and 
+  
+    
+      
+        
+          t
+          
+            2
+          
+        
+      
+    
+    {\displaystyle t_{2}}
+  
+ subsumes 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+.
+The lgg is unique up to variants: if 
+  
+    
+      
+        
+          S
+          
+            1
+          
+        
+      
+    
+    {\displaystyle S_{1}}
+  
+ and 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+      
+    
+    {\displaystyle S_{2}}
+  
+ are both complete and minimal solution sets of the same syntactical anti-unification problem, then 
+  
+    
+      
+        
+          S
+          
+            1
+          
+        
+        =
+        {
+        
+          s
+          
+            1
+          
+        
+        }
+      
+    
+    {\displaystyle S_{1}=\{s_{1}\}}
+  
+ and 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+        =
+        {
+        
+          s
+          
+            2
+          
+        
+        }
+      
+    
+    {\displaystyle S_{2}=\{s_{2}\}}
+  
+ for some terms 
+  
+    
+      
+        
+          s
+          
+            1
+          
+        
+      
+    
+    {\displaystyle s_{1}}
+  
+ and 
+  
+    
+      
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s_{2}}
+  
+, that are renamings of each other.
+Plotkin has given an algorithm to compute the lgg of two given terms.
+It presupposes an injective mapping 
+  
+    
+      
+        ϕ
+        :
+        T
+        ×
+        T
+        ⟶
+        V
+      
+    
+    {\displaystyle \phi :T\times T\longrightarrow V}
+  
+, that is, a mapping assigning each pair 
+  
+    
+      
+        s
+        ,
+        t
+      
+    
+    {\displaystyle s,t}
+  
+ of terms an own variable 
+  
+    
+      
+        ϕ
+        (
+        s
+        ,
+        t
+        )
+      
+    
+    {\displaystyle \phi (s,t)}
+  
+, such that no two pairs share the same variable.
+
+The algorithm consists of two rules:
+
+For example, 
+  
+    
+      
+        (
+        0
+        ∗
+        0
+        )
+        ⊔
+        (
+        4
+        ∗
+        4
+        )
+        ⇝
+        (
+        0
+        ⊔
+        4
+        )
+        ∗
+        (
+        0
+        ⊔
+        4
+        )
+        ⇝
+        ϕ
+        (
+        0
+        ,
+        4
+        )
+        ∗
+        ϕ
+        (
+        0
+        ,
+        4
+        )
+        ⇝
+        x
+        ∗
+        x
+      
+    
+    {\displaystyle (0*0)\sqcup (4*4)\rightsquigarrow (0\sqcup 4)*(0\sqcup 4)\rightsquigarrow \phi (0,4)*\phi (0,4)\rightsquigarrow x*x}
+  
+; this least general generalization reflects the common property of both inputs of being square numbers.
+Plotkin used his algorithm to compute the "relative least general generalization (rlgg)" of two clause sets in first-order logic, which was the basis of the Golem approach to inductive logic programming.
+
+First-order anti-unification modulo theory
+
+Jacobsen, Erik (Jun 1991), Unification and Anti-Unification (PDF), Technical Report
+Østvold, Bjarte M. (Apr 2004), "A Functional Reconstruction of Anti-Unification" (PDF), Norsk Regnesentral Projects, NR Note, vol. DART/04/04, Norwegian Computing Center
+Boytcheva, Svetla; Markov, Zdravko (2002). "An Algorithm for Inducing Least Generalization Under Relative Implication". Proc. FLAIRS-02. AAAI. pp. 322–326.
+Kutsia, Temur; Levy, Jordi; Villaret, Mateu (2014). "Anti-Unification for Unranked Terms and Hedges" (PDF). Journal of Automated Reasoning. 52 (2): 155–190. doi:10.1007/s10817-013-9285-6. Software.
+
+Equational theories
+One associative and commutative operation: Pottier, Loïc (Feb 1989), Algorithmes de complétion et généralisation en logique du premier ordre (Thèse de doctorat); Pottier, Loïc (1989), Généralisation de termes en théorie équationelle – Cas associatif-commutatif, INRIA Report, vol. 1056, INRIA
+Commutative theories: Baader, Franz (1991). "Unification, Weak Unification, Upper Bound, Lower Bound, and Generalization Problems". Proc. 4th Conf. on Rewriting Techniques and Applications (RTA). LNCS. Vol. 488. Springer. pp. 86–91. doi:10.1007/3-540-53904-2_88.
+Free monoids: Biere, A. (1993), Normalisierung, Unifikation und Antiunifikation in Freien Monoiden (PDF), Univ. Karlsruhe, Germany
+Regular congruence classes: Heinz, Birgit (Dec 1995), Anti-Unifikation modulo Gleichungstheorie und deren Anwendung zur Lemmagenerierung, GMD Berichte, vol. 261, TU Berlin, ISBN 978-3-486-23873-0; Burghardt, Jochen (2005). "E-Generalization Using Grammars". Artificial Intelligence. 165 (1): 1–35. arXiv:1403.8118. doi:10.1016/j.artint.2005.01.008. S2CID 5328240.
+A-, C-, AC-, ACU-theories with ordered sorts: Alpuente, Maria; Escobar, Santiago; Espert, Javier; Meseguer, Jose (2014). "A modular order-sorted equational generalization algorithm". Information and Computation. 235: 98–136. doi:10.1016/j.ic.2014.01.006. hdl:2142/25871.
+Purely idempotent theories: Cerna, David; Kutsia, Temur (2020). "Idempotent Anti-Unification". ACM Transactions on Computational Logic. 21 (2): 1–32. doi:10.1145/3359060. hdl:10.1145/3359060. S2CID 207861304.
+
+First-order sorted anti-unification
+Taxonomic sorts: Frisch, Alan M.; Page, David (1990). "Generalisation with Taxonomic Information". AAAI: 755–761.; Frisch, Alan M.; Page Jr., C. David (1991). "Generalizing Atoms in Constraint Logic". Proc. Conf. on Knowledge Representation.; Frisch, A.M.; Page, C.D. (1995). "Building Theories into Instantiation". In Mellish, C.S. (ed.). Proc. 14th IJCAI. Morgan Kaufmann. pp. 1210–1216. CiteSeerX 10.1.1.32.1610. {{cite conference}}: Cite uses deprecated parameter |citeseerx= (help)
+Feature terms: Plaza, E. (1995). "Cases as Terms: A Feature Term Approach to the Structured Representation of Cases". Proc. 1st International Conference on Case-Based Reasoning (ICCBR). LNCS. Vol. 1010. Springer. pp. 265–276. ISSN 0302-9743.
+Idestam-Almquist, Peter (Jun 1993). "Generalization under Implication by Recursive Anti-Unification". Proc. 10th Conf. on Machine Learning. Morgan Kaufmann. pp. 151–158.
+Fischer, Cornelia (May 1994), PAntUDE – An Anti-Unification Algorithm for Expressing Refined Generalizations (PDF), Research Report, vol. TM-94-04, DFKI
+A-, C-, AC-, ACU-theories with ordered sorts: see above
+
+Nominal anti-unification
+Baumgartner, Alexander; Kutsia, Temur; Levy, Jordi; Villaret, Mateu (Jun 2013). Nominal Anti-Unification. Proc. RTA 2015. Vol. 36 of LIPIcs. Schloss Dagstuhl, 57-73. Software.
+
+Applications
+Program analysis:
+Bulychev, Peter; Minea, Marius (2008). "Duplicate Code Detection Using Anti-Unification". Proceedings of the Spring/Summer Young Researchers' Colloquium on Software Engineering (2).;
+Bulychev, Peter E.; Kostylev, Egor V.; Zakharov, Vladimir A. (2009). "Anti-Unification Algorithms and their Applications in Program Analysis". In Amir Pnueli and Irina Virbitskaite and Andrei Voronkov (ed.). Perspectives of Systems Informatics (PSI) – 7th International Andrei Ershov Memorial Conference. LNCS. Vol. 5947. Springer. pp. 413–423. doi:10.1007/978-3-642-11486-1_35. ISBN 978-3-642-11485-4.
+Code factoring:
+Cottrell, Rylan (Sep 2008), Semi-automating Small-Scale Source Code Reuse via Structural Correspondence (PDF), Univ. Calgary
+Induction proving:
+Heinz, Birgit (1994), Lemma Discovery by Anti-Unification of Regular Sorts, Technical Report, vol. 94–21, TU Berlin
+Information Extraction:
+Thomas, Bernd (1999). "Anti-Unification Based Learning of T-Wrappers for Information Extraction" (PDF). AAAI Technical Report. WS-99-11: 15–20.
+Case-based reasoning:
+Armengol; Plaza, Enric (2005). "Using Symbolic Descriptions to Explain Similarity on {CBR}". In Beatriz López and Joaquim Meléndez and Petia Radeva and Jordi Vitrià (ed.). Artificial Intelligence Research and Development, Proc. 8th Int. Conf. of the ACIA, CCIA. IOS Press. pp. 239–246.
+Program synthesis: The idea of generalizing terms with respect to an equational theory can be traced back to Manna and Waldinger (1978, 1980) who desired to apply it in program synthesis. In section "Generalization", they suggest (on p. 119 of the 1980 article) to generalize reverse(l) and reverse(tail(l))<>[head(l)] to obtain reverse(l')<>m' . This generalization is only possible if the background equation u<>[]=u is considered.
+Zohar Manna; Richard Waldinger (Dec 1978). A Deductive Approach to Program Synthesis (PDF) (Technical Note). SRI International. Archived from the original (PDF) on 2017-02-27. Retrieved 2017-09-29. — preprint of the 1980 article
+Zohar Manna and Richard Waldinger (Jan 1980). "A Deductive Approach to Program Synthesis". ACM Transactions on Programming Languages and Systems. 2: 90–121. doi:10.1145/357084.357090. S2CID 14770735.
+Natural language processing:
+Amiridze, Nino; Kutsia, Temur (May 2018). Anti-Unification and Natural Language Processing (EasyChair Preprints). Vol. 203. doi:10.29007/fkrh. S2CID 49322739.
+
+Higher-order anti-unification
+
+Calculus of constructions:
+Pfenning, Frank (Jul 1991). "Unification and Anti-Unification in the Calculus of Constructions" (PDF). Proc. 6th LICS. Springer. pp. 74–85.
+Simply typed lambda calculus (Input: Terms in the eta-long beta-normal form. Output:  higher-order patterns):
+Baumgartner, Alexander; Kutsia, Temur; Levy, Jordi; Villaret, Mateu (Jun 2013). A Variant of Higher-Order Anti-Unification. Proc. RTA 2013. Vol. 21 of LIPIcs. Schloss Dagstuhl, 113-127. Software.
+Simply typed lambda calculus (Input: Terms in the eta-long beta-normal form. Output: Various fragments of the simply typed lambda calculus including patterns):
+Cerna, David; Kutsia, Temur (June 2019). "A Generic Framework for Higher-Order Generalizations" (PDF). 4th International Conference on Formal Structures for Computation and Deduction, FSCD, June 24–30, 2019, Dortmund, Germany. Schloss Dagstuhl - Leibniz-Zentrum für Informatik. pp. 74–85.
+Restricted Higher-Order Substitutions:
+Wagner, Ulrich (Apr 2002), Combinatorically Restricted Higher Order Anti-Unification, TU Berlin; Schmidt, Martin (Sep 2010), Restricted Higher-Order Anti-Unification for Heuristic-Driven Theory Projection (PDF), PICS-Report, vol. 31–2010, Univ. Osnabrück, Germany, ISSN 1610-5389

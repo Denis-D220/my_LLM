@@ -1,0 +1,23 @@
+A noise map is a graphic representation of the sound level distribution and the propagation of sound waves in a given region, for a defined period.
+
+Definition
+Although some previous approaches had been made, the main international agreement and definitions for noise mapping were born in relation to the Environmental noise directive of the European Parliament and Council (Directive 2002/49/EC of 25 June 2002, commonly referred to as the END).
+The END defines in Article 3:
+"noise indicator shall mean a physical scale for the description of environmental noise, which has a relationship with a harmful effect;
+strategic noise map shall mean a map designed for the global assessment of noise exposure in a given area due to different noise sources or for overall predictions for such an area."
+EU Member States are required to produce strategic noise maps in their main cities, near the main transport infrastructure and industrial sites. The main goals of the END are to make a diagnosis of noise pollution in Europe that can lead to noise management plans and acoustical planning. The term 'strategic' is very important in this definition, because the management of environmental noise must be made for the long-term.
+This map can be used for scientists, politicians or other interested parties.
+
+Production
+The main noise indicators for noise mapping are long-term averaged sound levels, determined over all the correspondent periods of a year. All of these indicators may be defined in terms of A-weighted decibels (dBA, dB(A)).
+The result can be determined by computation or measurement methods. Computation methods are widely preferred, because of the large amount of yearly averaged locations required.
+Using either approach, a grid of receivers must be defined in order to measure or calculate noise levels. When results are obtained, using GIS tools, spatial interpolation must be applied in order to give a continuous graphical representation of sound levels. According to the END five dBA ranges are used for this contour (isoline) representation.
+The maps may be useful for planning stages, or for prior evaluation of action plans, or determination of most polluted areas.
+With a strategic noise map, furthermore, an evaluation is possible to show the number of people exposed within dBA ranges. Facade sound levels must be calculated or estimated from the previous map.
+
+Simulation tools
+There are several methods for making noise maps. Some of them use empirical models (for instance, INM was formerly used for airport noise mapping), but most of the models are based on the physics of propagation of sound outdoors (defined in ISO 9613). Today the use of software packages has made the process easier, but the accuracy of results depends on the quality of input data. The main challenges for the acoustic consultant include the collection of data, creating useful models of the street network and a good digital terrain model (DTM).
+For train and road traffic noise, the description of the sources is usually made in terms of parameters such as speed, number of vehicles etc. Measurements are used for the validation of results.
+For industrial noise map production, the most important thing is the description of noise sources: sound power levels (emission), directivity, working periods. Although some databases can be found, in some cases it is necessary to make measurements (ISO 3740) for describing the source.
+To calculate the noise propagation, it is necessary to create a model with points, lines and areas for the noise sources. The creation of a good acoustic model can be quite complicated.
+Simulation tools are very useful specially at planning stages, where measurements are not possible. The consultant can evaluate the effectiveness for decisions in action plans, in order to minimize noise.

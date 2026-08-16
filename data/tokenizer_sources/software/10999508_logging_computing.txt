@@ -1,0 +1,28 @@
+In computing, logging is the act of keeping a log of events that occur in a computer system, such as problems, errors or broad information on current operations. These events may occur in the operating system or in other software. A message or log entry is recorded for each such event. These log messages can then be used to monitor and understand the operation of the system, to debug problems, or during an audit. Logging is particularly important in multi-user software, to have a central overview of the operation of the system.
+In the simplest case, messages are written to a file, called a log file. Alternatively, the messages may be written to a dedicated logging system or to a log management software, where it is stored in a database or on a different computer system.
+Specifically, a transaction log is a log of the communications between a system and the users of that system, or a data collection method that automatically captures the type, content, or time of transactions made by a person from a terminal with that system. For Web searching, a transaction log is an electronic record of interactions that have occurred during a searching episode between a Web search engine and users searching for information on that Web search engine.
+Many operating systems, software frameworks and programs include a logging system. A widely used logging standard is Syslog, defined in IETF RFC 5424. The Syslog standard enables a dedicated, standardized subsystem to generate, filter, record, and analyze log messages. This relieves software developers of having to design and code their ad hoc logging systems.
+
+Types
+
+Event logs
+Event logs record events taking place in the execution of a system that can be used to understand the activity of the system and to diagnose problems. 
+They are essential to understand particularly in the case of applications with little user interaction.
+It can also be useful to combine log file entries from multiple sources. It is a different combination that may yield better correlation with related events on different servers. Other solutions employ network-wide querying and reporting.
+
+Transaction logs
+
+Most database systems maintain some kind of transaction log, which are not mainly intended as an audit trail for later analysis, and are not intended to be human-readable. These logs record changes to the stored data to allow the database to recover from crashes or other data errors and maintain the stored data in a consistent state. Thus, database systems usually have both general event logs and transaction logs.
+Data from transaction logs of search engines, intranets, and websites provides insights into online information-seeking behavior. This understanding informs system design, interface development, and information architecture.
+
+Message logs
+Internet Relay Chat (IRC), instant messaging (IM) programs, peer-to-peer file sharing clients with chat functions, and multiplayer games (especially MMORPGs) commonly can automatically save textual communication, both public (IRC channel/IM conference/MMO public/party chat messages) and private chat between users, as message logs.
+Message logs are almost universally plain text files, but IM and VoIP clients (which support textual chat, e.g. Skype) might save them in HTML files or in a custom format to ease reading or enable encryption.
+In the case of IRC software, message logs often include system/server messages and entries related to channel and user changes (e.g. topic change, user joins/exits/kicks/bans, nickname changes, the user status changes), making them more like a combined message/event log of the channel in question, but such a log is not comparable to a true IRC server event log, because it only records user-visible events for the time frame the user spent being connected to a certain channel.
+Instant messaging and VoIP clients often offer the chance to store encrypted logs to enhance the user's privacy. These logs require a password to be decrypted and viewed, and they are often handled by their respective writing application. Some privacy focused messaging services, such as Signal, record minimal logs about users, limiting their information to connection times.
+
+Server logs
+
+A server log is a log file (or several files) automatically created and maintained by a server consisting of a list of activities it performed.
+A typical example is a web server log which maintains a history of page requests.  The W3C maintains a standard format (the Common Log Format) for web server log files, but other proprietary formats exist. Some servers can log information to computer readable formats (such as JSON) versus the human readable standard. More recent entries are typically appended to the end of the file.  Information about the request, including client IP address, request date/time, page requested, HTTP code, bytes served, user agent, and referrer are typically added.  This data can be combined into a single file, or separated into distinct logs, such as an access log, error log, or referrer log. However, server logs typically do not collect user-specific information.
+These files are usually not accessible to general Internet users, only to the webmaster or other administrative person of an Internet service.  A statistical analysis of the server log may be used to examine traffic patterns by time of day, day of week, referrer, or user agent.  Efficient web site administration, adequate hosting resources and the fine tuning of sales efforts can be aided by analysis of the web server logs.

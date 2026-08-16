@@ -1,0 +1,112 @@
+In mathematics and computer science, the critical exponent of a finite or infinite sequence of symbols over a finite alphabet describes the largest number of times a contiguous subsequence can be repeated.  For example, the critical exponent of "Mississippi" is 7/3, as it contains the string "ississi", which is of length 7 and period 3.
+If w is an infinite word over the alphabet A and x is a finite word over A, then x is said to occur in w with exponent α, for positive real α, if there is a factor y of w with y = xax0 where x0 is a prefix of x, a is the integer part of α, and the length |y| = α |x|: we say that y is an  α-power.  The word w is  α-power-free if it contains no factors which are  β-powers for any β ≥ α.
+The critical exponent for w is the supremum of the α for which w has α-powers, or equivalently the infimum of the α for which w is α-power-free.
+
+Definition
+If 
+  
+    
+      
+        
+          w
+        
+      
+    
+    {\displaystyle \mathbf {w} }
+  
+ is a word (possibly infinite), then the critical exponent of 
+  
+    
+      
+        
+          w
+        
+      
+    
+    {\displaystyle \mathbf {w} }
+  
+ is defined to be
+
+  
+    
+      
+        E
+        (
+        
+          w
+        
+        )
+        =
+        sup
+        {
+        r
+        ∈
+        
+          
+            Q
+          
+          
+            ≥
+            1
+          
+        
+        :
+        
+          w
+        
+        
+        
+           contains an 
+        
+        
+        r
+        
+          -power
+        
+        }
+      
+    
+    {\displaystyle E(\mathbf {w} )=\sup\{r\in \mathbb {Q} ^{\geq 1}:\mathbf {w} \,{\text{ contains an }}\,r{\text{-power}}\}}
+  
+
+where 
+  
+    
+      
+        
+          
+            Q
+          
+          
+            ≥
+            1
+          
+        
+        =
+        {
+        q
+        ∈
+        
+          Q
+        
+        :
+        q
+        ≥
+        1
+        }
+      
+    
+    {\displaystyle \mathbb {Q} ^{\geq 1}=\{q\in \mathbb {Q} :q\geq 1\}}
+  
+.
+
+Examples
+The critical exponent of the Fibonacci word is (5 + √5)/2 ≈ 3.618.
+The critical exponent of the Thue–Morse sequence is 2.  The word contains arbitrarily long squares, but in any factor xxb the letter b is not a prefix of x.
+
+Properties
+The critical exponent can take any real value greater than 1.
+The critical exponent of a morphic word over a finite alphabet is either infinite or an algebraic number of degree at most the size of the alphabet.
+
+Repetition threshold
+The repetition threshold of an alphabet A of n letters is the minimum critical exponent of infinite words over A: clearly this value RT(n) depends only on n.  For n=2, any binary word of length four has a factor of exponent 2, and since the critical exponent of the Thue–Morse sequence is 2, the repetition threshold for binary alphabets is RT(2) = 2.  It is known that RT(3) = 7/4, RT(4) = 7/5 and that RT(n) = n/(n-1) for n ≥ 5.

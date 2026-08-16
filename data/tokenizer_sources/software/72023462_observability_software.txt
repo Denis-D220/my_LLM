@@ -1,0 +1,68 @@
+In software engineering, more specifically in distributed computing, observability is the ability to collect data about programs' execution, modules' internal states, and the communication among components. To improve observability, software engineers use a wide range of logging and tracing techniques to gather telemetry information, and tools to analyze and use it. Observability is foundational to site reliability engineering, as it is the first step in triaging a service outage.
+One of the goals of observability is to minimize the amount of prior knowledge needed to debug an issue.
+
+Etymology, terminology and definition
+The term is borrowed from control theory, where the "observability" of a system measures how well its state can be determined from its outputs. Similarly, software observability measures how well a system's state can be understood from the obtained telemetry (metrics, logs, traces, profiling).
+The definition of observability varies by vendor:
+
+Observability is the process of making a system’s internal state more transparent. Systems are made observable by the data they produce, which in turn helps you to determine if your infrastructure or application is healthy and functioning normally.
+a measure of how well you can understand and explain any state your system can get into, no matter how novel or bizarre [...] without needing to ship new code
+software tools and practices for aggregating, correlating and analyzing a steady stream of performance data from a distributed application along with the hardware and network it runs onobservability starts by shipping all your raw data to central service before you begin analysisthe ability to measure a system’s current state based on the data it generates, such as logs, metrics, and traces
+Observability is tooling or a technical solution that allows teams to actively debug their system. Observability is based on exploring properties and patterns not defined in advance.
+proactively collecting, visualizing, and applying intelligence to all of your metrics, events, logs, and traces—so you can understand the behavior of your complex digital system
+The term is frequently referred to as its numeronym o11y (where 11 stands for the number of letters between the first letter and the last letter of the word). This is similar to other computer science abbreviations such as i18n and l10n and k8s.
+
+Observability vs. monitoring
+
+Observability and monitoring are sometimes used interchangeably. As tooling, commercial offerings and practices evolved in complexity, "monitoring" was re-branded as observability in order to differentiate new tools from the old.
+The terms are commonly contrasted in that systems are monitored using predefined sets of telemetry, and monitored systems may be observable.
+Majors et al. suggest that engineering teams that only have monitoring tools end up relying on expert foreknowledge (seniority), whereas teams that have observability tools rely on exploratory analysis (curiosity).
+
+Telemetry types
+Observability relies on three main types of telemetry data: metrics, logs and traces. Those are often referred to as "pillars of observability".
+
+Metrics
+
+A metric is a point in time measurement (scalar) that represents some system state. Examples of common metrics include: 
+
+number of HTTP requests per second;
+total number of query failures;
+database size in bytes;
+time in seconds since last garbage collection.
+Monitoring tools are typically configured to emit alerts when certain metric values exceed set thresholds. Thresholds are set based on knowledge about normal operating conditions and experience.
+Metrics are typically tagged to facilitate grouping and searchability.
+Application developers choose what kind of metrics to instrument their software with, before it is released. As a result, when a previously unknown issue is encountered, it is impossible to add new metrics without shipping new code. Furthermore, their cardinality can quickly make the storage size of telemetry data prohibitively expensive. Since metrics are cardinality-limited, they are often used to represent aggregate values (for example: average page load time, or 5-second average of the request rate). Without external context, it is impossible to correlate between events (such as user requests) and distinct metric values.
+
+Logs
+
+Logs, or log lines, are generally free-form, unstructured text blobs that are intended to be human readable. Modern logging is structured to enable machine parsability. As with metrics, an application developer must instrument the application upfront and ship new code if different logging information is required.
+Logs typically include a timestamp and severity level. An event (such as a user request) may be fragmented across multiple log lines and interweave with logs from concurrent events.
+
+Traces
+
+Distributed traces
+A cloud native application is typically made up of distributed services which together fulfill a single request. A distributed trace is an interrelated series of discrete events (also called spans) that track the progression of a single user request. A trace shows the causal and temporal relationships between the services that interoperate to fulfill a request.
+Instrumenting an application with traces means sending span information to a tracing backend. The tracing backend correlates the received spans to generate presentable traces. To be able to follow a request as it traverses multiple services, spans are labeled with unique identifiers that enable constructing a parent-child relationship between spans. Span information is typically shared in the HTTP headers of outbound requests.
+
+Continuous profiling
+
+Continuous profiling is another telemetry type used to precisely determine how an application consumes resources.
+
+Instrumentation
+
+To be able to observe an application, telemetry about the application's behavior needs to be collected or exported. Instrumentation means generating telemetry alongside the normal operation of the application. Telemetry is then collected by an independent backend for later analysis.
+
+In fast-changing systems, instrumentation itself is often the best possible documentation, since it combines intention (what are the dimensions that an engineer named and decided to collect?) with the real-time, up-to-date information of live status in production.
+Instrumentation can be automatic, or custom. Automatic instrumentation offers blanket coverage and immediate value; custom instrumentation brings higher value but requires more intimate involvement with the instrumented application.
+Instrumentation can be native - done in-code (modifying the code of the instrumented application) - or out-of-code (e.g. sidecar, eBPF). Since instrumentation adds operations to the existing code, it introduces runtime overhead and may increase the execution time of the software. The incurred overhead differs significantly based on the observability framework and method used. 
+Verifying new features in production by shipping them together with custom instrumentation is a practice called "observability-driven development".
+
+"Pillars of observability"
+Metrics, logs and traces are most commonly listed as the pillars of observability. Majors et al. suggest that the pillars of observability are high cardinality, high-dimensionality, and explorability, arguing that runbooks and dashboards have little value because "modern systems rarely fail in precisely the same way twice."
+
+Self monitoring
+Self monitoring is a practice where observability stacks monitor each other, in order to reduce the risk of inconspicuous outages. Self monitoring may be put in place in addition to high availability and redundancy to further avoid correlated failures.
+
+Observability of AI systems
+
+As machine learning and large language models have moved into production, observability has been applied to artificial intelligence systems as well, a specialization known as AI observability. Because these models draw their outputs from probability distributions, a system can look healthy by conventional measures such as latency and error rate, yet still return answers that are wrong, irrelevant, or unsafe. To capture this, AI observability keeps the conventional pillars of metrics, logs, and traces, and adds signals that are specific to models, such as token usage, output quality, and model drift. It is often described as the runtime monitoring layer of MLOps, and open standards, such as the OpenTelemetry semantic conventions for generative AI, aim to record model calls, token usage, and evaluation scores in a way that any tool can read.

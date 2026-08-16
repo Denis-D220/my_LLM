@@ -1,0 +1,101 @@
+{
+  "created_at_utc": "2026-08-13T23:10:21.841517+00:00",
+  "evaluation_file_sha256": "eca1b6a9f8d50c6cb4bdebef626665bb6fc490d34172b166322bd881fcabb84d",
+  "training_reference_jsonl_sha256": "2a2fd3331a52dad8940aa3e425d3b52435265c1d9c59b1b03f57288dd400f850",
+  "source_preparation": {
+    "files_discovered": 35,
+    "documents_seen": 35,
+    "documents_selected": 0,
+    "large_documents_chunked": 26,
+    "chunks_created": 120,
+    "chunk_tails_merged": 0,
+    "chunks_skipped_too_short": 0,
+    "skipped_empty": 0,
+    "skipped_too_short": 0,
+    "skipped_too_long": 0,
+    "skipped_duplicate": 0,
+    "skipped_special_token_collision": 0,
+    "selected_characters": 0,
+    "selected_utf8_bytes": 0,
+    "selected_lines": 0
+  },
+  "evaluation_stats": {
+    "candidates_before_decontamination": 129,
+    "candidate_bytes_before_decontamination": 1076511,
+    "rejected_same_training_source_document": 0,
+    "rejected_exact_training_text": 0,
+    "rejected_training_ngram_overlap": 0,
+    "rejected_source_document_cap": 58,
+    "eligible_after_decontamination": 71,
+    "eligible_bytes_after_decontamination": 593029,
+    "documents_selected": 63,
+    "selected_characters": 528794,
+    "selected_utf8_bytes": 529477,
+    "selected_lines": 5019
+  },
+  "eligible_after_decontamination": {
+    "business_finance": {
+      "documents": 2,
+      "utf8_bytes": 20375
+    },
+    "code": {
+      "documents": 6,
+      "utf8_bytes": 50840
+    },
+    "engineering": {
+      "documents": 9,
+      "utf8_bytes": 67740
+    },
+    "general": {
+      "documents": 15,
+      "utf8_bytes": 126233
+    },
+    "humanities": {
+      "documents": 5,
+      "utf8_bytes": 35905
+    },
+    "logical": {
+      "documents": 8,
+      "utf8_bytes": 69583
+    },
+    "mathematics": {
+      "documents": 8,
+      "utf8_bytes": 70215
+    },
+    "networking": {
+      "documents": 5,
+      "utf8_bytes": 36152
+    },
+    "science": {
+      "documents": 6,
+      "utf8_bytes": 50483
+    },
+    "software": {
+      "documents": 6,
+      "utf8_bytes": 53760
+    },
+    "structured_mixed": {
+      "documents": 1,
+      "utf8_bytes": 11743
+    }
+  },
+  "weights": {
+    "general": 0.25,
+    "logical": 0.12,
+    "mathematics": 0.12,
+    "science": 0.1,
+    "engineering": 0.1,
+    "software": 0.08,
+    "code": 0.07,
+    "networking": 0.05,
+    "business_finance": 0.04,
+    "humanities": 0.05,
+    "structured_mixed": 0.02
+  },
+  "base_source_rejections": [],
+  "contamination_rejections": [],
+  "rejection_lists_truncated": {
+    "base_source_rejections": false,
+    "contamination_rejections": false
+  }
+}

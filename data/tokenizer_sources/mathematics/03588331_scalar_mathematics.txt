@@ -1,0 +1,105 @@
+In mathematics, more specifically in linear algebra, a scalar is an element of a field which is used to define a vector space through the operation of scalar multiplication: a vector (denoted v) multiplied by a scalar (denoted a) produces another vector (av). 
+Real numbers and complex numbers may be used as scalars in real and complex vector spaces, respectively.
+A scalar product operation – not to be confused with scalar multiplication – may be defined on a vector space, allowing two vectors to be multiplied in the defined way to produce a scalar. A vector space equipped with a scalar product is called an inner product space.
+A scalar may also have other roles in terms of vector components, in normed vector spaces, in modules, and in transformations.
+A quantity described by multiple scalars, such as having both direction and magnitude, is called a vector.
+The term scalar is also sometimes used informally to mean a vector, matrix, tensor, or other, usually, "compound" value that is actually reduced to a single component. Thus, for example, the product of a 1 × n matrix and an n × 1 matrix, which is formally a 1 × 1 matrix, is often said to be a scalar.
+The real component of a quaternion is also called its scalar part.
+The term scalar matrix is used to denote a matrix of the form kI where k is a scalar and I is the identity matrix.
+
+Etymology
+The word scalar derives from the Latin word scalaris, an adjectival form of scala (Latin for "ladder"). The first recorded usage of the word "scalar" in mathematics occurs in François Viète's Analytic Art (In artem analyticem isagoge) (1591):
+
+Magnitudes that ascend or descend proportionally in keeping with their nature from one kind to another may be called scalar terms.
+(Latin: Magnitudines quae ex genere ad genus sua vi proportionaliter adscendunt vel descendunt, vocentur Scalares.)
+According to a citation in the Oxford English Dictionary the first recorded usage of the term "scalar" in English came with W. R. Hamilton in 1846, referring to the real part of a quaternion:
+
+The algebraically real part may receive, according to the question in which it occurs, all values contained on the one scale of progression of numbers from negative to positive infinity; we shall call it therefore the scalar part.
+
+Definitions and properties
+
+Scalars of vector spaces
+A vector space is defined as a set of vectors (additive abelian group), a set of scalars (field), and a scalar multiplication operation that takes a scalar k and a vector v to form another vector kv. For example, in a coordinate space, the scalar multiplication 
+  
+    
+      
+        k
+        (
+        
+          v
+          
+            1
+          
+        
+        ,
+        
+          v
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          v
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle k(v_{1},v_{2},\dots ,v_{n})}
+  
+ yields 
+  
+    
+      
+        (
+        k
+        
+          v
+          
+            1
+          
+        
+        ,
+        k
+        
+          v
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        k
+        
+          v
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle (kv_{1},kv_{2},\dots ,kv_{n})}
+  
+. In a (linear) function space, kf is the function x ↦ k(f(x)).
+The scalars can be taken from any field, including the rational, algebraic, real, and complex numbers, as well as finite fields.
+
+Scalars as vector components
+According to a fundamental theorem of linear algebra, every vector space has a basis. It follows that every vector space over a field K is isomorphic to the corresponding coordinate vector space where each coordinate consists of elements of K (E.g., coordinates (a1, a2, ..., an) where ai ∈ K and n is the dimension of the vector space in consideration.). For example, every real vector space of dimension n is isomorphic to the n-dimensional real space Rn.
+
+Scalars in normed vector spaces
+Alternatively, a vector space V can be equipped with a norm function that assigns to every vector v in V a scalar ||v||. By definition, multiplying v by a scalar k also multiplies its norm by |k|. If ||v|| is interpreted as the length of v, this operation can be described as scaling the length of v by k.  A vector space equipped with a norm is called a normed vector space (or normed linear space).
+The norm is usually defined to be an element of V's scalar field K, which restricts the latter to fields that support the notion of sign. Moreover, if V has dimension 2 or more, K must be closed under square root, as well as the four arithmetic operations; thus the rational numbers Q are excluded, but the surd field is acceptable. For this reason, not every scalar product space is a normed vector space.
+
+Scalars in modules
+When the requirement that the set of scalars form a field is relaxed so that it need only form a ring (so that, for example, the division of scalars need not be defined, or the scalars need not be commutative), the resulting more general algebraic structure is called a module.
+In this case the "scalars" may be complicated objects.  For instance, if R is a ring, the vectors of the product space Rn can be made into a module with the n × n matrices with entries from R as the scalars. Another example comes from manifold theory, where the space of sections of the tangent bundle forms a module over the algebra of real functions on the manifold.
+
+Scaling transformation
+The scalar multiplication of vector spaces and modules is a special case of scaling, a kind of linear transformation.

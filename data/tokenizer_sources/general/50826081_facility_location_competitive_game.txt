@@ -1,0 +1,63 @@
+The competitive facility location game is a kind of competitive game in which service-providers select locations to place their facilities in order to maximize their profits. The game has the following components:
+
+There are several consumers who need a certain service, e.g, electricity connection.
+There are several producers that can supply this service, e.g, electricity companies.
+Each producer can build its facility (e.g, a power station) in one of several locations.
+For every pair of consumer (C) and location (L), there is a fixed cost of serving C from L (e.g, depending on the distance between the power station and the consumer's house). This cost is denoted Cost[C,L].
+The game is a sequential game with three steps:
+
+Each producer selects a location for placing its facility.
+Each producer set a price for each user (price discrimination is allowed, since there is a different cost for serving different consumers).
+Each consumer selects a facility to connect to.
+Each consumer has a certain private value for accepting the service.
+For each consumer-producer pair:
+
+The gain of the consumer for connecting to the producer's facility is his value minus the price;
+The gain of the producer is the price minus the cost of serving the consumer;
+The social welfare of this pair is the sum of the gains, i.e, the consumer's value minus the service cost.
+
+Equilibrium
+We analyze the game using backward induction.
+Step 3 is simple: each consumer just selects the cheapest facility.
+Step 2 is also quite simple. Suppose a producer P has its facility in location L. Then, the price it takes from consumer C must be at least Cost[C,L]. Suppose the locations are ordered in increasing order of the cost, i.e, the locations are L1, L2, ... such that Cost[C,L1]<Cost[C,L2]<... Then, the producer whose facility in location L1 can always win the consumer by offering him the price Cost[C,L2]. This is because the producer whose facility is L2 cannot offer a lower price. Therefore, in step 2 each producer sets the price to consumer C according to the cost of the next-cheapest producer.
+Step 1 - the facility-location step - is more challenging to analyze (this is why the game is named after this step). It is possible to prove that this is a potential game (The potential is the total social-welfare; when a new producer enters the game, the increase in social-welfare exactly equals the producer's profit). Therefore, this step has a pure, Nash equilibrium, and the entire game has a pure subgame perfect equilibrium.
+Moreover, every maximum-welfare outcome is also a maximum-potential outcome, so it must also be a Nash equilibrium. This means that the price of stability is 1.
+The facility-location game may have other pure Nash equilibria, in which the social welfare is not maximal. However, it is possible to prove that the social welfare in such equilibria is at least half the optimum. Therefore, the price of anarchy is at most 2.
+Moreover, it is possible to show that the price-of-anarchy is at most 2 even when the game does not converge to equilibrium. Consider a random sequence of best-response moves. If the length of the sequence is 
+  
+    
+      
+        O
+        (
+        n
+        ⋅
+        ln
+        ⁡
+        (
+        1
+        
+          /
+        
+        ϵ
+        )
+        )
+      
+    
+    {\displaystyle O(n\cdot \ln(1/\epsilon ))}
+  
+, then the social welfare after the sequence is at least 
+  
+    
+      
+        1
+        
+          /
+        
+        2
+        −
+        ϵ
+      
+    
+    {\displaystyle 1/2-\epsilon }
+  
+ times the optimum. This latter result is true in much more general class of games, called utility games.

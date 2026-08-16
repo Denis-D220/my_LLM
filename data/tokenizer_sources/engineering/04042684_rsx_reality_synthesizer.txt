@@ -1,0 +1,96 @@
+The Reality Synthesizer (RSX) is a proprietary graphics processing unit (GPU) developed jointly by Nvidia and Sony for the PlayStation 3 video game console. Based on Nvidia's GeForce 7 series, specifically the 7800 GTX, the RSX utilizes a hybrid design incorporating elements of the G70 and G71 (previously known as NV47) architecture. It features separate vertex and pixel shader pipelines and supports advanced graphics rendering features such as high dynamic range, anti-aliasing, and S3 texture compression, with a theoretical floating-point performance of 192 GFLOPS.
+The RSX includes 256 MB of GDDR3 SDRAM, clocked at 650 MHz with an effective transmission rate of 1300 MT/s. It can also access up to 224 MB of the console’s XDR DRAM main memory through the Cell Broadband Engine, the PlayStation 3's CPU, allowing for a combined maximum of 480 MB of usable memory.
+While the RSX handles the majority of graphics processing tasks, the Cell processor assists with graphics-related computations, offering a complementary role in rendering workloads.
+
+Specifications
+
+Specifications
+Unless otherwise noted, the following specifications are derived from Sony’s press materials released at the E3 2005 conference, slides presented at the same event, and a Sony presentation at the 2006 Game Developers Conference.
+
+Floating-point performance: 192 GFLOPS
+Core clock: 500 MHz
+Manufacturing process: 90 nm (initial), 65 nm (2008), 40 nm (2010), and 28 nm (2013)
+Transistor count: Over 300 million
+Architecture: Based on NV47 (GeForce 7 series)
+Endianness: Little-endian
+Texture units: 24 texture filtering (TF), 8 vertex texture addressing (TA)
+Texel fillrate: 12.0 gigatexels/sec (24 TF × 500 MHz)
+Texture sampling: 32 unfiltered samples/clock (8 TA × 4 samples)
+Render output units (ROPs): 8
+Peak pixel fillrate (theoretical): 4.0 gigapixels/sec
+Z-buffering rate: 8.0 gigasamples/sec (2 samples × 8 ROPs × 500 MHz)
+Dot product operations: Up to 51 billion/sec (combined with Cell CPU)
+Pixel precision: 128-bit, supporting high-dynamic-range rendering
+Interfaces: Cell FlexIO
+API support: PSGL (based on OpenGL ES 1.1 and Nvidia Cg)
+Texture compression: Support for S3TC
+
+Additional features
+Texture filtering: Bilinear, trilinear, anisotropic, quincunx
+Antialiasing: Quincunx, up to 4× MSAA, SSAA, Alpha to Coverage, Alphakill
+
+Memory architecture
+GDDR3 SDRAM memory:
+256 MB at 650 MHz (1300 MT/s)
+128-bit interface
+20.8 GB/s bandwidth
+Structure: 2 partitions (128 MB each)
+Bus width: 64-bit per partition
+Banks: 8 per partition (16 MB per bank)
+Pages per bank: 4,096 (4 KB per page)
+Row address: 12-bit
+Column address: 9-bit
+Minimum access granularity: 8 bytes (aligned with RSX–GDDR3 bus width)
+Access to CPU Rambus XDR DRAM via Cell FlexIO bus interface
+56-bit serial out of 64-bit)
+Bandwidth: 20 GB/s read, 15 GB/s write
+576 KB texture cache (96 KB per quad of pixel pipelines)
+
+RSX memory map
+Although the RSX has 256 MB of GDDR3 RAM, not all of it is usable. The last 4 MB is reserved for keeping track of the RSX internal state and issued commands. The 4 MB of GPU Data contains RAMIN, RAMHT, RAMFC, DMA Objects, Graphic Objects, and the Graphic Context. The following is a breakdown of the address within 256 MB of the RSX.
+
+Besides local GDDR3 memory, main XDR memory can be accessed by RSX too, which is limited to either:
+
+0 MB – 256 MB (0x00000000 – 0x0FFFFFFF)
+-or-
+0 MB – 512 MB (0x00000000 – 0x1FFFFFFF)
+
+Speed, bandwidth and latency
+System bandwidth (theoretical maximum):
+
+Cell to/from 256 MB XDR : 25.6 GB/s
+Cell to RSX (IOIFO): 20 GB/s (practical : 15.8 GB/s @ packetsize 128B)
+Cell from RSX (IOIFI) : 15 GB/s (practical : 11.9 GB/s @ packetsize 128B)
+RSX to/from 256 MB GDDR3 : 20.8 GB/s (@ 650 MHz)
+Because of the aforementioned layout of the communication path between the different chips, and the latency and bandwidth differences between the various components, there are different access speeds depending on the direction of the access in relation to the source and destination. The following is a chart showing the speed of reads and writes to the GDDR3 and XDR memory from the viewpoint of the Cell and RSX. Note that these are measured speeds (rather than calculated speeds) and they should be worse if RSX and GDDR3 access are involved because these figures were measured when the RSX was clocked at 550Mhz and the GDDR3 memory was clocked at 700Mhz. The shipped PS3 has the RSX clocked in at 500Mhz. In addition, the GDDR3 memory was also clocked lower at 650Mhz.
+
+Speed table
+
+Because of the very slow Cell Read speed from the 256 MB GDDR3 memory, it is more efficient for the Cell to work in XDR and then have the RSX pull data from XDR and write to GDDR3 for output to the HDMI display. This is why extra texture lookup instructions were included in the RSX to allow loading data from XDR memory (as opposed to the local GDDR3 memory).
+
+RSX libraries
+The RSX is dedicated to 3D graphics, and developers are able to use different API libraries to access its features. The easiest way is to use high level PSGL, which is basically OpenGL|ES with programmable pipeline added in, however this is unpopular due to the performance overhead on a relatively weak console CPU.
+At a lower level developers can use LibGCM, which is an API that builds RSX command buffers at a lower level. (PSGL is actually implemented on top of LibGCM). This is done by setting up commands (via FIFO Context) and DMA Objects and issuing them to the RSX via DMA calls.
+
+Differences with the G70 architecture
+The RSX 'Reality Synthesizer' is based on the G70 architecture, but features a few changes to the core. The biggest difference between the two chips is the way the memory bandwidth works. The G70 only supports rendering to local memory, while the RSX is able to render to both system and local memory. Since rendering from system memory has a much higher latency compared to rendering from local memory, the chip's architecture had to be modified to avoid a performance penalty. This was achieved by enlarging the chip size to accommodate larger buffers and caches in order to keep the graphics pipeline full. The result was that the RSX only has 60% of the local memory bandwidth of the G70, making it necessary for developers to use the system memory in order to achieve performance targets.
+
+Other RSX features/differences include:
+
+More shader instructions
+Extra texture lookup logic (helps RSX transport data from XDR)
+Fast vector normalize
+
+Press releases
+Sony staff were quoted in PlayStation Magazine saying that the "RSX shares a lot of inner workings with Nvidia 7800 which is based on G70 architecture." Since the G70 is capable of carrying out 136 shader operations per clock cycle, the RSX was expected to feature the same number of parallel pixel and vertex shader pipelines as the G70, which contains 24 pixel and 8 vertex pipelines.
+Nvidia CEO Jensen Huang stated during Sony's pre-show press conference at E3 2005 that the RSX is twice as powerful as the GeForce 6800 Ultra.
+
+Bumpgate
+The RSX GPU in early models of the PlayStation 3 was initially fabricated using a 90 nm process and was affected by reliability issues related to its packaging and thermal behavior—a problem commonly referred to as "Bumpgate". The high operating temperatures of the chip could weaken the solder joints in the ball grid array (BGA) connecting the die to the interposer, leading to degraded performance or complete hardware failure over time.
+Several factors contributed to these failures:
+
+Mismatched coefficients of thermal expansion between materials in the die and interposer caused differential expansion during thermal cycles, placing mechanical stress on the BGA.
+Uneven heat distribution across the die, due to variable transistor densities and localized workloads, led to thermal hotspots. These caused parts of the die to expand at different rates, increasing mechanical fatigue in certain regions of the BGA.
+Electromigration within the solder joints led to the formation of voids, further weakening the BGA connections.
+The RSX was packaged using a flip-chip process. The underfill material used in early versions had a relatively low glass transition temperature (Tg), which could be exceeded during prolonged gameplay. Once the Tg was surpassed, the underfill lost structural integrity and provided less mechanical support to the solder joints, increasing the risk of failure.
+These issues primarily affected launch and early production units. Later revisions of the RSX transitioned to smaller process nodes—65 nm in 2008, 40 nm in 2010, and 28 nm in 2013—which reduced power consumption and, in turn, heat generation, helping to mitigate the thermal stress that contributed to earlier failures.

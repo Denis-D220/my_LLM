@@ -1,0 +1,30 @@
+The Sun-2 series of UNIX workstations and servers was launched by Sun Microsystems in November 1983. As the name suggests, the Sun-2 represented the second generation of Sun systems, superseding the original Sun-1 series. The Sun-2 series used a 10 MHz Motorola 68010 microprocessor with a proprietary Sun-2 Memory Management Unit (MMU), which enabled it to be the first Sun architecture to run a full virtual memory UNIX implementation, SunOS 1.0, based on 4.1BSD. Early Sun-2 models were based on the Intel Multibus architecture, with later models using VMEbus, which continued to be used in the successor Sun-3 and Sun-4 families.
+Sun-2 systems were supported in SunOS until version 4.0.3.
+A port to support Multibus Sun-2 systems in NetBSD was begun in January 2001 from the Sun-3 support in the NetBSD 1.5 release. Code supporting the Sun-2 began to be merged into the NetBSD tree in April 2001. sun2 is considered a tier 2 support platform as of NetBSD 7.0.1.
+
+Sun-2 models
+
+Models are listed in approximately chronological order.
+
+A desktop disk and tape sub-system was introduced for the Sun-2/50 desktop workstation. It could hold a 5 ¼" disk drive and 5 ¼" tape drive. It used DD-50 (sometimes erroneously referred to as DB-50) connectors for its SCSI cables, a Sun specific design. It was often referred to as a "Sun Shoebox".
+
+Sun-1 systems upgraded with Sun-2 Multibus CPU boards were sometimes referred to as the 2/100U (upgraded Sun-100) or 2/150U (upgraded Sun-150).
+A typical configuration of a monochrome 2/120 with 4 MB of memory, 71 MB SCSI disk and 20 MB 1/4" SCSI tape cost $29,300 (1986 US price list).
+A color 2/160 with 8 MB of memory, two 71 MB SCSI disks and 60 MB 1/4" SCSI tape cost $48,800 (1986 US price list).
+A Sun 2/170 server with 4 MB of memory, no display, two Fujitu Eagle 380 MB disk drive, one Xylogics 450 SMD disk controller, a 6250 bpi 1/2 inch tape drive and a 72" rack cost $79,500 (1986 US price list).
+
+Sun-2 hardware
+
+Sun 2 Multibus systems
+Sun 2/120 (9 slot deskside) and 2/170 (15 slot rackmount) systems were based on the Multibus architecture. The CPU board was based on a 10 MHz 68010 processor with a proprietary Sun Memory Management Unit (MMU) and could address 8 MB of physical and 16 MB of virtual memory. The top 1 MB of physical memory address space was reserved for the monochrome frame buffer. The Multibus CPU board supported the Sun-1 parallel keyboard and mouse as well as two serial ports.
+
+Sun 2 VMEbus systems
+The Sun 2/50 (2 slot desktop), Sun 2/130 (12 slot monochrome deskside) and Sun 2/160 (12 slot color deskside) used quad-depth, triple height Eurocard VMEbus CPU boards. The VMEbus CPU board was based on the same design as the Multibus CPU but also included 2 MB or 4 MB of memory, the Sun-2 monochrome frame buffer, and 10 Mbit/s Thick Ethernet on board.
+Sun provided 1 MB Multibus memory boards and 1 MB and 4 MB VMEbus memory boards but only supported configurations with a maximum of 4 MB RAM. Companies such as Helios Systems also made 4 MB memory boards that would work in Sun systems.
+A common frame buffer was the Sun-2 Prime Monochrome Video. This board provided an 1152x900 monochrome display with TTL or ECL video signals, and keyboard and mouse ports. It normally occupied the top 1 MB of physical memory address space. There was also a Sun-2 Color Video board available that provided an 1152x900 8-bit color display. This board occupied the top 4 MB of address space.
+42 MB MFM disks were commonly used for storage. Two disks could be connected to an Adaptec MFM/SCSI and then to a Sun-2 Multibus Serial/SCSI Host Adapter. The SCSI board provided two additional serial ports. For larger storage requirements, 65, 130, and 380 MB SMD disks were connected to a Xylogics 450 SMD Controller. The SMD controller could support four disks even though Sun only supported two. A 20 MB QIC tape drive could be connected through an Archive QIC/SCSI converter. The system also supported 1/2" tape drives connected to a Computer Products Corporation TAPEMASTER or a Xylogics 472 board.
+An Ethernet connection was provided by a Sun board based on the Intel 82586 chip, or a 3Com 3c400 board. The server could support diskless Sun-2/50 clients through the Ethernet board.
+Other supported Multibus boards included the Sky Computer Floating Point Processor, Sun ALM (Asynchronous Line Multiplexer) with 8 serial ports, and Sun SunLink Communications Processor (SCP) for SNA and X.25 connectivity.
+
+Reception
+BYTE in August 1984 described the Sun-2/120 as a "VAX-class machine", with "superb graphics and excellent response time under loading".

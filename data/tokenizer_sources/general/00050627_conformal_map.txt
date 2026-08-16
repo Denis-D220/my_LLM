@@ -1,0 +1,512 @@
+In mathematics, a conformal map is a function that locally preserves angles, but not necessarily lengths.
+More formally, let 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ be open subsets of 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{n}}
+  
+. A function 
+  
+    
+      
+        f
+        :
+        U
+        →
+        V
+      
+    
+    {\displaystyle f:U\to V}
+  
+ is called conformal (or angle-preserving) at a point 
+  
+    
+      
+        
+          u
+          
+            0
+          
+        
+        ∈
+        U
+      
+    
+    {\displaystyle u_{0}\in U}
+  
+ if it preserves angles between directed curves through 
+  
+    
+      
+        
+          u
+          
+            0
+          
+        
+      
+    
+    {\displaystyle u_{0}}
+  
+, as well as preserving orientation. Conformal maps preserve both angles and the shapes of infinitesimally small figures, but not necessarily their size or curvature.
+The conformal property may be described in terms of the Jacobian derivative matrix of a coordinate transformation. The transformation is conformal whenever the Jacobian at each point is a positive scalar times a rotation matrix (orthogonal with determinant one). Some authors define conformality to include orientation-reversing mappings  whose Jacobians can be written as any scalar times any orthogonal matrix.
+For mappings in two dimensions, the (orientation-preserving) conformal mappings are precisely the locally invertible complex analytic functions. In three and higher dimensions, Liouville's theorem sharply limits the conformal mappings to a few types.
+The notion of conformality generalizes in a natural way to maps between Riemannian or semi-Riemannian manifolds.
+
+In two dimensions
+If 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is an open subset of the complex plane 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+, then a function 
+  
+    
+      
+        f
+        :
+        U
+        →
+        
+          C
+        
+      
+    
+    {\displaystyle f:U\to \mathbb {C} }
+  
+ is conformal if and only if it is holomorphic and its derivative is everywhere non-zero on 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+. If 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is antiholomorphic (complex conjugate to a holomorphic function), it preserves angles but reverses their orientation.
+In the literature, there is another definition of conformal: a mapping 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ which is one-to-one and holomorphic on an open set in the plane. The open mapping theorem forces the inverse function (defined on the image of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+) to be holomorphic. Thus, under this definition, a map is conformal if and only if it is biholomorphic. The two definitions for conformal maps are not equivalent. Being one-to-one and holomorphic implies having a non-zero derivative. In fact, we have the following relation, the inverse function theorem:
+
+  
+    
+      
+        (
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        
+          z
+          
+            0
+          
+        
+        )
+        
+          )
+          ′
+        
+        =
+        
+          
+            1
+            
+              
+                f
+                ′
+              
+              (
+              
+                z
+                
+                  0
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle (f^{-1}(z_{0}))'={\frac {1}{f'(z_{0})}}}
+  
+
+where 
+  
+    
+      
+        
+          z
+          
+            0
+          
+        
+        ∈
+        
+          C
+        
+      
+    
+    {\displaystyle z_{0}\in \mathbb {C} }
+  
+. However, the exponential function is a holomorphic function with a nonzero derivative, but is not one-to-one since it is periodic.
+The Riemann mapping theorem, one of the profound results of complex analysis, states that any non-empty open simply connected proper subset of 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+ admits a bijective conformal map to the open unit disk in 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+. Informally, this means that any blob can be transformed into a perfect disk by some conformal map.
+
+Global conformal maps on the Riemann sphere
+A map of the Riemann sphere onto itself is conformal if and only if it is a Möbius transformation.
+The complex conjugate of a Möbius transformation preserves angles, but reverses the orientation. For example, circle inversions.
+
+Conformality with respect to three types of angles
+In plane geometry there are three types of angles that may be preserved in a conformal map. Each is hosted by its own real algebra, ordinary complex numbers, split-complex numbers, and dual numbers. The conformal maps are described by linear fractional transformations in each case.
+
+In three or more dimensions
+
+Riemannian geometry
+
+In Riemannian geometry, two Riemannian metrics 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ and 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ on a smooth manifold 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ are called conformally equivalent if 
+  
+    
+      
+        g
+        =
+        u
+        h
+      
+    
+    {\displaystyle g=uh}
+  
+ for some positive function 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ on 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+. The function 
+  
+    
+      
+        
+          
+            u
+          
+        
+      
+    
+    {\displaystyle {\sqrt {u}}}
+  
+ is called the conformal factor.
+A diffeomorphism between two Riemannian manifolds is called a conformal map if the pulled back metric is conformally equivalent to the original one.  For example, stereographic projection of a sphere onto the plane augmented with a point at infinity is a conformal map.
+One can also define a conformal structure on a smooth manifold, as a class of conformally equivalent Riemannian metrics.
+
+Euclidean space
+A classical theorem of Joseph Liouville shows that there are far fewer conformal maps in higher dimensions than in two dimensions. Any conformal map from an open subset of Euclidean space into the same Euclidean space of dimension three or greater can be composed from three types of transformations: a homothety, an isometry, and a special conformal transformation. For linear transformations, a conformal map may only be composed of homothety and isometry, and is called a conformal linear transformation.
+
+Applications
+Applications of conformal mapping exist
+in aerospace engineering, 
+in biomedical sciences 
+(including brain mapping
+and genetic mapping),
+in applied math
+(for geodesics 
+and in geometry),
+in earth sciences
+(including geophysics,
+geography,
+and cartography),
+in engineering, 
+and in electronics.
+
+Cartography
+
+In cartography, several named map projections, including the Mercator projection and the stereographic projection are conformal. The preservation of compass directions makes them useful in marine navigation.
+
+Physics and engineering
+Conformal mappings are invaluable for solving problems in engineering and physics that can be expressed in terms of functions of a complex variable yet exhibit inconvenient geometries. By choosing an appropriate mapping, the analyst can transform the inconvenient geometry into a much more convenient one. For example, one may wish to calculate the electric field, 
+  
+    
+      
+        E
+        (
+        z
+        )
+      
+    
+    {\displaystyle E(z)}
+  
+, arising from a point charge located near the corner of two conducting planes separated by a certain angle (where 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+ is the complex coordinate of a point in 2-space). This problem per se is quite clumsy to solve in closed form. However, by employing a very simple conformal mapping, the inconvenient angle is mapped to one of precisely 
+  
+    
+      
+        π
+      
+    
+    {\displaystyle \pi }
+  
+ radians, meaning that the corner of two planes is transformed to a straight line. In this new domain, the problem (that of calculating the electric field impressed by a point charge located near a conducting wall) is quite easy to solve. The solution is obtained in this domain, 
+  
+    
+      
+        E
+        (
+        w
+        )
+      
+    
+    {\displaystyle E(w)}
+  
+, and then mapped back to the original domain by noting that 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+ was obtained as a function (viz., the composition of 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ and 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+) of 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+, whence 
+  
+    
+      
+        E
+        (
+        w
+        )
+      
+    
+    {\displaystyle E(w)}
+  
+ can be viewed as 
+  
+    
+      
+        E
+        (
+        w
+        (
+        z
+        )
+        )
+      
+    
+    {\displaystyle E(w(z))}
+  
+, which is a function of 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+, the original coordinate basis. Note that this application is not a contradiction to the fact that conformal mappings preserve angles, they do so only for points in the interior of their domain, and not at the boundary. Another example is the application of conformal mapping technique for solving the boundary value problem of liquid sloshing in tanks.
+If a function is harmonic (that is, it satisfies Laplace's equation 
+  
+    
+      
+        
+          ∇
+          
+            2
+          
+        
+        f
+        =
+        0
+      
+    
+    {\displaystyle \nabla ^{2}f=0}
+  
+) over a plane domain (which is two-dimensional), and is transformed via a conformal map to another plane domain, the transformation is also harmonic.  For this reason, any function which is defined by a potential can be transformed by a conformal map and still remain governed by a potential.  Examples in physics of equations defined by a potential include the electromagnetic field, the gravitational field, and, in fluid dynamics, potential flow, which is an approximation to fluid flow assuming constant density, zero viscosity, and irrotational flow.  One example of a fluid dynamic application of a conformal map is the Joukowsky transform that can be used to examine the field of flow around a Joukowsky airfoil.
+Conformal maps are also valuable in solving nonlinear partial differential equations in some specific geometries. Such analytic solutions provide a useful check on the accuracy of numerical simulations of the governing equation. For example, in the case of very viscous free-surface flow around a semi-infinite wall, the domain can be mapped to a half-plane in which the solution is one-dimensional and straightforward to calculate.
+For discrete systems, Noury and Yang presented a way to convert discrete systems root locus into continuous root locus through a well-known conformal mapping in geometry (aka inversion mapping).
+
+Maxwell's equations
+Maxwell's equations are preserved by Lorentz transformations which form a group including circular and hyperbolic rotations. The latter are  sometimes called Lorentz boosts to distinguish them from circular rotations. All these transformations are conformal since hyperbolic rotations preserve hyperbolic angle, (called rapidity) and the other rotations preserve circular angle. The introduction of translations in the Poincaré group again preserves angles. 
+A larger group of conformal maps for relating solutions of Maxwell's equations was identified by Ebenezer Cunningham (1908) and Harry Bateman (1910). Their training at Cambridge University had given them facility with the method of image charges and associated methods of images for spheres and inversion. As recounted by Andrew Warwick (2003) Masters of Theory:
+
+Each four-dimensional solution could be inverted in a four-dimensional hyper-sphere of pseudo-radius 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ in order to produce a new solution.
+Warwick highlights this "new theorem of relativity" as a Cambridge response to Einstein, and as founded on exercises using the method of inversion, such as found in James Hopwood Jeans textbook Mathematical Theory of Electricity and Magnetism.
+
+General relativity
+In general relativity, conformal maps are the simplest and thus most common type of causal transformations. Physically, these describe different universes in which all the same events and interactions are still (causally) possible, but a new additional force is necessary to affect this (that is, replication of all the same trajectories would necessitate departures from geodesic motion because the metric tensor is different). It is often used to try to make models amenable to extension beyond curvature singularities, for example to permit description of the universe even before the Big Bang.

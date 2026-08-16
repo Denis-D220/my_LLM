@@ -1,0 +1,70 @@
+TCP-Friendly Rate Control (TFRC) is a congestion control mechanism designed for unicast flows operating in an Internet environment and competing with TCP traffic. The goal is to compete fairly with TCP traffic on medium timescales, but to be much less variable than TCP on short timescales.
+
+TCP-friendliness
+TCP congestion control works by maintaining a window of bytes that have not yet been acknowledged. This window is increased by a known value (α) every round-trip time if no packets (a collection of bytes traversing the network) have been lost, and is decreased by a known value (β) if packet loss is detected. Thus TCP's window (and hence throughput) is a function of the losses observed in the network and the round-trip time experienced by the flow. More specifically, TCP uses an   additive increase/multiplicative decrease (AIMD) protocol, which significantly drops throughput when congestion is experienced.
+Because TCP backs off when congestion is detected, it will be certain to lose out when it is competing with a higher-throughput protocol that does not back off. Thus, to maintain fairness with TCP traffic, TCP-friendly protocols, defined as protocols with packet arrival rates never exceeding that of a TCP connection under the same circumstances, are required. 
+
+Congestion control in TFRC
+TFRC was defined by Internet Engineering Task Force RFC 5348 as a TCP-friendly protocol which does not have the same sudden drops in throughput which a TCP connection with AIMD-based congestion control may experience when faced with congestion (e.g. in applications such as media streaming where consistent quality is important).
+The idea behind TFRC is to measure the loss probability and round-trip time and to use these as the input parameters to a model of TCP throughput. The expected throughput from this model is then used to directly drive the transmit rate of a TFRC flow. The equation used by TFRC to adjust the target transmit rate X (in bits per second) is:
+
+  
+    
+      
+        X
+        =
+        
+          
+            s
+            
+              R
+              ×
+              
+                
+                  2
+                  p
+                  
+                    /
+                  
+                  3
+                
+              
+              +
+              12
+              
+                
+                  3
+                  p
+                  
+                    /
+                  
+                  8
+                
+              
+              ×
+              p
+              ×
+              (
+              1
+              +
+              32
+              
+                p
+                
+                  2
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle X={\frac {s}{R\times {\sqrt {2p/3}}+12{\sqrt {3p/8}}\times p\times (1+32p^{2})}}}
+  
+ where
+
+s represents the maximum segment size;
+R represents the round-trip time; and
+p represents the packet loss fraction.
+Under typical conditions, the application-layer protocol can then choose the highest transmit rate (e.g. the coding rate of a media-streaming application) that is still less than X in order to achieve good performance without sudden drops in quality.

@@ -1,0 +1,60 @@
+GraalVM is a Java Development Kit (JDK) written in Java. The open-source distribution of GraalVM is based on OpenJDK, and the enterprise distribution is based on Oracle JDK. Along with just-in-time (JIT) compilation, GraalVM can also compile a Java application ahead-of-time (AOT). This allows for faster initialization, greater runtime performance, and decreased resource consumption, but the resulting executable can only run on the platform it was compiled for.
+It provides additional programming languages and execution modes. The first production-ready release, GraalVM 19.0, was distributed in May 2019. The most recent release is GraalVM 25.2.4, made available in July 2026.
+Major differentiators of GraalVM compared to the base JDK include:
+
+Graal Compiler, a JIT compiler.
+GraalVM Native Image, a technology for AOT compilation of Java applications.
+Truffle Language Implementation Framework and GraalVM SDK, a Java-based framework and a collection of APIs for developing high-performance language runtimes.
+GraalVM Polyglot API, an API to embed guest language code in a Java-based host application.
+JavaScript Runtime, an ECMAScript 2023-compliant JavaScript runtime, as well as Node.js.
+LLVM Runtime is a runtime to execute languages that can be transformed into LLVM bitcode.
+
+Goals
+To improve the performance of Java virtual machine (JVM)-based languages to match native languages.
+To reduce the startup time of JVM-based applications by compiling them ahead of time.
+To enable GraalVM integration into the Oracle Database, OpenJDK, Android/iOS, and similar custom embeddings.
+To enable embedding guest language code in a JVM-based host application.
+To enable mixing of code from any programming language in a single application, billed as a "polyglot application."
+
+History
+GraalVM has its roots in the Maxine Virtual Machine project at Sun Microsystems Laboratories (now Oracle Labs). The project's goal was to write a Java virtual machine in Java itself to avoid the problems of developing in C++, particularly manual memory management, and benefit from meta-circular optimizations. The project changed its focus to the compiler and to hook it into the HotSpot runtime as much as possible. The GraalVM compiler, Graal, was started by manually converting the code of the HotSpot client compiler (named "C1") into Java, replacing the previous Maxine compiler.
+Graal was included in HotSpot-based JDK releases such as OpenJDK from Java SE 9 through 15, to provide experimental ahead-of-time compilation. The UseJVMCICompiler option also enabled the use of Graal as a replacement for the server compiler (named "C2"). The option was removed in Java SE 16 to eliminate the duplicate effort of maintaining a version in the JDK and a standalone GraalVM release. A similar function to create a native executable from a Java application is provided by the native-image tool of standalone GraalVM releases. The tool processes a Java application's classes and other metadata to create a binary for a specific operating system and architecture. It can be used to build a native executable or a native shared library.
+
+Releases
+GraalVM is available as Oracle GraalVM under the GraalVM Free Terms and Conditions (GFTC) license, as Oracle GraalVM Enterprise Edition accessible by accepting the "OTN License Agreement Oracle GraalVM Enterprise Edition Including License for Early Adopter Versions", or as a Community Edition with an open-source license. Oracle Corporation announced the release of Oracle GraalVM Enterprise Edition on May 8, 2019, and Oracle GraalVM on June 13, 2023, introducing a new GraalVM Free Terms and Conditions (GFTC) license. GraalVM can substitute for a default JDK on Linux and macOS platforms on x64 and AArch64 CPUs, and on a Windows x64 platform. The release schedule is at the Oracle Help Center and the GraalVM website.
+
+Components
+The GraalVM compiler, Graal, is shipped with the components of a normal Java virtual machine (OpenJDK). Additional components are included in GraalVM to enable new execution modes (GraalVM Native Image) or programming languages (LLVM runtime, GraalVM JavaScript as a potential replacement to the deprecated Nashorn engine, TRegex as a regular expression engine).
+
+Compiler
+The GraalVM compiler, Graal, is a modern Java (JIT) compiler. It complements or replaces the existing compilers (C1/C2 in HotSpot). In contrast to those existing compilers, Graal is written in a modular, maintainable and extendable fashion in Java itself. It is released under GPL version 2 with the classpath exception.
+
+Native Image
+GraalVM Native Image is an ahead-of-time compilation technology that produces executable binaries of class files. It is released as an early adopter technology, which means it is production-ready but may include backport incompatible updates in future releases.
+This functionality supports JVM-based languages, but can optionally run dynamic languages, developed on top of GraalVM with the Truffle framework. The executable file does not run on a JVM and uses necessary runtime components such as thread scheduling or GC from a minimal bespoke virtual machine called Substrate VM. Since the resulting native binary includes application classes, JDK dependencies and libraries already, the startup and execution time are reduced significantly.
+GraalVM Native Image is officially supported by the Fn, Gluon, Helidon, Micronaut, Picocli, Quarkus, Vert.x and Spring Boot Java frameworks.
+In September 2016, Oracle detailed plans to add ahead-of-time compilation to the OpenJDK using the GraalVM compiler for Java SE 9. This proposal, tracked by JEP 295: Ahead-of-Time Compilation, was included in Java SE 9. The experimental use of GraalVM as a just-in-time compiler was added for the Linux x64 platform for Java SE 10.
+In Java SE versions 9 to 15, the jaotc command creates an executable. The experimental -XX:+EnableJVMCIProduct flag enables the use of Graal JIT compiler. The functionality is since available in the Native Image component of standalone GraalVM releases.
+
+Truffle Language Implementation Framework
+In association with GraalVM, Oracle Labs developed an abstract syntax tree (AST) interpreter called "Truffle" that enables it to implement languages on top of GraalVM. Many languages have been implemented in Truffle, including an experimental C interpreter claiming to be about as fast as GCC and Clang.
+The Truffle framework and its dependent part, GraalVM SDK, are released under the Universal Permissive License, version 1.0, to encourage the use of the framework for projects that do not want to be bound by the copyright or other parent rights.
+
+Instrumentation-Based Tool Support
+A major advantage of the GraalVM ecosystem is language-agnostic, fully dynamic instrumentation support directly built into the VM runtime.  Execution events can be captured by API clients with overhead that is extremely low in fully optimized code.
+The core GraalVM installation provides a language-agnostic debugger, profiler, heap viewer, and others based on instrumentation and other VM support. GraalVM also includes a backend implementation of the Chrome Inspector remote debugging protocol. Although designed originally for JavaScript debugging, it can be used to debug all GraalVM languages from a browser.
+
+Embedding languages
+Another advantage of GraalVM is the possibility to embed code from a guest language in Java and write "polyglot" applications. A developer can integrate JavaScript, Python, or other supported languages inside Java source code, granting them the characteristic advantages of those languages. A host Java application and a guest language pass data back and forth in the same memory space. It is possible thanks to the Truffle Language Implementation Framework and the GraalVM Polyglot API. Below is the example how to call a function defined in Python from Java:The Python function increments its input value by one and returns the result to the host language. From Java, for security purposes, we ask first if the variable function can be executed via the canExecute() call, and then we invoke the function with the execute() call. Find more examples in the Embedding Languages reference documentation.
+
+Language and runtime support
+GraalVM is written in and for the Java ecosystem. It can run applications written in all languages that compile to the Java bytecode format, for example, Java, Scala, Kotlin, and more.
+Based on the Truffle Language Implementation Framework, the following additional languages are designed for use with GraalVM:
+
+GraalJS: An ECMAScript 2023 compliant JavaScript runtime, with support for Node.js
+GraalPy: A Python 3 language implementation
+GraalVM LLVM Runtime (Sulong): An LLVM bitcode interpreter implementation
+GraalWasm: A WebAssembly implementation
+TruffleRuby: A Ruby language implementation with preliminary support for Ruby on Rails
+FastR: An R language implementation
+Support for additional languages can be implemented by users of GraalVM. Some notable third-party language implementations are grCuda, SOMns, TruffleSqueak, and Yona.

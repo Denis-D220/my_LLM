@@ -1,0 +1,91 @@
+The Gaussian correlation inequality (GCI), formerly known as the Gaussian correlation conjecture (GCC),  is a mathematical theorem in the fields of mathematical statistics and convex geometry. 
+
+The statement
+The Gaussian correlation inequality states:
+Let 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ be an n-dimensional Gaussian probability measure on 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{n}}
+  
+, i.e. 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ a multivariate normal distribution, centered at the origin. Then for all convex sets 
+  
+    
+      
+        E
+        ,
+        F
+        ⊂
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle E,F\subset \mathbb {R} ^{n}}
+  
+ that are symmetric about the origin,
+
+  
+    
+      
+        μ
+        (
+        E
+        ∩
+        F
+        )
+        ≥
+        μ
+        (
+        E
+        )
+        ⋅
+        μ
+        (
+        F
+        )
+        .
+      
+    
+    {\displaystyle \mu (E\cap F)\geq \mu (E)\cdot \mu (F).}
+  
+
+As a simple example for n=2, one can think of darts being thrown at a board, with their landing spots in the plane distributed according to a 2-variable normal distribution centered at the origin. (This is a reasonable assumption for any given darts player, with different players being described by different normal distributions.) If we now consider a circle and a rectangle in the plane, both centered at the origin, then the proportion of the darts landing in the intersection of both shapes is no less than the product of the proportions of the darts landing in each shape. This can also be formulated in terms of conditional probabilities: if you're informed that your last dart hit the rectangle, then this information will increase your estimate of the probability that the dart hit the circle.
+
+History
+A special case of the inequality was conjectured in 1955; further development was given by Olive Jean Dunn in 1958. The general case was stated in 1972, also as a conjecture. The case of dimension n=2 was proved in 1977 and certain special cases of higher dimension have also been proven in subsequent years.
+The general case of the inequality remained open until 2014, when Thomas Royen, a retired German statistician, proved it using relatively elementary tools. In fact, Royen generalized the conjecture and proved it for multivariate gamma distributions. The proof did not gain attention when it was published in 2014, due to Royen's relative anonymity and the fact that the proof was published in the Far East Journal of Theoretical Statistics, which was not a reputable journal in the field. Another reason was a history of false proofs (by others) and many failed attempts to prove the conjecture, causing skepticism among mathematicians in the field.
+The conjecture, and its solution, came to public attention in 2017, when other mathematicians described Royen's proof in a mainstream publication and popular media reported on the story.

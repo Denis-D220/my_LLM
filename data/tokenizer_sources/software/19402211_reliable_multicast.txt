@@ -1,0 +1,32 @@
+Reliable multicast is any computer networking protocol that provides a reliable sequence of packets to multiple recipients simultaneously, making it suitable for applications such as multi-receiver file transfer.
+
+Overview
+Multicast is a network addressing method for the delivery of information to a group of destinations simultaneously using the most efficient strategy to deliver the messages over each link of the network only once, creating copies only when the links to the multiple destinations split (typically network switches and routers).  However, like the User Datagram Protocol, multicast does not guarantee the delivery of a message stream.  Messages may be dropped, delivered multiple times, or delivered out of order.  A reliable multicast protocol adds the ability for receivers to detect lost and/or out-of-order messages and take corrective action (similar in principle to TCP), resulting in a gap-free, in-order message stream.
+
+Reliability
+The exact meaning of reliability depends on the specific protocol instance. A minimal definition  of reliable multicast is the eventual delivery of all the data to all the group members, without enforcing any particular delivery order.  However, not all reliable multicast protocols ensure this level of reliability; many of them trade efficiency for reliability, in different ways. For example, while TCP makes the sender responsible for transmission reliability, multicast NAK-based protocols shift the responsibility to receivers: the sender never knows for sure that all the receivers have received all the data.   RFC-2887 explores the design space for bulk data transfer, with a brief discussion on the various issues and some hints at the possible different meanings of reliability.
+
+Reliable Group Data Delivery
+Reliable Group Data Delivery (RGDD) is a form of multicasting where an object is to be moved from a single source to a fixed set of receivers known before transmission begins. A variety of applications may need such delivery: Hadoop Distributed File System (HDFS) replicates any chunk of data two additional times to specific servers, VM replication to multiple servers may be required for scale-out of applications and data replication to multiple servers may be necessary for load balancing by allowing multiple servers to serve the same data from their local cached copies. Such delivery is frequent within datacenters due to the plethora of servers communicating while running highly distributed applications.
+RGDD may also occur across datacenters and is sometimes referred to as inter-datacenter Point to Multipoint (P2MP) Transfers. Such transfers deliver huge volumes of data from one datacenter to multiple datacenters for various applications: search engines distribute search index updates periodically (e.g. every 24 hours), social media applications push new content to many cache locations across the world (e.g. YouTube and Facebook), and backup services make several geographically dispersed copies for increased fault tolerance. To maximize bandwidth utilization and reduce the completion times of bulk transfers, a variety of techniques have been proposed for the selection of multicast forwarding trees.
+
+Virtual synchrony
+Modern systems like the Spread Toolkit, Quicksilver, and Corosync can achieve data rates of 10,000 multicasts per second or more and can scale to large networks with huge numbers of groups or processes.
+Most distributed computing platforms support one or more of these models.  For example, the widely supported object-oriented CORBA platforms all support transactions and some CORBA products support transactional replication in the one-copy-serializability model.  The "CORBA Fault Tolerant Objects standard" is based on the virtual synchrony model. Virtual synchrony was also used in developing the New York Stock Exchange fault-tolerance architecture, the French Air Traffic Control System, the US Navy AEGIS system, IBM's Business Process replication architecture for WebSphere and Microsoft's Windows Clustering architecture for Windows Longhorn enterprise servers.
+
+Systems that support virtual synchrony
+Virtual synchrony was first supported by Cornell University and was called the "Isis Toolkit".  Cornell's most current version, Vsync was released in 2013 under the name Isis2 (the name was changed from Isis2 to Vsync in 2015 in the wake of a terrorist attack in Paris by an extremist organization called ISIS), with periodic updates and revisions since that time.  The most current stable release is V2.2.2020; it was released on November 14, 2015; the V2.2.2048 release is currently available in Beta form.  Vsync aims at the massive data centers that support cloud computing.
+Other such systems include the Horus system the Transis system, the Totem system, an IBM system called Phoenix, a distributed security key management system called Rampart, the "Ensemble system", the Quicksilver system, "The OpenAIS project", its derivative the Corosync Cluster Engine and several products (including the IBM and Microsoft ones mentioned earlier).
+
+Other existing or proposed protocols
+Data Distribution Service
+Pragmatic General Multicast (PGM)
+QuickSilver Scalable Multicast
+Scalable Reliable Multicast
+SMART Multicast
+
+Library support
+JGroups (Java API)
+Spread: C/C++ API, Java API
+RMF (C# API)
+hmbdc open source (headers only) C++ middleware, ultra-low latency/high throughput, scalable and reliable inter-thread, IPC and network messaging

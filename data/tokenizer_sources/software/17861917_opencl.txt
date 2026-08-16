@@ -1,0 +1,345 @@
+OpenCL (Open Computing Language) is a framework for writing programs that execute across heterogeneous platforms consisting of central processing units (CPUs), graphics processing units (GPUs), digital signal processors (DSPs), field-programmable gate arrays (FPGAs) and other processors or hardware accelerators. OpenCL specifies a programming language (based on C99) for programming these devices and application programming interfaces (APIs) to control the platform and execute programs on the compute devices. OpenCL provides a standard interface for parallel computing using task- and data-based parallelism.
+OpenCL is an open standard maintained by the Khronos Group, a non-profit, open standards organization. Conformant implementations (passed the Conformance Test Suite) are available from a range of companies including AMD, Arm, Cadence, Google, Imagination, Intel, Nvidia, Qualcomm, Samsung, SPI and Verisilicon.
+
+Overview
+OpenCL views a computing system as consisting of a number of compute devices, which might be central processing units (CPUs) or "accelerators" such as graphics processing units (GPUs), attached to a host processor (a CPU). It defines a C-like language for writing programs. Functions executed on an OpenCL device are called "kernels". A single compute device typically consists of several compute units, which in turn comprise multiple processing elements (PEs). A single kernel execution can run on all or many of the PEs in parallel. How a compute device is subdivided into compute units and PEs is up to the vendor; a compute unit can be thought of as a "core", but the notion of core is hard to define across all the types of devices supported by OpenCL (or even within the category of "CPUs"), and the number of compute units may not correspond to the number of cores claimed in vendors' marketing literature (which may actually be counting SIMD lanes).
+In addition to its C-like programming language, OpenCL defines an application programming interface (API) that allows programs running on the host to launch kernels on the compute devices and manage device memory, which is (at least conceptually) separate from host memory. Programs in the OpenCL language are intended to be compiled at run-time, so that OpenCL-using applications are portable between implementations for various host devices. The OpenCL standard defines host APIs for C and C++; third-party APIs exist for other programming languages and platforms such as Python, Java, Perl, D and .NET. An implementation of the OpenCL standard consists of a library that implements the API for C and C++, and an OpenCL C compiler for the compute devices targeted.
+In order to open the OpenCL programming model to other languages or to protect the kernel source from inspection, the Standard Portable Intermediate Representation (SPIR) can be used as a target-independent way to ship kernels between a front-end compiler and the OpenCL back-end.
+More recently Khronos Group has ratified SYCL, a higher-level programming model for OpenCL as a single-source eDSL based on pure C++17 to improve programming productivity. People interested by C++ kernels but not in the SYCL single-source programming style can use C++ features with compute kernel sources written in "C++ for OpenCL" language.
+
+Memory hierarchy
+OpenCL defines a four-level memory hierarchy for the compute device:
+
+global memory: shared by all processing elements, but has high access latency (__global);
+read-only memory: smaller, low latency, writable by the host CPU but not the compute devices (__constant);
+local memory: shared by a group of processing elements (__local);
+per-element private memory (registers; __private).
+Not every device needs to implement each level of this hierarchy in hardware. Consistency between the various levels in the hierarchy is relaxed, and only enforced by explicit synchronization constructs, notably barriers.
+Devices may or may not share memory with the host CPU. The host API provides handles on device memory buffers and functions to transfer data back and forth between host and devices.
+
+OpenCL kernel language
+The programming language that is used to write compute kernels is called kernel language. OpenCL adopts C/C++-based languages to specify the kernel computations performed on the device with some restrictions and additions to facilitate efficient mapping to the heterogeneous hardware resources of accelerators. Traditionally OpenCL C was used to program the accelerators in OpenCL standard, later C++ for OpenCL kernel language was developed that inherited all functionality from OpenCL C but allowed to use C++ features in the kernel sources.
+
+OpenCL C language
+OpenCL C is a C99-based language dialect adapted to fit the device model in OpenCL. Memory buffers reside in specific levels of the memory hierarchy, and pointers are annotated with the region qualifiers __global, __local, __constant, and __private, reflecting this. Instead of a device program having a main function, OpenCL C functions are marked __kernel to signal that they are entry points into the program to be called from the host program. Function pointers, bit fields and variable-length arrays are omitted, and recursion is forbidden. The C standard library is replaced by a custom set of standard functions, geared toward math programming.
+OpenCL C is extended to facilitate use of parallelism with vector types and operations, synchronization, and functions to work with work-items and work-groups. In particular, besides scalar types such as float and double, which behave similarly to the corresponding types in C, OpenCL provides fixed-length vector types such as float4 (4-vector of single-precision floats); such vector types are available in lengths two, three, four, eight and sixteen for various base types. Vectorized operations on these types are intended to map onto SIMD instructions sets, e.g., SSE or VMX, when running OpenCL programs on CPUs. Other specialized types include 2-d and 3-d image types.
+
+Example: matrix–vector multiplication
+
+The following is a matrix–vector multiplication algorithm in OpenCL C.
+
+The kernel function matvec computes, in each invocation, the dot product of a single row of a matrix A and a vector x:
+
+  
+    
+      
+        
+          y
+          
+            i
+          
+        
+        =
+        
+          a
+          
+            i
+            ,
+            :
+          
+        
+        ⋅
+        x
+        =
+        
+          ∑
+          
+            j
+          
+        
+        
+          a
+          
+            i
+            ,
+            j
+          
+        
+        
+          x
+          
+            j
+          
+        
+        .
+      
+    
+    {\displaystyle y_{i}=a_{i,:}\cdot x=\sum _{j}a_{i,j}x_{j}.}
+  
+
+To extend this into a full matrix–vector multiplication, the OpenCL runtime maps the kernel over the rows of the matrix. On the host side, the clEnqueueNDRangeKernel function does this; it takes as arguments the kernel to execute, its arguments, and a number of work-items, corresponding to the number of rows in the matrix A.
+
+Example: computing the FFT
+This example will load a fast Fourier transform (FFT) implementation and execute it. The implementation is shown below. The code asks the OpenCL library for the first available graphics card, creates memory buffers for reading and writing (from the perspective of the graphics card), JIT-compiles the FFT-kernel and then finally asynchronously runs the kernel. The result from the transform is not read in this example. This is illustrative example code, not intended for serious use, so error-handling is entirely omitted.
+
+The actual calculation inside file "fft1D_1024_kernel_src.cl" (based on "Fitting FFT onto the G80 Architecture"):
+
+A full, open source implementation of an OpenCL FFT can be found on Apple's website.
+
+OpenCL C++ language
+
+OpenCL C++ is a short-lived specification for a language that combines OpenCL C and C++14. It was intended to be built in an online mode only, by passing the -cl-std=c++ parameter in clBuildProgram(). No extension for detecting support for this language is described. It is unknown whether any driver actually supported this language.
+
+C++ for OpenCL language
+
+In 2020, Khronos announced the transition to the community driven C++ for OpenCL programming language that provides features from C++17 in combination with the traditional OpenCL C features. This language allows to leverage a rich variety of language features from standard C++ while preserving backward compatibility to OpenCL C. This opens up a smooth transition path to C++ functionality for the OpenCL kernel code developers as they can continue using familiar programming flow and even tools as well as leverage existing extensions and libraries available for OpenCL C.
+The language semantics is described in the documentation published in the releases of OpenCL-Docs repository hosted by the Khronos Group but it is currently not ratified by the Khronos Group. The C++ for OpenCL language is not documented in a stand-alone document and it is based on the specification of C++ and OpenCL C. The open source Clang compiler has supported C++ for OpenCL since release 9.
+C++ for OpenCL has been originally developed as a Clang compiler extension and appeared in the release 9. As it was tightly coupled with OpenCL C and did not contain any Clang specific functionality its documentation has been re-hosted to the OpenCL-Docs repository from the Khronos Group along with the sources of other specifications and reference cards. The first official release of this document describing C++ for OpenCL version 1.0 has been published in December 2020. C++ for OpenCL 1.0 contains features from C++17 and it is backward compatible with OpenCL C 2.0. In December 2021, a new provisional C++ for OpenCL version 2021 has been released which is fully compatible with the OpenCL 3.0 standard. A work in progress draft of the latest C++ for OpenCL documentation can be found on the Khronos website.
+
+Features
+C++ for OpenCL supports most of the features (syntactically and semantically) from OpenCL C except for nested parallelism and blocks. However, there are minor differences in some supported features mainly related to differences in semantics between C++ and C. For example, C++ is more strict with the implicit type conversions and it does not support the restrict type qualifier. The following C++ features are not supported by C++ for OpenCL: virtual functions, dynamic_cast operator, non-placement new/delete operators, exceptions, pointer to member functions, references to functions, C++ standard libraries. C++ for OpenCL extends the concept of separate memory regions (address spaces) from OpenCL C to C++ features – functional casts, templates, class members, references, lambda functions, and operators. Most of C++ features are not available for the kernel functions e.g. overloading or templating, arbitrary class layout in parameter type.
+
+Example: complex-number arithmetic
+The following code snippet illustrates how kernels with complex-number arithmetic can be implemented in C++ for OpenCL language with convenient use of C++ features.
+
+Tooling and execution environment
+C++ for OpenCL language can be used for the same applications or libraries and in the same way as OpenCL C language is used. Due to the rich variety of C++ language features, applications written in C++ for OpenCL can express complex functionality more conveniently than applications written in OpenCL C and in particular generic programming paradigm from C++ is very attractive to the library developers.
+C++ for OpenCL sources can be compiled by OpenCL drivers that support cl_ext_cxx_for_opencl extension, which allows the use of -cl-std=CLC++ in clBuildProgram(). Arm has announced support for this extension in December 2020. However, due to increasing complexity of the algorithms accelerated on OpenCL devices, it is expected that more applications will compile C++ for OpenCL kernels offline using stand alone compilers such as Clang into executable binary format or portable binary format e.g. SPIR-V. Such an executable can be loaded during the OpenCL applications execution using a dedicated OpenCL API.
+Binaries compiled from sources in C++ for OpenCL 1.0 can be executed on OpenCL 2.0 conformant devices. Depending on the language features used in such kernel sources it can also be executed on devices supporting earlier OpenCL versions or OpenCL 3.0.
+Aside from OpenCL drivers, kernels written in C++ for OpenCL can be compiled for execution on Vulkan devices using clspv compiler and clvk runtime layer, just the same way as OpenCL C kernels.
+
+Contributions
+C++ for OpenCL is an open language developed by the community of contributors listed in its documentation. New contributions to the language semantic definition or open source tooling support are accepted from anyone interested as soon as they are aligned with the main design philosophy and they are reviewed and approved by the experienced contributors.
+
+History
+OpenCL was initially developed by Apple Inc., which holds trademark rights, and refined into an initial proposal in collaboration with technical teams at AMD, IBM, Qualcomm, Intel, and Nvidia. Apple submitted this initial proposal to the Khronos Group. On June 16, 2008, the Khronos Compute Working Group was formed with representatives from CPU, GPU, embedded-processor, and software companies. This group worked for five months to finish the technical details of the specification for OpenCL 1.0 by November 18, 2008. This technical specification was reviewed by the Khronos members and approved for public release on December 8, 2008.
+
+OpenCL 1.0
+OpenCL 1.0 released with Mac OS X Snow Leopard on August 28, 2009. According to an Apple press release:
+
+Snow Leopard further extends support for modern hardware with Open Computing Language (OpenCL), which lets any application tap into the vast gigaflops of GPU computing power previously available only to graphics applications. OpenCL is based on the C programming language and has been proposed as an open standard.
+
+AMD decided to support OpenCL instead of the now deprecated Close to Metal in its Stream framework. RapidMind announced their adoption of OpenCL underneath their development platform to support GPUs from multiple vendors with one interface. On December 9, 2008, Nvidia announced its intention to add full support for the OpenCL 1.0 specification to its GPU Computing Toolkit. On October 30, 2009, IBM released its first OpenCL implementation as a part of the XL compilers.
+Acceleration of calculations with factor to 1000 are possible with OpenCL in graphic cards against normal CPU.
+Some important features of next Version of OpenCL are optional in 1.0 like double- or half-precision operations.
+
+OpenCL 1.1
+OpenCL 1.1 was ratified by the Khronos Group on June 14, 2010, and adds significant functionality for enhanced parallel programming flexibility, functionality, and performance including:
+
+New data types including 3-component vectors and additional image formats;
+Handling commands from multiple host threads and processing buffers across multiple devices;
+Operations on regions of a buffer including read, write and copy of 1D, 2D, or 3D rectangular regions;
+Enhanced use of events to drive and control command execution;
+Additional OpenCL built-in C functions such as integer clamp, shuffle, and asynchronous strided copies;
+Improved OpenGL interoperability through efficient sharing of images and buffers by linking OpenCL and OpenGL events.
+
+OpenCL 1.2
+On November 15, 2011, the Khronos Group announced the OpenCL 1.2 specification, which added significant functionality over the previous versions in terms of performance and features for parallel programming. Most notable features include:
+
+Device partitioning: the ability to partition a device into sub-devices so that work assignments can be allocated to individual compute units. This is useful for reserving areas of the device to reduce latency for time-critical tasks.
+Separate compilation and linking of objects: the functionality to compile OpenCL into external libraries for inclusion into other programs.
+Enhanced image support (optional): 1.2 adds support for 1D images and 1D/2D image arrays. Furthermore, the OpenGL sharing extensions now allow for OpenGL 1D textures and 1D/2D texture arrays to be used to create OpenCL images.
+Built-in kernels: custom devices that contain specific unique functionality are now integrated more closely into the OpenCL framework. Kernels can be called to use specialised or non-programmable aspects of underlying hardware. Examples include video encoding/decoding and digital signal processors.
+DirectX functionality: DX9 media surface sharing allows for efficient sharing between OpenCL and DX9 or DXVA media surfaces. Equally, for DX11, seamless sharing between OpenCL and DX11 surfaces is enabled.
+The ability to force IEEE 754 compliance for single-precision floating-point math: OpenCL by default allows the single-precision versions of the division, reciprocal, and square root operation to be less accurate than the correctly rounded values that IEEE 754 requires. If the programmer passes the "-cl-fp32-correctly-rounded-divide-sqrt" command line argument to the compiler, these three operations will be computed to IEEE 754 requirements if the OpenCL implementation supports this, and will fail to compile if the OpenCL implementation does not support computing these operations to their correctly rounded values as defined by the IEEE 754 specification. This ability is supplemented by the ability to query the OpenCL implementation to determine if it can perform these operations to IEEE 754 accuracy.
+
+OpenCL 2.0
+On November 18, 2013, the Khronos Group announced the ratification and public release of the finalized OpenCL 2.0 specification. Updates and additions to OpenCL 2.0 include:
+
+Shared virtual memory
+Nested parallelism
+Generic address space
+Images (optional, include 3D-Image)
+C11 atomics
+Pipes
+Android installable client driver extension
+half precision extended with optional cl_khr_fp16 extension
+cl_double: double precision IEEE 754 (optional)
+
+OpenCL 2.1
+The ratification and release of the OpenCL 2.1 provisional specification was announced on March 3, 2015, at the Game Developer Conference in San Francisco. It was released on November 16, 2015. It introduced the OpenCL C++ kernel language, based on a subset of C++14, while maintaining support for the preexisting OpenCL C kernel language. Vulkan and OpenCL 2.1 share SPIR-V as an intermediate representation allowing high-level language front-ends to share a common compilation target. Updates to the OpenCL API include:
+
+Additional subgroup functionality
+Copying of kernel objects and states
+Low-latency device timer queries
+Ingestion of SPIR-V code by runtime
+Execution priority hints for queues
+Zero-sized dispatches from host
+AMD, ARM, Intel, HPC, and YetiWare have declared support for OpenCL 2.1.
+
+OpenCL 2.2
+OpenCL 2.2 brings the OpenCL C++ kernel language into the core specification for significantly enhanced parallel programming productivity. It was released on May 16, 2017. Maintenance Update released in May 2018 with bugfixes.
+
+The OpenCL C++ kernel language is a static subset of the C++14 standard and includes classes, templates, lambda expressions, function overloads and many other constructs for generic and meta-programming.
+Uses the new Khronos SPIR-V 1.1 intermediate language which fully supports the OpenCL C++ kernel language.
+OpenCL library functions can now use the C++ language to provide increased safety and reduced undefined behavior while accessing features such as atomics, iterators, images, samplers, pipes, and device queue built-in types and address spaces.
+Pipe storage is a new device-side type in OpenCL 2.2 that is useful for FPGA implementations by making connectivity size and type known at compile time, enabling efficient device-scope communication between kernels.
+OpenCL 2.2 also includes features for enhanced optimization of generated code: applications can provide the value of specialization constant at SPIR-V compilation time, a new query can detect non-trivial constructors and destructors of program scope global objects, and user callbacks can be set at program release time.
+Runs on any OpenCL 2.0-capable hardware (only a driver update is required).
+
+OpenCL 3.0
+The OpenCL 3.0 specification was released on September 30, 2020, after being in preview since April 2020. OpenCL 1.2 functionality has become a mandatory baseline, while all OpenCL 2.x and OpenCL 3.0 features were made optional. The specification retains the OpenCL C language and deprecates the OpenCL C++ Kernel Language, replacing it with the C++ for OpenCL language based on a Clang/LLVM compiler which implements a subset of C++17 and SPIR-V intermediate code.
+Version 3.0.7 of C++ for OpenCL with some Khronos openCL extensions were presented at IWOCL 21. Actual is 3.0.11 with some new extensions and corrections.
+NVIDIA, working closely with the Khronos OpenCL Working Group, improved Vulkan Interop with semaphores and memory sharing. Last minor update was 3.0.14 with bugfix and a new extension for multiple devices.
+
+Roadmap
+
+When releasing OpenCL 2.2, the Khronos Group announced that OpenCL would converge where possible with Vulkan to enable OpenCL software deployment flexibility over both APIs. This has been now demonstrated by Adobe's Premiere Rush using the clspv open source compiler to compile significant amounts of OpenCL C kernel code to run on a Vulkan runtime for deployment on Android. OpenCL has a forward looking roadmap independent of Vulkan, with 'OpenCL Next' under development and targeting release in 2020. OpenCL Next may integrate extensions such as Vulkan / OpenCL Interop, Scratch-Pad Memory Management, Extended Subgroups, SPIR-V 1.4 ingestion and SPIR-V Extended debug info. OpenCL is also considering Vulkan-like loader and layers and a "flexible profile" for deployment flexibility on multiple accelerator types.
+
+Open source implementations
+
+OpenCL consists of a set of headers and a shared object that is loaded at runtime. An installable client driver (ICD) must be installed on the platform for every class of vendor for which the runtime would need to support. That is, for example, in order to support Nvidia devices on a Linux platform, the Nvidia ICD would need to be installed such that the OpenCL runtime (the ICD loader) would be able to locate the ICD for the vendor and redirect the calls appropriately. The standard OpenCL header is used by the consumer application; calls to each function are then proxied by the OpenCL runtime to the appropriate driver using the ICD. Each vendor must implement each OpenCL call in their driver.
+The Apple, Nvidia, ROCm, RapidMind and Gallium3D implementations of OpenCL are all based on the LLVM Compiler technology and use the Clang compiler as their frontend.
+
+MESA Gallium Compute
+An implementation of OpenCL (actual 1.1 incomplete, mostly done AMD Radeon GCN) for a number of platforms is maintained as part of the Gallium Compute Project, which builds on the work of the Mesa project to support multiple platforms. Formerly this was known as CLOVER., actual development: mostly support for running incomplete framework with actual LLVM and CLANG, some new features like fp16 in 17.3, Target complete OpenCL 1.0, 1.1 and 1.2 for AMD and Nvidia. New Basic Development is done by Red Hat with SPIR-V also for Clover. New Target is modular OpenCL 3.0 with full support of OpenCL 1.2. Actual state is available in Mesamatrix. Image supports are here in the focus of development.
+RustiCL is a new implementation for Gallium compute with Rust instead of C. In Mesa 22.2 experimental implementation is available with openCL 3.0-support and image extension implementation for programs like Darktable. Intel Xe (Arc) and AMD GCN+ are supported in Mesa 22.3+. AMD R600 and Nvidia Kepler+ are also target of hardware support. RustiCL outperform AMD ROCM with Radeon RX 6700 XT hardware at Luxmark Benchmark. Mesa 23.1 supports official RustiCL. In Mesa 23.2 support of important fp64 is at experimental level.
+Microsoft's Windows 11 on Arm added support for OpenCL 1.2 via CLon12, an open source OpenCL implementation on top DirectX 12 via Mesa Gallium.
+BEIGNET
+An implementation by Intel for its Ivy Bridge + hardware was released in 2013. This software from Intel's China Team, has attracted criticism from developers at AMD and Red Hat, as well as Michael Larabel of Phoronix. Actual Version 1.3.2 support OpenCL 1.2 complete (Ivy Bridge and higher) and OpenCL 2.0 optional for Skylake and newer. support for Android has been added to Beignet., actual development targets: only support for 1.2 and 2.0, road to OpenCL 2.1, 2.2, 3.0 is gone to NEO.
+NEO
+An implementation by Intel for Gen. 8 Broadwell + Gen. 9 hardware released in 2018. This driver replaces Beignet implementation for supported platforms (not older 6.gen to Haswell). NEO provides OpenCL 2.1 support on Core platforms and OpenCL 1.2 on Atom platforms. Actual in 2020 also Graphic Gen 11 Ice Lake and Gen 12 Tiger Lake are supported. New OpenCL 3.0 is available for Alder Lake, Tiger Lake to Broadwell with Version 20.41+. It includes now optional OpenCL 2.0, 2.1 Features complete and some of 2.2.
+ROCm
+Created as part of AMD's GPUOpen, ROCm (Radeon Open Compute) is an open source Linux project built on OpenCL 1.2 with language support for 2.0. The system is compatible with all modern AMD CPUs and APUs (actual partly GFX 7, GFX 8 and 9), as well as Intel Gen7.5+ CPUs (only with PCI 3.0). With version 1.9 support is in some points extended experimental to Hardware with PCIe 2.0 and without atomics. An overview of actual work is done on XDC2018. ROCm Version 2.0 supports Full OpenCL 2.0, but some errors and limitations are on the todo list. Version 3.3 is improving in details. Version 3.5 does support OpenCL 2.2. Version 3.10 was with improvements and new APIs. Announced at SC20 is ROCm 4.0 with support of AMD Compute Card Instinct MI 100. Actual documentation of 5.5.1 and before is available at GitHub. OpenCL 3.0 is available. RocM 5.5.x+ supports only GFX 9 Vega and later, so alternative are older RocM Releases or in future RustiCL for older Hardware.
+POCL
+A portable implementation supporting CPUs and some GPUs (via CUDA and HSA). Building on Clang and LLVM. With version 1.0 OpenCL 1.2 was nearly fully implemented along with some 2.x features. Version 1.2 is with LLVM/CLANG 6.0, 7.0 and Full OpenCL 1.2 support with all closed tickets in Milestone 1.2. OpenCL 2.0 is nearly full implemented. Version 1.3 Supports Mac OS X. Version 1.4 includes support for LLVM 8.0 and 9.0. Version 1.5 implements LLVM/Clang 10 support. Version 1.6 implements LLVM/Clang 11 support and CUDA Acceleration. Actual targets are complete OpenCL 2.x, OpenCL 3.0 and improvement of performance. POCL 1.6 is with manual optimization at the same level of Intel compute runtime. Version 1.7 implements LLVM/Clang 12 support and some new OpenCL 3.0 features. Version 1.8 implements LLVM/Clang 13 support. Version 3.0 implements OpenCL 3.0 at minimum level and LLVM/Clang 14. Version 3.1 works with LLVM/Clang 15 and improved Spir-V support.
+Shamrock
+A Port of Mesa Clover for ARM with full support of OpenCL 1.2, no actual development for 2.0.
+FreeOCL
+A CPU focused implementation of OpenCL 1.2 that implements an external compiler to create a more reliable platform, no actual development.
+MOCL
+An OpenCL implementation based on POCL by the NUDT researchers for Matrix-2000 was released in 2018. The Matrix-2000 architecture is designed to replace the Intel Xeon Phi accelerators of the TianHe-2 supercomputer. This programming framework is built on top of LLVM v5.0 and reuses some code pieces from POCL as well. To unlock the hardware potential, the device runtime uses a push-based task dispatching strategy and the performance of the kernel atomics is improved significantly. This framework has been deployed on the TH-2A system and is readily available to the public. Some of the software will next ported to improve POCL.
+VC4CL
+An OpenCL 1.2 implementation for the VideoCore IV (BCM2763) processor used in the Raspberry Pi before its model 4.
+
+Vendor implementations
+
+Timeline of vendor implementations
+June, 2008: During Apple's WWDC conference an early beta of Mac OS X Snow Leopard was made available to the participants, it included the first beta implementation of OpenCL, about 6 months before the final version 1.0 specification was ratified late 2008. They also showed two demos. One was a grid of 8×8 screens rendered, each displaying the screen of an emulated Apple II machine – 64 independent instances in total, each running a famous karate game. This showed task parallelism, on the CPU. The other demo was a N-body simulation running on the GPU of a Mac Pro, a data parallel task.
+December 10, 2008: AMD and Nvidia held the first public OpenCL demonstration, a 75-minute presentation at SIGGRAPH Asia 2008. AMD showed a CPU-accelerated OpenCL demo explaining the scalability of OpenCL on one or more cores while Nvidia showed a GPU-accelerated demo.
+March 16, 2009: at the 4th Multicore Expo, Imagination Technologies announced the PowerVR SGX543MP, the first GPU of this company to feature OpenCL support.
+March 26, 2009: at GDC 2009, AMD and Havok demonstrated the first working implementation for OpenCL accelerating Havok Cloth on ATI Radeon HD 4000 series GPU.
+April 20, 2009: Nvidia announced the release of its OpenCL driver and SDK to developers participating in its OpenCL Early Access Program.
+August 5, 2009: AMD unveiled the first development tools for its OpenCL platform as part of its ATI Stream SDK v2.0 Beta Program.
+August 28, 2009: Apple released Mac OS X Snow Leopard, which contains a full implementation of OpenCL.
+September 28, 2009: Nvidia released its own OpenCL drivers and SDK implementation.
+October 13, 2009: AMD released the fourth beta of the ATI Stream SDK 2.0, which provides a complete OpenCL implementation on both R700/HD 5000 GPUs and SSE3 capable CPUs. The SDK is available for both Linux and Windows.
+November 26, 2009: Nvidia released drivers for OpenCL 1.0 (rev 48).
+October 27, 2009: S3 released their first product supporting native OpenCL 1.0 – the Chrome 5400E embedded graphics processor.
+December 10, 2009: VIA released their first product supporting OpenCL 1.0 – ChromotionHD 2.0 video processor included in VN1000 chipset.
+December 21, 2009: AMD released the production version of the ATI Stream SDK 2.0, which provides OpenCL 1.0 support for HD 5000 GPUs and beta support for R700 GPUs.
+June 1, 2010: ZiiLABS released details of their first OpenCL implementation for the ZMS processor for handheld, embedded and digital home products.
+June 30, 2010: IBM released a fully conformant version of OpenCL 1.0.
+September 13, 2010: Intel released details of their first OpenCL implementation for the Sandy Bridge chip architecture. Sandy Bridge will integrate Intel's newest graphics chip technology directly onto the central processing unit.
+November 15, 2010: Wolfram Research released Mathematica 8 with OpenCLLink package.
+March 3, 2011: Khronos Group announces the formation of the WebCL working group to explore defining a JavaScript binding to OpenCL. This creates the potential to harness GPU and multi-core CPU parallel processing from a Web browser.
+March 31, 2011: IBM released a fully conformant version of OpenCL 1.1.
+April 25, 2011: IBM released OpenCL Common Runtime v0.1 for Linux on x86 Architecture.
+May 4, 2011: Nokia Research releases an open source WebCL extension for the Firefox web browser, providing a JavaScript binding to OpenCL.
+July 1, 2011: Samsung Electronics releases an open source prototype implementation of WebCL for WebKit, providing a JavaScript binding to OpenCL.
+August 8, 2011: AMD released the OpenCL-driven AMD Accelerated Parallel Processing (APP) Software Development Kit (SDK) v2.5, replacing the ATI Stream SDK as technology and concept.
+December 12, 2011: AMD released AMD APP SDK v2.6 which contains a preview of OpenCL 1.2.
+February 27, 2012: The Portland Group released the PGI OpenCL compiler for multi-core ARM CPUs.
+April 17, 2012: Khronos released a WebCL working draft.
+May 6, 2013: Altera released the Altera SDK for OpenCL, version 13.0. It is conformant to OpenCL 1.0.
+November 18, 2013: Khronos announced that the specification for OpenCL 2.0 had been finalized.
+March 19, 2014: Khronos releases the WebCL 1.0 specification.
+August 29, 2014: Intel releases HD Graphics 5300 driver that supports OpenCL 2.0.
+September 25, 2014: AMD releases Catalyst 14.41 RC1, which includes an OpenCL 2.0 driver.
+January 14, 2015: Xilinx Inc. announces SDAccel development environment for OpenCL, C, and C++, achieves Khronos Conformance.
+April 13, 2015: Nvidia releases WHQL driver v350.12, which includes OpenCL 1.2 support for GPUs based on Kepler or later architectures. Driver 340+ support OpenCL 1.1 for Tesla and Fermi.
+August 26, 2015: AMD released AMD APP SDK v3.0 which contains full support of OpenCL 2.0 and sample coding.
+November 16, 2015: Khronos announced that the specification for OpenCL 2.1 had been finalized.
+April 18, 2016: Khronos announced that the specification for OpenCL 2.2 had been provisionally finalized.
+November 3, 2016: Intel support for Gen7+ of OpenCL 2.1 in SDK 2016 r3.
+February 17, 2017: Nvidia begins evaluation support of OpenCL 2.0 with driver 378.66.
+May 16, 2017: Khronos announced that the specification for OpenCL 2.2 had been finalized with SPIR-V 1.2.
+May 14, 2018: Khronos announced Maintenance Update for OpenCL 2.2 with Bugfix and unified headers.
+April 27, 2020: Khronos announced provisional Version of OpenCL 3.0.
+June 1, 2020: Intel NEO runtime with OpenCL 3.0 for new Tiger Lake.
+June 3, 2020: AMD announced RocM 3.5 with OpenCL 2.2 support.
+September 30, 2020: Khronos announced that the specifications for OpenCL 3.0 had been finalized (CTS also available).
+October 16, 2020: Intel announced with NEO 20.41 support for OpenCL 3.0 (includes mostly of optional OpenCL 2.x).
+April 6, 2021: Nvidia supports OpenCL 3.0 for Ampere. Maxwell and later GPUs also supports OpenCL 3.0 with Nvidia driver 465+.
+August 20, 2022: Intel Arc Alchemist GPUs (Arc A380, A350M, A370M, A550M, A730M and A770M) are conformant with OpenCL 3.0.
+October 14, 2022: Arm Mali-G615 and Mali-G715-Immortalis are conformant with OpenCL 3.0.
+November 11, 2022: The Rusticl OpenCL Library is conformant with OpenCL 3.0.
+
+Devices
+As of 2016, OpenCL runs on graphics processing units (GPUs), CPUs with SIMD instructions, FPGAs, Movidius Myriad 2, Adapteva Epiphany and DSPs.
+
+Khronos Conformance Test Suite
+To be officially conformant, an implementation must pass the Khronos Conformance Test Suite (CTS), with results being submitted to the Khronos Adopters Program. The Khronos CTS code for all OpenCL versions has been available in open source since 2017.
+
+Conformant products
+The Khronos Group maintains an extended list of OpenCL-conformant products.
+
+All standard-conformant implementations can be queried using one of the clinfo tools (there are multiple tools with the same name and similar feature set).
+
+Version support
+Products and their version of OpenCL support include:
+
+OpenCL 3.0 support
+All hardware with OpenCL 1.2+ is possible, OpenCL 2.x only optional, Khronos Test Suite available since 2020-10
+
+(2020) Intel NEO Compute: 20.41+ for Gen 12 Tiger Lake to Broadwell (include full 2.0 and 2.1 support and parts of 2.2)
+(2020) Intel 6th, 7th, 8th, 9th, 10th, 11th gen processors (Skylake, Kaby Lake, Coffee Lake, Comet Lake, Ice Lake, Tiger Lake) with latest Intel Windows graphics driver
+(2021) Intel 11th, 12th gen processors (Rocket Lake, Alder Lake) with latest Intel Windows graphics driver
+(2021) Arm Mali-G78, Mali-G310, Mali-G510, Mali-G610, Mali-G710 and Mali-G78AE.
+(2022) Intel 13th gen processors (Raptor Lake) with latest Intel Windows graphics driver
+(2022) Intel Arc discrete graphics with latest Intel Arc Windows graphics driver
+(2021) Nvidia Maxwell, Pascal, Volta, Turing and Ampere with Nvidia graphics driver 465+.
+(2022) Nvidia Ada Lovelace with Nvidia graphics driver 525+.
+(2022) Samsung Xclipse 920 GPU (based on AMD RDNA2)
+(2023) Intel 14th gen processors (Raptor Lake) Refresh with latest Intel Windows graphics driver
+(2023) Intel Core Ultra Series 1 processors (Meteor Lake) with latest Intel Windows graphics driver
+
+OpenCL 2.2 support
+None yet: Khronos Test Suite ready, with Driver Update all Hardware with 2.0 and 2.1 support possible
+
+Intel NEO Compute: Work in Progress for actual products
+ROCm: Version 3.5+ mostly
+
+OpenCL 2.1 support
+(2018+) Support backported to Intel 5th and 6th gen processors (Broadwell, Skylake)
+(2017+) Intel 7th, 8th, 9th, 10th gen processors (Kaby Lake, Coffee Lake, Comet Lake, Ice Lake)
+(2017+) Intel Xeon Phi processors (Knights Landing) (experimental runtime)
+Khronos: with Driver Update all Hardware with 2.0 support possible
+
+OpenCL 2.0 support
+(2011+) AMD GCN GPU's (HD 7700+/HD 8000/Rx 200/Rx 300/Rx 400/Rx 500/Rx 5000-Series), some GCN 1st Gen only 1.2 with some Extensions
+(2013+) AMD GCN APU's (Jaguar, Steamroller, Puma, Excavator & Zen-based)
+(2014+) Intel 5th & 6th gen processors (Broadwell, Skylake)
+(2015+) Qualcomm Adreno 5xx series
+(2018+) Qualcomm Adreno 6xx series
+(2017+) ARM Mali (Bifrost) G51 and G71 in Android 7.1 and Linux
+(2018+) ARM Mali (Bifrost) G31, G52, G72 and G76
+(2017+) incomplete Evaluation support: Nvidia Kepler, Maxwell, Pascal, Volta and Turing GPU's (GeForce 600, 700, 800, 900 & 10-series, Quadro K-, M- & P-series, Tesla K-, M- & P-series) with Driver Version 378.66+
+
+OpenCL 1.2 support
+(2011+) for some AMD GCN 1st Gen some OpenCL 2.0 Features not possible today, but many more Extensions than Terascale
+(2009+) AMD TeraScale 2 & 3 GPU's (RV8xx, RV9xx in HD 5000, 6000 & 7000 Series)
+(2011+) AMD TeraScale APU's (K10, Bobcat & Piledriver-based)
+(2012+) Nvidia Kepler, Maxwell, Pascal, Volta and Turing GPU's (GeForce 600, 700, 800, 900, 10, 16, 20 series, Quadro K-, M- & P-series, Tesla K-, M- & P-series)
+(2012+) Intel 3rd & 4th gen processors (Ivy Bridge, Haswell)
+(2013+) Intel Xeon Phi coprocessors (Knights Corner)
+(2013+) Qualcomm Adreno 4xx series
+(2013+) ARM Mali Midgard 3rd gen (T760)
+(2015+) ARM Mali Midgard 4th gen (T8xx)
+
+OpenCL 1.1 support
+(2008+) some AMD TeraScale 1 GPU's (RV7xx in HD4000-series)
+(2008+) Nvidia Tesla, Fermi GPU's (GeForce 8, 9, 100, 200, 300, 400, 500-series, Quadro-series or Tesla-series with Tesla or Fermi GPU)
+(2011+) Qualcomm Adreno 3xx series
+(2012+) ARM Mali Midgard 1st and 2nd gen (T-6xx, T720)
+
+OpenCL 1.0 support
+mostly updated to 1.1 and 1.2 after first Driver for 1.0 only
+
+Portability, performance and alternatives
+A key feature of OpenCL is portability, via its abstracted memory and execution model, and the programmer is not able to directly use hardware-specific technologies such as inline Parallel Thread Execution (PTX) for Nvidia GPUs unless they are willing to give up direct portability on other platforms. It is possible to run any OpenCL kernel on any conformant implementation.
+However, performance of the kernel is not necessarily portable across platforms. Existing implementations have been shown to be competitive when kernel code is properly tuned, though, and auto-tuning has been suggested as a solution to the performance portability problem, yielding "acceptable levels of performance" in experimental linear algebra kernels. Portability of an entire application containing multiple kernels with differing behaviors was also studied, and shows that portability only required limited tradeoffs.
+A study at Delft University from 2011 that compared CUDA programs and their straightforward translation into OpenCL C found CUDA to outperform OpenCL by at most 30% on the Nvidia implementation. The researchers noted that their comparison could be made fairer by applying manual optimizations to the OpenCL programs, in which case there was "no reason for OpenCL to obtain worse performance than CUDA". The performance differences could mostly be attributed to differences in the programming model (especially the memory model) and to NVIDIA's compiler optimizations for CUDA compared to those for OpenCL.
+Another study at D-Wave Systems Inc. found that "The OpenCL kernel’s performance is between about 13% and 63% slower, and the end-to-end time is between about 16% and 67% slower" than CUDA's performance.
+The fact that OpenCL allows workloads to be shared by CPU and GPU, executing the same programs, means that programmers can exploit both by dividing work among the devices. This leads to the problem of deciding how to partition the work, because the relative speeds of operations differ among the devices. Machine learning has been suggested to solve this problem: Grewe and O'Boyle describe a system of support-vector machines trained on compile-time features of program that can decide the device partitioning problem statically, without actually running the programs to measure their performance.
+In a comparison of actual graphic cards of AMD RDNA 2 and Nvidia RTX Series there is an undecided result by OpenCL-Tests. Possible performance increases from the use of Nvidia CUDA or OptiX were not tested.

@@ -1,0 +1,132 @@
+A power supply is an electrical device that supplies electric power to an electrical load. The main purpose of a power supply is to convert electric current from a source to the correct voltage, current, and frequency to power the load. As a result, power supplies are sometimes referred to as electric power converters. Some power supplies are separate standalone pieces of equipment, while others are built into the load appliances that they power. Examples of the latter include power supplies found in desktop computers and consumer electronics devices. Other functions that power supplies may perform include limiting the current drawn by the load to safe levels, shutting off the current in the event of an electrical fault, power conditioning to prevent electronic noise or voltage surges on the input from reaching the load, power-factor correction, and storing energy so it can continue to power the load in the event of a temporary interruption in the source power (uninterruptible power supply).
+All power supplies have a power input connection, which receives energy in the form of electric current from a source, and one or more power output or power rail connections that deliver current to the load. The source power may come from the electric power grid, such as an electrical outlet, energy storage devices such as batteries or fuel cells, generators or alternators, solar power converters, or another power supply. The input and output are usually hardwired circuit connections, though some power supplies employ wireless energy transfer to power their loads without wired connections. Some power supplies have other types of inputs and outputs as well, for functions such as external monitoring and control.
+
+General classification
+
+Functional
+Power supplies are categorized in various ways, including by functional features. For example, a regulated power supply is one that maintains constant output voltage or current despite variations in load current or input voltage. Conversely, the output of an unregulated power supply can change significantly when its input voltage or load current changes. Adjustable power supplies allow the output voltage or current to be programmed by mechanical controls (e.g., knobs on the power supply front panel), or by means of a control input, or both. An adjustable regulated power supply is one that is both adjustable and regulated. An isolated power supply has a power output that is electrically independent of its power input; this is in contrast to other power supplies that share a common connection between power input and output.
+
+Packaging
+
+Power supplies are packaged in different ways and classified accordingly. A bench power supply is a stand-alone desktop unit used in applications such as circuit test and development. Open frame power supplies have only a partial mechanical enclosure, sometimes consisting of only a mounting base; these are typically built into machinery or other equipment. Rack mount power supplies are designed to be secured into standard electronic equipment racks. An integrated power supply is one that shares a common printed circuit board with its load. An external power supply, AC adapter or power brick, is a power supply located in the load's AC power cord that plugs into a wall outlet; a wall wart is an external supply integrated with the outlet plug itself. These are popular in consumer electronics because of their safety; the hazardous 120- or 240-volt main current is transformed down to a safer voltage before it enters the appliance body.
+
+Power conversion method
+Power supplies can be broadly divided into linear and switching types. Linear power converters process the input power directly, with all active power conversion components operating in their linear operating regions. In switching power converters, the input power is converted to AC or to DC pulses before processing, by components that operate predominantly in non-linear modes (e.g., transistors that spend most of their time in cutoff or saturation). Power is "lost" (converted to heat) when components operate in their linear regions and, consequently, switching converters are usually more efficient than linear converters because their components spend less time in linear operating regions.
+
+Purpose
+Power supplies are sometimes categorized according to their intended purpose, such as "AC-DC front end for grid bias" or "DC-DC converter for point-of-load (POL) regulation".
+
+Types
+
+DC power supplies
+An AC-to-DC power supply operates on an AC input voltage and generates a DC output voltage. Depending on the application requirements, the output voltage may contain varying amounts of AC frequency components, known as ripple voltage, which are influenced by the AC input voltage frequency and the power supply's operation. A DC power supply operating on DC input voltage is called a DC-to-DC converter. This section focuses mostly on the AC-to-DC variant.
+
+Linear power supply
+
+In a linear power supply, the AC input voltage first passes through a power transformer, then undergoes rectification and filtering to produce a DC voltage. Filtering minimizes the AC mains frequency component present in the rectifier output. It can be as simple as a single capacitor or as complex as a pi filter. The required level of filtering in the power supply depends on the electric load's tolerance to ripple. In some applications, ripple can be entirely ignored. For instance, in certain battery charging applications, the power supply may consist only of a transformer and a diode, with a resistor at the output to limit the charging current.
+
+Switched-mode power supply
+
+In a switched-mode power supply (SMPS), the AC mains input is directly rectified and then filtered to obtain a DC voltage. The resulting DC voltage is then switched on and off at a high frequency by electronic switching circuitry, thus producing an AC current that will pass through a high-frequency transformer or inductor. Switching occurs at a very high frequency (typically 10 kHz — 1 MHz), thereby enabling the use of transformers and filter capacitors that are much smaller, lighter, and less expensive than those found in linear power supplies operating at mains frequency. After the inductor or transformer secondary, the high frequency AC is rectified and filtered to produce the DC output voltage. If the SMPS uses an adequately insulated high-frequency transformer, the output will be electrically isolated from the mains; this feature is often essential for safety.
+Switched-mode power supplies are usually regulated, and to keep the output voltage constant, the power supply employs a feedback controller that monitors current drawn by the load. The switching duty cycle increases as power output requirements increase.
+SMPSs often include safety features such as current limiting or a crowbar circuit to help protect the device and the user from harm. In the event that an abnormal high-current power draw is detected, the switched-mode supply can assume this is a direct short and will shut itself down before damage is done. PC power supplies often provide a power good signal to the motherboard; the absence of this signal prevents operation when abnormal supply voltages are present.
+Some SMPSs have an absolute limit on their minimum current output. They are only able to output above a certain power level and cannot function below that point. In a no-load condition the frequency of the power slicing circuit increases to great speed, causing the isolated transformer to act as a Tesla coil, causing damage due to the resulting very high voltage power spikes. Switched-mode supplies with protection circuits may briefly turn on but then shut down when no load has been detected. A very small low-power dummy load such as a ceramic power resistor or 10-watt light bulb can be attached to the supply to allow it to run with no primary load attached.
+The switch-mode power supplies used in computers have historically had low power factors and have also been significant sources of line interference (due to induced power line harmonics and transients). In simple switch-mode power supplies, the input stage may distort the line voltage waveform, which can adversely affect other loads (and result in poor power quality for other utility customers), and cause unnecessary heating in wires and distribution equipment. Furthermore, customers incur higher electric bills when operating lower power factor loads. To circumvent these problems, some computer switch-mode power supplies perform power factor correction, and may employ input filters or additional switching stages to reduce line interference.
+
+Capacitive (transformerless) power supply
+A capacitive power supply (transformerless power supply) uses the reactance of a capacitor to reduce the mains voltage to a smaller AC voltage. Typically, the resulting reduced AC voltage is then rectified, filtered and regulated to produce a constant DC output voltage.
+The output voltage is not isolated from the mains. Consequently, to avoid exposing people and equipment from hazardous high voltage, anything connected to the power supply must be reliably insulated.
+The voltage reduction capacitor must withstand the full mains voltage, and it must also have enough capacitance to support maximum load current at the rated output voltage. Taken together, these constraints limit practical uses of this type of supply to low-power applications.
+
+Linear regulator
+The function of a linear voltage regulator is to convert a varying DC voltage to a constant, often specific, lower DC voltage. In addition, they often provide a current limiting function to protect the power supply and load from overcurrent (excessive, potentially destructive current).
+A constant output voltage is required in many power supply applications, but the voltage provided by many energy sources will vary with changes in load impedance. Furthermore, when an unregulated DC power supply is the energy source, its output voltage will also vary with changing input voltage. To circumvent this, some power supplies use a linear voltage regulator to maintain the output voltage at a steady value, independent of fluctuations in input voltage and load impedance. Linear regulators can also reduce the magnitude of ripple and noise on the output voltage.
+
+AC power supplies
+
+An AC power supply typically takes the voltage from a wall outlet (mains supply) and uses a transformer to step up or step down the voltage to the desired voltage. Some filtering may take place as well. In some cases, the source voltage is the same as the output voltage; this is called an isolation transformer. Other AC power supply transformers do not provide mains isolation; these are called autotransformers; a variable output autotransformer is known as a variac. Other kinds of AC power supplies are designed to provide a nearly constant current, and output voltage may vary depending on impedance of the load. In cases when the power source is direct current, (like an automobile storage battery), an inverter and step-up transformer may be used to convert it to AC power. Portable AC power may be provided by an alternator powered by a diesel or gasoline engine (for example, at a construction site, in an automobile or boat, or backup power generation for emergency services) whose current is passed to a regulator circuit to provide a constant voltage at the output. Some kinds of AC power conversion do not use a transformer. If the output voltage and input voltage are the same, and primary purpose of the device is to filter AC power, it may be called a line conditioner. If the device is designed to provide backup power, it may be called an uninterruptible power supply. A circuit may be designed with a voltage multiplier topology to directly step-up AC power; formerly, such an application was a vacuum tube AC/DC receiver.
+In modern use, AC power supplies can be divided into single phase and three phase systems. AC power Supplies can also be used to change the frequency as well as the voltage, they are often used by manufacturers to check the suitability of their products for use in other countries. 230 V 50 Hz or 115 60 Hz or even 400 Hz for avionics testing.
+
+AC adapter
+
+An AC adapter is a power supply built into an AC mains power plug. AC adapters are also known by various other names such as "plug pack" or "plug-in adapter", or by slang terms such as "wall wart". AC adapters typically have a single AC or DC output that is conveyed over a hardwired cable to a connector, but some adapters have multiple outputs that may be conveyed over one or more cables. "Universal" AC adapters have interchangeable input connectors to accommodate different AC mains voltages.
+Adapters with AC outputs may consist only of a passive transformer; in case of DC-output, adapters consist of either transformer with few diodes and capacitors or they may employ switch-mode power supply circuitry. AC adapters consume power (and produce electric and magnetic fields) even when not connected to a load; for this reason they are sometimes known as "electricity vampires", and may be plugged into power strips to allow them to be conveniently turned on and off.
+
+Programmable power supply
+
+A programmable power supply (PPS) is one that allows remote control of its operation through an analog input or digital interface such as RS-232 or GPIB. Controlled properties may include voltage, current, and in the case of AC output power supplies, frequency. They are used in a wide variety of applications, including automated equipment testing, crystal growth monitoring, semiconductor fabrication, and x-ray generators.
+Programmable power supplies typically employ an integral microcomputer to control and monitor power supply operation. Power supplies equipped with a computer interface may use proprietary communication protocols or standard protocols and device control languages such as SCPI.
+More recent implementations also provide Ethernet interfaces using TCP/IP or UDP, or Small Form-factor Pluggable (SFP) links carrying proprietary protocols to achieve deterministic, high-throughput control and monitoring. Ethernet is today the most widespread solution, being cost-effective and simple to integrate with automated test benches.
+
+Uninterruptible power supply
+
+An uninterruptible power supply (UPS) takes its power from two or more sources simultaneously. It is usually powered directly from the AC mains, while simultaneously charging a storage battery. Should there be a dropout or failure of the mains, the battery takes over sufficiently fast that the load never experiences an interruption. That definition is important because transmission of high speed data and communications service must have continuity of that service. Some manufacturers use a quasi-standard of 4 milliseconds. However, with high speed data even 4 ms of time in transitioning from one source to another is not fast enough. The transition must be made in a break before make method. The UPS meeting that requirement is referred to as a true UPS or a hybrid UPS. How much time the UPS will provide is most often based on batteries and in conjunction with generators. That time can range from 5 to 15 minutes to hours or even days. In many computer installations, it is only enough time on batteries to give the operators time to shut down the system in an orderly way. Other UPS schemes may use an internal combustion engine or turbine to supply power during a utility power outage and the amount of battery time is then dependent upon how long it takes the generator to be on line and the criticality of the equipment served. Such a scheme is found in hospitals, data centers, call centers, cell sites and central telephone offices.
+
+High-voltage power supply
+
+A high-voltage power supply is one that outputs hundreds or thousands of volts. A special output connector is used that prevents arcing, insulation breakdown and accidental human contact. Federal Standard connectors are typically used for applications above 20 kV, though other types of connectors (e.g., SHV connector) may be used at lower voltages. Some high-voltage power supplies provide an analog input or digital communication interface that can be used to control the output voltage. High-voltage power supplies are commonly used to accelerate and manipulate electron and ion beams in equipment such as x-ray generators, electron microscopes, and focused ion beam columns, and in a variety of other applications, including electrophoresis and electrostatics.
+High-voltage power supplies typically apply the bulk of their input energy to a power inverter, which in turn drives a voltage multiplier or a high turns ratio, high-voltage transformer, or both (usually a transformer followed by a multiplier) to produce high voltage. The high voltage is passed out of the power supply through the special connector and is also applied to a voltage divider that converts it to a low-voltage metering signal compatible with low-voltage circuitry. The metering signal is used by a closed-loop controller that regulates the high voltage by controlling inverter input power, and it may also be conveyed out of the power supply to allow external circuitry to monitor the high-voltage output.
+
+Bipolar power supply
+
+A bipolar power supply operates in all four quadrants of the voltage/current Cartesian plane, meaning that it will generate positive and negative voltages and currents as required to maintain regulation. When its output is controlled by a low-level analog signal, it is effectively a low-bandwidth operational amplifier with high output power and seamless zero-crossings. This type of power supply is commonly used to power magnetic devices in scientific applications.
+
+Specification
+The suitability of a particular power supply for an application is determined by various attributes of the power supply, which are typically listed in the power supply's specification. Commonly specified attributes for a power supply include:
+
+Input voltage type (AC or DC) and range
+Efficiency of power conversion
+The amount of voltage and current it can supply to its load
+How stable its output voltage or current is under varying line and load conditions
+How long it can supply energy without refueling or recharging (applies to power supplies that employ portable energy sources)
+Operating and storage temperature ranges
+Output is constant voltage type or constant current type
+Commonly-used abbreviations used in power supply specifications:
+
+SCP - Short circuit protection
+OPP - Overpower (overload) protection
+OCP - Overcurrent protection
+OTP - Overtemperature protection
+OVP - Overvoltage protection
+UVP - Undervoltage protection
+CV - Constant voltage
+CC - Constant current
+PFC - Power factor correction
+THD - Total harmonic distortion
+
+Thermal management
+The power supply of an electrical system tends to generate heat. The higher the efficiency, the less heat is generated by the power supply. There are many ways to manage the heat of a power supply unit. The types of cooling generally fall into two categories -- convection and conduction. Common convection methods for cooling electronic power supplies include natural air flow, forced air flow, or other liquid flow over the unit. Common conduction cooling methods include heat sinks, cold plates, and thermal compounds.
+
+Overload protection
+Power supplies often have protection from short circuit or overload that could damage the supply or cause a fire. Fuses and circuit breakers are two commonly used mechanisms for overload protection.
+A fuse contains a short piece of wire which melts if too much current flows. This effectively disconnects the power supply from its load, and the equipment stops working until the problem that caused the overload is identified and the fuse is replaced.
+Some power supplies use a very thin wire link soldered in place as a fuse. Fuses in power supply units may be replaceable by the end user, but fuses in consumer equipment may require tools to access and change.
+A circuit breaker contains an element that heats, bends and triggers a spring which shuts the circuit down. Once the element cools, and the problem is identified the breaker can be reset and the power restored.
+Some power supplies use a thermal cutout buried in the transformer rather than a fuse. The advantage is it briefly allows greater current to be drawn than the maximum allowed continuous current. Some such cutouts are self resetting, some are single use only.
+
+Current limiting
+Some supplies use current limiting instead of cutting off power if overloaded. The two types of current limiting used are electronic limiting and impedance limiting. The former is common on lab bench power supplies, the latter is common on supplies of less than 3 watts output.
+A foldback current limiter reduces the output current to much less than the maximum non-fault current.
+
+Applications
+Power supplies are a fundamental component of many electronic devices and therefore used in a diverse range of applications. This list is a small sample of the many applications of power supplies.
+
+Computers
+
+A modern computer power supply is a switch-mode power supply that converts AC power from the mains supply, to several DC voltages. Switch-mode supplies replaced linear supplies due to cost, weight, efficiency and size improvements. The diverse collection of output voltages also have widely varying current draw requirements.
+
+Electric Vehicles
+Electric vehicles are those which rely on energy created through electricity generation. A power supply unit is part of the necessary design to convert high voltage vehicle battery power.
+
+Welding
+
+Arc welding uses electricity to join metals by melting them. The electricity is provided by a welding power supply, and can either be AC or DC. Arc welding requires high currents typically between 100 and 350 amperes. Some types of welding can use as few as 10 amperes, while some applications of spot welding employ currents as high as 60,000 amperes for an extremely short time. Welding power supplies consisted of transformers or engines driving generators; modern welding equipment uses semiconductors and may include microprocessor control.
+
+Aircraft
+Both commercial and military avionic systems require either a DC-DC or AC/DC power supply to convert energy into usable voltage. These may often operate at 400 Hz in the interest of weight savings.
+
+Automation
+This refers to conveyors, assembly lines, bar code readers, cameras, motors, pumps, semi-fabricated manufacturing and more.
+
+Medical
+These include ventilators, infusion pumps, surgical and dental instruments, imaging and beds.

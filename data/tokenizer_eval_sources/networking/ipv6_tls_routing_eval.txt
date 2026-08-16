@@ -1,0 +1,137 @@
+# IPv6, TLS, and Routing
+
+### Addressing at Scale, Trust on an Untrusted Wire, and Finding the Path
+
+---
+
+## I. Why IPv6 Exists
+
+IPv4 provides 32 bits of address space, roughly 4.3 billion addresses, of which large blocks are reserved and unusable. The exhaustion was predicted in the early 1990s and arrived in stages as regional registries depleted their pools between 2011 and 2019. IPv6 provides 128 bits — about 3.4 × 10^38 addresses — which is not merely more, but enough that address conservation stops being a design constraint at all.
+
+Network address translation postponed the crisis and became the defining feature of the modern IPv4 internet. NAT rewrites source addresses and ports at a boundary so that many hosts share one public address, and it works well enough that a generation of engineers came to regard it as normal. Its costs are real: it breaks the end-to-end model, prevents inbound connections without explicit forwarding, complicates peer-to-peer protocols, forces application-layer gateways for protocols that embed addresses in payloads, and requires per-flow state in the middle of the network that is lost on device failure.
+
+IPv6 restores end-to-end addressing. Every host can hold a globally routable address, and NAT becomes unnecessary — though not, importantly, does the firewall, since address reachability and access policy are distinct concerns that NAT conflated.
+
+---
+
+## II. IPv6 Addressing
+
+An IPv6 address is 128 bits, written as eight groups of four hexadecimal digits separated by colons:
+
+```
+2001:0db8:0000:0000:0000:ff00:0042:8329
+```
+
+Two compression rules apply. Leading zeros in each group are omitted, and one run of consecutive all-zero groups is replaced by `::`. Only one such run may be compressed, since two would make the expansion ambiguous:
+
+```
+2001:db8::ff00:42:8329
+```
+
+The address divides into a 64-bit network prefix and a 64-bit interface identifier. This fixed split is deliberate: every subnet, however few hosts it contains, receives a /64. An allocation policy that seems wasteful is affordable because the space is effectively unlimited, and it enables stateless autoconfiguration. Sites typically receive a /48, giving 65,536 subnets, and residential connections commonly receive a /56 or /60.
+
+Address types replace IPv4's categories:
+
+- **Global unicast** — `2000::/3`, globally routable, the ordinary case.
+- **Link-local** — `fe80::/10`, automatically configured on every interface, valid only on the local link, and mandatory. Routing protocols use these for neighbor communication, which is why an IPv6 routing adjacency can form before any global address exists.
+- **Unique local** — `fc00::/7`, the private-use analogue of RFC 1918 space, not routed on the public internet.
+- **Multicast** — `ff00::/8`, with well-known groups such as `ff02::1` for all nodes and `ff02::2` for all routers on the link.
+- **Loopback** — `::1`, and the unspecified address `::`.
+
+IPv6 has no broadcast address. Everything broadcast accomplished is done by multicast to a specific group, which spares hosts the interrupt load of traffic irrelevant to them.
+
+---
+
+## III. Neighbor Discovery and Autoconfiguration
+
+ARP does not exist in IPv6. Its functions are absorbed into the **Neighbor Discovery Protocol**, which runs over ICMPv6 and handles considerably more.
+
+Address resolution uses Neighbor Solicitation and Neighbor Advertisement messages sent to a solicited-node multicast group derived from the low 24 bits of the target address. Because the group is specific, only a small number of hosts process each solicitation, unlike ARP's broadcast to every station on the segment.
+
+Router Solicitation and Router Advertisement messages let hosts discover routers, learn the on-link prefix, the MTU, and the default gateway. **Stateless address autoconfiguration** builds on this: a host forms a link-local address, verifies uniqueness through duplicate address detection, solicits a router advertisement, and combines the advertised prefix with a locally generated interface identifier to form a global address. No DHCP server is required.
+
+Early implementations derived the interface identifier from the MAC address using EUI-64, which embedded a permanent hardware identifier in every address a device used — a serious privacy defect, since it made a laptop trackable across networks. Privacy extensions generate random, periodically rotated identifiers instead, and this is now default behavior. DHCPv6 remains available where central control over address assignment and option distribution is required.
+
+ICMPv6 is not optional in the way ICMP was often treated in IPv4. Blocking it wholesale breaks neighbor discovery, autoconfiguration, and path MTU discovery. IPv6 routers do not fragment packets; a router with a packet too large for the next link discards it and returns a Packet Too Big message, and the source is responsible for reducing its packet size. Filtering that message produces a connection that completes its handshake and then stalls on the first large transfer — a failure mode that appears to be an application bug and is not.
+
+---
+
+## IV. Transition Mechanisms
+
+IPv4 and IPv6 are not interoperable; a v6-only host cannot talk to a v4-only host without translation. Deployment therefore proceeds through coexistence.
+
+**Dual stack** runs both protocols simultaneously and is the cleanest approach. Hosts prefer IPv6 when a AAAA record resolves and fall back to A records otherwise. The **Happy Eyeballs** algorithm improves this by starting connection attempts on both families in parallel with a short head start for IPv6, so a broken v6 path costs milliseconds rather than a full timeout.
+
+Tunneling encapsulates IPv6 in IPv4 to cross v4-only infrastructure. Manual tunnels, 6in4, and 6rd are used where native transit is unavailable; automatic mechanisms such as Teredo exist but perform poorly and are largely deprecated.
+
+Translation converts between families. NAT64 with DNS64 lets v6-only clients reach v4-only servers by synthesizing AAAA records pointing at a translation prefix, commonly `64:ff9b::/96`. This is how large mobile networks run v6-only internally while retaining reachability to the legacy internet.
+
+---
+
+## V. TLS: Establishing Trust Over an Untrusted Path
+
+TLS provides three properties: **confidentiality**, so an observer cannot read the traffic; **integrity**, so tampering is detected; and **authentication**, so the client knows which server it reached. The third is the one people forget, and it is the one that matters most, since encryption to an attacker is worthless.
+
+TLS 1.3, standardized in 2018, is a substantial simplification. It removed static RSA key exchange, all non-AEAD ciphers, compression, renegotiation, and custom Diffie-Hellman groups — every one of which had been the basis of a practical attack. The remaining cipher suites are few and all provide forward secrecy.
+
+The 1.3 handshake completes in one round trip:
+
+1. **ClientHello** — supported versions, cipher suites, and a key share for a guessed group (usually X25519), sent speculatively to avoid an extra round trip. Extensions include SNI naming the intended host and ALPN naming the application protocol.
+2. **ServerHello** — the selected suite and the server's key share. Both sides now derive shared secrets, and everything after this point is encrypted, including the certificate.
+3. **Certificate, CertificateVerify, Finished** — the server proves possession of the private key by signing the transcript. The client verifies the chain and responds with its own Finished.
+
+Encrypting the certificate is a real privacy improvement over TLS 1.2, where it was sent in cleartext and revealed the identity of the server to any observer. SNI, however, remains visible in the ClientHello, which is what Encrypted Client Hello addresses.
+
+**Forward secrecy** follows from ephemeral key exchange: session keys derive from key shares discarded after use, so compromising the server's long-term private key later does not decrypt recorded past sessions. Under the old static RSA exchange it did, which meant an adversary could capture traffic indefinitely and decrypt it retroactively after a single key compromise.
+
+Session resumption uses a pre-shared key from a previous connection, avoiding the full handshake. **0-RTT** sends application data with the very first flight, eliminating the round trip entirely, at a cost that must be understood: 0-RTT data is replayable, so it is safe only for idempotent requests. Sending a non-idempotent request in early data is a genuine vulnerability, not a theoretical one.
+
+---
+
+## VI. Certificates and the Public Key Infrastructure
+
+An X.509 certificate binds a public key to an identity, signed by a certificate authority. Verification walks the chain from the presented leaf through intermediates to a root in the client's trust store, checking at each step that the signature is valid, the validity period covers now, the basic constraints permit signing, and the key usage matches.
+
+Hostname verification checks the requested name against the Subject Alternative Name extension. The legacy Common Name field is deprecated and ignored by modern clients. Wildcards match a single label only: `*.example.com` covers `api.example.com` but not `a.b.example.com` and not the bare `example.com`.
+
+Revocation remains the weakest part of the system. Certificate revocation lists are large and stale. OCSP requires an online query that leaks browsing behavior to the CA and fails open when unreachable, which makes it near-useless against an active attacker. OCSP stapling has the server fetch and attach a signed status, removing the privacy problem and the latency. Short-lived certificates, now measured in days, sidestep revocation by expiring before a compromise can be exploited at length.
+
+Certificate Transparency logs every issued certificate to public append-only structures, letting domain owners detect misissuance. It is a detective control, and it exists because the PKI's fundamental weakness is that any of hundreds of trusted CAs can issue for any name.
+
+---
+
+## VII. Routing: Choosing a Path
+
+A router forwards packets by consulting a table of prefixes and selecting the **longest prefix match** — the most specific route wins, so a `/24` beats a `/16` covering the same address regardless of protocol or metric.
+
+Static routes are configured manually and never adapt. They suit stub networks and default routes. Dynamic protocols exchange reachability information and converge on paths automatically.
+
+**Distance-vector** protocols share their entire table with directly connected neighbors, which then compute distances. RIP is the classic instance, using hop count with a maximum of 15, and it converges slowly and suffers count-to-infinity, partially mitigated by split horizon and poison reverse. It is obsolete for anything but the smallest networks.
+
+**Link-state** protocols flood descriptions of local connectivity to every router in the area, so each builds an identical topology database and runs Dijkstra's shortest-path algorithm independently. OSPF and IS-IS work this way. Convergence is fast, loops are rare, and the cost is memory and CPU proportional to topology size. OSPF divides large networks into areas connected through a backbone to bound that cost; OSPFv3 carries IPv6, and IS-IS carries both families in one protocol instance, which is why large carriers favor it.
+
+These are **interior gateway protocols**, operating within a single administrative domain and optimizing for shortest path.
+
+---
+
+## VIII. BGP: Routing Between Administrations
+
+The internet is a mesh of autonomous systems, each an independently operated network with an AS number. **BGP** is the protocol between them, and it optimizes for policy rather than for distance.
+
+BGP is a path-vector protocol: advertisements carry the full AS path to a destination. This provides loop detection — a router rejects any path already containing its own AS number — and provides the raw material for policy decisions. Route selection proceeds through an ordered sequence of tiebreakers: highest local preference first, then shortest AS path, then origin type, then lowest MED, then eBGP over iBGP, then lowest IGP metric to the next hop, and finally deterministic tiebreakers such as the lowest router ID.
+
+Local preference sits first for a reason. It is set by the local operator and expresses business relationship: traffic prefers customer routes over peer routes over transit routes, because customers pay and transit costs money. The shortest path is subordinate to the cheapest one, which is why internet traffic frequently takes a topologically indirect route.
+
+BGP's weakness is that it was designed for a network where participants trusted one another. An AS can announce a prefix it does not own, and neighbors will generally believe it. Such **route hijacks** have repeatedly diverted traffic for entire countries and services, sometimes by accident through misconfiguration and sometimes deliberately. Defenses are layered: prefix filtering at customer boundaries, Internet Routing Registry data of variable quality, and **RPKI** with route origin validation, which cryptographically binds a prefix to the AS authorized to originate it. RPKI is deployed widely enough to matter but does not validate the rest of the path, which BGPsec would address at a cost in computation that has so far prevented adoption.
+
+---
+
+## IX. How These Three Interact
+
+The layers are independent by design, and their failures are correspondingly independent — which is precisely why diagnosis must proceed from the bottom.
+
+A TLS handshake that hangs after ClientHello frequently has nothing to do with TLS. It is a path MTU problem: the certificate flight exceeds the smallest MTU on the path, the Packet Too Big message is being filtered, and the sender never learns to reduce its segment size. The handshake starts because the initial packets are small and stalls because the certificate is not.
+
+A service reachable over IPv4 but not IPv6 is usually a routing or firewall asymmetry rather than an application defect, since the application above the socket cannot distinguish the families. A site that intermittently fails for a subset of users often has one broken path among several announced by BGP, visible only from the parts of the internet that select it.
+
+The operating discipline that follows is to identify the lowest layer that is misbehaving before forming any theory about the layers above it. Addressing determines whether packets can be named, routing determines whether they arrive, and TLS determines whether what arrives can be trusted — in that order, always.

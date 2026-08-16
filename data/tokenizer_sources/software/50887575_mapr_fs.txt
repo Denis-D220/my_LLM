@@ -1,0 +1,60 @@
+The MapR File System (MapR FS) is a clustered file system that supports both very
+large-scale and high-performance uses. MapR FS supports a variety of interfaces including
+conventional read/write file access via NFS and a FUSE interface, as well as via the HDFS interface used by
+many systems such as Apache Hadoop and Apache Spark. In addition to file-oriented access,
+MapR FS supports access to tables and message streams using the Apache HBase and Apache Kafka APIs, as well as via a document database interface.
+First released in 2010, MapR FS is now typically described as the MapR Converged Data Platform due
+to the addition of tabular and messaging interfaces. The same core technology is, however, used to
+implement all of these forms of persistent data storage and all of the interfaces are ultimately
+supported by the same server processes. To distinguish the different capabilities of the overall
+data platform, the term MapR FS is used more specifically to refer to the file-oriented interfaces,
+MapR DB or MapR JSON DB is used to refer to the tabular interfaces and MapR Streams is used to
+describe the message streaming capabilities.
+MapR FS is a cluster filesystem that  provides uniform access from files to other objects
+such as tables used as universal namespace accessible from any client of the system. Access control
+is also provided for files, tables and streams used as access control expressions, which is an
+extension of the more common (and limited) access control list that allow permissions from
+composed  lists of allowed users or groups, but  boolean instead allow combinations of
+user id and groups.
+
+History
+MapR FS was developed in 2009 by MapR Technologies to extend the capabilities of
+Apache Hadoop by providing a more performant and stable platform. The design of MapR FS is
+influenced by various other systems such as the Andrew File System (AFS). The concept of
+volumes in AFS has some strong similarity from the point of the view of users, although the
+implementation in MapR FS is completely different. One major difference between AFS and MapR FS is
+that the latter uses a strong consistency model while AFS provides only weak consistency.
+To meet the original goals of supporting Hadoop programs, MapR FS supports the HDFS API by
+translating HDFS function calls into an internal API based on a custom remote procedure call (RPC) mechanism. The normal write-once model of HDFS is replaced in
+MapR FS by a fully mutable file system even when using the HDFS API. The ability to support file
+mutation allows the implementation of an NFS server that translates NFS operations into internal
+MapR RPC calls. Similar mechanisms are used to allow a Filesystem in Userspace (FUSE) interface
+and an approximate emulation of the Apache HBase API.
+
+Architecture
+Files in MapR FS are internally implemented by splitting the file contents into chunks,
+typically each 256 MB in size although the size is specific to each file. Each chunk is written to
+containers which are the element of replication in the cluster. Containers are replicated and
+the replication is done by either linear fashion in which each replica forwards write operations to
+the next replica in line or in a star pattern in which the master replica forwards write operations
+to all other replicas at the same time. Writes are acknowledged by the master replica when all writes
+to all replicas complete. Internally, containers implement B-trees which are used at multiple
+levels such as to map file offset to chunk within a file or to map file offset to the correct 8kB
+block within a chunk.
+These B-trees are also used to implement directories. A long hash of each file or directory name in
+the directory is used to find the child file or directory table.
+A volume is a special data structure similar to a directory in many ways, except that it allows
+additional access control and management operations. A notable capability of volumes is that the
+nodes on which a volume may reside within a cluster can be restricted to control performance,
+particularly in heavily contended multi-tenant systems that are running a wide variety of
+workloads.
+Proprietary technology is used in MapR FS to implement transactions in containers and to achieve
+consistent crash recovery.
+Other features of the filesystem include:
+
+Distributed cluster metadata, including the location of all containers and their arrangement into replication chains.
+Distributed metadata, including the directory tree. All directories are fully replicated and no single node contains all of the meta-data for the cluster.
+Efficient use of B-trees to achieve high performance even with very large directories.
+Partition tolerance. A cluster can be partitioned without loss of consistency, although availability may be compromised. Restricted consistency replication across multiple clusters is also supported using volume mirrors, and near real-time replication of tables and streams.
+Consistent multi-threaded update. Files can be updated or read by very many threads of control simultaneously without requiring global locking structures.
+Rolling upgrades and online filesystem maintenance. Almost all maintenance including major version upgrades can be performed while the cluster continues to operate at nearly full speed.

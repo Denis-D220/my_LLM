@@ -1,0 +1,259 @@
+Erodability (or erodibility) is the inherent yielding or nonresistance of soils and rocks to erosion. A high erodibility implies that the same amount of work exerted by the erosion processes leads to a larger removal of material. Because the mechanics behind erosion depend upon the competence and coherence of the material, erodibility is treated in different ways depending on the type of surface that eroded.
+
+Soils
+Soil erodibility is a lumped parameter that represents an integrated annual value of the soil profile reaction to the process of soil detachment and transport by raindrops and surface flow.  The most commonly used model for predicting soil loss from water erosion is the Universal Soil Loss Equation (USLE) (also known as the K-factor technique), which estimates the average annual soil loss 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ as:
+
+  
+    
+      
+        A
+        =
+        R
+        K
+        L
+        S
+        C
+        P
+      
+    
+    {\displaystyle A=RKLSCP}
+  
+
+where R is the rainfall erosivity factor, K is the soil erodibility, L and S are topographic factors representing length and slope, and C and P are cropping management factors.
+Other factors such as the stone content (referred as stoniness), which acts as protection against soil erosion, are very significant in Mediterranean countries. The K-factor is estimated as following 
+K = [(2.1 × 10−4  M1.14 (12–OM) + 3.25 (s-2) + 2.5 (p-3))/100] * 0.1317
+M: the textural factor with M = (msilt + mvfs) * (100 - mc)
+mc :clay fraction content (b0.002 mm);
+msilt  : silt fraction content (0.002–0.05 mm);
+mvfs : very fine sand fraction content (0.05–0.1 mm);
+OM: Organic Matter content (%)
+s: soil structure
+p: permeability
+The K-factor is expressed in the International System of units as t ha h ha−1 MJ−1 mm−1
+
+Rocks
+
+Shear stress model
+Geological and experimental studies have shown that the erosion of bedrock by rivers follows in first approach the following expression known as the shear stress model of stream power erosion:
+
+  
+    
+      
+        
+          
+            
+              d
+              z
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        −
+        
+          K
+          
+            τ
+          
+        
+        (
+        τ
+         
+        −
+        τ
+        
+           
+          
+            c
+          
+        
+        
+          )
+          
+            a
+          
+        
+      
+    
+    {\displaystyle {dz \over dt}=-K_{\tau }(\tau \ -\tau \ _{c})^{a}}
+  
+
+where z is the riverbed elevation, t is time, K
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ is the erodibility, 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ is the basal shear stress of the water flow, and a is an exponent. For a river channel with a slope S and a water depth D, 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+ can be expressed as:
+
+  
+    
+      
+        τ
+         
+        =
+        ρ
+         
+        g
+        D
+        S
+      
+    
+    {\displaystyle \tau \ =\rho \ gDS}
+  
+
+Note that 
+  
+    
+      
+        
+          K
+          
+            τ
+          
+        
+      
+    
+    {\displaystyle K_{\tau }}
+  
+ embeds not only mechanical properties inherent to the rock but also other factors unaccounted in the previous two equations, such as the availability of river tools (pebbles being dragged by the current) that actually produce the abrasion of the riverbed.
+
+  
+    
+      
+        
+          K
+          
+            τ
+          
+        
+      
+    
+    {\displaystyle K_{\tau }}
+  
+ can be measured in the lab for weak rocks, but river erosion rates in natural geological scenarios are often slower than 0.1 mm/yr, and therefore the river incision must be dated over periods longer than a few thousand years to make accurate measurements. Ke values range between 10−6 to 10+2 m yr−1 Pa−1.5 for a=1.5 and 10−4 to 10+4 m yr−1 Pa−1 for a=1. However, the hydrological conditions in these time scales are usually poorly constrained, impeding a good the quantification of D. 
+This model can also be applied to soils. In this case, the erodibility, K
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+  
+, can be estimated using a hole erosion test or a jet erosion test.
+
+Unit stream power model
+An alternative model for bedrock erosion is the unit stream power, which assumes that erosion rates are proportional to the potential energy loss of the water per unit area:
+
+  
+    
+      
+        
+          
+            
+              d
+              z
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        −
+        
+          K
+          
+            ω
+          
+        
+         
+        ω
+         
+      
+    
+    {\displaystyle {dz \over dt}=-K_{\omega }\ \omega \ }
+  
+
+where 
+  
+    
+      
+        
+          K
+          
+            ω
+          
+        
+      
+    
+    {\displaystyle K_{\omega }}
+  
+ is the erodibility, and 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+ is the unit stream power, which is easily calculated as:
+
+  
+    
+      
+        ω
+         
+        =
+        ρ
+         
+        g
+        Q
+        S
+        
+          /
+        
+        W
+      
+    
+    {\displaystyle \omega \ =\rho \ gQS/W}
+  
+
+where Q is the water discharge of the river [m3/s], and W is the width of the river channel [m].
+Relative differences in long-term erodibility can be estimated by quantifying the erosion response under similar climatic and topographic conditions with different rock lithology.

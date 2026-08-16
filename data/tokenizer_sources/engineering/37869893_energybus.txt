@@ -1,0 +1,55 @@
+EnergyBus connectors are used for charging electric bicycles and pedelecs within Europe.  The connector is circular in shape and specified for charging light electric vehicles at up to 1.5 kilowatts.  Electric power is provided at 12–48 volts direct current (DC) so that any battery charger can charge any rechargeable battery.
+Data transmission between the battery and charger uses a CAN bus, exchanging CANopen messages defined by the CAN in Automation CiA-454 standard.
+
+Connector
+The EnergyBus physical interface consists of the plug and socket used to connect battery packs, battery chargers and other components. The  connector used was designed by Rosenberger (de) and contains six contacts:
+
+2 medium pins, for DC power transfer up to 1.5 kW at 12–48 volts DC, limited to 30 A.
+2 small pins, for CAN bus data bus high and low lines, transporting CANopen with CAN in Automation–454 messages.
+2 small pins, for auxiliary DC power to drive non-power components, such as energy management systems and sensors.
+To avoid damage from electric arcing, the power pins are not energised until communication has been established and checks performed.
+For bikes with a non-standard connector, charging cables are used which contain a chip programmed with the voltage and charging parameters for the battery in a specific manufacturer's e-bike.
+
+Interchangeability
+
+The main intended benefit for the end-user is that one battery charger can be used for batteries of different manufacturers and different chemistries.  This is similar in intent to the common external power supply for mobile phones within Europe, which formerly standardised on USB-A and micro usb cables for phone chargers, and also similar to the European standardisation of Type 2 connectors for electric cars.  Battery packs can be replaced or upgraded while keeping the existing battery charger. The EnergyBus data communication protocol is designed to ensure safety.
+Vehicle designers and electric systems architects can add additional components or sensors to the bus without having to significantly alter the existing design.
+For system integrators and manufacturers can use commercial off-the-shelf designs with reduced complexity, and after release it can be upgraded to support new battery chemistry or parallel batteries, without significant changes to software.
+
+Applications
+
+Components
+As of 2012, a range of electric bike components were available, including electric motors by Acron, 300 watt power conversion adaptors by Panasonic Industries and with Electragil Software, bike lights by Phillips, and several designs batteries by HighTech Energy, plus human interfaces by Marquardt. A specific inverter was available from Kaco for islanding.
+Electragil, a Swiss company located close to Winterthur, markets an integrated E-Bike component system. Pironex, a German company located at the baltic sea, provides a large scale of EnergyBus products like intelligent charger, battery-adaptors and input/output-devices.
+Mobipus, a Taiwan company, located at New Taipei City, provides complete line of PMSM motor controller (from 48v to 300v) for electric motorcycle and scooter and battery management system.
+EnergyBus component developers can make use of a set of prepackaged software libraries and a framework of development tools.
+
+Electric bicycles
+By 2012 the first electric bicycle based on EnergyBus, was introduced by TourDeSuisse (TDS) in Switzerland.  This bicycle, call The Impulse was built on the Electragil system. The gobaX G1 is a E-Bike for heavy goods transport introduced in 2012.
+The Copenhagen Wheel, an integrated motor, sensor and battery for bike assistance, is equipped with an EnergyBus connector.
+
+Public infrastructure
+Public charge stations for pedelecs have been deployed in the Tegernsee region.
+
+Island power systems
+In stand-alone power system systems operating in "island" mode without a connection to an electrical grid, EnergyBus can be used to interconnect small electrical devices.  Examples are repeater stations in mobile communication networks, measurement stations, off-grid housing, village-sized direct current grids, and off-grid water pumping stations. The Fraunhofer Institute for Solar Energy Systems was using EnergyBus in electrical island systems in Egypt with photovoltaic panels and batteries, including the Kaco converters.
+
+History
+Discussion of what became EnergyBus started around the year 2000, centered on the topic of serial hybrid light electric vehicles. Those ideas went through many iterations and included the filing of patents.
+In late-2011 EnergyBus version 1.0 was released covering battery chargers and battery packs.  This version included defining the physical plug and socket, as well as the interworking of the power adapter with the battery.
+
+Future development
+The version 2.0 of the standard with general definitions and a full scope of component descriptions was scheduled to be released in 2014 with an international standard following later. Additional activity is underway to develop a Charge Lock Cable.
+
+History
+
+The Organisation
+The EnergyBus specification is published through the EnergyBus Association, based in Germany. The EnergyBus organisation is set up as a German association. The driving people behind the organisation are Andreas Fuchs, Mo-Hua Yang and Hannes Neupert. EnergyBus works with partner organisations: for example, CiA is organizing the standardization work, Opi2020 is working on international standardization, and EnergyBus GmbH is set to provide compatibility testing end of 2014.
+
+Memberships
+Members of the EnergyBus association receive information about the standard and support it. Members are in one of three levels:
+
+Associate Membership: Associate members support the standardization process through actively developing the various standard definitions. Associate members have access to the respective documents in draft versions.
+Adopter Membership: This membership is for implementing partners that wish to work only with the finished documents
+Community Membership: Beginning with partners from educational institutions, community members receive access to documentation, and in return provide open source or open hardware licensed results published on publicly accessible versioning systems like gitHub or Google Code.
+Members are individuals, as well as manufacturers of components, vehicles, systems, and retailers. Members are from all over the world, and include Bosch, Panasonic, Sanyo, Deutsche Bahn, Philips, and VARTA.

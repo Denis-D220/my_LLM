@@ -1,0 +1,972 @@
+In geometry, the geometric median of a discrete point set in a Euclidean space is the point minimizing the sum of distances to the sample points. This generalizes the median, which has the property of minimizing the sum of distances or absolute differences for one-dimensional data. It is also known as the spatial median, Euclidean minisum point, Torricelli point,  or 1-median. It provides a measure of central tendency in higher dimensions and it is a standard problem in facility location, i.e., locating a facility to minimize the cost of transportation.
+The geometric median is an important estimator of location in statistics, because it minimizes the sum of the L2 distances of the samples. It is to be compared to the mean, which minimizes the sum of the squared L2 distances; and to the coordinate-wise median which minimizes the sum of the L1 distances. 
+The more general k-median problem asks for the location of k cluster centers minimizing the sum of L2 distances from each sample point to its nearest center.
+The special case of the problem for three points in the plane (that is, m = 3 and n = 2 in the definition below) is sometimes also known as Fermat's problem; it arises in the construction of minimal Steiner trees, and was originally posed as a problem by Pierre de Fermat and solved by Evangelista Torricelli. Its solution is now known as the Fermat point of the triangle formed by the three sample points. The geometric median may in turn be generalized to the problem of minimizing the sum of weighted distances, known as the Weber problem after Alfred Weber's discussion of the problem in his 1909 book on facility location. Some sources instead call Weber's problem the Fermat–Weber problem, but others use this name for the unweighted geometric median problem.
+Wesolowsky (1993) provides a survey of the geometric median problem. See Fekete, Mitchell & Beurer (2005) for generalizations of the problem to non-discrete point sets.
+
+Definition
+Formally, for a given set of m points 
+  
+    
+      
+        
+          
+            X
+          
+          
+            m
+          
+        
+        =
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            m
+          
+        
+        
+      
+    
+    {\displaystyle \mathbb {X} ^{m}=x_{1},x_{2},\dots ,x_{m}\,}
+  
+ with each 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+        ∈
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle x_{i}\in \mathbb {R} ^{n}}
+  
+, the geometric median is defined as the minimizer of the sum of the L2 distances:
+
+  
+    
+      
+        
+          
+            
+              a
+              r
+              g
+              
+              m
+              i
+              n
+            
+            
+              y
+              ∈
+              
+                
+                  R
+                
+                
+                  n
+                
+              
+            
+          
+        
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            m
+          
+        
+        
+          
+            ‖
+            
+              
+                x
+                
+                  i
+                
+              
+              −
+              y
+            
+            ‖
+          
+          
+            2
+          
+        
+        
+        .
+      
+    
+    {\displaystyle {\underset {y\in \mathbb {R} ^{n}}{\operatorname {arg\,min} }}\sum _{i=1}^{m}\left\|x_{i}-y\right\|_{2}\,.}
+  
+
+Here, arg min means the value of the argument 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ which minimizes the sum. In this case, it is the point 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ in n-dimensional Euclidean space from where the sum of all Euclidean distances to the 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+    {\displaystyle x_{i}}
+  
+'s is minimum.
+
+Properties
+For the 1-dimensional case, the geometric median coincides with the median. This is because the univariate median also minimizes the sum of distances from the points.  (More precisely, if the points are p1, ..., pn, in that order, the geometric median is the middle point 
+  
+    
+      
+        
+          p
+          
+            (
+            n
+            +
+            1
+            )
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle p_{(n+1)/2}}
+  
+ if n is odd, but is not uniquely determined if n is even, when it can be any point in the line segment between the two middling points 
+  
+    
+      
+        
+          p
+          
+            n
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle p_{n/2}}
+  
+ and 
+  
+    
+      
+        
+          p
+          
+            (
+            n
+            
+              /
+            
+            2
+            )
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle p_{(n/2)+1}}
+  
+.) 
+The geometric median is unique whenever the points are not collinear.
+The geometric median is equivariant for Euclidean similarity transformations, including translation and rotation. This means that one would get the same result either by transforming the geometric median, or by applying the same transformation to the sample data and finding the geometric median of the transformed data. This property follows from the fact that the geometric median is defined only from pairwise distances, and does not depend on the system of orthogonal Cartesian coordinates by which the sample data is represented. In contrast, the component-wise median for a multivariate data set is not in general rotation invariant, nor is it independent of the choice of coordinates.
+The geometric median has a breakdown point of 0.5. That is, up to half of the sample data may be arbitrarily corrupted, and the median of the samples will still provide a robust estimator for the location of the uncorrupted data.
+
+Special cases
+For 3 (non-collinear) points, if any angle of the triangle formed by those points is 120° or more, then the geometric median is the point at the vertex of that angle. If all the angles are less than 120°, the geometric median is the point inside the triangle which subtends an angle of 120° to each three pairs of triangle vertices. This is also known as the Fermat point of the triangle formed by the three vertices. (If the three points are collinear then the geometric median is the point between the two other points, as is the case with a one-dimensional median.)
+For 4 coplanar points, if one of the four points is inside the triangle formed by the other three points, then the geometric median is that point. Otherwise, the four points form a convex quadrilateral and the geometric median is the crossing point of the diagonals of the quadrilateral. The geometric median of four coplanar points is the same as the unique Radon point of the four points.
+
+Computation
+Despite the geometric median's being an easy-to-understand concept, computing it poses a challenge. The centroid or center of mass, defined similarly to the geometric median as minimizing the sum of the squares of the distances to each point, can be found by a simple formula — its coordinates are the averages of the coordinates of the points — but it has been shown that no explicit formula, nor an exact algorithm involving only arithmetic operations and kth roots, can exist in general for the geometric median. Therefore, only numerical or symbolic approximations to the solution of this problem are possible under this model of computation.
+However, it is straightforward to calculate an approximation to the geometric median using an iterative procedure in which each step produces a more accurate approximation. Procedures of this type can be derived from the fact that the sum of distances to the sample points is a convex function, since the distance to each sample point is convex and the sum of convex functions remains convex. Therefore, procedures that decrease the sum of distances at each step cannot get trapped in a local optimum.
+One common approach of this type, called Weiszfeld's algorithm after the work of Endre Weiszfeld, is a form of iteratively re-weighted least squares. This algorithm defines a set of weights that are inversely proportional to the distances from the current estimate to the sample points, and creates a new estimate that is the weighted average of the sample according to these weights. That is,
+
+  
+    
+      
+        
+          
+          
+            
+              y
+              
+                k
+                +
+                1
+              
+            
+            =
+            
+              (
+              
+                
+
+                
+                
+                  ∑
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    m
+                  
+                
+                
+                  
+                    
+                      x
+                      
+                        i
+                      
+                    
+                    
+                      ‖
+                      
+                        x
+                        
+                          i
+                        
+                      
+                      −
+                      
+                        y
+                        
+                          k
+                        
+                      
+                      ‖
+                    
+                  
+                
+              
+              )
+            
+          
+          /
+        
+        
+          (
+          
+            
+
+            
+            
+              ∑
+              
+                i
+                =
+                1
+              
+              
+                m
+              
+            
+            
+              
+                1
+                
+                  ‖
+                  
+                    x
+                    
+                      i
+                    
+                  
+                  −
+                  
+                    y
+                    
+                      k
+                    
+                  
+                  ‖
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle \left.y_{k+1}=\left({}\sum _{i=1}^{m}{\frac {x_{i}}{\|x_{i}-y_{k}\|}}\right)\right/\left({}\sum _{i=1}^{m}{\frac {1}{\|x_{i}-y_{k}\|}}\right).}
+  
+
+This method converges for almost all initial positions, but may fail to converge when one of its estimates falls on one of the given points. It can be modified to handle these cases so that it converges for all initial points.
+Bose, Maheshwari & Morin (2003) describe more sophisticated geometric optimization procedures for finding approximately optimal solutions to this problem.
+Cohen et al. (2016) show how to compute the geometric median to arbitrary precision in nearly linear time.
+Note also that the problem can be formulated as the second-order cone program
+
+  
+    
+      
+        
+          
+            min
+            
+              y
+              ∈
+              
+                
+                  R
+                
+                
+                  n
+                
+              
+              ,
+               
+              s
+              ∈
+              
+                
+                  R
+                
+                
+                  m
+                
+              
+            
+          
+        
+         
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            m
+          
+        
+        
+          s
+          
+            i
+          
+        
+        
+           subject to 
+        
+        
+          s
+          
+            i
+          
+        
+        ≥
+        
+          
+            ‖
+            
+              
+                x
+                
+                  i
+                
+              
+              −
+              y
+            
+            ‖
+          
+          
+            2
+          
+        
+        
+           for 
+        
+        i
+        =
+        1
+        ,
+        …
+        ,
+        m
+        ,
+      
+    
+    {\displaystyle {\underset {y\in \mathbb {R} ^{n},\ s\in \mathbb {R} ^{m}}{\min }}\ \sum _{i=1}^{m}s_{i}{\text{ subject to }}s_{i}\geq \left\|x_{i}-y\right\|_{2}{\text{ for }}i=1,\ldots ,m,}
+  
+
+which can be solved in polynomial time using common optimization solvers.
+The Varignon frame is an analog computing device that (ignoring real-world issues such as friction) can find the geometric median.
+
+Characterization of the geometric median
+If y is distinct from all the given points, xi, then y is the geometric median if and only if it satisfies:
+
+  
+    
+      
+        0
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            m
+          
+        
+        
+          
+            
+              
+                x
+                
+                  i
+                
+              
+              −
+              y
+            
+            
+              ‖
+              
+                
+                  x
+                  
+                    i
+                  
+                
+                −
+                y
+              
+              ‖
+            
+          
+        
+        .
+      
+    
+    {\displaystyle 0=\sum _{i=1}^{m}{\frac {x_{i}-y}{\left\|x_{i}-y\right\|}}.}
+  
+
+This is equivalent to:
+
+  
+    
+      
+        
+          
+          
+            y
+            =
+            
+              (
+              
+                
+
+                
+                
+                  ∑
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    m
+                  
+                
+                
+                  
+                    
+                      x
+                      
+                        i
+                      
+                    
+                    
+                      ‖
+                      
+                        x
+                        
+                          i
+                        
+                      
+                      −
+                      y
+                      ‖
+                    
+                  
+                
+              
+              )
+            
+          
+          /
+        
+        
+          (
+          
+            
+
+            
+            
+              ∑
+              
+                i
+                =
+                1
+              
+              
+                m
+              
+            
+            
+              
+                1
+                
+                  ‖
+                  
+                    x
+                    
+                      i
+                    
+                  
+                  −
+                  y
+                  ‖
+                
+              
+            
+          
+          )
+        
+        ,
+      
+    
+    {\displaystyle \left.y=\left({}\sum _{i=1}^{m}{\frac {x_{i}}{\|x_{i}-y\|}}\right)\right/\left({}\sum _{i=1}^{m}{\frac {1}{\|x_{i}-y\|}}\right),}
+  
+
+which is closely related to Weiszfeld's algorithm.
+In general,  y is the geometric median if and only if there are vectors ui such that:
+
+  
+    
+      
+        0
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            m
+          
+        
+        
+          u
+          
+            i
+          
+        
+      
+    
+    {\displaystyle 0=\sum _{i=1}^{m}u_{i}}
+  
+
+where for xi ≠ y, 
+
+  
+    
+      
+        
+          u
+          
+            i
+          
+        
+        =
+        
+          
+            
+              
+                x
+                
+                  i
+                
+              
+              −
+              y
+            
+            
+              ‖
+              
+                
+                  x
+                  
+                    i
+                  
+                
+                −
+                y
+              
+              ‖
+            
+          
+        
+      
+    
+    {\displaystyle u_{i}={\frac {x_{i}-y}{\left\|x_{i}-y\right\|}}}
+  
+
+and for xi = y, 
+
+  
+    
+      
+        ‖
+        
+          u
+          
+            i
+          
+        
+        ‖
+        ≤
+        1.
+      
+    
+    {\displaystyle \|u_{i}\|\leq 1.}
+  
+
+An equivalent formulation of this condition is
+
+  
+    
+      
+        
+          ∑
+          
+            1
+            ≤
+            i
+            ≤
+            m
+            ,
+            
+              x
+              
+                i
+              
+            
+            ≠
+            y
+          
+        
+        
+          
+            
+              
+                x
+                
+                  i
+                
+              
+              −
+              y
+            
+            
+              ‖
+              
+                
+                  x
+                  
+                    i
+                  
+                
+                −
+                y
+              
+              ‖
+            
+          
+        
+        ≤
+        
+          |
+          
+            {
+            
+            i
+            ∣
+            1
+            ≤
+            i
+            ≤
+            m
+            ,
+            
+              x
+              
+                i
+              
+            
+            =
+            y
+            
+            }
+          
+          |
+        
+        .
+      
+    
+    {\displaystyle \sum _{1\leq i\leq m,x_{i}\neq y}{\frac {x_{i}-y}{\left\|x_{i}-y\right\|}}\leq \left|\{\,i\mid 1\leq i\leq m,x_{i}=y\,\}\right|.}
+  
+
+It can be seen as a generalization of the median property, in the sense that any partition of the points, in particular as induced by any hyperplane through y, has the same and opposite sum of positive directions from y on each side. In the one dimensional case, the hyperplane is the point y itself, and the sum of directions simplifies to the (directed) counting measure.
+
+Generalizations
+The geometric median can be generalized from Euclidean spaces to general Riemannian manifolds (and even metric spaces) using the same idea which is used to define the Fréchet mean on a Riemannian manifold. Let 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ be a Riemannian manifold with corresponding distance function 
+  
+    
+      
+        d
+        (
+        ⋅
+        ,
+        ⋅
+        )
+      
+    
+    {\displaystyle d(\cdot ,\cdot )}
+  
+, let 
+  
+    
+      
+        
+          w
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          w
+          
+            n
+          
+        
+      
+    
+    {\displaystyle w_{1},\ldots ,w_{n}}
+  
+ be 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ non-negative weights, and let 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            n
+          
+        
+      
+    
+    {\displaystyle x_{1},\ldots ,x_{n}}
+  
+
+be 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ observations from 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+.  Then we define the  weighted geometric median 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ (or weighted Fréchet median) of the data points as any solution of
+
+  
+    
+      
+        m
+        =
+        
+          
+            
+              a
+              r
+              g
+              
+              m
+              i
+              n
+            
+            
+              x
+              ∈
+              M
+            
+          
+        
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          w
+          
+            i
+          
+        
+        d
+        (
+        x
+        ,
+        
+          x
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle m={\underset {x\in M}{\operatorname {arg\,min} }}\sum _{i=1}^{n}w_{i}d(x,x_{i})}
+  
+.
+If all the weights are equal, we say simply that 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ is the geometric median.

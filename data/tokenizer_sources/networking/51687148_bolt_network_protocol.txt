@@ -1,0 +1,32 @@
+The Bolt Protocol (Bolt) is a connection oriented network protocol used for client-server communication in database applications. It operates over a TCP connection or WebSocket.
+Bolt is statement-oriented, allowing a client to send messages containing a statement consisting of a single string and a set of typed parameters. The server responds to each statement with a result message and an optional stream of result records.
+
+History
+The Bolt protocol was first introduced to the public in November 2015, during an interview conducted by Duncan Brown and published on DZone. The first release of software implementing the protocol occurred in December 2015, as part of a milestone release of Neo4j Server. In April 2016, Neo4j Server 3.0 was released and contained the first server implementation of the protocol, accompanied by a suite of Bolt client drivers. This release received attention from several mainstream media outlets.
+
+Versioning
+The Bolt network protocol uses version negotiation to ensure compatibility between clients and servers. Clients send up to four supported protocol versions, encoded as 32-bit integers, prioritizing earlier entries. The server responds with the highest compatible version or a zero value if no match is found, closing the connection. Starting with Bolt 4.0, the protocol supports major and minor versioning. Bolt 4.3 introduced range-based minor versioning, allowing clients to specify consecutive minor versions compactly.
+
+Protocol overview
+Protocol new versions are released regularly, introducing enhancements in performance, functionality, and compatibility. 
+
+Messaging
+
+Bolt clients and servers both send data over the connection as a sequence of messages. Each message has a type (denoted by a "signature" byte) and may include additional data. The client drives the interaction, and each message sent by the client will cause one or more response messages to be sent by the server.
+The following information pertains to Bolt version 5.8 and may not reflect the latest developments in the protocol.
+Client messages:
+
+Server messages:
+
+Message transfer encoding
+Each message is encoded into a sequence of bytes. These bytes are transferred using a binary chunked encoding, where each chunk is preceded by an unsigned, big-endian 16-bit integer denoting the number of bytes that immediately follow. A length of 0 is used to denote the end of the message.
+
+Failure handling
+A client may send multiple messages to a server, without first waiting for a response. The server processes each message sequentially. However, as there may be logical dependencies between messages sent by the client, the server will not evaluate requests it receives after sending FAILURE in response to a preceding message. Instead, it will send an IGNORED message in reply to every client message, until the client acknowledges the failure by sending an RESET message.
+This is similar to the failure handling and recovery in the PostgreSQL wire protocol.
+
+PackStream overview - version 1
+PackStream is a binary presentation format for the exchange of richly-typed data. It provides a syntax layer for the Bolt messaging protocol.
+
+Data encoding
+Bolt supports encoding for a number of different data types.

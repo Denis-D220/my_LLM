@@ -1,0 +1,87 @@
+
+
+
+A bug bounty program is a deal offered by many websites, organizations, and software developers by which individuals can receive recognition and compensation for reporting bugs, especially those pertaining to security vulnerabilities. If no financial reward is offered, it is called a vulnerability disclosure program.
+
+These programs, which can be considered a form of crowdsourced penetration testing, grant permission for unaffiliated individuals—called bug bounty hunters, white hats or ethical hackers—to find and report vulnerabilities. If the developers discover and patch bugs before the general public is aware of them, cyberattacks that might have exploited it are no longer possible.
+
+Participants in bug bounty programs come from a variety of countries, and although a primary motivation is monetary reward, there are a variety of other motivations for participating. Hackers could earn much more money for selling undisclosed zero-day vulnerabilities to brokers, spyware companies, or government agencies instead of the software vendor. If they search for vulnerabilities outside the scope of bug bounty programs, they might find themselves facing legal threats under cybercrime laws. The scale of bug bounty programs increased dramatically in the late 2010s.
+
+Some large companies and organizations run and operate their own bug bounty programs, including Microsoft, Facebook, Google, Mozilla, the European Union, and the United States federal government.  Other companies offer bug bounties via platforms such as HackerOne.
+
+History
+
+In 1851, Alfred Charles Hobbs was paid US$20,000 (adjusted for inflation) to pick a lock. In 1983, the Hunter & Ready company posted an advertisement with the tagline "Get a bug if you find a bug", offering to reward hackers who discovered bugs in its VRTX operating system a Volkswagen Beetle car. In 1995, Netscape launched its bug bounty program, for the beta version of its Netscape Navigator 2.0 browser. Later on, other enterprises opened their own bug bounty programs. These were supplemented by crowdsourcing platforms that made it easier for professionals to find bug bounties.
+
+Motivation
+
+Despite developers' goal of delivering a product that works entirely as intended, virtually all software contains bugs. If a bug creates a security risk, it is called a vulnerability, and if the vendor is unaware of it, it is called a zero-day. Vulnerabilities vary in their potential to be exploited by malicious actors. Some are not usable at all, while others can be used to disrupt the device with a denial of service attack. The most valuable allow the attacker to inject and run their own code, without the user being aware of it. The harms of an attack can be severe.
+
+Organizations seeking to improve security test their systems to see if they can be breached. Many contract with external services that conduct penetration testing, but this is not enough to find all vulnerabilities, motivating some companies to supplement with crowdsourced information. Many companies are skeptical of third-party reports, afraid that these programs will increase malicious activity, cost too much money, or bring fraudulent reports. Alternatively, bug bounty programs might be ignored because of confidence in their application's security or in favor of other security measures. Some studies have found that the cost per vulnerability found is much lower via bounty programs rather than by hiring software engineers to search for vulnerabilities.
+
+Rewards
+
+The size of the reward offered varies on such factors such as the size of the company, the difficulty of finding the vulnerability, and how severe its effects could be if exploited. Successful bug bounty hunters can often make more than software developers. Many bug bounty programs are focused on web applications.
+
+In August 2013, a Palestinian computer science student reported a vulnerability that allowed anyone to post a video on an arbitrary Facebook account. According to the email communication between the student and Facebook, he attempted to report the vulnerability using Facebook's bug bounty program but the student was misunderstood by Facebook's engineers. Later he exploited the vulnerability using the Facebook profile of Mark Zuckerberg, resulting in Facebook refusing to pay him a bounty.
+
+Facebook started paying researchers who find and report security bugs by issuing them custom-branded "White Hat" debit cards that can be reloaded with funds each time the researchers discover new flaws.
+
+In 2016, Uber experienced a security incident when an individual accessed the personal information of 57 million Uber users worldwide. The individual supposedly demanded a ransom of $100,000 in order to destroy rather than publish the data. In Congressional testimony, Uber CISO indicated that the company verified that the data had been destroyed before paying the $100,000. Uber's Chief Information Security Officer expressed regret for not disclosing the incident in 2016. As part of their response, Uber worked with HackerOne to update their bug bounty program policies to explain good faith vulnerability research and disclosure.
+
+Yahoo! was severely criticized for sending out Yahoo! T-shirts as reward to the Security Researchers for finding and reporting security vulnerabilities in Yahoo!. When Ecava released the first known bug bounty program for ICS in 2013, they were criticized for offering store credits instead of cash which does not incentivize security researchers. Ecava explained that the program was intended to be initially restrictive and focused on the human safety perspective for the users of IntegraXor SCADA, their ICS software.
+
+Some bug bounties programs require researchers to sign a non-disclosure agreement to receive pay or safe harbor benefits from the bug bounty program. This practice has been criticized on ethical grounds as enabling the company to sweep knowledge of vulnerabilities under the rug.
+
+Reports
+
+Because submissions are open to anyone, a large number of reports (estimated at 50-70 percent for HackerOne, the largest platform) are invalid. One study found that the largest number of reports were rejected as previously known vulnerabilities, followed by false positives, out-of-scope, duplicates, and for lack of proof-of-concept. Another study found that bounty programs offering more money received a higher number of valid reports. One cause of invalid reports is that it may be easier for hackers to submit a report rather than do additional work to check their solution. Some bug bounty platforms, including HackerOne, have implemented measures to cut down on the number of invalid reports. Bug bounty programs may be invite-only to trusted security researchers instead of public. To validate the vulnerability and receive an award, the hacker usually has to create an exploit to prove that the vulnerability found is a genuine security bug. The most commonly reported vulnerabilities in bug bounty programs include SQL injection, cross-site scripting (XSS), and design flaws.
+
+Participants
+
+Participants in bug bounty programs come from a variety of countries. In a survey of hackers on the HackerOne platform, 19 percent gave their location as the United States. Anyone can make reports, regardless of their educational background and age. The majority of reports come from a relatively small number of hackers. The number of reporters and reports has increased dramatically in the late 2010s.
+
+Although the most-reported motivation of bug bounty participants is the financial reward from reporting, other motivating factors include the potential for recognition, intellectual challenge, learning, and job opportunities. A 2017 study published in Journal of Cybersecurity found that newer bug bounty programs attracted more researchers, despite older ones offering higher financial rewards.
+
+Notable programs
+
+Corporate
+
+In October 2013, Google announced a major change to its Vulnerability Reward Program. Previously, it had been a bug bounty program covering many Google products. With the shift, however, the program was broadened to include a selection of high-risk free software applications and libraries, primarily those designed for networking or for low-level operating system functionality. Submissions that Google found adherent to the guidelines would be eligible for rewards ranging from $500 to $3,133.70. In 2017, Google expanded their program to cover vulnerabilities found in applications developed by third parties and made available through the Google Play Store. Google's Vulnerability Rewards Program now includes vulnerabilities found in Google, Google Cloud, Android, and Chrome products, and rewards up to $31,337.
+
+Microsoft and Facebook partnered in November 2013 to sponsor The Internet Bug Bounty, a program to offer rewards for reporting hacks and exploits for a broad range of Internet-related software. In 2017, GitHub and The Ford Foundation sponsored the initiative, which is managed by volunteers including from Uber, Microsoft, Adobe, HackerOne, GitHub, NCC Group, and Signal Sciences.
+
+Government
+
+In March 2016, Peter Cook announced the US federal government's first bug bounty program, the "Hack the Pentagon" program.
+
+In 2019, The European Commission announced the EU-FOSSA 2 bug bounty initiative for popular open source projects, including Drupal, Apache Tomcat, VLC, 7-zip and KeePass. The project was co-facilitated by European bug bounty platform Intigriti and HackerOne and resulted in a total of 195 unique and valid vulnerabilities.
+
+In 2025, the Government of the Czech Republic launched its official bug bounty program on the Hackrate Ethical Hacking Platform.
+
+Platforms
+
+There are some platforms—the largest being HackerOne—that run bug bounty programs on behalf of software vendors and pay rewards set by the vendor. Others include Cobalt, Bugcrowd, and Synact. Open Bug Bounty is a crowd security bug bounty program established in 2014 that allows individuals to post website and web application security vulnerabilities in the hope of a reward from affected website operators.
+
+Research
+
+As of 2021, most quantitative research on bug bounty programs has focused on publicly accessible datasets. There has not been published research into bug bounties for safety-critical systems, which have become increasingly connected to the Internet. Most of the existing research is quantitative and created by computer science experts, with a lack of multidisciplinary perspectives incorporating the insights of such fields as economics, law and philosophy.
+
+Legality
+
+Vulnerability discovery is similar in many respects to cyberattack. The actions of even well-intentioned hackers may breach criminal laws passed to prosecute cybercriminals. Most hackers are not legal experts and lack of knowledge of the law in their jurisdiction. It is common for vulnerability discoverers to receive legal threats after disclosing a vulnerability.
+
+Although nearly all bug bounty programs promise a safe harbor for reports complying with their policies, if the discovered vulnerability does not fall into a previously established bug bounty program, the company involved could report it as an illegal cyberattack. In China, some vulnerability reporters have been arrested and prosecuted, including the leaders of WooYun—the oldest and largest vulnerability reporting platform in the country.
+
+Alternative vulnerability markets
+
+Not all companies respond positively to disclosures, as they can cause legal liability and operational overhead. It is not uncommon to receive cease-and-desist letters from software vendors after disclosing a vulnerability for free. Some individuals who find a previously unknown, zero-day vulnerability do not sell it to the vendor directly or indirectly via a third-party bug bounty program. According to one study, the most commonly cited reasons for not reporting a bug were threatening language on the website, lack of an obvious place to report, and lack of response to earlier bug reports.
+
+Discoverers can earn more money—more than US$1 million in some cases—by selling the vulnerability to brokers such as Zerodium, spyware companies such as NSO Group, governments, or intelligence agencies. Government agencies may use the vulnerability to cause a cyberattack, stockpile the vulnerability, or notify the vendor. Some hackers also sell the vulnerability they found to a criminal group. In 2015, the markets for government and crime were estimated at at least ten times larger than the bug bounty market.
+
+See also
+
+References
+
+Sources
+

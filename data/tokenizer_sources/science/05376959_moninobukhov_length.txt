@@ -1,0 +1,427 @@
+The Obukhov length is used to describe the effects of buoyancy on turbulent flows, particularly in the lower tenth of the atmospheric boundary layer.  It was first defined by Alexander Obukhov in 1946. It is also known as the Monin–Obukhov length because of its important role in the similarity theory developed by Monin and Obukhov. A simple definition of the Monin-Obukhov length is that height at which turbulence is generated more by buoyancy than by wind shear.
+The Obukhov length is defined by
+
+  
+    
+      
+        L
+        =
+        −
+        
+          
+            
+              
+                u
+                
+                  ∗
+                
+                
+                  3
+                
+              
+              
+                
+                  
+                    
+                      θ
+                      ¯
+                    
+                  
+                
+                
+                  v
+                
+              
+            
+            
+              k
+              g
+              (
+              
+                
+                  
+                    
+                      w
+                      
+                        
+                          
+                          ′
+                        
+                      
+                    
+                    
+                      θ
+                      
+                        v
+                      
+                      
+                        
+                          
+                          ′
+                        
+                      
+                    
+                  
+                  ¯
+                
+              
+              
+                )
+                
+                  s
+                
+              
+            
+          
+        
+         
+      
+    
+    {\displaystyle L=-{\frac {u_{*}^{3}{\bar {\theta }}_{v}}{kg({\overline {w^{'}\theta _{v}^{'}}})_{s}}}\ }
+  
+
+where 
+  
+    
+      
+        
+          u
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle u_{*}}
+  
+ is the frictional velocity, 
+  
+    
+      
+        
+          
+            
+              
+                θ
+                ¯
+              
+            
+          
+          
+            v
+          
+        
+      
+    
+    {\displaystyle {\bar {\theta }}_{v}}
+  
+ is the mean virtual potential temperature, 
+  
+    
+      
+        (
+        
+          
+            
+              
+                w
+                
+                  
+                    
+                    ′
+                  
+                
+              
+              
+                θ
+                
+                  v
+                
+                
+                  
+                    
+                    ′
+                  
+                
+              
+            
+            ¯
+          
+        
+        
+          )
+          
+            s
+          
+        
+      
+    
+    {\displaystyle ({\overline {w^{'}\theta _{v}^{'}}})_{s}}
+  
+ is the surface virtual potential temperature flux, k is the von Kármán constant. If not known, the virtual potential temperature flux can be approximated with:
+
+  
+    
+      
+        
+          
+            
+              
+                w
+                
+                  
+                    
+                    ′
+                  
+                
+              
+              
+                θ
+                
+                  v
+                
+                
+                  
+                    
+                    ′
+                  
+                
+              
+            
+            ¯
+          
+        
+        =
+        
+          
+            
+              
+                w
+                
+                  
+                    
+                    ′
+                  
+                
+              
+              
+                θ
+                
+                  
+                    
+                    ′
+                  
+                
+              
+            
+            ¯
+          
+        
+        (
+        1
+        +
+        0.61
+        
+          
+            r
+            ¯
+          
+        
+        )
+        +
+        0.61
+        
+          
+            θ
+            ¯
+          
+        
+        
+        
+          
+            
+              
+                w
+                
+                  
+                    
+                    ′
+                  
+                
+              
+              
+                r
+                
+                  
+                    
+                    ′
+                  
+                
+              
+            
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {w^{'}\theta _{v}^{'}}}={\overline {w^{'}\theta ^{'}}}(1+0.61{\overline {r}})+0.61{\overline {\theta }}\;{\overline {w^{'}r^{'}}}}
+  
+
+where 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  
+ is potential temperature, and 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ is mixing ratio. 
+
+By this definition, 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ is usually negative in the daytime since 
+  
+    
+      
+        
+          
+            
+              
+                w
+                
+                  
+                    
+                    ′
+                  
+                
+              
+              
+                θ
+                
+                  v
+                
+                
+                  
+                    
+                    ′
+                  
+                
+              
+            
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {w^{'}\theta _{v}^{'}}}}
+  
+ is typically positive during the daytime over land, positive at night when 
+  
+    
+      
+        
+          
+            
+              
+                w
+                
+                  
+                    
+                    ′
+                  
+                
+              
+              
+                θ
+                
+                  v
+                
+                
+                  
+                    
+                    ′
+                  
+                
+              
+            
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {w^{'}\theta _{v}^{'}}}}
+  
+ is typically negative, and becomes infinite at dawn and dusk when 
+  
+    
+      
+        
+          
+            
+              
+                w
+                
+                  
+                    
+                    ′
+                  
+                
+              
+              
+                θ
+                
+                  v
+                
+                
+                  
+                    
+                    ′
+                  
+                
+              
+            
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {w^{'}\theta _{v}^{'}}}}
+  
+ passes through zero.
+A physical interpretation of 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ is given by the Monin–Obukhov similarity theory. During the day 
+  
+    
+      
+        −
+        L
+      
+    
+    {\displaystyle -L}
+  
+ is the height at which the buoyant production of turbulence kinetic energy (TKE) is equal to that produced by the shearing action of the wind (shear production of TKE).

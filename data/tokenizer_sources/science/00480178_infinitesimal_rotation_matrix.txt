@@ -1,0 +1,2703 @@
+An infinitesimal rotation matrix or differential rotation matrix is a matrix representing an infinitely small rotation.
+While a rotation matrix is an orthogonal matrix 
+  
+    
+      
+        
+          R
+          
+            
+              T
+            
+          
+        
+        =
+        
+          R
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle R^{\mathsf {T}}=R^{-1}}
+  
+ representing an element of 
+  
+    
+      
+        
+          S
+          O
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle \mathrm {SO} (n)}
+  
+ (the special orthogonal group), the differential of a rotation is a skew-symmetric matrix 
+  
+    
+      
+        
+          A
+          
+            
+              T
+            
+          
+        
+        =
+        −
+        A
+      
+    
+    {\displaystyle A^{\mathsf {T}}=-A}
+  
+ in the tangent space 
+  
+    
+      
+        
+          
+            s
+            o
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\mathfrak {so}}(n)}
+  
+ (the special orthogonal Lie algebra), which is not itself a rotation matrix.
+An infinitesimal rotation matrix has the form
+
+  
+    
+      
+        I
+        +
+        d
+        θ
+        
+        A
+        ,
+      
+    
+    {\displaystyle I+d\theta \,A,}
+  
+
+where 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ is the identity matrix, 
+  
+    
+      
+        d
+        θ
+      
+    
+    {\displaystyle d\theta }
+  
+ is vanishingly small, and ⁠
+  
+    
+      
+        A
+        ∈
+        
+          
+            s
+            o
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle A\in {\mathfrak {so}}(n)}
+  
+⁠.
+For example, if ⁠
+  
+    
+      
+        A
+        =
+        
+          L
+          
+            x
+          
+        
+      
+    
+    {\displaystyle A=L_{x}}
+  
+⁠, representing an infinitesimal three-dimensional rotation about the x-axis, a basis element of ⁠
+  
+    
+      
+        
+          
+            s
+            o
+          
+        
+        (
+        3
+        )
+      
+    
+    {\displaystyle {\mathfrak {so}}(3)}
+  
+⁠, then
+
+  
+    
+      
+        
+          L
+          
+            x
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  −
+                  1
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                
+                
+                  0
+                
+              
+            
+            ]
+          
+        
+        ,
+      
+    
+    {\displaystyle L_{x}={\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}},}
+  
+
+and
+
+  
+    
+      
+        I
+        +
+        d
+        θ
+        
+          L
+          
+            x
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                
+                
+                  −
+                  d
+                  θ
+                
+              
+              
+                
+                  0
+                
+                
+                  d
+                  θ
+                
+                
+                  1
+                
+              
+            
+            ]
+          
+        
+        .
+      
+    
+    {\displaystyle I+d\theta L_{x}={\begin{bmatrix}1&0&0\\0&1&-d\theta \\0&d\theta &1\end{bmatrix}}.}
+  
+
+The computation rules for infinitesimal rotation matrices are the usual ones except that infinitesimals of second order are dropped. With these rules, these matrices do not satisfy all the same properties as ordinary finite rotation matrices under the usual treatment of infinitesimals. It turns out that the order in which infinitesimal rotations are applied is irrelevant.
+
+Discussion
+An infinitesimal rotation matrix is a skew-symmetric matrix where:
+
+As any rotation matrix has a single real eigenvalue, which is equal to +1, the corresponding eigenvector defines the rotation axis.
+Its module defines an infinitesimal angular displacement.
+The shape of the matrix is as follows:
+
+  
+    
+      
+        A
+        =
+        
+          
+            (
+            
+              
+                
+                  1
+                
+                
+                  −
+                  d
+                  
+                    ϕ
+                    
+                      z
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  d
+                  
+                    ϕ
+                    
+                      y
+                    
+                  
+                  (
+                  t
+                  )
+                
+              
+              
+                
+                  d
+                  
+                    ϕ
+                    
+                      z
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  1
+                
+                
+                  −
+                  d
+                  
+                    ϕ
+                    
+                      x
+                    
+                  
+                  (
+                  t
+                  )
+                
+              
+              
+                
+                  −
+                  d
+                  
+                    ϕ
+                    
+                      y
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  d
+                  
+                    ϕ
+                    
+                      x
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  1
+                
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle A={\begin{pmatrix}1&-d\phi _{z}(t)&d\phi _{y}(t)\\d\phi _{z}(t)&1&-d\phi _{x}(t)\\-d\phi _{y}(t)&d\phi _{x}(t)&1\\\end{pmatrix}}}
+  
+
+Associated quantities
+Associated to an infinitesimal rotation matrix 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is an infinitesimal rotation tensor 
+  
+    
+      
+        d
+        Φ
+        (
+        t
+        )
+        =
+        A
+        −
+        I
+      
+    
+    {\displaystyle d\Phi (t)=A-I}
+  
+:
+
+  
+    
+      
+        d
+        Φ
+        (
+        t
+        )
+        =
+        
+          
+            (
+            
+              
+                
+                  0
+                
+                
+                  −
+                  d
+                  
+                    ϕ
+                    
+                      z
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  d
+                  
+                    ϕ
+                    
+                      y
+                    
+                  
+                  (
+                  t
+                  )
+                
+              
+              
+                
+                  d
+                  
+                    ϕ
+                    
+                      z
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  0
+                
+                
+                  −
+                  d
+                  
+                    ϕ
+                    
+                      x
+                    
+                  
+                  (
+                  t
+                  )
+                
+              
+              
+                
+                  −
+                  d
+                  
+                    ϕ
+                    
+                      y
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  d
+                  
+                    ϕ
+                    
+                      x
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  0
+                
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle d\Phi (t)={\begin{pmatrix}0&-d\phi _{z}(t)&d\phi _{y}(t)\\d\phi _{z}(t)&0&-d\phi _{x}(t)\\-d\phi _{y}(t)&d\phi _{x}(t)&0\\\end{pmatrix}}}
+  
+
+Dividing it by the time difference yields the angular velocity tensor:
+
+  
+    
+      
+        Ω
+        =
+        
+          
+            
+              d
+              Φ
+              (
+              t
+              )
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  0
+                
+                
+                  −
+                  
+                    ω
+                    
+                      z
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  
+                    ω
+                    
+                      y
+                    
+                  
+                  (
+                  t
+                  )
+                
+              
+              
+                
+                  
+                    ω
+                    
+                      z
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  0
+                
+                
+                  −
+                  
+                    ω
+                    
+                      x
+                    
+                  
+                  (
+                  t
+                  )
+                
+              
+              
+                
+                  −
+                  
+                    ω
+                    
+                      y
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  
+                    ω
+                    
+                      x
+                    
+                  
+                  (
+                  t
+                  )
+                
+                
+                  0
+                
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle \Omega ={\frac {d\Phi (t)}{dt}}={\begin{pmatrix}0&-\omega _{z}(t)&\omega _{y}(t)\\\omega _{z}(t)&0&-\omega _{x}(t)\\-\omega _{y}(t)&\omega _{x}(t)&0\\\end{pmatrix}}}
+  
+
+Order of rotations
+These matrices do not satisfy all the same properties as ordinary finite rotation matrices under the usual treatment of infinitesimals. To understand what this means, consider
+
+  
+    
+      
+        d
+        
+          A
+          
+            
+              x
+            
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                
+                
+                  −
+                  d
+                  θ
+                
+              
+              
+                
+                  0
+                
+                
+                  d
+                  θ
+                
+                
+                  1
+                
+              
+            
+            ]
+          
+        
+        .
+      
+    
+    {\displaystyle dA_{\mathbf {x} }={\begin{bmatrix}1&0&0\\0&1&-d\theta \\0&d\theta &1\end{bmatrix}}.}
+  
+
+First, test the orthogonality condition, QTQ = I. The product is
+
+  
+    
+      
+        d
+        
+          A
+          
+            
+              x
+            
+          
+          
+            
+              T
+            
+          
+        
+        
+        d
+        
+          A
+          
+            
+              x
+            
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                  +
+                  d
+                  
+                    θ
+                    
+                      2
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                  +
+                  d
+                  
+                    θ
+                    
+                      2
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        ,
+      
+    
+    {\displaystyle dA_{\mathbf {x} }^{\textsf {T}}\,dA_{\mathbf {x} }={\begin{bmatrix}1&0&0\\0&1+d\theta ^{2}&0\\0&0&1+d\theta ^{2}\end{bmatrix}},}
+  
+
+differing from an identity matrix by second-order infinitesimals, discarded here. So, to first order, an infinitesimal rotation matrix is an orthogonal matrix.
+Next, examine the square of the matrix,
+
+  
+    
+      
+        d
+        
+          A
+          
+            
+              x
+            
+          
+          
+            2
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                  −
+                  d
+                  
+                    θ
+                    
+                      2
+                    
+                  
+                
+                
+                  −
+                  2
+                  d
+                  θ
+                
+              
+              
+                
+                  0
+                
+                
+                  2
+                  
+                  d
+                  θ
+                
+                
+                  1
+                  −
+                  d
+                  
+                    θ
+                    
+                      2
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        .
+      
+    
+    {\displaystyle dA_{\mathbf {x} }^{2}={\begin{bmatrix}1&0&0\\0&1-d\theta ^{2}&-2d\theta \\0&2\,d\theta &1-d\theta ^{2}\end{bmatrix}}.}
+  
+
+Again discarding second-order effects, note that the angle simply doubles. This hints at the most essential difference in behavior, which we can exhibit with the assistance of a second infinitesimal rotation,
+
+  
+    
+      
+        d
+        
+          A
+          
+            
+              y
+            
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  d
+                  ϕ
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                
+                
+                  0
+                
+              
+              
+                
+                  −
+                  d
+                  ϕ
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            ]
+          
+        
+        .
+      
+    
+    {\displaystyle dA_{\mathbf {y} }={\begin{bmatrix}1&0&d\phi \\0&1&0\\-d\phi &0&1\end{bmatrix}}.}
+  
+
+Compare the products dAx dAy to dAy dAx,
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  A
+                  
+                    
+                      x
+                    
+                  
+                
+                
+                d
+                
+                  A
+                  
+                    
+                      y
+                    
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    [
+                    
+                      
+                        
+                          1
+                        
+                        
+                          0
+                        
+                        
+                          d
+                          ϕ
+                        
+                      
+                      
+                        
+                          d
+                          θ
+                          
+                          d
+                          ϕ
+                        
+                        
+                          1
+                        
+                        
+                          −
+                          d
+                          θ
+                        
+                      
+                      
+                        
+                          −
+                          d
+                          ϕ
+                        
+                        
+                          d
+                          θ
+                        
+                        
+                          1
+                        
+                      
+                    
+                    ]
+                  
+                
+              
+            
+            
+              
+                d
+                
+                  A
+                  
+                    
+                      y
+                    
+                  
+                
+                
+                d
+                
+                  A
+                  
+                    
+                      x
+                    
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    [
+                    
+                      
+                        
+                          1
+                        
+                        
+                          d
+                          θ
+                          
+                          d
+                          ϕ
+                        
+                        
+                          d
+                          ϕ
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          1
+                        
+                        
+                          −
+                          d
+                          θ
+                        
+                      
+                      
+                        
+                          −
+                          d
+                          ϕ
+                        
+                        
+                          d
+                          θ
+                        
+                        
+                          1
+                        
+                      
+                    
+                    ]
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}dA_{\mathbf {x} }\,dA_{\mathbf {y} }&={\begin{bmatrix}1&0&d\phi \\d\theta \,d\phi &1&-d\theta \\-d\phi &d\theta &1\end{bmatrix}}\\dA_{\mathbf {y} }\,dA_{\mathbf {x} }&={\begin{bmatrix}1&d\theta \,d\phi &d\phi \\0&1&-d\theta \\-d\phi &d\theta &1\end{bmatrix}}.\\\end{aligned}}}
+  
+
+Since 
+  
+    
+      
+        d
+        θ
+        
+        d
+        ϕ
+      
+    
+    {\displaystyle d\theta \,d\phi }
+  
+ is second-order, we discard it: thus, to first order, multiplication of infinitesimal rotation matrices is commutative. In fact,
+
+  
+    
+      
+        d
+        
+          A
+          
+            
+              x
+            
+          
+        
+        
+        d
+        
+          A
+          
+            
+              y
+            
+          
+        
+        =
+        d
+        
+          A
+          
+            
+              y
+            
+          
+        
+        
+        d
+        
+          A
+          
+            
+              x
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle dA_{\mathbf {x} }\,dA_{\mathbf {y} }=dA_{\mathbf {y} }\,dA_{\mathbf {x} },}
+  
+
+again to first order. In other words, the order in which infinitesimal rotations are applied is irrelevant.
+This useful fact makes, for example, derivation of rigid body rotation relatively simple. But one must always be careful to distinguish (the first-order treatment of) these infinitesimal rotation matrices from both finite rotation matrices and from Lie algebra elements. When contrasting the behavior of finite rotation matrices in the Baker–Campbell–Hausdorff formula above with that of infinitesimal rotation matrices, where all the commutator terms will be second-order infinitesimals, one finds a bona fide vector space. Technically, this dismissal of any second-order terms amounts to group contraction.
+
+Generators of rotations
+
+Suppose we specify an axis of rotation by a unit vector [x, y, z], and suppose we have an infinitely small rotation of angle Δθ about that vector. Expanding the rotation matrix as an infinite addition, and taking the first-order approach, the rotation matrix ΔR is represented as:
+
+  
+    
+      
+        Δ
+        R
+        =
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            ]
+          
+        
+        +
+        
+          
+            [
+            
+              
+                
+                  0
+                
+                
+                  z
+                
+                
+                  −
+                  y
+                
+              
+              
+                
+                  −
+                  z
+                
+                
+                  0
+                
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+                
+                  −
+                  x
+                
+                
+                  0
+                
+              
+            
+            ]
+          
+        
+        
+        Δ
+        θ
+        =
+        I
+        +
+        A
+        
+        Δ
+        θ
+        .
+      
+    
+    {\displaystyle \Delta R={\begin{bmatrix}1&0&0\\0&1&0\\0&0&1\end{bmatrix}}+{\begin{bmatrix}0&z&-y\\-z&0&x\\y&-x&0\end{bmatrix}}\,\Delta \theta =I+A\,\Delta \theta .}
+  
+
+A finite rotation through angle θ about this axis may be seen as a succession of small rotations about the same axis. Approximating Δθ as θ/N, where N is a large number, a rotation of θ about the axis may be represented as:
+
+  
+    
+      
+        R
+        =
+        
+          lim
+          
+            N
+            →
+            ∞
+          
+        
+        
+          
+            (
+            
+              I
+              +
+              
+                
+                  
+                    A
+                    θ
+                  
+                  N
+                
+              
+            
+            )
+          
+          
+            N
+          
+        
+        =
+        exp
+        ⁡
+        (
+        A
+        θ
+        )
+        .
+      
+    
+    {\displaystyle R=\lim _{N\to \infty }\left(I+{\frac {A\theta }{N}}\right)^{N}=\exp(A\theta ).}
+  
+
+It can be seen that Euler's theorem essentially states that all rotations may be represented in this form. The product Aθ is the "generator" of the particular rotation, being the vector (x, y, z) associated with the matrix A. This shows that the rotation matrix and the axis-angle format are related by the exponential function.
+One can derive a simple expression for the generator G. One starts with an arbitrary plane defined by a pair of perpendicular unit vectors a and b. In this plane one can choose an arbitrary vector x with perpendicular y. One then solves for y in terms of x and substituting into an expression for a rotation in a plane yields the rotation matrix R, which includes the generator G = baT − abT.
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                a
+                cos
+                ⁡
+                
+                  (
+                  α
+                  )
+                
+                +
+                b
+                sin
+                ⁡
+                
+                  (
+                  α
+                  )
+                
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                −
+                a
+                sin
+                ⁡
+                
+                  (
+                  α
+                  )
+                
+                +
+                b
+                cos
+                ⁡
+                
+                  (
+                  α
+                  )
+                
+              
+            
+            
+              
+                cos
+                ⁡
+                
+                  (
+                  α
+                  )
+                
+              
+              
+                
+                =
+                
+                  a
+                  
+                    
+                      T
+                    
+                  
+                
+                x
+              
+            
+            
+              
+                sin
+                ⁡
+                
+                  (
+                  α
+                  )
+                
+              
+              
+                
+                =
+                
+                  b
+                  
+                    
+                      T
+                    
+                  
+                
+                x
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                −
+                a
+                
+                  b
+                  
+                    
+                      T
+                    
+                  
+                
+                x
+                +
+                b
+                
+                  a
+                  
+                    
+                      T
+                    
+                  
+                
+                x
+                =
+                
+                  (
+                  
+                    b
+                    
+                      a
+                      
+                        
+                          T
+                        
+                      
+                    
+                    −
+                    a
+                    
+                      b
+                      
+                        
+                          T
+                        
+                      
+                    
+                  
+                  )
+                
+                x
+              
+            
+            
+              
+            
+            
+              
+                
+                  x
+                  ′
+                
+              
+              
+                
+                =
+                x
+                cos
+                ⁡
+                
+                  (
+                  β
+                  )
+                
+                +
+                y
+                sin
+                ⁡
+                
+                  (
+                  β
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  [
+                  
+                    I
+                    cos
+                    ⁡
+                    
+                      (
+                      β
+                      )
+                    
+                    +
+                    
+                      (
+                      
+                        b
+                        
+                          a
+                          
+                            
+                              T
+                            
+                          
+                        
+                        −
+                        a
+                        
+                          b
+                          
+                            
+                              T
+                            
+                          
+                        
+                      
+                      )
+                    
+                    sin
+                    ⁡
+                    
+                      (
+                      β
+                      )
+                    
+                  
+                  ]
+                
+                x
+              
+            
+            
+              
+            
+            
+              
+                R
+              
+              
+                
+                =
+                I
+                cos
+                ⁡
+                
+                  (
+                  β
+                  )
+                
+                +
+                
+                  (
+                  
+                    b
+                    
+                      a
+                      
+                        
+                          T
+                        
+                      
+                    
+                    −
+                    a
+                    
+                      b
+                      
+                        
+                          T
+                        
+                      
+                    
+                  
+                  )
+                
+                sin
+                ⁡
+                
+                  (
+                  β
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                I
+                cos
+                ⁡
+                
+                  (
+                  β
+                  )
+                
+                +
+                G
+                sin
+                ⁡
+                
+                  (
+                  β
+                  )
+                
+              
+            
+            
+              
+            
+            
+              
+                G
+              
+              
+                
+                =
+                b
+                
+                  a
+                  
+                    
+                      T
+                    
+                  
+                
+                −
+                a
+                
+                  b
+                  
+                    
+                      T
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=a\cos \left(\alpha \right)+b\sin \left(\alpha \right)\\y&=-a\sin \left(\alpha \right)+b\cos \left(\alpha \right)\\\cos \left(\alpha \right)&=a^{\mathsf {T}}x\\\sin \left(\alpha \right)&=b^{\mathsf {T}}x\\y&=-ab^{\mathsf {T}}x+ba^{\mathsf {T}}x=\left(ba^{\mathsf {T}}-ab^{\mathsf {T}}\right)x\\\\x'&=x\cos \left(\beta \right)+y\sin \left(\beta \right)\\&=\left[I\cos \left(\beta \right)+\left(ba^{\mathsf {T}}-ab^{\mathsf {T}}\right)\sin \left(\beta \right)\right]x\\\\R&=I\cos \left(\beta \right)+\left(ba^{\mathsf {T}}-ab^{\mathsf {T}}\right)\sin \left(\beta \right)\\&=I\cos \left(\beta \right)+G\sin \left(\beta \right)\\\\G&=ba^{\mathsf {T}}-ab^{\mathsf {T}}\\\end{aligned}}}
+  
+
+To include vectors outside the plane in the rotation one needs to modify the above expression for R by including two projection operators that partition the space. This modified rotation matrix can be rewritten as an exponential function.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  P
+                  
+                    a
+                    b
+                  
+                
+              
+              
+                
+                =
+                −
+                
+                  G
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+                R
+              
+              
+                
+                =
+                I
+                −
+                
+                  P
+                  
+                    a
+                    b
+                  
+                
+                +
+                
+                  [
+                  
+                    I
+                    cos
+                    ⁡
+                    
+                      (
+                      β
+                      )
+                    
+                    +
+                    G
+                    sin
+                    ⁡
+                    
+                      (
+                      β
+                      )
+                    
+                  
+                  ]
+                
+                
+                  P
+                  
+                    a
+                    b
+                  
+                
+                =
+                exp
+                ⁡
+                (
+                G
+                β
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}P_{ab}&=-G^{2}\\R&=I-P_{ab}+\left[I\cos \left(\beta \right)+G\sin \left(\beta \right)\right]P_{ab}=\exp(G\beta )\\\end{aligned}}}
+  
+
+Analysis is often easier in terms of these generators, rather than the full rotation matrix. Analysis in terms of the generators is known as the Lie algebra of the rotation group.
+
+Exponential map
+
+Connecting the Lie algebra to the Lie group is the exponential map, which is defined using the standard matrix exponential series for exp(A) For any skew-symmetric matrix A, exp(A) is always a rotation matrix.
+An important practical example is the 3 × 3 case. In rotation group SO(3), it is shown that one can identify every A ∈ so(3) with an Euler vector ω = θu, where u = (x, y, z) is a unit-magnitude vector.
+By the properties of the identification su(2) ≅ R3, u is in the null space of A. Thus, u is left invariant by exp(A) and is hence a rotation axis.
+Using Rodrigues' rotation formula on matrix form with θ = ⁠θ/2⁠ + ⁠θ/2⁠, together with standard double angle formulae one obtains
+
+  
+    
+      
+        
+          
+            
+              
+                exp
+                ⁡
+                (
+                A
+                )
+              
+              
+                
+                
+
+                
+                =
+                exp
+                ⁡
+                (
+                θ
+                (
+                
+                  u
+                
+                ⋅
+                
+                  L
+                
+                )
+                )
+                =
+                exp
+                ⁡
+                
+                  (
+                  
+                    [
+                    
+                      
+                        
+                          
+                            
+                              0
+                            
+                            
+                              −
+                              z
+                              θ
+                            
+                            
+                              y
+                              θ
+                            
+                          
+                          
+                            
+                              z
+                              θ
+                            
+                            
+                              0
+                            
+                            
+                              −
+                              x
+                              θ
+                            
+                          
+                          
+                            
+                              −
+                              y
+                              θ
+                            
+                            
+                              x
+                              θ
+                            
+                            
+                              0
+                            
+                          
+                        
+                      
+                    
+                    ]
+                  
+                  )
+                
+                =
+                
+                  I
+                
+                +
+                2
+                cos
+                ⁡
+                
+                  
+                    θ
+                    2
+                  
+                
+                sin
+                ⁡
+                
+                  
+                    θ
+                    2
+                  
+                
+                 
+                
+                  u
+                
+                ⋅
+                
+                  L
+                
+                +
+                2
+                
+                  sin
+                  
+                    2
+                  
+                
+                ⁡
+                
+                  
+                    θ
+                    2
+                  
+                
+                 
+                (
+                
+                  u
+                
+                ⋅
+                
+                  L
+                
+                
+                  )
+                  
+                    2
+                  
+                
+                ,
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\exp(A)&{}=\exp(\theta ({\boldsymbol {u}}\cdot {\boldsymbol {L}}))=\exp \left(\left[{\begin{smallmatrix}0&-z\theta &y\theta \\z\theta &0&-x\theta \\-y\theta &x\theta &0\end{smallmatrix}}\right]\right)={\boldsymbol {I}}+2\cos {\frac {\theta }{2}}\sin {\frac {\theta }{2}}~{\boldsymbol {u}}\cdot {\boldsymbol {L}}+2\sin ^{2}{\frac {\theta }{2}}~({\boldsymbol {u}}\cdot {\boldsymbol {L}})^{2},\end{aligned}}}
+  
+
+This is the matrix for a rotation around axis u  by the angle θ in half-angle form. For full detail, see exponential map SO(3).
+Notice that for infinitesimal angles second-order terms can be ignored and remains exp(A) = I + A
+
+Relationship to skew-symmetric matrices
+Skew-symmetric matrices over the field of real numbers form the tangent space to the real orthogonal group 
+  
+    
+      
+        
+          O
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle \mathrm {O} (n)}
+  
+ at the identity matrix; formally, the special orthogonal Lie algebra. In this sense, then, skew-symmetric matrices can be thought of as infinitesimal rotations.
+Another way of saying this is that the space of skew-symmetric matrices forms the Lie algebra 
+  
+    
+      
+        
+          
+            o
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\mathfrak {o}}(n)}
+  
+ of the Lie group ⁠
+  
+    
+      
+        
+          O
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle \mathrm {O} (n)}
+  
+⁠. The Lie bracket on this space is given by the commutator:
+
+  
+    
+      
+        [
+        A
+        ,
+        B
+        ]
+        =
+        A
+        B
+        −
+        B
+        A
+        .
+        
+      
+    
+    {\displaystyle [A,B]=AB-BA.\,}
+  
+
+It is easy to check that the commutator of two skew-symmetric matrices is again skew-symmetric:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  [
+                
+                A
+                ,
+                B
+                
+                  
+                    ]
+                  
+                  
+                    
+                      T
+                    
+                  
+                
+              
+              
+                
+                =
+                (
+                A
+                B
+                
+                  )
+                  
+                    
+                      T
+                    
+                  
+                
+                −
+                (
+                B
+                A
+                
+                  )
+                  
+                    
+                      T
+                    
+                  
+                
+                =
+                
+                  B
+                  
+                    
+                      T
+                    
+                  
+                
+                
+                  A
+                  
+                    
+                      T
+                    
+                  
+                
+                −
+                
+                  A
+                  
+                    
+                      T
+                    
+                  
+                
+                
+                  B
+                  
+                    
+                      T
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                (
+                −
+                B
+                )
+                (
+                −
+                A
+                )
+                −
+                (
+                −
+                A
+                )
+                (
+                −
+                B
+                )
+                =
+                B
+                A
+                −
+                A
+                B
+                =
+                −
+                [
+                A
+                ,
+                B
+                ]
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{[}A,B{]}^{\textsf {T}}&=(AB)^{\textsf {T}}-(BA)^{\textsf {T}}=B^{\textsf {T}}A^{\textsf {T}}-A^{\textsf {T}}B^{\textsf {T}}\\&=(-B)(-A)-(-A)(-B)=BA-AB=-[A,B]\,.\end{aligned}}}
+  
+
+The matrix exponential of a skew-symmetric matrix 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is then an orthogonal matrix 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+:
+
+  
+    
+      
+        R
+        =
+        exp
+        ⁡
+        (
+        A
+        )
+        =
+        
+          ∑
+          
+            n
+            =
+            0
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              A
+              
+                n
+              
+            
+            
+              n
+              !
+            
+          
+        
+        .
+      
+    
+    {\displaystyle R=\exp(A)=\sum _{n=0}^{\infty }{\frac {A^{n}}{n!}}.}
+  
+
+The image of the exponential map of a Lie algebra always lies in the connected component of the Lie group that contains the identity element. In the case of the Lie group ⁠
+  
+    
+      
+        
+          O
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle \mathrm {O} (n)}
+  
+⁠, this connected component is the special orthogonal group ⁠
+  
+    
+      
+        
+          S
+          O
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle \mathrm {SO} (n)}
+  
+⁠, consisting of all orthogonal matrices with determinant 1. So 
+  
+    
+      
+        R
+        =
+        exp
+        ⁡
+        (
+        A
+        )
+      
+    
+    {\displaystyle R=\exp(A)}
+  
+ will have determinant +1. Moreover, since the exponential map of a connected compact Lie group is always surjective, it turns out that every orthogonal matrix with unit determinant can be written as the exponential of some skew-symmetric matrix.
+In the particular important case of dimension 
+  
+    
+      
+        n
+        =
+        2
+        ,
+      
+    
+    {\displaystyle n=2,}
+  
+ the exponential representation for an orthogonal matrix reduces to  the well-known polar form of a complex number of unit modulus. Indeed, if ⁠
+  
+    
+      
+        n
+        =
+        2
+      
+    
+    {\displaystyle n=2}
+  
+⁠, a special orthogonal matrix has the form
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  a
+                
+                
+                  −
+                  b
+                
+              
+              
+                
+                  b
+                
+                
+                  
+                  a
+                
+              
+            
+            ]
+          
+        
+        ,
+      
+    
+    {\displaystyle {\begin{bmatrix}a&-b\\b&\,a\end{bmatrix}},}
+  
+
+with ⁠
+  
+    
+      
+        
+          a
+          
+            2
+          
+        
+        +
+        
+          b
+          
+            2
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle a^{2}+b^{2}=1}
+  
+⁠. Therefore, putting 
+  
+    
+      
+        a
+        =
+        cos
+        ⁡
+        θ
+      
+    
+    {\displaystyle a=\cos \theta }
+  
+ and ⁠
+  
+    
+      
+        b
+        =
+        sin
+        ⁡
+        θ
+      
+    
+    {\displaystyle b=\sin \theta }
+  
+⁠, it can be written
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  cos
+                  
+                  θ
+                
+                
+                  −
+                  sin
+                  
+                  θ
+                
+              
+              
+                
+                  sin
+                  
+                  θ
+                
+                
+                  
+                  cos
+                  
+                  θ
+                
+              
+            
+            ]
+          
+        
+        =
+        exp
+        ⁡
+        
+          (
+          
+            θ
+            
+              
+                [
+                
+                  
+                    
+                      0
+                    
+                    
+                      −
+                      1
+                    
+                  
+                  
+                    
+                      1
+                    
+                    
+                      
+                      0
+                    
+                  
+                
+                ]
+              
+            
+          
+          )
+        
+        ,
+      
+    
+    {\displaystyle {\begin{bmatrix}\cos \,\theta &-\sin \,\theta \\\sin \,\theta &\,\cos \,\theta \end{bmatrix}}=\exp \left(\theta {\begin{bmatrix}0&-1\\1&\,0\end{bmatrix}}\right),}
+  
+
+which corresponds exactly to the polar form 
+  
+    
+      
+        cos
+        ⁡
+        θ
+        +
+        i
+        sin
+        ⁡
+        θ
+        =
+        exp
+        ⁡
+        (
+        i
+        θ
+        )
+      
+    
+    {\displaystyle \cos \theta +i\sin \theta =\exp(i\theta )}
+  
+ of a complex number of unit modulus.
+In 3 dimensions, the matrix exponential is Rodrigues' rotation formula in matrix notation, and when expressed via the Euler-Rodrigues formula, the algebra of its four parameters gives rise to quaternions.
+The exponential representation of an orthogonal matrix of order 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ can also be obtained starting from the fact that in dimension 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ any special orthogonal matrix 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+  can be written as ⁠
+  
+    
+      
+        R
+        =
+        Q
+        S
+        
+          Q
+          
+            
+              T
+            
+          
+        
+      
+    
+    {\displaystyle R=QSQ^{\textsf {T}}}
+  
+⁠, where 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is orthogonal and S is a block diagonal matrix with 
+  
+    
+      
+        ⌊
+        n
+        
+          /
+        
+        2
+        ⌋
+      
+    
+    {\textstyle \lfloor n/2\rfloor }
+  
+ blocks of order 2, plus one of order 1 if 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is odd; since each single block of order 2 is also an orthogonal matrix, it admits an exponential form. Correspondingly, the matrix S writes as exponential of a skew-symmetric block matrix 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+ of the form above, ⁠
+  
+    
+      
+        S
+        =
+        exp
+        ⁡
+        (
+        Σ
+        )
+      
+    
+    {\displaystyle S=\exp(\Sigma )}
+  
+⁠, so that ⁠
+  
+    
+      
+        R
+        =
+        Q
+        exp
+        ⁡
+        (
+        Σ
+        )
+        
+          Q
+          
+            
+              T
+            
+          
+        
+        =
+        exp
+        ⁡
+        (
+        Q
+        Σ
+        
+          Q
+          
+            
+              T
+            
+          
+        
+        )
+      
+    
+    {\displaystyle R=Q\exp(\Sigma )Q^{\textsf {T}}=\exp(Q\Sigma Q^{\textsf {T}})}
+  
+⁠, exponential of the skew-symmetric matrix ⁠
+  
+    
+      
+        Q
+        Σ
+        
+          Q
+          
+            
+              T
+            
+          
+        
+      
+    
+    {\displaystyle Q\Sigma Q^{\textsf {T}}}
+  
+⁠. Conversely, the surjectivity of the exponential map, together with the above-mentioned block-diagonalization for skew-symmetric matrices, implies the block-diagonalization for orthogonal matrices.

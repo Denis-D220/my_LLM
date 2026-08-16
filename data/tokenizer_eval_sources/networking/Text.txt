@@ -1,0 +1,215 @@
+# The Layered Machine
+
+### An Essay on How Networks Actually Work
+
+---
+
+## I. Prologue: Why Layers
+
+A network moves bits between machines that share no memory, no clock, and no guarantee of ever hearing from each other again. The only tractable way to build such a thing is to decompose it, and the decomposition that won is layering: each layer offers a service to the one above and consumes the service of the one below, and neither needs to know how the other does its job.
+
+The OSI model names seven layers and is mostly a teaching device. The TCP/IP model names four and is what actually shipped: **link** (Ethernet, Wi-Fi), **internet** (IP), **transport** (TCP, UDP), and **application** (HTTP, DNS, and everything else). Its virtue is a narrow waist. Any link technology can carry IP, and any application can run over IP, so `n` link types and `m` applications require `n + m` integrations rather than `n × m`. IP is the pinch point through which everything passes, and its deliberate poverty — unreliable, connectionless, best-effort — is what allowed it to run over copper, fiber, radio, and satellite without renegotiation.
+
+Data moves down the stack through **encapsulation**: each layer prepends its header and treats what it received as opaque payload. An HTTP request becomes a TCP segment, becomes an IP packet, becomes an Ethernet frame. On receipt the process reverses. When troubleshooting, the layering is the diagnostic map: identify the lowest layer that is broken, because everything above it will fail in confusing ways for reasons that have nothing to do with itself.
+
+---
+
+## II. Ethernet and Switching: The Local Segment
+
+Ethernet defines how frames cross a single link or LAN. Its addressing is the **MAC address**, 48 bits usually written as six hex octets (`00:1A:2B:3C:4D:5E`), with the first three identifying the manufacturer. MAC addresses are flat — they carry no topological information — which is precisely why they cannot be used to route globally and why IP exists above them.
+
+A frame carries destination MAC, source MAC, an EtherType field naming the payload protocol (`0x0800` for IPv4, `0x86DD` for IPv6, `0x0806` for ARP), the payload, and a CRC trailer. Standard payload maximum is 1500 bytes — the **MTU** — and this number causes more subtle failures than any other constant in networking. Jumbo frames of around 9000 bytes exist on controlled networks and reduce per-byte overhead substantially.
+
+A **switch** forwards frames using a MAC address table learned by observation: when a frame arrives on a port, the switch records that the source MAC is reachable via that port. If the destination is known, the frame goes out that port only; if unknown, it is flooded to all ports; broadcasts (`FF:FF:FF:FF:FF:FF`) are always flooded. This is the entire algorithm, and it requires no configuration, which is why switches are plug-and-play.
+
+Switches operate at layer 2 and create one **collision domain** per port — full duplex on modern links means collisions are essentially historical — but a single **broadcast domain** across the whole switched network. Broadcast traffic scales poorly, and that limit is the practical reason to segment.
+
+Layer 2 loops are catastrophic in a way layer 3 loops are not, because the Ethernet header has no TTL. A looped broadcast circulates forever and multiplies at every junction, saturating the segment within seconds. **Spanning Tree Protocol** (STP, and its faster successors RSTP and MSTP) solves this by electing a root bridge and blocking redundant ports, converting a physical mesh into a logical tree. Link aggregation (LACP) provides the redundancy STP removes, bundling several physical links into one logical one with load distribution by flow hash.
+
+**ARP** bridges layer 3 and layer 2: to send an IP packet on a local segment, a host broadcasts "who has 192.168.1.1?" and caches the MAC in the reply. ARP has no authentication, which makes ARP spoofing a straightforward local attack and dynamic ARP inspection a standard switch mitigation. IPv6 replaces ARP with **Neighbor Discovery** over ICMPv6, using multicast rather than broadcast.
+
+---
+
+## III. VLANs: Segmentation Without Rewiring
+
+A VLAN partitions one physical switch into several logical broadcast domains. Ports assigned to VLAN 10 cannot reach ports in VLAN 20 without passing through a router, even though the same silicon carries both.
+
+Between switches, a **trunk** carries multiple VLANs over one link, tagging each frame with **802.1Q**: a four-byte insertion carrying a 12-bit VLAN ID (so 4094 usable) and a three-bit priority field for QoS. **Access ports** carry a single VLAN untagged, which is what endpoints expect. The **native VLAN** on a trunk is sent untagged, and native VLAN mismatches between switch pairs are a classic silent misconfiguration that merges two supposedly separate domains.
+
+Inter-VLAN routing requires a layer 3 device: a router-on-a-stick with subinterfaces, or more commonly a layer 3 switch with **SVIs** — virtual interfaces holding the gateway address for each VLAN. Assigning one IP subnet per VLAN is not required by the protocols but is universal practice, because the alignment makes both routing and access control coherent.
+
+VLANs are the standard tool for separating voice from data, guests from staff, and management from production. What they provide is broadcast isolation and a policy enforcement point, not security in themselves — VLAN hopping via double tagging and switch spoofing is real, and the mitigations (disabling DTP, moving the native VLAN off VLAN 1, pruning unused VLANs from trunks) are standard hardening.
+
+---
+
+## IV. IPv4 and Subnetting: Dividing the Address Space
+
+An IPv4 address is 32 bits, written as four dotted decimal octets. It is split into a **network portion** and a **host portion** by a mask, written either in dotted form (`255.255.255.0`) or as a prefix length (`/24`). Everything about subnetting follows from that split.
+
+For a `/n` prefix: there are `32 - n` host bits, giving `2^(32-n)` addresses, of which two are unusable — the all-zeros network address and the all-ones broadcast — so `2^(32-n) - 2` usable hosts. A `/24` gives 254 hosts, a `/26` gives 62, a `/30` gives 2 (the standard point-to-point link), and a `/31` gives 2 usable by special dispensation for point-to-point links where broadcast is meaningless.
+
+The block size trick makes manual subnetting fast. For a mask, take the "interesting octet" — the one that is neither 255 nor 0 — and compute `256 minus that value`. That is the increment between consecutive subnets. With `255.255.255.192` (`/26`), the block size is 64, so subnets start at `.0`, `.64`, `.128`, `.192`; the broadcast of each is one below the next start, and the usable range lies between. This handles nearly every practical subnetting question without binary conversion.
+
+**CIDR** replaced the old fixed classes A, B, and C in 1993, allowing arbitrary prefix lengths and, crucially, **route aggregation**: several adjacent prefixes advertised as one shorter prefix, which is the only reason the global routing table remains manageable. **VLSM** applies the same idea internally — allocate a `/30` to a point-to-point link and a `/23` to a user segment rather than wasting a uniform size everywhere.
+
+Private ranges (RFC 1918) are `10.0.0.0/8`, `172.16.0.0/12`, and `192.168.0.0/16`, plus `100.64.0.0/10` for carrier-grade NAT. `127.0.0.0/8` is loopback, `169.254.0.0/16` is link-local (APIPA, which appears when DHCP fails and is therefore a useful diagnostic signal in itself).
+
+**NAT** translates private addresses to a public one, and its dominant form is PAT — overloading a single public address by rewriting source ports and keying a translation table on the tuple. NAT extended IPv4's life by decades at the cost of breaking end-to-end addressability, complicating inbound connections, and requiring workarounds like STUN and hole punching for peer-to-peer traffic.
+
+---
+
+## V. IPv6: The Address Space That Does Not Run Out
+
+IPv6 uses 128-bit addresses written as eight groups of four hex digits, with two compressions: leading zeros in a group may be dropped, and one run of all-zero groups may be replaced by `::`, once only, since a second would be ambiguous. `2001:0db8:0000:0000:0000:0000:0000:0001` becomes `2001:db8::1`.
+
+The design differences matter more than the size. Prefix `/64` is effectively fixed for host subnets, since **SLAAC** — stateless address autoconfiguration — derives the interface identifier from that boundary. There is no broadcast; multicast and anycast replace it, with well-known groups like `ff02::1` (all nodes) and `ff02::2` (all routers). Fragmentation is done only by the sending host, never by routers, which simplifies forwarding and makes **Path MTU Discovery** mandatory rather than optional. The header is fixed at 40 bytes with extension headers chained after it, and the checksum was removed entirely on the grounds that layers below and above already provide one.
+
+Address types are worth distinguishing: **global unicast** (`2000::/3`), **link-local** (`fe80::/10`, present on every interface and used for neighbor discovery and routing protocol adjacencies), and **unique local** (`fc00::/7`, the rough analogue of RFC 1918). A host commonly holds several addresses at once, which is normal rather than a fault.
+
+Adoption has been slow because NAT relieved the pressure that IPv6 was designed to answer. Deployment is therefore overwhelmingly **dual-stack**, with both protocols active and applications preferring IPv6 per RFC 6724 with Happy Eyeballs racing both to avoid stalling on a broken path. Transition mechanisms — tunnels, NAT64/DNS64, 464XLAT — exist for cases where a single stack must reach the other.
+
+---
+
+## VI. Routing: Choosing the Next Hop
+
+Routing is the process of deciding where to send a packet next. A router examines the destination address, consults its routing table, and forwards out an interface — a per-packet, independent, stateless decision, which is what makes IP resilient and what makes packets arrive out of order.
+
+Route selection follows **longest prefix match**: among all matching entries, the most specific wins. A packet for `10.1.2.3` matching both `10.0.0.0/8` and `10.1.2.0/24` takes the latter. The default route `0.0.0.0/0` matches everything and therefore loses to everything, which is exactly the behavior wanted from a fallback.
+
+When multiple sources supply a route, **administrative distance** breaks the tie — connected routes beat static, static beats OSPF, OSPF beats BGP by default in Cisco's scheme — and within a single protocol, the protocol's own **metric** decides.
+
+Routing protocols fall into two families. **Distance vector** protocols (RIP, and EIGRP as a hybrid) share their routing tables with neighbors and trust what they hear, which is simple and prone to slow convergence and counting-to-infinity, mitigated by split horizon, route poisoning, and hold-down timers. **Link state** protocols (OSPF, IS-IS) flood descriptions of local links so every router builds an identical topology database and runs Dijkstra's algorithm on it independently. Link state converges faster and scales better, at the cost of memory, CPU, and a hierarchical area design to bound the flooding domain.
+
+Both of those are **interior** protocols, run within one administrative domain. Between domains, the internet runs **BGP**, a path vector protocol that carries the full AS path with each prefix. BGP's selection is policy-driven rather than performance-driven — local preference, AS path length, and MED reflect business relationships, not latency — and its trust model is historically weak, which is why route leaks and prefix hijacks have caused large outages and why RPKI origin validation is being deployed.
+
+**TTL** (hop limit in IPv6) decrements at each router and discards the packet at zero, sending back an ICMP time-exceeded message. This is what prevents routing loops from persisting, and it is also the mechanism `traceroute` exploits.
+
+---
+
+## VII. TCP, UDP, and Ports
+
+IP delivers packets to a host; the transport layer delivers them to a *process*. The mechanism is the **port number**, 16 bits, giving 65535 usable values per protocol. A connection is identified by the five-tuple of source IP, source port, destination IP, destination port, and protocol — which is why one server can hold thousands of simultaneous connections on port 443, since the client side of each tuple differs.
+
+Ports divide into well-known (0–1023, requiring privilege to bind on Unix), registered (1024–49151), and ephemeral (49152–65535, though ranges vary by OS), the last being what clients draw from for their source ports. Worth memorizing: 22 SSH, 25 SMTP, 53 DNS, 67/68 DHCP, 80 HTTP, 123 NTP, 143 IMAP, 161 SNMP, 443 HTTPS, 389/636 LDAP, 3389 RDP.
+
+**UDP** adds almost nothing to IP: source and destination ports, length, checksum. No connection, no ordering, no retransmission, no congestion control. That poverty is the point — DNS queries, DHCP, VoIP media, gaming, and QUIC all prefer to handle loss themselves rather than wait for a retransmission that arrives too late to matter.
+
+**TCP** provides a reliable, ordered byte stream. It establishes state with a three-way handshake (SYN, SYN-ACK, ACK) and tears it down with FIN exchanges, leaving the closer in `TIME_WAIT` for twice the maximum segment lifetime so that stray duplicates cannot corrupt a new connection on the same tuple. Sequence numbers order the bytes; acknowledgments and retransmission timers recover loss; the **receive window** provides flow control so a fast sender cannot overrun a slow receiver.
+
+**Congestion control** is separate from flow control and is TCP's contribution to the internet's stability. Slow start grows the congestion window exponentially until loss, then congestion avoidance grows it linearly; fast retransmit and fast recovery react to duplicate ACKs without waiting for a timeout. Modern variants — CUBIC as the common default, BBR modeling bandwidth and RTT directly — change the growth function but not the principle: a sender must infer the network's capacity from its own observations, because the network never tells it.
+
+The **MSS** is derived from the path MTU, and mismatches here produce the most maddening failure in networking: small packets pass, large ones vanish, so a connection completes and a page never loads. The cause is usually an ICMP-blocking firewall breaking Path MTU Discovery, and the fix is MSS clamping or permitting ICMP type 3 code 4.
+
+---
+
+## VIII. Sockets: The Programming Interface
+
+The **socket** is the API through which programs use the transport layer, originating in BSD and now near-universal. A socket is an endpoint, created with `socket(domain, type, protocol)`, where domain is `AF_INET` or `AF_INET6` and type is `SOCK_STREAM` for TCP or `SOCK_DGRAM` for UDP.
+
+The server sequence is `socket` → `bind` (claim an address and port) → `listen` (mark it passive with a backlog queue) → `accept` (block until a connection completes, returning a *new* socket for that client while the listening socket stays open). The client sequence is `socket` → `connect`. Both then use `send`/`recv` or `read`/`write`, and finally `close`.
+
+Two properties trip up nearly everyone. First, TCP is a **byte stream, not a message stream**: one `send` may arrive as several `recv` calls, or several sends may coalesce into one receive. Any message framing — a length prefix, a delimiter, a fixed size — must be implemented by the application. Assuming that one send equals one receive produces code that works on localhost and fails across a WAN.
+
+Second, `SO_REUSEADDR` exists because `TIME_WAIT` otherwise prevents rebinding a port immediately after restart, which is why a restarted server reports "address already in use" for a couple of minutes without it.
+
+Scaling beyond a thread per connection requires **I/O multiplexing**: `select` and `poll` scan all descriptors on every call and therefore scale linearly with connection count, while `epoll` (Linux), `kqueue` (BSD), and IOCP (Windows) are event-driven and scale with *active* connections instead. This distinction is what made the C10K problem tractable and is the machinery underneath every modern async runtime.
+
+---
+
+## IX. DHCP: Configuration on Arrival
+
+A host arriving on a network needs an address, a mask, a default gateway, and DNS servers. DHCP supplies all of it, over UDP ports 67 and 68, through the four-message **DORA** exchange: Discover (client broadcast, since it has no address yet), Offer (server proposes a lease), Request (client formally asks, broadcast so that other servers know they were not chosen), Acknowledge (server confirms and records the binding).
+
+Addresses are **leased**, not assigned, and clients renew at 50% of the lease time (T1) directly with the leasing server, falling back at 87.5% (T2) to broadcasting for any server. This makes DHCP robust to server restarts and reclaims addresses from departed hosts automatically.
+
+Because Discover is a broadcast, it does not cross a router. The standard solution is a **DHCP relay** (`ip helper-address`) configured on the gateway, which unicasts the request to a central server and inserts the receiving subnet so the server knows which pool to use. Centralized DHCP with relays is the normal enterprise pattern; per-VLAN servers are not.
+
+Reservations bind a MAC to a fixed address, giving static addressing with central management. Exclusion ranges keep static infrastructure addresses out of the pool. Options carry far more than the basics — NTP servers, TFTP boot files, PXE parameters, domain search lists — and option 82 lets a relay tag requests with the originating port for tracking.
+
+The classic failure is a rogue DHCP server — often a consumer router plugged in backwards — handing out wrong gateways to whichever clients it reaches first. The mitigation is **DHCP snooping** on switches, which discards server-role messages arriving on ports not marked trusted.
+
+---
+
+## X. DNS: The Distributed Directory
+
+DNS translates names to addresses through a hierarchical, delegated, heavily cached database. It runs on UDP port 53 for ordinary queries and TCP 53 for zone transfers and responses too large for a datagram.
+
+Resolution is **iterative from the resolver's side and recursive from the client's**. A client asks its configured resolver a question and expects a final answer. The resolver, if it has nothing cached, asks a root server, which refers it to the TLD servers for `.com`; those refer it to the authoritative servers for the domain; those answer. Thirteen root server *addresses* exist, served by hundreds of anycast instances worldwide.
+
+Record types carry the actual data. `A` maps a name to IPv4 and `AAAA` to IPv6. `CNAME` aliases one name to another and may not coexist with other records at the same name, which is why a CNAME cannot sit at a zone apex. `MX` designates mail servers with preference values. `NS` delegates a zone. `SOA` holds zone parameters. `TXT` carries arbitrary text and has been drafted into SPF, DKIM, and domain ownership verification. `PTR` provides reverse lookup through the `in-addr.arpa` and `ip6.arpa` trees. `SRV` advertises service locations with port and priority.
+
+**TTL** governs caching, and it is the field that determines how a change propagates. Lowering TTLs well in advance of a planned migration is the standard practice; discovering that a record has a 24-hour TTL during a cutover is a familiar and avoidable pain.
+
+DNS was designed without security, and the retrofits matter. **DNSSEC** signs records so a resolver can validate authenticity, though it protects integrity rather than confidentiality. **DoT** and **DoH** encrypt the query itself against on-path observers, at the cost of moving visibility from the network operator to the resolver operator — a genuine trade rather than a pure improvement.
+
+DNS is the most common root cause of incidents that present as something else entirely, because almost everything depends on it and its failures are asymmetric: cached entries keep working while fresh lookups fail, so a break appears gradually and unevenly.
+
+---
+
+## XI. HTTP and HTTPS
+
+HTTP is a request-response protocol built on a simple text grammar: a method, a path, a version, headers, a blank line, and an optional body. Its statelessness — every request independent — is what made it scale, with cookies, tokens, and sessions layered on to reintroduce state where applications need it.
+
+Methods carry semantics worth honoring: `GET` is safe and idempotent, `PUT` and `DELETE` are idempotent but not safe, `POST` is neither. Intermediaries cache and retry based on those properties, so a `GET` with side effects will eventually be executed twice by something.
+
+Status codes group by leading digit: 1xx informational, 2xx success, 3xx redirection, 4xx client error, 5xx server error. The precise ones matter operationally — 301 versus 302 determines whether caches remember permanently, 401 means unauthenticated while 403 means authenticated and refused, 429 signals rate limiting, 502 and 504 distinguish a bad upstream response from an upstream that never answered.
+
+The versions differ structurally. **HTTP/1.1** added persistent connections and chunked transfer but suffers head-of-line blocking, since responses must return in request order on a connection, which is why browsers opened six connections per host. **HTTP/2** introduced binary framing and true multiplexing of streams over one TCP connection, plus header compression — though TCP-level loss still stalls all streams. **HTTP/3** moves to QUIC over UDP, giving per-stream loss recovery, faster handshakes, and connection migration across network changes.
+
+**HTTPS** is simply HTTP inside a TLS session on port 443. The upgrade is total: URL paths, headers, cookies, and bodies are all encrypted, leaving the destination IP, the port, and — unless Encrypted Client Hello is in use — the SNI hostname visible to observers.
+
+---
+
+## XII. TLS: Authentication and Confidentiality
+
+TLS provides three things: **confidentiality** through symmetric encryption, **integrity** through authenticated encryption, and **authentication** through certificates. The last is the one people underestimate; encryption to an impostor is worthless.
+
+The handshake establishes a shared secret and verifies identity. In **TLS 1.3** it takes one round trip: the client sends its hello with supported ciphers and a key share; the server replies with its own key share, its certificate, and a signature proving it holds the matching private key; both derive session keys via Diffie-Hellman. TLS 1.3 removed static RSA key exchange entirely, making **forward secrecy** mandatory — a later compromise of the server's long-term key cannot decrypt recorded past sessions. It also pruned the cipher suite list down to a handful of AEAD constructions, eliminating most downgrade and misconfiguration risk.
+
+Certificates bind a public key to a name and are signed by a **Certificate Authority** whose own certificate is signed upward to a root in the client's trust store. Validation checks the signature chain, the validity dates, the hostname against the Subject Alternative Name, and revocation status. Chain problems — a missing intermediate that works in one browser and fails in another because that browser happened to cache it — are among the most common TLS incidents, alongside plain expiry, which remains a leading cause of outages despite being the most predictable event in the industry.
+
+**SNI** lets a client name the host it wants during the handshake, which is what allows many certificates on one IP. It also leaks the hostname in cleartext, hence ECH.
+
+---
+
+## XIII. Wi-Fi: Networking Over a Shared Medium
+
+Wi-Fi is Ethernet's frame format over a fundamentally different medium: shared, half-duplex, lossy, and open to anyone within range. Because a radio cannot transmit and listen simultaneously, collision *detection* is impossible; 802.11 uses **CSMA/CA** — listen first, wait a random backoff, and rely on link-layer acknowledgments, with optional RTS/CTS to address the hidden node problem where two stations hear the AP but not each other.
+
+The bands govern everything practical. **2.4 GHz** penetrates walls well and offers only three non-overlapping 20 MHz channels (1, 6, 11), shared with Bluetooth, microwaves, and every neighbor. **5 GHz** offers far more channels and higher rates at shorter range, with DFS channels requiring radar avoidance. **6 GHz**, opened to Wi-Fi 6E, provides a large clean swath usable only by modern clients.
+
+Generations trace a consistent path: 802.11n (Wi-Fi 4) added MIMO and channel bonding; 802.11ac (Wi-Fi 5) widened channels and added downlink MU-MIMO; 802.11ax (Wi-Fi 6) added OFDMA and BSS coloring, targeting *density* rather than peak rate; 802.11be (Wi-Fi 7) adds wider channels and multi-link operation. The advertised rates are aggregate and theoretical; real throughput is roughly half, shared among all associated clients on the channel.
+
+Security has a clear history: WEP is broken, WPA/TKIP is deprecated, **WPA2** with AES-CCMP remains widespread, and **WPA3** replaces the pre-shared key handshake with SAE, which resists offline dictionary attacks. Enterprise mode (802.1X/EAP with RADIUS) gives per-user credentials and is the correct choice wherever a shared passphrase would otherwise be distributed to many people.
+
+Most Wi-Fi complaints are design problems, not equipment problems: too few access points, too much transmit power causing clients to cling to distant APs, channel overlap, and 2.4 GHz congestion. Coverage is easy; *capacity* is the hard part.
+
+---
+
+## XIV. Commands and Troubleshooting
+
+Troubleshooting is layered because the stack is. Work upward from the bottom, and confirm each layer before suspecting the next.
+
+**Layer 1–2.** Is the interface up and negotiated correctly? `ip link`, `ethtool eth0`, `ipconfig /all`, `Get-NetAdapter`. Duplex mismatches produce a distinctive signature: the link works, small transfers succeed, throughput collapses, and error counters climb. Check the neighbor table with `ip neigh` or `arp -a`, and on a switch, `show mac address-table` and `show interfaces status`.
+
+**Layer 3.** Does the host have a sane address, mask, and gateway? An address in `169.254.0.0/16` means DHCP failed, which is a complete diagnosis in one glance. `ping` the loopback, then the local address, then the gateway, then a public IP such as `8.8.8.8` — this sequence localizes the break to a specific hop with four commands. `ip route` or `route print` shows whether a default route exists. `traceroute` (`tracert` on Windows, `mtr` for a continuous view) exposes the path by sending increasing TTLs and collecting the ICMP time-exceeded replies; asterisks in the middle usually mean a router declining to send ICMP rather than a break, so only the final hop's failure is conclusive.
+
+**Layer 4.** Is the port reachable? `ss -tulpn` (or the older `netstat -tulpn`, or `Get-NetTCPConnection`) shows what is listening locally. From outside, `nc -zv host port`, `Test-NetConnection host -Port 443`, or `nmap` distinguish three outcomes that matter: connection refused means the host is reachable and nothing is listening; timeout usually means a firewall dropping silently; success means the transport path is clean and the problem is above.
+
+**Layer 7.** `dig` (or `nslookup`, or `Resolve-DnsName`) resolves names, and `dig +trace` walks the delegation from the root, which distinguishes a resolver cache problem from an authoritative one. `curl -v` shows the full request, response headers, and TLS handshake; `openssl s_client -connect host:443 -servername host` displays the certificate chain and negotiated cipher.
+
+**Packet capture** is the ground truth when reasoning fails. `tcpdump -i eth0 -nn host 10.0.0.5 and port 443 -w capture.pcap`, read in Wireshark, shows exactly what left and what arrived. Capturing at both ends simultaneously answers the only question that ever really matters in a dispute: did the packet leave, and did it arrive?
+
+Three habits do more than any tool. **Change one thing at a time**, or a fix and a new fault become indistinguishable. **Ask what changed**, because most breakage follows a change and the correlation is usually the answer. And **question the assumption that the problem is where the symptom appeared** — slow application, failing DNS, MTU black hole, and expired certificate all present to users as "the site is down."
+
+---
+
+## XV. Closing
+
+The stack rewards a particular habit of mind: knowing which layer owns a given behavior, and refusing to explain a problem at the wrong one. A duplex mismatch is not a database problem. An expired certificate is not a firewall problem. A 1500-byte boundary is not an application bug, however convincingly it impersonates one.
+
+What makes the architecture durable is that the narrow waist at IP has never had to change while everything above and below it has been replaced several times over. Fibre replaced copper, radio joined both, TLS 1.3 replaced SSL, HTTP/3 abandoned TCP — and packets still carry a destination address and a hop limit, and routers still choose the longest matching prefix. Learning the layers is worth the effort precisely because the boundaries outlast the technologies that sit inside them.
+
+---
+
+*End of document.*

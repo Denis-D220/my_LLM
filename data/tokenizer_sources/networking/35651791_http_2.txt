@@ -1,0 +1,101 @@
+HTTP/2 (originally named HTTP/2.0) is a major revision of the HTTP network protocol used by the World Wide Web. It was derived from the earlier experimental SPDY protocol, originally developed by Google. HTTP/2 was developed by the HTTP Working Group (also called httpbis, where "bis" means "twice" in Latin) of the Internet Engineering Task Force (IETF). HTTP/2 was the first new version of HTTP since HTTP/1.1, which was standardized in RFC 2068 in 1997. The Working Group presented HTTP/2 to the Internet Engineering Steering Group (IESG) for consideration as a Proposed Standard in December 2014, and IESG approved it to publish as Proposed Standard on February 17, 2015 (and was updated in February 2020 in regard to TLS 1.3 and again in June 2022). The initial HTTP/2 specification was published as RFC 7540 on May 14, 2015.
+The standardization effort was supported by the Chrome, Opera, Firefox, Internet Explorer 11, Safari, Amazon Silk, and Edge browsers. Most major browsers had added HTTP/2 support by the end of 2015. About  97% of web browsers used have the capability (and  100% of "tracked desktop" web browsers). As of July 2023, 36% (after topping out at just over 50%) of the top 10 million websites support HTTP/2.
+Its successor is HTTP/3, a major revision that builds on the concepts established by HTTP/2.
+
+Goals
+The working group charter mentions several goals and issues of concern:
+
+Create a negotiation mechanism that allows clients and servers to elect to use HTTP/1.1, 2.0, or potentially other non-HTTP protocols.
+Maintain high-level compatibility with HTTP/1.1 (for example with methods, status codes, URIs, and most header fields).
+Decrease latency to improve page loading speed in web browsers by considering:
+data compression of HTTP headers
+HTTP/2 Server Push
+prioritization of requests
+multiplexing multiple requests over a single TCP connection (fixing the HTTP-transaction-level head-of-line blocking problem in HTTP 1.x)
+Support common existing use cases of HTTP, such as desktop web browsers, mobile web browsers, web APIs, web servers at various scales, proxy servers, reverse proxy servers, firewalls, and content delivery networks.
+
+Differences from HTTP/1.1
+The changes do not require any changes to how existing web applications work, but new applications can take advantage of new features for increased speed. HTTP/2 leaves all of HTTP/1.1's high-level semantics, such as methods, status codes, header fields, and URIs, the same. What is new is how the data is framed and transported between the client and the server.
+Websites that are efficient minimize the number of requests required to render an entire page by minifying (reducing the amount of code and packing smaller pieces of code into bundles, without reducing its ability to function) resources such as images and scripts. However, minification is not necessarily convenient nor efficient and may still require separate HTTP connections to get the page and the minified resources. HTTP/2 allows the server to "push" content, that is, to respond with data for more queries than the client requested. This allows the server to supply data it knows a web browser will need to render a web page, without waiting for the browser to examine the first response, and without the overhead of an additional request cycle.
+Additional performance improvements in the first draft of HTTP/2 (which was a copy of SPDY) come from multiplexing of requests and responses to avoid some of the head-of-line blocking problem in HTTP 1 (even when HTTP pipelining is used), header compression, and prioritization of requests. However, as HTTP/2 runs on top of a single TCP connection, there is still potential for head-of-line blocking to occur if TCP packets are lost or delayed in transmission.
+HTTP/2 no longer supports HTTP/1.1's chunked transfer encoding mechanism, as it provides its own, more efficient mechanisms for data streaming.
+
+History
+
+Genesis in and later differences from SPDY
+SPDY (pronounced like "speedy") was a previous HTTP-replacement protocol developed by a research project spearheaded by Google. Primarily focused on reducing latency, SPDY uses the same TCP pipe but different protocols to accomplish this reduction. The basic changes made to HTTP/1.1 to create SPDY included "true request pipelining without FIFO restrictions, message framing mechanism to simplify client and server development, mandatory compression (including headers), priority scheduling, and even bi-directional communication".
+The HTTP Working Group considered Google's SPDY protocol, Microsoft's HTTP Speed+Mobility proposal (SPDY based), and Network-Friendly HTTP Upgrade. In July 2012, Facebook provided feedback on each of the proposals and recommended HTTP/2 be based on SPDY. The initial draft of HTTP/2 was published in November 2012 and was based on a straight copy of SPDY.
+The biggest difference between HTTP/1.1 and SPDY was that each user action in SPDY is given a "stream ID", meaning there is a single TCP channel connecting the user to the server. SPDY split requests into either control or data, using a "simple to parse binary protocol with two types of frames". SPDY showed evident improvement over HTTP, with a new page load speedup ranging from 11% to 47%.
+The development of HTTP/2 used SPDY as a jumping-off point. Among the many detailed differences between the protocols, the most notable is that HTTP/2 uses a fixed Huffman code-based header compression algorithm, instead of SPDY's dynamic stream-based compression. This helps to reduce the potential for compression oracle attacks on the protocol, such as the CRIME attack.
+On February 9, 2015, Google announced plans to remove support for SPDY in Chrome in favor of support for HTTP/2. This took effect starting with Chrome 51.
+
+Development milestones
+
+Encryption
+HTTP/2 is defined for both HTTP URIs (without TLS encryption, a configuration which is abbreviated as h2c) and HTTPS URIs (over TLS using ALPN extension where TLS 1.2 or newer is required, a configuration which is abbreviated as h2).
+Although the standard itself does not require usage of encryption, all major client implementations (Chrome, Edge, Firefox, Internet Explorer, Opera, Safari) have stated they will only support HTTP/2 over TLS, which makes encryption de facto mandatory.
+
+Criticisms
+
+Development process
+The FreeBSD and Varnish developer Poul-Henning Kamp asserts that the standard was prepared on an unrealistically short schedule, ruling out any basis for the new HTTP/2 other than the SPDY protocol and resulting in other missed opportunities for improvement. Kamp criticizes the protocol itself for being inconsistent and having needless, overwhelming complexity. He also states that the protocol violates the protocol layering principle, for example by duplicating flow control that belongs in the transport layer (TCP). He also suggested that the new protocol should have removed HTTP Cookies, introducing a breaking change.
+
+Encryption
+Initially, some members of the Working Group tried to introduce an encryption requirement in the protocol. This faced criticism.
+Critics stated that encryption has non-negligible computing costs and that many HTTP applications actually have no need for encryption and their providers have no desire to spend additional resources on it. Encryption proponents have stated that this encryption overhead is negligible in practice. Poul-Henning Kamp has criticized the IETF for hastily standardizing Google's SPDY prototype as HTTP/2 due to political considerations. The criticism of the agenda of mandatory encryption within the existing certificate framework is not new, nor is it unique to members of the open-source community –  a Cisco employee stated in 2013 that the present certificate model is not compatible with small devices like routers, because the present model requires not only annual enrollment and remission of non-trivial fees for each certificate, but must be continually repeated on an annual basis. In the end the Working Group did not reach consensus over the mandatory encryption, although most client implementations require it, which makes encryption a de facto requirement.
+The HTTP/2 protocol also faced criticism for not supporting opportunistic encryption, a measure against passive monitoring similar to the STARTTLS mechanism that has long been available in other Internet protocols like SMTP. Critics have stated that the HTTP/2 proposal goes in violation of IETF's own RFC 7258 "Pervasive Monitoring Is an Attack", which also has a status of Best Current Practice 188. RFC7258/BCP188 mandates that pervasive monitoring be considered as an attack, and protocols designed by IETF should take steps to protect against passive monitoring (for example, through the use of opportunistic encryption). A number of specifications for opportunistic encryption of HTTP/2 have been provided, of which draft-nottingham-http2-encryption was adopted as an official work item of the working group, leading to the publication of RFC 8164 in May 2017.
+
+TCP head-of-line blocking
+Although the design of HTTP/2 effectively addresses the HTTP-transaction-level head-of-line blocking problem by allowing multiple concurrent HTTP transactions, all those transactions are multiplexed over a single TCP connection, meaning that any packet-level head-of-line blocking of the TCP stream simultaneously blocks all transactions being accessed via that connection. This head-of-line blocking in HTTP/2 is now widely regarded as a design flaw, and much of the effort behind QUIC and HTTP/3 has been devoted to reduce head-of-line blocking issues.
+
+Server-side support
+
+Server software
+The following web servers support HTTP/2:
+
+Apache httpd 2.4.12 supports HTTP/2 via the module mod_h2, although appropriate patches must be applied to the source code of the server in order for it to support that module. As of Apache 2.4.17 all patches are included in the main Apache source tree, although the module itself was renamed mod_http2. Old versions of SPDY were supported via the module mod_spdy, however the development of the mod_spdy module has stopped.
+Apache Tomcat 8.5 (requires a configuration change)
+Apache Traffic Server
+Caddy
+Charles Proxy since version Charles 4.
+Citrix NetScaler 11.x
+Sucuri
+F5 BIG-IP Local Traffic Manager 11.6
+Barracuda Networks WAF (Web Application Firewall)
+h2o (built from the ground up for HTTP/2 support)
+HAProxy 1.8
+Jetty 9.3
+lighttpd 1.4.56
+LiteSpeed Web Server 5.0
+Microsoft IIS (in Windows 10, Windows Server 2016, and Windows Server 2019)
+Netty 4.1
+nghttpd (exclusively implements HTTP/2)
+nginx 1.9.5 released on September 22, 2015, using module ngx_http_v2_module and HTTP/2 Server Push since version 1.13.9 on February 20, 2018.
+Node.js 8.13.0 (A separate module is available for Node.js 5.0 and Node 8.4 introduced experimental built-in support for HTTP/2.)
+Kestrel web server for ASP.NET Core supports HTTP/2 since .NET Core 2.2.0-preview 1.
+OpenLiteSpeed 1.3.11 and 1.4.8
+Proxygen
+Pulse Secure Virtual Traffic Manager 10.2
+Radware Alteon NG
+ShimmerCat
+Vert.x 3.3
+Warp (Haskell web server, used by default in Yesod)
+Wildfly 9
+Envoy proxy
+
+Content delivery networks
+Akamai was the first major CDN to support HTTP/2 and HTTP/2 Server Push.
+Microsoft Azure supports HTTP/2.
+PageCDN supports HTTP/2 out of the box and provides user-interface to setup HTTP/2 Server Push in CDN dashboard.
+CDN77 supports HTTP/2 using nginx (August 20, 2015).
+Cloudflare supports HTTP/2 using nginx with SPDY as a fallback for browsers without support, whilst maintaining all security and performance services. Cloudflare was the first major CDN to support HTTP/2 Server Push.
+AWS CloudFront supports HTTP/2 since September 7, 2016.
+Fastly supports HTTP/2 including Server Push.
+Imperva Incapsula CDN supports HTTP/2. The implementation includes support for WAF and DDoS mitigation features as well.
+KeyCDN supports HTTP/2 using nginx (October 6, 2015). HTTP/2 Test is a test page to verify if your server supports HTTP/2.
+BrandSSL supports HTTP/2.
+Voxility supports HTTP/2 using nginx since July, 2016. The implementation comes in support for Cloud DDoS mitigation services.
+StackPath supports HTTP/2.
+
+Implementations
+Other implementations are collected on the GitHub HTTP/2 wiki.

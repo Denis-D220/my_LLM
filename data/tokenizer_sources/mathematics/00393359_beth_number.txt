@@ -1,0 +1,2355 @@
+In mathematics, particularly in set theory, the beth numbers form a certain (unset) sequence of infinite cardinal numbers (also known as transfinite numbers), conventionally written 
+  
+    
+      
+        
+          ℶ
+          
+            0
+          
+        
+        ,
+        
+          ℶ
+          
+            1
+          
+        
+        ,
+        
+          ℶ
+          
+            2
+          
+        
+        ,
+        
+          ℶ
+          
+            3
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle \beth _{0},\beth _{1},\beth _{2},\beth _{3},\dots }
+  
+, where 
+  
+    
+      
+        ℶ
+      
+    
+    {\displaystyle \beth }
+  
+ is the Hebrew letter beth. The beth numbers are related to the aleph numbers (
+  
+    
+      
+        
+          ℵ
+          
+            0
+          
+        
+        ,
+        
+          ℵ
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle \aleph _{0},\aleph _{1},\dots }
+  
+), but unless the generalized continuum hypothesis is true, there are numbers indexed by 
+  
+    
+      
+        ℵ
+      
+    
+    {\displaystyle \aleph }
+  
+ that are not indexed by 
+  
+    
+      
+        ℶ
+      
+    
+    {\displaystyle \beth }
+  
+. On the other hand, beth numbers are cofinal (every cardinal number is less than a beth number) in plain Zermelo-Fraenkel set theory.
+
+Definition
+Beth numbers are indexed by ordinal numbers and defined in terms of the cumulative hierarchy by 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        =
+        
+          |
+        
+        
+          V
+          
+            ω
+            +
+            α
+          
+        
+        
+          |
+        
+      
+    
+    {\displaystyle \beth _{\alpha }=|V_{\omega +\alpha }|}
+  
+, where 
+  
+    
+      
+        
+          |
+        
+        A
+        
+          |
+        
+      
+    
+    {\displaystyle |A|}
+  
+ is the cardinality of 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ and 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+ is the first infinite ordinal number. In particular, 
+  
+    
+      
+        
+          ℶ
+          
+            α
+            +
+            1
+          
+        
+        =
+        
+          2
+          
+            
+              ℶ
+              
+                α
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \beth _{\alpha +1}=2^{\beth _{\alpha }},}
+  
+, and it follows by Cantor's theorem and transfinite induction that the sequence of beth numbers is strictly increasing. (
+  
+    
+      
+        
+          |
+        
+        A
+        
+          
+            |
+          
+          
+            
+              |
+            
+            B
+            
+              |
+            
+          
+        
+      
+    
+    {\displaystyle |A|^{|B|}}
+  
+ is the cardinality of the set of functions from 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ to 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, so 
+  
+    
+      
+        
+          2
+          
+            
+              |
+            
+            B
+            
+              |
+            
+          
+        
+      
+    
+    {\displaystyle 2^{|B|}}
+  
+ is the cardinality of the power set of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+.)
+
+  
+    
+      
+        
+          ℶ
+          
+            0
+          
+        
+        =
+        
+          |
+        
+        
+          V
+          
+            ω
+          
+        
+        
+          |
+        
+        =
+        
+          |
+        
+        ω
+        
+          |
+        
+        =
+        
+          ℵ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \beth _{0}=|V_{\omega }|=|\omega |=\aleph _{0}}
+  
+. In general, 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        ≮
+        
+          ℵ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }\not <\aleph _{\alpha }}
+  
+ for ordinal 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+, and 
+  
+    
+      
+        
+          ℵ
+          
+            α
+          
+        
+        ≤
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \aleph _{\alpha }\leq \beth _{\alpha }}
+  
+ for every limit ordinal 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+. The axiom of choice implies that the inequality holds in general.
+The second beth number 
+  
+    
+      
+        
+          ℶ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \beth _{1}}
+  
+ is equal to 
+  
+    
+      
+        
+          
+            c
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {c}}}
+  
+, the cardinality of the continuum (the cardinality of the set of the real numbers), and the third beth number 
+  
+    
+      
+        
+          ℶ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \beth _{2}}
+  
+ is the cardinality of the power set of the continuum.
+Like aleph numbers, beth numbers are idempotent: 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+          
+            2
+          
+        
+        =
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }^{2}=\beth _{\alpha }}
+  
+. This follows by transfinite induction from two points:
+
+  
+    
+      
+        
+          V
+          
+            λ
+          
+        
+        ×
+        
+          V
+          
+            λ
+          
+        
+        ⊆
+        
+          V
+          
+            λ
+          
+        
+      
+    
+    {\displaystyle V_{\lambda }\times V_{\lambda }\subseteq V_{\lambda }}
+  
+ for every limit ordinal 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+; and
+
+  
+    
+      
+        (
+        
+          2
+          
+            
+              p
+            
+          
+        
+        
+          )
+          
+            2
+          
+        
+        =
+        
+          2
+          
+            2
+            
+              
+                p
+              
+            
+          
+        
+        =
+        
+          2
+          
+            
+              p
+            
+          
+        
+      
+    
+    {\displaystyle (2^{\mathfrak {p}})^{2}=2^{2{\mathfrak {p}}}=2^{\mathfrak {p}}}
+  
+ for every idempotent cardinal number 
+  
+    
+      
+        
+          
+            p
+          
+        
+        ≥
+        2
+      
+    
+    {\displaystyle {\mathfrak {p}}\geq 2}
+  
+.
+The axiom of choice implies that every set of cardinal numbers has a supremum and that for any set 
+  
+    
+      
+        
+          S
+        
+      
+    
+    {\displaystyle \mathbb {S} }
+  
+, the union set of all its members can be no larger than the supremum of its member cardinalities times its own cardinality. It follows (given the axiom) that 
+  
+    
+      
+        
+          ℶ
+          
+            λ
+          
+        
+        =
+        sup
+        
+          
+            {
+          
+        
+        
+          ℶ
+          
+            α
+          
+        
+        :
+        α
+        <
+        λ
+        
+          
+            }
+          
+        
+      
+    
+    {\displaystyle \beth _{\lambda }=\sup {\Bigl \{}\beth _{\alpha }:\alpha <\lambda {\Bigr \}}}
+  
+ for every limit ordinal 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+.
+Note that this behavior is different from that of successor ordinals. Even with the axiom of choice, cardinalities less than 
+  
+    
+      
+        
+          ℶ
+          
+            α
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha +1}}
+  
+ but greater than 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }}
+  
+ can exist. (In that case, the existence is undecidable in ZFC and controlled by the Generalized Continuum Hypothesis.)
+
+Relation to the aleph numbers
+Even with the axiom of choice (provided Zermelo-Fraenkel set theory is consistent), little more is knowable about the relationship to aleph numbers than is stated above. For example, 
+  
+    
+      
+        
+          ℶ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \beth _{1}}
+  
+ cannot be 
+  
+    
+      
+        
+          ℵ
+          
+            ω
+          
+        
+      
+    
+    {\displaystyle \aleph _{\omega }}
+  
+, but there is a model in which 
+  
+    
+      
+        
+          ℶ
+          
+            1
+          
+        
+        =
+        
+          ℵ
+          
+            ω
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle \beth _{1}=\aleph _{\omega +1}}
+  
+.
+Assuming the axiom of choice, infinite cardinalities are linearly ordered; no two cardinalities can fail to be comparable. Since 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        ≮
+        
+          ℵ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }\not <\aleph _{\alpha }}
+  
+, the axiom implies that 
+
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        ≥
+        
+          ℵ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }\geq \aleph _{\alpha }}
+  
+ 
+for all ordinals 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.
+Given the axiom of choice, the continuum hypothesis is equivalent to
+
+  
+    
+      
+        
+          ℶ
+          
+            1
+          
+        
+        =
+        
+          ℵ
+          
+            1
+          
+        
+        .
+      
+    
+    {\displaystyle \beth _{1}=\aleph _{1}.}
+  
+
+Without the axiom of choice, there are statements that address Cantor's concern about subsets of the real line without obviously implying that the real line admits a well ordering. For example, one version of the hypothesis is that 
+  
+    
+      
+        
+          
+            p
+          
+        
+        ≤
+        
+          ℶ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {p}}\leq \beth _{0}}
+  
+ for every cardinal number 
+  
+    
+      
+        
+          
+            p
+          
+        
+        <
+        
+          ℶ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {p}}<\beth _{1}}
+  
+.
+The generalized continuum hypothesis extends the assertion above to other indices. One formulation says the sequence of beth numbers is the same as the sequence of aleph numbers, i.e., 
+
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        =
+        
+          ℵ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }=\aleph _{\alpha }}
+  
+ 
+for all ordinals 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+. This assertion obviously implies the axiom of choice since beth numbers are cofinal. (In Zermelo-Fraenkel set theory, 
+  
+    
+      
+        A
+        ⊆
+        
+          V
+          
+            ω
+            +
+            α
+          
+        
+      
+    
+    {\displaystyle A\subseteq V_{\omega +\alpha }}
+  
+ for some 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+, so 
+  
+    
+      
+        
+          |
+        
+        A
+        
+          |
+        
+        ≤
+        
+          |
+        
+        
+          V
+          
+            ω
+            +
+            α
+          
+        
+        
+          |
+        
+        =
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle |A|\leq |V_{\omega +\alpha }|=\beth _{\alpha }}
+  
+. It follows from the statement that 
+  
+    
+      
+        
+          |
+        
+        A
+        
+          |
+        
+        ≤
+        
+          ℵ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle |A|\leq \aleph _{\alpha }}
+  
+, whence 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ admits a well ordering.) Different formulations of the continuum hypothesis suggest different generalizations, but the known 'reasonable' generalizations turn out to be equivalent and to imply the axiom of choice, although the proofs are more difficult.
+
+Specific cardinals
+
+Beth null
+Since (as noted above) this is equal to 
+  
+    
+      
+        
+          ℵ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \aleph _{0}}
+  
+, or aleph null, sets with cardinality 
+  
+    
+      
+        
+          ℶ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \beth _{0}}
+  
+ include:
+
+the natural numbers 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+
+the rational numbers 
+  
+    
+      
+        
+          Q
+        
+      
+    
+    {\displaystyle \mathbb {Q} }
+  
+
+the algebraic numbers 
+  
+    
+      
+        
+          A
+        
+      
+    
+    {\displaystyle \mathbb {A} }
+  
+
+the computable numbers and computable sets
+the set of finite sets of integers or of rationals or of algebraic numbers
+the set of finite multisets of integers
+the set of finite sequences of integers.
+
+Beth one
+
+Sets with cardinality 
+  
+    
+      
+        
+          ℶ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \beth _{1}}
+  
+ include:
+
+the transcendental numbers
+the irrational numbers
+the real numbers 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+
+the complex numbers 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+
+the uncomputable real numbers
+Euclidean space 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{n}}
+  
+
+the power set of the natural numbers 
+  
+    
+      
+        
+          2
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle 2^{\mathbb {N} }}
+  
+ (the set of all subsets of the natural numbers)
+the set of sequences of integers (i.e., 
+  
+    
+      
+        
+          
+            Z
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \mathbb {Z} ^{\mathbb {N} }}
+  
+, which includes all functions from 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ to 
+  
+    
+      
+        
+          Z
+        
+      
+    
+    {\displaystyle \mathbb {Z} }
+  
+)
+the set of sequences of real numbers, 
+  
+    
+      
+        
+          
+            R
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{\mathbb {N} }}
+  
+
+the set of all real analytic functions from 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ to 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+
+the set of all continuous functions from 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ to 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+
+the set of all functions from 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ to 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ with at most countable discontinuities 
+the set of finite subsets of real numbers
+the set of all analytic functions from 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+ to 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+ (the holomorphic functions)
+the set of all functions from the natural numbers to the natural numbers (
+  
+    
+      
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \mathbb {N} ^{\mathbb {N} }}
+  
+).
+
+Beth two
+
+  
+    
+      
+        
+          ℶ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \beth _{2}}
+  
+ (pronounced beth two) is also referred to as 
+  
+    
+      
+        
+          2
+          
+            
+              c
+            
+          
+        
+      
+    
+    {\displaystyle 2^{\mathfrak {c}}}
+  
+ (pronounced two to the power of 
+  
+    
+      
+        
+          
+            c
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {c}}}
+  
+).
+Sets with cardinality 
+  
+    
+      
+        
+          ℶ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \beth _{2}}
+  
+ include:
+
+the power set of the set of real numbers, so it is the number of subsets of the real line, or the number of sets of real numbers
+the power set of the power set of the set of natural numbers
+the set of all functions from 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ to 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ (
+  
+    
+      
+        
+          
+            R
+          
+          
+            
+              R
+            
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{\mathbb {R} }}
+  
+)
+the set of all functions from 
+  
+    
+      
+        
+          
+            R
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{m}}
+  
+ to 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{n}}
+  
+
+the set of all functions from 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ to 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+ with uncountably many discontinuities 
+the power set of the set of all functions from the set of natural numbers to itself, or the number of sets of sequences of natural numbers
+the Stone–Čech compactifications of 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, 
+  
+    
+      
+        
+          Q
+        
+      
+    
+    {\displaystyle \mathbb {Q} }
+  
+, and 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+
+the set of deterministic fractals in 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{n}}
+  
+ 
+the set of random fractals in 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{n}}
+  
+.
+
+Beth omega
+
+  
+    
+      
+        
+          ℶ
+          
+            ω
+          
+        
+      
+    
+    {\displaystyle \beth _{\omega }}
+  
+ (pronounced beth omega) is the smallest uncountable strong limit cardinal.
+
+Generalization
+The more general symbol 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        κ
+        )
+      
+    
+    {\displaystyle \beth _{\alpha }(\kappa )}
+  
+, for ordinals 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ and cardinals 
+  
+    
+      
+        κ
+      
+    
+    {\displaystyle \kappa }
+  
+, is occasionally used. Given the axiom of choice, it is defined by:
+
+  
+    
+      
+        
+          ℶ
+          
+            0
+          
+        
+        (
+        κ
+        )
+        =
+        κ
+        ,
+      
+    
+    {\displaystyle \beth _{0}(\kappa )=\kappa ,}
+  
+
+  
+    
+      
+        
+          ℶ
+          
+            α
+            +
+            1
+          
+        
+        (
+        κ
+        )
+        =
+        
+          2
+          
+            
+              ℶ
+              
+                α
+              
+            
+            (
+            κ
+            )
+          
+        
+        ,
+      
+    
+    {\displaystyle \beth _{\alpha +1}(\kappa )=2^{\beth _{\alpha }(\kappa )},}
+  
+
+  
+    
+      
+        
+          ℶ
+          
+            λ
+          
+        
+        (
+        κ
+        )
+        =
+        sup
+        {
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        κ
+        )
+        :
+        α
+        <
+        λ
+        }
+      
+    
+    {\displaystyle \beth _{\lambda }(\kappa )=\sup\{\beth _{\alpha }(\kappa ):\alpha <\lambda \}}
+  
+ if λ is a limit ordinal.
+Without the axiom of choice, the definition is more complicated. The main difficulty is that the cardinalities of infinite disjoint unions cannot be calculated just from the cardinalities of the components. Still using recursion, define 
+  
+    
+      
+        
+          W
+          
+            α
+          
+        
+        (
+        A
+        )
+      
+    
+    {\displaystyle W_{\alpha }(A)}
+  
+ as follows:
+
+  
+    
+      
+        
+          W
+          
+            0
+          
+        
+        (
+        A
+        )
+        =
+        A
+        ,
+      
+    
+    {\displaystyle W_{0}(A)=A,}
+  
+
+  
+    
+      
+        
+          W
+          
+            α
+            +
+            1
+          
+        
+        (
+        A
+        )
+        =
+        
+          
+            P
+          
+        
+        (
+        
+          W
+          
+            α
+          
+        
+        (
+        A
+        )
+        )
+        ,
+      
+    
+    {\displaystyle W_{\alpha +1}(A)={\mathcal {P}}(W_{\alpha }(A)),}
+  
+
+  
+    
+      
+        
+          ℶ
+          
+            λ
+          
+        
+        (
+        A
+        )
+        =
+        
+          ⋃
+          
+            α
+            ∈
+            λ
+          
+        
+        (
+        {
+        α
+        }
+        ×
+        
+          W
+          
+            α
+          
+        
+        (
+        A
+        )
+        )
+      
+    
+    {\displaystyle \beth _{\lambda }(A)=\bigcup _{\alpha \in \lambda }(\{\alpha \}\times W_{\alpha }(A))}
+  
+ if λ is a limit ordinal.
+Given an injection 
+  
+    
+      
+        f
+        :
+        A
+        →
+        B
+      
+    
+    {\displaystyle f:A\to B}
+  
+, we can construct recursively injections 
+  
+    
+      
+        
+          g
+          
+            α
+          
+        
+        :
+        
+          W
+          
+            α
+          
+        
+        (
+        A
+        )
+        →
+        
+          W
+          
+            α
+          
+        
+        (
+        B
+        )
+      
+    
+    {\displaystyle g_{\alpha }:W_{\alpha }(A)\to W_{\alpha }(B)}
+  
+. If 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a bijection then so is 
+  
+    
+      
+        
+          g
+          
+            α
+          
+        
+      
+    
+    {\displaystyle g_{\alpha }}
+  
+, so we can define the mapping for cardinal numbers by 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          |
+        
+        A
+        
+          |
+        
+        )
+        =
+        
+          |
+        
+        
+          W
+          
+            α
+          
+        
+        (
+        A
+        )
+        
+          |
+        
+      
+    
+    {\displaystyle \beth _{\alpha }(|A|)=|W_{\alpha }(A)|}
+  
+.
+It follows (easily with the axiom of choice or after more meticulous argument otherwise) that
+
+  
+    
+      
+        
+          ℶ
+          
+            ω
+            +
+            α
+          
+        
+        (
+        0
+        )
+        =
+        
+          ℶ
+          
+            α
+          
+        
+        ,
+      
+    
+    {\displaystyle \beth _{\omega +\alpha }(0)=\beth _{\alpha },}
+  
+
+where 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }}
+  
+ is an ordinary beth number, and
+
+  
+    
+      
+        
+          ℶ
+          
+            β
+          
+        
+        (
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          
+            p
+          
+        
+        )
+        )
+        =
+        
+          ℶ
+          
+            α
+            +
+            β
+          
+        
+        (
+        
+          
+            p
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle \beth _{\beta }(\beth _{\alpha }({\mathfrak {p}}))=\beth _{\alpha +\beta }({\mathfrak {p}}).}
+  
+
+In particular, 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        =
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          ℶ
+          
+            ω
+          
+        
+        (
+        0
+        )
+        )
+        =
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          ℶ
+          
+            0
+          
+        
+        )
+        =
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          ℵ
+          
+            0
+          
+        
+        )
+      
+    
+    {\displaystyle \beth _{\alpha }=\beth _{\alpha }(\beth _{\omega }(0))=\beth _{\alpha }(\beth _{0})=\beth _{\alpha }(\aleph _{0})}
+  
+. For any cardinal 
+  
+    
+      
+        
+          
+            p
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {p}}}
+  
+ and any ordinal number 
+  
+    
+      
+        α
+        ⊇
+        
+          ω
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \alpha \supseteq \omega ^{2}}
+  
+, 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          
+            p
+          
+        
+        )
+        ≥
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        0
+        )
+        =
+        
+          ℶ
+          
+            α
+            −
+            ω
+          
+        
+        =
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }({\mathfrak {p}})\geq \beth _{\alpha }(0)=\beth _{\alpha -\omega }=\beth _{\alpha }}
+  
+. On the other hand, 
+  
+    
+      
+        
+          
+            p
+          
+        
+        ≤
+        
+          ℶ
+          
+            β
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {p}}\leq \beth _{\beta }}
+  
+ for some 
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  
+, and it follows that 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          
+            p
+          
+        
+        )
+        ≤
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          ℶ
+          
+            β
+          
+        
+        )
+        =
+        
+          ℶ
+          
+            β
+            +
+            α
+          
+        
+        =
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }({\mathfrak {p}})\leq \beth _{\alpha }(\beth _{\beta })=\beth _{\beta +\alpha }=\beth _{\alpha }}
+  
+ for large 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ (e.g. the ordinality of 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+ copies of 
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  
+ stacked linearly). Thus for every cardinal number 
+  
+    
+      
+        
+          
+            p
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {p}}}
+  
+ there is an ordinal number 
+  
+    
+      
+        
+          α
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \alpha _{0}}
+  
+ such that
+
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          
+            p
+          
+        
+        )
+        =
+        
+          ℶ
+          
+            α
+          
+        
+      
+    
+    {\displaystyle \beth _{\alpha }({\mathfrak {p}})=\beth _{\alpha }}
+  
+ for every ordinal number 
+  
+    
+      
+        α
+        ⊇
+        
+          α
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \alpha \supseteq \alpha _{0}}
+  
+.
+This also holds in Zermelo–Fraenkel set theory with ur-elements (with or without the axiom of choice), provided that the ur-elements form a set which is equinumerous with a pure set (a set whose transitive closure contains no ur-elements). If the axiom of choice holds, then any set of ur-elements is equinumerous with a pure set. (If 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is not equinumerous with any pure set then it is not clear what object of set theory would be its cardinality, let alone 
+  
+    
+      
+        
+          ℶ
+          
+            α
+          
+        
+        (
+        
+          |
+        
+        A
+        
+          |
+        
+        )
+      
+    
+    {\displaystyle \beth _{\alpha }(|A|)}
+  
+. However, we can still construct 
+  
+    
+      
+        
+          W
+          
+            α
+          
+        
+        (
+        A
+        )
+      
+    
+    {\displaystyle W_{\alpha }(A)}
+  
+ as above, and if 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is equinumerous with 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ then 
+  
+    
+      
+        
+          W
+          
+            α
+          
+        
+        (
+        B
+        )
+      
+    
+    {\displaystyle W_{\alpha }(B)}
+  
+ is equinumerous with 
+  
+    
+      
+        
+          W
+          
+            α
+          
+        
+        (
+        A
+        )
+      
+    
+    {\displaystyle W_{\alpha }(A)}
+  
+.)
+
+Borel determinacy
+Borel determinacy is implied by the existence of all beths of countable index.

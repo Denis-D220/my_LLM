@@ -1,0 +1,140 @@
+DatalogZ (stylized as Datalogℤ) is an extension of Datalog with integer arithmetic and comparisons. The decision problem of whether or not a given ground atom (fact) is entailed by a DatalogZ program is RE-complete (hence, undecidable), which can be shown by a reduction to diophantine equations.
+
+Syntax
+The syntax of DatalogZ extends that of Datalog with numeric terms, which are integer constants, integer variables, or terms built up from these with addition, subtraction, and multiplication. Furthermore, DatalogZ allows comparison atoms, which are atoms of the form t < s or t <= s for numeric terms t, s.
+
+Semantics
+
+The semantics of DatalogZ are based on the model-theoretic (Herbrand) semantics of Datalog.
+
+Limit DatalogZ
+The undecidability of entailment of DatalogZ motivates the definition of limit DatalogZ. Limit DatalogZ restricts predicates to a single numeric position, which is marked maximal or minimal. The semantics are based on the model-theoretic (Herbrand) semantics of Datalog. The semantics require that Herbrand interpretations be limit-closed to qualify as models, in the following sense: Given a ground atom 
+  
+    
+      
+        a
+        =
+        r
+        (
+        
+          c
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          c
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle a=r(c_{1},\ldots ,c_{n})}
+  
+ of a limit predicate 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  
+ where the last position is a max (resp. min) position, if 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ is in a Herbrand interpretation 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, then the ground atoms 
+  
+    
+      
+        r
+        (
+        
+          c
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        k
+        )
+      
+    
+    {\displaystyle r(c_{1},\ldots ,k)}
+  
+ for 
+  
+    
+      
+        k
+        >
+        
+          c
+          
+            n
+          
+        
+      
+    
+    {\displaystyle k>c_{n}}
+  
+ (resp. 
+  
+    
+      
+        k
+        <
+        
+          c
+          
+            n
+          
+        
+      
+    
+    {\displaystyle k<c_{n}}
+  
+) must also be in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ for 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ to be limit-closed.
+
+Example
+Given a constant w, a binary relation edge that represents the edges of a graph, and a binary relation sp with the last position of sp minimal, the following limit DatalogZ program computes the relation sp, which represents the length of the shortest path from w to any other node in the graph:

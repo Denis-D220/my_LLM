@@ -1,0 +1,313 @@
+The Natural Earth projection is a pseudocylindrical map projection designed by Tom Patterson and introduced in 2008. It is neither conformal nor equal-area, but a compromise between the two.
+In its original presentation, the projection's origin is described as "The impetus for creating the Natural Earth projection was dissatisfaction with existing world map projections for displaying physical data." Further criteria follow, ending with "The ideal projection needed to be both functional and rather familiar in appearance."
+The Natural Earth projection was originally designed in Flex Projector, a specialized software application that offers a graphical approach for the creation of new projections. Subsequently, Bojan Šavrič developed a polynomial expression of the projection.
+The projection may also be referred to as the Natural Earth I projection, due to subsequent development of a Natural Earth II projection. The same group later developed the Equal Earth projection.
+
+Definition
+The Natural Earth projection is defined by the following formulas:
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                l
+                (
+                φ
+                )
+                ×
+                λ
+                ,
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                d
+                (
+                φ
+                )
+                ,
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=l(\varphi )\times \lambda ,\\y&=d(\varphi ),\end{aligned}}}
+  
+
+where
+
+  
+    
+      
+        x
+        ∈
+        [
+        −
+        2.73539
+        ,
+        2.73539
+        ]
+      
+    
+    {\displaystyle x\in [-2.73539,2.73539]}
+  
+ and 
+  
+    
+      
+        y
+        ∈
+        [
+        −
+        1.42239
+        ,
+        1.42239
+        ]
+      
+    
+    {\displaystyle y\in [-1.42239,1.42239]}
+  
+ are the Cartesian coordinates;
+
+  
+    
+      
+        λ
+        ∈
+        [
+        −
+        π
+        ,
+        π
+        ]
+      
+    
+    {\displaystyle \lambda \in [-\pi ,\pi ]}
+  
+ is the longitude from the central meridian in radians;
+
+  
+    
+      
+        φ
+        ∈
+        [
+        −
+        π
+        
+          /
+        
+        2
+        ,
+        π
+        
+          /
+        
+        2
+        ]
+      
+    
+    {\displaystyle \varphi \in [-\pi /2,\pi /2]}
+  
+ is the latitude in radians;
+
+  
+    
+      
+        l
+        (
+        φ
+        )
+      
+    
+    {\displaystyle l(\varphi )}
+  
+ is the length of the parallel at latitude 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+;
+
+  
+    
+      
+        d
+        (
+        φ
+        )
+      
+    
+    {\displaystyle d(\varphi )}
+  
+ is the distance of the parallel from the equator at latitude 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+.
+
+  
+    
+      
+        l
+        (
+        φ
+        )
+      
+    
+    {\displaystyle l(\varphi )}
+  
+ and 
+  
+    
+      
+        d
+        (
+        φ
+        )
+      
+    
+    {\displaystyle d(\varphi )}
+  
+ are given as polynomials:
+
+  
+    
+      
+        
+          
+            
+              
+                l
+                (
+                φ
+                )
+              
+              
+                
+                =
+                0.870700
+                −
+                0.131979
+                ×
+                
+                  φ
+                  
+                    2
+                  
+                
+                −
+                0.013791
+                ×
+                
+                  φ
+                  
+                    4
+                  
+                
+                +
+                0.003971
+                ×
+                
+                  φ
+                  
+                    10
+                  
+                
+                −
+                0.001529
+                ×
+                
+                  φ
+                  
+                    12
+                  
+                
+                ,
+              
+            
+            
+              
+                d
+                (
+                φ
+                )
+              
+              
+                
+                =
+                φ
+                ×
+                (
+                1.007226
+                +
+                0.015085
+                ×
+                
+                  φ
+                  
+                    2
+                  
+                
+                −
+                0.044475
+                ×
+                
+                  φ
+                  
+                    6
+                  
+                
+                +
+                0.028874
+                ×
+                
+                  φ
+                  
+                    8
+                  
+                
+                −
+                0.005916
+                ×
+                
+                  φ
+                  
+                    10
+                  
+                
+                )
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}l(\varphi )&=0.870700-0.131979\times \varphi ^{2}-0.013791\times \varphi ^{4}+0.003971\times \varphi ^{10}-0.001529\times \varphi ^{12},\\d(\varphi )&=\varphi \times (1.007226+0.015085\times \varphi ^{2}-0.044475\times \varphi ^{6}+0.028874\times \varphi ^{8}-0.005916\times \varphi ^{10}).\end{aligned}}}
+  
+
+In the original definition of the projection, planar coordinates were lineally interpolated from a table of 19 latitudes and then multiplied by other factors. The authors of the projection later provided a polynomial representation that closely matches the original but improves smoothness at the "corners".

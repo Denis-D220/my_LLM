@@ -1,0 +1,301 @@
+Within the branch of materials science known as material failure theory, the Goodman relation (also called a Goodman diagram, a Goodman-Haigh diagram, a Haigh diagram or a Haigh-Soderberg diagram) is an equation used to quantify the interaction of mean and alternating stresses on the fatigue life of a material. The equation is typically presented as a linear curve of mean stress vs. alternating stress that provides the maximum number of alternating stress cycles a material will withstand before failing from fatigue.
+A scatterplot of experimental data shown on an amplitude versus mean stress plot can often be approximated by a parabola known as the Gerber line, which can in turn be (conservatively) approximated by a straight line called the Goodman line.
+
+Mathematical description
+
+The relations can be represented mathematically as:
+
+  
+    
+      
+        (
+        
+          
+            
+              n
+              
+                σ
+                
+                  m
+                
+              
+            
+            
+              σ
+              
+                b
+              
+            
+          
+        
+        
+          )
+          
+            2
+          
+        
+        +
+        
+          
+            
+              n
+              
+                σ
+                
+                  a
+                
+              
+            
+            
+              σ
+              
+                w
+              
+            
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle ({\frac {n\sigma _{\text{m}}}{\sigma _{\text{b}}}})^{2}+{\frac {n\sigma _{\text{a}}}{\sigma _{\text{w}}}}=1}
+  
+, Gerber Line (parabola)
+
+  
+    
+      
+        
+          
+            
+              σ
+              
+                m
+              
+            
+            
+              σ
+              
+                b
+              
+            
+          
+        
+        +
+        
+          
+            
+              σ
+              
+                a
+              
+            
+            
+              σ
+              
+                w
+              
+            
+          
+        
+        =
+        
+          
+            1
+            n
+          
+        
+      
+    
+    {\displaystyle {\frac {\sigma _{\text{m}}}{\sigma _{\text{b}}}}+{\frac {\sigma _{\text{a}}}{\sigma _{\text{w}}}}={\frac {1}{n}}}
+  
+, Goodman Line
+
+  
+    
+      
+        
+          
+            
+              σ
+              
+                m
+              
+            
+            
+              σ
+              
+                y
+              
+            
+          
+        
+        +
+        
+          
+            
+              σ
+              
+                a
+              
+            
+            
+              σ
+              
+                w
+              
+            
+          
+        
+        =
+        
+          
+            1
+            n
+          
+        
+      
+    
+    {\displaystyle {\frac {\sigma _{\text{m}}}{\sigma _{\text{y}}}}+{\frac {\sigma _{\text{a}}}{\sigma _{\text{w}}}}={\frac {1}{n}}}
+  
+, Soderberg Line
+where 
+  
+    
+      
+        
+          σ
+          
+            a
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{a}}}
+  
+ is the stress amplitude, 
+  
+    
+      
+        
+          σ
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{m}}}
+  
+ is the mean stress, 
+  
+    
+      
+        
+          σ
+          
+            w
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{w}}}
+  
+ is the fatigue limit for completely reversed loading, 
+  
+    
+      
+        
+          σ
+          
+            b
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{b}}}
+  
+ is the ultimate tensile strength of the material, 
+  
+    
+      
+        
+          σ
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{y}}}
+  
+ is the yield strength of the material, and 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is the factor of safety.
+The Gerber parabola is indication of the region just beneath the failure points during experiment.
+The Goodman line connects 
+  
+    
+      
+        
+          σ
+          
+            b
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{b}}}
+  
+ on the abscissa and 
+  
+    
+      
+        
+          σ
+          
+            w
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{w}}}
+  
+ on the ordinate. The Goodman line is safer than the Gerber parabola, as it defines a smaller region without failure.
+The Soderberg Line connects 
+  
+    
+      
+        
+          σ
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{y}}}
+  
+ on the abscissa and 
+  
+    
+      
+        
+          σ
+          
+            w
+          
+        
+      
+    
+    {\displaystyle \sigma _{\text{w}}}
+  
+ on the ordinate, and is in turn safer as both the Gerber parabola or the Goodman line.
+The general trend given by the Goodman relation is one of decreasing fatigue life with increasing mean stress for a given level of alternating stress.  The relation can be plotted to determine the safe cyclic loading of a part; if the coordinate given by the mean stress and the alternating stress lies under the curve given by the relation, then the part will survive. If the coordinate is above the curve, then the part will fail for the given stress parameters.

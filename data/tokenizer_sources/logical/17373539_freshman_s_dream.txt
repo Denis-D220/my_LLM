@@ -1,0 +1,419 @@
+In mathematics, the freshman's dream, also known as freshman exponentiation, the child's binomial theorem, (rarely) the schoolboy binomial theorem, or the Frobenius identity is the generally-false equation 
+  
+    
+      
+        (
+        x
+        +
+        y
+        
+          )
+          
+            n
+          
+        
+        =
+        
+          x
+          
+            n
+          
+        
+        +
+        
+          y
+          
+            n
+          
+        
+      
+    
+    {\displaystyle (x+y)^{n}=x^{n}+y^{n}}
+  
+. Beginning students commonly make this error in computing the power of a sum of real numbers, falsely assuming powers distribute over sums.
+The correct result is given by the binomial theorem, which has additional terms in the middle when 
+  
+    
+      
+        n
+        ≥
+        2
+      
+    
+    {\displaystyle n\geq 2}
+  
+. For example, when 
+  
+    
+      
+        n
+        =
+        2
+      
+    
+    {\displaystyle n=2}
+  
+, the correct result is x2 + 2xy + y2, which can also be shown by multiplying (x + y)(x + y) by using the distributive property properly, or the FOIL method.
+The freshman's dream is actually valid in commutative rings of characteristic p, such as the finite field 
+  
+    
+      
+        
+          
+            F
+          
+          
+            p
+          
+        
+        =
+        
+          Z
+        
+        
+          /
+        
+        p
+        
+          Z
+        
+      
+    
+    {\displaystyle \mathbb {F} _{p}=\mathbb {Z} /p\mathbb {Z} }
+  
+, where p is a prime number, provided that the exponent n is p or more generally a power of p.  Equivalently, the Frobenius map of the ring is an endomorphism. One way to prove this is to show that p divides all the binomial coefficients except for the first and the last, so all the intermediate terms are equal to zero. Another way to prove the common special case of this for 
+  
+    
+      
+        
+          
+            F
+          
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \mathbb {F} _{p}}
+  
+ is to use Fermat's little theorem that ap ≡ a mod p for all integers a. (This can be iterated for powers of p, using the property of exponentiation that taking a power of a power multiplies the exponents, and thereby proven in general using induction.)
+The freshman's dream is valid for all n in tropical geometry (where multiplication is replaced with addition, so exponentiation becomes multiplication, and addition is replaced with minimum).
+The freshman's dream equation is also true in some degenerate cases, such as when n = 1, when 
+  
+    
+      
+        n
+        ≥
+        1
+      
+    
+    {\displaystyle n\geq 1}
+  
+ and at least one of x and y is zero, and when n is an odd integer and 
+  
+    
+      
+        y
+        =
+        −
+        x
+      
+    
+    {\displaystyle y=-x}
+  
+. These are all of the true cases for n ∈ {0, 1, 2, 3}, but when n ≥ 4 or n is negative or non-integer, there are generally additional pairs of complex numbers x, y that satisfy the equation.
+
+Examples
+
+  
+    
+      
+        (
+        1
+        +
+        4
+        
+          )
+          
+            2
+          
+        
+        =
+        
+          5
+          
+            2
+          
+        
+        =
+        25
+      
+    
+    {\displaystyle (1+4)^{2}=5^{2}=25}
+  
+, but 
+  
+    
+      
+        
+          1
+          
+            2
+          
+        
+        +
+        
+          4
+          
+            2
+          
+        
+        =
+        17
+      
+    
+    {\displaystyle 1^{2}+4^{2}=17}
+  
+.
+
+  
+    
+      
+        
+          
+            
+              x
+              
+                2
+              
+            
+            +
+            
+              y
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\sqrt {x^{2}+y^{2}}}}
+  
+ does not equal 
+  
+    
+      
+        
+          
+            
+              x
+              
+                2
+              
+            
+          
+        
+        +
+        
+          
+            
+              y
+              
+                2
+              
+            
+          
+        
+        =
+        
+          |
+        
+        x
+        
+          |
+        
+        +
+        
+          |
+        
+        y
+        
+          |
+        
+      
+    
+    {\displaystyle {\sqrt {x^{2}}}+{\sqrt {y^{2}}}=|x|+|y|}
+  
+. For example, 
+  
+    
+      
+        
+          
+            9
+            +
+            16
+          
+        
+        =
+        
+          
+            25
+          
+        
+        =
+        5
+      
+    
+    {\displaystyle {\sqrt {9+16}}={\sqrt {25}}=5}
+  
+, which does not equal 3 + 4 = 7. In this example, the error is being committed with the exponent n = ⁠1/2⁠.
+
+Prime characteristic
+When 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is a prime number and 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ are members of a commutative ring of characteristic 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+, then 
+  
+    
+      
+        (
+        x
+        +
+        y
+        
+          )
+          
+            p
+          
+        
+        =
+        
+          x
+          
+            p
+          
+        
+        +
+        
+          y
+          
+            p
+          
+        
+      
+    
+    {\displaystyle (x+y)^{p}=x^{p}+y^{p}}
+  
+. This can be seen by examining the prime factors of the binomial coefficients: the nth binomial coefficient is
+
+  
+    
+      
+        
+          
+            
+              (
+            
+            
+              p
+              n
+            
+            
+              )
+            
+          
+        
+        =
+        
+          
+            
+              p
+              !
+            
+            
+              n
+              !
+              (
+              p
+              −
+              n
+              )
+              !
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\binom {p}{n}}={\frac {p!}{n!(p-n)!}}.}
+  
+
+The numerator is p factorial(!), which is divisible by p. However, when 0 < n < p, both n! and (p − n)! are coprime with p since all the factors are less than p and p is prime. Since a binomial coefficient is always an integer, the nth binomial coefficient is divisible by p and hence equal to 0 in the ring. We are left with the zeroth and pth coefficients, which both equal 1, yielding the desired equation.
+Thus in characteristic p the freshman's dream is a valid identity. This result demonstrates that exponentiation by p produces an endomorphism, known as the Frobenius endomorphism of the ring.
+The demand that the characteristic p be a prime number is central to the truth of the freshman's dream. A related theorem states that a number n is prime if and only if (x + 1)n = xn + 1 in the polynomial ring 
+  
+    
+      
+        (
+        
+          Z
+        
+        
+          /
+        
+        n
+        
+          Z
+        
+        )
+        [
+        x
+        ]
+      
+    
+    {\displaystyle (\mathbb {Z} /n\mathbb {Z} )[x]}
+  
+. This theorem is a key fact in modern primality testing.
+
+History
+The history of the term "freshman's dream" is somewhat unclear.
+The phrase "freshman's dream" is recorded in non-mathematical contexts since at least the 1840s.
+On September 6, 1938, The New York Sun published a 16-line poem by Harold Willard Gleason titled «"Dark and Bloody Ground---" (The Freshman's Dream)» that bears some resemblance to this equation. It begins with "In minuends of Algebra / Wild corollaries twine;" and ends with "Or you shall factor cubes, for terms / Of infinite progression!" It mentions "binomial" and "parenthesis" and cautions to "Remove the brackets, radicals [...] with discretion". However, it has no context or explanation to confirm or refute whether it actually refers to this equation. This poem was reproduced by other periodicals over the following two months, including the National Mathematics Magazine published by the Mathematical Association of America (MAA).
+On December 30, 1939, Saunders Mac Lane delivered an address to the MAA in Columbus, Ohio, wherein he explained the theorem for fields of prime characteristic, then stated that "As S. C. Kleene has remarked, a knowledge of the case p=2 of this equation would corrupt freshman students of algebra!" This may be the first connection between "freshman" and binomial expansion in fields of positive characteristic. Since then, authors of undergraduate algebra texts took note of the common error.
+In 1974, in a textbook about algebra for graduate students, Thomas W. Hungerford published an exercise with a title of "The Freshman's Dream" with a footnote stating, "Terminology due to V[incent] O. McBrien."

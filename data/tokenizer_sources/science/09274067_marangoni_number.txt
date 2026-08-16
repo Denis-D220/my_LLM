@@ -1,0 +1,285 @@
+The Marangoni number (Ma) is, as usually defined, the dimensionless number that compares the rate of transport due to Marangoni flows, with the rate of transport of diffusion. The Marangoni effect is flow of a liquid due to gradients in the surface tension of the liquid. Diffusion is of whatever is creating the gradient in the surface tension. Thus as the Marangoni number compares flow and diffusion timescales it is a type of Péclet number.
+The Marangoni number is defined as:
+
+  
+    
+      
+        
+          M
+          a
+        
+        =
+        
+          
+            
+              
+                advective transport rate, due to surface tension gradient
+              
+              
+                diffusive transport rate, of source of gradient
+              
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Ma} ={\dfrac {\mbox{advective transport rate, due to surface tension gradient}}{\mbox{diffusive transport rate, of source of gradient}}}}
+  
+
+A common example is surface tension gradients caused by temperature gradients. Then the relevant diffusion process is that of thermal energy (heat). Another is surface gradients caused by variations in the concentration of surfactants, where the diffusion is now that of surfactant molecules.
+The number is named after Italian scientist Carlo Marangoni, although its use dates from the 1950s and it was neither discovered nor used by Carlo Marangoni.
+The Marangoni number for a simple liquid of viscosity 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ with a surface tension change 
+  
+    
+      
+        Δ
+        γ
+      
+    
+    {\displaystyle \Delta \gamma }
+  
+ over a distance 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ parallel to the surface, can be estimated as follows. Note that we assume that 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ is the only length scale in the problem, which in practice implies that the liquid be at least 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ deep. The transport rate is usually estimated using the equations of Stokes flow, where the fluid velocity is obtained by equating the stress gradient to the viscous dissipation. A surface tension is a force per unit length, so the resulting stress must scale as 
+  
+    
+      
+        Δ
+        γ
+        
+          /
+        
+        L
+      
+    
+    {\displaystyle \Delta \gamma /L}
+  
+, while the viscous stress scales as 
+  
+    
+      
+        μ
+        u
+        
+          /
+        
+        L
+      
+    
+    {\displaystyle \mu u/L}
+  
+, for 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ the speed of the Marangoni flow. Equating the two we have a flow speed 
+  
+    
+      
+        u
+        =
+        Δ
+        γ
+        
+          /
+        
+        μ
+      
+    
+    {\displaystyle u=\Delta \gamma /\mu }
+  
+. As Ma is a type of Péclet number, it is a velocity times a length, divided by a diffusion constant, 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+,  Here this is the diffusion constant of whatever is causing the surface tension difference. So,
+
+  
+    
+      
+        
+          M
+          a
+        
+        =
+        
+          
+            
+              
+                u
+                L
+              
+              D
+            
+          
+        
+        =
+        
+          
+            
+              
+                Δ
+                γ
+                L
+              
+              
+                μ
+                D
+              
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Ma} ={\dfrac {uL}{D}}={\dfrac {\Delta \gamma L}{\mu D}}}
+  
+
+Marangoni number due to thermal gradients
+A common application is to a layer of liquid, such as water, when there is a temperature difference 
+  
+    
+      
+        Δ
+        T
+      
+    
+    {\displaystyle \Delta T}
+  
+ across this layer. This could be due to the liquid evaporating or being heated from below. There is a surface tension at the surface of a liquid that depends on temperature, typically as the temperature increases the surface tension decreases. Thus if due to a small fluctuation temperature, one part of the surface is hotter than another, there will be flow from the hotter part to the colder part, driven by this difference in surface tension, this flow is called the Marangoni effect. This flow will transport thermal energy, and the Marangoni number compares the rate at which thermal energy is transported by this flow to the rate at which thermal energy diffuses.
+For a liquid layer of thickness 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+, viscosity 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ and thermal diffusivity 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+, with a surface tension 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ which changes with temperature at a rate 
+  
+    
+      
+        ∂
+        γ
+        
+          /
+        
+        ∂
+        T
+      
+    
+    {\displaystyle \partial \gamma /\partial T}
+  
+, the Marangoni number can be calculated using the following formula:
+
+  
+    
+      
+        
+          M
+          a
+        
+        =
+        −
+        (
+        ∂
+        γ
+        
+          /
+        
+        ∂
+        T
+        )
+        .
+        
+          
+            
+              L
+              .
+              Δ
+              T
+            
+            
+              μ
+              .
+              α
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Ma} =-(\partial \gamma /\partial T).{\frac {L.\Delta T}{\mu .\alpha }}}
+  
+
+When Ma is small thermal diffusion dominates and there is no flow, but for large Ma, flow (convection) occurs, driven by the gradients in the surface tension. This is called Bénard-Marangoni convection.

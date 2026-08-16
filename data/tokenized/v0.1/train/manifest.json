@@ -1,0 +1,997 @@
+{
+  "format": "llm_uint16_token_shards",
+  "format_version": 1,
+  "split": "train",
+  "dtype": "uint16",
+  "byte_order": "little",
+  "token_item_bytes": 2,
+  "tokenizer_vocab_size": 24000,
+  "tokens_per_shard": 10000000,
+  "total_tokens": 1083858263,
+  "total_bytes": 2167716526,
+  "stream_sha256": "13b4df3d958a2485782c1b68a951b5b0e449ecde98fe5828e74d7330973ae897",
+  "shard_count": 109,
+  "shards": [
+    {
+      "filename": "train-00000.bin",
+      "index": 0,
+      "token_start": 0,
+      "token_end": 10000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "8222646c226085ba8a32ba64a048a14404cf01dd2fed169bda132f2f855541b7"
+    },
+    {
+      "filename": "train-00001.bin",
+      "index": 1,
+      "token_start": 10000000,
+      "token_end": 20000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "2906804f9ef31d852630d48ace463c04add586e530285c986908961027115cdb"
+    },
+    {
+      "filename": "train-00002.bin",
+      "index": 2,
+      "token_start": 20000000,
+      "token_end": 30000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "d266a7578f02ed009d3a368ba3e03f7aac65ca88aeea90218890088ed9de4e6f"
+    },
+    {
+      "filename": "train-00003.bin",
+      "index": 3,
+      "token_start": 30000000,
+      "token_end": 40000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "10a80509a9ad071c46e02c84b46f68a1b241dd5a6155f1372cc594dd3371f5f0"
+    },
+    {
+      "filename": "train-00004.bin",
+      "index": 4,
+      "token_start": 40000000,
+      "token_end": 50000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "6b41b3da26c0444996d110d6be684b236cb7dfbe94780e17c4ad61f0d6f6bf24"
+    },
+    {
+      "filename": "train-00005.bin",
+      "index": 5,
+      "token_start": 50000000,
+      "token_end": 60000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "948f75e4cbec812e971fa142802f6d5f8a4626cfa5228e005392c395fce6f6c2"
+    },
+    {
+      "filename": "train-00006.bin",
+      "index": 6,
+      "token_start": 60000000,
+      "token_end": 70000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "1e15a30ad2f8ba06f58d8de85e464700f788e84c66e642b69d85cc26e75ad2f2"
+    },
+    {
+      "filename": "train-00007.bin",
+      "index": 7,
+      "token_start": 70000000,
+      "token_end": 80000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "36cfa0b83d8d900436863d5297fa3d903ab149ffc41ed5ea3e79c2c4166e23f8"
+    },
+    {
+      "filename": "train-00008.bin",
+      "index": 8,
+      "token_start": 80000000,
+      "token_end": 90000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "153579ce95968aa6c984daba842e291e9286e033350841657d2e8ef65e001ca8"
+    },
+    {
+      "filename": "train-00009.bin",
+      "index": 9,
+      "token_start": 90000000,
+      "token_end": 100000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "8efaab826418582146de07eec18c9533f6629f3ff9295239ed180567ef1ad0fc"
+    },
+    {
+      "filename": "train-00010.bin",
+      "index": 10,
+      "token_start": 100000000,
+      "token_end": 110000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "dbe49372c1d2bfff8cb468b02b2190cb263a99e0986211a95ff5a840dc8b3333"
+    },
+    {
+      "filename": "train-00011.bin",
+      "index": 11,
+      "token_start": 110000000,
+      "token_end": 120000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "ed6e29fef3aecdfd750d3697c41bd300e40fe54bf8bcfc0b961d76358b0c1419"
+    },
+    {
+      "filename": "train-00012.bin",
+      "index": 12,
+      "token_start": 120000000,
+      "token_end": 130000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "10afcc5e8404df4298b2ca0f01b62e763b0df1bf2b53473ac41deb2e8337a6d9"
+    },
+    {
+      "filename": "train-00013.bin",
+      "index": 13,
+      "token_start": 130000000,
+      "token_end": 140000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "7e02838dc025662e416cefa32a26245f2e83798e3c95d37fe31c674cb42da64d"
+    },
+    {
+      "filename": "train-00014.bin",
+      "index": 14,
+      "token_start": 140000000,
+      "token_end": 150000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "216782add94d7cbe42d999df00051474cac1dd2607db42a52d4453ea4d3dc501"
+    },
+    {
+      "filename": "train-00015.bin",
+      "index": 15,
+      "token_start": 150000000,
+      "token_end": 160000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "b2a706e53ba8a8069337002357f8e1627fa16331cd7f034cdd7244b52191b4bb"
+    },
+    {
+      "filename": "train-00016.bin",
+      "index": 16,
+      "token_start": 160000000,
+      "token_end": 170000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "088448f537e0954821a542e176c89309ba68f8c59facaf8d935c1bd715688980"
+    },
+    {
+      "filename": "train-00017.bin",
+      "index": 17,
+      "token_start": 170000000,
+      "token_end": 180000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "68c20f1dc04ce5276add9a6e23437f734504a625c8876e330619e9c81939334f"
+    },
+    {
+      "filename": "train-00018.bin",
+      "index": 18,
+      "token_start": 180000000,
+      "token_end": 190000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "66e946e3c246db2f9fc388f5a836b3397dc36480f5f4e93e0cf40953cd00a5d4"
+    },
+    {
+      "filename": "train-00019.bin",
+      "index": 19,
+      "token_start": 190000000,
+      "token_end": 200000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "bc7732185e38638d4f24ddc031f5f0f301b36c7635b0d0a6177c98351d5e40c3"
+    },
+    {
+      "filename": "train-00020.bin",
+      "index": 20,
+      "token_start": 200000000,
+      "token_end": 210000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "c655cb072e9020a9a10f003934a14eca8f5c6c03da75c535073b4ddc88d9a545"
+    },
+    {
+      "filename": "train-00021.bin",
+      "index": 21,
+      "token_start": 210000000,
+      "token_end": 220000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "79bf307b3a04e2ee013411d83a3d3644f749a311b51234228c2c97abb6c0e7e0"
+    },
+    {
+      "filename": "train-00022.bin",
+      "index": 22,
+      "token_start": 220000000,
+      "token_end": 230000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "3b41d5276ffa52cf29834dc298f424418f2299d271b842872406cf316e5fe17a"
+    },
+    {
+      "filename": "train-00023.bin",
+      "index": 23,
+      "token_start": 230000000,
+      "token_end": 240000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "e1c07c94cb1e7604f8f474a9b4f676c98912b6e7a95a1b83aed247ca46c3c5f0"
+    },
+    {
+      "filename": "train-00024.bin",
+      "index": 24,
+      "token_start": 240000000,
+      "token_end": 250000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "a3d6c07eef95820357b7c225a7be997e1aabf52e0506415fb78df6697012563a"
+    },
+    {
+      "filename": "train-00025.bin",
+      "index": 25,
+      "token_start": 250000000,
+      "token_end": 260000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "b14819351c422f48e3549279fdc669998232a23821a91aa3e180ddbd104ec17f"
+    },
+    {
+      "filename": "train-00026.bin",
+      "index": 26,
+      "token_start": 260000000,
+      "token_end": 270000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0444537997a7cf9daeee7e00964739d89e0dedddd4510c164d2d8ce29af0a9f4"
+    },
+    {
+      "filename": "train-00027.bin",
+      "index": 27,
+      "token_start": 270000000,
+      "token_end": 280000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0330ea8ca7cd92f22a46b8054aebd40a9e7f6cdb0704d8efe9d81b7bfc03b560"
+    },
+    {
+      "filename": "train-00028.bin",
+      "index": 28,
+      "token_start": 280000000,
+      "token_end": 290000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0500f1d7b17f26710f72766fa0e1d82cd80d760b9f20189b74a8258358747f36"
+    },
+    {
+      "filename": "train-00029.bin",
+      "index": 29,
+      "token_start": 290000000,
+      "token_end": 300000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "1721388055235e7a879b3609e40142e9e0359b530f15606ae1161fb56be17ca9"
+    },
+    {
+      "filename": "train-00030.bin",
+      "index": 30,
+      "token_start": 300000000,
+      "token_end": 310000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "ce52db004177d0f2d4ff0e4abebcc32aac12dae1a365d0ab87648df6b534a47a"
+    },
+    {
+      "filename": "train-00031.bin",
+      "index": 31,
+      "token_start": 310000000,
+      "token_end": 320000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "e8b479fd29b0ce7c42bc21cf41321a6a9c9ab2e769d1541486036aac96a1b83f"
+    },
+    {
+      "filename": "train-00032.bin",
+      "index": 32,
+      "token_start": 320000000,
+      "token_end": 330000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0b942621a1850ca556b329ae5ab83eca1c233bf10a5296972c9dd0d623996369"
+    },
+    {
+      "filename": "train-00033.bin",
+      "index": 33,
+      "token_start": 330000000,
+      "token_end": 340000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "103e0a5e911c28f2f52b5fc9ee1ee5cb8e7f0fc006bf852df8848bd597fd73a5"
+    },
+    {
+      "filename": "train-00034.bin",
+      "index": 34,
+      "token_start": 340000000,
+      "token_end": 350000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "500d4b18ac1451fcb90d9a3e2c99abfddc3558540af508d2910a8cc69b41202d"
+    },
+    {
+      "filename": "train-00035.bin",
+      "index": 35,
+      "token_start": 350000000,
+      "token_end": 360000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "e1fe58f6f8b074ff0363a6d03c23504122058d199bed05b0298f1b2d024b9149"
+    },
+    {
+      "filename": "train-00036.bin",
+      "index": 36,
+      "token_start": 360000000,
+      "token_end": 370000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "07be379d9a12d3860cfce2e4ed3c577a5aa7f447b96cc9501a69140cbeea318f"
+    },
+    {
+      "filename": "train-00037.bin",
+      "index": 37,
+      "token_start": 370000000,
+      "token_end": 380000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0c3b1383a13273314016372515ddecc3bdf419b937dfd46ac6ce02ac50220da5"
+    },
+    {
+      "filename": "train-00038.bin",
+      "index": 38,
+      "token_start": 380000000,
+      "token_end": 390000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "037fc1031c5673877ad9d910a851b6a9609eed39863e27b604f1dd16b529b43e"
+    },
+    {
+      "filename": "train-00039.bin",
+      "index": 39,
+      "token_start": 390000000,
+      "token_end": 400000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "58b98fadc345a17216fa8480f92ff82d37ead412e6aa44b6be47d0f2df1ab35d"
+    },
+    {
+      "filename": "train-00040.bin",
+      "index": 40,
+      "token_start": 400000000,
+      "token_end": 410000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "ba462e7d38917732ecd17e4ba149dfc5e71325a8c3b5e852704fafc6d223f17d"
+    },
+    {
+      "filename": "train-00041.bin",
+      "index": 41,
+      "token_start": 410000000,
+      "token_end": 420000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "14f26efe5ba2fe8de8bd4bf50a45b91c96f3a51ba3af1098912c736cdea9ad90"
+    },
+    {
+      "filename": "train-00042.bin",
+      "index": 42,
+      "token_start": 420000000,
+      "token_end": 430000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "9da9f90afb33a249474bd17b18e08b8fec0cfb611d9e9c4b668c95bdb445ae5c"
+    },
+    {
+      "filename": "train-00043.bin",
+      "index": 43,
+      "token_start": 430000000,
+      "token_end": 440000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "6232ab502d37eae2b2e0c208521fe107631de28bd7198161674843ffdbe32db7"
+    },
+    {
+      "filename": "train-00044.bin",
+      "index": 44,
+      "token_start": 440000000,
+      "token_end": 450000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "3173a9e916465012e06c7799fccaab313864d9a1918f56957e900a50c75689f1"
+    },
+    {
+      "filename": "train-00045.bin",
+      "index": 45,
+      "token_start": 450000000,
+      "token_end": 460000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "4b43b53684f7304a78f8f62728a052468ab55426c4f4d87541af4a3b40c8f180"
+    },
+    {
+      "filename": "train-00046.bin",
+      "index": 46,
+      "token_start": 460000000,
+      "token_end": 470000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "426846b43534c4ba1f4267d7e337856a0068d23a841195f16e882eae6f13ef07"
+    },
+    {
+      "filename": "train-00047.bin",
+      "index": 47,
+      "token_start": 470000000,
+      "token_end": 480000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "f191f01f54bac42ed8145aa59301c291392fb1c582dfa1feaffa7504723b3af9"
+    },
+    {
+      "filename": "train-00048.bin",
+      "index": 48,
+      "token_start": 480000000,
+      "token_end": 490000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "526259dd27f9829f278a6d7d3fece909d244c1640921c7e7e2a2660a293b41b4"
+    },
+    {
+      "filename": "train-00049.bin",
+      "index": 49,
+      "token_start": 490000000,
+      "token_end": 500000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "85b7ebe3d731942773ea29af8a35eac86d81995697c51e0edd8da44d5b79c16d"
+    },
+    {
+      "filename": "train-00050.bin",
+      "index": 50,
+      "token_start": 500000000,
+      "token_end": 510000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "55a3a0c01220e7bdb0beb8e3856de25c1adfe64b97f6054a215df13eb65ce78e"
+    },
+    {
+      "filename": "train-00051.bin",
+      "index": 51,
+      "token_start": 510000000,
+      "token_end": 520000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "f0157e97b9cfe310c4196962fb2700d4bf9b5fa8f49d0060b793e0e8ba2d9b1d"
+    },
+    {
+      "filename": "train-00052.bin",
+      "index": 52,
+      "token_start": 520000000,
+      "token_end": 530000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "b2db81d4c783011c1388c0b5968e531556e2a74dd52472486d6d5b7d1576b68b"
+    },
+    {
+      "filename": "train-00053.bin",
+      "index": 53,
+      "token_start": 530000000,
+      "token_end": 540000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "cc82cb278f3c6c054469923f30dc05b01cd47f340dff13bb046df3f7ff61a1f8"
+    },
+    {
+      "filename": "train-00054.bin",
+      "index": 54,
+      "token_start": 540000000,
+      "token_end": 550000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "43546c393d6c6ca14f95bce84102823d4f2b8530aa879398c8a1a5912f681936"
+    },
+    {
+      "filename": "train-00055.bin",
+      "index": 55,
+      "token_start": 550000000,
+      "token_end": 560000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "85676ca94d6766300ae138dd6b71eba72cbacc4cc89c098ffe7ddb2327fcfbb5"
+    },
+    {
+      "filename": "train-00056.bin",
+      "index": 56,
+      "token_start": 560000000,
+      "token_end": 570000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "83cafc7d6ba31d90a7ea1a1f93cb42255afc7d107826e2f05af48e26be585f40"
+    },
+    {
+      "filename": "train-00057.bin",
+      "index": 57,
+      "token_start": 570000000,
+      "token_end": 580000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "7ca40f9f90f7486167ed34e17c910f4ca2b699b2f67178346a3cdbdb36130f73"
+    },
+    {
+      "filename": "train-00058.bin",
+      "index": 58,
+      "token_start": 580000000,
+      "token_end": 590000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "ded4bbc4e5b241722f77c3399f5d01c89f10f8e43e1e6f97d437a682a6a542fc"
+    },
+    {
+      "filename": "train-00059.bin",
+      "index": 59,
+      "token_start": 590000000,
+      "token_end": 600000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "68cfb9b453f04baa7d3f1cce056e3670e3858ee59ef3710cc28b2e6be9fab936"
+    },
+    {
+      "filename": "train-00060.bin",
+      "index": 60,
+      "token_start": 600000000,
+      "token_end": 610000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "52c34c7949e18a5f8e0e220eb88dfc683b8ebb502645bb03666506905f27c037"
+    },
+    {
+      "filename": "train-00061.bin",
+      "index": 61,
+      "token_start": 610000000,
+      "token_end": 620000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "15c530eb2f074594cfcab5ecf8df5c76b6bddd74eb9f583c072662f3f92055ca"
+    },
+    {
+      "filename": "train-00062.bin",
+      "index": 62,
+      "token_start": 620000000,
+      "token_end": 630000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "12065a17822fea3a0b1cf69b27cfee2572580aa7375566bb315dece2b3b6f416"
+    },
+    {
+      "filename": "train-00063.bin",
+      "index": 63,
+      "token_start": 630000000,
+      "token_end": 640000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "2f45c88136e4e8a701560f7f1d1f1e526f2ff02290c2622653639391373a1f76"
+    },
+    {
+      "filename": "train-00064.bin",
+      "index": 64,
+      "token_start": 640000000,
+      "token_end": 650000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "4b497e45358cde9e456c799e97294f1b9f64f420db7ad2e22670d4cff34db5d6"
+    },
+    {
+      "filename": "train-00065.bin",
+      "index": 65,
+      "token_start": 650000000,
+      "token_end": 660000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0c9d379825f0e7942dab370061432328464754ec7a5e539837252803c12e9b9e"
+    },
+    {
+      "filename": "train-00066.bin",
+      "index": 66,
+      "token_start": 660000000,
+      "token_end": 670000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "c5ff738d2080ef5cddfb101ae7091a719d9f1f30b1ef82b0b3759e47547176a3"
+    },
+    {
+      "filename": "train-00067.bin",
+      "index": 67,
+      "token_start": 670000000,
+      "token_end": 680000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "235a9a8740f0be58408611addf1913329c4f6cd5160b23edb7f829dd5a15d7b3"
+    },
+    {
+      "filename": "train-00068.bin",
+      "index": 68,
+      "token_start": 680000000,
+      "token_end": 690000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "9d9cd422dda9aefee88f6f071bb9b858df408e1009298729c76bca348b40672d"
+    },
+    {
+      "filename": "train-00069.bin",
+      "index": 69,
+      "token_start": 690000000,
+      "token_end": 700000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "18f2248bd7b0ca5e11cf0745cb80d34aad41979815944a55b56ef28f4f025105"
+    },
+    {
+      "filename": "train-00070.bin",
+      "index": 70,
+      "token_start": 700000000,
+      "token_end": 710000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "1abc3dad39e033f3e1c2fd6b813e65f8161925f9b35c0a3f9f21dbfc34a58920"
+    },
+    {
+      "filename": "train-00071.bin",
+      "index": 71,
+      "token_start": 710000000,
+      "token_end": 720000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "e4d853308f08ffe53590a4f3b5da8bca599292aac34cb9311047384da3d566be"
+    },
+    {
+      "filename": "train-00072.bin",
+      "index": 72,
+      "token_start": 720000000,
+      "token_end": 730000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "89595e304e164f8e08e32bc17127b5d586965de4d15c441d2751b83d452d984a"
+    },
+    {
+      "filename": "train-00073.bin",
+      "index": 73,
+      "token_start": 730000000,
+      "token_end": 740000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "99da60a8381cd6c92488c7abb321a3192d3195c273bc71618b15ebbb8efbeacc"
+    },
+    {
+      "filename": "train-00074.bin",
+      "index": 74,
+      "token_start": 740000000,
+      "token_end": 750000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "e6fff3a2292f82cb16d5f818adfb85f36768ada4a7b6cd532ededd76b4b0a1e6"
+    },
+    {
+      "filename": "train-00075.bin",
+      "index": 75,
+      "token_start": 750000000,
+      "token_end": 760000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "a390631710e4f45cb9f1ace6b557f955c3c1aabf76dbc9250637078ce4af3be2"
+    },
+    {
+      "filename": "train-00076.bin",
+      "index": 76,
+      "token_start": 760000000,
+      "token_end": 770000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "1cde78722274ec238638dcac850621be04a6b740e4cd733e015fbbf45a22479c"
+    },
+    {
+      "filename": "train-00077.bin",
+      "index": 77,
+      "token_start": 770000000,
+      "token_end": 780000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "c9aba7715fcc819a072fd85444b9e4591ebca349c40d9865b5c00435d2d8d745"
+    },
+    {
+      "filename": "train-00078.bin",
+      "index": 78,
+      "token_start": 780000000,
+      "token_end": 790000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "3e98bf97abf2db73c1f3365f09e7c82f989ecaec437228e4272379d3d3be177b"
+    },
+    {
+      "filename": "train-00079.bin",
+      "index": 79,
+      "token_start": 790000000,
+      "token_end": 800000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "b2e8ce15c162fa47b7f009861d6ad32eceb6a3e46916ccad6c2efee371c1c879"
+    },
+    {
+      "filename": "train-00080.bin",
+      "index": 80,
+      "token_start": 800000000,
+      "token_end": 810000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "955df1fdcdecaab166007e33961092f04cc78a8f25d0a756a68be1d6cdabfc39"
+    },
+    {
+      "filename": "train-00081.bin",
+      "index": 81,
+      "token_start": 810000000,
+      "token_end": 820000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "81a96278f5579c79674c4474115306c693abdc37a6061d0f8a5f5301118dda31"
+    },
+    {
+      "filename": "train-00082.bin",
+      "index": 82,
+      "token_start": 820000000,
+      "token_end": 830000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "ccdfd221aeb2e4ad1d32631f6e377400654ab8aff8d39bbec5432dead6821f03"
+    },
+    {
+      "filename": "train-00083.bin",
+      "index": 83,
+      "token_start": 830000000,
+      "token_end": 840000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "df3ef35eb53f350133899b2a332f824426a96e57cce62519c85162e61b5b60c5"
+    },
+    {
+      "filename": "train-00084.bin",
+      "index": 84,
+      "token_start": 840000000,
+      "token_end": 850000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "a4186f42a4c0127ab62a64521697650cc2c5bf21314f110f3c507bfb36f9f953"
+    },
+    {
+      "filename": "train-00085.bin",
+      "index": 85,
+      "token_start": 850000000,
+      "token_end": 860000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "89ef291bb7667d0d8210fcf067032f9a2fa43014f6cb779309c891ff8dafa162"
+    },
+    {
+      "filename": "train-00086.bin",
+      "index": 86,
+      "token_start": 860000000,
+      "token_end": 870000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "76ac9e78de0a21e9d0d331d7864909c17bcbf752d093fb2b15c6b863dec74449"
+    },
+    {
+      "filename": "train-00087.bin",
+      "index": 87,
+      "token_start": 870000000,
+      "token_end": 880000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "102a05d2c0479b11c5657ca7fdd91765261edf5ea38601fe37646bf5cf2303b2"
+    },
+    {
+      "filename": "train-00088.bin",
+      "index": 88,
+      "token_start": 880000000,
+      "token_end": 890000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "db76825428951524ddd06136b9ea459f307b5f759df3f9db737bb6406ee6f4c4"
+    },
+    {
+      "filename": "train-00089.bin",
+      "index": 89,
+      "token_start": 890000000,
+      "token_end": 900000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "33c3140201d133eec0dfe23cb38ef2128ac08b8d1ce330ad6b4e2e17f33e22a3"
+    },
+    {
+      "filename": "train-00090.bin",
+      "index": 90,
+      "token_start": 900000000,
+      "token_end": 910000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "bbefe6b736bae97e4d27b806d136db716c8e6e3a1765db78817693624bd6bbee"
+    },
+    {
+      "filename": "train-00091.bin",
+      "index": 91,
+      "token_start": 910000000,
+      "token_end": 920000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "c2997e46f192b3222ce147b566e54acc4ff1b08f72023fee4dade41ec1fd57d9"
+    },
+    {
+      "filename": "train-00092.bin",
+      "index": 92,
+      "token_start": 920000000,
+      "token_end": 930000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "f1f5b6a5542f0097d3c6cbfc13062f06e0a7c1690001e8310f57690b6f38faf7"
+    },
+    {
+      "filename": "train-00093.bin",
+      "index": 93,
+      "token_start": 930000000,
+      "token_end": 940000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "af7a8106e8797c47c5424b1d53be7401b4378b1e909f94552b1a60cc7c6e3230"
+    },
+    {
+      "filename": "train-00094.bin",
+      "index": 94,
+      "token_start": 940000000,
+      "token_end": 950000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "c4800c80c6a11992955d27ae0efe0d56e330da61c3ddd443e1909637ad072efd"
+    },
+    {
+      "filename": "train-00095.bin",
+      "index": 95,
+      "token_start": 950000000,
+      "token_end": 960000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "d68460edb8c3716f924e7793045a2ed06f19743f662e150e15fdcc27c57b138b"
+    },
+    {
+      "filename": "train-00096.bin",
+      "index": 96,
+      "token_start": 960000000,
+      "token_end": 970000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0a8e592162eaea6e4f92efccc11333b49837a13479014b1a71639bd6549273ba"
+    },
+    {
+      "filename": "train-00097.bin",
+      "index": 97,
+      "token_start": 970000000,
+      "token_end": 980000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "9743c0bb18e1f304ba902755a7a40537559ff31d79d672f2c046df2ff33c47ac"
+    },
+    {
+      "filename": "train-00098.bin",
+      "index": 98,
+      "token_start": 980000000,
+      "token_end": 990000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "056118bbb82ad0f602ed36f4d9a972d0b79c75902cbcfa427997cd2e5c3646d7"
+    },
+    {
+      "filename": "train-00099.bin",
+      "index": 99,
+      "token_start": 990000000,
+      "token_end": 1000000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "858caad7ebed163403048947ca7bda738355cc06124b4ce66a5c3fe1a5149d95"
+    },
+    {
+      "filename": "train-00100.bin",
+      "index": 100,
+      "token_start": 1000000000,
+      "token_end": 1010000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "88ab2306a31d827e4c08839e63e838f2027f5ac2d78da681ef00ea58af1106ea"
+    },
+    {
+      "filename": "train-00101.bin",
+      "index": 101,
+      "token_start": 1010000000,
+      "token_end": 1020000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "ff13abb64165bef391b734fd02ba6d5ee8a7463058dabdbef7d23fe5e2609914"
+    },
+    {
+      "filename": "train-00102.bin",
+      "index": 102,
+      "token_start": 1020000000,
+      "token_end": 1030000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "28fe763324122ead54f305aa7864c2878df3136297c7dad6c72caa754635df7a"
+    },
+    {
+      "filename": "train-00103.bin",
+      "index": 103,
+      "token_start": 1030000000,
+      "token_end": 1040000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "b0f393efacd3e57c7d32c38df54fda30b62a390db1a90c56b2c967d484090928"
+    },
+    {
+      "filename": "train-00104.bin",
+      "index": 104,
+      "token_start": 1040000000,
+      "token_end": 1050000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "5d94617261814100f3ef6b21f6abf2d8b775b2c50e5d9544ad22488ec0f3e99d"
+    },
+    {
+      "filename": "train-00105.bin",
+      "index": 105,
+      "token_start": 1050000000,
+      "token_end": 1060000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "0f83dc14cf20160e90bf33146e9964d065901369cb8cc6a8efb200b3845d6f99"
+    },
+    {
+      "filename": "train-00106.bin",
+      "index": 106,
+      "token_start": 1060000000,
+      "token_end": 1070000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "b3c5279a060d6cbf393629abfcb185305ec2a929f79ea47dd2f5ccc718fda39c"
+    },
+    {
+      "filename": "train-00107.bin",
+      "index": 107,
+      "token_start": 1070000000,
+      "token_end": 1080000000,
+      "token_count": 10000000,
+      "byte_count": 20000000,
+      "sha256": "f5357de1695b5f6ec6c23a86a995fd16fa39b5f5729a81435add7091ec0badb2"
+    },
+    {
+      "filename": "train-00108.bin",
+      "index": 108,
+      "token_start": 1080000000,
+      "token_end": 1083858263,
+      "token_count": 3858263,
+      "byte_count": 7716526,
+      "sha256": "ca1be878d559f8fc80062d06dd5bca9dd21c4785ee73c2c4e5ca024f5b57a76e"
+    }
+  ]
+}

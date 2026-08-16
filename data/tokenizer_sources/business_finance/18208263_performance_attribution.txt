@@ -1,0 +1,75 @@
+Performance attribution, or investment performance attribution is a set of techniques that performance analysts use to explain why a portfolio's performance differed from the benchmark.  This difference between the portfolio return and the benchmark return is known as the active return.  The active return is the component of a portfolio's performance that arises from the fact that the portfolio is actively managed.
+Different kinds of performance attribution provide different ways of explaining the active return.
+Attribution analysis attempts to distinguish which of the various different factors affecting portfolio performance is the source of the portfolio's overall performance. Specifically, this method compares the total return of the manager's actual investment holdings with the return for a predetermined benchmark portfolio and decomposes the difference into a selection effect and an allocation effect.
+
+Simple example
+Consider a portfolio whose benchmark consists of 30% cash and 70% equities.  The following table provides a consistent set of weights and returns for this example.
+
+The portfolio performance was 4.60%, compared with a benchmark return of 2.40%.  Thus the portfolio outperformed the benchmark by 220 basis points.  The task of performance attribution is to explain the decisions that the portfolio manager took to generate this 220 basis points of value added.
+Under the most common paradigm for performance attribution, there are two different kinds of decisions that the portfolio manager can make in an attempt to produce added value:
+
+Asset Allocation: the manager might choose to allocate 90% of the assets into equities (leaving only 10% for cash), on the belief that equities will produce a higher return than cash.
+Stock Selection: Especially within the equities sector, the manager may try to hold securities that will give a higher return than the overall equity benchmark.  In the example, the securities selected by the equities manager produced an overall return of 5%, when the benchmark return for equities was only 3%.
+The attribution analysis dissects the value added into three components:
+
+Asset allocation is the value added by under-weighting cash [(10% − 30%) × (1% benchmark return for cash)], and over-weighting equities [(90% − 70%) × (3% benchmark return for equities)].  The total value added by asset allocation was 0.40%.
+Stock selection is the value added by decisions within each sector of the portfolio.  In this case, the superior stock selection in the equity sector added 1.40% to the portfolio's return [(5% − 3%) × 70%].
+Interaction captures the value added that is not attributable solely to the asset allocation and stock selection decisions.  It is positive when outperformance is overweighted and when underperformance is underweighted.  In this particular case, there was 0.40% of value added from the combination that the portfolio was overweight equities, and the equities sector also outperformed its benchmark [(90% − 70%) × (5% portfolio return for equities − 3% benchmark return for equities)].
+The three attribution terms (asset allocation, stock selection, and interaction) sum exactly to the active return without the need for any fudge factors.
+Some other versions of decision attribution analysis omit the interaction effect. As opposed to determining the contribution of uncontrollable market factors to active return, the type of analysis described here is meant to evaluate the effect of each (type of) controllable decision on the active return, and "interaction" is not a clearly defined controllable decision.
+Decision attribution also needs to address the combined effect of multiple periods over which weights vary and returns compound.
+In addition, more structured investment processes normally need to be addressed in order for the analysis to be relevant to actual fund construction.
+Such sophisticated investment processes might include ones that nest sectors within asset classes and/or industries within sectors, requiring the evaluation of the effects of deciding the relative weights of these nested components within the border classes.
+They might also include analysis of the effects of country and/or currency decisions in the context of the varying risk-free rates of different currencies or the decisions to set fund or bucket values for continuous properties like capitalization or duration.
+In addition, advanced systems allow for the decision process within asset classes, such as, following an asset allocation, when capitalization decisions are only made for the equity assets but duration decisions are only made for the fixed income assets.
+The most robust attribution models precisely address all of these aspects of decision attribution without residuals.
+Furthermore, modern portfolio theory requires that all return analysis be conjoined with risk analysis, else good performance results can mask their relationship to greatly increased risk.  Thus, a viable performance attribution system must always be interpreted in parallel to a precisely commensurate risk attribution analysis.
+
+Validity of benchmarks
+
+There are a number of characteristics of a valid benchmark.  The following is a list of such properties.
+
+Unambiguous
+Investable
+Measurable
+Appropriate
+Reflective of current investment opinions
+Specified in advance
+Owned
+
+History
+In 1966, Peter Dietz's Pension Funds: Measuring Investment Performance article established time-weighted rate of return as the most important measure of fund performance.
+In 1968, the Bank Administration Institute's Measuring the Investment Performance of Pension Funds for the Purpose of Inter-Fund Comparison study proposed common methods of comparing pension fund performance to differentiate between the abilities of their respective managers. They recommended the following:
+
+Return calculations should be based on market value, not cost.
+Total returns should be used.
+Returns should be time-weighted.
+Performance measurement should include both return and risk.
+Funds should be classified based on investment objectives.
+The report also suggested that portfolios should be compared with various sector returns.
+In 1972, Eugene Fama's Components of Investment Performance suggested decomposing observed returns into returns from "selectivity", or the ability of managers to pick the best securities given a level of risk, and "timing", or the ability to predict general market price movements. The "timing" effect, or the effect of market return, was the first example of a factor used in performance attribution.
+
+Holdings-based attribution history
+Holdings based return attribution began to be developed after the 1970s as one group of attribution methods; these attribution methods required portfolio holding data to conduct performance attribution.
+In 1972, a working group of the Society of Investment Analysts (UK) published The Measurement of Portfolio Performance for Pension Funds. This paper introduced the idea that active performance can be analysed by comparing the returns of different notional portfolios. In particular, if one examines the performance of a portfolio that holds each sector at the active weight, while earning a passive return within each sector, one can measure exactly the amount of value that is added by asset allocation decisions. The paper proposes that the performance of a fund depend on the selection of asset classes (now described as Asset allocation) and on the selection of securities within an asset class.
+In 1985 and 1986, Brinson and Fachler (1985) and Brinson, Hood, and Beebower (1986) introduced the Brinson models as a foundation for investment portfolio performance attribution. These models sub-divided active returns due to active management into security selection - return achieved through selecting different securities than the benchmark, and asset allocation - return achieved through weighting asset classes in a portfolio differently than the benchmark. The Brinson-Fachler methodology underpins many public performance attribution analyses. Morningstar, for example, includes a whitepaper on their mode of employing the Brinson-Fachler methodology. Morningstar is known for its analysis of long-only mutual funds, but the Brinson-Fachler analysis is also applicable to hedge ranking funds.
+The Brinson model performance attribution can be described as "arithmetic attribution" in the sense that it describes the difference between the portfolio return and the benchmark return.  For example, if the portfolio return was 21%, and the benchmark return was 10%, arithmetic attribution would explain 11% of value added. However, arithmetic attribution faces problems in multi-period performance attribution because while benchmark returns and portfolio returns compound over multiple periods, the sum of return differences between a portfolio and a benchmark does not equal the difference between their compounded returns. Bacon (2002) proposed geometric excess return, as part of a geometric attribution, as a solution to this problem, and suggested that geometric attributions are preferable because they are compoundable, they are convertible among currencies, and they are proportionate (between different asset bases from period to period).
+In Europe and the UK, another approach (known as geometric attribution) has been common.  If the portfolio return was 21% while the benchmark return was 10%, geometric attribution would explain an active return of 10%. The reasoning behind this is that 10% of active return, when compounded with 10% of benchmark performance, produces a total portfolio return of 21%. One advantage of doing attribution in geometric form is that the attribution results translate consistently from one currency to another.  It is plausible that this explains the popularity of geometric approaches in Europe. Another reason for using geometric attribution is that it is theoretically sound for both single period
+and multi period analyses, for arithmetic attribution additional "smoothing" is required to apply it to a multi period setting.
+
+Returns-based attribution history
+Returns-based, or factor-based, attribution methods also began to be developed after the 1970s; these attribution methods require time series return data of a portfolio, and may require time series return data of securities held in that portfolio and of explanatory factor portfolios to conduct performance attribution. These methods do not require holdings data, they could be performed relatively easily, and they can compliment other attribution methods. However, they require the appropriate definition of factors.
+From 1988 to 1992, William F. Sharpe proposed using a 12-factor model, including the market return, to determine the passive return of a portfolio that matches the style of a particular active manager, and then taking the difference between that passive portfolio and the active manager's actual portfolio return to determine the active manager's selection ability. These passive portfolios became the foundation for later style benchmarks.
+In 1993, Eugene Fama and Kenneth French proposed the Fama-French three-factor model, consisting of the market return, and factors relating to size and value.
+In 1997, Mark Carhart proposed adding the Momentum factor to the Fama-French three-factor model in the Carhart four-factor model.
+
+Concurrent developments
+Fixed income portfolio performance attribution methods developed as variations on holdings-based and returns-based performance attribution methods, as developments in those attribution methods were driven by equity portfolio considerations and were generally inappropriate for fixed income portfolios. In 1977, Wagner and Tito replaced market return in the Fama return decomposition with duration risk. In addition, the selection attribution category is augmented with carry, yield curve, and spread attribution categories.
+Currency performance attribution methods developed as additions to holdings-based performance attribution methods in multi-currency portfolios. In 1991, Gregory Allen introduced geometric returns and neutralized portfolios as tools for performance attribution in a multi-currency context. Allen took a manager's portfolio and created neutralized portfolios where the return effects of a particular class of active decisions have been stripped out, and then took the difference of the manager's portfolios against those neutralized portfolios for performance attribution. Allen's use of geometric returns also meant that non-currency return attributions could be convertible between currencies and summed up to a total portfolio attribution. Between 1992 and 1994, Ernest Ankrim and Chris Hensel introduced forward premium and currency surprise to the Brinson models so that performance attribution could account for differential interest rates in currency decisions. In 1994, Denis Karnosky and Brian Singer demonstrated that managing multi-currency portfolios is sub-optimal if currency is not managed independently from allocation and selection effects.
+
+Benchmark-free attribution techniques
+One limitation of portfolio attribution is the reliance on a pre-determined benchmark. The stated benchmark may not be appropriate or may change over time ("Style Drift.")    It is difficult to render effective comparisons between funds with different benchmarks. Proponents of adaptive benchmarking maintain that by understanding the characteristics of the portfolio at each point in time, they can better attribute excess returns to skill.
+
+Risk-based performance attribution
+Risk-based performance attribution decomposes the performance of a portfolio based on various risk factors or risk exposures (see factor analysis). For complex or dynamic portfolios, risk-based profit attribution may have some advantages over methods which rely only on realized performance. This may be the case for some hedge fund strategies.
+Risk-based profit attribution should not be confused with risk attribution which decomposes the total risk of a portfolio into smaller units.

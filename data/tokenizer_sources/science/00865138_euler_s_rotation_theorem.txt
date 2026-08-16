@@ -1,0 +1,2679 @@
+In geometry, Euler's rotation theorem states that, in three-dimensional space, any displacement of a rigid body such that a point on the body remains fixed, is equivalent to a single rotation about some axis that runs through the fixed point. It also means that the composition of two rotations is also a rotation. Therefore, the set of rotations has a group structure, known as a rotation group.
+The theorem is named after Leonhard Euler, who proved it in 1775 by means of spherical geometry. The axis of rotation is known as an Euler axis, typically represented by a unit vector ê. Its product by the rotation angle is known as an axis-angle vector. The extension of the theorem to kinematics yields the concept of instant axis of rotation, a line of fixed points.
+In linear algebra terms, the theorem states that, in 3D space, any two Cartesian coordinate systems with a common origin are related by a rotation about some fixed axis. This also means that the product of two rotation matrices is again a rotation matrix and that for a non-identity rotation matrix one eigenvalue is 1 and the other two are both complex, or both equal to −1. The eigenvector corresponding to this eigenvalue is the axis of rotation connecting the two systems.
+
+Euler's theorem (1776)
+Euler states the theorem as follows:
+
+Theorema.
+Quomodocunque sphaera circa centrum suum conuertatur, semper assignari potest diameter,
+cuius directio in situ translato conueniat cum situ initiali.
+
+or (in English):
+
+When a sphere is moved around its centre it is always possible to find a diameter whose direction in the displaced position is the same as in the initial position.
+
+Proof
+Euler's original proof was made using spherical geometry and therefore whenever he speaks about triangles they must be understood as spherical triangles.
+
+Previous analysis
+To arrive at a proof, Euler analyses what the situation would look like if the theorem were true. To that end, suppose the yellow line in Figure 1 goes through the center of the sphere and is the axis of rotation we are looking for, and point O is one of the two intersection points of that axis with the sphere. Then he considers an arbitrary great circle that does not contain O (the blue circle), and its image after rotation (the red circle), which is another great circle not containing O. He labels a point on their intersection as point A. (If the circles coincide, then A can be taken as any point on either; otherwise A is one of the two points of intersection.) 
+
+Now A is on the initial circle (the blue circle), so its image will be on the transported circle (red). He labels that image as point a. Since A is also on the transported circle (red), it is the image of another point that was on the initial circle (blue) and he labels that preimage as α (see Figure 2). Then he considers the two arcs joining α and a to A. These arcs have the same length because arc αA is mapped onto arc Aa. Also, since O is a fixed point, triangle αOA is mapped onto triangle AOa, so these triangles are isosceles, and arc AO bisects angle ∠αAa.
+
+Construction of the best candidate point
+Let us construct a point that could be invariant using the previous considerations. We start with the blue great circle and its image under the transformation, which is the red great circle as in the Figure 1. Let point A be a point of intersection of those circles. If A’s image under the transformation is the same point then A is a fixed point of the transformation, and since the center is also a fixed point, the diameter of the sphere containing A is the axis of rotation and the theorem is proved.
+Otherwise we label A’s image as a and its preimage as α, and connect these two points to A with arcs αA and Aa. These arcs have the same length. Construct the great circle that bisects ∠αAa and locate point O on that great circle so that arcs AO and aO have the same length, and call the region of the sphere containing O and bounded by the blue and red great circles the interior of ∠αAa. (That is, the yellow region in Figure 3.) Then since αA = Aa and O is on the bisector of ∠αAa, we also have αO = aO.
+
+Proof of its invariance under the transformation
+Now let us suppose that O′ is the image of O. Then we know ∠αAO = ∠AaO′ and orientation is preserved, so O′ must be interior to ∠αAa. Now AO is transformed to aO′, so AO = aO′. Since AO is also the same length as aO, then aO = aO′ and ∠AaO = ∠aAO. But ∠αAO = ∠aAO, so ∠αAO = ∠AaO and ∠AaO = ∠AaO′. Therefore O′ is the same point as O. In other words, O is a fixed point of the transformation, and since the center is also a fixed point, the diameter of the sphere containing O is the axis of rotation.
+
+Final notes about the construction
+
+Euler also points out that O can be found by intersecting the perpendicular bisector of Aa with the angle bisector of ∠αAa, a construction that might be easier in practice. He also proposed the intersection of two planes:
+
+the symmetry plane of the angle ∠αAa (which passes through the center C of the sphere), and
+the symmetry plane of the arc Aa (which also passes through C).
+Proposition. These two planes intersect in a diameter. This diameter is the one we are looking for.
+Proof. Let us call O either of the endpoints (there are two) of this diameter over the sphere surface. Since αA is mapped on Aa and the triangles have the same angles, it follows that the triangle OαA is transported onto the triangle OAa. Therefore the point O has to remain fixed under the movement.
+Corollaries. This also shows that the rotation of the sphere can be seen as two consecutive reflections about the two planes described above. Points in a mirror plane are invariant under reflection, and hence the points on their intersection (a line: the axis of rotation) are invariant under both the reflections, and hence under the rotation.
+Another simple way to find the rotation axis is by considering the plane on which the points α, A, a lie. The rotation axis is obviously orthogonal to this plane, and passes through the center C of the sphere.
+Given that for a rigid body any movement that leaves an axis invariant is a rotation, this also proves that any arbitrary composition of rotations is equivalent to a single rotation around a new axis.
+
+Matrix proof
+A spatial rotation is a linear map in one-to-one correspondence with a 3 × 3 rotation matrix R that transforms a coordinate vector x into X, that is Rx = X. Therefore, another version of Euler's theorem is that for every rotation R, there is a nonzero vector n for which Rn = n; this is exactly the claim that n is an eigenvector of R associated with the eigenvalue 1. Hence it suffices to prove that 1 is an eigenvalue of R; the rotation axis of R will be the line μn, where n is the eigenvector with eigenvalue 1.
+A rotation matrix has the fundamental property that its inverse is its transpose, that is
+
+  
+    
+      
+        
+          
+            R
+          
+          
+            
+              T
+            
+          
+        
+        
+          R
+        
+        =
+        
+          R
+        
+        
+          
+            R
+          
+          
+            
+              T
+            
+          
+        
+        =
+        
+          I
+        
+        ,
+      
+    
+    {\displaystyle \mathbf {R} ^{\mathsf {T}}\mathbf {R} =\mathbf {R} \mathbf {R} ^{\mathsf {T}}=\mathbf {I} ,}
+  
+
+where I is the 3 × 3 identity matrix and superscript T indicates the transposed matrix. 
+Computing the determinant shows that a rotation matrix ⁠
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbf {R} }
+  
+⁠ has determinant ⁠
+  
+    
+      
+        det
+        (
+        
+          R
+        
+        )
+        =
+        ±
+        1
+      
+    
+    {\displaystyle \det(\mathbf {R} )=\pm 1}
+  
+⁠. Indeed,
+
+  
+    
+      
+        
+          
+            
+              
+                1
+              
+              
+                
+                =
+                det
+                (
+                
+                  I
+                
+                )
+                =
+                det
+                
+                  (
+                  
+                    
+                      
+                        R
+                      
+                      
+                        
+                          T
+                        
+                      
+                    
+                    
+                      R
+                    
+                  
+                  )
+                
+                =
+                det
+                
+                  (
+                  
+                    
+                      R
+                    
+                    
+                      
+                        T
+                      
+                    
+                  
+                  )
+                
+                det
+                (
+                
+                  R
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                det
+                (
+                
+                  R
+                
+                
+                  )
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}1&=\det(\mathbf {I} )=\det \left(\mathbf {R} ^{\mathsf {T}}\mathbf {R} \right)=\det \left(\mathbf {R} ^{\mathsf {T}}\right)\det(\mathbf {R} )\\&=\det(\mathbf {R} )^{2}\\\end{aligned}}}
+  
+
+A rotation matrix with determinant +1 is a proper rotation, and one with a negative determinant −1 is an improper rotation, that is a reflection combined with a proper rotation.
+It will now be shown that a proper rotation matrix R has at least one invariant vector n, i.e., Rn = n. Because this requires that (R − I)n = 0, we see that the vector n must be an eigenvector of the matrix R with eigenvalue λ = 1. Thus, this is equivalent to showing that det(R − I) = 0.
+Use the two relations
+
+  
+    
+      
+        det
+        (
+        −
+        
+          A
+        
+        )
+        =
+        (
+        −
+        1
+        
+          )
+          
+            3
+          
+        
+        det
+        (
+        
+          A
+        
+        )
+        =
+        −
+        det
+        (
+        
+          A
+        
+        )
+        
+      
+    
+    {\displaystyle \det(-\mathbf {A} )=(-1)^{3}\det(\mathbf {A} )=-\det(\mathbf {A} )\quad }
+  
+
+for any 3 × 3 matrix A and
+
+  
+    
+      
+        det
+        
+          (
+          
+            
+              R
+            
+            
+              −
+              1
+            
+          
+          )
+        
+        =
+        1
+        
+      
+    
+    {\displaystyle \det \left(\mathbf {R} ^{-1}\right)=1\quad }
+  
+
+(since det(R) = 1) to compute
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                det
+                (
+                
+                  R
+                
+                −
+                
+                  I
+                
+                )
+                =
+                det
+                
+                  (
+                  
+                    (
+                    
+                      R
+                    
+                    −
+                    
+                      I
+                    
+                    
+                      )
+                      
+                        
+                          T
+                        
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+                
+
+                
+                =
+                
+
+                
+              
+              
+                
+                det
+                
+                  (
+                  
+                    
+                      
+                        R
+                      
+                      
+                        
+                          T
+                        
+                      
+                    
+                    −
+                    
+                      I
+                    
+                  
+                  )
+                
+                =
+                det
+                
+                  (
+                  
+                    
+                      
+                        R
+                      
+                      
+                        −
+                        1
+                      
+                    
+                    −
+                    
+                      
+                        R
+                      
+                      
+                        −
+                        1
+                      
+                    
+                    
+                      R
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+                
+
+                
+                =
+                
+
+                
+              
+              
+                
+                det
+                
+                  (
+                  
+                    
+                      
+                        R
+                      
+                      
+                        −
+                        1
+                      
+                    
+                    (
+                    
+                      I
+                    
+                    −
+                    
+                      R
+                    
+                    )
+                  
+                  )
+                
+                =
+                det
+                
+                  (
+                  
+                    
+                      R
+                    
+                    
+                      −
+                      1
+                    
+                  
+                  )
+                
+                
+                det
+                (
+                −
+                (
+                
+                  R
+                
+                −
+                
+                  I
+                
+                )
+                )
+              
+            
+            
+              
+                
+
+                
+                =
+                
+
+                
+              
+              
+                
+                −
+                det
+                (
+                
+                  R
+                
+                −
+                
+                  I
+                
+                )
+              
+            
+            
+              
+                ⟹
+                 
+                0
+                =
+                
+
+                
+              
+              
+                
+                det
+                (
+                
+                  R
+                
+                −
+                
+                  I
+                
+                )
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\det(\mathbf {R} -\mathbf {I} )=\det \left((\mathbf {R} -\mathbf {I} )^{\mathsf {T}}\right)\\{}={}&\det \left(\mathbf {R} ^{\mathsf {T}}-\mathbf {I} \right)=\det \left(\mathbf {R} ^{-1}-\mathbf {R} ^{-1}\mathbf {R} \right)\\{}={}&\det \left(\mathbf {R} ^{-1}(\mathbf {I} -\mathbf {R} )\right)=\det \left(\mathbf {R} ^{-1}\right)\,\det(-(\mathbf {R} -\mathbf {I} ))\\{}={}&-\det(\mathbf {R} -\mathbf {I} )\\[3pt]\Longrightarrow \ 0={}&\det(\mathbf {R} -\mathbf {I} ).\end{aligned}}}
+  
+
+This shows that λ = 1 is a root (solution) of the characteristic equation, that is,
+
+  
+    
+      
+        det
+        (
+        
+          R
+        
+        −
+        λ
+        
+          I
+        
+        )
+        =
+        0
+        
+        
+          
+            for
+          
+        
+        
+        λ
+        =
+        1.
+      
+    
+    {\displaystyle \det(\mathbf {R} -\lambda \mathbf {I} )=0\quad {\hbox{for}}\quad \lambda =1.}
+  
+
+In other words, the matrix R − I is singular and has a non-zero kernel, that is, there is at least one non-zero vector, say n, for which
+
+  
+    
+      
+        (
+        
+          R
+        
+        −
+        
+          I
+        
+        )
+        
+          n
+        
+        =
+        
+          0
+        
+        
+        ⟺
+        
+        
+          R
+        
+        
+          n
+        
+        =
+        
+          n
+        
+        .
+      
+    
+    {\displaystyle (\mathbf {R} -\mathbf {I} )\mathbf {n} =\mathbf {0} \quad \Longleftrightarrow \quad \mathbf {R} \mathbf {n} =\mathbf {n} .}
+  
+
+The line μn for real μ is invariant under R, i.e., μn is a rotation axis. This proves Euler's theorem.
+A simpler proof can be obtained by noting that R has  either  one real eigenvalue -1 or 1 and two complex eigenvalues e^{\pm i\theta}  or  three real eigenvalues from {-1,1}. Since det(R)=1 being  the product of its three eigenvalues,  we obtain that either all of them are 1 or  only one of them is 1. Otherwise, the eigenvalues are {-1,-1,-1}  or  {-1,1,1}  or {-1, e^{\pm i\theta}} implying det(R)=-1 which contradicts det(R)=1. So, there is a  vector  n of unit length such that Rn = n.
+I
+
+Equivalence of an orthogonal matrix to a rotation matrix
+Two matrices (representing linear maps) are said to be equivalent if there is a change of basis that makes one equal to the other. A proper orthogonal matrix is always equivalent (in this sense) to either the following matrix or to its vertical reflection:
+
+  
+    
+      
+        
+          R
+        
+        ∼
+        
+          
+            (
+            
+              
+                
+                  cos
+                  ⁡
+                  ϕ
+                
+                
+                  −
+                  sin
+                  ⁡
+                  ϕ
+                
+                
+                  0
+                
+              
+              
+                
+                  sin
+                  ⁡
+                  ϕ
+                
+                
+                  cos
+                  ⁡
+                  ϕ
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            )
+          
+        
+        ,
+        
+        0
+        ≤
+        ϕ
+        ≤
+        2
+        π
+        .
+      
+    
+    {\displaystyle \mathbf {R} \sim {\begin{pmatrix}\cos \phi &-\sin \phi &0\\\sin \phi &\cos \phi &0\\0&0&1\\\end{pmatrix}},\qquad 0\leq \phi \leq 2\pi .}
+  
+
+Then, any orthogonal matrix is either a rotation or an improper rotation. A general orthogonal matrix has only one real eigenvalue, either +1 or −1. When it is +1 the matrix is a rotation. When −1, the matrix is an improper rotation.
+If R has more than one invariant vector then φ = 0 and R = I. Any vector is an invariant vector of I.
+
+Excursion into matrix theory
+In order to prove the previous equation some facts from matrix theory must be recalled.
+An m × m matrix A has m orthogonal eigenvectors if and only if A is normal, that is, if A†A = AA†. This result is equivalent to stating that normal matrices can be brought to diagonal form by a unitary similarity transformation:
+
+  
+    
+      
+        
+          A
+        
+        
+          U
+        
+        =
+        
+          U
+        
+        
+        diag
+        ⁡
+        (
+        
+          α
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          α
+          
+            m
+          
+        
+        )
+        
+        ⟺
+        
+        
+          
+            U
+          
+          
+            †
+          
+        
+        
+          A
+        
+        
+          U
+        
+        =
+        diag
+        ⁡
+        (
+        
+          α
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          α
+          
+            m
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle \mathbf {A} \mathbf {U} =\mathbf {U} \;\operatorname {diag} (\alpha _{1},\ldots ,\alpha _{m})\quad \Longleftrightarrow \quad \mathbf {U} ^{\dagger }\mathbf {A} \mathbf {U} =\operatorname {diag} (\alpha _{1},\ldots ,\alpha _{m}),}
+  
+
+and U is unitary, that is,
+
+  
+    
+      
+        
+          
+            U
+          
+          
+            †
+          
+        
+        =
+        
+          
+            U
+          
+          
+            −
+            1
+          
+        
+        .
+      
+    
+    {\displaystyle \mathbf {U} ^{\dagger }=\mathbf {U} ^{-1}.}
+  
+
+The eigenvalues α1, ..., αm are roots of the characteristic equation. If the matrix A happens to be unitary (and note that unitary matrices are normal), then
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  U
+                
+                
+                  †
+                
+              
+              
+                A
+              
+              
+                U
+              
+            
+            )
+          
+          
+            †
+          
+        
+        =
+        diag
+        ⁡
+        
+          (
+          
+            
+              α
+              
+                1
+              
+              
+                ∗
+              
+            
+            ,
+            …
+            ,
+            
+              α
+              
+                m
+              
+              
+                ∗
+              
+            
+          
+          )
+        
+        =
+        
+          
+            U
+          
+          
+            †
+          
+        
+        
+          
+            A
+          
+          
+            −
+            1
+          
+        
+        
+          U
+        
+        =
+        diag
+        ⁡
+        
+          (
+          
+            
+              
+                1
+                
+                  α
+                  
+                    1
+                  
+                
+              
+            
+            ,
+            …
+            ,
+            
+              
+                1
+                
+                  α
+                  
+                    m
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \left(\mathbf {U} ^{\dagger }\mathbf {A} \mathbf {U} \right)^{\dagger }=\operatorname {diag} \left(\alpha _{1}^{*},\ldots ,\alpha _{m}^{*}\right)=\mathbf {U} ^{\dagger }\mathbf {A} ^{-1}\mathbf {U} =\operatorname {diag} \left({\frac {1}{\alpha _{1}}},\ldots ,{\frac {1}{\alpha _{m}}}\right)}
+  
+
+and it follows that the eigenvalues of a unitary matrix are on the unit circle in the complex plane:
+
+  
+    
+      
+        
+          α
+          
+            k
+          
+          
+            ∗
+          
+        
+        =
+        
+          
+            1
+            
+              α
+              
+                k
+              
+            
+          
+        
+        
+        ⟺
+        
+        
+          α
+          
+            k
+          
+          
+            ∗
+          
+        
+        
+          α
+          
+            k
+          
+        
+        =
+        
+          
+            |
+            
+              α
+              
+                k
+              
+            
+            |
+          
+          
+            2
+          
+        
+        =
+        1
+        ,
+        
+        k
+        =
+        1
+        ,
+        …
+        ,
+        m
+        .
+      
+    
+    {\displaystyle \alpha _{k}^{*}={\frac {1}{\alpha _{k}}}\quad \Longleftrightarrow \quad \alpha _{k}^{*}\alpha _{k}=\left|\alpha _{k}\right|^{2}=1,\qquad k=1,\ldots ,m.}
+  
+
+Also an orthogonal (real unitary) matrix has eigenvalues on the unit circle in the complex plane. Moreover, since its characteristic equation (an mth order polynomial in λ) has real coefficients, it follows that its roots appear in complex conjugate pairs, that is, if α is a root then so is α∗. There are 3 roots, thus at least one of them must be purely real (+1 or −1).
+After recollection of these general facts from matrix theory, we return to the rotation matrix R. It follows from its realness and orthogonality that we can find a U such that:
+
+  
+    
+      
+        
+          R
+        
+        
+          U
+        
+        =
+        
+          U
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    e
+                    
+                      i
+                      ϕ
+                    
+                  
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    e
+                    
+                      −
+                      i
+                      ϕ
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  ±
+                  1
+                
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} \mathbf {U} =\mathbf {U} {\begin{pmatrix}e^{i\phi }&0&0\\0&e^{-i\phi }&0\\0&0&\pm 1\\\end{pmatrix}}}
+  
+
+If a matrix U can be found that gives the above form, and there is only one purely real component and it is −1, then we define 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbf {R} }
+  
+ to be an improper rotation. Let us only consider the case, then, of matrices R that are proper rotations (the third eigenvalue is just 1). The third column of the 3 × 3 matrix U will then be equal to the invariant vector n. Writing u1 and u2 for the first two columns of U, this equation gives
+
+  
+    
+      
+        
+          R
+        
+        
+          
+            u
+          
+          
+            1
+          
+        
+        =
+        
+          e
+          
+            i
+            ϕ
+          
+        
+        
+        
+          
+            u
+          
+          
+            1
+          
+        
+        
+        
+          
+            and
+          
+        
+        
+        
+          R
+        
+        
+          
+            u
+          
+          
+            2
+          
+        
+        =
+        
+          e
+          
+            −
+            i
+            ϕ
+          
+        
+        
+        
+          
+            u
+          
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle \mathbf {R} \mathbf {u} _{1}=e^{i\phi }\,\mathbf {u} _{1}\quad {\hbox{and}}\quad \mathbf {R} \mathbf {u} _{2}=e^{-i\phi }\,\mathbf {u} _{2}.}
+  
+
+If u1 has eigenvalue 1, then φ = 0 and u2 has also eigenvalue 1, which implies that in that case R = I. In general, however, as
+
+  
+    
+      
+        (
+        
+          R
+        
+        −
+        
+          e
+          
+            i
+            ϕ
+          
+        
+        
+          I
+        
+        )
+        
+          
+            u
+          
+          
+            1
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle (\mathbf {R} -e^{i\phi }\mathbf {I} )\mathbf {u} _{1}=0}
+  
+ implies that also 
+  
+    
+      
+        (
+        
+          R
+        
+        −
+        
+          e
+          
+            −
+            i
+            ϕ
+          
+        
+        
+          I
+        
+        )
+        
+          
+            u
+          
+          
+            1
+          
+          
+            ∗
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle (\mathbf {R} -e^{-i\phi }\mathbf {I} )\mathbf {u} _{1}^{*}=0}
+  
+ holds, so 
+  
+    
+      
+        
+          
+            u
+          
+          
+            2
+          
+        
+        =
+        
+          
+            u
+          
+          
+            1
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} _{2}=\mathbf {u} _{1}^{*}}
+  
+ can be chosen for 
+  
+    
+      
+        
+          
+            u
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} _{2}}
+  
+. Similarly, 
+  
+    
+      
+        (
+        
+          R
+        
+        −
+        
+          I
+        
+        )
+        
+          
+            u
+          
+          
+            3
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle (\mathbf {R} -\mathbf {I} )\mathbf {u} _{3}=0}
+  
+ can result in  a 
+  
+    
+      
+        
+          
+            u
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} _{3}}
+  
+  with real entries only, for a proper rotation matrix 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbf {R} }
+  
+.  
+Finally, the matrix equation is transformed by means of a unitary matrix,
+
+  
+    
+      
+        
+          R
+        
+        
+          U
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    
+                      1
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      i
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  
+                    
+                      1
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        −
+                        i
+                      
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            )
+          
+        
+        =
+        
+          U
+        
+        
+          
+            
+              
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            
+                              1
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          
+                            
+                              i
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          0
+                        
+                      
+                      
+                        
+                          
+                            
+                              1
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          
+                            
+                              
+                                −
+                                i
+                              
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          0
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                        
+                          1
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            
+                              1
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          
+                            
+                              1
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          0
+                        
+                      
+                      
+                        
+                          
+                            
+                              
+                                −
+                                i
+                              
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          
+                            
+                              i
+                              
+                                2
+                              
+                            
+                          
+                        
+                        
+                          0
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                        
+                          1
+                        
+                      
+                    
+                    )
+                  
+                
+              
+              ⏟
+            
+          
+          
+            =
+            
+            
+              I
+            
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    e
+                    
+                      i
+                      ϕ
+                    
+                  
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    e
+                    
+                      −
+                      i
+                      ϕ
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    
+                      1
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      i
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  
+                    
+                      1
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        −
+                        i
+                      
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} \mathbf {U} {\begin{pmatrix}{\frac {1}{\sqrt {2}}}&{\frac {i}{\sqrt {2}}}&0\\{\frac {1}{\sqrt {2}}}&{\frac {-i}{\sqrt {2}}}&0\\0&0&1\\\end{pmatrix}}=\mathbf {U} \underbrace {{\begin{pmatrix}{\frac {1}{\sqrt {2}}}&{\frac {i}{\sqrt {2}}}&0\\{\frac {1}{\sqrt {2}}}&{\frac {-i}{\sqrt {2}}}&0\\0&0&1\\\end{pmatrix}}{\begin{pmatrix}{\frac {1}{\sqrt {2}}}&{\frac {1}{\sqrt {2}}}&0\\{\frac {-i}{\sqrt {2}}}&{\frac {i}{\sqrt {2}}}&0\\0&0&1\\\end{pmatrix}}} _{=\;\mathbf {I} }{\begin{pmatrix}e^{i\phi }&0&0\\0&e^{-i\phi }&0\\0&0&1\\\end{pmatrix}}{\begin{pmatrix}{\frac {1}{\sqrt {2}}}&{\frac {i}{\sqrt {2}}}&0\\{\frac {1}{\sqrt {2}}}&{\frac {-i}{\sqrt {2}}}&0\\0&0&1\\\end{pmatrix}}}
+  
+
+which gives
+
+  
+    
+      
+        
+          
+            
+              U
+              ′
+            
+          
+          
+            †
+          
+        
+        
+          R
+        
+        
+          
+            U
+            ′
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  cos
+                  ⁡
+                  ϕ
+                
+                
+                  −
+                  sin
+                  ⁡
+                  ϕ
+                
+                
+                  0
+                
+              
+              
+                
+                  sin
+                  ⁡
+                  ϕ
+                
+                
+                  cos
+                  ⁡
+                  ϕ
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            )
+          
+        
+        
+        
+           with 
+        
+        
+        
+          
+            U
+            ′
+          
+        
+        =
+        
+          U
+        
+        
+          
+            (
+            
+              
+                
+                  
+                    
+                      1
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      i
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  
+                    
+                      1
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        −
+                        i
+                      
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle \mathbf {U'} ^{\dagger }\mathbf {R} \mathbf {U'} ={\begin{pmatrix}\cos \phi &-\sin \phi &0\\\sin \phi &\cos \phi &0\\0&0&1\\\end{pmatrix}}\quad {\text{ with }}\quad \mathbf {U'} =\mathbf {U} {\begin{pmatrix}{\frac {1}{\sqrt {2}}}&{\frac {i}{\sqrt {2}}}&0\\{\frac {1}{\sqrt {2}}}&{\frac {-i}{\sqrt {2}}}&0\\0&0&1\\\end{pmatrix}}.}
+  
+
+The columns of U′ are orthonormal as it is a unitary matrix with real-valued entries only, due to its definition above, that 
+  
+    
+      
+        
+          
+            u
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} _{1}}
+  
+ is the complex conjugate of  
+  
+    
+      
+        
+          
+            u
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} _{2}}
+  
+ and that 
+  
+    
+      
+        
+          
+            u
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} _{3}}
+  
+ is a vector with real-valued components. The third column is still 
+  
+    
+      
+        
+          
+            u
+          
+          
+            3
+          
+        
+        =
+      
+    
+    {\displaystyle \mathbf {u} _{3}=}
+  
+ n, the other two columns of U′ are perpendicular to n. We can now see how our definition of improper rotation corresponds with the geometric interpretation: an improper rotation is a rotation around an axis (here, the axis corresponding to the third coordinate) and a reflection on a plane perpendicular to that axis. If we only restrict ourselves to matrices with determinant 1, we can thus see that they must be proper rotations. This result implies that any orthogonal matrix R corresponding to a proper rotation is equivalent to a rotation over an angle φ around an axis n.
+
+Equivalence classes
+The trace (sum of diagonal elements) of the real rotation matrix given above is 1 + 2 cos φ. Since a trace is invariant under an orthogonal matrix similarity transformation,
+
+  
+    
+      
+        
+          T
+          r
+        
+        
+          [
+          
+            
+              A
+            
+            
+              R
+            
+            
+              
+                A
+              
+              
+                
+                  T
+                
+              
+            
+          
+          ]
+        
+        =
+        
+          T
+          r
+        
+        
+          [
+          
+            
+              R
+            
+            
+              
+                A
+              
+              
+                
+                  T
+                
+              
+            
+            
+              A
+            
+          
+          ]
+        
+        =
+        
+          T
+          r
+        
+        [
+        
+          R
+        
+        ]
+        
+        
+           with 
+        
+        
+        
+          
+            A
+          
+          
+            
+              T
+            
+          
+        
+        =
+        
+          
+            A
+          
+          
+            −
+            1
+          
+        
+        ,
+      
+    
+    {\displaystyle \mathrm {Tr} \left[\mathbf {A} \mathbf {R} \mathbf {A} ^{\mathsf {T}}\right]=\mathrm {Tr} \left[\mathbf {R} \mathbf {A} ^{\mathsf {T}}\mathbf {A} \right]=\mathrm {Tr} [\mathbf {R} ]\quad {\text{ with }}\quad \mathbf {A} ^{\mathsf {T}}=\mathbf {A} ^{-1},}
+  
+
+it follows that all matrices that are equivalent to R by such orthogonal matrix transformations have the same trace: the trace is a class function. This matrix transformation is clearly an equivalence relation, that is, all such equivalent matrices form an equivalence class. 
+In fact, all proper rotation 3 × 3 rotation matrices form a group, usually denoted by SO(3) (the special orthogonal group in 3 dimensions) and all matrices with the same trace form an equivalence class in this group. All elements of such an equivalence class share their rotation angle, but all rotations are around different axes. If n is an eigenvector of R with eigenvalue 1, then An is also an eigenvector of ARAT, also with eigenvalue 1. Unless A = I, n and An are different.
+
+Applications
+
+Generators of rotations
+
+Suppose we specify an axis of rotation by a unit vector [x, y, z], and suppose we have an infinitely small rotation of angle Δθ about that vector. Expanding the rotation matrix as an infinite addition, and taking the first order approach, the rotation matrix ΔR is represented as:
+
+  
+    
+      
+        Δ
+        R
+        =
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+            ]
+          
+        
+        +
+        
+          
+            [
+            
+              
+                
+                  0
+                
+                
+                  z
+                
+                
+                  −
+                  y
+                
+              
+              
+                
+                  −
+                  z
+                
+                
+                  0
+                
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+                
+                  −
+                  x
+                
+                
+                  0
+                
+              
+            
+            ]
+          
+        
+        
+        Δ
+        θ
+        =
+        
+          I
+        
+        +
+        
+          A
+        
+        
+        Δ
+        θ
+        .
+      
+    
+    {\displaystyle \Delta R={\begin{bmatrix}1&0&0\\0&1&0\\0&0&1\end{bmatrix}}+{\begin{bmatrix}0&z&-y\\-z&0&x\\y&-x&0\end{bmatrix}}\,\Delta \theta =\mathbf {I} +\mathbf {A} \,\Delta \theta .}
+  
+
+A finite rotation through angle θ about this axis may be seen as a succession of small rotations about the same axis. Approximating Δθ as ⁠θ/N⁠ where N is a large number, a rotation of θ about the axis may be represented as:
+
+  
+    
+      
+        R
+        =
+        
+          
+            (
+            
+              
+                1
+              
+              +
+              
+                
+                  
+                    
+                      A
+                    
+                    θ
+                  
+                  N
+                
+              
+            
+            )
+          
+          
+            N
+          
+        
+        ≈
+        
+          e
+          
+            
+              A
+            
+            θ
+          
+        
+        .
+      
+    
+    {\displaystyle R=\left(\mathbf {1} +{\frac {\mathbf {A} \theta }{N}}\right)^{N}\approx e^{\mathbf {A} \theta }.}
+  
+
+It can be seen that Euler's theorem essentially states that all rotations may be represented in this form. The product Aθ is the "generator" of the particular rotation, being the vector (x,y,z) associated with the matrix A. This shows that the rotation matrix and the axis–angle format are related by the exponential function.
+One can derive a simple expression for the generator G. One starts with an arbitrary plane (in Euclidean space) defined by a pair of perpendicular unit vectors a and b. In this plane one can choose an arbitrary vector x with perpendicular y. One then solves for y in terms of x and substituting into an expression for a rotation in a plane yields the rotation matrix R which includes the generator G = baT − abT.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  x
+                
+              
+              
+                
+                =
+                
+                  a
+                
+                cos
+                ⁡
+                α
+                +
+                
+                  b
+                
+                sin
+                ⁡
+                α
+              
+            
+            
+              
+                
+                  y
+                
+              
+              
+                
+                =
+                −
+                
+                  a
+                
+                sin
+                ⁡
+                α
+                +
+                
+                  b
+                
+                cos
+                ⁡
+                α
+              
+            
+            
+              
+                cos
+                ⁡
+                α
+              
+              
+                
+                =
+                
+                  
+                    a
+                  
+                  
+                    
+                      T
+                    
+                  
+                
+                
+                  x
+                
+              
+            
+            
+              
+                sin
+                ⁡
+                α
+              
+              
+                
+                =
+                
+                  
+                    b
+                  
+                  
+                    
+                      T
+                    
+                  
+                
+                
+                  x
+                
+              
+            
+            
+              
+                
+                  y
+                
+              
+              
+                
+                =
+                −
+                
+                  
+                    a
+                    b
+                  
+                  
+                    
+                      T
+                    
+                  
+                
+                
+                  x
+                
+                +
+                
+                  
+                    b
+                    a
+                  
+                  
+                    
+                      T
+                    
+                  
+                
+                
+                  x
+                
+                =
+                
+                  (
+                  
+                    
+                      
+                        b
+                        a
+                      
+                      
+                        
+                          T
+                        
+                      
+                    
+                    −
+                    
+                      
+                        a
+                        b
+                      
+                      
+                        
+                          T
+                        
+                      
+                    
+                  
+                  )
+                
+                
+                  x
+                
+              
+            
+            
+              
+                
+                  
+                    x
+                  
+                  ′
+                
+              
+              
+                
+                =
+                
+                  x
+                
+                cos
+                ⁡
+                β
+                +
+                
+                  y
+                
+                sin
+                ⁡
+                β
+              
+            
+            
+              
+              
+                
+                =
+                
+                  (
+                  
+                    
+                      I
+                    
+                    cos
+                    ⁡
+                    β
+                    +
+                    
+                      (
+                      
+                        
+                          
+                            b
+                            a
+                          
+                          
+                            
+                              T
+                            
+                          
+                        
+                        −
+                        
+                          
+                            a
+                            b
+                          
+                          
+                            
+                              T
+                            
+                          
+                        
+                      
+                      )
+                    
+                    sin
+                    ⁡
+                    β
+                  
+                  )
+                
+                
+                  x
+                
+              
+            
+            
+              
+                
+                  R
+                
+              
+              
+                
+                =
+                
+                  I
+                
+                cos
+                ⁡
+                β
+                +
+                
+                  (
+                  
+                    
+                      
+                        b
+                        a
+                      
+                      
+                        
+                          T
+                        
+                      
+                    
+                    −
+                    
+                      
+                        a
+                        b
+                      
+                      
+                        
+                          T
+                        
+                      
+                    
+                  
+                  )
+                
+                sin
+                ⁡
+                β
+              
+            
+            
+              
+              
+                
+                =
+                
+                  I
+                
+                cos
+                ⁡
+                β
+                +
+                
+                  G
+                
+                sin
+                ⁡
+                β
+              
+            
+            
+              
+                
+                  G
+                
+              
+              
+                
+                =
+                
+                  
+                    b
+                    a
+                  
+                  
+                    
+                      T
+                    
+                  
+                
+                −
+                
+                  
+                    a
+                    b
+                  
+                  
+                    
+                      T
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbf {x} &=\mathbf {a} \cos \alpha +\mathbf {b} \sin \alpha \\\mathbf {y} &=-\mathbf {a} \sin \alpha +\mathbf {b} \cos \alpha \\[8pt]\cos \alpha &=\mathbf {a} ^{\mathsf {T}}\mathbf {x} \\\sin \alpha &=\mathbf {b} ^{\mathsf {T}}\mathbf {x} \\[8px]\mathbf {y} &=-\mathbf {ab} ^{\mathsf {T}}\mathbf {x} +\mathbf {ba} ^{\mathsf {T}}\mathbf {x} =\left(\mathbf {ba} ^{\mathsf {T}}-\mathbf {ab} ^{\mathsf {T}}\right)\mathbf {x} \\[8px]\mathbf {x} '&=\mathbf {x} \cos \beta +\mathbf {y} \sin \beta \\&=\left(\mathbf {I} \cos \beta +\left(\mathbf {ba} ^{\mathsf {T}}-\mathbf {ab} ^{\mathsf {T}}\right)\sin \beta \right)\mathbf {x} \\[8px]\mathbf {R} &=\mathbf {I} \cos \beta +\left(\mathbf {ba} ^{\mathsf {T}}-\mathbf {ab} ^{\mathsf {T}}\right)\sin \beta \\&=\mathbf {I} \cos \beta +\mathbf {G} \sin \beta \\[8px]\mathbf {G} &=\mathbf {ba} ^{\mathsf {T}}-\mathbf {ab} ^{\mathsf {T}}\end{aligned}}}
+  
+
+To include vectors outside the plane in the rotation one needs to modify the above expression for R by including two projection operators that partition the space. This modified rotation matrix can be rewritten as an exponential function.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    P
+                    
+                      a
+                      b
+                    
+                  
+                
+              
+              
+                
+                =
+                −
+                
+                  
+                    G
+                  
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+                
+                  R
+                
+              
+              
+                
+                =
+                
+                  I
+                
+                −
+                
+                  
+                    P
+                    
+                      a
+                      b
+                    
+                  
+                
+                +
+                
+                  (
+                  
+                    
+                      I
+                    
+                    cos
+                    ⁡
+                    β
+                    +
+                    
+                      G
+                    
+                    sin
+                    ⁡
+                    β
+                  
+                  )
+                
+                
+                  
+                    P
+                    
+                      a
+                      b
+                    
+                  
+                
+                =
+                
+                  e
+                  
+                    
+                      G
+                    
+                    β
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbf {P_{ab}} &=-\mathbf {G} ^{2}\\\mathbf {R} &=\mathbf {I} -\mathbf {P_{ab}} +\left(\mathbf {I} \cos \beta +\mathbf {G} \sin \beta \right)\mathbf {P_{ab}} =e^{\mathbf {G} \beta }\end{aligned}}}
+  
+
+Analysis is often easier in terms of these generators, rather than the full rotation matrix. Analysis in terms of the generators is known as the Lie algebra of the rotation group.
+
+Quaternions
+
+It follows from Euler's theorem that the relative orientation of any pair of coordinate systems may be specified by a set of three independent numbers. Sometimes a redundant fourth number is added to simplify operations with quaternion algebra. Three of these numbers are the direction cosines that orient the eigenvector. The fourth is the angle about the eigenvector that separates the two sets of coordinates. Such a set of four numbers is called a quaternion.
+While the quaternion described above does not involve complex numbers, if quaternions are used to describe two successive rotations, they must be combined using the non-commutative quaternion algebra derived by William Rowan Hamilton through the use of imaginary numbers.
+Rotation calculation via quaternions has come to replace the use of direction cosines in aerospace applications through their reduction of the required calculations, and their ability to minimize round-off errors. Also, in computer graphics the ability to perform spherical interpolation between quaternions with relative ease is of value.
+
+Generalizations
+
+In higher dimensions, any rigid motion that preserves a point in dimension 2n or 2n + 1 is a composition of at most n rotations in orthogonal planes of rotation, though these planes need not be uniquely determined, and a rigid motion may fix multiple axes. Also, any rigid motion that preserves n linearly independent points, which span an n-dimensional body in dimension 2n or 2n + 1, is  a single  plane of rotation. To put it another way, if two rigid bodies, with identical geometry, share at least n points of 'identical' locations within themselves, the convex hull of which is n-dimensional, then a single planar rotation can bring one to cover the other accurately in dimension 2n or  2n + 1.
+
+A rigid motion in three dimensions that does not necessarily fix a point is a "screw motion". This is because a composition of a rotation with a translation perpendicular to the axis is a rotation about a parallel axis, while composition with a translation parallel to the axis yields a screw motion; see screw axis. This gives rise to screw theory.

@@ -1,0 +1,227 @@
+This is a glossary of arithmetic and diophantine geometry in mathematics, areas growing out of the traditional study of Diophantine equations to encompass large parts of number theory and algebraic geometry. Much of the theory is in the form of proposed conjectures, which can be related at various levels of generality.
+Diophantine geometry in general is the study of algebraic varieties V over fields K that are finitely generated over their prime fields—including as of special interest number fields and finite fields—and over local fields. Of those, only the complex numbers are algebraically closed; over any other K the existence of points of V with coordinates in K is something to be proved and studied as an extra topic, even knowing the geometry of V.
+Arithmetic geometry can be more generally defined as the study of schemes of finite type over the spectrum of the ring of integers. Arithmetic geometry has also been defined as the application of the techniques of algebraic geometry to problems in number theory.
+See also the glossary of number theory terms at Glossary of number theory.
+
+A
+abc conjecture
+The abc conjecture of Masser and Oesterlé attempts to state as much as possible about repeated prime factors in an equation a + b = c. For example 3 + 125 = 128 but the prime powers here are exceptional.
+
+Arakelov class group
+The Arakelov class group is the analogue of the ideal class group or divisor class group for Arakelov divisors.
+
+Arakelov divisor
+An Arakelov divisor (or replete divisor) on a global field is an extension of the concept of divisor or fractional ideal. It is a formal linear combination of places of the field with finite places having integer coefficients and the infinite places having real coefficients.
+
+Arakelov height
+The Arakelov height on a projective space over the field of algebraic numbers is a global height function with local contributions coming from Fubini–Study metrics on the Archimedean fields and the usual metric on the non-Archimedean fields.
+
+Arakelov theory
+Arakelov theory is an approach to arithmetic geometry that explicitly includes the 'infinite primes'.
+
+Arithmetic of abelian varieties
+See main article arithmetic of abelian varieties
+
+Artin L-functions
+Artin L-functions are defined for quite general Galois representations. The introduction of étale cohomology in the 1960s meant that Hasse–Weil L-functions could be regarded as Artin L-functions for the Galois representations on l-adic cohomology groups.
+
+B
+
+Bad reduction
+See good reduction.
+
+Birch and Swinnerton-Dyer conjecture
+The Birch and Swinnerton-Dyer conjecture on elliptic curves postulates a connection between the rank of an elliptic curve and the order of pole of its Hasse–Weil L-function. It has been an important landmark in Diophantine geometry since the mid-1960s, with results such as the Coates–Wiles theorem, Gross–Zagier theorem and Kolyvagin's theorem.
+
+C
+Canonical height
+The canonical height on an abelian variety is a height function that is a distinguished quadratic form. See Néron–Tate height.
+
+Chabauty's method
+Chabauty's method, based on p-adic analytic functions, is a special application but capable of proving cases of the Mordell conjecture for curves whose Jacobian's rank is less than its dimension. It developed ideas from Thoralf Skolem's method for an algebraic torus. (Other older methods for Diophantine problems include Runge's method.)
+
+Coates–Wiles theorem
+The Coates–Wiles theorem states that an elliptic curve with complex multiplication by an imaginary quadratic field of class number 1 and positive rank has L-function with a zero at s = 1. This is a special case of the Birch and Swinnerton-Dyer conjecture.
+
+Crystalline cohomology
+Crystalline cohomology is a p-adic cohomology theory in characteristic p, introduced by Alexander Grothendieck to fill the gap left by étale cohomology which is deficient in using mod p coefficients in this case. It is one of a number of theories deriving in some way from Dwork's method, and has applications outside purely arithmetical questions.
+
+D
+Diagonal forms
+Diagonal forms are some of the simplest projective varieties to study from an arithmetic point of view (including the Fermat varieties). Their local zeta-functions are computed in terms of Jacobi sums. Waring's problem is the most classical case.
+
+Diophantine dimension
+The Diophantine dimension of a field is the smallest natural number k, if it exists, such that the field of is class Ck: that is, such that any homogeneous polynomial of degree d in N variables has a non-trivial zero whenever N > dk. Algebraically closed fields are of Diophantine dimension 0; quasi-algebraically closed fields of dimension 1.
+
+Discriminant of a point
+The discriminant of a point refers to two related concepts relative to a point P on an algebraic variety V defined over a number field K: the geometric (logarithmic) discriminant d(P) and the arithmetic discriminant, defined by Vojta. The difference between the two may be compared to the difference between the arithmetic genus of a singular curve and the geometric genus of the desingularisation. The arithmetic genus is larger than the geometric genus, and the height of a point may be bounded in terms of the arithmetic genus. Obtaining similar bounds involving the geometric genus would have significant consequences.
+
+Dwork's method
+Bernard Dwork used distinctive methods of p-adic analysis, p-adic algebraic differential equations, Koszul complexes and other techniques that have not all been absorbed into general theories such as crystalline cohomology. He first proved the rationality of local zeta-functions, the initial advance in the direction of the Weil conjectures.
+
+E
+Étale cohomology
+The search for a Weil cohomology (q.v.) was at least partially fulfilled in the étale cohomology theory of Alexander Grothendieck and Michael Artin. It provided a proof of the functional equation for the local zeta-functions, and was basic in the formulation of the Tate conjecture (q.v.) and numerous other theories.
+
+F
+Faltings height
+The Faltings height of an elliptic curve or abelian variety defined over a number field is a measure of its complexity introduced by Faltings in his proof of the Mordell conjecture.
+
+Fermat's Last Theorem
+Fermat's Last Theorem, the most celebrated conjecture of Diophantine geometry, was proved by Andrew Wiles and Richard Taylor.
+
+Flat cohomology
+Flat cohomology is, for the school of Grothendieck, one terminal point of development. It has the disadvantage of being quite hard to compute with. The reason that the flat topology has been considered the 'right' foundational topos for scheme theory goes back to the fact of faithfully-flat descent, the discovery of Grothendieck that the representable functors are sheaves for it (i.e. a very general gluing axiom holds).
+
+Function field analogy
+It was realised in the nineteenth century that the ring of integers of a number field has analogies with the affine coordinate ring of an algebraic curve or compact Riemann surface, with a point or more removed corresponding to the 'infinite places' of a number field. This idea is more precisely encoded in the theory that global fields should all be treated on the same basis. The idea goes further. Thus elliptic surfaces over the complex numbers, also, have some quite strict analogies with elliptic curves over number fields.
+
+G
+Geometric class field theory
+The extension of class field theory-style results on abelian coverings to varieties of dimension at least two is often called geometric class field theory.
+
+Good reduction
+Fundamental to local analysis in arithmetic problems is to reduce modulo all prime numbers p or, more generally, prime ideals. In the typical situation this presents little difficulty for almost all p; for example denominators of fractions are tricky, in that reduction modulo a prime in the denominator looks like division by zero, but that rules out only finitely many p per fraction. With a little extra sophistication, homogeneous coordinates allow clearing of denominators by multiplying by a common scalar. For a given, single point one can do this and not leave a common factor p. However singularity theory enters: a non-singular point may become a singular point on reduction modulo p, because the Zariski tangent space can become larger when linear terms reduce to 0 (the geometric formulation shows it is not the fault of a single set of coordinates). Good reduction refers to the reduced variety having the same properties as the original, for example, an algebraic curve having the same genus, or a smooth variety remaining smooth. In general there will be a finite set S of primes for a given variety V, assumed smooth, such that there is otherwise a smooth reduced Vp over Z/pZ. For abelian varieties, good reduction is connected with ramification in the field of division points by the Néron–Ogg–Shafarevich criterion. The theory is subtle, in the sense that the freedom to change variables to try to improve matters is rather unobvious: see Néron model, potential good reduction, Tate curve, semistable abelian variety, semistable elliptic curve, Serre–Tate theorem.
+
+Grothendieck–Katz conjecture
+The Grothendieck–Katz p-curvature conjecture applies reduction modulo primes to algebraic differential equations, to derive information on algebraic function solutions. The initial result of this type was Eisenstein's theorem.
+
+H
+Hasse principle
+The Hasse principle states that solubility for a global field is the same as solubility in all relevant local fields. One of the main objectives of Diophantine geometry is to classify cases where the Hasse principle holds. Generally that is for a large number of variables, when the degree of an equation is held fixed. The Hasse principle is often associated with the success of the Hardy–Littlewood circle method. When the circle method works, it can provide extra, quantitative information such as asymptotic number of solutions. Reducing the number of variables makes the circle method harder; therefore failures of the Hasse principle, for example for cubic forms in small numbers of variables (and in particular for elliptic curves as cubic curves) are at a general level connected with the limitations of the analytic approach.
+
+Hasse–Weil L-function
+A Hasse–Weil L-function, sometimes called a global L-function, is an Euler product formed from local zeta-functions. The properties of such L-functions remain largely in the realm of conjecture, with the proof of the Taniyama–Shimura conjecture being a breakthrough. The Langlands philosophy is largely complementary to the theory of global L-functions.
+
+Height function
+A height function in Diophantine geometry quantifies the size of solutions to Diophantine equations.
+
+Hilbertian fields
+A Hilbertian field K is one for which the projective spaces over K are not thin sets in the sense of Jean-Pierre Serre. This is a geometric take on Hilbert's irreducibility theorem which shows the rational numbers are Hilbertian. Results are applied to the inverse Galois problem. Thin sets (the French word is mince) are in some sense analogous to the meagre sets (French maigre) of the Baire category theorem.
+
+I
+Igusa zeta-function
+An Igusa zeta-function, named for Jun-ichi Igusa, is a generating function counting numbers of points on an algebraic variety modulo high powers pn of a fixed prime number p. General rationality theorems are now known, drawing on methods of mathematical logic.
+
+Infinite descent
+Infinite descent was Pierre de Fermat's classical method for Diophantine equations. It became one half of the standard proof of the Mordell–Weil theorem, with the other being an argument with height functions (q.v.). Descent is something like division by two in a group of principal homogeneous spaces (often called 'descents', when written out by equations); in more modern terms in a Galois cohomology group which is to be proved finite. See Selmer group.
+
+Iwasawa theory
+Iwasawa theory builds up from the analytic number theory and Stickelberger's theorem as a theory of ideal class groups as Galois modules and p-adic L-functions (with roots in Kummer congruence on Bernoulli numbers). In its early days in the late 1960s it was called Iwasawa's analogue of the Jacobian. The analogy was with the Jacobian variety J of a curve C over a finite field F (qua Picard variety), where the finite field has roots of unity added to make finite field extensions F′ The local zeta-function (q.v.) of C can be recovered from the points J(F′) as Galois module. In the same way, Iwasawa added pn-power roots of unity for fixed p and with n → ∞, for his analogue, to a number field K, and considered the inverse limit of class groups, finding a p-adic L-function earlier introduced by Kubota and Leopoldt.
+
+K
+K-theory
+Algebraic K-theory is on one hand a quite general theory with an abstract algebra flavour, and, on the other hand, implicated in some formulations of arithmetic conjectures. See for example Birch–Tate conjecture, Lichtenbaum conjecture.
+
+L
+Lang conjecture
+Enrico Bombieri (dimension 2), Serge Lang and Paul Vojta (integral points case) and Piotr Blass have conjectured that algebraic varieties of general type do not have Zariski dense subsets of K-rational points, for K a finitely-generated field. This circle of ideas includes the understanding of analytic hyperbolicity and the Lang conjectures on that, and the Vojta conjectures. An analytically hyperbolic algebraic variety V over the complex numbers is one such that no holomorphic mapping from the whole complex plane to it exists, that is not constant. Examples include compact Riemann surfaces of genus g > 1. Lang conjectured that V is analytically hyperbolic if and only if all subvarieties are of general type.
+
+Linear torus
+A linear torus is a geometrically irreducible Zariski-closed subgroup of an affine torus (product of multiplicative groups).
+
+Local zeta-function
+A local zeta-function is a generating function for the number of points on an algebraic variety V over a finite field F, over the finite field extensions of F. According to the Weil conjectures (q.v.) these functions, for non-singular varieties, exhibit properties closely analogous to the Riemann zeta-function, including the Riemann hypothesis.
+
+M
+Manin–Mumford conjecture
+The Manin–Mumford conjecture, now proved by Michel Raynaud, states that a curve C in its Jacobian variety J can only contain a finite number of points that are of finite order in J, unless C = J.
+
+Mordell conjecture
+The Mordell conjecture is now Faltings' theorem, and states that a curve of genus at least two has only finitely many rational points. The Uniformity conjecture states that there should be a uniform bound on the number of such points, depending only on the genus and the field of definition.
+
+Mordell–Lang conjecture
+The Mordell–Lang conjecture, now proved by McQuillan following work of Laurent, Raynaud, Hindry, Vojta, and Faltings, is a conjecture of Lang unifying the Mordell conjecture and Manin–Mumford conjecture in an abelian variety or semiabelian variety.
+
+Mordell–Weil theorem
+The Mordell–Weil theorem is a foundational result stating that for an abelian variety A over a number field K the group A(K) is a finitely-generated abelian group. This was proved initially for number fields K, but extends to all finitely-generated fields.
+
+Mordellic variety
+A Mordellic variety is an algebraic variety which has only finitely many points in any finitely generated field.
+
+N
+Naive height
+
+The naive height or classical height of a vector of rational numbers is the maximum absolute value of the vector of coprime integers obtained by multiplying through by a lowest common denominator. This may be used to define height on a point in projective space over Q, or of a polynomial, regarded as a vector of coefficients, or of an algebraic number, from the height of its minimal polynomial.
+
+Néron symbol
+The Néron symbol is a bimultiplicative pairing between divisors and algebraic cycles on an Abelian variety used in Néron's formulation of the Néron–Tate height as a sum of local contributions. The global Néron symbol, which is the sum of the local symbols, is just the negative of the height pairing.
+
+Néron–Tate height
+
+The Néron–Tate height (also often referred to as the canonical height) on an abelian variety A is a height function (q.v.) that is essentially intrinsic, and an exact quadratic form, rather than approximately quadratic with respect to the addition on A as provided by the general theory of heights. It can be defined from a general height by a limiting process; there are also formulae, in the sense that it is a sum of local contributions.
+
+Nevanlinna invariant
+The Nevanlinna invariant of an ample divisor D on a normal projective variety X is a real number which describes the rate of growth of the number of rational points on the variety with respect to the embedding defined by the divisor. It has similar formal properties to the abscissa of convergence of the height zeta function and it is conjectured that they are essentially the same.
+
+O
+Ordinary reduction
+An Abelian variety A of dimension d has ordinary reduction at a prime p if it has good reduction at p and in addition the p-torsion has rank d.
+
+Q
+Quasi-algebraic closure
+The topic of quasi-algebraic closure, i.e. solubility guaranteed by a number of variables polynomial in the degree of an equation, grew out of studies of the Brauer group and the Chevalley–Warning theorem. It stalled in the face of counterexamples; but see Ax–Kochen theorem from mathematical logic.
+
+R
+Reduction modulo a prime number or ideal
+See good reduction.
+
+Replete ideal
+A replete ideal in a number field K is a formal product of a fractional ideal of K and a vector of positive real numbers with components indexed by the infinite places of K. A replete divisor is an Arakelov divisor.
+
+S
+Sato–Tate conjecture
+The Sato–Tate conjecture describes the distribution of Frobenius elements in the Tate modules of the elliptic curves over finite fields obtained from reducing a given elliptic curve over the rationals. Mikio Sato and, independently, John Tate suggested it around 1960. It is a prototype for Galois representations in general.
+
+Skolem's method
+See Chabauty's method.
+
+Special set
+The special set in an algebraic variety is the subset in which one might expect to find many rational points. The precise definition varies according to context. One definition is the Zariski closure of the union of images of algebraic groups under non-trivial rational maps; alternatively one may take images of abelian varieties; another definition is the union of all subvarieties that are not of general type. For abelian varieties the definition would be the union of all translates of proper abelian subvarieties. For a complex variety, the holomorphic special set is the Zariski closure of the images of all non-constant holomorphic maps from C. Lang conjectured that the analytic and algebraic special sets are equal.
+
+Subspace theorem
+Schmidt's subspace theorem shows that points of small height in projective space lie in a finite number of hyperplanes. A quantitative form of the theorem, in which the number of subspaces containing all solutions, was also obtained by Schmidt, and the theorem was generalised by Schlickewei (1977) to allow more general absolute values on number fields. The theorem may be used to obtain results on Diophantine equations such as Siegel's theorem on integral points and solution of the S-unit equation.
+
+T
+Tamagawa numbers
+The direct Tamagawa number definition works well only for linear algebraic groups. There the Weil conjecture on Tamagawa numbers was eventually proved. For abelian varieties, and in particular the Birch–Swinnerton-Dyer conjecture (q.v.), the Tamagawa number approach to a local–global principle fails on a direct attempt, though it has had heuristic value over many years. Now a sophisticated equivariant Tamagawa number conjecture is a major research problem.
+
+Tate conjecture
+The Tate conjecture (John Tate, 1963) provided an analogue to the Hodge conjecture, also on algebraic cycles, but well within arithmetic geometry. It also gave, for elliptic surfaces, an analogue of the Birch–Swinnerton-Dyer conjecture (q.v.), leading quickly to a clarification of the latter and a recognition of its importance.
+
+Tate curve
+The Tate curve is a particular elliptic curve over the p-adic numbers introduced by John Tate to study bad reduction (see good reduction).
+
+Tsen rank
+The Tsen rank of a field, named for C. C. Tsen who introduced their study in 1936, is the smallest natural number i, if it exists, such that the field is of class Ti: that is, such that any system of polynomials with no constant term of degree dj in n variables has a non-trivial zero whenever n > Σ dji. Algebraically closed fields are of Tsen rank zero. The Tsen rank is greater or equal to the Diophantine dimension but it is not known if they are equal except in the case of rank zero.
+
+U
+Uniformity conjecture
+The uniformity conjecture states that for any number field K and g > 2, there is a uniform bound B(g,K) on the number of K-rational points on any curve of genus g. The conjecture would follow from the Bombieri–Lang conjecture.
+
+Unlikely intersection
+An unlikely intersection is an algebraic subgroup intersecting a subvariety of a torus or abelian variety in a set of unusually large dimension, such as is involved in the Mordell–Lang conjecture.
+
+V
+Vojta conjecture
+The Vojta conjecture is a complex of conjectures by Paul Vojta, making analogies between Diophantine approximation and Nevanlinna theory.
+
+W
+Weights
+The yoga of weights is a formulation by Alexander Grothendieck of analogies between Hodge theory and l-adic cohomology.
+
+Weil cohomology
+The initial idea, later somewhat modified, for proving the Weil conjectures (q.v.), was to construct a cohomology theory applying to algebraic varieties over finite fields that would both be as good as singular homology at detecting topological structure, and have Frobenius mappings acting in such a way that the Lefschetz fixed-point theorem could be applied to the counting in local zeta-functions. For later history see motive (algebraic geometry), motivic cohomology.
+
+Weil conjectures
+The Weil conjectures were three highly influential conjectures of André Weil, made public around 1949, on local zeta-functions. The proof was completed in 1973. Those being proved, there remain extensions of the Chevalley–Warning theorem congruence, which comes from an elementary method, and improvements of Weil bounds, e.g. better estimates for curves of the number of points than come from Weil's basic theorem of 1940. The latter turn out to be of interest for Algebraic geometry codes.
+
+Weil distributions on algebraic varieties
+André Weil proposed a theory in the 1920s and 1930s on prime ideal decomposition of algebraic numbers in coordinates of points on algebraic varieties. It has remained somewhat under-developed.
+
+Weil function
+A Weil function on an algebraic variety is a real-valued function defined off some Cartier divisor which generalises the concept of Green's function in Arakelov theory. They are used in the construction of the local components of the Néron–Tate height.
+
+Weil height machine
+
+The Weil height machine is an effective procedure for assigning a height function to any divisor on smooth projective variety over a number field (or to Cartier divisors on non-smooth varieties).

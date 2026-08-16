@@ -1,0 +1,23 @@
+In object-oriented programming, a data clump is any group of variables which are passed around together (in a clump) throughout various parts of the program. A data clump, like other code smells, can indicate deeper problems with the program design or implementation. The group of variables that typically make up a data clump are often closely related or interdependent and are often used together in a group as a result. A data clump is also known as a specific kind of class-level code smell that may be a symptom of poorly written source code.
+
+Refactoring data clumps
+In general, data clumps should be refactored. The presence of data clumps typically indicates poor software design because it would be more appropriate to formally group the different variables together into a single object, and pass around only this object instead of the numerous primitives. Using an object to replace a data clump can reduce the overall code size as well as help the program code to remain better organized, easier to read, and easier to debug. 
+The process of removing data clumps runs the risk of creating a different type of code smell (a data class, which is a class that only stores data and does not have any methods for actually operating on the data); however, the creation of the class will encourage the programmer to see functionality that might be included here as well.
+
+In object-oriented programming, the purpose of objects is to encapsulate both relevant data (fields) and operations (methods) that can be performed on this data. The failure to group fields together into a true object can discourage the association of relevant actions.
+A long list of parameters/variables does not necessarily indicate a data clump; it is only when the various values here are intimately and logically related that their presence is considered a data clump. Although such cases are rare, it is possible for a method to legitimately take half a dozen or more completely unrelated parameters that could not be cleanly turned into a single object. This, however, suggests that the method is trying to do far too much and would be better broken into multiple methods, each of which is responsible for a smaller piece of the overall responsibility. This beckons as another opportunity for refactoring to be used in order to improve the quality of the code.
+Refactoring to eliminate data clumps does not need to be done by hand. Many modern fully featured IDEs have functionality (often labeled as "Extract Class") that is capable of performing this refactoring automatically or nearly so. This can decrease the cost and improve the reliability of the refactoring, thus enabling otherwise reluctant developers to do so expediently.
+
+Example
+Naturally, data clumps can exist in any object-oriented programming language. The example below was chosen simply because of its simplicity in scope and syntax.
+
+C#
+Prior to refactor:
+
+Post refactor:
+
+Java
+
+In the previous example, all of the variables could be encapsulated into a single "Person" object, which could be passed around by itself. Additionally, the programmer may then recognize that the welcomeNew method would be better associated with the Person class, and could then come up with other relevant actions associated with the Person. For instance, the code could be refactored and expanded as follows:
+
+Although this has increased the length of the code, now the single Person can easily be passed around as one object, rather than as a variety of (seemingly unrelated) fields. Additionally, this gives the opportunity to move associated methods into the class so that they can easily operate upon individual instances thereof. These methods no longer require passing around a tedious list of parameters, as they are instead stored as instance variables upon the object instances themselves.

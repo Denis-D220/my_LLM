@@ -1,0 +1,140 @@
+Metamath is a formal language and an associated computer program (a proof assistant) for archiving and verifying mathematical proofs. Several databases of proved theorems have been developed using Metamath covering standard results in logic, set theory, number theory, algebra, topology and analysis, among others.
+By 2023, Metamath had been used to prove 74 of the 100 theorems of the "Formalizing 100 Theorems" challenge. At least 19 proof verifiers use the Metamath format.
+The Metamath website provides a database of formalized theorems which can be browsed interactively.
+
+Metamath language
+The Metamath language is a metalanguage for formal systems. The Metamath language has no specific logic embedded in it. Instead, it can be regarded as a way to prove that inference rules (asserted as axioms or proven later) can be applied.
+The largest database of proved theorems follows conventional first-order logic and ZFC set theory.
+The Metamath language design (employed to state the definitions, axioms, inference rules and theorems) is focused on simplicity. Proofs are checked using an algorithm based on variable substitution. The algorithm also has optional provisos for what variables must remain distinct after a substitution is made.
+
+Language basics
+Comments are enclosed in  $( ... $) . The set of symbols that can be used for constructing formulas is declared using $c (constant symbols) and $v (variable symbols) statements. The end of a statement is denoted by $. . For example:
+
+$( Declare the nine constant symbols we will use $)
+    $c 0 + = -> ( ) term wff |- $.
+$( Declare the five metavariables we will use $)
+    $v t r s P Q $.
+
+The grammar for formulas is specified using a combination of $f (floating (variable-type) hypotheses) and $a (axiomatic assertion) statements. Each such statement is preceded with a name so that it can be referred to in proofs. For example:
+
+$( Specify properties of the metavariables $)
+    tt $f term t $.
+    tr $f term r $.
+    ts $f term s $.
+    wp $f wff P $.
+    wq $f wff Q $.
+$( Define "term": zero and sums $)
+    tze $a term 0 $.
+    tpl $a term ( t + r )
+$( Define "wff": equations and implications $)
+    weq $a wff t = r $.
+    wim $a wff ( P -> Q ) $.
+
+Axioms and rules of inference are specified with $a statements along with ${ and $} for block scoping and optional $e (essential hypotheses) statements; for example:
+
+$( Axiom a1: substituting in equations $)
+    a1 $a |- ( t = r -> ( t = s -> r = s ) ) $.
+$( Axiom a2: Zero is neutral $)
+    a2 $a |- ( t + 0 ) = t $.
+$( Define the modus ponens inference rule $)
+    ${
+       min $e |- P $.
+       maj $e |- ( P -> Q ) $.
+       mp  $a |- Q $.
+    $}
+
+A single construct, $a statements, is used to capture syntactic rules, axiom schemas, and rules of inference. This is intended to provide a level of flexibility similar to higher order logical frameworks without a dependency on a complex type system.
+
+Proofs
+Theorems (and derived rules of inference) along with their proofs are stated with $p statements.  The proofs are introduced with  $= and are given as a list of names of axioms, rules and theorems to be applied. For example:
+
+$( Theorem th1: reflexivity of equality $)
+    th1 $p |- t = t $=
+  $( Here is its proof: $)
+       tt tze tpl tt weq tt tt weq tt a2 tt tze tpl
+       tt weq tt tze tpl tt weq tt tt weq wim tt a2
+       tt tze tpl tt tt a1 mp mp
+     $.
+
+This abbreviates the following detailed proof:
+
+The "essential" form of the proof elides syntactic details, leaving a more conventional presentation:
+
+Substitution
+
+All Metamath proof steps use a single substitution rule, which is just the simple replacement of a variable with an expression and not the proper substitution described in works on predicate calculus. Proper substitution, in Metamath databases that support it, is a derived construct instead of one built into the Metamath language itself.
+The substitution rule makes no assumption about the logic system in use and only requires that the substitutions of variables are correctly done.
+Here is a detailed example of how this algorithm works. Steps 1 and 2 of the theorem 2p2e4 in the Metamath Proof Explorer (set.mm) are depicted left. Let's explain how Metamath uses its substitution algorithm to check that step 2 is the logical consequence of step 1 when you use the theorem opreq2i. Step 2 states that ( 2 + 2 ) = ( 2 + ( 1 + 1 ) ). It is the conclusion of the theorem opreq2i. The theorem opreq2i states that if A = B, then (C F A) = (C F B). This theorem would never appear under this cryptic form in a textbook but its literate formulation is banal: when two quantities are equal, one can replace one by the other in an operation. To check the proof Metamath attempts to unify (C F A) = (C F B) with ( 2 + 2 ) = ( 2 + ( 1 + 1 ) ). There is only one way to do so: unifying C with 2, F with +, A with 2 and B with ( 1 + 1 ). So now Metamath uses the premise of opreq2i. This premise states that A = B. As a consequence of its previous computation, Metamath knows that A should be substituted by 2 and B by ( 1 + 1 ). The premise A = B becomes 2=( 1 + 1 ) and thus step 1 is therefore generated. In its turn step 1 is unified with df-2. df-2 is the definition of the number 2 and states that 2 = ( 1 + 1 ). Here the unification is simply a matter of constants and is straightforward (no problem of variables to substitute). So the verification is finished and these two steps of the proof of 2p2e4 are correct.
+When Metamath unifies ( 2 + 2 ) with B it has to check that the syntactical rules are respected. In fact B has the type class thus Metamath has to check that ( 2 + 2 ) is also typed class.
+
+Metamath proof checker
+The Metamath program is the original program created to manipulate databases written using the Metamath language. It has a text (command line) interface and is written in C. It can read a Metamath database into memory, verify the proofs of a database, modify the database (in particular by adding proofs), and write them back out to storage.
+It has a prove command that enables users to enter a proof, along with mechanisms to search for existing proofs.
+The Metamath program can convert statements to HTML or TeX notation;
+for example, it can output the modus ponens axiom from set.mm as:
+
+  
+    
+      
+        ⊢
+        φ
+        
+        &
+        
+        ⊢
+        (
+        φ
+        →
+        ψ
+        )
+        
+        ⇒
+        
+        ⊢
+        ψ
+      
+    
+    {\displaystyle \vdash \varphi \quad \&\quad \vdash (\varphi \rightarrow \psi )\quad \Rightarrow \quad \vdash \psi }
+  
+
+Many other programs can process Metamath databases, in particular, there are at least 19 proof verifiers for databases that use the Metamath format.
+
+Metamath databases
+The Metamath website hosts several databases that store theorems derived from various axiomatic systems. Most databases (.mm files) have an associated interface, called an "Explorer", which allows one to navigate the statements and proofs interactively on the website, in a user-friendly way. Most databases use a Hilbert system of formal deduction though this is not a requirement.
+
+Metamath Proof Explorer
+
+The Metamath Proof Explorer (recorded in set.mm) is the main database. It is based on classical first-order logic and ZFC set theory (with the addition of Tarski-Grothendieck set theory when needed, for example in category theory). The database has been maintained for over thirty years (the first proofs in set.mm are dated September 1992). The database contains developments, among other fields, of set theory (ordinals and cardinals, recursion, equivalents of the axiom of choice, the continuum hypothesis...), the construction of the real and complex number systems, order theory, graph theory, abstract algebra, linear algebra, general topology, real and complex analysis, Hilbert spaces, number theory, and elementary geometry.
+The Metamath Proof Explorer references many text books that can be used in conjunction with Metamath. Thus, people interested in studying mathematics can use Metamath in connection with these books and verify that the proved assertions match the literature.
+
+Intuitionistic Logic Explorer
+This database develops mathematics from a constructive point of view, starting with the axioms of intuitionistic logic and continuing with axiom systems of constructive set theory.
+
+New Foundations Explorer
+This database develops mathematics from Quine's New Foundations set theory.
+
+Higher-Order Logic Explorer
+This database starts with higher-order logic and derives equivalents to axioms of first-order logic and of ZFC set theory.
+
+Databases without explorers
+The Metamath website hosts a few other databases which are not associated with explorers but are nonetheless noteworthy. The database peano.mm written by Robert Solovay formalizes Peano arithmetic. The database nat.mm formalizes natural deduction. The database miu.mm formalizes the MU puzzle based on the formal system MIU presented in Gödel, Escher, Bach.
+
+Older explorers
+The Metamath website also hosts a few older databases which are not maintained anymore, such as the "Hilbert Space Explorer", which presents theorems pertaining to Hilbert space theory which have now been merged into the Metamath Proof Explorer, and the "Quantum Logic Explorer", which develops quantum logic starting with the theory of orthomodular lattices.
+
+Natural deduction
+Because Metamath has a very generic concept of what a proof is (namely a tree of formulas connected by inference rules) and no specific logic is embedded in the software, Metamath can be used with species of logic as different as Hilbert-style logics or sequents-based logics or even with lambda calculus.
+However, Metamath provides no direct support for natural deduction systems. As noted earlier, the database nat.mm formalizes natural deduction. The Metamath Proof Explorer (with its database set.mm) instead uses a set of conventions that allow the use of natural deduction approaches within a Hilbert-style logic.
+
+Other works connected to Metamath
+
+Proof checkers
+Using the design ideas implemented in Metamath, Raph Levien has implemented a very small proof checker, mmverify.py, at only 500 lines of Python code.
+Ghilbert is a similar though more elaborate language based on mmverify.py. Levien would like to implement a system where several people could collaborate and his work is emphasizing modularity and connection between small theories.
+Using Levien's seminal work, many other implementations of the Metamath design principles have been implemented for a broad variety of languages. Juha Arpiainen has implemented his own proof checker in Common Lisp called Bourbaki and Marnix Klooster has coded a proof checker in Haskell called Hmm.
+Although they all use the overall Metamath approach to formal system checker coding, they also implement new concepts of their own.
+
+Editors
+Mel O'Cat designed a system called Mmj2, which provides a graphic user interface for proof entry. The initial aim of Mel O'Cat was to allow the user to enter the proofs by simply typing the formulas and letting Mmj2 find the appropriate inference rules to connect them. In Metamath on the contrary you may only enter the theorems names. You may not enter the formulas directly. Mmj2 has also the possibility to enter the proof forward or backward (Metamath only allows to enter proof backward). Moreover Mmj2 has a real grammar parser (unlike Metamath). This technical difference brings more comfort to the user. In particular Metamath sometimes hesitates between several formulas it analyzes (most of them being meaningless) and asks the user to choose. In Mmj2 this limitation no longer exists.
+There is also a project by William Hale to add a graphical user interface to Metamath called Mmide. Paul Chapman in its turn is working on a new proof browser, which has highlighting that allows you to see the referenced theorem before and after the substitution was made.
+Milpgame is a proof assistant and a checker (it shows a message only something gone wrong) with a graphic user interface for the Metamath language(set.mm), written by Filip Cernatescu, it is an open source(MIT License) Java application (cross-platform application: Window, Linux, Mac OS). User can enter the demonstration(proof) in two modes : forward and backward relative to the statement to prove. Milpgame checks if a statement is well formed (has a syntactic verifier). It can save unfinished proofs without the use of dummylink theorem. The demonstration is shown as tree, the statements are shown using html definitions (defined in typesetting chapter). Milpgame is distributed as Java .jar(JRE version 6 update 24 written in NetBeans IDE).

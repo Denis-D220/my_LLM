@@ -1,0 +1,38 @@
+Coding theory is the study of the properties of codes and their respective fitness for specific applications. Codes are used for data compression, cryptography, error detection and correction, data transmission and data storage. Codes are studied by various scientific disciplines—such as information theory, electrical engineering,  mathematics, linguistics, and computer science—for the purpose of designing efficient and reliable data transmission methods. This typically involves the removal of redundancy and the correction or detection of errors in the transmitted data.
+
+There are four types of coding:
+
+Data compression attempts to remove unwanted redundancy from the data from a source in order to transmit it more efficiently. For example, DEFLATE data compression makes files smaller, for purposes such as to reduce Internet traffic. Data compression and error correction may be studied in combination.
+
+Error correction adds useful redundancy to the data from a source to make the transmission more robust to disturbances present on the transmission channel. The ordinary user may not be aware of many applications using error correction. A typical music compact disc (CD) uses the Reed–Solomon code to correct for scratches and dust. In this application the transmission channel is the CD itself. Cell phones also use coding techniques to correct for the fading and noise of high frequency radio transmission. Data modems, telephone transmissions, and the NASA Deep Space Network all employ channel coding techniques to get the bits through, for example the turbo code and LDPC codes.
+
+History of coding theory
+
+The study of information theory began with the publication of Claude E. Shannon's classic paper "A Mathematical Theory of Communication" in the Bell System Technical Journal in July and October 1948, although Shannon had substantially completed the paper at Bell Labs by the end of 1944, 
+
+Shannon introduced the qualitative and quantitative model of communication as a statistical process, opening with the assertion that 
+
+With it came the ideas of 
+
+Shannon’s paper focuses on the problem of how to best encode the information a sender wants to transmit. In this fundamental work he used tools in probability theory, developed by Norbert Wiener, which were in their nascent stages of being applied to communication theory at that time. Shannon developed information entropy as a measure for the uncertainty in a message while essentially inventing the field of information theory.
+
+The binary Golay code was developed in 1949. It is an error-correcting code capable of correcting up to three errors in each 24-bit word, and detecting a fourth.
+
+Richard Hamming won the Turing Award in 1968 for his work at Bell Labs in numerical methods, automatic coding systems, and error-detecting and error-correcting codes. He invented the concepts known as Hamming codes, Hamming windows, Hamming numbers, and Hamming distance.
+
+In 1972, Nasir Ahmed proposed the discrete cosine transform (DCT), which he developed with T. Natarajan and K. R. Rao in 1973. The DCT is the most widely used lossy compression algorithm, the basis for multimedia formats such as JPEG, MPEG and MP3.
+
+Source coding
+
+The aim of source coding is to take the source data and make it smaller.
+
+Definition
+
+Data can be seen as a random variable X:Ω→X{\displaystyle X:\Omega \to {\mathcal {X}}}, where x∈X{\displaystyle x\in {\mathcal {X}}} appears with probability P{\displaystyle \mathbb {P} }.
+
+Data are encoded by strings (words) over an alphabet Σ{\displaystyle \Sigma }.
+
+A code is a function
+
+C(x){\displaystyle C(x)} is the code word associated with x{\displaystyle x}.
+

@@ -1,0 +1,2033 @@
+The Brendel–Bormann (BB) oscillator model is a mathematical formula for the frequency dependence of the complex-valued relative dielectric permittivity, also known as the dielectric function. The model has been used to fit the complex refractive index of materials with absorption lineshapes exhibiting non-Lorentzian broadening, such as metals and amorphous insulators, across broad spectral ranges, typically near-ultraviolet, visible, and infrared frequencies. The dispersion relation bears the names of R. Brendel and D. Bormann, who derived the model in 1992, although, it was first used by A. M. Efimov and V. N. Khitrov (1979) to characterize the optical constants of glasses; it was also enhanced by A. M. Efimov and E. G. Makarova in 1983. Around that time, several other research groups independently discovered the model.
+The physical validity and causality of the BB model are debated in the physics literature. J. Orosco and C. F. M. Coimbra reported that the model does not satisfy Kramers–Kronig relations, due to a singularity at zero frequency, and non-Hermiticity. These claims inspired the authors to develop an elaborate causal correction to the BB model. The claims were later contested by S. Nordebo and M. Štumpf, who proved the analyticity of the model on the basis of Jordan's lemma and attributed the observed non-Hermiticity to the incorrect choice of branch cut in the complex square root.
+
+Mathematical formulation
+The general form of an oscillator model is given by
+
+  
+    
+      
+        ε
+        (
+        ω
+        )
+        =
+        
+          ε
+          
+            ∞
+          
+        
+        +
+        
+          ∑
+          
+            j
+          
+        
+        
+          χ
+          
+            j
+          
+        
+        (
+        ω
+        )
+      
+    
+    {\displaystyle \varepsilon (\omega )=\varepsilon _{\infty }+\sum _{j}\chi _{j}(\omega )}
+  
+
+where
+
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+ is the angular frequency,
+
+  
+    
+      
+        
+          ε
+          
+            ∞
+          
+        
+      
+    
+    {\displaystyle \varepsilon _{\infty }}
+  
+ is the constant relative permittivity at 
+  
+    
+      
+        ω
+        →
+        ∞
+      
+    
+    {\displaystyle \omega \to \infty }
+  
+,
+
+  
+    
+      
+        ε
+        (
+        ω
+        )
+      
+    
+    {\displaystyle \varepsilon (\omega )}
+  
+ is the frequency-dependent relative permittivity of a given material,
+
+  
+    
+      
+        
+          χ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \chi _{j}}
+  
+ is the contribution from the 
+  
+    
+      
+        
+          j
+          
+            
+              t
+              h
+            
+          
+        
+      
+    
+    {\displaystyle j^{\mathrm {th} }}
+  
+ absorption mechanism oscillator.
+The Brendel-Bormann oscillator is related to the Lorentzian oscillator 
+  
+    
+      
+        
+          (
+          
+            χ
+            
+              
+                L
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \left(\chi ^{\mathrm {L} }\right)}
+  
+ and Gaussian distribution 
+  
+    
+      
+        
+          (
+          
+            f
+            
+              
+                G
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \left(f^{\mathrm {G} }\right)}
+  
+, given by
+
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            
+              L
+            
+          
+        
+        (
+        ω
+        ;
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+        )
+        =
+        
+          
+            
+              s
+              
+                j
+              
+            
+            
+              
+                ω
+                
+                  0
+                  ,
+                  j
+                
+                
+                  2
+                
+              
+              −
+              
+                ω
+                
+                  2
+                
+              
+              −
+              ı
+              
+                Γ
+                
+                  j
+                
+              
+              ω
+            
+          
+        
+      
+    
+    {\displaystyle \chi _{j}^{\mathrm {L} }(\omega ;\omega _{0,j})={\frac {s_{j}}{\omega _{0,j}^{2}-\omega ^{2}-\imath \Gamma _{j}\omega }}}
+  
+
+  
+    
+      
+        
+          f
+          
+            j
+          
+          
+            
+              G
+            
+          
+        
+        (
+        ω
+        )
+        =
+        
+          
+            1
+            
+              
+                
+                  2
+                  π
+                
+              
+              
+                σ
+                
+                  j
+                
+              
+            
+          
+        
+        exp
+        ⁡
+        
+          
+            [
+            
+              −
+              
+                
+                  (
+                  
+                    
+                      ω
+                      
+                        
+                          
+                            2
+                          
+                        
+                        
+                          σ
+                          
+                            j
+                          
+                        
+                      
+                    
+                  
+                  )
+                
+                
+                  2
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle f_{j}^{\mathrm {G} }(\omega )={\frac {1}{{\sqrt {2\pi }}\sigma _{j}}}\exp {\left[-\left({\frac {\omega }{{\sqrt {2}}\sigma _{j}}}\right)^{2}\right]}}
+  
+
+where
+
+  
+    
+      
+        
+          s
+          
+            j
+          
+        
+      
+    
+    {\displaystyle s_{j}}
+  
+ is the Lorentzian strength of the 
+  
+    
+      
+        
+          j
+          
+            
+              t
+              h
+            
+          
+        
+      
+    
+    {\displaystyle j^{\mathrm {th} }}
+  
+ oscillator,
+
+  
+    
+      
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+      
+    
+    {\displaystyle \omega _{0,j}}
+  
+ is the Lorentzian natural frequency of the 
+  
+    
+      
+        
+          j
+          
+            
+              t
+              h
+            
+          
+        
+      
+    
+    {\displaystyle j^{\mathrm {th} }}
+  
+ oscillator,
+
+  
+    
+      
+        
+          Γ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \Gamma _{j}}
+  
+ is the Lorentzian broadening of the 
+  
+    
+      
+        
+          j
+          
+            
+              t
+              h
+            
+          
+        
+      
+    
+    {\displaystyle j^{\mathrm {th} }}
+  
+ oscillator,
+
+  
+    
+      
+        
+          σ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \sigma _{j}}
+  
+ is the Gaussian broadening of the 
+  
+    
+      
+        
+          j
+          
+            
+              t
+              h
+            
+          
+        
+      
+    
+    {\displaystyle j^{\mathrm {th} }}
+  
+ oscillator.
+The convolution of these Loretzian and Gaussian terms in 
+  
+    
+      
+        
+          ω
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \omega _{0}}
+  
+ defines the BB oscillator 
+  
+    
+      
+        
+          (
+          
+            
+              χ
+              
+                
+                  B
+                  B
+                
+              
+            
+            (
+            ω
+            ;
+            
+              ω
+              
+                0
+              
+            
+            )
+            =
+            
+              (
+              
+                
+                  χ
+                  
+                    
+                      L
+                    
+                  
+                
+                ∗
+                
+                  f
+                  
+                    
+                      G
+                    
+                  
+                
+              
+              )
+            
+            (
+            
+              ω
+              
+                0
+              
+            
+            )
+          
+          )
+        
+      
+    
+    {\displaystyle \left(\chi ^{\mathrm {BB} }(\omega ;\omega _{0})=\left(\chi ^{\mathrm {L} }\ast f^{\mathrm {G} }\right)(\omega _{0})\right)}
+  
+, so that each 
+  
+    
+      
+        
+          j
+          
+            
+              t
+              h
+            
+          
+        
+      
+    
+    {\displaystyle j^{\mathrm {th} }}
+  
+ term is obtained from
+
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            
+              B
+              B
+            
+          
+        
+        (
+        ω
+        )
+        =
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          f
+          
+            j
+          
+          
+            
+              G
+            
+          
+        
+        (
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+        −
+        x
+        )
+        
+          χ
+          
+            j
+          
+          
+            
+              L
+            
+          
+        
+        (
+        ω
+        ;
+        x
+        )
+        
+          d
+        
+        x
+      
+    
+    {\displaystyle \chi _{j}^{\mathrm {BB} }(\omega )=\int _{-\infty }^{\infty }f_{j}^{\mathrm {G} }(\omega _{0,j}-x)\chi _{j}^{\mathrm {L} }(\omega ;x)\mathrm {d} x}
+  
+,
+which yields
+
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            
+              B
+              B
+            
+          
+        
+        (
+        ω
+        )
+        =
+        
+          
+            
+              ı
+              
+                
+                  π
+                
+              
+              
+              
+                s
+                
+                  j
+                
+              
+            
+            
+              2
+              
+                
+                  2
+                
+              
+              
+              
+                σ
+                
+                  j
+                
+              
+            
+          
+        
+        
+          
+            1
+            
+              
+                a
+                
+                  j
+                
+              
+              (
+              ω
+              )
+            
+          
+        
+        
+          [
+          
+            w
+            
+              (
+              
+                
+                  
+                    
+                      a
+                      
+                        j
+                      
+                    
+                    (
+                    ω
+                    )
+                    −
+                    
+                      ω
+                      
+                        0
+                        ,
+                        j
+                      
+                    
+                  
+                  
+                    
+                      
+                        2
+                      
+                    
+                    
+                      σ
+                      
+                        j
+                      
+                    
+                  
+                
+              
+              )
+            
+            +
+            w
+            
+              (
+              
+                
+                  
+                    
+                      a
+                      
+                        j
+                      
+                    
+                    (
+                    ω
+                    )
+                    +
+                    
+                      ω
+                      
+                        0
+                        ,
+                        j
+                      
+                    
+                  
+                  
+                    
+                      
+                        2
+                      
+                    
+                    
+                      σ
+                      
+                        j
+                      
+                    
+                  
+                
+              
+              )
+            
+          
+          ]
+        
+      
+    
+    {\displaystyle \chi _{j}^{\mathrm {BB} }(\omega )={\frac {\imath {\sqrt {\pi }}\,s_{j}}{2{\sqrt {2}}\,\sigma _{j}}}{\frac {1}{a_{j}(\omega )}}\left[w\left({\frac {a_{j}(\omega )-\omega _{0,j}}{{\sqrt {2}}\sigma _{j}}}\right)+w\left({\frac {a_{j}(\omega )+\omega _{0,j}}{{\sqrt {2}}\sigma _{j}}}\right)\right]}
+  
+
+where
+
+  
+    
+      
+        w
+        (
+        z
+        )
+      
+    
+    {\displaystyle w(z)}
+  
+ is the Faddeeva function,
+
+  
+    
+      
+        
+          a
+          
+            j
+          
+        
+        (
+        ω
+        )
+        =
+        
+          
+            
+              ω
+              
+                2
+              
+            
+            +
+            ı
+            
+              Γ
+              
+                j
+              
+            
+            ω
+          
+        
+      
+    
+    {\displaystyle a_{j}(\omega )={\sqrt {\omega ^{2}+\imath \Gamma _{j}\omega }}}
+  
+.
+The square root in the definition of 
+  
+    
+      
+        
+          a
+          
+            j
+          
+        
+      
+    
+    {\displaystyle a_{j}}
+  
+ must be taken such that its imaginary component is positive. This is achieved by:
+
+  
+    
+      
+        ℜ
+        
+          (
+          
+            a
+            
+              j
+            
+          
+          )
+        
+        =
+        ω
+        
+          
+            
+              
+                
+                  
+                    1
+                    +
+                    
+                      
+                        (
+                        
+                          
+                            Γ
+                            
+                              j
+                            
+                          
+                          
+                            /
+                          
+                          ω
+                        
+                        )
+                      
+                      
+                        2
+                      
+                    
+                  
+                
+                +
+                1
+              
+              2
+            
+          
+        
+      
+    
+    {\displaystyle \Re \left(a_{j}\right)=\omega {\sqrt {\frac {{\sqrt {1+\left(\Gamma _{j}/\omega \right)^{2}}}+1}{2}}}}
+  
+
+  
+    
+      
+        ℑ
+        
+          (
+          
+            a
+            
+              j
+            
+          
+          )
+        
+        =
+        ω
+        
+          
+            
+              
+                
+                  
+                    1
+                    +
+                    
+                      
+                        (
+                        
+                          
+                            Γ
+                            
+                              j
+                            
+                          
+                          
+                            /
+                          
+                          ω
+                        
+                        )
+                      
+                      
+                        2
+                      
+                    
+                  
+                
+                −
+                1
+              
+              2
+            
+          
+        
+      
+    
+    {\displaystyle \Im \left(a_{j}\right)=\omega {\sqrt {\frac {{\sqrt {1+\left(\Gamma _{j}/\omega \right)^{2}}}-1}{2}}}}
+  
+
+Convolution correction
+Later, a more systematic definition of non-Lorentzian oscillators was introduced. This formulation begins by taking the limit 
+  
+    
+      
+        
+          Γ
+          
+            j
+          
+        
+        →
+        
+          0
+          
+            +
+          
+        
+      
+    
+    {\displaystyle \Gamma _{j}\to 0^{+}}
+  
+, to get the complex susceptibility of an oscillator with zero broadening (also known as the Sellmeier equation),
+
+Then, a desired broadening is reintroduced using an appropriate probability density function (PDF), such as Cauchy (Lorentz) (L), Gaussian (G), and Voigt (GL),
+
+where a zero mean is assumed so that the broadening does not shift the resonance frequency, and 
+  
+    
+      
+        w
+        (
+        z
+        )
+      
+    
+    {\displaystyle w(z)}
+  
+ denotes the Faddeeva function.
+Convolution of the unbroadened susceptibility 
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            0
+          
+        
+        (
+        ω
+        )
+      
+    
+    {\displaystyle \chi _{j}^{0}(\omega )}
+  
+ (Eq. 1) with distributions (Eqs. 2–4) recovers correct Lorentz and Gaussian oscillators, thereby validating the convolutional formulation, and further produces the correct analytical representation of the mixed Gauss–Lorentz (Voigt) oscillator 
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            GL
+          
+        
+      
+    
+    {\displaystyle \chi _{j}^{\text{GL}}}
+  
+,
+
+Here, 
+  
+    
+      
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+      
+    
+    {\displaystyle \omega _{0,j}}
+  
+ is the natural frequency of the oscillator (as before), and 
+  
+    
+      
+        
+          Ω
+          
+            j
+          
+        
+        =
+        
+          
+            
+              ω
+              
+                0
+                ,
+                j
+              
+              
+                2
+              
+            
+            −
+            
+              γ
+              
+                j
+              
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle \Omega _{j}={\sqrt {\omega _{0,j}^{2}-\gamma _{j}^{2}}}}
+  
+ is its resonance frequency, while the broadening parameter (
+  
+    
+      
+        
+          γ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \gamma _{j}}
+  
+) is related to its earlier definition (
+  
+    
+      
+        
+          Γ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \Gamma _{j}}
+  
+) by 
+  
+    
+      
+        
+          γ
+          
+            j
+          
+        
+        =
+        
+          Γ
+          
+            j
+          
+        
+        
+          /
+        
+        2
+      
+    
+    {\displaystyle \gamma _{j}=\Gamma _{j}/2}
+  
+. In the time domain, such susceptibilities are causal and are expressed through the known characteristic functions (CF) of their respective PDFs. They can also be efficiently implemented in time-domain Maxwell solvers using minimax-optimized lineshape representations. This formulation follows basic probability and statistical physics principle: multiple broadening processes convolve their PDFs in the frequency domain and multiply their CFs in the time domain.
+Comparison of the BB model, 
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            BB
+          
+        
+        (
+        ω
+        )
+      
+    
+    {\displaystyle \chi _{j}^{\text{BB}}(\omega )}
+  
+, with the correct Voigt oscillator, 
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            GL
+          
+        
+        (
+        ω
+        )
+      
+    
+    {\displaystyle \chi _{j}^{\text{GL}}(\omega )}
+  
+, reveals two mathematical mistakes in the BB formulation (see Appendix B in  for details):
+
+Conflation of the resonance (
+  
+    
+      
+        
+          Ω
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \Omega _{j}}
+  
+) and natural (
+  
+    
+      
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+      
+    
+    {\displaystyle \omega _{0,j}}
+  
+) frequencies, although in general 
+  
+    
+      
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+        ≠
+        
+          Ω
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \omega _{0,j}\neq \Omega _{j}}
+  
+. For a weakly damped oscillator (
+  
+    
+      
+        
+          γ
+          
+            j
+          
+        
+        ≪
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+      
+    
+    {\displaystyle \gamma _{j}\ll \omega _{0,j}}
+  
+), this approximation can hold, since 
+  
+    
+      
+        
+          Ω
+          
+            j
+          
+        
+        =
+        
+          
+            
+              ω
+              
+                0
+                ,
+                j
+              
+              
+                2
+              
+            
+            −
+            
+              γ
+              
+                j
+              
+              
+                2
+              
+            
+          
+        
+        ≈
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+      
+    
+    {\displaystyle \Omega _{j}={\sqrt {\omega _{0,j}^{2}-\gamma _{j}^{2}}}\approx \omega _{0,j}}
+  
+. In addition, the model assumes sufficiently high frequencies, 
+  
+    
+      
+        ω
+        ≫
+        
+          γ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \omega \gg \gamma _{j}}
+  
+ and 
+  
+    
+      
+        
+          a
+          
+            j
+          
+        
+        (
+        ω
+        )
+        =
+        
+          
+            (
+            ω
+            +
+            ı
+            
+              γ
+              
+                j
+              
+            
+            
+              )
+              
+                2
+              
+            
+            +
+            
+              γ
+              
+                j
+              
+              
+                2
+              
+            
+          
+        
+        ≈
+        ω
+        +
+        ı
+        
+          γ
+          
+            j
+          
+        
+      
+    
+    {\displaystyle a_{j}(\omega )={\sqrt {(\omega +\imath \gamma _{j})^{2}+\gamma _{j}^{2}}}\approx \omega +\imath \gamma _{j}}
+  
+. Fix: convolution must be performed over resonance frequency 
+  
+    
+      
+        
+          Ω
+          
+            j
+          
+        
+      
+    
+    {\displaystyle \Omega _{j}}
+  
+, not over 
+  
+    
+      
+        
+          ω
+          
+            0
+            ,
+            j
+          
+        
+      
+    
+    {\displaystyle \omega _{0,j}}
+  
+.
+Replacement of the difference of Faddeeva functions with a sum.  While for the Lorentzian lineshapes, the sum and difference forms are algebraically equivalent, i.e., 
+  
+    
+      
+        
+          
+            1
+            a
+          
+        
+        
+          [
+          
+            
+              
+                1
+                
+                  a
+                  −
+                  Ω
+                
+              
+            
+            +
+            
+              
+                1
+                
+                  a
+                  +
+                  Ω
+                
+              
+            
+          
+          ]
+        
+        =
+        
+          
+            1
+            Ω
+          
+        
+        
+          [
+          
+            
+              
+                1
+                
+                  a
+                  −
+                  Ω
+                
+              
+            
+            −
+            
+              
+                1
+                
+                  a
+                  +
+                  Ω
+                
+              
+            
+          
+          ]
+        
+      
+    
+    {\displaystyle {\frac {1}{a}}\left[{\frac {1}{a-\Omega }}+{\frac {1}{a+\Omega }}\right]={\frac {1}{\Omega }}\left[{\frac {1}{a-\Omega }}-{\frac {1}{a+\Omega }}\right]}
+  
+,   a similar identity for the Voigt profile is in general invalid,
+  
+    
+      
+        
+          
+            1
+            a
+          
+        
+        
+          
+            [
+          
+        
+        w
+        (
+        a
+        −
+        Ω
+        )
+        +
+        w
+        (
+        a
+        +
+        Ω
+        )
+        
+          
+            ]
+          
+        
+        ≠
+        
+          
+            1
+            Ω
+          
+        
+        
+          
+            [
+          
+        
+        w
+        (
+        a
+        −
+        Ω
+        )
+        −
+        w
+        (
+        a
+        +
+        Ω
+        )
+        
+          
+            ]
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {1}{a}}{\Bigl [}w(a-\Omega )+w(a+\Omega ){\Bigr ]}\neq {\frac {1}{\Omega }}{\Bigl [}w(a-\Omega )-w(a+\Omega ){\Bigr ]},}
+  
+  and the sum introduces an unphysical pole at 
+  
+    
+      
+        ω
+        =
+        0
+      
+    
+    {\displaystyle \omega =0}
+  
+. For weakly damped oscillators, 
+  
+    
+      
+        
+          γ
+          
+            j
+          
+          
+            2
+          
+        
+        +
+        
+          σ
+          
+            j
+          
+          
+            2
+          
+        
+        ≪
+        
+          Ω
+          
+            j
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \gamma _{j}^{2}+\sigma _{j}^{2}\ll \Omega _{j}^{2}}
+  
+, evaluated away from the unphysical zero pole, the BB expression may appear to approximate the correct behavior, owing to the large-argument asymptotic relation 
+  
+    
+      
+        w
+        (
+        z
+        )
+        ∼
+        i
+        
+          π
+          
+            −
+            1
+            
+              /
+            
+            2
+          
+        
+        
+          z
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle w(z)\sim i\pi ^{-1/2}z^{-1}}
+  
+. However, the sum and the unphysical pole occur only because the Lorentz oscillator is improperly normalized in the BB convolution. Fix: in the time domain, obtained via the inverse Fourier transform, the Lorentz oscillator is 
+  
+    
+      
+        
+          
+            
+              
+                χ
+                ~
+              
+            
+          
+          
+            L
+          
+        
+        (
+        t
+        )
+        =
+        
+          
+            
+              s
+              
+                j
+              
+            
+            
+              Ω
+              
+                j
+              
+            
+          
+        
+        
+          
+            e
+          
+          
+            −
+            
+              γ
+              
+                j
+              
+            
+            t
+          
+        
+        sin
+        ⁡
+        (
+        
+          Ω
+          
+            j
+          
+        
+        t
+        )
+        θ
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\tilde {\chi }}_{\text{L}}(t)={\frac {s_{j}}{\Omega _{j}}}\mathrm {e} ^{-\gamma _{j}t}\sin(\Omega _{j}t)\theta (t)}
+  
+, where 
+  
+    
+      
+        
+          Ω
+          
+            j
+          
+        
+        =
+        
+          
+            
+              ω
+              
+                0
+                ,
+                j
+              
+              
+                2
+              
+            
+            −
+            
+              γ
+              
+                j
+              
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle \Omega _{j}={\sqrt {\omega _{0,j}^{2}-\gamma _{j}^{2}}}}
+  
+ and 
+  
+    
+      
+        θ
+        (
+        t
+        )
+      
+    
+    {\displaystyle \theta (t)}
+  
+ is the Heaviside step function. Using the time domain amplitude parameter 
+  
+    
+      
+        
+          A
+          
+            j
+          
+        
+        =
+        
+          s
+          
+            j
+          
+        
+        
+          /
+        
+        
+          Ω
+          
+            j
+          
+        
+      
+    
+    {\displaystyle A_{j}=s_{j}/\Omega _{j}}
+  
+ instead of strength 
+  
+    
+      
+        
+          s
+          
+            j
+          
+        
+      
+    
+    {\displaystyle s_{j}}
+  
+ in the convolution restores the correct normalization.
+With both errors corrected, the BB integral reduces to the proper convolution representation of the Gauss–Lorentz oscillator (Eq. 7),
+
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            BB, corr
+          
+        
+        (
+        ω
+        )
+        =
+        (
+        
+          χ
+          
+            j
+          
+          
+            L
+          
+        
+        ∗
+        
+          f
+          
+            j
+          
+          
+            G
+          
+        
+        )
+        (
+        
+          Ω
+          
+            j
+          
+        
+        )
+        =
+        
+          
+            1
+            
+              
+                σ
+                
+                  j
+                
+              
+              
+                
+                  2
+                  π
+                
+              
+            
+          
+        
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              
+                A
+                
+                  j
+                
+              
+              x
+            
+            
+              
+                x
+                
+                  2
+                
+              
+              −
+              (
+              ω
+              +
+              ı
+              
+                γ
+                
+                  j
+                
+              
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+        exp
+        ⁡
+        
+          
+            [
+            
+              −
+              
+                
+                  
+                    (
+                    
+                      Ω
+                      
+                        j
+                      
+                    
+                    −
+                    x
+                    
+                      )
+                      
+                        2
+                      
+                    
+                  
+                  
+                    2
+                    
+                      σ
+                      
+                        j
+                      
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        
+          d
+        
+        x
+        =
+        
+          χ
+          
+            j
+          
+          
+            GL
+          
+        
+        (
+        ω
+        )
+        .
+      
+    
+    {\displaystyle \chi _{j}^{\text{BB, corr}}(\omega )=(\chi _{j}^{\text{L}}*f_{j}^{\text{G}})(\Omega _{j})={\frac {1}{\sigma _{j}{\sqrt {2\pi }}}}\int \limits _{-\infty }^{\infty }{\frac {A_{j}x}{x^{2}-(\omega +\imath \gamma _{j})^{2}}}\exp {\left[-{\frac {(\Omega _{j}-x)^{2}}{2\sigma _{j}^{2}}}\right]}\mathrm {d} x=\chi _{j}^{\text{GL}}(\omega ).}
+  
+
+ 
+These mistakes limit the applicability of the BB model in the frequency domain, and in the time domain the model is unusable due to an unphysical pole. Instead, the correct Gauss–Lorentz susceptibility 
+  
+    
+      
+        
+          χ
+          
+            j
+          
+          
+            
+              G
+              L
+            
+          
+        
+        (
+        ω
+        )
+      
+    
+    {\displaystyle \chi _{j}^{\mathrm {GL} }(\omega )}
+  
+ in Eq. 7 should be used in the frequency and time domains.

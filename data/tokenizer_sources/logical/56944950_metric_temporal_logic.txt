@@ -1,0 +1,3021 @@
+Metric temporal logic (MTL) is a special case of temporal logic. It is an extension of temporal logic in which temporal operators are replaced by time-constrained versions like until, next, since and previous operators. It is a linear-time logic that assumes both the interleaving and fictitious-clock abstractions. It is defined over a point-based weakly monotonic integer-time semantics. 
+MTL has been described as a prominent specification formalism for real-time systems. Full MTL over infinite timed words is undecidable.
+
+Syntax
+The full metric temporal logic is defined similarly to linear temporal logic, where a set of non-negative real numbers is added to temporal modal operators U and S. Formally, MTL is built up from:
+
+a finite set of propositional variables AP,
+the logical operators ¬ and ∨, and
+the temporal modal operator UI (pronounced "φ until in I ψ."), with I an interval of non-negative numbers.
+the temporal modal operator SI (pronounced "φ since in I ψ."), with I as above.
+When the subscript is omitted, it is implicitly equal to 
+  
+    
+      
+        [
+        0
+        ,
+        ∞
+        )
+      
+    
+    {\displaystyle [0,\infty )}
+  
+.
+Note that the next operator N is not considered to be a part of MTL syntax. It will instead be defined from other operators.
+
+Past and Future
+The past fragment of metric temporal logic, denoted as past-MTL is defined as the restriction of the full metric temporal logic without the until operator.  Similarly, the future fragment of metric temporal logic, denoted as future-MTL is defined as the restriction of the full metric temporal logic without the since operator.
+Depending on the authors, MTL is either defined as the future fragment of MTL, in which case full-MTL is called  MTL+Past. Or MTL is defined as full-MTL.
+In order to avoid ambiguity, this article uses the names full-MTL, past-MTL and future-MTL. When the statements holds for the three logic, MTL will simply be used.
+
+Model
+Let 
+  
+    
+      
+        T
+        ⊆
+        
+          
+            R
+          
+          
+            +
+          
+        
+      
+    
+    {\displaystyle T\subseteq \mathbb {R} _{+}}
+  
+ intuitively represent a set
+of points in time. Let 
+  
+    
+      
+        γ
+        :
+        T
+        →
+        A
+      
+    
+    {\displaystyle \gamma :T\to A}
+  
+ a function which associates a letter to
+each moment 
+  
+    
+      
+        t
+        ∈
+        T
+      
+    
+    {\displaystyle t\in T}
+  
+. A model of a MTL formula is
+such a function 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+. Usually, 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ is
+either a timed word or a signal. In
+those cases, 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is either a discrete subset or an interval
+containing 0.
+
+Semantics
+Let 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ and 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ as above and let 
+  
+    
+      
+        t
+        ∈
+        T
+      
+    
+    {\displaystyle t\in T}
+  
+ some fixed time.  We are now going to explain what it means
+that a MTL formula 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ holds at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+,
+which is denoted 
+  
+    
+      
+        γ
+        ,
+        t
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t\models \phi }
+  
+.
+Let 
+  
+    
+      
+        I
+        ⊆
+        
+          
+            R
+          
+          
+            +
+          
+        
+      
+    
+    {\displaystyle I\subseteq \mathbb {R} _{+}}
+  
+ and 
+  
+    
+      
+        ϕ
+        ,
+        ψ
+        ∈
+        M
+        T
+        L
+      
+    
+    {\displaystyle \phi ,\psi \in MTL}
+  
+. We first consider the formula 
+  
+    
+      
+        ϕ
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        ψ
+      
+    
+    {\displaystyle \phi {\mathcal {U}}_{I}\psi }
+  
+.  We say
+that 
+  
+    
+      
+        γ
+        ,
+        t
+        ⊨
+        ϕ
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        ψ
+      
+    
+    {\displaystyle \gamma ,t\models \phi {\mathcal {U}}_{I}\psi }
+  
+ if and only if
+there exists some time 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        t
+        +
+        I
+      
+    
+    {\displaystyle t'\in t+I}
+  
+ such that:
+
+  
+    
+      
+        γ
+        ,
+        
+          t
+          ′
+        
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \gamma ,t'\models \psi }
+  
+ and
+for each 
+  
+    
+      
+        
+          t
+          ″
+        
+        ∈
+        T
+      
+    
+    {\displaystyle t''\in T}
+  
+ with 
+  
+    
+      
+        t
+        <
+        
+          t
+          ″
+        
+        <
+        
+          t
+          ′
+        
+      
+    
+    {\displaystyle t<t''<t'}
+  
+, 
+  
+    
+      
+        γ
+        ,
+        
+          t
+          ″
+        
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t''\models \phi }
+  
+.
+We now consider the formula 
+  
+    
+      
+        ϕ
+        
+          
+            
+              S
+            
+          
+          
+            I
+          
+        
+        ψ
+      
+    
+    {\displaystyle \phi {\mathcal {S}}_{I}\psi }
+  
+ (pronounced "
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ since
+in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+.")  We say
+that 
+  
+    
+      
+        γ
+        ,
+        t
+        ⊨
+        ϕ
+        
+          
+            
+              S
+            
+          
+          
+            I
+          
+        
+        ψ
+      
+    
+    {\displaystyle \gamma ,t\models \phi {\mathcal {S}}_{I}\psi }
+  
+ if and only if
+there exists some time 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        t
+        −
+        I
+      
+    
+    {\displaystyle t'\in t-I}
+  
+ such that:
+
+  
+    
+      
+        γ
+        ,
+        
+          t
+          ′
+        
+        ⊨
+        ψ
+      
+    
+    {\displaystyle \gamma ,t'\models \psi }
+  
+ and
+for each 
+  
+    
+      
+        
+          t
+          ″
+        
+        ∈
+        T
+      
+    
+    {\displaystyle t''\in T}
+  
+ with 
+  
+    
+      
+        
+          t
+          ′
+        
+        <
+        
+          t
+          ″
+        
+        <
+        t
+      
+    
+    {\displaystyle t'<t''<t}
+  
+, 
+  
+    
+      
+        γ
+        ,
+        
+          t
+          ″
+        
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t''\models \phi }
+  
+.
+The definitions of  
+  
+    
+      
+        γ
+        ,
+        t
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t\models \phi }
+  
+ for the values
+of 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ not considered above is similar as the definition
+in the LTL case.
+
+Operators defined from basic MTL operators
+Some formulas are so often used that a new operator is introduced for
+them. These operators are usually not considered to belong to the
+definition of MTL, but are syntactic sugar which denote more
+complex MTL formula. We first consider operators which also exists in LTL. In
+this section, we fix 
+  
+    
+      
+        ϕ
+        ,
+        ψ
+      
+    
+    {\displaystyle \phi ,\psi }
+  
+  MTL formulas
+and 
+  
+    
+      
+        I
+        ⊆
+        
+          
+            R
+          
+          
+            +
+          
+        
+      
+    
+    {\displaystyle I\subseteq \mathbb {R} _{+}}
+  
+.
+
+Operators similar to the ones of LTL
+
+Release and Back to
+We denote by 
+  
+    
+      
+        ϕ
+        
+          
+            
+              R
+            
+          
+          
+            I
+          
+        
+        ψ
+      
+    
+    {\displaystyle \phi {\mathcal {R}}_{I}\psi }
+  
+
+(pronounced "
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ release
+in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+") the
+formula 
+  
+    
+      
+        ¬
+        (
+        ¬
+        ϕ
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        ¬
+        ψ
+        )
+      
+    
+    {\displaystyle \neg (\neg \phi {\mathcal {U}}_{I}\neg \psi )}
+  
+. This formula holds
+at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ if either:
+
+there is some time 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        t
+        +
+        I
+      
+    
+    {\displaystyle t'\in t+I}
+  
+ such that 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ holds, and 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ hold in the interval 
+  
+    
+      
+        (
+        t
+        ,
+        
+          t
+          ′
+        
+        )
+        ∩
+        (
+        t
+        +
+        I
+        )
+      
+    
+    {\displaystyle (t,t')\cap (t+I)}
+  
+.
+at each time 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        t
+        +
+        I
+      
+    
+    {\displaystyle t'\in t+I}
+  
+, 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ holds.
+The name "release" come from the LTL case, where this formula simply
+means that 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ should always hold,
+unless 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ releases it.
+The past counterpart of release is denote by 
+  
+    
+      
+        ϕ
+        
+          
+            
+              B
+            
+          
+          
+            I
+          
+        
+        ψ
+      
+    
+    {\displaystyle \phi {\mathcal {B}}_{I}\psi }
+  
+
+(pronounced "
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ back to
+in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+") and is equal to the
+formula 
+  
+    
+      
+        ¬
+        (
+        ¬
+        ϕ
+        
+          
+            
+              S
+            
+          
+          
+            I
+          
+        
+        ¬
+        ψ
+        )
+      
+    
+    {\displaystyle \neg (\neg \phi {\mathcal {S}}_{I}\neg \psi )}
+  
+.
+
+Finally and Eventually
+We denote by 
+  
+    
+      
+        
+          ◊
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \Diamond _{I}\phi }
+  
+ or 
+  
+    
+      
+        
+          
+            
+              F
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle {\mathcal {F}}_{I}\phi }
+  
+ (pronounced "Finally
+in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+", or "Eventually
+in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+") the formula 
+  
+    
+      
+        ⊤
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \top {\mathcal {U}}_{I}\phi }
+  
+. Intuitively, this formula holds at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+
+if there is some time 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        t
+        +
+        I
+      
+    
+    {\displaystyle t'\in t+I}
+  
+ such
+that 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ holds.
+We denote by 
+  
+    
+      
+        
+          ◻
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \Box _{I}\phi }
+  
+ or 
+  
+    
+      
+        
+          
+            
+              G
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle {\mathcal {G}}_{I}\phi }
+  
+ (pronounced "Globally
+in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+",) the
+formula 
+  
+    
+      
+        ¬
+        
+          ◊
+          
+            I
+          
+        
+        ¬
+        ϕ
+      
+    
+    {\displaystyle \neg \Diamond _{I}\neg \phi }
+  
+. Intuitively, this formula
+holds at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ if for all time 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        t
+        +
+        I
+      
+    
+    {\displaystyle t'\in t+I}
+  
+, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ holds.
+We denote by 
+  
+    
+      
+        
+          
+            
+              ◻
+              ←
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle {\overleftarrow {\Box }}_{I}\phi }
+  
+
+and 
+  
+    
+      
+        
+          
+            
+              ◊
+              ←
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle {\overleftarrow {\Diamond }}_{I}\phi }
+  
+ the formula similar
+to 
+  
+    
+      
+        
+          ◻
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \Box _{I}\phi }
+  
+ and 
+  
+    
+      
+        
+          ◊
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \Diamond _{I}\phi }
+  
+,
+where 
+  
+    
+      
+        
+          
+            U
+          
+        
+      
+    
+    {\displaystyle {\mathcal {U}}}
+  
+ is replaced by 
+  
+    
+      
+        
+          
+            S
+          
+        
+      
+    
+    {\displaystyle {\mathcal {S}}}
+  
+. Both formula has intuitively the same meaning, but when we
+consider the past instead of the future.
+
+Next and previous
+This case is slightly different from the previous ones, because the intuitive meaning of the "Next" and "Previously" formulas differs depending on the kind of function 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ considered.
+We denote by 
+  
+    
+      
+        
+          ◯
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \bigcirc _{I}\phi }
+  
+ or 
+  
+    
+      
+        
+          
+            
+              N
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle {\mathcal {N}}_{I}\phi }
+  
+
+(pronounced "Next in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+") the
+formula 
+  
+    
+      
+        ⊥
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \bot {\mathcal {U}}_{I}\phi }
+  
+. Similarly, we denote by 
+  
+    
+      
+        
+          ⊖
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \ominus _{I}\phi }
+  
+ (pronounced "Previously in 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+) the formula 
+  
+    
+      
+        ⊥
+        
+          
+            
+              S
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \bot {\mathcal {S}}_{I}\phi }
+  
+. The following discussion about the Next operator also holds for the Previously operator, by reversing the past and the future.
+When this formula is evaluated over a timed word 
+  
+    
+      
+        γ
+        :
+        T
+        →
+        A
+      
+    
+    {\displaystyle \gamma :T\to A}
+  
+, this formula
+means that both:
+
+at the next time in the domain of definition 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, the formula 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ will holds.
+furthermore, the distance between this next time and the current time belong to the interval 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+.
+In particular, this next time holds, thus the current time is not the end of the word.
+When this formula is evaluated over a signal 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+, the notion of next time does
+not makes sense. Instead, "next" means "immediately after". More
+precisely 
+  
+    
+      
+        γ
+        ,
+        t
+        ⊨
+        ∘
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t\models \circ \phi }
+  
+ means:
+
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ contains an interval of the form 
+  
+    
+      
+        (
+        0
+        ,
+        ϵ
+        )
+      
+    
+    {\displaystyle (0,\epsilon )}
+  
+ and
+for each 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        (
+        t
+        ,
+        t
+        +
+        ϵ
+        )
+      
+    
+    {\displaystyle t'\in (t,t+\epsilon )}
+  
+, 
+  
+    
+      
+        γ
+        ,
+        
+          t
+          ′
+        
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t'\models \phi }
+  
+.
+
+Other operators
+We now consider operators which are not similar to any standard LTL operators.
+
+Fall and Rise
+We denote by 
+  
+    
+      
+        ↑
+        ϕ
+      
+    
+    {\displaystyle \uparrow \phi }
+  
+ (pronounced "rise 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+"), a formula which holds when 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ becomes true. More precisely, either 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ did not hold in the immediate past, and holds at this time, or it does not hold and it holds in the immediate future. Formally 
+  
+    
+      
+        ↑
+        ϕ
+      
+    
+    {\displaystyle \uparrow \phi }
+  
+ is defined as 
+  
+    
+      
+        (
+        ϕ
+        ∧
+        (
+        ¬
+        ϕ
+        
+          
+            S
+          
+        
+        ⊤
+        )
+        )
+        ∨
+        (
+        ¬
+        ϕ
+        ∧
+        (
+        ϕ
+        
+          
+            U
+          
+        
+        ⊤
+        )
+        )
+      
+    
+    {\displaystyle (\phi \land (\neg \phi {\mathcal {S}}\top ))\lor (\neg \phi \land (\phi {\mathcal {U}}\top ))}
+  
+.
+Over timed words, this formula always hold. Indeed 
+  
+    
+      
+        ϕ
+        
+          
+            U
+          
+        
+        ⊤
+      
+    
+    {\displaystyle \phi {\mathcal {U}}\top }
+  
+ and 
+  
+    
+      
+        ¬
+        ϕ
+        
+          
+            S
+          
+        
+        ⊤
+      
+    
+    {\displaystyle \neg \phi {\mathcal {S}}\top }
+  
+ always hold. Thus the formula is equivalent to 
+  
+    
+      
+        ϕ
+        ∨
+        ¬
+        ϕ
+      
+    
+    {\displaystyle \phi \lor \neg \phi }
+  
+, hence is true.
+By symmetry, we denote by 
+  
+    
+      
+        ↓
+        ϕ
+      
+    
+    {\displaystyle \downarrow \phi }
+  
+ (pronounced "Fall 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+), a formula which holds when 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ becomes false. Thus, it is defined as 
+  
+    
+      
+        (
+        ¬
+        ϕ
+        ∧
+        (
+        ϕ
+        
+          
+            S
+          
+        
+        ⊤
+        )
+        )
+        ∧
+        (
+        ϕ
+        ∧
+        (
+        ¬
+        ϕ
+        
+          
+            U
+          
+        
+        ⊤
+        )
+        )
+      
+    
+    {\displaystyle (\neg \phi \land (\phi {\mathcal {S}}\top ))\land (\phi \land (\neg \phi {\mathcal {U}}\top ))}
+  
+.
+
+History and Prophecy
+We now introduce the prophecy operator, denoted by 
+  
+    
+      
+        ▹
+      
+    
+    {\displaystyle \triangleright }
+  
+. We denote by 
+  
+    
+      
+        
+          ▹
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \triangleright _{I}\phi }
+  
+ the formula 
+  
+    
+      
+        ¬
+        ϕ
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \neg \phi {\mathcal {U}}_{I}\phi }
+  
+. This formula asserts that there exists a first moment in the future such that 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ holds, and the time to wait for this first moment belongs to 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+.
+We now consider this formula over timed words and over signals. We consider timed words first. Assume that 
+  
+    
+      
+        I
+        =∣
+        a
+        ,
+        b
+        
+          ∣
+          ′
+        
+      
+    
+    {\displaystyle I=\mid a,b\mid '}
+  
+ where 
+  
+    
+      
+        ∣
+      
+    
+    {\displaystyle \mid }
+  
+ and 
+  
+    
+      
+        
+          ∣
+          ′
+        
+      
+    
+    {\displaystyle \mid '}
+  
+ represents either open or closed bounds.  Let 
+  
+    
+      
+        γ
+      
+    
+    {\displaystyle \gamma }
+  
+ a timed word and 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ in its domain of definition. 
+Over timed words, the formula 
+  
+    
+      
+        γ
+        ,
+        t
+        ⊨
+        
+          ▹
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t\models \triangleright _{I}\phi }
+  
+ holds if and only if 
+  
+    
+      
+        γ
+        ,
+        t
+        ⊨
+        
+          ◻
+          
+            ]
+            0
+            ,
+            b
+            [
+            ∖
+            I
+          
+        
+        ¬
+        ϕ
+        ∧
+        
+          ◊
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t\models \Box _{]0,b[\setminus I}\neg \phi \land \Diamond _{I}\phi }
+  
+ also holds. That is, this formula simply assert that, in the future, until the interval 
+  
+    
+      
+        t
+        +
+        I
+      
+    
+    {\displaystyle t+I}
+  
+ is met, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ should not hold. Furthermore, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ should hold sometime in the interval 
+  
+    
+      
+        t
+        +
+        I
+      
+    
+    {\displaystyle t+I}
+  
+. Indeed, given any time 
+  
+    
+      
+        
+          t
+          ″
+        
+        ∈
+        t
+        +
+        I
+      
+    
+    {\displaystyle t''\in t+I}
+  
+ such that 
+  
+    
+      
+        γ
+        ,
+        
+          t
+          ″
+        
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t''\models \phi }
+  
+ hold, there exists only a finite number of time 
+  
+    
+      
+        
+          t
+          ′
+        
+        ∈
+        t
+        +
+        I
+      
+    
+    {\displaystyle t'\in t+I}
+  
+ with 
+  
+    
+      
+        
+          t
+          ′
+        
+        <
+        
+          t
+          ″
+        
+      
+    
+    {\displaystyle t'<t''}
+  
+ and 
+  
+    
+      
+        γ
+        ,
+        
+          t
+          ′
+        
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,t'\models \phi }
+  
+. Thus, there exists necessarily a smaller such 
+  
+    
+      
+        
+          t
+          ″
+        
+      
+    
+    {\displaystyle t''}
+  
+.
+Let us now consider signal. The equivalence mentioned above does not hold anymore over signal. This is due to the fact that, using the variables introduced above, there may exists an infinite number of correct values for 
+  
+    
+      
+        
+          t
+          ′
+        
+      
+    
+    {\displaystyle t'}
+  
+, due to the fact that the domain of definition of a signal is continuous. Thus, the formula 
+  
+    
+      
+        
+          ▹
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \triangleright _{I}\phi }
+  
+ also ensures that the first interval in which 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ holds is closed on the left.
+By temporal symmetry, we define the history operator, denoted by 
+  
+    
+      
+        ◃
+      
+    
+    {\displaystyle \triangleleft }
+  
+. We define 
+  
+    
+      
+        
+          ◃
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \triangleleft _{I}\phi }
+  
+ as 
+  
+    
+      
+        ¬
+        ϕ
+        
+          
+            
+              S
+            
+          
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \neg \phi {\mathcal {S}}_{I}\phi }
+  
+. This formula asserts that there exists a last moment in the past such that 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ held. And the time since this first moment belongs to 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+.
+
+Non-strict operator
+The semantic of operators until and since introduced do not consider the current time. That is, in order for 
+  
+    
+      
+        
+          ϕ
+          
+            1
+          
+        
+        
+          
+            U
+          
+        
+        
+          ϕ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \phi _{1}{\mathcal {U}}\phi _{2}}
+  
+ to holds at some time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+, neither 
+  
+    
+      
+        
+          ϕ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \phi _{1}}
+  
+ nor 
+  
+    
+      
+        
+          ϕ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \phi _{2}}
+  
+ has to hold at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+. This is not always wanted, for example in the sentence "there is no bug until the system is turned-off", it may actually be wanted that there are no bug at current time. Thus, we introduce another until operator, called non-strict until, denoted by 
+  
+    
+      
+        
+          
+            
+              U
+            
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {\mathcal {U}}}}
+  
+, which consider the current time.
+We denote by 
+  
+    
+      
+        
+          ϕ
+          
+            1
+          
+        
+        
+          
+            
+              
+                U
+              
+              ¯
+            
+          
+          
+            I
+          
+        
+        
+          ϕ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \phi _{1}{\overline {\mathcal {U}}}_{I}\phi _{2}}
+  
+ and 
+  
+    
+      
+        
+          ϕ
+          
+            1
+          
+        
+        
+          
+            
+              
+                S
+              
+              ¯
+            
+          
+          
+            I
+          
+        
+        
+          ϕ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \phi _{1}{\overline {\mathcal {S}}}_{I}\phi _{2}}
+  
+ either:
+
+the formulas 
+  
+    
+      
+        
+          ϕ
+          
+            2
+          
+        
+        ∨
+        (
+        
+          ϕ
+          
+            1
+          
+        
+        ∧
+        (
+        
+          ϕ
+          
+            1
+          
+        
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        
+          ϕ
+          
+            2
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle \phi _{2}\lor (\phi _{1}\land (\phi _{1}{\mathcal {U}}_{I}\phi _{2}))}
+  
+ and 
+  
+    
+      
+        
+          ϕ
+          
+            2
+          
+        
+        ∨
+        (
+        
+          ϕ
+          
+            1
+          
+        
+        ∧
+        (
+        
+          ϕ
+          
+            1
+          
+        
+        
+          
+            
+              S
+            
+          
+          
+            I
+          
+        
+        
+          ϕ
+          
+            2
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle \phi _{2}\lor (\phi _{1}\land (\phi _{1}{\mathcal {S}}_{I}\phi _{2}))}
+  
+ if 
+  
+    
+      
+        0
+        ∈
+        I
+      
+    
+    {\displaystyle 0\in I}
+  
+, and
+the formulas 
+  
+    
+      
+        
+          ϕ
+          
+            1
+          
+        
+        ∧
+        (
+        
+          ϕ
+          
+            1
+          
+        
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        
+          ϕ
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle \phi _{1}\land (\phi _{1}{\mathcal {U}}_{I}\phi _{2})}
+  
+ and 
+  
+    
+      
+        
+          ϕ
+          
+            1
+          
+        
+        ∧
+        (
+        
+          ϕ
+          
+            1
+          
+        
+        
+          
+            
+              S
+            
+          
+          
+            I
+          
+        
+        
+          ϕ
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle \phi _{1}\land (\phi _{1}{\mathcal {S}}_{I}\phi _{2})}
+  
+ otherwise.
+For any of the operators 
+  
+    
+      
+        
+          
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathcal {O}}}
+  
+ introduced above, we denote 
+  
+    
+      
+        
+          
+            
+              O
+            
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {\mathcal {O}}}}
+  
+ the formula in which non-strict untils and sinces are used. For example 
+  
+    
+      
+        
+          
+            ◊
+            ¯
+          
+        
+        p
+      
+    
+    {\displaystyle {\overline {\Diamond }}p}
+  
+ is an abbreviation for 
+  
+    
+      
+        ⊤
+        
+          
+            
+              U
+            
+            ¯
+          
+        
+        p
+      
+    
+    {\displaystyle \top {\overline {\mathcal {U}}}p}
+  
+.
+Strict operator can not be defined using non-strict operator. That is, there is no formula equivalent to 
+  
+    
+      
+        
+          ◯
+          
+            I
+          
+        
+        p
+      
+    
+    {\displaystyle \bigcirc _{I}p}
+  
+ which uses only non-strict operator. This formula is defined as 
+  
+    
+      
+        ⊥
+        
+          
+            
+              U
+            
+          
+          
+            I
+          
+        
+        p
+      
+    
+    {\displaystyle \bot {\mathcal {U}}_{I}p}
+  
+. This formula can never hold at a time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ if it is required that 
+  
+    
+      
+        ⊥
+      
+    
+    {\displaystyle \bot }
+  
+ holds at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+.
+
+Example
+We now give examples of MTL formulas. Some more example can be found on article of fragments of MITL, such as metric interval temporal logic.
+
+  
+    
+      
+        ◻
+        (
+        p
+        
+        ⟹
+        
+        
+          ◊
+          
+            {
+            1
+            }
+          
+        
+        q
+        )
+      
+    
+    {\displaystyle \Box (p\implies \Diamond _{\{1\}}q)}
+  
+ states that each letter 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is followed exactly one time unit later by a letter 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+.
+
+  
+    
+      
+        ◻
+        (
+        p
+        
+        ⟹
+        
+        ¬
+        
+          ◊
+          
+            {
+            1
+            }
+          
+        
+        p
+        )
+      
+    
+    {\displaystyle \Box (p\implies \neg \Diamond _{\{1\}}p)}
+  
+ states that no two successive occurrences of 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ can occur at exactly one time unit from each other.
+
+Comparison with LTL
+A standard (untimed) infinite word 
+  
+    
+      
+        w
+        =
+        
+          a
+          
+            0
+          
+        
+        ,
+        
+          a
+          
+            1
+          
+        
+        ,
+        …
+        ,
+      
+    
+    {\displaystyle w=a_{0},a_{1},\dots ,}
+  
+ is a
+function from 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ to 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+. We can
+consider such a word using the set of time 
+  
+    
+      
+        T
+        =
+        
+          N
+        
+      
+    
+    {\displaystyle T=\mathbb {N} }
+  
+,
+and the function 
+  
+    
+      
+        γ
+        (
+        i
+        )
+        =
+        
+          a
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \gamma (i)=a_{i}}
+  
+. In this case,
+for 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ an arbitrary LTL
+formula, 
+  
+    
+      
+        w
+        ,
+        i
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle w,i\models \phi }
+  
+ if and only
+if 
+  
+    
+      
+        γ
+        ,
+        i
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle \gamma ,i\models \phi }
+  
+, where 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ is
+considered as a MTL formula with non-strict operator and 
+  
+    
+      
+        [
+        0
+        ,
+        ∞
+        )
+      
+    
+    {\displaystyle [0,\infty )}
+  
+ subscript. In this sense, MTL is an extension of LTL.
+For this reason, a formula using only non-strict operator with 
+  
+    
+      
+        [
+        0
+        ,
+        ∞
+        )
+      
+    
+    {\displaystyle [0,\infty )}
+  
+ subscript is called an LTL formula.
+
+Algorithmic complexity
+The satisfiability of ECL over signals is EXPSPACE-complete.
+
+Fragments of MTL
+We now consider some fragments of MTL.
+
+MITL
+
+An important subset of MTL is the Metric Interval Temporal Logic (MITL). This is defined similarly to MTL, with the
+restriction that the sets 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+, used in 
+  
+    
+      
+        
+          
+            U
+          
+        
+      
+    
+    {\displaystyle {\mathcal {U}}}
+  
+ and 
+  
+    
+      
+        
+          
+            S
+          
+        
+      
+    
+    {\displaystyle {\mathcal {S}}}
+  
+, are intervals which are not
+singletons, and whose bounds are natural numbers or infinity.
+Some other subsets of MITL are defined in the article MITL.
+
+Future Fragments
+Future-MTL was already introduced above. Both over timed-words and over signals, it is less expressive than Full-MTL.
+
+Event-Clock Temporal Logic
+The fragment Event-Clock Temporal Logic of MTL, denoted EventClockTL or ECL, allows only the following operators:
+
+the boolean operators, and, or, not
+the untimed until and since operators.
+The timed prophecy and history operators.
+Over signals, ECL is as expressive as MITL and as MITL0. The equivalence between the two last logics is explained in the article MITL0. We sketch the equivalence of those logics with ECL.
+If 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ is not a singleton and 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ is a MITL formula, 
+  
+    
+      
+        
+          ▹
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \triangleright _{I}\phi }
+  
+ is defined as a MITL formula. If 
+  
+    
+      
+        I
+        =
+        {
+        i
+        }
+      
+    
+    {\displaystyle I=\{i\}}
+  
+ is a singleton, then 
+  
+    
+      
+        
+          ▹
+          
+            I
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \triangleright _{I}\phi }
+  
+ is equivalent to 
+  
+    
+      
+        
+          ◻
+          
+            ]
+            0
+            ,
+            i
+            [
+          
+        
+        ¬
+        ϕ
+        ∧
+        
+          ◊
+          
+            ]
+            0
+            ,
+            i
+            ]
+          
+        
+        ϕ
+      
+    
+    {\displaystyle \Box _{]0,i[}\neg \phi \land \Diamond _{]0,i]}\phi }
+  
+ which is a MITL-formula. Reciprocally, for 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ an ECL-formula, and 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ an interval whose lower bound is 0, 
+  
+    
+      
+        
+          ◻
+          
+            I
+          
+        
+        ψ
+      
+    
+    {\displaystyle \Box _{I}\psi }
+  
+ is equivalent to the ECL-formula 
+  
+    
+      
+        ¬
+        
+          ▹
+          
+            I
+          
+        
+        ¬
+        ψ
+      
+    
+    {\displaystyle \neg \triangleright _{I}\neg \psi }
+  
+.
+The satisfiability of ECL over signals is PSPACE-complete.
+
+Positive normal form
+A MTL-formula in positive normal form is defined almost as any MTL formula, with the two following change:
+
+the operators Release and Back are introduced in the logical language and are not considered anymore to be notations for some other formulas.
+negations can only be applied to letters.
+Any MTL formula is equivalent to formula in normal form. This can be shown by an easy induction on formulas. For example, the formula 
+  
+    
+      
+        ¬
+        (
+        ϕ
+        
+          
+            
+              U
+            
+          
+          
+            S
+          
+        
+        ψ
+        )
+      
+    
+    {\displaystyle \neg (\phi {\mathcal {U}}_{S}\psi )}
+  
+ is equivalent to the formula 
+  
+    
+      
+        (
+        ¬
+        ϕ
+        )
+        
+          
+            
+              R
+            
+          
+          
+            S
+          
+        
+        (
+        ¬
+        ψ
+        )
+      
+    
+    {\displaystyle (\neg \phi ){\mathcal {R}}_{S}(\neg \psi )}
+  
+. Similarly, conjunctions and disjunctions can be considered using De Morgan's laws.
+Strictly speaking, the set of formulas in positive normal form is not a fragment of MTL.

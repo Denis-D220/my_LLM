@@ -1,0 +1,519 @@
+In mathematics and computer science, a recursive definition, or inductive definition, is used to define the elements in a set in terms of other elements in the set (Aczel 1977:740ff). Some examples of recursively definable objects include factorials, natural numbers, Fibonacci numbers, and the Cantor ternary set.
+A recursive definition of a function defines values of the function for some inputs in terms of the values of the same function for other (usually smaller) inputs. For example, the factorial function n! is defined by the rules
+
+  
+    
+      
+        
+          
+            
+              
+              
+                0
+                !
+                =
+                1.
+              
+            
+            
+              
+              
+                
+                (
+                n
+                +
+                1
+                )
+                !
+                =
+                (
+                n
+                +
+                1
+                )
+                ⋅
+                n
+                !
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&0!=1.\\&(n+1)!=(n+1)\cdot n!.\end{aligned}}}
+  
+
+This definition is valid for each natural number n, because the recursion eventually reaches the base case of 0. The definition may also be thought of as giving a procedure for computing the value of the function n!, starting from n = 0 and proceeding onwards with n = 1, 2, 3 etc.
+The recursion theorem states that such a definition indeed defines a function that is unique. The proof uses mathematical induction.
+An inductive definition of a set describes the elements in a set in terms of other elements in the set. For example, one definition of the set ⁠
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+⁠ of natural numbers is:
+
+0 is in ⁠
+  
+    
+      
+        
+          N
+        
+        .
+      
+    
+    {\displaystyle \mathbb {N} .}
+  
+⁠
+If an element n is in ⁠
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+⁠ then n + 1 is in ⁠
+  
+    
+      
+        
+          N
+        
+        .
+      
+    
+    {\displaystyle \mathbb {N} .}
+  
+⁠
+⁠
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+⁠ is the smallest set satisfying (1) and (2).
+There are many sets that satisfy (1) and (2) – for example, the set {0, 1, 1.649, 2, 2.649, 3, 3.649, …}  satisfies the definition. However, condition (3) specifies the set of natural numbers by removing the sets with extraneous members. 
+Properties of recursively defined functions and sets can often be proved by an induction principle that follows the recursive definition. For example, the definition of the natural numbers presented here directly implies the principle of mathematical induction for natural numbers: if a property holds of the natural number 0 (or 1), and the property holds of n + 1 whenever it holds of n, then the property holds of all natural numbers (Aczel 1977:742).
+
+Form of recursive definitions
+Most recursive definitions have two foundations: a base case (basis) and an inductive clause.
+The difference between a circular definition and a recursive definition is that a recursive definition must always have base cases, cases that satisfy the definition without being defined in terms of the definition itself, and that all other instances in the inductive clauses must be "smaller" in some sense (i.e., closer to those base cases that terminate the recursion) — a rule also known as "recur only with a simpler case".
+In contrast, a circular definition may have no base case, and even may define the value of a function in terms of that value itself — rather than on other values of the function. Such a situation would lead to an infinite regress.
+That recursive definitions are valid – meaning that a recursive definition identifies a unique function – is a theorem of set theory known as the recursion theorem, the proof of which is non-trivial. Where the domain of the function is the natural numbers, sufficient conditions for the definition to be valid are that the value of f(0) (i.e., base case) is given, and that for n > 0, an algorithm is given for determining f(n) in terms of n, 
+  
+    
+      
+        f
+        (
+        0
+        )
+        ,
+        f
+        (
+        1
+        )
+        ,
+        …
+        ,
+        f
+        (
+        n
+        −
+        1
+        )
+      
+    
+    {\displaystyle f(0),f(1),\dots ,f(n-1)}
+  
+ (i.e., inductive clause).
+More generally, recursive definitions of functions can be made whenever the domain is a well-ordered set, using the principle of transfinite recursion. The formal criteria for what constitutes a valid recursive definition are more complex for the general case. An outline of the general proof and the criteria can be found in James Munkres' Topology. However, a specific case (domain is restricted to the positive integers instead of any well-ordered set) of the general recursive definition will be given below.
+
+Principle of recursive definition
+Let A be a set and let a0 be an element of A. If ρ is a function which assigns to each function f mapping a nonempty section of the positive integers into A, an element of A, then there exists a unique function 
+  
+    
+      
+        h
+        :
+        
+          
+            Z
+          
+          
+            +
+          
+        
+        →
+        A
+      
+    
+    {\displaystyle h:\mathbb {Z} _{+}\to A}
+  
+ such that
+
+  
+    
+      
+        
+          
+            
+              
+                h
+                (
+                1
+                )
+              
+              
+                
+                =
+                
+                  a
+                  
+                    0
+                  
+                
+              
+            
+            
+              
+                h
+                (
+                i
+                )
+              
+              
+                
+                =
+                ρ
+                
+                  (
+                  
+                    h
+                    
+                      
+                        |
+                      
+                      
+                        {
+                        1
+                        ,
+                        2
+                        ,
+                        …
+                        ,
+                        i
+                        −
+                        1
+                        }
+                      
+                    
+                  
+                  )
+                
+                
+                   for 
+                
+                i
+                >
+                1.
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}h(1)&=a_{0}\\h(i)&=\rho \left(h|_{\{1,2,\ldots ,i-1\}}\right){\text{ for }}i>1.\end{aligned}}}
+  
+
+Examples of recursive definitions
+
+Elementary functions
+Addition is defined recursively based on counting as
+
+  
+    
+      
+        
+          
+            
+              
+              
+                0
+                +
+                a
+                =
+                a
+                ,
+              
+            
+            
+              
+              
+                
+                (
+                1
+                +
+                n
+                )
+                +
+                a
+                =
+                1
+                +
+                (
+                n
+                +
+                a
+                )
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&0+a=a,\\&(1+n)+a=1+(n+a).\end{aligned}}}
+  
+
+Multiplication is defined recursively as
+
+  
+    
+      
+        
+          
+            
+              
+              
+                0
+                ⋅
+                a
+                =
+                0
+                ,
+              
+            
+            
+              
+              
+                
+                (
+                1
+                +
+                n
+                )
+                ⋅
+                a
+                =
+                a
+                +
+                n
+                ⋅
+                a
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&0\cdot a=0,\\&(1+n)\cdot a=a+n\cdot a.\end{aligned}}}
+  
+
+Exponentiation is defined recursively as
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                  a
+                  
+                    0
+                  
+                
+                =
+                1
+                ,
+              
+            
+            
+              
+              
+                
+                  a
+                  
+                    1
+                    +
+                    n
+                  
+                
+                =
+                a
+                ⋅
+                
+                  a
+                  
+                    n
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&a^{0}=1,\\&a^{1+n}=a\cdot a^{n}.\end{aligned}}}
+  
+
+Binomial coefficients can be defined recursively as
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                  
+                    
+                      (
+                    
+                    
+                      a
+                      0
+                    
+                    
+                      )
+                    
+                  
+                
+                =
+                1
+                ,
+              
+            
+            
+              
+              
+                
+                  
+                    
+                      (
+                    
+                    
+                      
+                        1
+                        +
+                        a
+                      
+                      
+                        1
+                        +
+                        n
+                      
+                    
+                    
+                      )
+                    
+                  
+                
+                =
+                
+                  
+                    
+                      (
+                      1
+                      +
+                      a
+                      )
+                      
+                        
+                          
+                            (
+                          
+                          
+                            a
+                            n
+                          
+                          
+                            )
+                          
+                        
+                      
+                    
+                    
+                      1
+                      +
+                      n
+                    
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&{\binom {a}{0}}=1,\\&{\binom {1+a}{1+n}}={\frac {(1+a){\binom {a}{n}}}{1+n}}.\end{aligned}}}
+  
+
+Prime numbers
+The set of prime numbers can be defined as the unique set of positive integers satisfying
+
+2 is a prime number,
+any other positive integer is a prime number if and only if it is not divisible by any prime number smaller than itself.
+The primality of the integer 2 is the base case; checking the primality of any larger integer X by this definition requires knowing the primality of every integer between 2 and X, which is well defined by this definition. That last point can be proved by induction on X, for which it is essential that the second clause says "if and only if"; if it had just said "if", the primality of, for instance, the number 4 would not be clear, and the further application of the second clause would be impossible.
+
+Non-negative even numbers
+The even numbers can be defined as consisting of
+
+0 is in the set E of non-negative evens (basis clause),
+For any element x in the set E, x + 2 is in E (inductive clause),
+Nothing is in E unless it is obtained from the basis and inductive clauses (extremal clause).
+
+Well formed formula
+The notion of a well-formed formula (wff) in propositional logic is defined recursively as the smallest set satisfying the three rules:
+
+p is a wff if p is a propositional variable.
+¬ p is a wff if p is a wff.
+(p • q) is a wff if p and q are wffs  and • is one of the logical connectives  ∨, ∧, →, or ↔.
+The  definition can be used to determine whether any particular string of symbols is a wff:
+
+(p ∧ q) is a wff, because the propositional variables p and q  are wffs and ∧ is a logical connective.
+¬ (p ∧ q) is a wff, because (p ∧ q) is a wff.
+(¬ p ∧  ¬ q) is a wff, because ¬ p and ¬ q are wffs and ∧ is a logical connective.
+
+Recursive definitions as logic programs
+
+Logic programs can be understood as sets of recursive  definitions. For example, the recursive definition of even number can be written as the logic program:
+
+Here :- represents if, and s(X) represents the successor of X, namely X+1, as in Peano arithmetic. 
+The logic programming language Prolog uses backward reasoning to solve goals and answer queries. For example, given the query ?- even(s(s(0))) it produces the answer true. Given the query ?- even(s(0)) it produces the answer false.
+The program can be used not only to check whether a query is true, but also to generate answers that are true. For example:
+
+Logic programs significantly extend recursive definitions by including the use of negative conditions, implemented by negation as failure, as in the definition:

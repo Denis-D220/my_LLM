@@ -1,0 +1,108 @@
+A satellite constellation is a group of artificial satellites working together as a system. Unlike a single satellite, a constellation can provide permanent global or near-global coverage, such that at any time everywhere on Earth at least one satellite is visible. Satellites are typically placed in sets of complementary orbital planes and connect to globally distributed ground stations. They may also use inter-satellite communication.
+
+Other satellite groups
+Satellite constellations should not be confused with:
+
+satellite clusters, which are groups of satellites moving very close together in almost identical orbits (see satellite formation flying);
+satellite series or satellite programs (such as Landsat), which are generations of satellites launched in succession;
+satellite fleets, which are groups of satellites from the same manufacturer or operator that function independently from each other (not as a system).
+
+Overview
+
+Satellites in medium Earth orbit (MEO) and low Earth orbit (LEO) are often deployed in satellite constellations, because the coverage area provided by a single satellite only covers a small area that moves as the satellite travels at the high angular velocity needed to maintain its orbit. Many MEO or LEO satellites are needed to maintain continuous coverage over an area. This contrasts with geostationary satellites, where a single satellite, at a much higher altitude and moving at the same angular velocity as the rotation of the Earth's surface, provides permanent coverage over a large area.
+For some applications, in particular digital connectivity, the lower altitude of MEO and LEO satellite constellations provide advantages over a geostationary satellite, with lower path losses (reducing power requirements and costs) and latency. The propagation delay for a round-trip internet protocol transmission via a geostationary satellite can be over 600 ms, but as low as 125 ms for a MEO satellite or 30 ms for a LEO system.
+Examples of satellite constellations include the Global Positioning System (GPS), Galileo and GLONASS constellations for navigation and geodesy in MEO, the Iridium and Globalstar satellite telephony services and Orbcomm messaging service in LEO, the Disaster Monitoring Constellation and RapidEye for remote sensing in Sun-synchronous LEO, Russian Molniya and Tundra communications constellations in highly elliptic orbit, and satellite broadband constellations, under construction from Starlink and OneWeb in LEO, and operational from O3b in MEO.
+
+Design
+
+Optimization-based Design
+Designing a satellite constellation (i.e., determining the orbital distribution of its constituents) is a complex problem that typically uses satellite-to-target coverage as the primary figure of merit. Naturally, the resulting constellation depends on the mission requirements and objectives and can be characterized by its geometry. That is, either symmetric or asymmetric constellations.
+Symmetric constellations are traditionally proposed for applications that require global coverage (e.g., telecommunications). Notable symmetric constellations proposed in the literature include Walker Delta and Star, and Rosette.
+Asymmetric constellations are typically adopted when regional coverage (i.e., the distribution of targets is concentrated around specific locations rather than being globally uniform) is required. Asymmetric constellations are proposed to address disaster monitoring, orbital debris remediation, and cislunar space domain awareness.
+Large satellite constellations are evaluated against equivalent power flux density (EPFD) limits to ensure their combined transmissions remain compatible with geostationary satellite services.
+The need for optimization in constellation design arises from the large number of degrees of freedom in the design space. For example, the payload characteristics, required temporal coverage resolution (e.g., continuous or discontinuous), targets' distribution, and candidate orbits. Conventional optimization methodologies used for constellation design include:
+
+Full enumeration 
+Mixed-integer linear programming
+Metaheuristics 
+
+Walker Constellation
+There are a large number of constellations that may satisfy a particular mission. Usually constellations are designed so that the satellites have similar orbits, eccentricity and inclination so that any perturbations affect each satellite in approximately the same way. In this way, the geometry can be preserved without excessive station-keeping thereby reducing the fuel usage and hence increasing the life of the satellites. Another consideration is that the phasing of each satellite in an orbital plane maintains sufficient separation to avoid collisions or interference at orbit plane intersections.
+
+A class of circular orbit geometries that has become popular is the Walker Delta Pattern constellation.
+This has an associated notation to describe it which was proposed by John Walker. His notation is:
+
+i: t/p/f
+where:
+
+i is the inclination;
+t is the total number of satellites;
+p is the number of equally spaced planes; and
+f is the relative spacing between satellites in adjacent planes. The change in true anomaly (in degrees) for equivalent satellites in neighbouring planes is equal to f × 360 / t.
+For example, the Galileo navigation system is a Walker Delta 56°: 24/3/1 constellation. This means there are 24 satellites in 3 planes inclined at 56 degrees, spanning the 360 degrees around the equator. The "1" defines the phasing between the planes, and how they are spaced. The Walker Delta is also known as the Ballard rosette, after A. H. Ballard's similar earlier work. Ballard's notation is (t,p,m) where m is a multiple of the fractional offset between planes.
+
+Another popular constellation type is the near-polar Walker Star, which is used by Iridium. Here, the satellites are in near-polar circular orbits across approximately 180 degrees, travelling north on one side of the Earth, and south on the other. The active satellites in the full Iridium constellation form a Walker Star of 86.4°: 66/6/2, i.e. the phasing repeats every two planes. Walker uses similar notation for stars and deltas, which can be confusing.
+These sets of circular orbits at constant altitude are sometimes referred to as orbital shells.
+
+Orbital shell
+In spaceflight, an orbital shell is a set of artificial satellites in circular orbits at a certain fixed altitude. In the design of satellite constellations, an orbital shell usually refers to a collection of circular orbits with the same altitude and, oftentimes, orbital inclination, 
+distributed evenly in celestial longitude (and mean anomaly). 
+For a sufficiently high inclination and altitude the orbital shell covers the entire orbited body. In other cases the coverage extends up to a certain maximum latitude.
+Several existing satellite constellations typically use a single orbital shell. New large megaconstellations have been proposed that consist of multiple orbital shells.
+
+List of satellite constellations
+
+Navigational satellite constellations
+
+Communications satellite constellations
+
+Broadcasting
+Sirius Satellite Radio until 2013
+XM Satellite Radio until 2011
+Sirius XM Radio -operational
+SES
+Othernet
+Molniya (discontinued)
+
+Monitoring
+Spire (AIS, ADS-B)
+Iridium (AIS, ADS-B, IoT)
+Myriota (IoT)
+Swarm Technologies (IoT)
+Astrocast (IoT)
+TDRSS
+
+Internet access
+
+Other Internet access systems are proposed or currently being developed:
+Some systems were proposed but never realized:
+
+Progress
+Boeing Satellite is transferring the application to OneWeb
+LeoSat shut down completely in 2019
+The OneWeb constellation had 6 pilot satellites in February 2019, 74 satellites launched as of 21 March 2020 but filed for bankruptcy on 27 March 2020
+Starlink: first mission (Starlink 0) launched on 24 May 2019; 955 satellites launched, 51 deorbited, 904 in orbit as of 25 November 2020; public beta test in limited latitude range started in November 2020
+O3b mPOWER: first 6 satellites launched December 2022-November 2023 with service start April 2024. 7 more in 2024–2026.
+Telesat LEO: two prototypes: 2018 launch
+CASIC Hongyun: prototype launched in December 2018
+CASC Hongyan prototype launched in December 2018, might be merged with Hongyun
+Project Kuiper: FCC filing in July 2019. Prototypes launched in October 2023.
+
+Earth observation satellite constellations
+
+RADARSAT Constellation
+Planet Labs
+Pléiades 1A and 1B
+Satellogic
+RapidEye
+Disaster Monitoring Constellation
+A-train
+SPOT 6 and SPOT 7
+Spire
+Synspective
+Proposed satellite constellations of EO mission:
+SatLeo
+Scout NanoMagSat
+Veery
+REC
+StingRay

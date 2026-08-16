@@ -1,0 +1,26 @@
+Octopart is a web-based search engine and data platform for electronic and industrial components. It aggregates catalog, pricing, availability, and technical parts data with related content like CAD models, datasheets, and eval kits from distributors and manufacturers online, allowing engineers and purchasing teams to search, compare, and source parts from a single interface. It is owned by Altium Limited and headquartered in La Jolla, California. 
+
+History
+Octopart was founded in 2007 by three physics graduate school students, Andres Morey, Sam Wurzel, and Harish Agarwal. After leaving graduate school, Morey and Wurzel participated in Y Combinator, the startup accelerator run by Paul Graham and Jessica Livingston.
+In 2015, Octopart was acquired by Altium Limited, a software company known for its pcb design tool Altium Designer. Following the acquisition, Octopart continued to operate as an independent product brand within Altium's design and data platform.
+In August 2024, Renesas Electronics Corporation completed its acquisition of Altium Limited for a total equity value of approximately A$9.1 billion, making Altium a wholly owned subsidiary of Renesas and Octopart an indirect subsidiary of the Renesas group.
+In February 2025, Octopart migrated all user accounts to Altium Identity, a unified login system shared across Altium products including Altium Designer, Valispace, and Altium 365. The company reported 20 million unique users in 2024.
+
+Business model
+Octopart's service is free for end users to search and browse. Revenue is generated primarily by business customers that pay for traffic, sponsorship, or access to data via APIs and feeds. Distributors and manufacturers can list their inventories and receive qualified referral traffic when users click through to purchase parts. Additional commercial offerings include data services and integrations for organizations that need large-scale or customized access to the component database.
+Octopart primarily serves hardware and electronics design engineers, procurement and purchasing managers, supply-chain and component engineers, electronics manufacturing services (EMS) providers, and advanced hobbyists. Typical use cases include component selection during schematic and PCB design, BOM validation, identifying alternates during shortages or price changes, comparing distributor offers for volume purchasing, and feeding component data into enterprise systems through APIs.
+
+Products and functionalities
+Octopart combines search, data aggregation, and supply-chain information into a single interface. Documented features include parametric search, which allows users to filter by electrical and mechanical parameters such as package type, tolerance, voltage rating, or temperature range; smart query handling designed to recognize numbers, units, and fractions and map them to technical attributes; and algorithms that suggest alternative components with similar or compatible specifications. For many components, the platform provides lifecycle status indicators such as active or not recommended for new design, historical stock and price trend data, and links to datasheets, PCB symbols, footprints, and 3D models.
+
+Component search engine
+Octopart's core functionality is its online search engine for electronic components. Users can search by manufacturer part number, keyword, or technical parameters to locate components across a large aggregated database. The platform returns a consolidated view of offers from multiple distributors, including prices, order quantities, and lead times, along with stock and availability information, links to datasheets and technical documentation, and manufacturer information.
+
+BOM tool
+Octopart provides a web-based bill of materials (BOM) management tool that allows users to upload or create BOMs, automatically match part numbers, and compare sourcing options across an entire project. The tool can match BOM line items to components in Octopart's database, aggregate offers from multiple distributors including price breaks and availability, respect preferred or approved distributor lists set by the user, and export costed BOMs or pre-built distributor shopping carts for purchasing through a feature called Octocart.
+
+API and integrations
+Octopart exposes its component data through APIs that can be integrated into procurement tools, inventory systems, and electronic design environments. Octopart's data is also integrated into Altium's products and related platforms, enabling component information and supply-chain visibility inside PCB design tools.
+
+Octopart Discover
+Octopart Discover is a context-driven component discovery platform announced in 2025 and expected to be available in the second half of 2026. Rather than beginning with a part number, the platform is designed to start from system intent, allowing engineers to define functional blocks, constraints, and requirements and narrow component options to those that fit the broader design context.

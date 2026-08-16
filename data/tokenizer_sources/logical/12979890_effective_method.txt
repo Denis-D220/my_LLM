@@ -1,0 +1,19 @@
+In metalogic, mathematical logic, and computability theory, an effective method or effective procedure is a finite-time, deterministic procedure for solving a problem from a specific class. An effective method is sometimes also called a mechanical method or procedure. Functions for which an effective method exists are sometimes called effectively calculable.
+
+Definition
+Formally, a method is called effective to a specific class of problems when it satisfies the following criteria:
+
+It consists of a finite number of exact, finite instructions.
+When it is applied to a problem from its class:
+It always finishes (terminates) after a finite number of steps.
+It always produces a correct answer.
+In principle, it can be done by a human without any aids except writing materials.
+Its instructions need only to be followed rigorously to succeed. In other words, it requires no ingenuity to succeed.
+Optionally, it may also be required that the method never returns a result as if it were an answer when the method is applied to a problem from outside its class. Adding this requirement reduces the set of classes for which there is an effective method.
+
+Algorithms
+An effective method for calculating the values of a function is called "an algorithm".
+
+Computable functions
+Several independent efforts to give a formal characterization of effective calculability led to a variety of proposed definitions (general recursive functions, Turing machines, λ-calculus) that later were shown to be equivalent. The notion captured by these definitions is known as recursive or effective computability.
+The Church–Turing thesis states that the two notions coincide: any number-theoretic function that is effectively calculable is recursively computable.

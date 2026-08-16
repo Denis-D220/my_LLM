@@ -1,0 +1,85 @@
+A mass flow meter, also known as an inertial flow meter, is a device that measures mass flow rate of a fluid traveling through a tube. The mass flow rate is the mass of the fluid traveling past a fixed point per unit time, in SI units of kilograms per second.
+The mass flow meter should not be confused with volumetric flow meters, which measure the volumetric flow rate (volume per unit time, in units such as cubic meters per second). The two are related by the fluid density: if the density is constant, then the relationship is simply a scaling constant. However, the density of the fluid may change with temperature, pressure, or composition. 
+The Coriolis flow meter is based on the Coriolis force, which bends rotating objects depending on their velocity. 
+
+Configurations
+There are two basic configurations of Coriolis flow meter: the curved tube flow meter (described below) and the straight tube flow meter (not further discussed).
+
+The animations on the right do not represent an actually existing Coriolis flow meter design. The purpose of the animations is to illustrate the operating principle, and to show the connection with rotation.
+Fluid is being pumped through the mass flow meter. When there is mass flow, the tube twists slightly. The arm through which fluid flows away from the axis of rotation must exert a force on the fluid, to increase its angular momentum, so it bends backwards. The arm through which fluid is pushed back to the axis of rotation must exert a force on the fluid to decrease the fluid's angular momentum again, hence that arm will bend forward. In other words, the inlet arm (containing an outwards directed flow), is lagging behind the overall rotation, the part which in rest is parallel to the axis is now skewed, and the outlet arm (containing an inwards directed flow) leads the overall rotation.
+
+The animation on the right represents how curved tube mass flow meters are designed. The fluid is led through two parallel tubes. An actuator (not shown) induces equal counter vibrations on the sections parallel to the axis, to make the measuring device less sensitive to outside vibrations. The actual frequency of the vibration depends on the size of the mass flow meter, and ranges from 80 to 1000 Hz. The amplitude of the vibration is too small to be seen, but it can be felt by touch.
+When no fluid is flowing, the motion of the two tubes is symmetrical, as shown in the left animation. The animation on the right illustrates what happens during mass flow: some twisting of the tubes. The arm carrying the flow away from the axis of rotation must exert a force on the fluid to accelerate the flowing mass to the vibrating speed of the tubes at the outside (increase of absolute angular momentum), so it is lagging behind the overall vibration. The arm through which fluid is pushed back towards the axis of movement must exert a force on the fluid to decrease the fluid's absolute angular speed (angular momentum) again, hence that arm leads the overall vibration.
+The inlet arm and the outlet arm vibrate with the same frequency as the overall vibration, but when there is mass flow the two vibrations are out of sync: the inlet arm is behind, the outlet arm is ahead. The two vibrations are shifted in phase with respect to each other, and the degree of phase-shift is a measure for the amount of mass that is flowing through the tubes and line.
+
+Density and volume measurements
+The mass flow of a U-shaped Coriolis flow meter is given as:
+
+  
+    
+      
+        
+          Q
+          
+            m
+          
+        
+        =
+        
+          
+            
+              
+                K
+                
+                  u
+                
+              
+              −
+              
+                I
+                
+                  u
+                
+              
+              
+                ω
+                
+                  2
+                
+              
+            
+            
+              2
+              K
+              
+                d
+                
+                  2
+                
+              
+            
+          
+        
+        τ
+      
+    
+    {\displaystyle Q_{m}={\frac {K_{u}-I_{u}\omega ^{2}}{2Kd^{2}}}\tau }
+  
+
+where Ku is the temperature dependent stiffness of the tube, K is a shape-dependent factor, d is the width, τ is the time lag, ω is the vibration frequency, and Iu is the inertia of the tube. As the inertia of the tube depend on its contents, knowledge of the fluid density is needed for the calculation of an accurate mass flow rate.
+If the density changes too often for manual calibration to be sufficient, the Coriolis flow meter can be adapted to measure the density as well. The natural vibration frequency of the flow tubes depends on the combined mass of the tube and the fluid contained in it. By setting the tube in motion and measuring the natural frequency, the mass of the fluid contained in the tube can be deduced. Dividing the mass on the known volume of the tube gives us the density of the fluid.
+An instantaneous density measurement allows the calculation of flow in volume per time by dividing mass flow with density.
+
+Calibration
+Both mass flow and density measurements depend on the vibration of the tube. Calibration is affected by changes in the rigidity of the flow tubes.
+Changes in temperature and pressure will cause the tube rigidity to change, but these can be compensated for through pressure and temperature zero and span compensation factors.
+Additional effects on tube rigidity will cause shifts in the calibration factor over time due to degradation of the flow tubes. These effects include pitting, cracking, coating, erosion or corrosion. It is not possible to compensate for these changes dynamically, but efforts to monitor the effects may be made through regular meter calibration or verification checks. If a change is deemed to have occurred, but is considered to be acceptable, the offset may be added to the existing calibration factor to ensure continued accurate measurement.
+
+Multiphase flow meters
+
+The fluid may also be in a multiphase flow, a combination of phases such as a liquid with entrained bubbles. Actual density can be determined due to dependency of sound velocity on the controlled liquid concentration.
+
+History and parallel development
+While the fundamental physics of the Coriolis effect were published by French mathematician Gaspard-Gustave de Coriolis in 1835, the practical application of this principle to industrial fluid dynamics evolved independently across different regions during the mid-20th century.
+Early theoretical work and experimental testing on vibrating mass flowmeters were conducted in the Soviet Union during the late 1960s and early 1970s, driven by the need to measure complex multiphase (oil-gas-water) flows at wellheads. In 1969, Soviet researchers I. Y. Rivkin, O. P. Shishkin, and V. N. Skugorov filed Author's Certificate No. 246101 for a method of measuring the mass flow rate of liquids and gases using vibrational elements. In 1972, Rivkin and V. K. Sorokin published empirical validation for tracking gas-liquid mixtures via vibrating structural phase shifts in the journal Devices and Control Systems (Приборы и системы управления). Rivkin's work on multiphase fluid metrics culminated in international recognition with the grant of US Patent 4,096,745 in 1978 and the publication of his definitive monograph, Vibrating Mass Flowmeters (Вибрационные массовые расходомеры), in 1980.
+Concurrently and independently in the United States, American electrical engineer James E. Smith sought a precise solution for industrial mass flow measurement without relying on intrusive, high-maintenance internal moving parts. In 1977, Smith designed and commercialized a practical industrial prototype utilizing a vibrating, curved U-shaped tube driven by electromagnetic coils. He founded Micro Motion, Inc. in Boulder, Colorado, to mass-produce the technology. Early single-tube configurations were susceptible to external plant vibrations, leading Micro Motion to introduce the dual-tube design in 1983, which utilized opposing vibrations to cancel out environmental noise. Later refinements by European manufacturers, including Endress+Hauser (1987) and KROHNE (1994), introduced dual and single straight-tube designs to accommodate hygienic processes in the food and pharmaceutical sectors.

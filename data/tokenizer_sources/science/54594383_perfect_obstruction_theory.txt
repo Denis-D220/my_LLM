@@ -1,0 +1,630 @@
+In algebraic geometry, given a Deligne–Mumford stack X, a perfect obstruction theory for X consists of:
+
+a perfect two-term complex 
+  
+    
+      
+        E
+        =
+        [
+        
+          E
+          
+            −
+            1
+          
+        
+        →
+        
+          E
+          
+            0
+          
+        
+        ]
+      
+    
+    {\displaystyle E=[E^{-1}\to E^{0}]}
+  
+ in the derived category 
+  
+    
+      
+        D
+        (
+        
+          Qcoh
+        
+        (
+        X
+        
+          )
+          
+            e
+            t
+          
+        
+        )
+      
+    
+    {\displaystyle D({\text{Qcoh}}(X)_{et})}
+  
+ of quasi-coherent étale sheaves on X, and
+a morphism 
+  
+    
+      
+        φ
+        :
+        E
+        →
+        
+          
+            
+              L
+            
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle \varphi \colon E\to {\textbf {L}}_{X}}
+  
+, where 
+  
+    
+      
+        
+          
+            
+              L
+            
+          
+          
+            X
+          
+        
+      
+    
+    {\displaystyle {\textbf {L}}_{X}}
+  
+ is the cotangent complex of X, that induces an isomorphism on 
+  
+    
+      
+        
+          h
+          
+            0
+          
+        
+      
+    
+    {\displaystyle h^{0}}
+  
+ and an epimorphism on 
+  
+    
+      
+        
+          h
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle h^{-1}}
+  
+.
+The notion was introduced by Kai Behrend and Barbara Fantechi (1997) for an application to the intersection theory on moduli stacks; in particular, to define a virtual fundamental class.
+
+Examples
+
+Schemes
+Consider a regular embedding 
+  
+    
+      
+        I
+        :
+        Y
+        →
+        W
+      
+    
+    {\displaystyle I\colon Y\to W}
+  
+ fitting into a cartesian square
+
+  
+    
+      
+        
+          
+            
+              
+                X
+              
+              
+                
+                  
+                    →
+                    
+                      j
+                    
+                  
+                
+              
+              
+                V
+              
+            
+            
+              
+                g
+                ↓
+              
+              
+              
+                ↓
+                f
+              
+            
+            
+              
+                Y
+              
+              
+                
+                  
+                    →
+                    
+                      i
+                    
+                  
+                
+              
+              
+                W
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{matrix}X&{\xrightarrow {j}}&V\\g\downarrow &&\downarrow f\\Y&{\xrightarrow {i}}&W\end{matrix}}}
+  
+
+where 
+  
+    
+      
+        V
+        ,
+        W
+      
+    
+    {\displaystyle V,W}
+  
+ are smooth. Then, the complex
+
+  
+    
+      
+        
+          E
+          
+            ∙
+          
+        
+        =
+        [
+        
+          g
+          
+            ∗
+          
+        
+        
+          N
+          
+            Y
+            
+              /
+            
+            W
+          
+          
+            ∨
+          
+        
+        →
+        
+          j
+          
+            ∗
+          
+        
+        
+          Ω
+          
+            V
+          
+        
+        ]
+      
+    
+    {\displaystyle E^{\bullet }=[g^{*}N_{Y/W}^{\vee }\to j^{*}\Omega _{V}]}
+  
+ (in degrees 
+  
+    
+      
+        −
+        1
+        ,
+        0
+      
+    
+    {\displaystyle -1,0}
+  
+)
+forms a perfect obstruction theory for X. The map comes from the composition
+
+  
+    
+      
+        
+          g
+          
+            ∗
+          
+        
+        
+          N
+          
+            Y
+            
+              /
+            
+            W
+          
+          
+            ∨
+          
+        
+        →
+        
+          g
+          
+            ∗
+          
+        
+        
+          i
+          
+            ∗
+          
+        
+        
+          Ω
+          
+            W
+          
+        
+        =
+        
+          j
+          
+            ∗
+          
+        
+        
+          f
+          
+            ∗
+          
+        
+        
+          Ω
+          
+            W
+          
+        
+        →
+        
+          j
+          
+            ∗
+          
+        
+        
+          Ω
+          
+            V
+          
+        
+      
+    
+    {\displaystyle g^{*}N_{Y/W}^{\vee }\to g^{*}i^{*}\Omega _{W}=j^{*}f^{*}\Omega _{W}\to j^{*}\Omega _{V}}
+  
+
+This is a perfect obstruction theory because the complex comes equipped with a map to 
+  
+    
+      
+        
+          
+            L
+          
+          
+            X
+          
+          
+            ∙
+          
+        
+      
+    
+    {\displaystyle \mathbf {L} _{X}^{\bullet }}
+  
+ coming from the maps 
+  
+    
+      
+        
+          g
+          
+            ∗
+          
+        
+        
+          
+            L
+          
+          
+            Y
+          
+          
+            ∙
+          
+        
+        →
+        
+          
+            L
+          
+          
+            X
+          
+          
+            ∙
+          
+        
+      
+    
+    {\displaystyle g^{*}\mathbf {L} _{Y}^{\bullet }\to \mathbf {L} _{X}^{\bullet }}
+  
+ and 
+  
+    
+      
+        
+          j
+          
+            ∗
+          
+        
+        
+          
+            L
+          
+          
+            V
+          
+          
+            ∙
+          
+        
+        →
+        
+          
+            L
+          
+          
+            X
+          
+          
+            ∙
+          
+        
+      
+    
+    {\displaystyle j^{*}\mathbf {L} _{V}^{\bullet }\to \mathbf {L} _{X}^{\bullet }}
+  
+. Note that the associated virtual fundamental class is 
+  
+    
+      
+        [
+        X
+        ,
+        
+          E
+          
+            ∙
+          
+        
+        ]
+        =
+        
+          i
+          
+            !
+          
+        
+        [
+        V
+        ]
+      
+    
+    {\displaystyle [X,E^{\bullet }]=i^{!}[V]}
+  
+
+Example 1
+Consider a smooth projective variety 
+  
+    
+      
+        Y
+        ⊂
+        
+          
+            P
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle Y\subset \mathbb {P} ^{n}}
+  
+. If we set 
+  
+    
+      
+        V
+        =
+        W
+      
+    
+    {\displaystyle V=W}
+  
+, then the perfect obstruction theory in 
+  
+    
+      
+        
+          D
+          
+            [
+            −
+            1
+            ,
+            0
+            ]
+          
+        
+        (
+        X
+        )
+      
+    
+    {\displaystyle D^{[-1,0]}(X)}
+  
+ is
+
+  
+    
+      
+        [
+        
+          N
+          
+            X
+            
+              /
+            
+            
+              
+                P
+              
+              
+                n
+              
+            
+          
+          
+            ∨
+          
+        
+        →
+        
+          Ω
+          
+            
+              
+                P
+              
+              
+                n
+              
+            
+          
+        
+        ]
+      
+    
+    {\displaystyle [N_{X/\mathbb {P} ^{n}}^{\vee }\to \Omega _{\mathbb {P} ^{n}}]}
+  
+
+and the associated virtual fundamental class is
+
+  
+    
+      
+        [
+        X
+        ,
+        
+          E
+          
+            ∙
+          
+        
+        ]
+        =
+        
+          i
+          
+            !
+          
+        
+        [
+        
+          
+            P
+          
+          
+            n
+          
+        
+        ]
+      
+    
+    {\displaystyle [X,E^{\bullet }]=i^{!}[\mathbb {P} ^{n}]}
+  
+
+In particular, if 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is a smooth local complete intersection then the perfect obstruction theory is the cotangent complex (which is the same as the truncated cotangent complex).
+
+Deligne–Mumford stacks
+The previous construction works too with Deligne–Mumford stacks.
+
+Symmetric obstruction theory
+By definition, a symmetric obstruction theory is a perfect obstruction theory together with nondegenerate symmetric bilinear form.
+Example: Let f be a regular function on a smooth variety (or stack). Then the set of critical points of f carries a symmetric obstruction theory in a canonical way.
+Example: Let M be a complex symplectic manifold. Then the (scheme-theoretic) intersection of Lagrangian submanifolds of M carries a canonical symmetric obstruction theory.

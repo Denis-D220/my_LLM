@@ -1,0 +1,33 @@
+JsonML, the JSON Markup Language is a lightweight markup language used to map between XML (Extensible Markup Language) and JSON (JavaScript Object Notation). It converts an XML document or fragment into a JSON data structure for ease of use within JavaScript environments such as a web browser, allowing manipulation of XML data without the overhead of an XML parser.
+JsonML has greatest applicability in Ajax (Asynchronous JavaScript and XML) web applications. It is used to transport XHTML (eXtensible HyperText Markup Language) down to the client where it can be deterministically reconstructed into DOM (Document Object Model) elements. Progressive enhancement strategy can be employed during construction to bind dynamic behaviors to otherwise static elements.
+JsonML can also be used as  underlying structure for creating intricate client-side templates called JBST (JsonML+Browser-Side Templates). Syntactically JBST looks like JSP (JavaServer Pages) or ASP.NET (Active Server Pages .NET) user controls. Interactive examples are available on jsonml.org website.
+
+Syntax
+Conversion from XML to JsonML is partially reversible. XML Namespaces are handled by prepending the element name with the namespace prefix, e.g., <myns:myElement/> becomes ["myns:myElement"].
+
+Example Transformation
+JsonML allows any XML document to be represented uniquely as a JSON string. The syntax uses:
+
+JSON arrays to represent XML elements;
+JSON objects to represent attributes;
+JSON strings to represent text nodes.
+
+A “regular” JSON transformation produces a more compact representation, but loses some of the document structural information, in that it does not define whether a key-value pair is an attribute or a node:
+
+"Object Form" Misnomer
+In a JSON user group thread, Douglas Crockford incorrectly used the term "JsonML" to describe two variants: the "array form" and "object form". This was a misuse of the term JsonML which has always stood to mean what Crockford referred to as the "array form".
+
+Validation
+JsonML can be validated with the following JSON schema:
+
+Comparison to similar technologies
+
+XML/XSLT
+XML and XSLT (Extensible Stylesheet Language Transformations) can also produce client-side templating, and both allow caching of the template separate from the data. JBST uses JavaScript natively in the template, rather than requiring mixing of different types of control language.
+
+InnerHTML
+While seemingly used to perform similar tasks, JsonML and innerHTML are quite different. InnerHTML requires all the markup in an exact form, meaning that either the server is rendering the markup, or the programmer is performing expensive string concatenations in JavaScript.
+JsonML uses client-side templating through JBST, which means that HTML is converted into a JavaScript template at build time. At run time, the data is supplied and DOM elements are the result. The resulting DOM elements can be inserted or replace an existing element, which innerHTML cannot easily do without creating excess DOM elements. Rebinding only requires requesting additional data, which is smaller than fully expanded markup. As a result, large performance gains are often made, since the markup is requested or cached separately from the data.
+
+HTML message pattern/Browser-side templating
+For simplicity, innerHTML has been the preferred method for the HTML-Message pattern style of Ajax. However, tools like JsonFx aim to simplify JsonML and JBST implementation while still providing a full browser-side templating Ajax pattern.

@@ -1,0 +1,2697 @@
+In kinematics, circular motion is the motion of an object along a circular path. Examples of this include a stone tied to a string, a car moving around a curve, and a point on a rotating wheel. Circular motion can be uniform, meaning the speed is constant, or non-uniform, meaning the speed changes. Even in uniform circular motion, the object is accelerating because its velocity changes direction. The object accelerates toward the center of the circle; this inward acceleration is called centripetal acceleration. A force toward the center, called centripetal force, is required to produce this acceleration. Circular motion is also used to describe the motion of points in a rigid body rotating about a fixed axis, in which case each point in the body moves in a circle fixed around the axis of rotation.
+More examples of circular motion include special satellite orbits around the Earth (circular orbits), a ceiling fan's blades rotating around a hub, an electron moving perpendicular to a uniform magnetic field, and a gear turning inside a mechanism.
+Without centripetal acceleration, the object would move in a straight line, according to Newton's laws of motion.
+
+Uniform circular motion
+In physics, uniform circular motion describes motion along a circular path at constant speed. Although the speed is constant, the velocity changes because the direction of motion changes. Therefore, the object accelerates inward, toward the center of the circle. This inward acceleration is called centripetal acceleration.
+
+In rotation about a fixed axis, each particle of a rigid body moves in a circle centered on that axis. All particles share the same angular displacement, angular velocity, and angular acceleration, while their linear speed and acceleration depend on their distance from the axis.
+
+Basic formulas
+The main quantities used to describe circular motion are the radius, the time for one revolution, the angular velocity, the linear speed, and the centripetal acceleration.
+
+For motion in a circle of radius r, the circumference of the circle is C = 2πr. If the period for one rotation is T, the angular rate of rotation, also known as angular velocity, ω is:
+
+  
+    
+      
+        ω
+        =
+        
+          
+            
+              2
+              π
+            
+            T
+          
+        
+        =
+        2
+        π
+        f
+        =
+        
+          
+            
+              d
+              θ
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+    {\displaystyle \omega ={\frac {2\pi }{T}}=2\pi f={\frac {d\theta }{dt}}}
+  
+ and the units are radians/second.
+The speed of the object traveling the circle is:
+
+  
+    
+      
+        v
+        =
+        
+          
+            
+              2
+              π
+              r
+            
+            T
+          
+        
+        =
+        ω
+        r
+      
+    
+    {\displaystyle v={\frac {2\pi r}{T}}=\omega r}
+  
+
+The angle θ swept out in a time t is:
+
+  
+    
+      
+        θ
+        =
+        2
+        π
+        
+          
+            t
+            T
+          
+        
+        =
+        ω
+        t
+      
+    
+    {\displaystyle \theta =2\pi {\frac {t}{T}}=\omega t}
+  
+
+The angular acceleration, α, of the particle is:
+
+  
+    
+      
+        α
+        =
+        
+          
+            
+              d
+              ω
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+    {\displaystyle \alpha ={\frac {d\omega }{dt}}}
+  
+
+In the case of uniform circular motion, α will be zero.
+The inward acceleration caused by the changing direction of motion is:
+
+  
+    
+      
+        
+          a
+          
+            c
+          
+        
+        =
+        
+          
+            
+              v
+              
+                2
+              
+            
+            r
+          
+        
+        =
+        
+          ω
+          
+            2
+          
+        
+        r
+      
+    
+    {\displaystyle a_{c}={\frac {v^{2}}{r}}=\omega ^{2}r}
+  
+
+The centripetal and centrifugal force can also be found using acceleration. For a body of mass m, the centripetal force is, by Newton's second law,
+
+  
+    
+      
+        
+          F
+          
+            c
+          
+        
+        =
+        m
+        
+          a
+          
+            c
+          
+        
+        =
+        
+          
+            
+              m
+              
+                v
+                
+                  2
+                
+              
+            
+            r
+          
+        
+      
+    
+    {\displaystyle F_{c}=ma_{c}={\frac {mv^{2}}{r}}}
+  
+
+In the simplest case the speed, mass, and radius are constant.
+Consider a body of one kilogram, moving in a circle of radius one metre, with an angular velocity of one radian per second.
+
+The speed is 1 metre per second.
+The inward acceleration is 1 metre per square second, v2/r.
+It is subject to a centripetal force of 1 kilogram metre per square second, which is 1 newton.
+The momentum of the body is 1 kg·m·s−1.
+The moment of inertia is 1 kg·m2.
+The angular momentum is 1 kg·m2·s−1.
+The kinetic energy is 0.5 joule.
+The circumference of the orbit is 2π (~6.283) metres.
+The period of the motion is 2π seconds.
+The frequency is (2π)−1 hertz.
+
+In vector form
+The vector relationships are shown in Figure 1. The axis of rotation is shown as a vector ω perpendicular to the plane of the orbit and with a magnitude ω = dθ / dt. The direction of ω is chosen using the right-hand rule. With this convention for depicting rotation, the velocity is given by a vector cross product as
+
+  
+    
+      
+        
+          v
+        
+        =
+        
+          ω
+        
+        ×
+        
+          r
+        
+        ,
+      
+    
+    {\displaystyle \mathbf {v} ={\boldsymbol {\omega }}\times \mathbf {r} ,}
+  
+
+which is a vector perpendicular to both ω and r(t), tangential to the orbit, and of magnitude ω r. Likewise, the acceleration is given by
+
+  
+    
+      
+        
+          a
+        
+        =
+        
+          ω
+        
+        ×
+        
+          v
+        
+        =
+        
+          ω
+        
+        ×
+        
+          (
+          
+            
+              ω
+            
+            ×
+            
+              r
+            
+          
+          )
+        
+        ,
+      
+    
+    {\displaystyle \mathbf {a} ={\boldsymbol {\omega }}\times \mathbf {v} ={\boldsymbol {\omega }}\times \left({\boldsymbol {\omega }}\times \mathbf {r} \right),}
+  
+
+which is a vector perpendicular to both ω and v(t) of magnitude ω |v| = ω2 r and directed exactly opposite to r(t).
+
+In polar coordinates
+In polar coordinates, circular motion is especially simple because the radius is constant. The object’s position changes only through the angle around the circle. As a result, the velocity is tangent to the circle, while the centripetal part of the acceleration points inward.
+
+During circular motion, the body moves on a curve that can be described in the polar coordinate system as a fixed distance R from the center of the orbit taken as the origin, oriented at an angle θ(t) from some reference direction. See Figure 4. The displacement vector 
+  
+    
+      
+        
+          r
+        
+      
+    
+    {\displaystyle \mathbf {r} }
+  
+ is the radial vector from the origin to the particle location:
+
+  
+    
+      
+        
+          r
+        
+        (
+        t
+        )
+        =
+        R
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+        
+        ,
+      
+    
+    {\displaystyle \mathbf {r} (t)=R{\hat {\mathbf {u} }}_{R}(t)\,,}
+  
+
+where 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+ is the unit vector parallel to the radius vector at time t and pointing away from the origin. It is convenient to introduce the unit vector orthogonal to 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+ as well, namely 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+. It is customary to orient 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+ to point in the direction of travel along the orbit.
+The velocity is the time derivative of the displacement:
+
+  
+    
+      
+        
+          v
+        
+        (
+        t
+        )
+        =
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          r
+        
+        (
+        t
+        )
+        =
+        
+          
+            
+              d
+              R
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+        +
+        R
+        
+          
+            
+              d
+              
+                
+                  
+                    
+                      
+                        u
+                      
+                      ^
+                    
+                  
+                
+                
+                  R
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        
+        .
+      
+    
+    {\displaystyle \mathbf {v} (t)={\frac {d}{dt}}\mathbf {r} (t)={\frac {dR}{dt}}{\hat {\mathbf {u} }}_{R}(t)+R{\frac {d{\hat {\mathbf {u} }}_{R}}{dt}}\,.}
+  
+
+Because the radius of the circle is constant, the radial component of the velocity is zero. The unit vector 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+ has a time-invariant magnitude of unity, so as time varies its tip always lies on a circle of unit radius, with an angle θ the same as the angle of 
+  
+    
+      
+        
+          r
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle \mathbf {r} (t)}
+  
+. If the particle displacement rotates through an angle dθ in time dt, so does 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+, describing an arc on the unit circle of magnitude dθ. See the unit circle at the left of Figure 4. Hence: 
+
+  
+    
+      
+        
+          
+            
+              d
+              
+                
+                  
+                    
+                      
+                        u
+                      
+                      ^
+                    
+                  
+                
+                
+                  R
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            
+              d
+              θ
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+        
+        ,
+      
+    
+    {\displaystyle {\frac {d{\hat {\mathbf {u} }}_{R}}{dt}}={\frac {d\theta }{dt}}{\hat {\mathbf {u} }}_{\theta }(t)\,,}
+  
+
+where the direction of the change must be perpendicular to 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+ (or, in other words, along 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+) because any change 
+  
+    
+      
+        d
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle d{\hat {\mathbf {u} }}_{R}(t)}
+  
+ in the direction of 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+ would change the size of 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+. The sign is positive because an increase in dθ implies the object and 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+ have moved in the direction of 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+.
+Hence the velocity becomes:
+
+  
+    
+      
+        
+          v
+        
+        (
+        t
+        )
+        =
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          r
+        
+        (
+        t
+        )
+        =
+        R
+        
+          
+            
+              d
+              
+                
+                  
+                    
+                      
+                        u
+                      
+                      ^
+                    
+                  
+                
+                
+                  R
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        R
+        
+          
+            
+              d
+              θ
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+        =
+        R
+        ω
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+        
+        .
+      
+    
+    {\displaystyle \mathbf {v} (t)={\frac {d}{dt}}\mathbf {r} (t)=R{\frac {d{\hat {\mathbf {u} }}_{R}}{dt}}=R{\frac {d\theta }{dt}}{\hat {\mathbf {u} }}_{\theta }(t)=R\omega {\hat {\mathbf {u} }}_{\theta }(t)\,.}
+  
+
+The acceleration of the body can also be broken into radial and tangential components. The acceleration is the time derivative of the velocity:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  a
+                
+                (
+                t
+                )
+              
+              
+                
+                =
+                
+                  
+                    d
+                    
+                      d
+                      t
+                    
+                  
+                
+                
+                  v
+                
+                (
+                t
+                )
+                =
+                
+                  
+                    d
+                    
+                      d
+                      t
+                    
+                  
+                
+                
+                  (
+                  
+                    R
+                    ω
+                    
+                      
+                        
+                          
+                            
+                              u
+                            
+                            ^
+                          
+                        
+                      
+                      
+                        θ
+                      
+                    
+                    (
+                    t
+                    )
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                R
+                
+                  (
+                  
+                    
+                      
+                        
+                          d
+                          ω
+                        
+                        
+                          d
+                          t
+                        
+                      
+                    
+                    
+                      
+                        
+                          
+                            
+                              u
+                            
+                            ^
+                          
+                        
+                      
+                      
+                        θ
+                      
+                    
+                    (
+                    t
+                    )
+                    +
+                    ω
+                    
+                      
+                        
+                          d
+                          
+                            
+                              
+                                
+                                  
+                                    u
+                                  
+                                  ^
+                                
+                              
+                            
+                            
+                              θ
+                            
+                          
+                        
+                        
+                          d
+                          t
+                        
+                      
+                    
+                  
+                  )
+                
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbf {a} (t)&={\frac {d}{dt}}\mathbf {v} (t)={\frac {d}{dt}}\left(R\omega {\hat {\mathbf {u} }}_{\theta }(t)\right)\\&=R\left({\frac {d\omega }{dt}}{\hat {\mathbf {u} }}_{\theta }(t)+\omega {\frac {d{\hat {\mathbf {u} }}_{\theta }}{dt}}\right)\,.\end{aligned}}}
+  
+
+The time derivative of 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+ is found the same way as for 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+. Again, 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+ is a unit vector and its tip traces a unit circle with an angle that is π/2 + θ. Hence, an increase in angle dθ by 
+  
+    
+      
+        
+          r
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle \mathbf {r} (t)}
+  
+ implies 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+ traces an arc of magnitude dθ, and as 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+ is orthogonal to 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+, we have:
+
+  
+    
+      
+        
+          
+            
+              d
+              
+                
+                  
+                    
+                      
+                        u
+                      
+                      ^
+                    
+                  
+                
+                
+                  θ
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        −
+        
+          
+            
+              d
+              θ
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+        =
+        −
+        ω
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+        
+        ,
+      
+    
+    {\displaystyle {\frac {d{\hat {\mathbf {u} }}_{\theta }}{dt}}=-{\frac {d\theta }{dt}}{\hat {\mathbf {u} }}_{R}(t)=-\omega {\hat {\mathbf {u} }}_{R}(t)\,,}
+  
+
+where a negative sign is necessary to keep 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+ orthogonal to 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+. (Otherwise, the angle between 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{\theta }(t)}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\hat {\mathbf {u} }}_{R}(t)}
+  
+ would decrease with an increase in dθ.) See the unit circle at the left of Figure 4. Consequently, the acceleration is:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  a
+                
+                (
+                t
+                )
+              
+              
+                
+                =
+                R
+                
+                  (
+                  
+                    
+                      
+                        
+                          d
+                          ω
+                        
+                        
+                          d
+                          t
+                        
+                      
+                    
+                    
+                      
+                        
+                          
+                            
+                              u
+                            
+                            ^
+                          
+                        
+                      
+                      
+                        θ
+                      
+                    
+                    (
+                    t
+                    )
+                    +
+                    ω
+                    
+                      
+                        
+                          d
+                          
+                            
+                              
+                                
+                                  
+                                    u
+                                  
+                                  ^
+                                
+                              
+                            
+                            
+                              θ
+                            
+                          
+                        
+                        
+                          d
+                          t
+                        
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                R
+                
+                  
+                    
+                      d
+                      ω
+                    
+                    
+                      d
+                      t
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          u
+                        
+                        ^
+                      
+                    
+                  
+                  
+                    θ
+                  
+                
+                (
+                t
+                )
+                −
+                
+                  ω
+                  
+                    2
+                  
+                
+                R
+                
+                  
+                    
+                      
+                        
+                          u
+                        
+                        ^
+                      
+                    
+                  
+                  
+                    R
+                  
+                
+                (
+                t
+                )
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbf {a} (t)&=R\left({\frac {d\omega }{dt}}{\hat {\mathbf {u} }}_{\theta }(t)+\omega {\frac {d{\hat {\mathbf {u} }}_{\theta }}{dt}}\right)\\&=R{\frac {d\omega }{dt}}{\hat {\mathbf {u} }}_{\theta }(t)-\omega ^{2}R{\hat {\mathbf {u} }}_{R}(t)\,.\end{aligned}}}
+  
+
+The centripetal acceleration is the radial component, which is directed radially inward:
+
+  
+    
+      
+        
+          
+            a
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+        =
+        −
+        
+          ω
+          
+            2
+          
+        
+        R
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            R
+          
+        
+        (
+        t
+        )
+        
+        ,
+      
+    
+    {\displaystyle \mathbf {a} _{R}(t)=-\omega ^{2}R{\hat {\mathbf {u} }}_{R}(t)\,,}
+  
+
+while the tangential component changes the magnitude of the velocity: 
+
+  
+    
+      
+        
+          
+            a
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+        =
+        R
+        
+          
+            
+              d
+              ω
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+        =
+        
+          
+            
+              d
+              R
+              ω
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+        =
+        
+          
+            
+              d
+              
+                |
+                
+                  
+                    v
+                  
+                  (
+                  t
+                  )
+                
+                |
+              
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              
+                
+                  u
+                
+                ^
+              
+            
+          
+          
+            θ
+          
+        
+        (
+        t
+        )
+        
+        .
+      
+    
+    {\displaystyle \mathbf {a} _{\theta }(t)=R{\frac {d\omega }{dt}}{\hat {\mathbf {u} }}_{\theta }(t)={\frac {dR\omega }{dt}}{\hat {\mathbf {u} }}_{\theta }(t)={\frac {d\left|\mathbf {v} (t)\right|}{dt}}{\hat {\mathbf {u} }}_{\theta }(t)\,.}
+  
+
+Using complex numbers
+Circular motion can be described using complex numbers and Euler's formula. Let the x axis be the real axis and the 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ axis be the imaginary axis. The position of the body can then be given as 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  
+, a complex "vector":
+
+  
+    
+      
+        z
+        =
+        x
+        +
+        i
+        y
+        =
+        R
+        
+          (
+          
+            cos
+            ⁡
+            [
+            θ
+            (
+            t
+            )
+            ]
+            +
+            i
+            sin
+            ⁡
+            [
+            θ
+            (
+            t
+            )
+            ]
+          
+          )
+        
+        =
+        R
+        
+          e
+          
+            i
+            θ
+            (
+            t
+            )
+          
+        
+        
+        ,
+      
+    
+    {\displaystyle z=x+iy=R\left(\cos[\theta (t)]+i\sin[\theta (t)]\right)=Re^{i\theta (t)}\,,}
+  
+
+where i is the imaginary unit, and 
+  
+    
+      
+        θ
+        (
+        t
+        )
+      
+    
+    {\displaystyle \theta (t)}
+  
+ is the argument of the complex number as a function of time, t.
+Since the radius is constant:
+
+  
+    
+      
+        
+          
+            
+              R
+              ˙
+            
+          
+        
+        =
+        
+          
+            
+              R
+              ¨
+            
+          
+        
+        =
+        0
+        
+        ,
+      
+    
+    {\displaystyle {\dot {R}}={\ddot {R}}=0\,,}
+  
+
+where a dot indicates differentiation in respect of time.
+With this notation, the velocity becomes: 
+
+  
+    
+      
+        v
+        =
+        
+          
+            
+              z
+              ˙
+            
+          
+        
+        =
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            R
+            
+              e
+              
+                i
+                θ
+                [
+                t
+                ]
+              
+            
+          
+          )
+        
+        =
+        R
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            e
+            
+              i
+              θ
+              [
+              t
+              ]
+            
+          
+          )
+        
+        =
+        R
+        
+          e
+          
+            i
+            θ
+            (
+            t
+            )
+          
+        
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            i
+            θ
+            [
+            t
+            ]
+          
+          )
+        
+        =
+        i
+        R
+        
+          
+            
+              θ
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        
+          e
+          
+            i
+            θ
+            (
+            t
+            )
+          
+        
+        =
+        i
+        ω
+        R
+        
+          e
+          
+            i
+            θ
+            (
+            t
+            )
+          
+        
+        =
+        i
+        ω
+        z
+      
+    
+    {\displaystyle v={\dot {z}}={\frac {d}{dt}}\left(Re^{i\theta [t]}\right)=R{\frac {d}{dt}}\left(e^{i\theta [t]}\right)=Re^{i\theta (t)}{\frac {d}{dt}}\left(i\theta [t]\right)=iR{\dot {\theta }}(t)e^{i\theta (t)}=i\omega Re^{i\theta (t)}=i\omega z}
+  
+
+and the acceleration becomes:
+
+  
+    
+      
+        
+          
+            
+              
+                a
+              
+              
+                
+                =
+                
+                  
+                    
+                      v
+                      ˙
+                    
+                  
+                
+                =
+                i
+                
+                  
+                    
+                      ω
+                      ˙
+                    
+                  
+                
+                z
+                +
+                i
+                ω
+                
+                  
+                    
+                      z
+                      ˙
+                    
+                  
+                
+                =
+                
+                  (
+                  
+                    i
+                    
+                      
+                        
+                          ω
+                          ˙
+                        
+                      
+                    
+                    −
+                    
+                      ω
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                z
+              
+            
+            
+              
+              
+                
+                =
+                
+                  (
+                  
+                    i
+                    
+                      
+                        
+                          ω
+                          ˙
+                        
+                      
+                    
+                    −
+                    
+                      ω
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                R
+                
+                  e
+                  
+                    i
+                    θ
+                    (
+                    t
+                    )
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                −
+                
+                  ω
+                  
+                    2
+                  
+                
+                R
+                
+                  e
+                  
+                    i
+                    θ
+                    (
+                    t
+                    )
+                  
+                
+                +
+                
+                  
+                    
+                      ω
+                      ˙
+                    
+                  
+                
+                
+                  e
+                  
+                    i
+                    
+                      
+                        π
+                        2
+                      
+                    
+                  
+                
+                R
+                
+                  e
+                  
+                    i
+                    θ
+                    (
+                    t
+                    )
+                  
+                
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}a&={\dot {v}}=i{\dot {\omega }}z+i\omega {\dot {z}}=\left(i{\dot {\omega }}-\omega ^{2}\right)z\\&=\left(i{\dot {\omega }}-\omega ^{2}\right)Re^{i\theta (t)}\\&=-\omega ^{2}Re^{i\theta (t)}+{\dot {\omega }}e^{i{\frac {\pi }{2}}}Re^{i\theta (t)}\,.\end{aligned}}}
+  
+
+The first term is opposite in direction to the displacement vector and the second is perpendicular to it, just like the earlier results shown before.
+
+Velocity
+Figure 1 illustrates velocity and acceleration vectors for uniform motion at four different points in the orbit. Because the velocity v is tangent to the circular path, no two velocities point in the same direction. Although the object has a constant speed, its direction is always changing. This change in velocity is caused by an acceleration a, whose magnitude is (like that of the velocity) held constant, but whose direction also is always changing. The acceleration points radially inwards (centripetally) and is perpendicular to the velocity. This acceleration is known as centripetal acceleration.
+For a path of radius r, when an angle θ is swept out, the distance traveled on the periphery of the orbit is s = rθ. Therefore, the speed of travel around the orbit is
+
+  
+    
+      
+        v
+        =
+        r
+        
+          
+            
+              d
+              θ
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        r
+        ω
+        ,
+      
+    
+    {\displaystyle v=r{\frac {d\theta }{dt}}=r\omega ,}
+  
+
+where the angular rate of rotation is ω. (By rearrangement, ω = v/r.) Thus, v is a constant, and the velocity vector v also rotates with constant magnitude v, at the same angular rate ω.
+
+Relativistic circular motion
+In this case, the three-acceleration vector is perpendicular to the three-velocity vector, 
+
+  
+    
+      
+        
+          u
+        
+        ⋅
+        
+          a
+        
+        =
+        0.
+      
+    
+    {\displaystyle \mathbf {u} \cdot \mathbf {a} =0.}
+  
+
+and the square of proper acceleration, expressed as a scalar invariant, the same in all reference frames,
+
+  
+    
+      
+        
+          α
+          
+            2
+          
+        
+        =
+        
+          γ
+          
+            4
+          
+        
+        
+          a
+          
+            2
+          
+        
+        +
+        
+          γ
+          
+            6
+          
+        
+        
+          
+            (
+            
+              
+                u
+              
+              ⋅
+              
+                a
+              
+            
+            )
+          
+          
+            2
+          
+        
+        
+          /
+        
+        
+          c
+          
+            2
+          
+        
+        ,
+      
+    
+    {\displaystyle \alpha ^{2}=\gamma ^{4}a^{2}+\gamma ^{6}\left(\mathbf {u} \cdot \mathbf {a} \right)^{2}/c^{2},}
+  
+
+becomes the expression for circular motion, 
+
+  
+    
+      
+        
+          α
+          
+            2
+          
+        
+        =
+        
+          γ
+          
+            4
+          
+        
+        
+          a
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle \alpha ^{2}=\gamma ^{4}a^{2}.}
+  
+
+or, taking the positive square root and using the three-acceleration, we arrive at the proper acceleration for circular motion: 
+
+  
+    
+      
+        α
+        =
+        
+          γ
+          
+            2
+          
+        
+        
+          
+            
+              v
+              
+                2
+              
+            
+            r
+          
+        
+        .
+      
+    
+    {\displaystyle \alpha =\gamma ^{2}{\frac {v^{2}}{r}}.}
+  
+
+Acceleration
+
+The left-hand circle in Figure 2 is the orbit showing the velocity vectors at two adjacent times. On the right, these two velocities are moved so their tails coincide. Because speed is constant, the velocity vectors on the right sweep out a circle as time advances. For a swept angle dθ = ω dt the change in v is a vector at right angles to v and of magnitude v dθ, which in turn means that the magnitude of the acceleration is given by 
+
+  
+    
+      
+        
+          a
+          
+            c
+          
+        
+        =
+        v
+        
+          
+            
+              d
+              θ
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        v
+        ω
+        =
+        
+          
+            
+              v
+              
+                2
+              
+            
+            r
+          
+        
+      
+    
+    {\displaystyle a_{c}=v{\frac {d\theta }{dt}}=v\omega ={\frac {v^{2}}{r}}}
+  
+
+Non-uniform circular motion
+
+In non-uniform circular motion, an object moves along a circular path with changing speed. Because the speed changes, the object has tangential acceleration in addition to centripetal acceleration.
+The acceleration can be separated into two perpendicular components. The radial component, or centripetal acceleration, points toward the center of the circle and changes the direction of motion. The tangential component points along the tangent to the circle and changes the speed.
+The radial acceleration has magnitude
+
+  
+    
+      
+        
+          a
+          
+            r
+          
+        
+        =
+        
+          
+            
+              v
+              
+                2
+              
+            
+            r
+          
+        
+      
+    
+    {\displaystyle a_{r}={\frac {v^{2}}{r}}}
+  
+
+where v is the instantaneous speed and r is the radius of the circular path. The tangential acceleration has magnitude
+
+  
+    
+      
+        
+          a
+          
+            t
+          
+        
+        =
+        
+          
+            
+              d
+              v
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+    {\displaystyle a_{t}={\frac {dv}{dt}}}
+  
+.
+The total acceleration is the vector sum of the radial and tangential components. In uniform circular motion, the tangential component is zero because the speed is constant. In non-uniform circular motion, both components may be present.
+
+Applications
+Solving applications involving circular motion often involves force analysis. In uniform circular motion, the speed is constant, so the acceleration is entirely radial. In non-uniform circular motion, there is also tangential acceleration because the speed changes.
+The radial component of the net force provides the centripetal acceleration:
+
+  
+    
+      
+        
+          F
+          
+            r
+          
+        
+        =
+        m
+        
+          a
+          
+            r
+          
+        
+        =
+        
+          
+            
+              m
+              
+                v
+                
+                  2
+                
+              
+            
+            r
+          
+        
+      
+    
+    {\displaystyle F_{r}=ma_{r}={\frac {mv^{2}}{r}}}
+  
+
+Tangential acceleration is not responsible for keeping the object on a circular path; it changes the object's speed. If the speed is changing, the tangential component of the net force is:
+
+  
+    
+      
+        
+          F
+          
+            t
+          
+        
+        =
+        m
+        
+          a
+          
+            t
+          
+        
+        =
+        m
+        
+          
+            
+              d
+              v
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+    {\displaystyle F_{t}=ma_{t}=m{\frac {dv}{dt}}}
+  
+
+When drawing a free-body diagram, centripetal force is usually not drawn as a separate force. Instead, the real forces acting on the object are resolved into radial and tangential components.
+For example, at the top of a vertical circular path, the radial direction points downward toward the center of the circle. If an object is acted on by gravity and a downward normal force, the radial force equation is:
+
+  
+    
+      
+        
+          F
+          
+            r
+          
+        
+        =
+        n
+        +
+        m
+        g
+        =
+        
+          
+            
+              m
+              
+                v
+                
+                  2
+                
+              
+            
+            r
+          
+        
+      
+    
+    {\displaystyle F_{r}=n+mg={\frac {mv^{2}}{r}}}
+  
+
+In non-uniform circular motion, the total acceleration is the vector sum of the radial and tangential components:
+
+  
+    
+      
+        a
+        =
+        
+          
+            
+              a
+              
+                r
+              
+              
+                2
+              
+            
+            +
+            
+              a
+              
+                t
+              
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle a={\sqrt {a_{r}^{2}+a_{t}^{2}}}}

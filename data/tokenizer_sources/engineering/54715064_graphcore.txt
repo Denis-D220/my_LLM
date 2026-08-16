@@ -1,0 +1,17 @@
+Graphcore Limited is a British semiconductor company that develops accelerators for AI and machine learning. It has introduced a massively parallel Intelligence Processing Unit (IPU) that holds the complete machine learning model inside the processor.
+
+History
+Graphcore was founded in 2016 by Simon Knowles and Nigel Toon.
+In the autumn of 2016, Graphcore secured a first funding round led by Robert Bosch Venture Capital. Other backers included Samsung, Amadeus Capital Partners, C4 Ventures, Draper Esprit, Foundation Capital, and Pitango.
+In July 2017, Graphcore secured a round B funding led by Atomico, which was followed a few months later by $50 million in funding from Sequoia Capital.
+In December 2018, Graphcore closed its series D with $200 million raised at a $1.7 billion valuation, making the company a unicorn. Investors included Microsoft, Samsung and Dell Technologies.
+On 13 November 2019, Graphcore announced that its Graphcore C2 IPUs were available for preview on Microsoft Azure.
+Meta Platforms acquired the AI networking technology team from Graphcore in early 2023.
+In July 2024, Softbank Group agreed to acquire Graphcore for around $500 million. The deal is under review by the UK's Business Department's investment security unit.
+
+Products
+In 2016, Graphcore announced the world's first graph tool chain designed for machine intelligence called Poplar Software Stack.
+In July 2017, Graphcore announced its first chip, called the Colossus GC2, a "16 nm massively parallel, mixed-precision floating point processor", that became available in 2018. Packaged with two chips on a single PCI Express card, called the Graphcore C2 IPU (an Intelligence Processing Unit), it is stated to perform the same role as a GPU in conjunction with standard machine learning frameworks such as TensorFlow. The device relies on scratchpad memory for its performance rather than traditional cache hierarchies.
+In July 2020, Graphcore presented its second generation processor called GC200, built with TSMC's 7nm FinFET manufacturing process. GC200 is a 59 billion transistor, 823 square-millimeter integrated circuit with 1,472 computational cores and 900 Mbyte of local memory. In 2022, Graphcore and TSMC presented the Bow IPU, a 3D package of a GC200 die bonded face to face to a power-delivery die that allows for higher clock rate at lower core voltage. Graphcore aims at a Good machine, named after I.J. Good, enabling AI models with more parameters than the human brain has synapses.
+
+Both the older and newer chips can use 6 threads per tile (for a total of 7,296 and 8,832 threads, respectively) "MIMD (Multiple Instruction, Multiple Data) parallelism and has distributed, local memory as its only form of memory on the device" (except for registers). The older GC2 chip has 256 KiB per tile while the newer GC200 chip has about 630 KiB per tile that are arranged into islands (4 tiles per island), that are arranged into columns, and latency is best within tile. The IPU uses IEEE FP16, with stochastic rounding, and also single-precision FP32, at lower performance. Code and data executed locally must fit in a tile, but with message-passing, all on-chip or off-chip memory can be used, and software for AI makes it transparently possible, e.g. has PyTorch support.

@@ -1,0 +1,2607 @@
+In classical mechanics, a Liouville dynamical system (named after Joseph Liouville) is an exactly solvable  dynamical system in which the kinetic energy T and potential energy V can be expressed in terms of the s generalized coordinates q as follows:
+
+  
+    
+      
+        T
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          {
+          
+            
+              u
+              
+                1
+              
+            
+            (
+            
+              q
+              
+                1
+              
+            
+            )
+            +
+            
+              u
+              
+                2
+              
+            
+            (
+            
+              q
+              
+                2
+              
+            
+            )
+            +
+            ⋯
+            +
+            
+              u
+              
+                s
+              
+            
+            (
+            
+              q
+              
+                s
+              
+            
+            )
+          
+          }
+        
+        
+          {
+          
+            
+              v
+              
+                1
+              
+            
+            (
+            
+              q
+              
+                1
+              
+            
+            )
+            
+              
+                
+                  
+                    q
+                    ˙
+                  
+                
+              
+              
+                1
+              
+              
+                2
+              
+            
+            +
+            
+              v
+              
+                2
+              
+            
+            (
+            
+              q
+              
+                2
+              
+            
+            )
+            
+              
+                
+                  
+                    q
+                    ˙
+                  
+                
+              
+              
+                2
+              
+              
+                2
+              
+            
+            +
+            ⋯
+            +
+            
+              v
+              
+                s
+              
+            
+            (
+            
+              q
+              
+                s
+              
+            
+            )
+            
+              
+                
+                  
+                    q
+                    ˙
+                  
+                
+              
+              
+                s
+              
+              
+                2
+              
+            
+          
+          }
+        
+      
+    
+    {\displaystyle T={\frac {1}{2}}\left\{u_{1}(q_{1})+u_{2}(q_{2})+\cdots +u_{s}(q_{s})\right\}\left\{v_{1}(q_{1}){\dot {q}}_{1}^{2}+v_{2}(q_{2}){\dot {q}}_{2}^{2}+\cdots +v_{s}(q_{s}){\dot {q}}_{s}^{2}\right\}}
+  
+
+  
+    
+      
+        V
+        =
+        
+          
+            
+              
+                w
+                
+                  1
+                
+              
+              (
+              
+                q
+                
+                  1
+                
+              
+              )
+              +
+              
+                w
+                
+                  2
+                
+              
+              (
+              
+                q
+                
+                  2
+                
+              
+              )
+              +
+              ⋯
+              +
+              
+                w
+                
+                  s
+                
+              
+              (
+              
+                q
+                
+                  s
+                
+              
+              )
+            
+            
+              
+                u
+                
+                  1
+                
+              
+              (
+              
+                q
+                
+                  1
+                
+              
+              )
+              +
+              
+                u
+                
+                  2
+                
+              
+              (
+              
+                q
+                
+                  2
+                
+              
+              )
+              +
+              ⋯
+              +
+              
+                u
+                
+                  s
+                
+              
+              (
+              
+                q
+                
+                  s
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle V={\frac {w_{1}(q_{1})+w_{2}(q_{2})+\cdots +w_{s}(q_{s})}{u_{1}(q_{1})+u_{2}(q_{2})+\cdots +u_{s}(q_{s})}}}
+  
+
+The solution of this system consists of a set of separably integrable equations
+
+  
+    
+      
+        
+          
+            
+              2
+            
+            Y
+          
+        
+        
+        d
+        t
+        =
+        
+          
+            
+              d
+              
+                φ
+                
+                  1
+                
+              
+            
+            
+              E
+              
+                χ
+                
+                  1
+                
+              
+              −
+              
+                ω
+                
+                  1
+                
+              
+              +
+              
+                γ
+                
+                  1
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              d
+              
+                φ
+                
+                  2
+                
+              
+            
+            
+              E
+              
+                χ
+                
+                  2
+                
+              
+              −
+              
+                ω
+                
+                  2
+                
+              
+              +
+              
+                γ
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        ⋯
+        =
+        
+          
+            
+              d
+              
+                φ
+                
+                  s
+                
+              
+            
+            
+              E
+              
+                χ
+                
+                  s
+                
+              
+              −
+              
+                ω
+                
+                  s
+                
+              
+              +
+              
+                γ
+                
+                  s
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\sqrt {2}}{Y}}\,dt={\frac {d\varphi _{1}}{\sqrt {E\chi _{1}-\omega _{1}+\gamma _{1}}}}={\frac {d\varphi _{2}}{\sqrt {E\chi _{2}-\omega _{2}+\gamma _{2}}}}=\cdots ={\frac {d\varphi _{s}}{\sqrt {E\chi _{s}-\omega _{s}+\gamma _{s}}}}}
+  
+
+where E = T + V is the conserved energy and the 
+  
+    
+      
+        
+          γ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \gamma _{s}}
+  
+ are constants.  As described below, the variables have been changed from qs to φs, and the functions us and ws substituted by their counterparts χs and ωs.  This solution has numerous applications, such as the orbit of a small planet about two fixed stars under the influence of Newtonian gravity.  The Liouville dynamical system is one of several things named after Joseph Liouville, an eminent French mathematician.
+
+Example of bicentric orbits
+In classical mechanics, Euler's three-body problem describes the motion of a particle in a plane under the influence of two fixed centers, each of which attract the particle with an inverse-square force such as Newtonian gravity or Coulomb's law.  Examples of the bicenter problem include a planet moving around two slowly moving stars, or an electron moving in the electric field of two positively charged nuclei, such as the first ion of the hydrogen molecule H2, namely the hydrogen molecular ion or H2+.  The strength of the two attractions need not be equal; thus, the two stars may have different masses or the nuclei two different charges.
+
+Solution
+Let the fixed centers of attraction be located along the x-axis at ±a.   The potential energy of the moving particle is given by
+
+  
+    
+      
+        V
+        (
+        x
+        ,
+        y
+        )
+        =
+        
+          
+            
+              −
+              
+                μ
+                
+                  1
+                
+              
+            
+            
+              
+                
+                  (
+                  
+                    x
+                    −
+                    a
+                  
+                  )
+                
+                
+                  2
+                
+              
+              +
+              
+                y
+                
+                  2
+                
+              
+            
+          
+        
+        −
+        
+          
+            
+              μ
+              
+                2
+              
+            
+            
+              
+                
+                  (
+                  
+                    x
+                    +
+                    a
+                  
+                  )
+                
+                
+                  2
+                
+              
+              +
+              
+                y
+                
+                  2
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle V(x,y)={\frac {-\mu _{1}}{\sqrt {\left(x-a\right)^{2}+y^{2}}}}-{\frac {\mu _{2}}{\sqrt {\left(x+a\right)^{2}+y^{2}}}}.}
+  
+
+The two centers of attraction can be considered as the foci of a set of ellipses.  If either center were absent, the particle would move on one of these ellipses, as a solution of the Kepler problem.  Therefore, according to Bonnet's theorem, the same ellipses are the solutions for the bicenter problem.
+Introducing elliptic coordinates,
+
+  
+    
+      
+        x
+        =
+        a
+        cosh
+        ⁡
+        ξ
+        cos
+        ⁡
+        η
+        ,
+      
+    
+    {\displaystyle x=a\cosh \xi \cos \eta ,}
+  
+
+  
+    
+      
+        y
+        =
+        a
+        sinh
+        ⁡
+        ξ
+        sin
+        ⁡
+        η
+        ,
+      
+    
+    {\displaystyle y=a\sinh \xi \sin \eta ,}
+  
+
+the potential energy can be written as
+
+  
+    
+      
+        V
+        (
+        ξ
+        ,
+        η
+        )
+        =
+        
+          
+            
+              −
+              
+                μ
+                
+                  1
+                
+              
+            
+            
+              a
+              
+                (
+                
+                  cosh
+                  ⁡
+                  ξ
+                  −
+                  cos
+                  ⁡
+                  η
+                
+                )
+              
+            
+          
+        
+        −
+        
+          
+            
+              μ
+              
+                2
+              
+            
+            
+              a
+              
+                (
+                
+                  cosh
+                  ⁡
+                  ξ
+                  +
+                  cos
+                  ⁡
+                  η
+                
+                )
+              
+            
+          
+        
+        =
+        
+          
+            
+              −
+              
+                μ
+                
+                  1
+                
+              
+              
+                (
+                
+                  cosh
+                  ⁡
+                  ξ
+                  +
+                  cos
+                  ⁡
+                  η
+                
+                )
+              
+              −
+              
+                μ
+                
+                  2
+                
+              
+              
+                (
+                
+                  cosh
+                  ⁡
+                  ξ
+                  −
+                  cos
+                  ⁡
+                  η
+                
+                )
+              
+            
+            
+              a
+              
+                (
+                
+                  
+                    cosh
+                    
+                      2
+                    
+                  
+                  ⁡
+                  ξ
+                  −
+                  
+                    cos
+                    
+                      2
+                    
+                  
+                  ⁡
+                  η
+                
+                )
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle V(\xi ,\eta )={\frac {-\mu _{1}}{a\left(\cosh \xi -\cos \eta \right)}}-{\frac {\mu _{2}}{a\left(\cosh \xi +\cos \eta \right)}}={\frac {-\mu _{1}\left(\cosh \xi +\cos \eta \right)-\mu _{2}\left(\cosh \xi -\cos \eta \right)}{a\left(\cosh ^{2}\xi -\cos ^{2}\eta \right)}},}
+  
+
+and the kinetic energy as
+
+  
+    
+      
+        T
+        =
+        
+          
+            
+              m
+              
+                a
+                
+                  2
+                
+              
+            
+            2
+          
+        
+        
+          (
+          
+            
+              cosh
+              
+                2
+              
+            
+            ⁡
+            ξ
+            −
+            
+              cos
+              
+                2
+              
+            
+            ⁡
+            η
+          
+          )
+        
+        
+          (
+          
+            
+              
+                
+                  
+                    ξ
+                    ˙
+                  
+                
+              
+              
+                2
+              
+            
+            +
+            
+              
+                
+                  
+                    η
+                    ˙
+                  
+                
+              
+              
+                2
+              
+            
+          
+          )
+        
+        .
+      
+    
+    {\displaystyle T={\frac {ma^{2}}{2}}\left(\cosh ^{2}\xi -\cos ^{2}\eta \right)\left({\dot {\xi }}^{2}+{\dot {\eta }}^{2}\right).}
+  
+
+This is a Liouville dynamical system if ξ and η are taken as φ1 and φ2, respectively; thus, the function Y equals
+
+  
+    
+      
+        Y
+        =
+        
+          cosh
+          
+            2
+          
+        
+        ⁡
+        ξ
+        −
+        
+          cos
+          
+            2
+          
+        
+        ⁡
+        η
+      
+    
+    {\displaystyle Y=\cosh ^{2}\xi -\cos ^{2}\eta }
+  
+
+and the function W equals
+
+  
+    
+      
+        W
+        =
+        −
+        
+          μ
+          
+            1
+          
+        
+        
+          (
+          
+            cosh
+            ⁡
+            ξ
+            +
+            cos
+            ⁡
+            η
+          
+          )
+        
+        −
+        
+          μ
+          
+            2
+          
+        
+        
+          (
+          
+            cosh
+            ⁡
+            ξ
+            −
+            cos
+            ⁡
+            η
+          
+          )
+        
+      
+    
+    {\displaystyle W=-\mu _{1}\left(\cosh \xi +\cos \eta \right)-\mu _{2}\left(\cosh \xi -\cos \eta \right)}
+  
+
+Using the general solution for a Liouville dynamical system below, one obtains
+
+  
+    
+      
+        
+          
+            
+              m
+              
+                a
+                
+                  2
+                
+              
+            
+            2
+          
+        
+        
+          
+            (
+            
+              
+                cosh
+                
+                  2
+                
+              
+              ⁡
+              ξ
+              −
+              
+                cos
+                
+                  2
+                
+              
+              ⁡
+              η
+            
+            )
+          
+          
+            2
+          
+        
+        
+          
+            
+              
+                ξ
+                ˙
+              
+            
+          
+          
+            2
+          
+        
+        =
+        E
+        
+          cosh
+          
+            2
+          
+        
+        ⁡
+        ξ
+        +
+        
+          (
+          
+            
+              
+                
+                  μ
+                  
+                    1
+                  
+                
+                +
+                
+                  μ
+                  
+                    2
+                  
+                
+              
+              a
+            
+          
+          )
+        
+        cosh
+        ⁡
+        ξ
+        −
+        γ
+      
+    
+    {\displaystyle {\frac {ma^{2}}{2}}\left(\cosh ^{2}\xi -\cos ^{2}\eta \right)^{2}{\dot {\xi }}^{2}=E\cosh ^{2}\xi +\left({\frac {\mu _{1}+\mu _{2}}{a}}\right)\cosh \xi -\gamma }
+  
+
+  
+    
+      
+        
+          
+            
+              m
+              
+                a
+                
+                  2
+                
+              
+            
+            2
+          
+        
+        
+          
+            (
+            
+              
+                cosh
+                
+                  2
+                
+              
+              ⁡
+              ξ
+              −
+              
+                cos
+                
+                  2
+                
+              
+              ⁡
+              η
+            
+            )
+          
+          
+            2
+          
+        
+        
+          
+            
+              
+                η
+                ˙
+              
+            
+          
+          
+            2
+          
+        
+        =
+        −
+        E
+        
+          cos
+          
+            2
+          
+        
+        ⁡
+        η
+        +
+        
+          (
+          
+            
+              
+                
+                  μ
+                  
+                    1
+                  
+                
+                −
+                
+                  μ
+                  
+                    2
+                  
+                
+              
+              a
+            
+          
+          )
+        
+        cos
+        ⁡
+        η
+        +
+        γ
+      
+    
+    {\displaystyle {\frac {ma^{2}}{2}}\left(\cosh ^{2}\xi -\cos ^{2}\eta \right)^{2}{\dot {\eta }}^{2}=-E\cos ^{2}\eta +\left({\frac {\mu _{1}-\mu _{2}}{a}}\right)\cos \eta +\gamma }
+  
+
+Introducing a parameter u by the formula
+
+  
+    
+      
+        d
+        u
+        =
+        
+          
+            
+              d
+              ξ
+            
+            
+              E
+              
+                cosh
+                
+                  2
+                
+              
+              ⁡
+              ξ
+              +
+              
+                (
+                
+                  
+                    
+                      
+                        μ
+                        
+                          1
+                        
+                      
+                      +
+                      
+                        μ
+                        
+                          2
+                        
+                      
+                    
+                    a
+                  
+                
+                )
+              
+              cosh
+              ⁡
+              ξ
+              −
+              γ
+            
+          
+        
+        =
+        
+          
+            
+              d
+              η
+            
+            
+              −
+              E
+              
+                cos
+                
+                  2
+                
+              
+              ⁡
+              η
+              +
+              
+                (
+                
+                  
+                    
+                      
+                        μ
+                        
+                          1
+                        
+                      
+                      −
+                      
+                        μ
+                        
+                          2
+                        
+                      
+                    
+                    a
+                  
+                
+                )
+              
+              cos
+              ⁡
+              η
+              +
+              γ
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle du={\frac {d\xi }{\sqrt {E\cosh ^{2}\xi +\left({\frac {\mu _{1}+\mu _{2}}{a}}\right)\cosh \xi -\gamma }}}={\frac {d\eta }{\sqrt {-E\cos ^{2}\eta +\left({\frac {\mu _{1}-\mu _{2}}{a}}\right)\cos \eta +\gamma }}},}
+  
+
+gives the parametric solution
+
+  
+    
+      
+        u
+        =
+        ∫
+        
+          
+            
+              d
+              ξ
+            
+            
+              E
+              
+                cosh
+                
+                  2
+                
+              
+              ⁡
+              ξ
+              +
+              
+                (
+                
+                  
+                    
+                      
+                        μ
+                        
+                          1
+                        
+                      
+                      +
+                      
+                        μ
+                        
+                          2
+                        
+                      
+                    
+                    a
+                  
+                
+                )
+              
+              cosh
+              ⁡
+              ξ
+              −
+              γ
+            
+          
+        
+        =
+        ∫
+        
+          
+            
+              d
+              η
+            
+            
+              −
+              E
+              
+                cos
+                
+                  2
+                
+              
+              ⁡
+              η
+              +
+              
+                (
+                
+                  
+                    
+                      
+                        μ
+                        
+                          1
+                        
+                      
+                      −
+                      
+                        μ
+                        
+                          2
+                        
+                      
+                    
+                    a
+                  
+                
+                )
+              
+              cos
+              ⁡
+              η
+              +
+              γ
+            
+          
+        
+        .
+      
+    
+    {\displaystyle u=\int {\frac {d\xi }{\sqrt {E\cosh ^{2}\xi +\left({\frac {\mu _{1}+\mu _{2}}{a}}\right)\cosh \xi -\gamma }}}=\int {\frac {d\eta }{\sqrt {-E\cos ^{2}\eta +\left({\frac {\mu _{1}-\mu _{2}}{a}}\right)\cos \eta +\gamma }}}.}
+  
+
+Since these are elliptic integrals, the coordinates ξ and η can be expressed as elliptic functions of u.
+
+Constant of motion
+The bicentric problem has a constant of motion, namely,
+
+  
+    
+      
+        
+          r
+          
+            1
+          
+          
+            2
+          
+        
+        
+        
+          r
+          
+            2
+          
+          
+            2
+          
+        
+        
+          
+            
+              d
+              
+                θ
+                
+                  1
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        
+          
+            
+              d
+              
+                θ
+                
+                  2
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        +
+        2
+        
+        c
+        
+          (
+          
+            
+              μ
+              
+                1
+              
+            
+            cos
+            ⁡
+            
+              θ
+              
+                1
+              
+            
+            −
+            
+              μ
+              
+                2
+              
+            
+            cos
+            ⁡
+            
+              θ
+              
+                2
+              
+            
+          
+          )
+        
+        ,
+      
+    
+    {\displaystyle r_{1}^{2}\,r_{2}^{2}{\frac {d\theta _{1}}{dt}}{\frac {d\theta _{2}}{dt}}+2\,c\left(\mu _{1}\cos \theta _{1}-\mu _{2}\cos \theta _{2}\right),}
+  
+
+from which the problem can be solved using the method of the last multiplier.
+
+Derivation
+
+New variables
+To eliminate the v functions, the variables are changed to an equivalent set
+
+  
+    
+      
+        
+          φ
+          
+            r
+          
+        
+        =
+        ∫
+        d
+        
+          q
+          
+            r
+          
+        
+        
+          
+            
+              v
+              
+                r
+              
+            
+            (
+            
+              q
+              
+                r
+              
+            
+            )
+          
+        
+        ,
+      
+    
+    {\displaystyle \varphi _{r}=\int dq_{r}{\sqrt {v_{r}(q_{r})}},}
+  
+
+giving the relation
+
+  
+    
+      
+        
+          v
+          
+            1
+          
+        
+        (
+        
+          q
+          
+            1
+          
+        
+        )
+        
+          
+            
+              
+                q
+                ˙
+              
+            
+          
+          
+            1
+          
+          
+            2
+          
+        
+        +
+        
+          v
+          
+            2
+          
+        
+        (
+        
+          q
+          
+            2
+          
+        
+        )
+        
+          
+            
+              
+                q
+                ˙
+              
+            
+          
+          
+            2
+          
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          v
+          
+            s
+          
+        
+        (
+        
+          q
+          
+            s
+          
+        
+        )
+        
+          
+            
+              
+                q
+                ˙
+              
+            
+          
+          
+            s
+          
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            1
+          
+          
+            2
+          
+        
+        +
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            2
+          
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            s
+          
+          
+            2
+          
+        
+        =
+        F
+        ,
+      
+    
+    {\displaystyle v_{1}(q_{1}){\dot {q}}_{1}^{2}+v_{2}(q_{2}){\dot {q}}_{2}^{2}+\cdots +v_{s}(q_{s}){\dot {q}}_{s}^{2}={\dot {\varphi }}_{1}^{2}+{\dot {\varphi }}_{2}^{2}+\cdots +{\dot {\varphi }}_{s}^{2}=F,}
+  
+
+which defines a new variable F.   Using the new variables, the u and w functions can be expressed by equivalent functions χ and ω.  Denoting the sum of the χ functions by Y,
+
+  
+    
+      
+        Y
+        =
+        
+          χ
+          
+            1
+          
+        
+        (
+        
+          φ
+          
+            1
+          
+        
+        )
+        +
+        
+          χ
+          
+            2
+          
+        
+        (
+        
+          φ
+          
+            2
+          
+        
+        )
+        +
+        ⋯
+        +
+        
+          χ
+          
+            s
+          
+        
+        (
+        
+          φ
+          
+            s
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle Y=\chi _{1}(\varphi _{1})+\chi _{2}(\varphi _{2})+\cdots +\chi _{s}(\varphi _{s}),}
+  
+
+the kinetic energy can be written as
+
+  
+    
+      
+        T
+        =
+        
+          
+            1
+            2
+          
+        
+        Y
+        F
+        .
+      
+    
+    {\displaystyle T={\frac {1}{2}}YF.}
+  
+
+Similarly, denoting the sum of the ω functions by W
+
+  
+    
+      
+        W
+        =
+        
+          ω
+          
+            1
+          
+        
+        (
+        
+          φ
+          
+            1
+          
+        
+        )
+        +
+        
+          ω
+          
+            2
+          
+        
+        (
+        
+          φ
+          
+            2
+          
+        
+        )
+        +
+        ⋯
+        +
+        
+          ω
+          
+            s
+          
+        
+        (
+        
+          φ
+          
+            s
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle W=\omega _{1}(\varphi _{1})+\omega _{2}(\varphi _{2})+\cdots +\omega _{s}(\varphi _{s}),}
+  
+
+the potential energy V can be written as
+
+  
+    
+      
+        V
+        =
+        
+          
+            W
+            Y
+          
+        
+        .
+      
+    
+    {\displaystyle V={\frac {W}{Y}}.}
+  
+
+Lagrange equation
+The Lagrange equation for the rth variable 
+  
+    
+      
+        
+          φ
+          
+            r
+          
+        
+      
+    
+    {\displaystyle \varphi _{r}}
+  
+ is
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            
+              
+                ∂
+                T
+              
+              
+                ∂
+                
+                  
+                    
+                      
+                        φ
+                        ˙
+                      
+                    
+                  
+                  
+                    r
+                  
+                
+              
+            
+          
+          )
+        
+        =
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            Y
+            
+              
+                
+                  
+                    φ
+                    ˙
+                  
+                
+              
+              
+                r
+              
+            
+          
+          )
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        F
+        
+          
+            
+              ∂
+              Y
+            
+            
+              ∂
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        −
+        
+          
+            
+              ∂
+              V
+            
+            
+              ∂
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {d}{dt}}\left({\frac {\partial T}{\partial {\dot {\varphi }}_{r}}}\right)={\frac {d}{dt}}\left(Y{\dot {\varphi }}_{r}\right)={\frac {1}{2}}F{\frac {\partial Y}{\partial \varphi _{r}}}-{\frac {\partial V}{\partial \varphi _{r}}}.}
+  
+
+Multiplying both sides by 
+  
+    
+      
+        2
+        Y
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+      
+    
+    {\displaystyle 2Y{\dot {\varphi }}_{r}}
+  
+, re-arranging, and exploiting the relation 2T = YF yields the equation
+
+  
+    
+      
+        2
+        Y
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            Y
+            
+              
+                
+                  
+                    φ
+                    ˙
+                  
+                
+              
+              
+                r
+              
+            
+          
+          )
+        
+        =
+        2
+        T
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              ∂
+              Y
+            
+            
+              ∂
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        −
+        2
+        Y
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              ∂
+              V
+            
+            
+              ∂
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        =
+        2
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            ∂
+            
+              ∂
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        
+          [
+          
+            (
+            E
+            −
+            V
+            )
+            Y
+          
+          ]
+        
+        ,
+      
+    
+    {\displaystyle 2Y{\dot {\varphi }}_{r}{\frac {d}{dt}}\left(Y{\dot {\varphi }}_{r}\right)=2T{\dot {\varphi }}_{r}{\frac {\partial Y}{\partial \varphi _{r}}}-2Y{\dot {\varphi }}_{r}{\frac {\partial V}{\partial \varphi _{r}}}=2{\dot {\varphi }}_{r}{\frac {\partial }{\partial \varphi _{r}}}\left[(E-V)Y\right],}
+  
+
+which may be written as
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            
+              Y
+              
+                2
+              
+            
+            
+              
+                
+                  
+                    φ
+                    ˙
+                  
+                
+              
+              
+                r
+              
+              
+                2
+              
+            
+          
+          )
+        
+        =
+        2
+        E
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              ∂
+              Y
+            
+            
+              ∂
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        −
+        2
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              ∂
+              W
+            
+            
+              ∂
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        =
+        2
+        E
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              d
+              
+                χ
+                
+                  r
+                
+              
+            
+            
+              d
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        −
+        2
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              d
+              
+                ω
+                
+                  r
+                
+              
+            
+            
+              d
+              
+                φ
+                
+                  r
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {d}{dt}}\left(Y^{2}{\dot {\varphi }}_{r}^{2}\right)=2E{\dot {\varphi }}_{r}{\frac {\partial Y}{\partial \varphi _{r}}}-2{\dot {\varphi }}_{r}{\frac {\partial W}{\partial \varphi _{r}}}=2E{\dot {\varphi }}_{r}{\frac {d\chi _{r}}{d\varphi _{r}}}-2{\dot {\varphi }}_{r}{\frac {d\omega _{r}}{d\varphi _{r}}},}
+  
+
+where E = T + V is the (conserved) total energy.  It follows that
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            
+              Y
+              
+                2
+              
+            
+            
+              
+                
+                  
+                    φ
+                    ˙
+                  
+                
+              
+              
+                r
+              
+              
+                2
+              
+            
+          
+          )
+        
+        =
+        2
+        
+          
+            d
+            
+              d
+              t
+            
+          
+        
+        
+          (
+          
+            E
+            
+              χ
+              
+                r
+              
+            
+            −
+            
+              ω
+              
+                r
+              
+            
+          
+          )
+        
+        ,
+      
+    
+    {\displaystyle {\frac {d}{dt}}\left(Y^{2}{\dot {\varphi }}_{r}^{2}\right)=2{\frac {d}{dt}}\left(E\chi _{r}-\omega _{r}\right),}
+  
+
+which may be integrated once to yield
+
+  
+    
+      
+        
+          
+            1
+            2
+          
+        
+        
+          Y
+          
+            2
+          
+        
+        
+          
+            
+              
+                φ
+                ˙
+              
+            
+          
+          
+            r
+          
+          
+            2
+          
+        
+        =
+        E
+        
+          χ
+          
+            r
+          
+        
+        −
+        
+          ω
+          
+            r
+          
+        
+        +
+        
+          γ
+          
+            r
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {1}{2}}Y^{2}{\dot {\varphi }}_{r}^{2}=E\chi _{r}-\omega _{r}+\gamma _{r},}
+  
+
+where the 
+  
+    
+      
+        
+          γ
+          
+            r
+          
+        
+      
+    
+    {\displaystyle \gamma _{r}}
+  
+ are constants of integration subject to the energy conservation
+
+  
+    
+      
+        
+          ∑
+          
+            r
+            =
+            1
+          
+          
+            s
+          
+        
+        
+          γ
+          
+            r
+          
+        
+        =
+        0.
+      
+    
+    {\displaystyle \sum _{r=1}^{s}\gamma _{r}=0.}
+  
+
+Inverting, taking the square root and separating the variables yields a set of separably integrable equations:
+
+  
+    
+      
+        
+          
+            
+              2
+            
+            Y
+          
+        
+        d
+        t
+        =
+        
+          
+            
+              d
+              
+                φ
+                
+                  1
+                
+              
+            
+            
+              E
+              
+                χ
+                
+                  1
+                
+              
+              −
+              
+                ω
+                
+                  1
+                
+              
+              +
+              
+                γ
+                
+                  1
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              d
+              
+                φ
+                
+                  2
+                
+              
+            
+            
+              E
+              
+                χ
+                
+                  2
+                
+              
+              −
+              
+                ω
+                
+                  2
+                
+              
+              +
+              
+                γ
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        ⋯
+        =
+        
+          
+            
+              d
+              
+                φ
+                
+                  s
+                
+              
+            
+            
+              E
+              
+                χ
+                
+                  s
+                
+              
+              −
+              
+                ω
+                
+                  s
+                
+              
+              +
+              
+                γ
+                
+                  s
+                
+              
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {\sqrt {2}}{Y}}dt={\frac {d\varphi _{1}}{\sqrt {E\chi _{1}-\omega _{1}+\gamma _{1}}}}={\frac {d\varphi _{2}}{\sqrt {E\chi _{2}-\omega _{2}+\gamma _{2}}}}=\cdots ={\frac {d\varphi _{s}}{\sqrt {E\chi _{s}-\omega _{s}+\gamma _{s}}}}.}

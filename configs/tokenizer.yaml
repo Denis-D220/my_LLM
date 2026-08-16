@@ -1,0 +1,31 @@
+tokenizer:
+  version: "0.1"
+
+  algorithm: "byte_level_bpe"
+  vocabulary_size: 24000
+
+  language: "en"
+
+  encoding:
+    charset: "UTF-8"
+    unicode_normalization: "NFC"
+
+  normalization:
+    lowercase: false
+    case_folding: false
+    preserve_case: true
+    crlf_to_lf: true
+    cr_to_lf: true
+
+  byte_fallback: true
+
+  special_tokens:
+    pad: "<|pad|>"
+    bos: "<|bos|>"
+    eos: "<|eos|>"
+    system: "<|system|>"
+    user: "<|user|>"
+    assistant: "<|assistant|>"
+    end_turn: "<|end_turn|>"
+    tool: "<|tool|>"
+    tool_result: "<|tool_result|>"

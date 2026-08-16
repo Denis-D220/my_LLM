@@ -1,0 +1,224 @@
+The Ortelius oval projection is a map projection used for world maps largely in the late 16th and early 17th century. It is neither conformal nor equal-area but instead offers a compromise presentation. It is similar in structure to a pseudocylindrical projection but does not qualify as one because the meridians are not equally spaced along the parallels. The projection's first known use was by Battista Agnese (flourished 1535–1564) around 1540, although whether the construction method was truly identical to Ortelius's or not is unclear because of crude drafting and printing. The front hemisphere is identical to Petrus Apianus's 1524 globular projection.
+The projection reached a wide audience via the surpassingly popular Theatrum Orbis Terrarum of Abraham Ortelius beginning in 1570. The projection (and indeed Ortelius's maps) were widely copied by other mapmakers such as Giovanni Pietro Maffei, Fernando de Solis, and Matteo Ricci.
+
+Formulas
+Given a radius of sphere R, central meridian λ0 and a point with geographical latitude φ and longitude λ, plane coordinates x and y can be computed using the following formulas when λ ≤ ⁠π/2⁠:
+
+  
+    
+      
+        
+          
+            
+              
+                y
+              
+              
+                
+                =
+                R
+                φ
+              
+            
+            
+              
+                x
+              
+              
+                
+                =
+                ±
+                R
+                
+                  (
+                  
+                    
+                      |
+                      
+                        λ
+                        −
+                        
+                          λ
+                          
+                            0
+                          
+                        
+                      
+                      |
+                    
+                    −
+                    F
+                    +
+                    
+                      
+                        
+                          F
+                          
+                            2
+                          
+                        
+                        −
+                        
+                          
+                            
+                              y
+                              
+                                2
+                              
+                            
+                            
+                              R
+                              
+                                2
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                  )
+                
+                ,
+                
+                  
+                     where
+                  
+                
+              
+            
+            
+              
+                F
+              
+              
+                
+                =
+                
+                  
+                    1
+                    2
+                  
+                
+                
+                  (
+                  
+                    
+                      
+                        
+                          π
+                          
+                            2
+                          
+                        
+                        
+                          4
+                          
+                            |
+                            
+                              λ
+                              −
+                              
+                                λ
+                                
+                                  0
+                                
+                              
+                            
+                            |
+                          
+                        
+                      
+                    
+                    +
+                    
+                      |
+                      
+                        λ
+                        −
+                        
+                          λ
+                          
+                            0
+                          
+                        
+                      
+                      |
+                    
+                  
+                  )
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}y&=R\varphi \\x&=\pm R\left(\left|\lambda -\lambda _{0}\right|-F+{\sqrt {F^{2}-{\frac {y^{2}}{R^{2}}}}}\right),{\mbox{ where}}\\F&={\frac {1}{2}}\left({\frac {\pi ^{2}}{4\left|\lambda -\lambda _{0}\right|}}+\left|\lambda -\lambda _{0}\right|\right)\end{aligned}}}
+  
+
+For the outer hemisphere use the same formula for y, but:
+
+  
+    
+      
+        x
+        =
+        ±
+        R
+        
+          (
+          
+            
+              
+                
+                  
+                    
+                      π
+                      
+                        2
+                      
+                    
+                    4
+                  
+                
+                −
+                
+                  φ
+                  
+                    2
+                  
+                
+              
+            
+            +
+            
+              |
+              
+                λ
+                −
+                
+                  λ
+                  
+                    0
+                  
+                
+              
+              |
+            
+            −
+            
+              
+                π
+                2
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle x=\pm R\left({\sqrt {{\frac {\pi ^{2}}{4}}-\varphi ^{2}}}+\left|\lambda -\lambda _{0}\right|-{\frac {\pi }{2}}\right)}
+  
+
+In these formulas, x should take the sign of λ.

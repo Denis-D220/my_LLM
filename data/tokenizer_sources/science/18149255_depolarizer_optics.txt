@@ -1,0 +1,80 @@
+A depolarizer or depolariser is an optical device used to scramble the polarization of light. An ideal depolarizer would output randomly polarized light whatever its input, but all practical depolarizers produce pseudo-random output polarization.
+Optical systems are often sensitive to the polarization of light reaching them (for example grating-based spectrometers). Unwanted polarization of the input to such a system may cause errors in the system's output.
+
+Types
+
+Cornu depolarizer
+
+The Cornu depolarizer was one of the earliest designs, named after its inventor Marie Alfred Cornu.  It consists of a pair of 45° prisms of quartz crystal, optically contacted to form a cuboid.  The fast axes are 90° apart and 45° from the sides of the depolarizer (see figure). Any ray entering the prism effectively passes through two wave plates. The thickness of these wave plates and therefore their retardance varies across the beam.  The phase shift is given by
+
+  
+    
+      
+        δ
+        (
+        y
+        )
+        =
+        
+          
+            
+              2
+              π
+            
+            λ
+          
+        
+        [
+        
+          n
+          
+            2
+          
+        
+        −
+        
+          n
+          
+            1
+          
+        
+        ]
+        (
+        2
+        y
+        −
+        a
+        )
+        .
+      
+    
+    {\displaystyle \delta (y)={\frac {2\pi }{\lambda }}[n_{2}-n_{1}](2y-a).}
+  
+
+For an input beam of uniform polarization the output polarization will be periodic in y. The phase shift is also dependent on wavelength due to dispersion.
+The use of two prisms means that the output is essentially coaxial with the input.  At the interface between the prisms refraction does take place, as the refractive indices are exchanged.  There is therefore some separation of the components of the output beam.
+This device is not commonly used today, but similar designs are commercially available.
+
+Lyot depolarizer
+
+The Lyot depolarizer is another early design.  It was invented by Bernard Lyot. It consists of two wave plates with their fast axes 45° apart, with the second plate twice as thick as the first. The output is periodic as a function of wavelength and as a function of the wave-plates' thicknesses. Special considerations are needed when this depolarizer is to be used for a particular application, because the optimal wave-plate thicknesses depend on the signal wavelength and optical spectrum with which it is to be used. It is commercially available for broadband visible applications.
+This device is especially attractive in fiber optics, where two pieces of correct length of polarization-maintaining optical fiber spliced together at a 45° angle are used instead of the wave-plates, thus no other components such as beam splitters are required.
+
+Wedge depolarizer
+
+Quartz-silica
+
+The quartz-silica wedge depolarizer is a common commercial design and is similar to the Cornu depolarizer, however, the angle between the two components is much smaller (2° is typical) and only the first component is birefringent.  The second component is made of fused silica, which has a very similar refractive index to quartz, but is not birefringent.  The fast axis of the quartz element is generally at 45° to the wedge.  The whole device is much more compact than a Cornu depolarizer (for the same aperture).
+As with the Cornu depolarizer, there is some separation of the output as a function of polarization, as well as some beam deviation due to the imperfect match in refractive index between quartz and silica.  The output is periodic across the depolarizer. Because the wedge angle is so much smaller than in a Cornu depolarizer the period is larger, often around 6 mm. This depolarizer also has a preferred orientation because of its single defined fast axis.  In commercial wedge depolarizers this is usually marked.
+
+Quartz-quartz
+Quartz-quartz wedge depolarizers are commercially available, though not common.  They are similar to Cornu depolarizers, but with the small wedge angle of the silica-compensated wedge.
+Other birefringent materials can be used in place of quartz in the above designs.
+Wedge depolarizers exhibit some small beam deviation.  This is true even if the faces of the optic are exactly parallel.  Because each half of the optic is a wedge, and the two halves do not have exactly the same refractive index (for a particular polarization), the depolarizer is effectively very slightly wedged (optically).
+
+Time-variable depolarizer
+The Lyot depolarizer and similar devices are based on the fact that the retardations of optical waveplates or retarders depend on optical frequency or wavelength. They cause polarization mode dispersion which can be detrimental. Furthermore they cannot be used for (quasi-)monochromatic signals. For the latter, time-variable depolarizers are needed. These are composed of time-variable optical retarders. An effective way to realize time-variable depolarizers are rotating waveplates or equivalent optical devices.
+A rotating halfwave plate produces polarization which is periodic in time, and therefore effectively scrambled for sufficiently slow responses. Its input polarization must be linear. Resulting output polarization is rotating linear polarization. Likewise, circular polarization can be depolarized with a rotating quarterwave plate. Output polarization is again linear. If a halfwave and a quarterwave plate are concatenated and rotate at different speeds, any input polarization is depolarized. If the waveplates are not perfect, more rotating waveplates can improve performance. Based on electrooptic rotating waveplates, such polarization-independent depolarizers are commercially available with depolarization intervals down to 360 ns.
+
+Other ways to produce depolarized light
+In many applications it is possible to use a quarter-wave plate to produce circularly polarized light, but this is only possible for light of a limited range of wavelengths which is linearly polarized to start with. Other methods have been demonstrated, such as the use of Faraday rotators and liquid crystals. It is also possible to depolarize light using fiber optics. Relatively high degree of depolarization is also achieved by light passing through usual semitransparent materials like matte plastic or greased paper.

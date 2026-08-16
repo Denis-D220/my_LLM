@@ -1,0 +1,35 @@
+In computing, a hierarchical file system is a file system that uses directories to organize files into a tree structure. 
+In a hierarchical file system, directories contain information about both files and other directories, called subdirectories which, in turn, can point to other subdirectories, and so on. This is organized as a tree structure, or hierarchy, generally portrayed with the root at the top. The root directory is the base of the hierarchy, and is usually stored at some fixed location on disk.
+A hierarchical file system contrasts with a flat file system, where information about all files is stored in a single directory, and there are no subdirectories.
+Almost all file systems today are hierarchical. What is referred to as a file system is a specific instance of a hierarchical system. For example, NTFS, HPFS, and ext4, all implement a hierarchical system with different features for buffering, file allocation, and file recovery.
+
+Concepts
+
+Path
+A file path is a string of characters that contains the location of a file in a computer's file structure. That is, it represents the directory nodes visited from the root directory to the file as a list of node names, with the items in the list separated by path separators.  The path separator is > on Multics, / on Unix-like systems, and \ on MS-DOS 2.0 and later, Windows, and OS/2 systems.
+An absolute path begins at the root directory; that is, begins with a path separator character, which, at the beginning of a path, represents the root directory. A path consisting only of a path separator character refers to the root directory.
+
+Working directory
+The working directory of a process is a directory dynamically associated with each process. Files are searched relative to the working directory, rather than from the root directory. At logon, the user's working directory is set to their home directory; it can be set afterwards by using a command.
+A relative path represents the directory nodes visited from the working directory to the file, rather than from the root directory to the file.  A relative path does not begin with a path separator character.
+
+History
+
+Multics
+Multics is the first operating system to provide a hierarchical file system. File names can be any length or format, multiple names for a particular file or directory, and symbolic connections between the directories (symlinks) are one of the many other features Multics introduced with its hierarchical file system.
+
+IBM OS/360
+OS/360 has had a hierarchical system since its earliest days.
+The system catalog is layered on top of a flat file system, where a disk file's "directory entry" is stored in each volume's Volume Table of Contents (VTOC), and files can be referenced either thru the catalog or by specifying the volume serial number directly. Specifying a dataset name without specifying a serial number in JCL implies a catalog search. The catalog stores only a pointer to the volume.
+The OS/360 catalog has a number of differences from other hierarchical file systems. The "root directory", a dataset named SYSCTLG, may contain file pointers or links to subdirectories called CVOLS. The path separator is .. All paths are absolute paths, a leading . is always assumed and cannot be coded. Path components (between .) are limited to eight characters. The catalog is not restricted to disk (DASD) files, but can also catalog magnetic tape datasets. Not all volumes indicated in the catalog have to be online, and the system allows disk and tape volumes to be mounted on request following a catalog search.
+Unlike most other systems, it is possible to create a file without cataloging it. Cataloging is requested thru JCL or a utility program.
+A cataloged dataset name might look like PAYROLL.WEEKLY.HOURS.
+IBM virtual storage operating systems replaced SYSCTLG with a VSAM Catalog. Cataloging is mandatory for VSAM datasets, but, as before, non-VSAM datasets may be cataloged or not cataloged. The program "Access Method Services" (IDCAMS) maintains the VSAM Catalog.
+
+Personal computers
+
+DOS and Windows
+The CP/M operating system uses a flat file system, with a directory containing information on a maximum of 64 files—adequate when a floppy disk held only 128 KB. IBM PC DOS and MS-DOS 1.0 inherited the same structure. DOS 2.0, which supported hard disk drives, introduced a hierarchical file system. The hierarchical file system was used instead of simply expanding the flat directory for performance reasons. "A flat DOS file structure with a single directory and 10 times as many files would logically require 10 times as long to search." OS/2 and Windows also support a hierarchical file system, using the same path syntax as DOS.
+
+Classic Mac OS
+All versions of Classic Mac OS before System 2.1 used a flat file system, the Macintosh File System, which maintained all the files in a single list, however Finder provided the illusion of folders with records maintained in the Desktop file. From System 2.1 onwards, the Macintosh File System was superseded by the Hierarchical File System which allowed for multiple layers of folders and files.

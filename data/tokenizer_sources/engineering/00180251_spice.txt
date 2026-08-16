@@ -1,0 +1,74 @@
+SPICE (Simulation Program with Integrated Circuit Emphasis) is a general-purpose, open-source analog electronic circuit simulator.
+It is a program used in integrated circuit and board-level design to check the integrity of circuit designs and to predict circuit behavior.
+
+Introduction
+Unlike board-level designs composed of discrete parts, it is not practical to breadboard integrated circuits before manufacture. Further, the high costs of photolithographic masks and other manufacturing prerequisites make it essential to design the circuit to be as close to perfect as possible before the integrated circuit is first built.
+Simulating the circuit with SPICE is the industry-standard way to verify circuit operation at the transistor level before committing to manufacturing an integrated circuit. The SPICE simulators help to predict the behavior of the IC under different operating conditions, such as different voltage and current levels, temperature variations, and noise.
+Board-level circuit designs can often be breadboarded for testing. Even with a breadboard, some circuit properties may not be accurate compared to the final printed wiring board, such as parasitic resistances and capacitances, whose effects can often be estimated more accurately using simulation. Also, designers may want more information about the circuit than is available from a single mock-up. For instance, circuit performance is affected by component manufacturing tolerances.  In these cases, it is common to use SPICE to perform Monte Carlo simulations of the effect of component variations on performance, a task which is impractical using calculations by hand for a circuit of any appreciable complexity.
+Circuit simulation programs, of which SPICE and derivatives are the most prominent, take a text netlist describing the circuit elements (transistors, resistors, capacitors, etc.) and their connections, and translate this description into equations to be solved.  The general equations produced are nonlinear differential algebraic equations, which are solved using implicit integration methods, Newton's method and sparse matrix techniques.
+
+Origins
+SPICE was developed at the Electronics Research Laboratory of the University of California, Berkeley by Laurence W. Nagel with direction from his research advisor, Prof. Donald Pederson. SPICE1 is largely a derivative of the CANCER program, which Nagel had worked on under Prof. Ronald A. Rohrer. CANCER is an acronym for "Computer Analysis of Nonlinear Circuits, Excluding Radiation". At these times many circuit simulators were developed under contracts with the United States Department of Defense that needed the ability to evaluate the radiation hardness of a circuit. When Nagel's original advisor, Prof. Rohrer, left Berkeley, Prof. Pederson became his advisor. Pederson insisted that CANCER, a proprietary program, be rewritten enough that restrictions could be removed and the program could be put in the public domain.
+SPICE1 was first presented at a conference in 1973. SPICE1 is coded in FORTRAN IV and ran on University of California, Berkeley's CDC 6400. To construct the circuit equations, it uses nodal analysis, which has limitations in representing inductors, floating voltage sources and the various forms of controlled sources. SPICE1 has relatively few circuit elements available and uses a fixed-timestep transient analysis. The real popularity of SPICE started with SPICE2 in 1975. SPICE2, also coded in FORTRAN, is a much-improved program with more circuit elements, variable timestep transient analysis using either the trapezoidal (second order Adams-Moulton method) or the Gear integration method (also known as BDF), equation formulation via modified nodal analysis (avoiding the limitations of nodal analysis), and an innovative FORTRAN-based memory allocation system. 
+Ellis Cohen led development from version 2B to the industry standard SPICE 2G6, the last FORTRAN version, released in 1983. SPICE3 was developed by Thomas Quarles (with A. Richard Newton as advisor) in 1989. It is written in C, uses the same netlist syntax, and adds X Window System plotting.
+As an early public domain software program with source code available, SPICE was widely distributed and used. Its ubiquity became such that "to SPICE a circuit" remains synonymous with circuit simulation. SPICE source code was from the beginning distributed by UC Berkeley for a nominal charge (to cover the cost of magnetic tape). The license originally included distribution restrictions for countries not considered friendly to the US, but the source code is currently covered by the BSD license.
+The birth of SPICE was named an IEEE Milestone in 2011; the entry mentions that SPICE "evolved to become the worldwide standard integrated circuit simulator". Nagel was awarded the 2019 IEEE Donald O. Pederson Award in Solid-State Circuits for the development of SPICE.
+
+Successors
+
+Open-source successors
+No newer versions of Berkeley SPICE have been released after version 3f5 in 1993. Since then, the open-source or academic continuations of SPICE include: 
+
+XSPICE, developed at Georgia Tech, which added mixed analog/digital "code models" for behavioral simulation;
+CIDER (previously CODECS), developed by UC Berkeley and Oregon State University, which added semiconductor device simulation;
+Ngspice, based on SPICE 3f5;
+WRspice, a C++ re-write of the original spice3f5 code.
+SPICE OPUS
+Not a descendant but compatible:
+
+QUCS, which uses an independently-developed Qucsator backend but understands SPICE input. The QUCS-S variant supports using a SPICE-derived backend.
+Xyce, independent but compatible work from Sandia National Laboratories. Parallel (MPI) C++ for high performance and large netlists.
+
+Commercial versions and spinoffs
+Berkeley SPICE inspired and served as a basis for many other circuit simulation programs, in academia, in industry, and in commercial products. The first commercial version of SPICE is ISPICE, an interactive version on a timeshare service, National CSS. The most prominent commercial versions of SPICE include HSPICE (originally commercialized by Ashawna and Kim Hailey of Meta Software, but now owned by Synopsys) and PSPICE (now owned by Cadence Design Systems). The integrated circuit industry adopted SPICE quickly, and until commercial versions became well developed, many IC design houses had proprietary versions of SPICE.
+Today a few IC manufacturers, typically the larger companies, have groups continuing to develop SPICE-based circuit simulation programs. Among these are
+
+ADICE and LTspice at Analog Devices,
+QSPICE at Qorvo,
+MCSPICE, followed by Mica at Freescale Semiconductor, now NXP Semiconductors, and
+TINA-TI at Texas Instruments.
+PLECS Spice from Plexim is integrated into the PLECS Standalone simulation platform.
+Both LTspice and TINA-TI come bundled with models from their respective companies.
+Other companies maintain internal circuit simulators which are not directly based upon SPICE, among them PowerSpice at IBM, TITAN at Infineon Technologies, Lynx at Intel Corporation, and Pstar at NXP Semiconductors also.
+
+Program features and structure
+SPICE became popular because it contained the analyses and models needed to design integrated circuits of the time, and was robust enough and fast enough to be practical to use. Precursors to SPICE often had a single purpose: The BIAS program, for example, did simulation of bipolar transistor circuit operating points; the SLIC program did only small-signal analyses.  SPICE combined operating point solutions, transient analysis, and various small-signal analyses with the circuit elements and device models needed to successfully simulate many circuits.
+
+Analyses
+SPICE2 includes these analyses:
+
+AC analysis (linear small-signal frequency domain analysis)
+DC analysis (nonlinear quiescent point calculation)
+DC transfer curve analysis (a sequence of nonlinear operating points calculated while sweeping an input voltage or current, or a circuit parameter)
+Noise analysis (a small signal analysis done using an adjoint matrix technique, which sums uncorrelated noise currents at a chosen output point)
+Transfer function analysis (a small-signal input/output gain and impedance calculation)
+Transient analysis (time-domain large-signal solution of nonlinear differential algebraic equations)
+Since SPICE is generally used to model circuits with nonlinear elements, the small signal analyses are necessarily preceded by a quiescent point calculation at which the circuit is linearized. SPICE2 also contains code for other small-signal analyses: sensitivity analysis, pole-zero analysis, and small-signal distortion analysis. Analysis at various temperatures is done by automatically updating semiconductor model parameters for temperature, allowing the circuit to be simulated at temperature extremes.
+Other circuit simulators have since added many analyses beyond those in SPICE2 to address changing industry requirements. Parametric sweeps were added to analyze circuit performance with changing manufacturing tolerances or operating conditions. Loop gain and stability calculations were added for analog circuits. Harmonic balance or time-domain steady state analyses were added for RF and switched-capacitor circuit design. However, a public-domain circuit simulator containing the modern analyses and features needed to become a successor in popularity to SPICE has not yet emerged.
+It is very important to use appropriate analyses with carefully chosen parameters. For example, the application of linear analysis to nonlinear circuits should be justified separately. Also, application of transient analysis with default simulation parameters can lead to qualitatively wrong conclusions on circuit dynamics.
+
+Device models
+SPICE2 includes many semiconductor device compact models: three levels of MOSFET model, a combined Ebers–Moll and Gummel–Poon bipolar model, a JFET model, and a model for a junction diode. In addition, it had many other elements: resistors, capacitors, inductors (including coupling), independent voltage and current sources, ideal transmission lines, active components and voltage and current controlled sources.
+SPICE3 added more sophisticated MOSFET models, which were needed due to advances in semiconductor technology. In particular, the BSIM family of models was added, which was also developed at UC Berkeley.
+Commercial and industrial SPICE simulators have added many other device models as technology advanced and earlier models became inadequate. To attempt standardization of these models so that a set of model parameters may be used in different simulators, an industry working group was formed, the Compact Model Council, to choose, maintain and promote the use of standard models.  The standard models today include BSIM3, BSIM4, BSIMSOI, PSP, HICUM, and MEXTRAM.
+Spice can use device models from foundry PDKs.
+
+Input and output: Netlists, schematic capture and plotting
+SPICE2 takes a text netlist as input and produces line-printer listings as output, which fit with the computing environment in 1975.  These listings are either columns of numbers corresponding to calculated outputs (typically voltages or currents), or line-printer character "plots". SPICE3 retains the netlist for circuit description, but allows analyses to be controlled from a command-line interface similar to the C shell. SPICE3 also added basic X plotting, as UNIX and engineering workstations became common.
+Vendors and various free software projects have added schematic capture frontends to SPICE, allowing a schematic diagram of the circuit to be drawn and the netlist to be automatically generated and transferred to various SPICE backends. Also, graphical user interfaces were added for selecting the simulations to be done and manipulating the voltage and current output vectors. In addition, very capable graphing utilities have been added to see waveforms and graphs of parametric dependencies. Several free versions of these extended programs are available.
+
+SPICE usage beyond electronic simulation
+As SPICE generally solves non-linear differential algebraic equations, it may be applied to simulating beyond the electrical realm.  
+In the simplest case, SPICE can be used to simulate other flows.  For example, heat flow in systems follows similar behavior to ideal electrical circuit elements: temperature corresponds to voltage, heat capacity corresponds to capacitance, (thermal) conductance to (electrical) conductance, and heat flow to current.). SPICE can thus simulate both the electronic behavior of a circuit and its heat dissipation requirements simultaneously. Likewise micro-fluidic circuits have been modelled with SPICE through the hydrodynamic analogy.  SPICE has been applied in operations research to evaluate perturbed supply chains, and regulatory networks in synthetic biology.
+However, transport dynamics are not a requirement for SPICE simulation.  In a rotating machine, torque corresponds to voltage, angular velocity to current, viscous friction to resistance, and inertia to inductance.  SPICE has been used to model loudspeakers, earphones, and headphones.  Such electro-mechanical transducers often have complex input impedances (see, for example, Electrical characteristics of dynamic loudspeakers) that present difficulties to the circuits designed to drive them.  Integrated modelling of both components addresses this problem.
+Electromagnetic modeling is accessible to a SPICE simulator via the PEEC (partial element equivalent circuit) method. Maxwell's equations have been mapped, RLC, Skin effect, dielectric or magnetic materials and incident or radiated fields have been modelled.  However, as of 2019, SPICE cannot simulate arbitrary photonic dynamics when circuits display strongly quantum effects.

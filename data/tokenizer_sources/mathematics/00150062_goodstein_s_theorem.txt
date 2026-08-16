@@ -1,0 +1,2469 @@
+In mathematical logic, Goodstein's theorem is a statement about the natural numbers, proved by Reuben Goodstein in 1944, which states that every Goodstein sequence (as defined below) eventually terminates at 0. Laurence Kirby and Jeff Paris showed in 1982 that Goodstein's theorem is unprovable in Peano arithmetic (but it can be proven in stronger systems, such as second-order arithmetic or Zermelo–Fraenkel set theory). This was the third example of a true statement about natural numbers that is unprovable in Peano arithmetic, after the examples provided by Gödel's incompleteness theorem and Gerhard Gentzen's 1943 direct proof of the unprovability of ε0-induction in Peano arithmetic. The Paris–Harrington theorem gave another example.
+Kirby and Paris also introduced a graph-theoretic hydra game with behavior similar to that of Goodstein sequences: the "Hydra" (named for the mythological multi-headed Hydra of Lerna) is a rooted tree, and a move by "Hercules" consists of cutting off one of its "heads" (a branch of the tree), to which the Hydra responds by growing a finite number of new heads according to certain rules.  Kirby and Paris proved that the Hydra will eventually be killed, regardless of the strategy that Hercules uses to chop off its heads, though this may take a very long time. Just like for Goodstein sequences, Kirby and Paris showed that it cannot be proven in Peano arithmetic alone.
+
+Hereditary base-n notation
+Goodstein sequences are defined in terms of a concept called "hereditary base-n notation". This notation is very similar to usual base-n positional notation for natural numbers, but the usual notation does not suffice for the purposes of Goodstein's theorem.
+To achieve the ordinary base-n notation, where n is a natural number greater than 1, an arbitrary natural number m is written as a sum of multiples of powers of n:
+
+  
+    
+      
+        m
+        =
+        
+          a
+          
+            k
+          
+        
+        
+          n
+          
+            k
+          
+        
+        +
+        
+          a
+          
+            k
+            −
+            1
+          
+        
+        
+          n
+          
+            k
+            −
+            1
+          
+        
+        +
+        ⋯
+        +
+        
+          a
+          
+            0
+          
+        
+        ,
+      
+    
+    {\displaystyle m=a_{k}n^{k}+a_{k-1}n^{k-1}+\cdots +a_{0},}
+  
+
+where each coefficient ai satisfies 0 ≤ ai < n, and ak ≠ 0. 
+For example, the base-3 notation of 100:
+
+  
+    
+      
+        100
+        =
+        81
+        +
+        18
+        +
+        1
+        =
+        
+          3
+          
+            4
+          
+        
+        +
+        2
+        ⋅
+        
+          3
+          
+            2
+          
+        
+        +
+        
+          3
+          
+            0
+          
+        
+        .
+      
+    
+    {\displaystyle 100=81+18+1=3^{4}+2\cdot 3^{2}+3^{0}.}
+  
+
+Here, the exponents of n themselves are not written in base-n notation, as is seen in the case 34, above.
+To convert a base-n notation to a hereditary base-n notation, first rewrite all of the exponents as a sum of powers of n (with the limitation on the coefficients 0 ≤ ai < n). Then rewrite any exponent inside the exponents again in base-n notation (with the same limitation on the coefficients), and continue in this way until every number appearing in the expression (except the bases themselves) is written in base-n notation.
+For example, 100 in hereditary base-3 notation is
+
+  
+    
+      
+        100
+        =
+        
+          3
+          
+            
+              3
+              
+                1
+              
+            
+            +
+            1
+          
+        
+        +
+        2
+        ⋅
+        
+          3
+          
+            2
+          
+        
+        +
+        1.
+      
+    
+    {\displaystyle 100=3^{3^{1}+1}+2\cdot 3^{2}+1.}
+  
+
+Goodstein sequences
+The Goodstein sequence  
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+ of a number m is a sequence of natural numbers. The first element in the sequence, written as 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        1
+        )
+      
+    
+    {\displaystyle G_{m}(1)}
+  
+, is m itself. The second element, 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        2
+        )
+      
+    
+    {\displaystyle G_{m}(2)}
+  
+, is obtained by writing m in hereditary base-2 notation, changing all the 2s to 3s, then subtracting 1 from the result. In general, the term 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle G_{m}(n+1)}
+  
+ of the Goodstein sequence of m is computed by:
+
+taking the hereditary base-(n + 1) representation of 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G_{m}(n)}
+  
+,
+replacing each occurrence of the base (n + 1) with n + 2, then
+subtracting one.
+
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle G_{m}(n+1)}
+  
+ depends both on 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G_{m}(n)}
+  
+ and on the index n. Sometimes 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G_{m}(n)}
+  
+ is written as 
+  
+    
+      
+        
+          G
+          
+            n
+            −
+            1
+          
+        
+        (
+        m
+        )
+      
+    
+    {\displaystyle G_{n-1}(m)}
+  
+. 
+A Goodstein sequence terminates when its element reaches 0. Early Goodstein sequences terminate quickly. For example, 
+  
+    
+      
+        
+          G
+          
+            3
+          
+        
+      
+    
+    {\displaystyle G_{3}}
+  
+ terminates at the sixth step (the column labeled "Hereditary notation" shows how the value is calculated):
+
+Later Goodstein sequences increase for a very large number of steps. For example, 
+  
+    
+      
+        
+          G
+          
+            4
+          
+        
+      
+    
+    {\displaystyle G_{4}}
+  
+ starts as follows (OEIS: A056193):
+
+Elements of 
+  
+    
+      
+        
+          G
+          
+            4
+          
+        
+      
+    
+    {\displaystyle G_{4}}
+  
+ continue to increase for a while, but at base 
+  
+    
+      
+        3
+        ⋅
+        
+          2
+          
+            402
+            
+            653
+            
+            209
+          
+        
+      
+    
+    {\displaystyle 3\cdot 2^{402\,653\,209}}
+  
+,
+they reach the maximum of 
+  
+    
+      
+        3
+        ⋅
+        
+          2
+          
+            402
+            
+            653
+            
+            210
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle 3\cdot 2^{402\,653\,210}-1}
+  
+, stay there for the next 
+  
+    
+      
+        3
+        ⋅
+        
+          2
+          
+            402
+            
+            653
+            
+            209
+          
+        
+      
+    
+    {\displaystyle 3\cdot 2^{402\,653\,209}}
+  
+ steps, and then begin descending by 1, reaching 0 when the base reaches 
+  
+    
+      
+        3
+        ⋅
+        
+          2
+          
+            402
+            
+            653
+            
+            211
+          
+        
+        −
+        1.
+      
+    
+    {\displaystyle 3\cdot 2^{402\,653\,211}-1.}
+  
+ The exponent here is equal to 
+  
+    
+      
+        3
+        ⋅
+        
+          2
+          
+            27
+          
+        
+        +
+        27
+        ,
+      
+    
+    {\displaystyle 3\cdot 2^{27}+27,}
+  
+ so the base is equal to 
+  
+    
+      
+        n
+        ⋅
+        
+          2
+          
+            n
+          
+        
+        −
+        1
+        ,
+      
+    
+    {\displaystyle n\cdot 2^{n}-1,}
+  
+ a Woodall number with 
+  
+    
+      
+        n
+        =
+        3
+        ⋅
+        
+          2
+          
+            27
+          
+        
+        .
+      
+    
+    {\displaystyle n=3\cdot 2^{27}.}
+  
+
+For another example, 
+  
+    
+      
+        
+          G
+          
+            19
+          
+        
+      
+    
+    {\displaystyle G_{19}}
+  
+ increases much more rapidly and starts as follows:
+
+In spite of this rapid growth, Goodstein's theorem states that every Goodstein sequence eventually terminates at 0, no matter what the starting value is.
+
+Proof of Goodstein's theorem
+Goodstein's theorem can be proved (using techniques outside Peano arithmetic, see below) as follows: Given a Goodstein sequence 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+, we construct a parallel sequence 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ of ordinal numbers in Cantor normal form that is strictly decreasing and terminates. A common misunderstanding of this proof is to believe that 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+ goes to 
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+ because it is dominated by 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+. Actually, the fact that 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ dominates 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+ plays no role at all. The important point is: 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        k
+        )
+      
+    
+    {\displaystyle G_{m}(k)}
+  
+ exists if and only if 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+        (
+        k
+        )
+      
+    
+    {\displaystyle P_{m}(k)}
+  
+ exists (parallelism), and comparison between two members of 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+ is preserved when comparing corresponding entries of 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+. Then if 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ terminates, so does 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+. By infinite regress, 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+ must reach 
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+, which guarantees termination.
+We define a function 
+  
+    
+      
+        f
+        =
+        f
+        (
+        u
+        ,
+        k
+        )
+      
+    
+    {\displaystyle f=f(u,k)}
+  
+ that computes the hereditary base 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ representation of 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+  
+ and then replaces each occurrence of the base 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ with the first infinite ordinal number 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+. For example, 
+  
+    
+      
+        f
+        (
+        100
+        ,
+        3
+        )
+        =
+        f
+        (
+        
+          3
+          
+            
+              3
+              
+                1
+              
+            
+            +
+            1
+          
+        
+        +
+        2
+        ⋅
+        
+          3
+          
+            2
+          
+        
+        +
+        1
+        ,
+        3
+        )
+        =
+        
+          ω
+          
+            
+              ω
+              
+                1
+              
+            
+            +
+            1
+          
+        
+        +
+        
+          ω
+          
+            2
+          
+        
+        ⋅
+        2
+        +
+        1
+        =
+        
+          ω
+          
+            ω
+            +
+            1
+          
+        
+        +
+        
+          ω
+          
+            2
+          
+        
+        ⋅
+        2
+        +
+        1
+      
+    
+    {\displaystyle f(100,3)=f(3^{3^{1}+1}+2\cdot 3^{2}+1,3)=\omega ^{\omega ^{1}+1}+\omega ^{2}\cdot 2+1=\omega ^{\omega +1}+\omega ^{2}\cdot 2+1}
+  
+.
+Each term 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle P_{m}(n)}
+  
+ of the sequence 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ is then defined as 
+  
+    
+      
+        f
+        (
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+        ,
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle f(G_{m}(n),n+1)}
+  
+. For example, 
+  
+    
+      
+        
+          G
+          
+            3
+          
+        
+        (
+        1
+        )
+        =
+        3
+        =
+        
+          2
+          
+            1
+          
+        
+        +
+        
+          2
+          
+            0
+          
+        
+      
+    
+    {\displaystyle G_{3}(1)=3=2^{1}+2^{0}}
+  
+ and 
+  
+    
+      
+        
+          P
+          
+            3
+          
+        
+        (
+        1
+        )
+        =
+        f
+        (
+        
+          2
+          
+            1
+          
+        
+        +
+        
+          2
+          
+            0
+          
+        
+        ,
+        2
+        )
+        =
+        
+          ω
+          
+            1
+          
+        
+        +
+        
+          ω
+          
+            0
+          
+        
+        =
+        ω
+        +
+        1
+      
+    
+    {\displaystyle P_{3}(1)=f(2^{1}+2^{0},2)=\omega ^{1}+\omega ^{0}=\omega +1}
+  
+. Addition, multiplication and exponentiation of ordinal numbers are well defined.
+We claim that 
+  
+    
+      
+        f
+        (
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+        ,
+        n
+        +
+        1
+        )
+        >
+        f
+        (
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        +
+        1
+        )
+        ,
+        n
+        +
+        2
+        )
+      
+    
+    {\displaystyle f(G_{m}(n),n+1)>f(G_{m}(n+1),n+2)}
+  
+:
+Let 
+  
+    
+      
+        
+          G
+          
+            m
+          
+          ′
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G'_{m}(n)}
+  
+ be 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G_{m}(n)}
+  
+ after applying the first, 
+base-changing operation in generating the next element of the Goodstein sequence, 
+but before the second minus 1 operation in this generation. 
+Observe that 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        +
+        1
+        )
+        =
+        
+          G
+          
+            m
+          
+          ′
+        
+        (
+        n
+        )
+        −
+        1
+      
+    
+    {\displaystyle G_{m}(n+1)=G'_{m}(n)-1}
+  
+.
+Then 
+  
+    
+      
+        f
+        (
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+        ,
+        n
+        +
+        1
+        )
+        =
+        f
+        (
+        
+          G
+          
+            m
+          
+          ′
+        
+        (
+        n
+        )
+        ,
+        n
+        +
+        2
+        )
+      
+    
+    {\displaystyle f(G_{m}(n),n+1)=f(G'_{m}(n),n+2)}
+  
+. Now we apply the minus 1 operation, and 
+  
+    
+      
+        f
+        (
+        
+          G
+          
+            m
+          
+          ′
+        
+        (
+        n
+        )
+        ,
+        n
+        +
+        2
+        )
+        >
+        f
+        (
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        +
+        1
+        )
+        ,
+        n
+        +
+        2
+        )
+      
+    
+    {\displaystyle f(G'_{m}(n),n+2)>f(G_{m}(n+1),n+2)}
+  
+, as 
+  
+    
+      
+        
+          G
+          
+            m
+          
+          ′
+        
+        (
+        n
+        )
+        =
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        +
+        1
+        )
+        +
+        1
+      
+    
+    {\displaystyle G'_{m}(n)=G_{m}(n+1)+1}
+  
+.
+For example, 
+  
+    
+      
+        
+          G
+          
+            4
+          
+        
+        (
+        1
+        )
+        =
+        
+          2
+          
+            2
+          
+        
+      
+    
+    {\displaystyle G_{4}(1)=2^{2}}
+  
+ and 
+  
+    
+      
+        
+          G
+          
+            4
+          
+        
+        (
+        2
+        )
+        =
+        2
+        ⋅
+        
+          3
+          
+            2
+          
+        
+        +
+        2
+        ⋅
+        3
+        +
+        2
+      
+    
+    {\displaystyle G_{4}(2)=2\cdot 3^{2}+2\cdot 3+2}
+  
+, so 
+  
+    
+      
+        f
+        (
+        
+          2
+          
+            2
+          
+        
+        ,
+        2
+        )
+        =
+        
+          ω
+          
+            ω
+          
+        
+      
+    
+    {\displaystyle f(2^{2},2)=\omega ^{\omega }}
+  
+ and 
+  
+    
+      
+        f
+        (
+        2
+        ⋅
+        
+          3
+          
+            2
+          
+        
+        +
+        2
+        ⋅
+        3
+        +
+        2
+        ,
+        3
+        )
+        =
+        
+          ω
+          
+            2
+          
+        
+        ⋅
+        2
+        +
+        ω
+        ⋅
+        2
+        +
+        2
+      
+    
+    {\displaystyle f(2\cdot 3^{2}+2\cdot 3+2,3)=\omega ^{2}\cdot 2+\omega \cdot 2+2}
+  
+, which is strictly smaller. Note that in order to calculate 
+  
+    
+      
+        f
+        (
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+        ,
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle f(G_{m}(n),n+1)}
+  
+, we first need to write 
+
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G_{m}(n)}
+  
+ in hereditary base 
+  
+    
+      
+        n
+        +
+        1
+      
+    
+    {\displaystyle n+1}
+  
+ notation, as for instance the expression 
+  
+    
+      
+        
+          ω
+          
+            ω
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle \omega ^{\omega }-1}
+  
+ is not an ordinal.
+Thus the sequence 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ is strictly decreasing. As the standard order < on ordinals is well-founded, an infinite strictly decreasing sequence cannot exist, or equivalently, every strictly decreasing sequence of ordinals terminates (and cannot be infinite). But 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle P_{m}(n)}
+  
+ is calculated directly from 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G_{m}(n)}
+  
+. Hence the sequence 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+      
+    
+    {\displaystyle G_{m}}
+  
+ must terminate as well, meaning that it must reach 
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+.
+While this proof of Goodstein's theorem is fairly easy, the Kirby–Paris theorem, which shows that Goodstein's theorem is not a theorem of Peano arithmetic, is technical and considerably more difficult. It makes use of countable nonstandard models of Peano arithmetic.
+
+Extended Goodstein's theorem
+The above proof still works if the definition of the Goodstein sequence is changed so that the base-changing operation replaces each occurrence of the base 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ with 
+  
+    
+      
+        b
+        +
+        2
+      
+    
+    {\displaystyle b+2}
+  
+ instead of 
+  
+    
+      
+        b
+        +
+        1
+      
+    
+    {\displaystyle b+1}
+  
+.
+More generally, let 
+  
+    
+      
+        
+          b
+          
+            1
+          
+        
+      
+    
+    {\displaystyle b_{1}}
+  
+, 
+  
+    
+      
+        
+          b
+          
+            2
+          
+        
+      
+    
+    {\displaystyle b_{2}}
+  
+, 
+  
+    
+      
+        
+          b
+          
+            3
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle b_{3},\ldots }
+  
+ be any non-decreasing sequence of integers with 
+  
+    
+      
+        
+          b
+          
+            1
+          
+        
+        ≥
+        2
+      
+    
+    {\displaystyle b_{1}\geq 2}
+  
+.
+Then let the 
+  
+    
+      
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle (n+1)}
+  
+st
+term  
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle G_{m}(n+1)}
+  
+ of the extended Goodstein sequence of 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ be as
+follows:
+
+Take the hereditary base 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+      
+    
+    {\displaystyle b_{n}}
+  
+ representation of 
+  
+    
+      
+        
+          G
+          
+            m
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle G_{m}(n)}
+  
+.
+Replace each occurrence of the base 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+      
+    
+    {\displaystyle b_{n}}
+  
+ with 
+  
+    
+      
+        
+          b
+          
+            n
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle b_{n+1}}
+  
+.
+Subtract one.
+A simple modification of the above proof shows that this sequence still terminates. For example, if 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+        =
+        4
+      
+    
+    {\displaystyle b_{n}=4}
+  
+ and if 
+  
+    
+      
+        
+          b
+          
+            n
+            +
+            1
+          
+        
+        =
+        9
+      
+    
+    {\displaystyle b_{n+1}=9}
+  
+,
+then 
+  
+    
+      
+        f
+        (
+        3
+        ⋅
+        
+          4
+          
+            
+              4
+              
+                4
+              
+            
+          
+        
+        +
+        4
+        ,
+        4
+        )
+        =
+        3
+        
+          ω
+          
+            
+              ω
+              
+                ω
+              
+            
+          
+        
+        +
+        ω
+        =
+        f
+        (
+        3
+        ⋅
+        
+          9
+          
+            
+              9
+              
+                9
+              
+            
+          
+        
+        +
+        9
+        ,
+        9
+        )
+      
+    
+    {\displaystyle f(3\cdot 4^{4^{4}}+4,4)=3\omega ^{\omega ^{\omega }}+\omega =f(3\cdot 9^{9^{9}}+9,9)}
+  
+, hence the ordinal 
+  
+    
+      
+        f
+        (
+        3
+        ⋅
+        
+          4
+          
+            
+              4
+              
+                4
+              
+            
+          
+        
+        +
+        4
+        ,
+        4
+        )
+      
+    
+    {\displaystyle f(3\cdot 4^{4^{4}}+4,4)}
+  
+ is strictly greater than the ordinal 
+  
+    
+      
+        f
+        
+          
+            (
+          
+        
+        (
+        3
+        ⋅
+        
+          9
+          
+            
+              9
+              
+                9
+              
+            
+          
+        
+        +
+        9
+        )
+        −
+        1
+        ,
+        9
+        
+          
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle f{\big (}(3\cdot 9^{9^{9}}+9)-1,9{\big )}.}
+  
+
+The extended version is in fact the one considered in Goodstein's original paper, where Goodstein proved that it is equivalent to the restricted ordinal theorem (i.e. the claim that transfinite induction below ε0 is valid), and gave a finitist proof for the case where 
+  
+    
+      
+        m
+        ≤
+        
+          b
+          
+            1
+          
+          
+            
+              b
+              
+                1
+              
+              
+                
+                  b
+                  
+                    1
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle m\leq b_{1}^{b_{1}^{b_{1}}}}
+  
+ (equivalent to transfinite induction up to 
+  
+    
+      
+        
+          ω
+          
+            
+              ω
+              
+                ω
+              
+            
+          
+        
+      
+    
+    {\displaystyle \omega ^{\omega ^{\omega }}}
+  
+).
+The extended Goodstein's theorem without any restriction on the sequence bn is not formalizable in Peano arithmetic (PA), since such an arbitrary infinite sequence cannot be represented in PA. This seems to be what kept Goodstein from claiming back in 1944 that the extended Goodstein's theorem is unprovable in PA due to Gödel's second incompleteness theorem and Gentzen's proof of the consistency of PA using ε0-induction. However, inspection of Gentzen's proof shows that it only needs the fact that there is no primitive recursive strictly decreasing infinite sequence of ordinals, so limiting bn to primitive recursive sequences would have allowed Goodstein to prove an unprovability result. Furthermore, with the relatively elementary technique of the Grzegorczyk hierarchy, it can be shown that every primitive recursive strictly decreasing infinite sequence of ordinals
+can be "slowed down" so that it can be transformed to a Goodstein sequence where 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+        =
+        n
+        +
+        1
+      
+    
+    {\displaystyle b_{n}=n+1}
+  
+, thus giving an alternative proof to the same result Kirby and Paris proved.
+
+Sequence length as a function of the starting value
+The Goodstein function, 
+  
+    
+      
+        
+          
+            G
+          
+        
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle {\mathcal {G}}:\mathbb {N} \to \mathbb {N} }
+  
+, is defined such that 
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\mathcal {G}}(n)}
+  
+ is the length of the Goodstein sequence that starts with n.  (This is a total function since every Goodstein sequence terminates.)  The extremely high growth rate of 
+  
+    
+      
+        
+          
+            G
+          
+        
+      
+    
+    {\displaystyle {\mathcal {G}}}
+  
+ can be calibrated by relating it to various standard ordinal-indexed hierarchies of functions, such as the functions 
+  
+    
+      
+        
+          H
+          
+            α
+          
+        
+      
+    
+    {\displaystyle H_{\alpha }}
+  
+ in the Hardy hierarchy, and the functions 
+  
+    
+      
+        
+          f
+          
+            α
+          
+        
+      
+    
+    {\displaystyle f_{\alpha }}
+  
+ in the fast-growing hierarchy of Löb and Wainer:
+
+Kirby and Paris (1982) proved that
+
+  
+    
+      
+        
+          
+            G
+          
+        
+      
+    
+    {\displaystyle {\mathcal {G}}}
+  
+ has approximately the same growth-rate as 
+  
+    
+      
+        
+          H
+          
+            
+              ϵ
+              
+                0
+              
+            
+          
+        
+      
+    
+    {\displaystyle H_{\epsilon _{0}}}
+  
+ (which is the same as that of 
+  
+    
+      
+        
+          f
+          
+            
+              ϵ
+              
+                0
+              
+            
+          
+        
+      
+    
+    {\displaystyle f_{\epsilon _{0}}}
+  
+); more precisely, 
+  
+    
+      
+        
+          
+            G
+          
+        
+      
+    
+    {\displaystyle {\mathcal {G}}}
+  
+ dominates 
+  
+    
+      
+        
+          H
+          
+            α
+          
+        
+      
+    
+    {\displaystyle H_{\alpha }}
+  
+ for every 
+  
+    
+      
+        α
+        <
+        
+          ϵ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \alpha <\epsilon _{0}}
+  
+, and 
+  
+    
+      
+        
+          H
+          
+            
+              ϵ
+              
+                0
+              
+            
+          
+        
+      
+    
+    {\displaystyle H_{\epsilon _{0}}}
+  
+ dominates 
+  
+    
+      
+        
+          
+            G
+          
+        
+        
+        
+        .
+      
+    
+    {\displaystyle {\mathcal {G}}\,\!.}
+  
+
+(For any two functions 
+  
+    
+      
+        f
+        ,
+        g
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f,g:\mathbb {N} \to \mathbb {N} }
+  
+, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is said to dominate 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ if 
+  
+    
+      
+        f
+        (
+        n
+        )
+        >
+        g
+        (
+        n
+        )
+      
+    
+    {\displaystyle f(n)>g(n)}
+  
+ for all sufficiently large 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+.)
+Cichon (1983) showed that
+
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        n
+        )
+        =
+        
+          H
+          
+            
+              R
+              
+                2
+              
+              
+                ω
+              
+            
+            (
+            n
+            +
+            1
+            )
+          
+        
+        (
+        1
+        )
+        −
+        1
+        ,
+      
+    
+    {\displaystyle {\mathcal {G}}(n)=H_{R_{2}^{\omega }(n+1)}(1)-1,}
+  
+
+where 
+  
+    
+      
+        
+          R
+          
+            2
+          
+          
+            ω
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle R_{2}^{\omega }(n)}
+  
+ is the result of putting n in hereditary base-2 notation and then replacing all 2s with ω (as was done in the proof of Goodstein's theorem).
+Caicedo (2007) showed that if 
+  
+    
+      
+        n
+        =
+        
+          2
+          
+            
+              m
+              
+                1
+              
+            
+          
+        
+        +
+        
+          2
+          
+            
+              m
+              
+                2
+              
+            
+          
+        
+        +
+        ⋯
+        +
+        
+          2
+          
+            
+              m
+              
+                k
+              
+            
+          
+        
+      
+    
+    {\displaystyle n=2^{m_{1}}+2^{m_{2}}+\cdots +2^{m_{k}}}
+  
+ with 
+  
+    
+      
+        
+          m
+          
+            1
+          
+        
+        >
+        
+          m
+          
+            2
+          
+        
+        >
+        ⋯
+        >
+        
+          m
+          
+            k
+          
+        
+        ,
+      
+    
+    {\displaystyle m_{1}>m_{2}>\cdots >m_{k},}
+  
+ then
+
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        n
+        )
+        =
+        
+          f
+          
+            
+              R
+              
+                2
+              
+              
+                ω
+              
+            
+            (
+            
+              m
+              
+                1
+              
+            
+            )
+          
+        
+        (
+        
+          f
+          
+            
+              R
+              
+                2
+              
+              
+                ω
+              
+            
+            (
+            
+              m
+              
+                2
+              
+            
+            )
+          
+        
+        (
+        ⋯
+        (
+        
+          f
+          
+            
+              R
+              
+                2
+              
+              
+                ω
+              
+            
+            (
+            
+              m
+              
+                k
+              
+            
+            )
+          
+        
+        (
+        3
+        )
+        )
+        ⋯
+        )
+        )
+        −
+        2
+      
+    
+    {\displaystyle {\mathcal {G}}(n)=f_{R_{2}^{\omega }(m_{1})}(f_{R_{2}^{\omega }(m_{2})}(\cdots (f_{R_{2}^{\omega }(m_{k})}(3))\cdots ))-2}
+  
+.
+Some examples:
+
+(For Ackermann function and Graham's number bounds see fast-growing hierarchy § Functions in fast-growing hierarchies.)
+
+Application to computable functions
+Goodstein's theorem can be used to construct a total computable function that Peano arithmetic cannot prove to be total.  The Goodstein sequence of a number can be effectively enumerated by a Turing machine; thus the function that maps n to the number of steps required for the Goodstein sequence of n to terminate is computable by a particular Turing machine.  This machine merely enumerates the Goodstein sequence of n and, when the sequence reaches 0, returns the length of the sequence.  Because every Goodstein sequence eventually terminates, this function is total.   But because Peano arithmetic does not prove that every Goodstein sequence terminates, Peano arithmetic does not prove that this Turing machine computes a total function.

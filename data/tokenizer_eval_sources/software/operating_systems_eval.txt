@@ -1,0 +1,51 @@
+OPERATING SYSTEMS: RESOURCES AND ABSTRACTION
+
+An operating system sits between hardware and applications and performs two jobs. It multiplexes limited physical resources among competing programs, so one processor becomes many apparent processors and one memory becomes many private address spaces. It also abstracts hardware detail, so a program can write to a file without knowing whether the device beneath is a disk, an SSD, or a network share.
+
+Both jobs require privilege. Processors provide at least two execution modes: in user mode certain instructions are forbidden and memory access is restricted, while in kernel mode everything is permitted. Applications request privileged operations through system calls, which trap into the kernel at a controlled entry point, validate arguments, act, and return. This boundary is the security perimeter of the machine, and its cost, typically hundreds of nanoseconds, is why high-performance software minimizes crossings.
+
+PROCESSES AND THREADS
+
+A process is a program in execution together with what the kernel tracks for it: an address space, open file descriptors, credentials, and scheduling state. Processes are isolated by default, so one cannot read another's memory without explicit cooperation, and that isolation lets a crashed program leave the system intact.
+
+Unix-like systems create processes with fork, which duplicates the caller, followed by exec, which replaces the memory image. Fork is made cheap by copy-on-write: the child initially shares the parent's physical pages, marked read-only, and pages are copied only when either side writes.
+
+A thread is an execution context within a process. Threads share the address space and file descriptors, holding private only a stack, register state, and thread-local storage. Sharing makes communication nearly free compared with inter-process communication, and it makes threads dangerous, since any thread can corrupt data another is using. A context switch saves the outgoing thread's registers and restores the incoming one; the direct cost is modest, but the new thread arrives with cold caches and a translation lookaside buffer holding the wrong entries, so an oversubscribed system can spend much of its time switching rather than working.
+
+SCHEDULING
+
+The scheduler decides which runnable thread executes next, and its objectives conflict: throughput favors long time slices that amortize switching, latency favors short slices, and priority is in tension with fairness.
+
+Multilevel feedback queues start threads at high priority with short quanta and demote those consuming a full quantum, automatically distinguishing interactive workloads that block on input from batch workloads that compute continuously. Fair-share schedulers instead track accumulated virtual runtime and always run the thread that has received least, weighted by priority, giving proportional sharing without explicit quanta. Real-time scheduling adds deadlines through rate-monotonic or earliest-deadline-first policies, both of which must handle priority inversion, resolved by priority inheritance. On multiprocessors, migrating a thread to an idle core balances load but discards its accumulated cache contents.
+
+MEMORY MANAGEMENT AND VIRTUAL MEMORY
+
+Virtual memory gives each process a private address space that hardware translates to physical addresses, providing isolation, relocation, and the ability to run programs larger than physical memory. Translation operates on fixed-size pages, commonly four kilobytes, mapped through multi-level page tables that avoid allocating space for unused regions of a sparse address space. Because walking a table on every access would be ruinous, the processor caches recent translations in a translation lookaside buffer, whose misses matter only for workloads with poor locality or very large working sets, motivating huge pages covering two megabytes or more per entry.
+
+A page fault occurs when a referenced page is not resident: the kernel suspends the thread, reads the page from backing store, updates the table, and resumes. Faults are not always errors, since they implement demand paging and copy-on-write. When memory is exhausted a page must be evicted, and because exact least-recently-used ordering is too costly to maintain, systems use approximations such as the clock algorithm. Thrashing occurs when the aggregate working set exceeds physical memory and the system spends nearly all its time paging; the correct response is to reduce concurrency so each admitted process can hold its working set.
+
+CONCURRENCY AND SYNCHRONIZATION
+
+A race condition exists when an outcome depends on the relative timing of operations, the classic case being incrementing a counter, which compiles to separate load, add, and store instructions that can interleave.
+
+A critical section is a region at most one thread may execute at a time. Mutual exclusion is provided by a mutex, built on atomic instructions such as compare-and-swap that perform a read and conditional write indivisibly. Semaphores generalize mutexes to count resources. Condition variables let a thread wait until a predicate holds, releasing an associated mutex meanwhile; waiting must occur in a loop that rechecks the predicate, since spurious wakeups are permitted and another thread may have consumed the condition first.
+
+Deadlock requires four simultaneous conditions: mutual exclusion, hold and wait, no preemption, and circular wait. Breaking any one prevents it, and the most practical technique is a global ordering of lock acquisition, which eliminates circular wait by construction. Lock-free programming avoids blocking through atomic operations and retry loops, removing deadlock but requiring careful reasoning about memory ordering.
+
+FILE SYSTEMS AND STORAGE
+
+A file system organizes persistent storage into named hierarchical objects. Metadata held in an inode records size, ownership, permissions, timestamps, and block locations, while directories map names to inode numbers, which is why hard links are possible and renaming within a file system is cheap. Indexed allocation, used by most modern systems, stores block pointers in the inode with indirect blocks for larger files, while extent-based allocation records ranges rather than individual blocks.
+
+Crash consistency is the central difficulty, since one logical operation updates several structures and a crash between them leaves the system inconsistent. Journaling writes intended changes to a log before applying them, so recovery replays or discards incomplete transactions. Copy-on-write file systems never overwrite live data, instead writing new versions and atomically switching a root pointer, which yields consistency and cheap snapshots.
+
+The page cache holds recently accessed file data and is usually the largest consumer of otherwise free memory. Writes are buffered and flushed later, which is why an application must call fsync to guarantee durability; the gap between a write returning and data reaching stable storage is a frequent source of data loss. Hardware shapes these designs: rotating disks reward sequential access, while solid-state drives erase in large blocks, cannot overwrite in place, and require wear leveling, making write amplification the characteristic cost.
+
+INPUT, OUTPUT, AND VIRTUALIZATION
+
+Device drivers translate generic kernel requests into device commands. Data moves by programmed input and output, or by direct memory access, where a controller transfers independently and interrupts on completion. Interrupt handling is split for latency, with a top half acknowledging the device and a bottom half performing substantial processing later.
+
+A hypervisor runs multiple operating systems on one machine by virtualizing the hardware interface, assisted by processor extensions providing an extra privilege level and nested paging. Containers virtualize at the operating system level instead: processes share the host kernel but receive isolated views through namespaces partitioning process identifiers, mount points, and network interfaces, with bounded allocations through control groups. The result is far lower overhead than a virtual machine but weaker isolation, since a kernel vulnerability affects every container on the host.
+
+SECURITY
+
+Protection rests on the separation of user and kernel mode, on memory isolation through virtual memory, and on access control over named objects, whether discretionary, where owners set permissions, or mandatory, where system-wide policy cannot be overridden. The principle of least privilege states that a component should hold only the permissions it requires, enforced by dropping privileges after startup, capability systems that decompose superuser authority into fine-grained rights, and sandboxing that restricts which system calls a process may issue. Hardware assists: the no-execute bit prevents execution of data pages, address space layout randomization makes exploit addresses unpredictable, and stack canaries detect overwrites before a function returns. None eliminates memory-safety vulnerabilities; they raise the cost of exploitation.

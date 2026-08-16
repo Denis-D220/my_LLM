@@ -1,0 +1,229 @@
+In mathematics and computer science, graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects. A graph in this context is made up of vertices (also called nodes or points) which are connected by edges (also called arcs, links, or lines). A distinction is made between undirected graphs, where edges link two vertices symmetrically, and directed graphs, where edges link two vertices asymmetrically. Graphs are one of the principal objects of study in discrete mathematics.
+
+Definition and etymology
+
+Graph theory is a branch of mathematics that studies graphs, mathematical structures for modelling pairwise relations between objects. It is part of discrete mathematics, often considered part of combinatorics, although it is a stand-alone field due to its great growth and distinct from other fields, having its own kind of problems. The term "graph" was introduced by James Joseph Sylvester in a paper published in 1878 in Nature, where he drew an analogy between "quantic invariants" and "co-variants" of algebra and molecular diagrams.
+The definition of a graph can vary, but one can understand that a graph is a structure consisting of vertices (also called nodes or points) and edges (also called arcs, links, or lines). Two vertices of an edge are called the endpoints. Occasionally, a graph is called an undirected graph, to distinguish it from a directed graph. A directed graph is a graph where each edge has an assignment direction known as orientation, designated with an arrow. A mixed graph can have edges that may be directed, and some may be undirected. A graph can also be called a simple graph, to distinguish it from a multigraph. A multigraph allows many edges to have the same pair of endpoints, and it also allows an edge to connect a vertex to itself, known as a loop. A graph can have its edges assigned a number, which is known as the weight. Such a graph is called a weighted graph.
+
+History
+
+In 1736, Leonhard Euler published a paper titled Solutio Problematis ad Geometriam Situs Pertinentis on the Seven Bridges of Königsberg, which is regarded as the first paper in the history of graph theory. Euler's paper and Alexandre-Théophile Vandermonde's 1771 Remarques sur les Problèmes de Situation paper on the knight's tour carried on with the analysis situs, initiated by Gottfried Wilhelm Leibniz. Euler's characteristic relating the number of edges, vertices, and faces of a convex polyhedron was studied and generalized by Augustin-Louis Cauchy and Simon Antoine Jean L'Huilier, and represents the beginning of the branch of mathematics known as topology.
+More than one century after Euler's paper on the bridges of Königsberg, and while Johann Benedict Listing was introducing the concept of topology, Arthur Cayley was led by an interest in particular analytical forms arising from differential calculus to study a particular class of graphs, the trees. This study had many implications for theoretical chemistry. The techniques he used mainly concern the enumeration of graphs with particular properties. Enumerative graph theory then arose from the results of Cayley and the fundamental results published by Pólya between 1935 and 1937. These were generalized by Nicolaas Govert de Bruijn in 1959. Cayley linked his results on trees with contemporary studies of chemical composition. The fusion of ideas from mathematics with those from chemistry began what has become part of the standard terminology of graph theory.
+The autonomous development of topology from 1860 to 1930 fertilized graph theory back through the works of Camille Jordan, Kazimierz Kuratowski, and Hassler Whitney. Another important factor in the common development of graph theory and topology came from the use of the techniques of modern algebra. The first example of such a use comes from the work of the physicist Gustav Kirchhoff, who published in 1845 his Kirchhoff's circuit laws for calculating the voltage and current in electric circuits.
+The first textbook on graph theory was written by Dénes Kőnig, and published in 1936. Another book by Frank Harary, published in 1969, was "considered the world over to be the definitive textbook on the subject", and enabled mathematicians, chemists, electrical engineers and social scientists to talk to each other. Harary donated all of the royalties to fund the Pólya Prize.
+One of the most famous problems in graph theory is the four color problem: Is it true that any map drawn in the plane may have its regions colored with four colors, in such a way that any two regions having a common border have different colors? This problem was first posed by Francis Guthrie in 1852, and its first written record is in a letter of Augustus De Morgan addressed to William Rowan Hamilton the same year. Many incorrect proofs have been proposed, including those by Augustin Cayley, Alfred Kempe, and others. The study and the generalization of this problem by Peter Tait, Percy John Heawood, Frank P. Ramsey and Hadwiger led to the study of the colorings of the graphs embedded on surfaces with arbitrary genus. Tait's reformulation generated a new class of problems, the factorization problems, particularly studied by Petersen and Dénes Kőnig. The works of Ramsey on colorations, and more specially, the results obtained by Pál Turán in 1941, were at the origin of another branch of graph theory, known as extremal graph theory.
+The four-color problem remained unsolved for more than a century. In 1969, Heinrich Heesch published a method for solving the problem using computers. A computer-aided proof produced in 1976 by Kenneth Appel and Wolfgang Haken makes fundamental use of the notion of "discharging" developed by Heesch. The proof involved checking the properties of 1,936 configurations by computer, and was not fully accepted at the time due to its complexity. A simpler proof considering only 633 configurations was given twenty years later by Robertson, Seymour, Sanders and Thomas.
+The introduction of probabilistic methods in graph theory, especially in the study of Erdős and Rényi of the asymptotic probability of graph connectivity, gave rise to yet another branch, known as random graph theory, which has been a fruitful source of graph-theoretic results.
+
+Subareas
+
+Topological graph theory
+
+Topological graph theory deals with the study of graphs as topological spaces. The graph in a topology is a set of simplexes that is called the simplicial one-dimensional complex. This subarea studies the embedding (or imbedding) of a graph in surface and linkless embedding, graph minors, crossing number, map coloring, and voltage graph.
+The embedding of a graph in a surface is the representation of a graph in which the points are associated with the vertices and simple arcs with edges in a surface. The endpoints are associated with an edge, and the points with the end vertices. No arcs include points associated with other vertices, and two arcs never intersect at a point that is interior to either of the arcs. The graph embedding can be generalized into the linkless embedding, whereby no two cycles of the graph are linked in three-dimensional Euclidean space, and a book, a collection of half-planes all having the same line as their boundary.
+The graph is said to be minor if it can be formed from another graph by deleting vertices and edges, and by edge-contraction. The earliest result of the graph minor theory is from Wagner's theorem, stating that a finite graph is planar if and only if its minor includes neither the complete graph on five vertices 
+  
+    
+      
+        
+          K
+          
+            5
+          
+        
+      
+    
+    {\displaystyle K_{5}}
+  
+ nor the utility graph. A related result is the Robertson–Seymour theorem, implying the existence of forbidden minor for every property of graphs preserved by deletions and edge contractions.
+The crossing number tells the minimum number of crossing edges of a graph. This study originated from a Hungarian mathematician Pál Turán who asked for a factory plan that minimized the number of crossings between tracks connecting brick kilns to storage sites. This problem can be formalized as asking for the crossing number of a complete bipartite graph.
+A graph coloring is a methodical assignment of labelling the elements of a graph, which is traditionally called colors. In coloring, no two adjacent elements have the same color. It requires the minimum number of colors, which is known as the chromatic number. Four-color theorem stated that no more than four colors are required to color the regions of any map so that no two adjacent regions have the same color; that is, no two regions share a common boundary. This theorem is stronger than five-color theorem. Relatedly, Earth–Moon problem is known for the nowadays open problem on extension of the planar map coloring problem, solved by the four-color theorem.
+A voltage graph is a directed graph whose edges are labelled invertibly by elements of a group. This graph concisely specifies the derived graph. It is also a common way to form a covering graph.
+
+Algebraic graph theory
+
+Algebraic graph theory is the study of graph theory that involves major branches of algebra. Major branches of algebra that are used are linear algebra and group theory.
+A study of graph theory using linear algebra is called spectral graph theory. This study focuses on adjacency matrix, a matrix that represents the graph, and its spectrum, which focuses on the characteristic polynomial, eigenvalues, and eigenvectors of the given adjacency matrix. It also focuses on the Laplacian matrix of a graph, which involves the degree matrix (a diagonal matrix that represents the degree of a vertex) and the adjacency matrix.
+Group theory, particularly automorphism groups and geometric group theory, focuses on various families of graphs based on symmetry in algebraic graph theory. Such a symmetry includes symmetric graphs, vertex-transitive graphs, edge-transitive graphs, distance-transitive graphs, distance-regular graphs, and strongly regular graphs. Frucht's theorem states that every finite group is the group of symmetries of a finite undirected graph, or more strongly, there exist infinitely many non-isomorphic simple connected graphs such that the automorphism group of each of them is isomorphic to a finite group.
+Algebraic graph theory also studies the algebraic invariants, chromatic polynomial, Tutte polynomial of a graph, and knot invariant. A graph invariant is a property of graphs that depends only on the abstract structure, instead of labellings or drawings of the graph. A chromatic polynomial is a polynomial that counts the number of graph colorings as a function of the number of colors. The Tutte polynomial is a two-variable polynomial on graph connectivity.
+
+Geometric graph theory
+
+Geometric graph theory focuses on combinatorial and geometric properties of a graph that is drawn in a plane with straight-line or continuous curved edges in Euclidean space. As part of discrete geometry and computational geometry, geometric graph theory studies planar graphs, relationship to higher-dimensional convex polytopes, intersection of geometrical shaped sets, and other geometries' subareas of incidence geometry and projective geometry.
+A planar graph wherein its vertices are embedded as points, and its edges are non-crossing line segments in the Euclidean plane is called planar straight-line graph. Any planar graph can be represented as a planar straight-line graph by Fáry's theorem. The planar straight-line graph is the special case of a Euclidean graph. The Euclidean graph allows its edges to have the length of the Euclidean distance between its endpoints. Its notions are the Euclidean minimum spanning tree on minimizing the total length of the segments for finite points in any Euclidean space, Hadwiger–Nelson problem on asking for the minimum number of coloring plane such that no two points at a unit distance from each other have the same color, and shortest path problem on finding a path between two vertices in a graph that minimizes the sum of the assigned values of its edges.
+A visibility graph is a graph whose vertices and edges are the point locations and visible connections, respectively. In a simple polygon, where its edges are not self-intersecting and have no holes, the vertices of a visibility graph are connected by edges that represent the sides and diagonals of a polygon. The vertices are defined as the point locations. Polyhedral graph is an undirected graph that forms the vertices and edges of a three-dimensional convex polyhedron. In order to achieve it, such a graph must meet the requirements of Steinitz's theorem, stating that every convex polyhedron is 3-vertex connected planar graph. The planar graph remains connected whenever any two of its vertices are removed.
+An intersection graph is a graph in which each vertex is associated with a set and in which vertices are connected by edges whenever the corresponding sets have a nonempty intersection. Each vertex is represented as a set, and every two vertices are connected. Hence, the intersection graph of finite sets can be represented through the smallest number of required elements, known as the intersection number. The result graph can be geometric whenever the sets are geometrical objects. For instance, the intersection graph of line segments in one dimension is an interval graph. The intersection graph of unit disks in the plane is a unit disk graph. The intersection of a circle packing is a coin graph, where a vertex and an edge represent a circle and every pair of tangent circles; by Koebe–Andreev–Thurston theorem, the intersection graphs of non-crossing circles are exactly the planar graphs. Scheinerman's theorem states that every planar graph can be represented as the intersection graph of line segments in the plane.
+The Levi graph is a bipartite graph that associates to the incidence structure and projective configuration.
+By applying to information visualization, this creates another subarea of graph theory that is known as graph drawing, which visualizes a graph depiction. Frequently drawn as node–link diagrams, the vertices of a graph are represented as disks, boxes, or textual labels, and the edges are represented as line segments, polylines, or curves in the Euclidean plane. Many definitions for graph drawings based on quality measures include the crossing number, area, symmetry display on finding the problem of a graph's group automorphism, bend minimization, angular resolution, and slope number. Tools for graph drawings are the circle packing, the intersection graph, and other visualizations of the adjacency matrix.
+
+Extremal graph theory
+
+Extremal graph theory is a branch of mathematics at the intersection of extremal combinatorics and graph theory. This area studies the maximum number of a graph's edges, known as the extremal number. The subarea's milestone originated from Mantel's theorem on the extremal number of a triangle-free graph. Turán's theorem extended Mantel's theorem for any undirected graph that does not have a complete subgraph of a given size. Turán's theorem is generalized by Erdős–Stone theorem, which is occasionally known as the "fundamental theorem of extremal graph theory".
+Extremal graph theory also studies forbidden subgraph problem, homomorphism density, and Szemerédi regularity lemma. The forbidden subgraphs problem suggests finding the extremal number of a graph with 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ vertices such that it does not have a subgraph that is isomorphic to the graph. A homomorphism density is a parameter that involves the graph homomorphism. The density may refer to the probability that a map from the vertices of a graph to the vertices of another one chosen uniformly at random is a graph homomorphism. Being homomorphic means there exists a mapping between two graphs that respects their structure, or equivalently, a function between the vertex sets of two graphs that maps adjacent vertices to adjacent vertices. Szemerédi's regularity lemma states that a graph can be partitioned into a bounded number of parts so that the edges between parts are 
+  
+    
+      
+        ε
+      
+    
+    {\displaystyle \varepsilon }
+  
+-regular.
+
+Theory of random graph
+
+The theory of random graph focuses on graphs using probabilistic method. The subarea was founded by Hungarian mathematicians Paul Erdős and Alfréd Rényi, whose modelling generates random graphs, known as Erdős–Rényi model.
+
+This subarea studies the random tree. A tree is an undirected graph where every pair of vertices is connected by exactly one path. Therefore, a random tree is a tree that is formed by a stochastic process. Many types of random trees include:
+
+Uniform spanning tree is a spanning tree of a given graph in which each different tree is equally likely to be selected. Being a spanning tree means that a subgraph is a tree that includes all of the vertices of a graph. The uniform spanning tree can be generated by using the method of random simple path known as the loop-erased random walk, of taking a random walk on the given graph and erasing the cycles created by this walk.
+Branching process, a model of a population in which each individual has a random number of children
+Brownian tree, a fractal tree structure created by diffusion-limited aggregation processes
+Random binary tree is a binary tree selected at random from some probability distribution on binary trees. This includes trees formed by random insertion orders, and trees that are uniformly distributed with a given number of nodes.
+Random forest, a machine-learning classifier based on choosing random subsets of variables for each tree and using the most frequent tree output as the overall classification.
+Random minimal spanning tree is a spanning tree of a graph formed by choosing random edge weights and using the minimum spanning tree for those weights.
+Random recursive tree, increasingly labelled trees, which can be generated using a simple stochastic growth rule.
+Rapidly exploring random tree, a fractal space-filling pattern used as a data structure for searching high-dimensional spaces.
+Treap or randomized binary search tree, a data structure that uses random choices to simulate a random binary tree for non-random update sequences
+
+Graph enumeration
+
+Applications
+
+Graphs can be used to model many types of relations and processes in physical, biological, social and information systems. Many practical problems can be represented by graphs. Emphasizing their application to real-world systems, the term network is sometimes defined to mean a graph in which attributes (e.g. names) are associated with the vertices and edges, and the subject that expresses and understands real-world systems as a network is called network science.
+
+Computer science
+Within computer science, 'causal' and 'non-causal' linked structures are graphs that are used to represent networks of communication, data organization, computational devices, the flow of computation, etc. For instance, the link structure of a website can be represented by a directed graph, in which the vertices (nodes) represent web pages and directed edges represent links from one page to another. A similar approach can be taken to problems in social media, travel, biology, computer chip design, mapping the progression of neuro-degenerative diseases, and many other fields. The development of algorithms to handle graphs is therefore of major interest in computer science. The transformation of graphs is often formalized and represented by graph rewrite systems. Complementary to graph transformation systems focusing on rule-based in-memory manipulation of graphs are graph databases geared towards transaction-safe, persistent storing and querying of graph-structured data.
+
+Linguistics
+Graph-theoretic methods, in various forms, have proven particularly useful in linguistics, since natural language often lends itself well to discrete structure. Traditionally, syntax and compositional semantics follow tree-based structures, whose expressive power lies in the principle of compositionality, modeled in a hierarchical graph. More contemporary approaches such as head-driven phrase structure grammar model the syntax of natural language using typed feature structures, which are directed acyclic graphs. 
+Within lexical semantics, especially as applied to computers, modeling word meaning is easier when a given word is understood in terms of related words; semantic networks are therefore important in computational linguistics. Still, other methods in phonology (e.g. optimality theory, which uses lattice graphs) and morphology (e.g. finite-state morphology, using finite-state transducers) are common in the analysis of language as a graph. Indeed, the usefulness of this area of mathematics to linguistics has borne organizations such as TextGraphs, as well as various 'Net' projects, such as WordNet, VerbNet, and others.
+
+Physics and chemistry
+Graph theory is also used to study molecules in chemistry and physics. In condensed matter physics, the three-dimensional structure of complicated simulated atomic structures can be studied quantitatively by gathering statistics on graph-theoretic properties related to the topology of the atoms. Also, "the Feynman graphs and rules of calculation summarize quantum field theory in a form in close contact with the experimental numbers one wants to understand." In chemistry a graph makes a natural model for a molecule, where vertices represent atoms and edges bonds. This approach is especially used in computer processing of molecular structures, ranging from chemical editors to database searching. In statistical physics, graphs can represent local connections between interacting parts of a system, as well as the dynamics of a physical process on such
+systems. Similarly, in computational neuroscience graphs can be used to represent functional connections between brain areas that interact to give rise to various cognitive processes, where the vertices represent different areas of the brain and the edges represent the connections between those areas. Graph theory plays an important role in electrical modeling of electrical networks, here, weights are associated with resistance of the wire segments to obtain electrical properties of network structures. Graphs are also used to represent the micro-scale channels of porous media, in which the vertices represent the pores and the edges represent the smaller channels connecting the pores. Chemical graph theory uses the molecular graph as a means to model molecules.
+Graphs and networks are excellent models to study and understand phase transitions and critical phenomena. Removal of nodes or edges leads to a critical transition where the network breaks into small clusters which is studied as a phase transition. This breakdown is studied via percolation theory.
+
+Social sciences
+
+Graph theory is also widely used in sociology as a way, for example, to measure actors' prestige or to explore rumor spreading, notably through the use of social network analysis software. Under the umbrella of social networks are many different types of graphs. Acquaintanceship and friendship graphs describe whether people know each other. Influence graphs model whether certain people can influence the behavior of others. Finally, collaboration graphs model whether two people work together in a particular way, such as acting in a movie together.
+
+Biology and ecology
+Likewise, graph theory is useful in biology and conservation efforts where a vertex can represent regions where certain species exist (or inhabit) and the edges represent migration paths or movement between the regions. This information is important when looking at breeding patterns or tracking the spread of disease, parasites or how changes to the movement can affect other species.
+Graphs are also commonly used in molecular biology and genomics to model and analyze datasets with complex relationships. For example, graph-based methods are often used to 'cluster' cells together into cell-types in single-cell transcriptome analysis. Another use is to model genes or proteins in a pathway and study the relationships between them, such as metabolic pathways and gene regulatory networks. Evolutionary trees, ecological networks, and hierarchical clustering of gene expression patterns are also represented as graph structures. 
+Graph theory is also used in connectomics; nervous systems can be seen as a graph, where the nodes are neurons and the edges are the connections between them.
+
+Other topics
+A graph structure can be extended by assigning a weight to each edge of the graph. Graphs with weights, or weighted graphs, are used to represent structures in which pairwise connections have some numerical values. For example, if a graph represents a road network, the weights could represent the length of each road. There may be several weights associated with each edge, including distance (as in the previous example), travel time, or monetary cost. Such weighted graphs are commonly used to program GPS's, and travel-planning search engines that compare flight times and costs.
+
+Representation
+A graph is an abstraction of relationships that emerge in nature; hence, it cannot be coupled to a certain representation. The way it is represented depends on the degree of convenience such representation provides for a certain application. The most common representations are the visual, in which, usually, vertices are drawn and connected by edges, and the tabular, in which rows of a table provide information about the relationships between the vertices within the graph.
+
+Visual: Graph drawing
+
+Graphs are usually represented visually by drawing a point or circle for every vertex, and drawing a line between two vertices if they are connected by an edge. If the graph is directed, the direction is indicated by drawing an arrow. If the graph is weighted, the weight is added on the arrow.
+A graph drawing should not be confused with the graph itself (the abstract, non-visual structure) as there are several ways to structure the graph drawing. All that matters is which vertices are connected to which others by how many edges and not the exact layout. In practice, it is often difficult to decide if two drawings represent the same graph. Depending on the problem domain some layouts may be better suited and easier to understand than others.
+The pioneering work of W. T. Tutte was very influential on the subject of graph drawing. Among other achievements, he introduced the use of linear algebraic methods to obtain graph drawings.
+Graph drawing also can be said to encompass problems that deal with the crossing number and its various generalizations. The crossing number of a graph is the minimum number of intersections between edges that a drawing of the graph in the plane must contain. For a planar graph, the crossing number is zero by definition. Drawings on surfaces other than the plane are also studied.
+There are other techniques to visualize a graph away from vertices and edges, including circle packings, intersection graph, and other visualizations of the adjacency matrix.
+
+Tabular: Graph data structures
+
+The tabular representation lends itself well to computational applications. There are different ways to store graphs in a computer system. The data structure used depends on both the graph structure and the algorithm used for manipulating the graph. Theoretically one can distinguish between list and matrix structures but in concrete applications the best structure is often a combination of both. List structures are often preferred for sparse graphs as they have smaller memory requirements. Matrix structures on the other hand provide faster access for some applications but can consume huge amounts of memory. Implementations of sparse matrix structures that are efficient on modern parallel computer architectures are an object of current investigation.
+List structures include the edge list, an array of pairs of vertices, and the adjacency list, which separately lists the neighbors of each vertex: Much like the edge list, each vertex has a list of which vertices it is adjacent to.
+Matrix structures include the incidence matrix, a matrix of 0's and 1's whose rows represent vertices and whose columns represent edges, and the adjacency matrix, in which both the rows and columns are indexed by vertices. In both cases a 1 indicates two adjacent objects and a 0 indicates two non-adjacent objects. The degree matrix indicates the degree of vertices. The Laplacian matrix is a modified form of the adjacency matrix that incorporates information about the degrees of the vertices, and is useful in some calculations such as Kirchhoff's theorem on the number of spanning trees of a graph.
+The distance matrix, like the adjacency matrix, has both its rows and columns indexed by vertices, but rather than containing a 0 or a 1 in each cell it contains the length of a shortest path between two vertices.
+
+Problems
+
+Enumeration
+There is a large literature on graphical enumeration: the problem of counting graphs meeting specified conditions. Some of this work is found in Harary and Palmer (1973).
+
+Subgraphs, induced subgraphs, and minors
+A common problem, called the subgraph isomorphism problem, is finding a fixed graph as a subgraph in a given graph. One reason to be interested in such a question is that many graph properties are hereditary for subgraphs, which means that a graph has the property if and only if all subgraphs have it too.
+Finding maximal subgraphs of a certain kind is often an NP-complete problem. For example:
+
+Finding the largest complete subgraph is called the clique problem (NP-complete).
+One special case of subgraph isomorphism is the graph isomorphism problem. It asks whether two graphs are isomorphic. It is not known whether this problem is NP-complete, nor whether it can be solved in polynomial time.
+A similar problem is finding induced subgraphs in a given graph. Again, some important graph properties are hereditary with respect to induced subgraphs, which means that a graph has a property if and only if all induced subgraphs also have it. Finding maximal induced subgraphs of a certain kind is also often NP-complete. For example:
+
+Finding the largest edgeless induced subgraph or independent set is called the independent set problem (NP-complete).
+Still another such problem, the minor containment problem, is to find a fixed graph as a minor of a given graph. A minor or subcontraction of a graph is any graph obtained by taking a subgraph and contracting some (or no) edges. Many graph properties are hereditary for minors, which means that a graph has a property if and only if all minors have it too. For example, Wagner's Theorem states: 
+
+A graph is planar if it contains as a minor neither the complete bipartite graph K3,3 (see the Three-cottage problem) nor the complete graph K5.
+A similar problem, the subdivision containment problem, is to find a fixed graph as a subdivision of a given graph. A subdivision or homeomorphism of a graph is any graph obtained by subdividing some (or no) edges. Subdivision containment is related to graph properties such as planarity. For example, Kuratowski's Theorem states:
+
+A graph is planar if it contains as a subdivision neither the complete bipartite graph K3,3 nor the complete graph K5.
+Another problem in subdivision containment is the Kelmans–Seymour conjecture:
+
+Every 5-vertex-connected graph that is not planar contains a subdivision of the 5-vertex complete graph K5.
+Another class of problems has to do with the extent to which various species and generalizations of graphs are determined by their point-deleted subgraphs. For example:
+
+The reconstruction conjecture
+
+Graph coloring
+
+Many problems and theorems in graph theory have to do with various ways of coloring graphs. Typically, one is interested in coloring a graph so that no two adjacent vertices have the same color, or with other similar restrictions. One may also consider coloring edges (possibly so that no two coincident edges are the same color), or other variations. Among the famous results and conjectures concerning graph coloring are the following:
+
+Four-color theorem
+Strong perfect graph theorem
+Erdős–Faber–Lovász conjecture
+Total coloring conjecture, also called Behzad's conjecture (unsolved)
+List coloring conjecture (unsolved)
+Hadwiger conjecture (graph theory) (unsolved)
+
+Subsumption and unification
+Constraint modeling theories concern families of directed graphs related by a partial order. In these applications, graphs are ordered by specificity, meaning that more constrained graphs—which are more specific and thus contain a greater amount of information—are subsumed by those that are more general. Operations between graphs include evaluating the direction of a subsumption relationship between two graphs, if any, and computing graph unification. The unification of two argument graphs is defined as the most general graph (or the computation thereof) that is consistent with (i.e. contains all of the information in) the inputs, if such a graph exists; efficient unification algorithms are known.
+For constraint frameworks which are strictly compositional, graph unification is the sufficient satisfiability and combination function. Well-known applications include automatic theorem proving and modeling the elaboration of linguistic structure.
+
+Route problems
+Hamiltonian path problem
+Minimum spanning tree
+Route inspection problem (also called the "Chinese postman problem")
+Seven bridges of Königsberg
+Shortest path problem
+Steiner tree
+Three-cottage problem
+Traveling salesman problem (NP-hard)
+
+Network flow
+There are numerous problems arising especially from applications that have to do with various notions of flows in networks, for example:
+
+Max flow min cut theorem
+
+Visibility problems
+Museum guard problem
+
+Covering problems
+Covering problems in graphs may refer to various set cover problems on subsets of vertices/subgraphs.
+
+Dominating set problem is the special case of set cover problem where sets are the closed neighborhoods.
+Vertex cover problem is the special case of set cover problem where sets to cover are every edges.
+The original set cover problem, also called hitting set, can be described as a vertex cover in a hypergraph.
+
+Decomposition problems
+Decomposition, defined as partitioning the edge set of a graph (with as many vertices as necessary accompanying the edges of each part of the partition), has a wide variety of questions. Often, the problem is to decompose a graph into subgraphs isomorphic to a fixed graph; for instance, decomposing a complete graph into Hamiltonian cycles. Other problems specify a family of graphs into which a given graph should be decomposed, for instance, a family of cycles, or decomposing a complete graph Kn into n − 1 specified trees having, respectively, 1, 2, 3, ..., n − 1 edges.
+Some specific decomposition problems and similar problems that have been studied include:
+
+Arboricity, a decomposition into as few forests as possible
+Cycle double cover, a collection of cycles covering each edge exactly twice
+Edge coloring, a decomposition into as few matchings as possible
+Graph factorization, a decomposition of a regular graph into regular subgraphs of given degrees
+
+Graph classes
+Many problems involve characterizing the members of various classes of graphs. Some examples of such questions are below:
+
+Enumerating the members of a class
+Characterizing a class in terms of forbidden substructures
+Ascertaining relationships among classes (e.g. does one property of graphs imply another)
+Finding efficient algorithms to decide membership in a class
+Finding representations for members of a class

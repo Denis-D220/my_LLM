@@ -1,0 +1,1129 @@
+In computer science, in particular in formal language theory, the pumping lemma for context-free languages, also known as the Bar-Hillel lemma, is a lemma that gives a property shared by all context-free languages and generalizes the pumping lemma for regular languages.
+The pumping lemma can be used to construct a refutation by contradiction that a specific language is not context-free. Conversely, the pumping lemma does not suffice to guarantee that a language is context-free; there are other necessary conditions, such as Ogden's lemma, or the Interchange lemma.
+
+Formal statement
+
+If a language 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ is context-free, then there exists some integer 
+  
+    
+      
+        p
+        ≥
+        1
+      
+    
+    {\displaystyle p\geq 1}
+  
+ (called a "pumping length") such that every string 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ in 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ that has a length of 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ or more symbols (i.e. with 
+  
+    
+      
+        
+          |
+        
+        s
+        
+          |
+        
+        ≥
+        p
+      
+    
+    {\displaystyle |s|\geq p}
+  
+) can be written as
+
+  
+    
+      
+        s
+        =
+        u
+        v
+        w
+        x
+        y
+      
+    
+    {\displaystyle s=uvwxy}
+  
+
+with substrings 
+  
+    
+      
+        u
+        ,
+        v
+        ,
+        w
+        ,
+        x
+      
+    
+    {\displaystyle u,v,w,x}
+  
+ and 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+, such that
+
+  
+    
+      
+        
+          |
+        
+        v
+        x
+        
+          |
+        
+        ≥
+        1
+      
+    
+    {\displaystyle |vx|\geq 1}
+  
+,
+
+  
+    
+      
+        
+          |
+        
+        v
+        w
+        x
+        
+          |
+        
+        ≤
+        p
+      
+    
+    {\displaystyle |vwx|\leq p}
+  
+, and
+
+  
+    
+      
+        u
+        
+          v
+          
+            n
+          
+        
+        w
+        
+          x
+          
+            n
+          
+        
+        y
+        ∈
+        L
+      
+    
+    {\displaystyle uv^{n}wx^{n}y\in L}
+  
+ for all 
+  
+    
+      
+        n
+        ≥
+        0
+      
+    
+    {\displaystyle n\geq 0}
+  
+.
+Below is a formal expression of the Pumping Lemma.
+
+  
+    
+      
+        
+          
+            
+              
+                (
+                ∀
+                L
+                ⊆
+                
+                  Σ
+                  
+                    ∗
+                  
+                
+                )
+              
+            
+            
+              
+                
+                (
+                
+                  
+                    context free
+                  
+                
+                (
+                L
+                )
+                ⇒
+              
+            
+            
+              
+                
+                (
+                (
+                ∃
+                p
+                ≥
+                1
+                )
+                (
+                (
+                ∀
+                s
+                ∈
+                L
+                )
+                (
+                (
+                
+                  |
+                
+                s
+                
+                  |
+                
+                ≥
+                p
+                )
+                ⇒
+              
+            
+            
+              
+                
+                (
+                (
+                ∃
+                u
+                ,
+                v
+                ,
+                w
+                ,
+                x
+                ,
+                y
+                ∈
+                
+                  Σ
+                  
+                    ∗
+                  
+                
+                )
+                (
+                s
+                =
+                u
+                v
+                w
+                x
+                y
+                ∧
+                
+                  |
+                
+                v
+                x
+                
+                  |
+                
+                ≥
+                1
+                ∧
+                
+                  |
+                
+                v
+                w
+                x
+                
+                  |
+                
+                ≤
+                p
+                ∧
+                (
+                ∀
+                n
+                ≥
+                0
+                )
+                (
+                u
+                
+                  v
+                  
+                    n
+                  
+                
+                w
+                
+                  x
+                  
+                    n
+                  
+                
+                y
+                ∈
+                L
+                )
+                )
+                )
+                )
+                )
+                )
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{array}{l}(\forall L\subseteq \Sigma ^{*})\\\quad ({\mbox{context free}}(L)\Rightarrow \\\quad ((\exists p\geq 1)((\forall s\in L)((|s|\geq p)\Rightarrow \\\quad ((\exists u,v,w,x,y\in \Sigma ^{*})(s=uvwxy\land |vx|\geq 1\land |vwx|\leq p\land (\forall n\geq 0)(uv^{n}wx^{n}y\in L)))))))\end{array}}}
+  
+
+Informal statement and explanation
+The pumping lemma for context-free languages (called just "the pumping lemma" for the rest of this article) describes a property that all context-free languages are guaranteed to have.
+The property holds for all strings in the language that are of length at least 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+, where 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is a constant—called the pumping length—that varies between context-free languages.
+Say 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ is a string of length at least 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ that is in the language.
+The pumping lemma states that 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ can be split into five substrings, 
+  
+    
+      
+        s
+        =
+        u
+        v
+        w
+        x
+        y
+      
+    
+    {\displaystyle s=uvwxy}
+  
+, where 
+  
+    
+      
+        v
+        x
+      
+    
+    {\displaystyle vx}
+  
+ is non-empty and the length of 
+  
+    
+      
+        v
+        w
+        x
+      
+    
+    {\displaystyle vwx}
+  
+ is at most 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+, such that repeating 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ and 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ the same number of times (
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+) in 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ produces a string that is still in the language.  It is often useful to repeat zero times, which removes 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ and 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ from the string (this is "pumping down"). This process of "pumping up" 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ with additional copies of 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  
+ and 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ is what gives the pumping lemma its name.
+Finite languages (which are regular and hence context-free) obey the pumping lemma trivially by having 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ equal to the maximum string length in 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ plus one. As there are no strings of this length the pumping lemma holds vacuously.
+
+Usage of the lemma
+The pumping lemma is often used to prove that a given language L is non-context-free, by showing that arbitrarily long strings s are in L that cannot be "pumped" without producing strings outside L.
+For example, if 
+  
+    
+      
+        S
+        ⊂
+        
+          N
+        
+      
+    
+    {\displaystyle S\subset \mathbb {N} }
+  
+ is infinite but does not contain an (infinite) arithmetic progression, then 
+  
+    
+      
+        L
+        =
+        {
+        
+          a
+          
+            n
+          
+        
+        :
+        n
+        ∈
+        S
+        }
+      
+    
+    {\displaystyle L=\{a^{n}:n\in S\}}
+  
+ is not context-free. In particular, neither the prime numbers nor the square numbers are context-free.
+For example, the language 
+  
+    
+      
+        L
+        =
+        {
+        
+          a
+          
+            n
+          
+        
+        
+          b
+          
+            n
+          
+        
+        
+          c
+          
+            n
+          
+        
+        
+          |
+        
+        n
+        >
+        0
+        }
+      
+    
+    {\displaystyle L=\{a^{n}b^{n}c^{n}|n>0\}}
+  
+ can be shown to be non-context-free by using the pumping lemma in a proof by contradiction. First, assume that L is context free. By the pumping lemma, there exists an integer p which is the pumping length of language L. Consider the string 
+  
+    
+      
+        s
+        =
+        
+          a
+          
+            p
+          
+        
+        
+          b
+          
+            p
+          
+        
+        
+          c
+          
+            p
+          
+        
+      
+    
+    {\displaystyle s=a^{p}b^{p}c^{p}}
+  
+ in L. The pumping lemma tells us that s can be written in the form 
+  
+    
+      
+        s
+        =
+        u
+        v
+        w
+        x
+        y
+      
+    
+    {\displaystyle s=uvwxy}
+  
+, where u, v, w, x, and y are substrings, such that 
+  
+    
+      
+        
+          |
+        
+        v
+        x
+        
+          |
+        
+        ≥
+        1
+      
+    
+    {\displaystyle |vx|\geq 1}
+  
+, 
+  
+    
+      
+        
+          |
+        
+        v
+        w
+        x
+        
+          |
+        
+        ≤
+        p
+      
+    
+    {\displaystyle |vwx|\leq p}
+  
+, and 
+  
+    
+      
+        u
+        
+          v
+          
+            i
+          
+        
+        w
+        
+          x
+          
+            i
+          
+        
+        y
+        ∈
+        L
+      
+    
+    {\displaystyle uv^{i}wx^{i}y\in L}
+  
+ for every integer 
+  
+    
+      
+        i
+        ≥
+        0
+      
+    
+    {\displaystyle i\geq 0}
+  
+. By the choice of s and the fact that 
+  
+    
+      
+        
+          |
+        
+        v
+        w
+        x
+        
+          |
+        
+        ≤
+        p
+      
+    
+    {\displaystyle |vwx|\leq p}
+  
+, it is easily seen that the substring vwx can contain no more than two distinct symbols. That is, we have one of five possibilities for vwx:
+
+  
+    
+      
+        v
+        w
+        x
+        =
+        
+          a
+          
+            j
+          
+        
+      
+    
+    {\displaystyle vwx=a^{j}}
+  
+ for some 
+  
+    
+      
+        j
+        ≤
+        p
+      
+    
+    {\displaystyle j\leq p}
+  
+.
+
+  
+    
+      
+        v
+        w
+        x
+        =
+        
+          a
+          
+            j
+          
+        
+        
+          b
+          
+            k
+          
+        
+      
+    
+    {\displaystyle vwx=a^{j}b^{k}}
+  
+ for some j and k with 
+  
+    
+      
+        j
+        +
+        k
+        ≤
+        p
+      
+    
+    {\displaystyle j+k\leq p}
+  
+
+  
+    
+      
+        v
+        w
+        x
+        =
+        
+          b
+          
+            j
+          
+        
+      
+    
+    {\displaystyle vwx=b^{j}}
+  
+ for some 
+  
+    
+      
+        j
+        ≤
+        p
+      
+    
+    {\displaystyle j\leq p}
+  
+.
+
+  
+    
+      
+        v
+        w
+        x
+        =
+        
+          b
+          
+            j
+          
+        
+        
+          c
+          
+            k
+          
+        
+      
+    
+    {\displaystyle vwx=b^{j}c^{k}}
+  
+ for some j and k with 
+  
+    
+      
+        j
+        +
+        k
+        ≤
+        p
+      
+    
+    {\displaystyle j+k\leq p}
+  
+.
+
+  
+    
+      
+        v
+        w
+        x
+        =
+        
+          c
+          
+            j
+          
+        
+      
+    
+    {\displaystyle vwx=c^{j}}
+  
+ for some 
+  
+    
+      
+        j
+        ≤
+        p
+      
+    
+    {\displaystyle j\leq p}
+  
+.
+In each case, 
+  
+    
+      
+        u
+        
+          v
+          
+            i
+          
+        
+        w
+        
+          x
+          
+            i
+          
+        
+        y
+      
+    
+    {\displaystyle uv^{i}wx^{i}y}
+  
+ does not contain equal numbers of each letter for any 
+  
+    
+      
+        i
+        ≠
+        1
+      
+    
+    {\displaystyle i\neq 1}
+  
+. Thus, 
+  
+    
+      
+        u
+        
+          v
+          
+            2
+          
+        
+        w
+        
+          x
+          
+            2
+          
+        
+        y
+      
+    
+    {\displaystyle uv^{2}wx^{2}y}
+  
+ does not have the form 
+  
+    
+      
+        
+          a
+          
+            i
+          
+        
+        
+          b
+          
+            i
+          
+        
+        
+          c
+          
+            i
+          
+        
+      
+    
+    {\displaystyle a^{i}b^{i}c^{i}}
+  
+. This contradicts the definition of L. Therefore, our initial assumption that L is context free must be false.
+In 1960, Scheinberg proved that 
+  
+    
+      
+        L
+        =
+        {
+        
+          a
+          
+            n
+          
+        
+        
+          b
+          
+            n
+          
+        
+        
+          a
+          
+            n
+          
+        
+        
+          |
+        
+        n
+        >
+        0
+        }
+      
+    
+    {\displaystyle L=\{a^{n}b^{n}a^{n}|n>0\}}
+  
+ is not context-free using a precursor of the pumping lemma.
+While the pumping lemma is often a useful tool to prove that a given language is not context-free, there are languages that are not context-free, but still satisfy the condition given by the pumping lemma, for example
+
+  
+    
+      
+        L
+        =
+        {
+        
+          b
+          
+            j
+          
+        
+        
+          c
+          
+            k
+          
+        
+        
+          d
+          
+            l
+          
+        
+        
+          |
+        
+        j
+        ,
+        k
+        ,
+        l
+        ∈
+        
+          N
+        
+        }
+        ∪
+        {
+        
+          a
+          
+            i
+          
+        
+        
+          b
+          
+            j
+          
+        
+        
+          c
+          
+            j
+          
+        
+        
+          d
+          
+            j
+          
+        
+        
+          |
+        
+        i
+        ,
+        j
+        ∈
+        
+          N
+        
+        ,
+        i
+        ≥
+        1
+        }
+      
+    
+    {\displaystyle L=\{b^{j}c^{k}d^{l}|j,k,l\in \mathbb {N} \}\cup \{a^{i}b^{j}c^{j}d^{j}|i,j\in \mathbb {N} ,i\geq 1\}}
+  
+
+for s=bjckdl with e.g. j≥1 choose vwx to consist only of b's, for s=aibjcjdj choose vwx to consist only of a's; in both cases all pumped strings are still in L. To prove that a given language is context-free, it is sufficient to construct a pushdown automaton that accepts it.

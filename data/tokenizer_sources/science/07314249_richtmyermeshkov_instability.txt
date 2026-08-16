@@ -1,0 +1,412 @@
+The Richtmyer–Meshkov instability (RMI) occurs when two fluids of different density are impulsively accelerated.  Normally this is by the passage of a shock wave. The development of the instability begins with small amplitude perturbations which initially grow linearly with time. This is followed by a nonlinear regime with bubbles appearing in the case of a light fluid penetrating a heavy fluid, and with spikes appearing in the case of a heavy fluid penetrating a light fluid. A chaotic regime is reached eventually and the two fluids mix. 
+This instability can be considered the impulsive-acceleration limit of the Rayleigh–Taylor instability.
+
+History
+R. D. Richtmyer provided a theoretical prediction, and E. E. Meshkov (Евгений Евграфович Мешков)(ru) provided experimental verification.  Materials in the cores of stars, like Cobalt-56 from Supernova 1987A were observed earlier than expected.  This was evidence of mixing due to Richtmyer–Meshkov and Rayleigh–Taylor instabilities. 
+
+In magnetohydrodynamics
+Here are the dispersion relations for ideal magnetohydrodynamics (MHD):
+
+  
+    
+      
+        (
+        
+          ω
+          
+            2
+          
+        
+        −
+        2
+        
+          k
+          
+            ∥
+          
+          
+            2
+          
+        
+        
+          /
+        
+        β
+        )
+        (
+        
+          ω
+          
+            4
+          
+        
+        −
+        (
+        2
+        
+          /
+        
+        β
+        +
+        1
+        )
+        
+          k
+          
+            2
+          
+        
+        
+          ω
+          
+            2
+          
+        
+        +
+        2
+        
+          k
+          
+            ∥
+          
+          
+            2
+          
+        
+        
+          k
+          
+            2
+          
+        
+        
+          /
+        
+        β
+        )
+        =
+        0
+      
+    
+    {\displaystyle (\omega ^{2}-2k_{\parallel }^{2}/\beta )(\omega ^{4}-(2/\beta +1)k^{2}\omega ^{2}+2k_{\parallel }^{2}k^{2}/\beta )=0}
+  
+
+For Hall MHD:
+
+  
+    
+      
+        
+          
+            (
+            
+              ω
+              
+                2
+              
+            
+            −
+            2
+            
+              k
+              
+                ∥
+              
+              
+                2
+              
+            
+            
+              /
+            
+            β
+            )
+            (
+            
+              ω
+              
+                4
+              
+            
+            −
+            (
+            2
+            
+              /
+            
+            β
+            +
+            1
+            )
+            
+              k
+              
+                2
+              
+            
+            
+              ω
+              
+                2
+              
+            
+            +
+            2
+            
+              k
+              
+                ∥
+              
+              
+                2
+              
+            
+            
+              k
+              
+                2
+              
+            
+            
+              /
+            
+            β
+            )
+            −
+            2
+            
+              d
+              
+                s
+              
+              
+                2
+              
+            
+            
+              k
+              
+                ∥
+              
+              
+                2
+              
+            
+            
+              k
+              
+                2
+              
+            
+            
+              ω
+              
+                2
+              
+            
+            (
+            
+              ω
+              
+                2
+              
+            
+            −
+            
+              k
+              
+                2
+              
+            
+            )
+            
+              /
+            
+            β
+            =
+            0
+          
+        
+      
+    
+    {\displaystyle {\displaystyle (\omega ^{2}-2k_{\parallel }^{2}/\beta )(\omega ^{4}-(2/\beta +1)k^{2}\omega ^{2}+2k_{\parallel }^{2}k^{2}/\beta )-2d_{s}^{2}k_{\parallel }^{2}k^{2}\omega ^{2}(\omega ^{2}-k^{2})/\beta =0}}
+  
+
+For QMHD:
+
+  
+    
+      
+        
+          
+            
+              
+                (
+                (
+                1
+                +
+                2
+                
+                  /
+                
+                β
+                
+                  c
+                  
+                    2
+                  
+                
+                )
+                
+                  ω
+                  
+                    2
+                  
+                
+                −
+                2
+                
+                  k
+                  
+                    ∥
+                  
+                  
+                    2
+                  
+                
+                
+                  /
+                
+                β
+                )
+                (
+                (
+                1
+                +
+                2
+                
+                  /
+                
+                β
+                
+                  c
+                  
+                    2
+                  
+                
+                )
+                
+                  ω
+                  
+                    4
+                  
+                
+                −
+                (
+                2
+                
+                  /
+                
+                β
+                +
+                1
+                )
+                
+                  k
+                  
+                    2
+                  
+                
+                
+                  ω
+                  
+                    2
+                  
+                
+                +
+                2
+                
+                  k
+                  
+                    ∥
+                  
+                  
+                    2
+                  
+                
+                
+                  k
+                  
+                    2
+                  
+                
+                
+                  /
+                
+                β
+                )
+                −
+                2
+                
+                  d
+                  
+                    s
+                  
+                  
+                    2
+                  
+                
+                
+                  k
+                  
+                    ∥
+                  
+                  
+                    2
+                  
+                
+                
+                  k
+                  
+                    2
+                  
+                
+                
+                  ω
+                  
+                    2
+                  
+                
+                (
+                
+                  ω
+                  
+                    2
+                  
+                
+                −
+                
+                  k
+                  
+                    2
+                  
+                
+                )
+                
+                  /
+                
+                β
+                =
+                0
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\displaystyle {\displaystyle ((1+2/\beta c^{2})\omega ^{2}-2k_{\parallel }^{2}/\beta )((1+2/\beta c^{2})\omega ^{4}-(2/\beta +1)k^{2}\omega ^{2}+2k_{\parallel }^{2}k^{2}/\beta )-2d_{s}^{2}k_{\parallel }^{2}k^{2}\omega ^{2}(\omega ^{2}-k^{2})/\beta =0}}}
+  
+
+Examples
+During the implosion of an inertial confinement fusion target, the hot shell material surrounding the cold D–T fuel layer is shock-accelerated. This instability is also seen in magnetized target fusion (MTF). Mixing of the shell material and fuel is not desired and efforts are made to minimize any tiny imperfections or irregularities which will be magnified by RMI.
+Supersonic combustion in a scramjet may benefit from RMI as the fuel-oxidants interface is enhanced by the breakup of the fuel into finer droplets.  Also in studies of deflagration to detonation transition (DDT) processes show that RMI-induced flame acceleration can result in detonation.

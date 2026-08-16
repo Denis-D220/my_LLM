@@ -1,0 +1,16 @@
+Programmable Built-In Self-Test (PBIST) is a memory DFT feature that incorporates all the required test systems into the chip itself. The test systems implemented on-chip are as follows:
+
+algorithmic address generator
+algorithmic data generator
+program storage unit
+loop control mechanisms
+PBIST was originally adopted by large memory chips that have high pin counts and operate at high frequencies, thereby exceeding the capability of production testers.
+The purpose of PBIST is to avoid developing and buying more sophisticated and very expensive testers. The interface between PBIST, which is internal to the processor, and the external tester environment is through 
+the standard JTAG TAP controller pins. Algorithms and controls are fed into the chip through the TAP controller's Test Data Input (TDI) pin. The final result of the PBIST test is read out through the Test Data Output (TDO) pin. 
+PBIST supports the entire algorithmic memory testing requirements imposed by the production testing methodology. In order to support all of the required test algorithms, PBIST must have the capability to store the required programs locally in the device. It must also be able to perform different address generation schemes, different test data pattern generation, looping schemes, and data comparisons.
+Work on most of programmable memory BIST approaches concerns the programmability of the memory test algorithm. The programmable memory BIST proposed has several advantages:
+
+It enables programming both test algorithms and test data.
+It implements test algorithm programmability at low cost, by extracting the different levels of hierarchy of the test algorithm and associating a hardware bloc to each of them, resulting on low cost hardware
+It enables low-cost implementation of full-data programmability by adapting the transparent memory test approach in a manner that uses the memory under test for programming the test data.
+Part of the Built-in self-test.

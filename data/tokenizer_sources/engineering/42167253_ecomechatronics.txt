@@ -1,0 +1,41 @@
+Ecomechatronics is an engineering approach to developing and applying mechatronical technology in order to reduce the ecological impact and total cost of ownership of machines. It builds upon the integrative approach of mechatronics, but not with the aim of only improving the functionality of a machine. Mechatronics is the multidisciplinary field of science and engineering that merges mechanics, electronics, control theory, and computer science to improve and optimize product design and manufacturing. In ecomechatronics, additionally, functionality should go hand in hand with an efficient use and limited impact on resources. Machine improvements are targeted in 3 key areas: energy efficiency, performance and user comfort (noise & vibrations).
+
+Description
+Among policy makers and manufacturing industries there is a growing awareness of the scarcity of resources and the need for sustainable development. This results in new regulations with respect to the design of machines (e.g. European Ecodesign Directive 2009/125/EC) and to a paradigm shift in the global machines market: "instead of maximum profit from minimum capital, maximum added value must be generated from minimal resources". Manufacturing industries increasingly require high performance machines that use resources (energy, consumables) economically in a human-centered production. Machine building companies and original equipment manufacturers are thus urged to respond to this market demand with a new generation of high performance machines with higher energy efficiency and user comfort.
+
+A reduction of the energy consumption lowers energy costs and reduces environmental impact. Typically more than 80% of the total-life-cycle impact of a machine is attributed to its energy consumption during the use phase. Therefore, improving a machine's energy efficiency is the most effective way of reducing its environmental impact. 
+Performance quantifies how well a machine executes its function and is typically related to productivity, precision and availability. User comfort is related to the exposure of operators and the environment to noise & vibrations due to machine operation.
+Since energy efficiency, performance and noise & vibrations are coupled in a machine they need to be addressed in an integrated way in the design phase. Example of the interrelation between the 3 key areas: with increasing machine speed typically the machine's productivity increases, but energy consumption will increase as well and machine vibrations may grow such that machine accuracy (e.g. positioning accuracy) and availability (due to downtime and maintenance) decrease. Ecomechatronical design deals with the trade-off between these key areas.
+
+Approach
+Ecomechatronics impacts the way mechatronical systems and machines are being designed and implemented. Therefore, the transformation to a new generation of machines concerns knowledge institutes, original equipment manufacturers, CAE software suppliers, machine builders and industrial machine owners. The fact that about 80% of the environmental impact of a machine is determined by its design puts emphasis on making the right technological design choices. A model-based, multidisciplinary design approach is required in order to address the energy efficiency, performance and user comfort of a machine in an integrated way.
+The key enabling technologies can be categorized in machine components, machine design methods & tools, and machine control. A few examples are listed below per category.
+
+Machine components
+Energy efficient electrical motors: cf. energy efficiency classes of electric motors, ecodesign requirements for electric motors
+Variable frequency drives: variable motor speed enables energy reduction with respect to fixed speed applications
+Variable hydraulic pumps: energy reduction by adapting to required pressure and flow (e.g. variable displacement pump, load sensing pump)
+Energy storage technologies: electrical (battery, capacitor, supercapacitor), hydraulical (accumulator), kinetic energy (flywheel), pneumatic, magnetic (superconducting magnetic energy storage)
+
+Design methods & tools
+Energetic simulations: using energetic machine models and empirical data (e.g. energy efficiency maps) to estimate the machine's energy consumption in the design phase
+Energy demand optimization: e.g. load leveling in order to avoid peaks in power demand
+Hybridization: applying at least one other, intermediate energy form in order to reduce primary power source consumption e.g. in vehicles with internal combustion engines (see hybrid vehicle drivetrain)
+Vibro-acoustic analysis: study of the noise & vibrations signature of a machine in order to localize and differentiate between their root causes
+Multibody modeling: simulation of the interaction forces and displacements of coupled rigid bodies, e.g. to assess the effect of vibration dampers on a mechanical structure
+Active vibration damping: e.g. use of piezoelectric bearings for active control of machine vibrations
+Rapid control prototyping: provides a fast and inexpensive way for control and signal processing engineers to verify designs early and evaluate design tradeoffs
+
+Machine control
+Energy consumption minimization: control signals are optimized for minimum energy consumption
+Energy management of energy storage systems: controlling the power flows and state-of-charge of an energy storage system with the aim of achieving maximum energy benefit and maximum system lifespan
+Model-based control: taking advantage of system models to improve the outcome (accuracy, reaction time, ...) of the controlled system
+(Self-)learning control: control self-adapting to the system and its changing environment, reducing the need for control parameter tuning and adaptation by the control engineer
+Optimal machine control: the control of the system is regarded as an optimization problem to which the control rules are considered the optimal solution (see Optimal control)
+
+Applications
+Some examples of ecomechatronical system applications are:
+
+Komatsu PC200-8 Hybrid: the world's first hybrid excavator has an energy storage system based on supercapacitors. The energy recuperation in the hydraulic drive line during braking results in a significant improvement of fuel economy.
+Hybrid bus: different hybrid bus types have been commercialized (e.g. ExquiCity bus by Van Hool), using fuel cells or a diesel engine as a primary energy source and batteries and/or supercapacitors as energy storage systems.
+Hybrid tram vehicle: hybridization in tram vehicles enables energy recuperation as well as mobility without overhead lines, as applied in e.g. some of the Combino Supra tram vehicles by Siemens Transportation Systems. The system uses a combination of traction batteries and supercapacitors.

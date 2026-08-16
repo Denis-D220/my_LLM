@@ -1,0 +1,70 @@
+{
+  "format": "llm_uint16_token_shards",
+  "format_version": 1,
+  "split": "train",
+  "dtype": "uint16",
+  "byte_order": "little",
+  "token_item_bytes": 2,
+  "tokenizer_vocab_size": 24000,
+  "tokens_per_shard": 1000000,
+  "total_tokens": 5047128,
+  "total_bytes": 10094256,
+  "stream_sha256": "8b3a56d639edd28ae318eb5fe2e52e3c7b52f325168308af77c7c59e9c62b874",
+  "shard_count": 6,
+  "shards": [
+    {
+      "filename": "train-00000.bin",
+      "index": 0,
+      "token_start": 0,
+      "token_end": 1000000,
+      "token_count": 1000000,
+      "byte_count": 2000000,
+      "sha256": "fd9c47603f6acc56c5f9084e81320a4e15e4f949059bc9397699661c3ea55c32"
+    },
+    {
+      "filename": "train-00001.bin",
+      "index": 1,
+      "token_start": 1000000,
+      "token_end": 2000000,
+      "token_count": 1000000,
+      "byte_count": 2000000,
+      "sha256": "80eabfe92a7bdb8cddace4432340388fd0099e82ea55f1d03709056cf7a7e7ac"
+    },
+    {
+      "filename": "train-00002.bin",
+      "index": 2,
+      "token_start": 2000000,
+      "token_end": 3000000,
+      "token_count": 1000000,
+      "byte_count": 2000000,
+      "sha256": "d785a6ae4004e55cccfc1eb066e360d636a516d9ae2b2576f6f3e4e1dac8f29e"
+    },
+    {
+      "filename": "train-00003.bin",
+      "index": 3,
+      "token_start": 3000000,
+      "token_end": 4000000,
+      "token_count": 1000000,
+      "byte_count": 2000000,
+      "sha256": "f8b9d1586ceb5c149d5570acd323045999b05320ee9257a22ff0783187884a79"
+    },
+    {
+      "filename": "train-00004.bin",
+      "index": 4,
+      "token_start": 4000000,
+      "token_end": 5000000,
+      "token_count": 1000000,
+      "byte_count": 2000000,
+      "sha256": "2313dce9a7597f0c048353e30a59f1fc5b1a5f6863408fe26427803060b9dcfe"
+    },
+    {
+      "filename": "train-00005.bin",
+      "index": 5,
+      "token_start": 5000000,
+      "token_end": 5047128,
+      "token_count": 47128,
+      "byte_count": 94256,
+      "sha256": "38c470111b64d57a3f3f5776103ef0b0cbbce96398a9218d23a8ae85e06c1323"
+    }
+  ]
+}

@@ -1,0 +1,574 @@
+In logic, finite model theory, and computability theory, Trakhtenbrot's theorem (due to Boris Trakhtenbrot) states that the problem of validity in first-order logic  on the class of all finite models is undecidable.  In fact, the class of valid sentences over finite models is not recursively enumerable (though it is co-recursively enumerable).
+Trakhtenbrot's theorem implies that Gödel's completeness theorem (that is fundamental to first-order logic) does not hold in the finite case.  Also it seems counter-intuitive that being valid over all structures is 'easier' than over just the finite ones.
+The theorem was first published in 1950: "The Impossibility of an Algorithm for the Decidability Problem on Finite Classes".
+The theorem is related to Church's result that the set of valid formulas in first-order logic is not decidable (however this set is semi-decidable).
+
+Mathematical formulation
+We follow the formulations as in Ebbinghaus and Flum.
+
+Theorem
+Satisfiability for finite structures is not decidable in first-order logic.
+That is, the set {φ | φ is a sentence of first-order logic that is satisfied in some finite structure} is undecidable. (p. 127, Th. 7.2.1 in )
+
+Corollary
+Let σ be a relational vocabulary  with at least one binary relation symbol. 
+
+The set of σ-sentences valid in all finite structures is not recursively enumerable.
+Remarks
+
+This implies that Gödel's completeness theorem fails in the finite since completeness implies recursive enumerability.
+It follows that there is no recursive function f such that: if φ has a finite model, then it has a model of size at most f(φ).  In other words, there is no effective analogue to the Löwenheim–Skolem theorem in the finite.
+
+Proof
+The proof in this section is from Libkin. The corollary given as part of the mathematical formulation also entails the theorem, and this is the direction proven here.
+Theorem
+
+For every relational vocabulary τ with at least one binary relation symbol, it is undecidable whether a sentence φ of vocabulary τ is finitely satisfiable.
+Proof
+According to the previous lemma, we can in fact use finitely many binary relation symbols. The idea of the proof is similar to the proof of Fagin's theorem, and we encode Turing machines in first-order logic. What we want to prove is that for every Turing machine M we construct a sentence φM of vocabulary τ such that φM is finitely satisfiable if and only if M halts on the empty input, which is equivalent to the halting problem and therefore undecidable.
+Let M= ⟨Q, Σ, δ, q0, Qa, Qr⟩ be a deterministic Turing machine with a single infinite tape.
+
+Q is the set of states,
+Σ is the input alphabet,
+Δ is the tape alphabet,
+δ is the transition function,
+q0 is the initial state,
+Qa and Qr are the sets of accepting and rejecting states.
+Since we are dealing with the problem of halting on an empty input we may assume w.l.o.g. that Δ={0,1} and that 0 represents a blank, while 1 represents some tape symbol. We define τ so that we can represent computations:
+
+τ := {<, min, T0 (⋅,⋅), T1 (⋅,⋅), (Hq(⋅,⋅))(q ∈ Q)}
+Where:
+
+< is a linear order and min is a constant symbol for the minimal element with respect to < (our finite domain will be associated with an initial segment of the natural numbers).
+T0 and T1 are tape predicates. Ti(s,t) indicates that position s at time t contains i, where i ∈ {0,1}.
+Hq's are head predicates. Hq(s,t) indicates that at time t the machine is in state q, and its head is in position s.
+The sentence φM states that (i) <, min, Ti's and Hq's are interpreted as above and (ii) that the machine eventually halts. The halting condition is equivalent to saying that Hq∗(s, t) holds for some s, t and q∗ ∈ Qa ∪ Qr and after that state, the configuration of the machine does not change. Configurations of a halting machine (the nonhalting is not finite) can be represented as a τ (finite) sentence (more precisely, a finite τ-structure which satisfies the sentence). The sentence φM is: φ ≡ α ∧ β ∧ γ ∧ η ∧ ζ ∧ θ.
+We break it down by components:
+
+α states that < is a linear order and that min is its minimal element
+γ defines the initial configuration of M: it is in state q0, the head is in the first position and the tape contains only zeros: γ ≡ Hq0(min,min) ∧ ∀s T0 (s, min)
+η states that in every configuration of M, each tape cell contains exactly one element of Δ: ∀s∀t(T0(s, t) ↔ ¬ T1(s, t))
+β imposes a basic consistency condition on the predicates Hq's: at any time the machine is in exactly one state:
+
+  
+    
+      
+        ∀
+        t
+        ∃
+        !
+        s
+        (
+        
+          ⋁
+          
+            q
+            ∈
+            Q
+          
+        
+        
+          H
+          
+            q
+          
+        
+        (
+        s
+        ,
+        t
+        )
+        )
+        ∧
+        ¬
+        ∃
+        s
+        ∃
+        t
+        (
+        
+          ⋁
+          
+            q
+            ,
+            
+              q
+              ′
+            
+            ∈
+            Q
+            ,
+            q
+            ≠
+            q
+          
+        
+        
+          H
+          
+            q
+          
+        
+        (
+        s
+        ,
+        t
+        )
+        ∧
+        
+          H
+          
+            
+              q
+              ′
+            
+          
+        
+        (
+        s
+        ,
+        t
+        )
+        )
+      
+    
+    {\displaystyle \forall t\exists !s(\bigvee _{q\in Q}H_{q}(s,t))\land \neg \exists s\exists t(\bigvee _{q,q'\in Q,q\neq q}H_{q}(s,t)\land H_{q'}(s,t))}
+  
+
+ζ states that at some point M is in a halting state:
+
+  
+    
+      
+        ∃
+        s
+        ∃
+        t
+        
+          ⋁
+          
+            q
+            ∈
+            
+              Q
+              
+                a
+              
+            
+            ∪
+            
+              Q
+              
+                r
+              
+            
+          
+        
+        
+          H
+          
+            q
+          
+        
+        (
+        s
+        ,
+        t
+        )
+      
+    
+    {\displaystyle \exists s\exists t\bigvee _{q\in Q_{a}\cup Q_{r}}H_{q}(s,t)}
+  
+
+θ consists of a conjunction of sentences stating that Ti's and Hq's are well behaved with respect to the transitions of M. As an example, let δ(q,0)=(q',1, left) meaning that if M is in state q reading 0, then it writes 1, moves the head one position to the left and goes into the state q'. We represent this condition by the disjunction of θ0 and θ1:
+
+  
+    
+      
+        
+          θ
+          
+            0
+          
+        
+        ≡
+        ∀
+        s
+        ∀
+        t
+        (
+        s
+        ≠
+        
+          
+            min
+            _
+          
+        
+        ∧
+        
+          T
+          
+            0
+          
+        
+        (
+        s
+        ,
+        t
+        )
+        ∧
+        
+          H
+          
+            q
+          
+        
+        (
+        s
+        ,
+        t
+        )
+        )
+        →
+        
+          θ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \theta _{0}\equiv \forall s\forall t(s\neq {\underline {\min }}\land T_{0}(s,t)\land H_{q}(s,t))\to \theta _{2}}
+  
+
+Where θ2 is:
+
+  
+    
+      
+        
+          T
+          
+            1
+          
+        
+        (
+        s
+        ,
+        t
+        +
+        1
+        )
+        ∧
+        
+          H
+          
+            
+              q
+              ′
+            
+          
+        
+        (
+        s
+        −
+        1
+        ,
+        t
+        +
+        1
+        )
+        ∧
+        ∀
+        
+          s
+          ′
+        
+        (
+        s
+        ≠
+        
+          s
+          ′
+        
+        →
+        (
+        
+          ⋀
+          
+            i
+            =
+            0
+            ,
+            1
+          
+        
+        
+          T
+          
+            i
+          
+        
+        (
+        
+          s
+          ′
+        
+        ,
+        t
+        +
+        1
+        )
+        ↔
+        
+          T
+          
+            i
+          
+        
+        (
+        
+          s
+          ′
+        
+        ,
+        t
+        )
+        )
+        )
+      
+    
+    {\displaystyle T_{1}(s,t+1)\land H_{q'}(s-1,t+1)\land \forall s'(s\neq s'\to (\bigwedge _{i=0,1}T_{i}(s',t+1)\leftrightarrow T_{i}(s',t)))}
+  
+
+And:
+
+  
+    
+      
+        
+          θ
+          
+            1
+          
+        
+        ≡
+        ∀
+        s
+        ∀
+        t
+        (
+        s
+        =
+        
+          
+            min
+            _
+          
+        
+        ∧
+        
+          T
+          
+            0
+          
+        
+        (
+        s
+        ,
+        t
+        )
+        ∧
+        
+          H
+          
+            q
+          
+        
+        (
+        s
+        ,
+        t
+        )
+        )
+        →
+        
+          θ
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \theta _{1}\equiv \forall s\forall t(s={\underline {\min }}\land T_{0}(s,t)\land H_{q}(s,t))\to \theta _{3}}
+  
+
+Where θ3 is:
+
+  
+    
+      
+        
+          T
+          
+            1
+          
+        
+        (
+        s
+        ,
+        t
+        +
+        1
+        )
+        ∧
+        
+          H
+          
+            
+              q
+              ′
+            
+          
+        
+        (
+        s
+        ,
+        t
+        +
+        1
+        )
+        ∧
+        ∀
+        
+          s
+          ′
+        
+        (
+        s
+        ≠
+        
+          s
+          ′
+        
+        →
+        (
+        
+          ⋀
+          
+            i
+            =
+            0
+            ,
+            1
+          
+        
+        
+          T
+          
+            i
+          
+        
+        (
+        
+          s
+          ′
+        
+        ,
+        t
+        +
+        1
+        )
+        ↔
+        
+          T
+          
+            i
+          
+        
+        (
+        
+          s
+          ′
+        
+        ,
+        t
+        )
+        )
+        )
+      
+    
+    {\displaystyle T_{1}(s,t+1)\land H_{q'}(s,t+1)\land \forall s'(s\neq s'\to (\bigwedge _{i=0,1}T_{i}(s',t+1)\leftrightarrow T_{i}(s',t)))}
+  
+
+s-1 and t+1 are first-order definable abbreviations for the predecessor and successor according to the ordering <. The sentence θ0 assures that the tape content in position s changes from 0 to 1, the state changes from q to q', the rest of the tape remains the same and that the head moves to s-1 (i. e. one position to the left), assuming s is not the first position in the tape. If it is, then all is handled by θ1: everything is the same, except the head does not move to the left but stays put.
+If φM has a finite model, then such a model that represents a computation of M (that starts with the empty tape (i.e. tape containing all zeros) and ends in a halting state). If M halts on the empty input, then the set of all configurations of the halting computations of M (coded with <, Ti's and Hq's) is a model of φM, which is finite, since the set of all configurations of halting computations is finite. It follows that M halts on the empty input if and only if φM has a finite model. Since halting on the empty input is undecidable, so is the question of whether φM has a finite model 
+  
+    
+      
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathcal {A}}}
+  
+ (equivalently, whether φM is finitely satisfiable) is also undecidable (recursively enumerable, but not recursive). This concludes the proof.
+Corollary
+
+The set of finitely satisfiable sentences is recursively enumerable.
+Proof
+Enumerate all pairs 
+  
+    
+      
+        (
+        
+          
+            A
+          
+        
+        ,
+        ϕ
+        )
+      
+    
+    {\displaystyle ({\mathcal {A}},\phi )}
+  
+ where 
+  
+    
+      
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathcal {A}}}
+  
+ is finite and 
+  
+    
+      
+        
+          
+            A
+          
+        
+        ⊨
+        ϕ
+      
+    
+    {\displaystyle {\mathcal {A}}\models \phi }
+  
+.
+Corollary
+
+For any vocabulary containing at least one binary relation symbol, the set of all finitely valid sentences is not recursively enumerable.
+Proof
+From the previous lemma, the set of finitely satisfiable sentences is recursively enumerable. Assume that the set of all finitely valid sentences is recursively enumerable. Since ¬φ is finitely valid if and only if φ is not finitely satisfiable, we conclude that the set of sentences which are not finitely satisfiable is recursively enumerable. If both a set A and its complement are recursively enumerable, then A is recursive. It follows that the set of finitely satisfiable sentences is recursive, which contradicts Trakhtenbrot's theorem.

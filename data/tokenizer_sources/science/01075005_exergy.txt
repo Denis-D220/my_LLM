@@ -1,0 +1,1284 @@
+Exergy, often referred to as "available energy" or "useful work potential", is a fundamental concept in the field of thermodynamics and engineering. It plays a crucial role in understanding and quantifying the quality of energy within a system and its potential to perform useful work. Exergy analysis has widespread applications in various fields, including energy engineering, environmental science, and industrial processes.
+From a scientific and engineering perspective, second-law-based exergy analysis is valuable because it provides a number of benefits over energy analysis alone. These benefits include the basis for determining energy quality (or exergy content), enhancing the understanding of fundamental physical phenomena, and improving design, performance evaluation and optimization efforts. In thermodynamics, the exergy of a system is the maximum useful work that can be produced as the system is brought into equilibrium with its environment by an ideal process. The specification of an "ideal process" allows the determination of "maximum work" production. From a conceptual perspective, exergy is the "ideal" potential of a system to do work or cause a change as it achieves equilibrium with its environment. Exergy is also known as "availability". Exergy is non-zero when there is dis-equilibrium between the system and its environment, and exergy is zero when equilibrium is established (the state of maximum entropy for the system plus its environment).
+Determining exergy was one of the original goals of thermodynamics. The term "exergy" was coined in 1956 by Zoran Rant (1904–1972) by using the Greek ex and ergon, meaning "from work",[3] but the concept had been earlier developed by J. Willard Gibbs (the namesake of Gibbs free energy) in 1873.[4]
+Energy is neither created nor destroyed, but is simply converted from one form to another (see First law of thermodynamics). In contrast to energy, exergy is always destroyed when a process is non-ideal or irreversible (see Second law of thermodynamics). To illustrate, when someone states that "I used a lot of energy running up that hill", the statement contradicts the first law. Although the energy is not consumed, intuitively we perceive that something is. The key point is that energy has quality or measures of usefulness, and this energy quality (or exergy content) is what is consumed or destroyed. This occurs because everything, all real processes, produce entropy and the destruction of exergy or the rate of "irreversibility" is proportional to this entropy production (Gouy–Stodola theorem). Where entropy production may be calculated as the net increase in entropy of the system together with its surroundings. Entropy production is due to things such as friction, heat transfer across a finite temperature difference and mixing.  In distinction from "exergy destruction", "exergy loss" is the transfer of exergy across the boundaries of a system, such as with mass or heat loss, where the exergy flow or transfer is potentially recoverable. The energy quality or exergy content of these mass and energy losses are low in many situations or applications, where exergy content is defined as the ratio of exergy to energy on a percentage basis. For example, while the exergy content of electrical work produced by a thermal power plant is 100%, the exergy content of low-grade heat rejected by the power plant, at say, 41 degrees Celsius, relative to an environment temperature of 25 degrees Celsius, is only 5%.
+
+Definitions
+Exergy is a combination property of a system and its environment because it depends on the state of both and is a consequence of dis-equilibrium between them. Exergy is neither a thermodynamic property of matter nor a thermodynamic potential of a system. Exergy and energy always have the same units, and the joule (symbol: J) is the unit of energy in the International System of Units (SI). The internal energy of a system is always measured from a fixed reference state and is therefore always a state function. Some authors define the exergy of the system to be changed when the environment changes, in which case it is not a state function. Other writers prefer a slightly alternate definition of the available energy or exergy of a system where the environment is firmly defined, as an unchangeable absolute reference state, and in this alternate definition, exergy becomes a property of the state of the system alone.
+However, from a theoretical point of view, exergy may be defined without reference to any environment. If the intensive properties of different finitely extended elements of a system differ, there is always the possibility to extract mechanical work from the system. Yet, with such an approach one has to abandon the requirement that the environment is large enough relative to the "system" such that its intensive properties, such as temperature, are unchanged due to its interaction with the system. So that exergy is defined in an absolute sense, it will be assumed in this article that, unless otherwise stated, that the environment's intensive properties are unchanged by its interaction with the system.
+For a heat engine, the exergy can be simply defined in an absolute sense, as the energy input times the Carnot efficiency, assuming the low-temperature heat reservoir is at the temperature of the environment. Since many systems can be modeled as a heat engine, this definition can be useful for many applications.
+
+Terminology
+The term exergy is also used, by analogy with its physical definition, in information theory related to reversible computing. Exergy is also synonymous with available energy, exergic energy, essergy (considered archaic), utilizable energy, available useful work, maximum (or minimum) work, maximum (or minimum) work content, reversible work, ideal work, availability or available work.
+
+Implications
+The exergy destruction of a cycle is the sum of the exergy destruction of the processes that compose that cycle. The exergy destruction of a cycle can also be determined without tracing the individual processes by considering the entire cycle as a single process and using one of the exergy destruction equations.
+
+Examples
+For two thermal reservoirs at temperatures TH and TC < TH, as considered by Carnot, the exergy is the work W that can be done by a reversible engine.  Specifically, with QH the heat provided by the hot reservoir, Carnot's analysis gives W/QH = (TH − TC)/TH. Although, exergy or maximum work is determined by conceptually utilizing an ideal process, it is the property of a system in a given environment. Exergy analysis is not merely for reversible cycles, but for all cycles (including non-cyclic or non-ideal), and indeed for all thermodynamic processes.
+As an example, consider the non-cyclic process of expansion of an ideal gas. For free expansion in an isolated system, the energy and temperature do not change, so by energy conservation no work is done. On the other hand, for expansion done against a moveable wall that always matched the (varying) pressure of the expanding gas (so the wall develops negligible kinetic energy), with no heat transfer (adiabatic wall), the maximum work would be done. This corresponds to the exergy. Thus, in terms of exergy, Carnot considered the exergy for a cyclic process with two thermal reservoirs (fixed temperatures). Just as the work done depends on the process, so the exergy depends on the process, reducing to Carnot's result for Carnot's case.
+W. Thomson (from 1892, Lord Kelvin), as early as 1849 was exercised by what he called “lost energy”, which appears to be the same as “destroyed energy” and what has been called “anergy”. In 1874 he wrote that “lost energy” is the same as the energy dissipated by, e.g., friction, electrical conduction (electric field-driven charge diffusion), heat conduction (temperature-driven thermal diffusion), viscous processes (transverse momentum diffusion) and particle diffusion (ink in water). On the other hand, Kelvin did not indicate how to compute the “lost energy”. This awaited the 1931 and 1932 works of Onsager on irreversible processes.
+
+Mathematical description
+
+An application of the second law of thermodynamics
+
+Exergy uses system boundaries in a way that is unfamiliar to many. We imagine the presence of a Carnot engine between the system and its reference environment even though this engine does not exist in the real world.  Its only purpose is to measure the results of a "what-if" scenario to represent the most efficient work interaction possible between the system and its surroundings.
+If a real-world reference environment is chosen that behaves like an unlimited reservoir that remains unaltered by the system, then Carnot's speculation about the consequences of a system heading towards equilibrium with time is addressed by two equivalent mathematical statements. Let B, the exergy or available work, decrease with time, and Stotal, the entropy of the system and its reference environment enclosed together in a larger isolated system, increase with time:
+
+For macroscopic systems (above the thermodynamic limit), these statements are both expressions of the second law of thermodynamics if the following expression is used for exergy:
+
+where the extensive quantities for the system are: U = Internal energy, V = Volume, and Ni = Moles of component i. The intensive quantities for the surroundings are: PR = Pressure, TR = temperature, μi, R
+ = Chemical potential of component i. Indeed the total entropy of the universe reads:
+
+the second term 
+  
+    
+      
+        −
+        U
+        
+          /
+        
+        
+          T
+          
+            R
+          
+        
+        −
+        
+          P
+          
+            R
+          
+        
+        V
+        
+          /
+        
+        
+          T
+          
+            R
+          
+        
+        +
+        
+          ∑
+          
+            i
+          
+        
+        
+          μ
+          
+            i
+            ,
+            R
+          
+        
+        
+          N
+          
+            i
+          
+        
+        
+          /
+        
+        
+          T
+          
+            R
+          
+        
+      
+    
+    {\displaystyle -U/T_{R}-P_{R}V/T_{R}+\sum _{i}\mu _{i,R}N_{i}/T_{R}}
+  
+ being the entropy of the surroundings to within a constant. 
+Individual terms also often have names attached to them: 
+  
+    
+      
+        
+          P
+          
+            R
+          
+        
+        V
+      
+    
+    {\displaystyle P_{R}V}
+  
+ is called "available PV work", 
+  
+    
+      
+        
+          T
+          
+            R
+          
+        
+        S
+      
+    
+    {\displaystyle T_{R}S}
+  
+ is called "entropic loss" or "heat loss" and the final term is called "available chemical energy."
+Other thermodynamic potentials may be used to replace internal energy so long as proper care is taken in recognizing which natural variables correspond to which potential. For the recommended nomenclature of these potentials, see Alberty (2001).[2] Equation (2) is useful for processes where system volume, entropy, and the number of moles of various components change because internal energy is also a function of these variables and no others.
+An alternative definition of internal energy does not separate available chemical potential from U. This expression is useful (when substituted into equation (1)) for processes where system volume and entropy change, but no chemical reaction occurs:
+
+In this case, a given set of chemicals at a given entropy and volume will have a single numerical value for this thermodynamic potential. A multi-state system may complicate or simplify the problem because the Gibbs phase rule predicts that intensive quantities will no longer be completely independent from each other.
+
+A historical and cultural tangent
+In 1848, William Thomson, 1st Baron Kelvin, asked (and immediately answered) the question
+
+Is there any principle on which an absolute thermometric scale can be founded? It appears to me that Carnot's theory of the motive power of heat enables us to give an affirmative answer.[3]
+With the benefit of the hindsight contained in equation (5), we are able to understand the historical impact of Kelvin's idea on physics.  Kelvin suggested that the best temperature scale would describe a constant ability for a unit of temperature in the surroundings to alter the available work from Carnot's engine. From equation (3):
+
+Rudolf Clausius recognized the presence of a proportionality constant in Kelvin's analysis and gave it the name entropy in 1865 from the Greek for "transformation" because it quantifies the amount of energy lost during the conversion from heat to work. The available work from a Carnot engine is at its maximum when the surroundings are at a temperature of absolute zero.
+Physicists then, as now, often look at a property with the word "available" or "utilizable" in its name with a certain unease.  The idea of what is available raises the question of "available to what?" and raises a concern about whether such a property is anthropocentric. Laws derived using such a property may not describe the universe but instead, describe what people wish to see.
+The field of statistical mechanics (beginning with the work of Ludwig Boltzmann in developing the Boltzmann equation) relieved many physicists of this concern.  From this discipline, we now know that macroscopic properties may all be determined from properties on a microscopic scale where entropy is more "real" than temperature itself (see Thermodynamic temperature). Microscopic kinetic fluctuations among particles cause entropic loss, and this energy is unavailable for work because these fluctuations occur randomly in all directions.  The anthropocentric act is taken, in the eyes of some physicists and engineers today, when someone draws a hypothetical boundary, in fact, he says: "This is my system. What occurs beyond it is surroundings." In this context, exergy is sometimes described as an anthropocentric property, both by some who use it and by some who don't. However, exergy is based on the dis-equilibrium between a system and its environment, so its very real and necessary to define the system distinctly from its environment. It can be agreed that entropy is generally viewed as a more fundamental property of matter than exergy.
+
+A potential for every thermodynamic situation
+In addition to 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ and 
+  
+    
+      
+        U
+        [
+        
+          μ
+        
+        ]
+      
+    
+    {\displaystyle U[{\boldsymbol {\mu }}]}
+  
+, the other thermodynamic potentials are frequently used to determine exergy.  For a given set of chemicals at a given entropy and pressure, enthalpy H is used in the expression:
+
+For a given set of chemicals at a given temperature and volume, Helmholtz free energy A is used in the expression:
+
+For a given set of chemicals at a given temperature and pressure, Gibbs free energy G is used in the expression:
+
+where 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ is evaluated at the isothermal system temperature (
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+), and 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is defined with respect to the isothermal temperature of the system's environment (
+  
+    
+      
+        
+          T
+          
+            R
+          
+        
+      
+    
+    {\displaystyle T_{R}}
+  
+). The exergy 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is the energy 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ reduced by the product of the entropy times the environment temperature 
+  
+    
+      
+        
+          T
+          
+            R
+          
+        
+      
+    
+    {\displaystyle T_{R}}
+  
+, which is the slope or partial derivative of the internal energy with respect to entropy in the environment. That is, higher entropy reduces the exergy or free energy available relative to the energy level 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+.
+Work can be produced from this energy, such as in an isothermal process, but any entropy generation during the process will cause the destruction of exergy (irreversibility) and the reduction of these thermodynamic potentials. Further, exergy losses can occur if mass and energy is transferred out of the system at non-ambient or elevated temperature, pressure or chemical potential. Exergy losses are potentially recoverable though because the exergy has not been destroyed, such as what occurs in waste heat recovery systems (although the energy quality or exergy content is typically low). As a special case, an isothermal process operating at ambient temperature will have no thermally related exergy losses.
+
+Exergy analysis involving radiative heat transfer
+All matter emits radiation continuously as a result of its non-zero (absolute) temperature. This emitted energy flow is proportional to the material’s temperature raised to the fourth power. As a result, any radiation conversion device that seeks to absorb and convert radiation (while reflecting a fraction of the incoming source radiation) inherently emits its own radiation. Also, given that reflected and emitted radiation can occupy the same direction or solid angle, the entropy flows, and as a result, the exergy flows, are generally not independent. The entropy and exergy balance equations for a control volume (CV), re-stated to correctly apply to situations involving radiative transfer, are expressed as,
+
+  
+    
+      
+        
+          
+            
+              d
+              
+                S
+                
+                  C
+                  V
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          ∫
+          
+            C
+            V
+            b
+            o
+            u
+            n
+            d
+            a
+            r
+            y
+          
+        
+        (
+        
+          
+            
+              q
+              
+                c
+                c
+              
+            
+            
+              T
+              
+                b
+              
+            
+          
+        
+        +
+        
+          J
+          
+            N
+            e
+            t
+            R
+            a
+            d
+          
+        
+        )
+        d
+        A
+        +
+        
+          ∑
+          
+            i
+          
+          
+            m
+          
+        
+        (
+        
+          
+            
+              
+                
+                  m
+                  ˙
+                
+              
+            
+            
+              i
+            
+          
+        
+        
+          s
+          
+            i
+          
+        
+        )
+        −
+        
+          ∑
+          
+            o
+          
+          
+            n
+          
+        
+        (
+        
+          
+            
+              
+                
+                  m
+                  ˙
+                
+              
+            
+            
+              o
+            
+          
+        
+        
+          s
+          
+            o
+          
+        
+        )
+        +
+        
+          
+            
+              
+                S
+                ˙
+              
+            
+          
+          
+            g
+            e
+            n
+          
+        
+      
+    
+    {\displaystyle {\frac {dS_{CV}}{dt}}=\int _{CVboundary}({\frac {q_{cc}}{T_{b}}}+J_{NetRad})dA+\sum _{i}^{m}({{\dot {m}}_{i}}s_{i})-\sum _{o}^{n}({{\dot {m}}_{o}}s_{o})+{\dot {S}}_{gen}}
+  
+
+where 
+  
+    
+      
+        
+          
+            S
+          
+          
+            g
+            e
+            n
+          
+        
+      
+    
+    {\displaystyle {S}_{gen}}
+  
+ or Π denotes entropy production within the control volume, and,
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                X
+              
+              
+                C
+                V
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          ∫
+          
+            C
+            V
+            b
+            o
+            u
+            n
+            d
+            a
+            r
+            y
+          
+        
+        [
+        
+          
+            q
+            
+              c
+              c
+            
+          
+        
+        (
+        1
+        −
+        
+          
+            
+              T
+              
+                o
+              
+            
+            
+              T
+              
+                b
+              
+            
+          
+        
+        )
+        +
+        
+          M
+          
+            N
+            e
+            t
+            R
+            a
+            d
+          
+        
+        ]
+        d
+        A
+        −
+        (
+        
+          
+            
+              
+                
+                  W
+                  ˙
+                
+              
+            
+            
+              C
+              V
+            
+          
+        
+        −
+        
+          P
+          
+            o
+          
+        
+        (
+        
+          
+            
+              d
+              
+                V
+                
+                  C
+                  V
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+        )
+        )
+        +
+        
+          ∑
+          
+            i
+          
+          
+            r
+          
+        
+        (
+        
+          
+            
+              
+                
+                  m
+                  ˙
+                
+              
+            
+            
+              i
+            
+          
+        
+        (
+        
+          h
+          
+            i
+          
+        
+        −
+        
+          
+            T
+            
+              o
+            
+          
+        
+        
+          
+            s
+            
+              i
+            
+          
+        
+        )
+        )
+        −
+        
+          
+            
+              
+                I
+                ˙
+              
+            
+          
+          
+            C
+            V
+          
+        
+      
+    
+    {\displaystyle {\frac {{dX}_{CV}}{dt}}=\int _{CVboundary}[{q_{cc}}(1-{\frac {T_{o}}{T_{b}}})+M_{NetRad}]dA-({{\dot {W}}_{CV}}-P_{o}({\frac {dV_{CV}}{dt}}))+\sum _{i}^{r}({{\dot {m}}_{i}}(h_{i}-{T_{o}}{s_{i}}))-{\dot {I}}_{CV}}
+  
+
+This rate equation for the exergy within an open system X (Ξ or B) takes into account the exergy transfer rates across the system boundary by heat transfer (q for conduction & convection, and M by radiative fluxes), by mechanical or electrical work transfer (W), and by mass transfer (m), as well as taking into account the exergy destruction (I) that occurs within the system due to irreversibility’s or non-ideal processes. Note that chemical exergy, kinetic energy, and gravitational potential energy have been excluded for simplicity.
+The exergy irradiance or flux M, and the exergy radiance N (where M = πN for isotropic radiation), depend on the spectral and directional distribution of the radiation (for example, see the next section on ‘Exergy Flux of Radiation with an Arbitrary Spectrum’). Sunlight can be crudely approximated as blackbody, or more accurately, as graybody radiation. Noting that, although a graybody spectrum looks similar to a blackbody spectrum, the entropy and exergy are very different.
+Petela determined that the exergy of isotropic blackbody radiation was given by the expression,
+
+  
+    
+      
+        
+          M
+          
+            B
+            R
+          
+        
+        =
+        
+          
+            
+              c
+              X
+            
+            
+              4
+              V
+            
+          
+        
+        =
+        σ
+        
+          T
+          
+            4
+          
+        
+        (
+        1
+        −
+        
+          
+            4
+            3
+          
+        
+        x
+        +
+        
+          
+            1
+            3
+          
+        
+        
+          x
+          
+            4
+          
+        
+        )
+      
+    
+    {\displaystyle M_{BR}={\frac {cX}{4V}}=\sigma T^{4}(1-{\frac {4}{3}}x+{\frac {1}{3}}x^{4})}
+  
+
+where the exergy within the enclosed system is X (Ξ or B), c is the speed of light, V is the volume occupied by the enclosed radiation system or void, T is the material emission temperature, To is the environmental temperature, and x is the dimensionless temperature ratio To/T.
+However, for decades this result was contested in terms of its relevance to the conversion of radiation fluxes, and in particular, solar radiation. For example, Bejan stated that “Petela’s efficiency is no more than a convenient, albeit artificial way, of non-dimensionalizing the calculated work output” and that Petela’s efficiency “is not a ‘conversion efficiency.’ ” However, it has been shown that Petela’s result represents the exergy of blackbody radiation. This was done by resolving a number of issues, including that of inherent irreversibility, defining the environment in terms of radiation, the effect of inherent emission by the conversion device and the effect of concentrating source radiation.
+
+Exergy flux of radiation with an arbitrary spectrum (including sunlight)
+In general, terrestrial solar radiation has an arbitrary non-blackbody spectrum. Ground level spectrums can vary greatly due to reflection, scattering and absorption in the atmosphere. While the emission spectrums of thermal radiation in engineering systems can vary widely as well.
+In determining the exergy of radiation with an arbitrary spectrum, it must be considered whether reversible or ideal conversion (zero entropy production) is possible. It has been shown that reversible conversion of blackbody radiation fluxes across an infinitesimal temperature difference is theoretically possible ]. However, this reversible conversion can only be theoretically achieved because equilibrium can exist between blackbody radiation and matter. However, non-blackbody radiation cannot even exist in equilibrium with itself, nor with its own emitting material.
+Unlike blackbody radiation, non-blackbody radiation cannot exist in equilibrium with matter, so it appears likely that the interaction of non-blackbody radiation with matter is always an inherently irreversible process. For example, an enclosed non-blackbody radiation system (such as a void inside a solid mass) is unstable and will spontaneously equilibriate to blackbody radiation unless the enclosure is perfectly reflecting (i.e., unless there is no thermal interaction of the radiation with its enclosure – which is not possible in actual, or real, non-ideal systems). Consequently, a cavity initially devoid of thermal radiation inside a non-blackbody material will spontaneously and rapidly (due to the high velocity of the radiation), through a series of absorption and emission interactions, become filled with blackbody radiation rather than non-blackbody radiation.
+The approaches by Petela and Karlsson both assume that reversible conversion of non-blackbody radiation is theoretically possible, that is, without addressing or considering the issue. Exergy is not a property of the system alone, it’s a property of both the system and its environment. Thus, it is of key importance non-blackbody radiation cannot exist in equilibrium with matter, indicating that the interaction of non-blackbody radiation with matter is an inherently irreversible process.
+The flux (irradiance) of radiation with an arbitrary spectrum, based on the inherent irreversibility of non-blackbody radiation conversion, is given by the expression,
+
+  
+    
+      
+        M
+        =
+        H
+        −
+        
+          T
+          
+            o
+          
+        
+        (
+        
+          
+            4
+            3
+          
+        
+        
+          σ
+          
+            0.25
+          
+        
+        
+          H
+          
+            0.75
+          
+        
+        )
+        +
+        
+          
+            σ
+            3
+          
+        
+        
+          T
+          
+            o
+          
+          
+            4
+          
+        
+        )
+      
+    
+    {\displaystyle M=H-T_{o}({\frac {4}{3}}\sigma ^{0.25}H^{0.75})+{\frac {\sigma }{3}}T_{o}^{4})}
+  
+
+The exergy flux 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ is expressed as a function of only the energy flux or irradiance 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ and the environment temperature 
+  
+    
+      
+        
+          T
+          
+            o
+          
+        
+      
+    
+    {\displaystyle T_{o}}
+  
+. For graybody radiation, the exergy flux is given by the expression,
+
+  
+    
+      
+        
+          M
+          
+            G
+            R
+          
+        
+        =
+        σ
+        
+          T
+          
+            4
+          
+        
+        (
+        ϵ
+        −
+        
+          
+            4
+            3
+          
+        
+        x
+        
+          ϵ
+          
+            0.75
+          
+        
+        +
+        
+          
+            1
+            3
+          
+        
+        
+          x
+          
+            4
+          
+        
+        )
+      
+    
+    {\displaystyle M_{GR}=\sigma T^{4}(\epsilon -{\frac {4}{3}}x\epsilon ^{0.75}+{\frac {1}{3}}x^{4})}
+  
+
+As one would expect, the exergy flux of non-blackbody radiation reduces to the result for blackbody radiation when emissivity is equal to one.
+Note that the exergy flux of graybody radiation can be a small fraction of the energy flux. For example, the ratio of exergy flux to energy flux 
+  
+    
+      
+        (
+        M
+        
+          /
+        
+        H
+        )
+      
+    
+    {\displaystyle (M/H)}
+  
+ for graybody radiation  with emissivity 
+  
+    
+      
+        ϵ
+        =
+        0.50
+      
+    
+    {\displaystyle \epsilon =0.50}
+  
+ is equal to 40.0%, for 
+  
+    
+      
+        T
+        =
+        
+          500
+          
+            o
+          
+        
+        C
+      
+    
+    {\displaystyle T=500^{o}C}
+  
+ and 
+  
+    
+      
+        
+          T
+          
+            o
+          
+        
+        =
+        
+          27
+          
+            o
+          
+        
+        C
+        (
+        x
+        =
+        0.388
+        )
+      
+    
+    {\displaystyle T_{o}=27^{o}C(x=0.388)}
+  
+. That is, a maximum of only 40% of the graybody energy flux can be converted to work in this case (already only 50% of that of the blackbody energy flux with the same emission temperature). Graybody radiation has a spectrum that looks similar to the blackbody spectrum, but the entropy and exergy flux cannot be accurately approximated as that of blackbody radiation with the same emission temperature. However, it can be reasonably approximated by the entropy flux of blackbody radiation with the same energy flux (lower emission temperature).
+Blackbody radiation has the highest entropy-to-energy ratio of all radiation with the same energy flux, but the lowest entropy-to-energy ratio, and the highest exergy content, of all radiation with the same emission temperature. For example, the exergy content of graybody radiation is lower than that of blackbody radiation with the same emission temperature and decreases as emissivity decreases. For the example above with 
+  
+    
+      
+        x
+        =
+        0.388
+      
+    
+    {\displaystyle x=0.388}
+  
+ the exergy flux of the blackbody radiation source flux is 52.5% of the energy flux compared to 40.0% for graybody radiation with 
+  
+    
+      
+        ϵ
+        =
+        0.50
+      
+    
+    {\displaystyle \epsilon =0.50}
+  
+, or compared to 15.5% for graybody radiation with 
+  
+    
+      
+        ϵ
+        =
+        0.10
+      
+    
+    {\displaystyle \epsilon =0.10}
+  
+.
+
+The exergy flux of sunlight
+In addition to the production of power directly from sunlight, solar radiation provides most of the exergy for processes on Earth, including the processes that sustain living systems directly, and energy sources that are used for transportation and electric power production (directly or indirectly). The main exceptions are nuclear processes like fission power plants and geothermal energy (generated by natural radioactive decay), with a small amount added from chemical processes (chemosynthesis) mainly near deep sea vents.
+Solar energy is, for the most part, thermal radiation from the Sun with an emission temperature near 5762 Kelvin, but it also includes small amounts of higher energy radiation from the fusion reaction or higher thermal emission temperatures within the Sun. The source of most energy on Earth is nuclear in origin.
+The figure below depicts typical solar radiation spectrums under clear sky conditions for AM0 (extraterrestrial solar radiation), AM1 (terrestrial solar radiation with solar zenith angle of 0 degrees) and AM4 (terrestrial solar radiation with solar zenith angle of 75.5 degrees). The solar spectrum at sea level (terrestrial solar spectrum) depends on a number of factors including the position of the Sun in the sky, atmospheric turbidity, the level of local atmospheric pollution, and the amount and type of cloud cover. These spectrums are for relatively clear air (α = 1.3, β = 0.04) assuming a U.S. standard atmosphere with 20 mm of precipitable water vapor and 3.4 mm of ozone. The Figure shows the spectral energy irradiance (W/m2μm) which does not provide information regarding the directional distribution of the solar radiation. The exergy content of the solar radiation, assuming that it is subtended by the solid angle of the ball of the Sun (no circumsolar), is 93.1%, 92.3% and 90.8%, respectively, for the AM0, AM1 and the AM4 spectrums.
+
+The exergy content of terrestrial solar radiation is also reduced because of the diffuse component caused by the complex interaction of solar radiation, originally in a very small solid angle beam, with material in the Earth’s atmosphere. The characteristics and magnitude of diffuse terrestrial solar radiation depends on a number of factors, as mentioned, including the position of the Sun in the sky, atmospheric turbidity, the level of local atmospheric pollution, and the amount and type of cloud cover. Solar radiation under clear sky conditions exhibits a maximum intensity towards the Sun (circumsolar radiation) but also exhibits an increase in intensity towards the horizon (horizon brightening). In contrast for opaque overcast skies the solar radiation can be completely diffuse with a maximum intensity in the direction of the zenith and monotonically decreasing towards the horizon. The magnitude of the diffuse component generally varies with frequency, being highest in the ultraviolet region.
+The dependence of the exergy content on directional distribution can be illustrated by considering, for example, the AM1 and AM4 terrestrial spectrums depicted in the figure, with the following simplified cases of directional distribution:
+•	For AM1: 80% of the solar radiation is contained in the solid angle subtended by the Sun, 10% is contained and isotropic in a solid angle 0.008 sr (this field of view includes circumsolar radiation), while the remaining 10% of the solar radiation is diffuse and isotropic in the solid angle 2π sr.
+•	For AM4: 65% of the solar radiation is contained in the solid angle subtended by the Sun, 20% of the solar radiation is contained and isotropic in a solid angle 0.008 sr, while the remaining 15% of the solar radiation is diffuse and isotropic in the solid angle 2π sr. Note that when the Sun is low in the sky the diffuse component can be the dominant part of the incident solar radiation.
+For these cases of directional distribution, the exergy content of the terrestrial solar radiation for the AM1 and AM4 spectrum depicted are 80.8% and 74.0%, respectively. From these sample calculations it is evident that the exergy content of terrestrial solar radiation is strongly dependent on the directional distribution of the radiation. This result is interesting because one might expect that the performance of a conversion device would depend on the incoming rate of photons and their spectral distribution but not on the directional distribution of the incoming photons. However, for a given incoming flux of photons with a certain spectral distribution, the entropy (level of disorder) is higher the more diffuse the directional distribution. From the second law of thermodynamics, the incoming entropy of the solar radiation cannot be destroyed and consequently reduces the maximum work output that can be obtained by a conversion device.
+
+Chemical exergy
+Similar to thermomechanical exergy, chemical exergy depends on the temperature and pressure of a system as well as on the composition. The key difference in evaluating chemical exergy versus thermomechanical exergy is that thermomechanical exergy does not take into account the difference in a system and the environment's chemical composition. If the temperature, pressure or composition of a system differs from the environment's state, then the overall system will have exergy.
+The definition of chemical exergy resembles the standard definition of thermomechanical exergy, but with a few differences. Chemical exergy is defined as the maximum work that can be obtained when the considered system is brought into reaction with reference substances present in the environment. Defining the exergy reference environment is one of the most vital parts of analyzing chemical exergy. In general, the environment is defined as the composition of air at 25 °C and 1 atm of pressure. At these properties air consists of N2=75.67%, O2=20.35%, H2O(g)=3.12%, CO2=0.03% and other gases=0.83%. These molar fractions will become of use when applying Equation 8 below.
+CaHbOc is the substance that is entering a system that one wants to find the maximum theoretical work of. By using the following equations, one can calculate the chemical exergy of the substance in a given system. Below, Equation 9 uses the Gibbs function of the applicable element or compound to calculate the chemical exergy. Equation 10 is similar but uses standard molar chemical exergy, which scientists have determined based on several criteria, including the ambient temperature and pressure that a system is being analyzed and the concentration of the most common components. These values can be found in thermodynamic books or in online tables.
+
+Important equations
+
+where:
+
+  
+    
+      
+        
+          
+            
+              
+                g
+                ¯
+              
+            
+          
+          
+            x
+          
+        
+      
+    
+    {\displaystyle {\bar {g}}_{x}}
+  
+ is the Gibbs function of the specific substance in the system at 
+  
+    
+      
+        
+          (
+          
+            
+              T
+              
+                0
+              
+            
+            ,
+            
+              p
+              
+                0
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle \left(T_{0},p_{0}\right)}
+  
+. (
+  
+    
+      
+        
+          
+            
+              
+                g
+                ¯
+              
+            
+          
+          
+            F
+          
+        
+      
+    
+    {\displaystyle {\bar {g}}_{F}}
+  
+ refers to the substance that is entering the system)
+
+  
+    
+      
+        
+          
+            
+              R
+              ¯
+            
+          
+        
+      
+    
+    {\displaystyle {\bar {R}}}
+  
+ is the Universal gas constant (8.314462 J/mol•K)
+
+  
+    
+      
+        
+          T
+          
+            0
+          
+        
+      
+    
+    {\displaystyle T_{0}}
+  
+ is the temperature that the system is being evaluated at in absolute temperature
+
+  
+    
+      
+        
+          y
+          
+            x
+          
+          
+            e
+          
+        
+      
+    
+    {\displaystyle y_{x}^{e}}
+  
+ is the molar fraction of the given substance in the environment, i.e. air
+
+where 
+  
+    
+      
+        
+          
+            
+              
+                e
+                ¯
+              
+            
+          
+          
+            x
+          
+          
+            c
+            h
+          
+        
+      
+    
+    {\displaystyle {\bar {e}}_{x}^{ch}}
+  
+ is the standard molar chemical exergy taken from a table for the specific conditions that the system is being evaluated.
+Equation 10 is more commonly used due to the simplicity of only having to look up the standard chemical exergy for given substances. Using a standard table works well for most cases, even if the environmental conditions vary slightly, the difference is most likely negligible.
+
+Total exergy
+After finding the chemical exergy in a given system, one can find the total exergy by adding it to the thermomechanical exergy. Depending on the situation, the amount of chemical exergy added can be very small. If the system being evaluated involves combustion, the amount of chemical exergy is very large and necessary to find the total exergy of the system.
+
+Irreversibility
+Irreversibility accounts for the amount of exergy destroyed in a closed system, or in other words, the wasted work potential. This is also called dissipated energy. For highly efficient systems, the value of I, is low, and vice versa. The equation to calculate the irreversibility of a closed system, as it relates to the exergy of that system, is as follows:
+
+where 
+  
+    
+      
+        
+          S
+          
+            gen
+          
+        
+      
+    
+    {\displaystyle S_{\text{gen}}}
+  
+, also denoted by Π, is the entropy generated by processes within the system. If 
+  
+    
+      
+        I
+        >
+        0
+      
+    
+    {\displaystyle I>0}
+  
+ then there are irreversibilities present in the system. If 
+  
+    
+      
+        I
+        =
+        0
+      
+    
+    {\displaystyle I=0}
+  
+ then there are no irreversibilities present in the system. The value of I, the irreversibility, can not be negative, as this implies entropy destruction, a direct violation of the second law of thermodynamics.
+Exergy analysis also relates the actual work of a work producing device to the maximal work, that could be obtained in the reversible or ideal process:
+
+That is, the irreversibility is the ideal maximum work output minus the actual work production. Whereas, for a work consuming device such as refrigeration or heat pump, irreversibility is the actual work input minus the ideal minimum work input.
+The first term at the right part is related to the difference in exergy at inlet and outlet of the system:
+
+where B is also denoted by Ξ or X.
+For an isolated system there are no heat or work interactions or transfers of exergy between the system and its surroundings. The exergy of an isolated system can therefore only decrease, by a magnitude equal to the irreversibility of that system or process,
+
+Applications
+Applying equation (1) to a subsystem yields:
+
+This expression applies equally well for theoretical ideals in a wide variety of applications: electrolysis (decrease in G), galvanic cells and fuel cells (increase in G), explosives (increase in A), heating and refrigeration (exchange of H), motors (decrease in U) and generators (increase in U).
+Utilization of the exergy concept often requires careful consideration of the choice of reference environment because, as Carnot knew, unlimited reservoirs do not exist in the real world.  A system may be maintained at a constant temperature to simulate an unlimited reservoir in the lab or in a factory, but those systems cannot then be isolated from a larger surrounding environment. However, with a proper choice of system boundaries, a reasonable constant reservoir can be imagined. A process sometimes must be compared to "the most realistic impossibility," and this invariably involves a certain amount of guesswork.
+
+Engineering applications
+
+One goal of energy and exergy methods in engineering is to compute what comes into and out of several possible designs before a design is built. Energy input and output will always balance according to the First Law of Thermodynamics or the energy conservation principle. Exergy output will not equal the exergy input for real processes since a part of the exergy input is always destroyed according to the Second Law of Thermodynamics for real processes. After the input and output are calculated, an engineer will often want to select the most efficient process. An energy efficiency or first law efficiency will determine the most efficient process based on wasting as little energy as possible relative to energy inputs.  An exergy efficiency or second-law efficiency will determine the most efficient process based on wasting and destroying as little available work as possible from a given input of available work, per unit of whatever the desired output is.
+Exergy has been applied in a number of design applications in order to optimize systems or identify components or subsystems with the greatest potential for improvement. For instance, an exergy analysis of environmental control systems on the International Space Station revealed the oxygen generation assembly as the subsystem which destroyed the most exergy.
+Exergy is particularly useful for broad engineering analyses with many systems of varied nature, since it can account for mechanical, electrical, nuclear, chemical, or thermal systems. For this reason, Exergy analysis has also been used to optimize the performance of rocket vehicles. Exergy analysis affords additional insight, relative to energy analysis alone, because it incorporates the second law, and considers both the system and its relationship with its environment. For example, exergy analysis has been used to compare possible power generation and storage systems on the moon, since exergy analysis is conducted in reference to the unique environmental operating conditions of a specific application, such as on the surface of the Moon.
+Application of exergy to unit operations in chemical plants was partially responsible for the huge growth of the chemical industry during the 20th century.
+As a simple example of exergy, air at atmospheric conditions of temperature, pressure, and composition contains energy but no exergy when it is chosen as the thermodynamic reference state known as ambient. Individual processes on Earth such as combustion in a power plant often eventually result in products that are incorporated into the atmosphere, so defining this reference state for exergy is useful even though the atmosphere itself is not at equilibrium and is full of long and short term variations.
+If standard ambient conditions are used for calculations during chemical plant operation when the actual weather is very cold or hot, then certain parts of a chemical plant might seem to have an exergy efficiency of greater than 100%. Without taking into account the non-standard atmospheric temperature variation, these calculations can give an impression of being a perpetual motion machine.  Using actual conditions will give actual values, but standard ambient conditions are useful for initial design calculations.
+
+Applications in natural resource utilization
+In recent decades, utilization of exergy has spread outside of physics and engineering to the fields of industrial ecology, ecological economics, systems ecology, and energetics.  Defining where one field ends and the next begins is a matter of semantics, but applications of exergy can be placed into rigid categories.
+After the milestone work of Jan Szargut  who emphasized the relation between exergy and availability,
+it is necessary to remember "Exergy Ecology and Democracy".
+by Goran Wall, a short essay, which evidences the strict relation that relates exergy disruption with environmental and social disruption.
+From this activity it has derived a fundamental research activity in ecological economics and environmental accounting perform exergy-cost analyses in order to evaluate the impact of human activity on the current and future natural environment.  As with ambient air, this often requires the unrealistic substitution of properties from a natural environment in place of the reference state environment of Carnot.  For example, ecologists and others have developed reference conditions for the ocean and for the Earth's crust.  Exergy values for human activity using this information can be useful for comparing policy alternatives based on the efficiency of utilizing natural resources to perform work. Typical questions that may be answered are:
+
+Does the human production of one unit of an economic good by method A utilize more of a resource's exergy than by method B?
+Does the human production of economic good A utilize more of a resource's exergy than the production of good B?
+Does the human production of economic good A utilize a resource's exergy more efficiently than the production of good B?
+There has been some progress in standardizing and applying these methods.
+Measuring exergy requires the evaluation of a system's reference state environment. With respect to the applications of exergy on natural resource utilization, the process of quantifying a system requires the assignment of value (both utilized and potential) to resources that are not always easily dissected into typical cost-benefit terms. However, to fully realize the potential of a system to do work, it is becoming increasingly imperative to understand exergetic potential of natural resources, and how human interference alters this potential.
+Referencing the inherent qualities of a system in place of a reference state environment is the most direct way that ecologists determine the exergy of a natural resource. Specifically, it is easiest to examine the thermodynamic properties of a system, and the reference substances that are acceptable within the reference environment. This determination allows for the assumption of qualities in a natural state: deviation from these levels may indicate a change in the environment caused by outside sources. There are three kinds of reference substances that are acceptable, due to their proliferation on the planet: gases within the atmosphere, solids within the Earth's crust, and molecules or ions in seawater. By understanding these basic models, it's possible to determine the exergy of multiple earth systems interacting, like the effects of solar radiation on plant life. These basic categories are utilized as the main components of a reference environment when examining how exergy can be defined through natural resources.
+Other qualities within a reference state environment include temperature, pressure, and any number of combinations of substances within a defined area. Again, the exergy of a system is determined by the potential of that system to do work, so it is necessary to determine the baseline qualities of a system before it is possible to understand the potential of that system. The thermodynamic value of a resource can be found by multiplying the exergy of the resource by the cost of obtaining the resource and processing it.
+Today, it is becoming increasingly popular to analyze the environmental impacts of natural resource utilization, especially for energy usage. To understand the ramifications of these practices, exergy is utilized as a tool for determining the impact potential of emissions, fuels, and other sources of energy. Combustion of fossil fuels, for example, is examined with respect to assessing the environmental impacts of burning coal, oil, and natural gas. The current methods for analyzing the emissions from these three products can be compared to the process of determining the exergy of the systems affected; specifically, it is useful to examine these with regard to the reference state environment of gases within the atmosphere. In this way, it is easier to determine how human action is affecting the natural environment.
+
+Applications in sustainability
+
+In systems ecology, researchers sometimes consider the exergy of the current formation of natural resources from a small number of exergy inputs (usually solar radiation, tidal forces, and geothermal heat).  This application not only requires assumptions about reference states, but it also requires assumptions about the real environments of the past that might have been close to those reference states.  Can we decide which is the most "realistic impossibility" over such a long period of time when we are only speculating about the reality?
+For instance, comparing oil exergy to coal exergy using a common reference state would require geothermal exergy inputs to describe the transition from biological material to fossil fuels during millions of years in the Earth's crust, and solar radiation exergy inputs to describe the material's history before then when it was part of the biosphere.  This would need to be carried out mathematically backwards through time, to a presumed era when the oil and coal could be assumed to be receiving the same exergy inputs from these sources.  A speculation about a past environment is different from assigning a reference state with respect to known environments today. Reasonable guesses about real ancient environments may be made, but they are untestable guesses, and so some regard this application as pseudoscience or pseudo-engineering.
+The field describes this accumulated exergy in a natural resource over time as embodied energy with units of the "embodied joule" or "emjoule".
+The important application of this research is to address sustainability issues in a quantitative fashion through a sustainability measurement:
+
+Does the human production of an economic good deplete the exergy of Earth's natural resources more quickly than those resources are able to receive exergy?
+If so, how does this compare to the depletion caused by producing the same good (or a different one) using a different set of natural resources?
+
+Exergy and environmental policy
+Today environmental policies does not consider exergy as an instrument for a more equitable and effective environmental policy. Recently, exergy analysis allowed to obtain an important fault in today governmental GHGs emission balances, which often do not consider international transport related emissions, therefore the impacts of import/export are not accounted,
+Therefore, some preliminary cases of the impacts of import export transportation and of technology had provided evidencing the opportunity of introducing an effective exergy based taxation which can reduce the fiscal impact on citizens.
+In addition Exergy can be a precious instrument for an effective estimation of the path toward UN sustainable development goals (SDG).
+
+Assigning one thermodynamically obtained value to an economic good
+
+A technique proposed by systems ecologists is to consolidate the three exergy inputs described in the last section into the single exergy input of solar radiation, and to express the total input of exergy into an economic good as a solar embodied joule or sej. (See Emergy) Exergy inputs from solar, tidal, and geothermal forces all at one time had their origins at the beginning of the solar system under conditions which could be chosen as an initial reference state, and other speculative reference states could in theory be traced back to that time. With this tool we would be able to answer:
+
+What fraction of the total human depletion of the Earth's exergy is caused by the production of a particular economic good?
+What fraction of the total human and non-human depletion of the Earth's exergy is caused by the production of a particular economic good?
+No additional thermodynamic laws are required for this idea, and the principles of energetics may confuse many issues for those outside the field.  The combination of untestable hypotheses, unfamiliar jargon that contradicts accepted jargon, intense advocacy among its supporters, and some degree of isolation from other disciplines have contributed to this protoscience being regarded by many as a pseudoscience.  However, its basic tenets are only a further utilization of the exergy concept.
+
+Implications in the development of complex physical systems
+
+A common hypothesis in systems ecology is that the design engineer's observation that a greater capital investment is needed to create a process with increased exergy efficiency is actually the economic result of a fundamental law of nature.  By this view, exergy is the analogue of economic currency in the natural world. The analogy to capital investment is the accumulation of exergy into a system over long periods of time resulting in embodied energy.  The analogy of capital investment resulting in a factory with high exergy efficiency is an increase in natural organizational structures with high exergy efficiency.  (See Maximum power).  Researchers in these fields describe biological evolution in terms of increases in organism complexity due to the requirement for increased exergy efficiency because of competition for limited sources of exergy.
+Some biologists have a similar hypothesis.  A biological system (or a chemical plant) with a number of intermediate compartments and intermediate reactions is more efficient because the process is divided up into many small substeps, and this is closer to the reversible ideal of an infinite number of infinitesimal substeps.  Of course, an excessively large number of intermediate compartments comes at a capital cost that may be too high.
+Testing this idea in living organisms or ecosystems is impossible for all practical purposes because of the large time scales and small exergy inputs involved for changes to take place. However, if this idea is correct, it would not be a new fundamental law of nature. It would simply be living systems and ecosystems maximizing their exergy efficiency by utilizing laws of thermodynamics developed in the 19th century.
+
+Quality of energy types
+The ratio of exergy to energy in a substance can be considered a measure of energy quality.  Forms of energy such as macroscopic kinetic energy, electrical energy, and chemical Gibbs free energy are 100% recoverable as work, and therefore have exergy equal to their energy.  However, forms of energy such as radiation and thermal energy can not be converted completely to work, and have exergy content less than their energy content.  The exact proportion of exergy in a substance depends on the amount of entropy relative to the surrounding environment as determined by the Second Law of Thermodynamics.
+Exergy is useful when measuring the efficiency of an energy conversion process.  The exergetic, or 2nd Law, efficiency is a ratio of the exergy output divided by the exergy input.  This formulation takes into account the quality of the energy, often offering a more accurate and useful analysis than efficiency estimates only using the First Law of Thermodynamics.
+Work can be extracted also from bodies colder than the surroundings. When the flow of energy is coming into the body, work is performed by this energy obtained from the large reservoir, the surrounding. A quantitative treatment of the notion of energy quality rests on the definition of energy. According to the standard definition, Energy is a measure of the ability to do work. Work can involve the movement of a mass by a force that results from a transformation of energy. If there is an energy transformation, the second principle of energy flow transformations says that this process must involve the dissipation of some energy as heat. Measuring the amount of heat released is one way of quantifying the energy, or ability to do work and apply a force over a distance.
+
+Exergy of heat available at a temperature
+Maximal possible conversion of heat to work, or exergy content of heat, depends on the temperature at which heat is available and the temperature level at which the reject heat can be disposed, that is the temperature of the surrounding. The upper limit for conversion is known as Carnot efficiency and was discovered by Nicolas Léonard Sadi Carnot in 1824. See also Carnot heat engine.
+Carnot efficiency is
+
+where TH is the higher temperature and TC is the lower temperature, both as absolute temperature. From Equation 15 it is clear that in order to maximize efficiency one should maximize TH and minimize TC.
+Exergy exchanged is then:
+
+where Tsource is the temperature of the heat source, and To is the temperature of the surrounding.
+
+Connection with economic value
+Exergy in a sense can be understood as a measure of the value of energy. Since high-exergy energy carriers can be used for more versatile purposes, due to their ability to do more work, they can be postulated to hold more economic value. This can be seen in the prices of energy carriers, i.e. high-exergy energy carriers such as electricity tend to be more valuable than low-exergy ones such as various fuels or heat. This has led to the substitution of more valuable high-exergy energy carriers with low-exergy energy carriers, when possible. An example is heating systems, where higher investment to heating systems allows using low-exergy energy sources. Thus high-exergy content is being substituted with capital investments.
+
+Exergy based life cycle assessment (LCA)
+Exergy of a system is the maximum useful work possible during a process that brings the system into equilibrium with a heat reservoir. Wall clearly states the relation between exergy analysis and resource accounting. This intuition confirmed by Dewulf Sciubba lead to exergo-economic accounting and to methods specifically dedicated to LCA such as exergetic material input per unit of service (EMIPS). The
+concept of material input per unit of service (MIPS) is quantified in terms of the second law of thermodynamics, allowing the calculation of both resource input and service output in exergy terms. This exergetic material input per unit of service (EMIPS) has been elaborated for transport technology. The service not only takes into account the total mass to be transported
+and the total distance, but also the mass per single transport and the delivery time. The applicability of the EMIPS methodology relates specifically to the transport system and allows an effective coupling with life cycle assessment. The exergy analysis according to EMIPS allowed the definition of a precise strategy for reducing environmental impacts of transport toward more sustainable transport. Such a strategy requires the reduction of the weight of vehicles, sustainable styles of driving, reducing the friction of tires, encouraging electric and hybrid vehicles, improving the walking and cycling environment in cities, and by enhancing the role of public transport, especially electric rail.
+
+History
+
+Carnot
+In 1824, Sadi Carnot studied the improvements developed for steam engines by James Watt and others. Carnot utilized a purely theoretical perspective for these engines and developed new ideas. He wrote:
+
+The question has often been raised whether the motive power of heat is unbounded, whether the possible improvements in steam engines have an assignable limit—a limit by which the nature of things will not allow to be passed by any means whatever... In order to consider in the most general way the principle of the production of motion by heat, it must be considered independently of any mechanism or any particular agent. It is necessary to establish principles applicable not only to steam-engines but to all imaginable heat-engines... The production of motion in steam-engines is always accompanied by a circumstance on which we should fix our attention.  This circumstance is the re-establishing of equilibrium... Imagine two bodies A and B, kept each at a constant temperature, that of A being higher than that of B. These two bodies, to which we can give or from which we can remove the heat without causing their temperatures to vary, exercise the functions of two unlimited reservoirs...[4]
+Carnot next described what is now called the Carnot engine, and proved by a thought experiment that any heat engine performing better than this engine would be a perpetual motion machine. Even in the 1820s, there was a long history of science forbidding such devices.  According to Carnot, "Such a creation is entirely contrary to ideas now accepted, to the laws of mechanics and of sound physics. It is inadmissible."[4]
+This description of an upper bound to the work that may be done by an engine was the earliest modern formulation of the second law of thermodynamics.  Because it involves no mathematics, it still often serves as the entry point for a modern understanding of both the second law and entropy.  Carnot's focus on heat engines, equilibrium, and heat reservoirs is also the best entry point for understanding the closely related concept of exergy.
+Carnot believed in the incorrect caloric theory of heat that was popular during his time, but his thought experiment nevertheless described a fundamental limit of nature. As kinetic theory replaced caloric theory through the early and mid-19th century (see Timeline of thermodynamics), several scientists added mathematical precision to the first and second laws of thermodynamics and developed the concept of entropy.  Carnot's focus on processes at the human scale (above the thermodynamic limit) led to the most universally applicable concepts in physics.  Entropy and the second-law are applied today in fields ranging from quantum mechanics to physical cosmology.
+
+Gibbs
+In the 1870s, Josiah Willard Gibbs unified a large quantity of 19th century thermochemistry into one compact theory.  Gibbs's theory incorporated the new concept of a chemical potential to cause change when distant from a chemical equilibrium into the older work begun by Carnot in describing thermal and mechanical equilibrium and their potentials for change.  Gibbs's unifying theory resulted in the thermodynamic potential state functions describing differences from thermodynamic equilibrium.
+In 1873, Gibbs derived the mathematics of "available energy of the body and medium" into the form it has today.[3] (See the equations above).  The physics describing exergy has changed little since that time.
+
+Helmholtz
+In the 1880s, German scientist Hermann von Helmholtz derived the equation for the maximum work which can be reversibly obtained from a closed system.
+
+Rant
+In 1956, Yugoslav scholar Zoran Rant proposed the concept of Exergy, extending Gibbs and Helmholtz' work. Since then, continuous development in exergy analysis has seen many applications in thermodynamics, and exergy has been accepted as the maximum theoretical useful work which can be obtained from a system with respect to its environment.

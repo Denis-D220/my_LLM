@@ -1,0 +1,24 @@
+Cloud load balancing is a type of load balancing that is performed in cloud computing. Cloud load balancing is the process of distributing workloads across multiple computing resources. Cloud load balancing reduces costs associated with document management systems and maximizes availability of resources. It is a type of load balancing and not to be confused with Domain Name System (DNS) load balancing. While DNS load balancing uses software or hardware to perform the function, cloud load balancing uses services offered by various computer network companies.
+
+Comparison With DNS load balancing
+Cloud load balancing has an advantage over DNS load balancing as it can transfer loads to servers globally as opposed to distributing it across local servers. In the event of a local server outage, cloud load balancing delivers users to the closest regional server without interruption for the user.
+Cloud load balancing addresses issues relating to TTL reliance present during DNS load balancing. DNS directives can only be enforced once in every TTL cycle and can take several hours if switching between servers during a lag or server failure. Incoming server traffic will continue to route to the original server until the TTL expires and can create an uneven performance as different internet service providers may reach the new server before other internet service providers. Another advantage is that cloud load balancing improves response time by routing remote sessions to the best performing data centers.
+
+Importance of Load Balancing
+Cloud computing brings advantages in "cost, flexibility and availability of service users." Those advantages drive the demand for Cloud services. The demand raises technical issues in Service Oriented Architectures and Internet of Services (IoS)-style applications, such as high availability and scalability. As a major concern in these issues, load balancing allows cloud computing to "scale up to increasing demands"  by efficiently allocating dynamic local workload evenly across all nodes.
+
+Load Balancing Techniques
+
+Scheduling Algorithms
+Opportunistic Load Balancing (OLB) is the algorithm that assigns workloads to nodes in free order. It is simple but does not consider the expected execution time of each node. Load balance Min-Min (LBMM) assigns sub-tasks to the node which requires minimum execution time.
+
+Load Balancing Policies
+Workload and Client Aware Policy (WCAP) specifies the unique and special property (USP) of requests and computing nodes. With the information of USP, the schedule can decide the most suitable node to complete a request. WCAP makes the most of computing nodes by reducing their idle time. Also, it reduces performance time through searches based on content information.
+
+A Comparative Study of Algorithms
+Biased Random Sampling bases its job allocation on the network represented by a directed graph. For each execution node in this graph, in-degree means available resources and out-degree means allocated jobs. In-degree will decrease during job execution while out-degree will increase after job allocation.
+Active Clustering is a self-aggregation algorithm to rewire the network.
+The experiment result is that"Active Clustering and Random Sampling Walk predictably perform better as the number of processing nodes is increased" while the Honeyhive algorithm does not show the increasing pattern.
+
+Client-side Load Balancer Using Cloud Computing
+Load balancer forwards packets to web servers according to different workloads on servers. However, it is hard to implement a scalable load balancer because of both the "cloud's commodity business model and the limited infrastructure control allowed by cloud providers." Client-side Load Balancer (CLB) solve this problem by using a scalable cloud storage service. CLB allows clients to choose back-end web servers for dynamic content although it delivers static content.

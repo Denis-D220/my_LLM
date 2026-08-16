@@ -1,0 +1,159 @@
+The PIC instruction set is the set of instructions that Microchip Technology PIC or dsPIC microcontroller supports. The instructions are usually programmed into the Flash memory of the processor, and automatically executed by the microcontroller on startup.
+PICmicro chips have a Harvard architecture and instruction words have unusual sizes. Originally, 12-bit instructions included 5 address bits to specify the memory operand, and 9-bit branch destinations.  Later revisions added opcode bits, allowing additional address bits.
+They are accumulator machines, with a common accumulator "W" being one operand in all 2-operand instructions.
+In the instruction set tables that follow, register numbers are referred to as "f", while constants are referred to as "k".  Bit numbers (0–7) are selected by "b".  Arithmetic instructions write their result to one of the inputs selected by the "d" bit: 0 indicates W, while 1 indicates that the result is written back to source register f.  The C and Z status flags may be set based on the result; otherwise they are unmodified.  Add and subtract (but not rotate) instructions that set C also set the DC (digit carry) flag, the carry from bit 3 to bit 4, which is useful for BCD arithmetic.
+
+Architecture
+Memory operands are also referred to as "registers".  Most are simply general-purpose storage (RAM), while some locations are reserved for special function registers.  Except for a single accumulator (called W), almost all other registers are memory-mapped, even registers like the program counter and ALU status register.  (The other exceptions, which are not memory-mapped, are the return address stack, and the tri-state registers used to configure the GPIO pins.)
+Some arithmetic instructions only use one of their inputs, but still use a dbit.  For example, MOVW copies the value of W to the destination.  When used with d = 1, this stores W to f. There is a matching MOVF instruction which outputs the value of f.  When used with d = 0, this loads f into W.  When used with d = 1, the only visible effect is to set the zero flag depending on the value of f.
+The instruction set does not contain conditional branch instructions.  Instead, it contains conditional skip instructions which cause the following instruction to be ignored.  A conditional skip followed by an unconditional branch performs a conditional branch.  The skip instructions test any bit of any register.  The ALU status register is one possibility.
+Memory operands are specified by absolute address; the location is fixed at compile time.  To provide indirect addressing, a pair of special function registers are provided:
+
+The file select register (FSR) is written with the address of the desired memory operand, after which
+The indirect file register (INDF) becomes an alias for the operand pointed to by the FSR.
+This mechanism also allows up to 256 bytes of memory to be addressed, even when the instruction set only allows 5- or 7-bit absolute addresses.  Models with more registers (special function registers plus RAM) than fit into the instruction provide multiple banks of memory, and use one of two mechanisms for accessing them:
+
+Most baseline core devices, and some mid-range core devices, use the high-order bits of the file select register to select the current register bank.
+More recent models have a separate bank select register, and a MOVLB instruction to set it.
+PIC processors with more than 256 words of program use paged memory.  The internal program counter and return stack are as wide as necessary to address all memory, but only the low 8 bits are visible to software in the PCL ("PC low") register.  There is an additional PCLATH ("PC latch high") register which is only modified by software.  Any operation which does not specify the full destination address (such as a 9-bit GOTO or an 8-bit write to the PCL register) fills in the additional high bits from the corresponding part of PCLATH.  (Some PIC18 processors extend this beyond 16 bits with a PCLATU register to supply bits 16–23.)
+
+Baseline core devices (12 bit)
+This is the original 1976 instruction set, introduced in the General Instrument PIC1640 and PIC1650, with the only additions since then being the miscellaneous instructions other than NOP.
+
+*: Extended instruction, not available on most 12-bit PICs.  Of the models with extended RAM, most (e.g. 16C5x, 16F5x) extend the register address space using the high-order bits of the FSR.  A few (e.g. PIC12F529T39A) have a separate bank select register which can be set with this instruction.
+†: Extended instruction, only available on "enhanced baseline" PICs.  Only the very few models (16F527, 16F570, MCV20A) with interrupt support (and a 4-level stack) include these instructions. All such models also include MOVLB.
+
+General Instrument PIC1670 (13 bit, obsolete)
+Introduced in 1979, this expanded PIC supported 64 bytes of register space (16 special function registers and 48 bytes of RAM), 1024 words of ROM, a 6-level hardware stack, and interrupt handling.  The PIC1665 was a variant with external ROM used for developing firmware for the mask ROM 1670.
+It added a signed overflow bit to the status register (bit 3).  Status register bits 4 and 5 provided read-only access to the high 2 bits of the 10-bit program counter.
+The instruction set is mostly the same as the 12-bit PIC with the address field enlarged.  However, the 8-bit immediate instructions gain an additional opcode bit.  Rather than adding an additional four instructions with an 8-bit immediate operand, the instruction set adds two instructions with 8-bit operands, two instructions with 7-bit operands (6-bit address plus direction bit), and four instructions with 6-bit operands (6-bit address):
+
+The 8-bit immediate group grows to 6 instructions by adding ADDLW and RETLW.  The latter is moved out of the control transfer group, allowing a full 10-bit address in the CALL instruction.
+The ALU operations group gains add/subtract with carry (ADCWF, SUBBWF) instructions (7-bit operands).
+The CLRW instruction is deleted (it wastes a 6-bit memory address and duplicates MOVLW 0).
+Five new instructions with a 6-bit memory address operands are added.  These do not have a destination select bit, and include three "compare and skip" instructions which do not write a result, and two "rotate without carry" instructions.
+This instruction set is not used in any currently manufactured part and is of historical interest only.
+
+Mid-range core devices (14 bit)
+These devices feature a 14-bit wide code memory, and an improved 8 level deep call stack. The instruction set differs very little from the baseline devices, but the 2 additional opcode bits allow 128 registers and 2048 words of code to be directly addressed.  There are a few additional miscellaneous instructions, and two additional 8-bit literal instructions, add and subtract.  The mid-range core is available in the majority of devices labeled PIC12 and PIC16.
+
+Enhanced mid-range core devices (14 bit)
+Enhanced mid-range core devices introduce a deeper hardware stack, additional reset methods, 14 additional instructions and C programming language optimizations.  In particular. there are two INDF registers (INDF0 and INDF1), and two corresponding FSR register pairs (FSRnL and FSRnH).  Special instructions use FSRn registers like address registers, with a variety of addressing modes.
+
+ELAN Microelectronics clones (13 or 15 bit)
+ELAN Microelectronics Corp. make a series of PICmicro-like microcontrollers with a 13-bit instruction word.  The instructions are mostly compatible with the mid-range 14-bit instruction set, but limited to a 6-bit register address (16 special-purpose registers and 48 bytes of RAM) and a 10-bit (1024 word) program space.
+The 10-bit program counter is accessible as R2.  Reads access only the low bits, and writes clear the high bits.  An exception is the TBL instruction, which modifies the low byte while preserving bits 8 and 9.
+The 7 accumulator-immediate instructions are renumbered relative to the 14-bit PICmicro, to fit into 3 opcode bits rather than 4, but they are all there, as well as an additional software interrupt instruction.
+There are a few additional miscellaneous instructions, and there are some changes to the terminology (the PICmicro OPTION register is called the CONTrol register; the PICmicro TRIS registers 1–3 are called I/O control registers 5–7), but the equivalents are obvious.
+
+*: Same opcode as 12-bit PIC
+†: Instruction unique to EM78 instruction set with no PIC equivalent
+‡: Only on flash memory models (EM78F724N)
+Some models support multiple ROM, RAM, or special-purpose register banks, in a manner similar to other PIC microcontrollers.  Special-purpose registers 0x5–0xF and RAM locations 0x20–0x3F each have their own bank select bits.  Registers 0x0–0x4 (including the bank select register 0x1) and RAM locations 0x10–0x1F are global.
+There is also a 15-bit variant of the instruction set, which is almost identical except that the register numbers are enlarged to 8 bits and the call and jump addresses are enlarged to 12 bits.  Other differences:
+
+The CONTW, IOW, CONTR, IOR and INT instructions are deleted,
+Operations with an 8-bit literal have two 0 bits added as bits 8 and 9,
+Extensions with a 4-bit literal have two 0 bits added as bits 4 and 5,
+The PAGE and BANK instructions are renamed SBANK and GBANK and perform bank switching on special-purpose registers and the banked portion of general-purpose RAM respectively.
+A second generation 15-bit instruction set expands the address space to:
+
+80 device control registers (all except the first 5 banked),
+48 bytes of unbanked RAM (0x50–0x7F), and
+128 bytes of banked RAM (0x80–0xFF),
+These also include several additional instructions:
+
+*: Same opcode as 13-bit EM78
+†: Only on EM89F768N; operands and results in special registers
+‡: Only on EM88F794N, MTF213 and MTF351
+
+Holtek clones (14, 15 or 16 bit)
+Holtek make numerous 8-bit microcontrollers with a 14-bit instruction word equivalent to the (non-enhanced) mid-range core.  The instruction encodings all fit into 14 bits and provide 7-bit operand addresses.  
+The instruction format is identical to Microchip's, but the opcodes are assigned in a different order, and the manufacturer uses different instruction mnemonics.  The accumulator is called ACC rather than W, and the destination is specified by a suffix to the instruction mnemonic rather than an operand.  (Instructions which do not use the accumulator by default write back to memory, and use an A suffix to indicate the destination is the accumulator.  Two-operand instructions by default write to the accumulator, and use an M suffix to indicate a memory destination.)
+In addition to the different opcode assignment, there are semantic differences in a few instructions:
+
+The subtract instructions subtract the operand from the accumulator, while Microchip's subtract instructions do the reverse.  (This makes the subtract immediate instruction redundant, as it is equivalent to an add of the negative.)
+The move-to-accumulator and clear instructions do not modify any flags.
+In addition to the zero, carry, and digit carry flags (called AC by Holtek), there an overflow flag which is set by the same add and subtract instructions which set AC.
+Several operations have been added to the 14-bit PICmicro repertoire:
+
+Rotate one bit left and right without carry,
+Set operand to all-ones,
+Skip if operand is zero (without incrementing or decrementing it first),
+Skip if operand is non-zero (some models),
+Add and subtract with carry,
+Decimal adjust after addition, for binary-coded decimal arithmetic, and
+Read from program ROM, for table lookup.  This uses TBHP and TBLP registers as a 16-bit pointer, fetches the word there, and stores the low byte in a specified location.  The high 6–8 bits of the fetched word are stored in the TBLH register.  A second form uses only TBLP and reads from the highest 256-byte page in ROM.  Some models include a variant which pre-increments TBLP.
+Most models support a second instruction to reset the watchdog timer, which must alternate with the first; repetitions of one instruction are ignored.  This permits two independent watchdog routines to run, and failure of either will trigger the watchdog.
+Holtek provide two indirect addressing registers, like the enhanced 14-bit PIC.  Some models (e.g. HT66F70A) provide three.  The first indirect addressing register (IAR0) uses an 8-bit address register (MP0), and always addresses the low bank of RAM.  IAR1 and IAR2 provide additional RAM address bits (MP1H and MP2H) and allow access to additional banks of RAM.
+15-bit models use bit 14 of the instruction as an 8th operand address bit and a 12th CALL/JMP target address bit.  16-bit models add a 13th CALL/JMP target address bit, but do not add a 9th operand addresses bit.
+Instead, some 16-bit models support an extended instruction set.  This adds a few new instructions (skip on byte without inc/decrement, subtract immediate with carry, ROM read with address increment), but also adds 2-word "long" variants of all memory instructions.  When bit 15 of the opcode is set, it indicates that the 8-bit operand address in opcode bits 0–6 and 14 is extended to 16 bits using bits 0–7 of the following instruction word.  Such instructions are written with an L prefix (LADD vs. ADD) and take an extra cycle to execute.
+
+*: Instructions available in long forms on 16-bit models with extended instruction set.
+†: Instruction only available on 16-bit models with extended instruction set.
+
+Padauk microcontrollers (13, 14, 15 or 16 bit)
+Padauk Technology make a series of PIC-like microcontrollers notable for their extremely low cost, beginning at US$0.033 in quantity, with many models costing less than US$0.10.
+Although clearly derived from the Microchip PIC12 series,
+there are some significant differences:
+
+They do not use the FSR/INDF mechanism for performing indirect memory access, instead having indirect load and store instructions which use an arbitrary RAM location as a pointer;
+they use a RAM-based call stack, with a stack pointer register;
+the carry flag uses a "borrow bit" convention for subtracts, rather than the "carry bit" convention used by Microchip;
+they also include a signed overflow flag, which like the digit carry, is set by add, subtract and compare instructions (every instruction which sets the carry flag except for shift instructions);
+they have separate RAM and I/O register addresses spaces (64 and 32 bytes, respectively, in the 13-bit instruction set);
+bit operations are limited to the I/O space and first 16 RAM addresses;
+the single-operand instructions with a memory source and accumulator destination are omitted;
+single-operand instructions with accumulator source and destination are provided;
+subtraction operations compute destination − source, exchanging input operands depending on the destination;
+they operate faster, requiring 1 cycle for most instructions and 2 cycles for control transfers; and
+some models support temporal multithreading, having multiple execution contexts whose execution is interleaved.
+
+The 14-, 15- and 16-bit instruction sets primarily differ in having wider address fields, although some encoding changes are made to allow a few additional instructions (such as CNEQSN, which performs a compare and skip if not equal.)
+
+PIC18 high end core devices (16 bit)
+In 2000, Microchip introduced the PIC18 architecture. Unlike the 17 series, it has proven to be very popular, with a large number of device variants presently in manufacture. In contrast to earlier devices, which were more often than not programmed in assembly, C has become the predominant development language.
+The PIC18 has a 12-bit RAM address space, divided into 16 pages of 256 bytes. The 8-bit f field determines the address in combination with the a bit and the 4-bit bank select register (BSR). If a=0, the BSR is ignored and the f field is sign-extended to the range 0x000–0x07F (global RAM) or 0xF80–0xFFF (special function registers). If a=1, the f field is extended with the BSR to generate the 12-bit address.
+The PIC18 extends the FSR/INDF mechanism used in previous PICmicro processors for indirect addressing in two ways:
+First, it provides three file select registers. The FSRn registers are 12 bits long (each split into two 8-bit portions FSR0L through FSR2H), and access to the corresponding INDFn register (INDF0 through INDF2) acts as an alias for the addressed byte.
+Second, there are addressing modes. For each of the three, there is not just one INDFn register, but five, and the one used determines the addressing mode:
+
+INDFn: Access the byte at location FSRn
+POSTDECn: Access the byte at FSRn, then decrement FSRn
+POSTINCn: Access the byte at FSRn, then increment FSRn
+PREINCn: Increment FSRn, then access the byte at the incremented FSRn
+PLUSWn: Access the byte at FSRn + W (indexed addressing).
+There are also instructions to directly load an FSR pair with a 12-bit address, and a MOVFF instruction that moves a byte between two 12-bit addresses.
+
+*: These extended instructions are only available on some models, and then only if the XINST configuration bit is set.
+
+Hycon clones (16 bit)
+Hycon Technology make a series of microcontrollers (part number prefixes HY10 through HY17) with an "H08" CPU core which is very similar to the PIC18.  Although the opcode assignments do not appear to be publicly documented, the H08A instruction set is very similar to the PIC18 one.  There are numerous mnemonic changes (for example, an unconditional relative branch is called BRA by Microchip but JR by Hycon), and a small number of functional changes:
+
+The H08A only has two FSR/IND registers, not three.
+The H08A has a smaller 14-bit ROM space and 11-bit RAM space (vs. up to 20 and 12 bits on the PIC18), but it is not clear if this is an architectural limit or just that of current products.
+The H08A is missing the PIC18 PUSH, DAW, TBLWR, CALLW, RESET, MOVF, SUBFWB, and NEGF instructions.
+In lieu of the PIC18's MOVF instruction, the H08 has MVF, which moves W to a memory location  f, but does not set the flags.
+The H08A only supports TBLR * and TBLR *+; it has no equivalent to the PIC18's TBLRD *- or TBLRD +*.
+The H08 CLRF instruction does not alter the Z flag (the PIC18's sets it).
+In addition to the PIC18's four rotate instructions, the H08A has ARLC (identical to RLCF, but also sets the overflow flag if the sign bit changes) and ARRC, which is an arithmetic right shift, preserving the msbit of the source.
+The H08A has a MVLP instruction which copies a 14-bit immediate value to the ROM table pointer registers.
+In addition to SLP, the H08A has an IDLE instruction.
+There is also a reduced H08B variant.  This differs from the H08A in that:
+
+The H08B has only a single FSR/INDF register pair.
+Some, but not all also lack the PIC18's additional addressing mode registers and have only the basic FSR0/INDF0 pair.
+It lacks the H08A's ARLC, ARRC and MVLP instructions.
+It lacks the shadow registers used for the PIC18 and H08A's "fast" call/return option.
+It lacks equivalents to the PIC18's multiply (MULLW and MULWF), relative branch (BRA, RCALL and conditional branch BZ through BNN), MOVLB, LFSR, MOVFF, POP, and TBLRD instructions.
+There are also H08C and H08D variants, which are slightly expanded versions of the H08A, but the additions are not clear.  The H08C and H08D do include a third FSR2/INDF2 register pair.
+
+PIC24 and dsPIC 16-bit microcontrollers
+In 2001, Microchip introduced the dsPIC series of chips,
+which entered mass production in late 2004. They are Microchip's first inherently 16-bit microcontrollers.  PIC24 devices are designed as general purpose microcontrollers.  dsPIC devices include digital signal processing capabilities in addition.
+Instructions come in two main varieties.  One is like the classic one-operand PIC instructions, with an operation between W0 and a value in a specified f register (i.e. the first 8K of RAM), and a destination select bit selecting which is updated with the result.  The W registers are memory-mapped, so the f operand may specify a W register.
+The other form, new to the PIC24, specifies three W register operands, two of which allow a 3-bit addressing mode specification:
+
+The register offset addressing mode is only available for the MOV src,dst instruction, where the Ww register may be used as a register offset for the source, destination, or both.  All other instructions use this encoding for an unsigned 5-bit immediate source instead.
+For the operands to TBLRD and TBLWT which access program memory, only the indirect modes are allowed, and refer to addresses in code memory.
+A few instructions are 2 words long.  The second word is a NOP, which includes up to 16 bits of additional immediate operand.

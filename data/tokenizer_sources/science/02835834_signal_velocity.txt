@@ -1,0 +1,110 @@
+The signal velocity is the speed at which a wave carries information. It describes how quickly a message can be communicated (using any particular method) between two separated parties. No signal velocity can exceed the speed of a light pulse in a vacuum (by special relativity). 
+Signal velocity is usually equal to group velocity (the speed of a short "pulse" or of a wave-packet's middle or "envelope"). However, in a few special cases (e.g., media designed to amplify the front-most parts of a pulse and then attenuate the back section of the pulse), group velocity can exceed the speed of light in vacuum, while the signal velocity will still be less than or equal to the speed of light in vacuum. 
+In electronic circuits, signal velocity is one member of  a group of five closely related parameters. In these circuits, signals are usually treated as operating in transverse electromagnetic (TEM) mode. That is, the fields are perpendicular to the direction of transmission and perpendicular to each other. Given this presumption, the quantities: signal velocity, the product of dielectric constant and magnetic permeability, characteristic impedance, inductance of a structure, and capacitance of that structure, are all related such that if you know any two, you can calculate the rest. In a uniform medium if the permeability is constant, then variation of the signal velocity will be dependent only on variation of the dielectric constant. 
+In a transmission line, signal velocity is the reciprocal of the square root of the capacitance-inductance product, where inductance and capacitance are typically expressed as per-unit length. In circuit boards made of FR-4 material, the signal velocity is typically about six inches (15 cm) per nanosecond, or 6.562 ps/mm. In circuit boards made of Polyimide material, the signal velocity is typically about 16.3 cm per nanosecond or 6.146 ps/mm. In these boards, permeability is usually constant and dielectric constant often varies from location to location, causing variations in signal velocity. As data rates increase, these variations become a major concern for computer manufacturers.
+
+  
+    
+      
+        
+          
+            v
+            
+              s
+            
+          
+        
+        =
+        
+          
+            c
+            
+              
+                ε
+                
+                  r
+                
+              
+              
+                μ
+                
+                  r
+                
+              
+            
+          
+        
+        ≈
+        
+          
+            c
+            
+              
+                ε
+                
+                  r
+                
+              
+            
+          
+        
+         
+      
+    
+    {\displaystyle \mathrm {v_{s}} ={\frac {c}{\sqrt {\varepsilon _{r}\mu _{r}}}}\approx {\frac {c}{\sqrt {\varepsilon _{r}}}}\ }
+  
+
+where 
+  
+    
+      
+        
+          ε
+          
+            r
+          
+        
+      
+    
+    {\displaystyle \varepsilon _{r}}
+  
+ is the relative permittivity of the medium, 
+  
+    
+      
+        
+          μ
+          
+            r
+          
+        
+      
+    
+    {\displaystyle \mu _{r}}
+  
+ is the relative permeability of the medium, and 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ is the speed of light in vacuum.  The approximation shown is used in many practical context because for most common materials 
+  
+    
+      
+        
+          μ
+          
+            r
+          
+        
+        ≈
+        1
+      
+    
+    {\displaystyle \mu _{r}\approx 1}
+  
+.

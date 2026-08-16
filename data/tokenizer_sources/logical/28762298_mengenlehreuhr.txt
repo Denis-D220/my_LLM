@@ -1,0 +1,47 @@
+The Mengenlehreuhr (German for "Set Theory Clock") or Berlin-Uhr ("Berlin Clock") is the first public clock in the world that tells the time by means of illuminated, coloured fields, for which it entered the Guinness Book of Records upon its installation on 17 June 1975. Commissioned by the Senate of Berlin and designed by Dieter Binninger, the original full-sized Mengenlehreuhr was originally located at the Kurfürstendamm on the corner with Uhlandstraße in what was then West Berlin. After the Senate decommissioned it in 1995, the clock was relocated to a site in Budapester Straße in front of Europa-Center, where it stands today.
+
+Time encoding
+
+The Mengenlehreuhr clock face utilizes 24 light fields (1+4+4+11+4=24) to display time in 0–23 hour, 0–59 minute and even/odd second. The clock is read from the top row to the bottom.
+Second: The top big circular light is the seconds mark. This light switches its state (between ON and OFF) every one second. The light is OFF for even seconds, and ON for odd seconds. On this clock, the precise time in seconds (e.g., 42 in 10:31:42) is not displayed. Rather, this light serves as an indicator that the clock is operating.
+
+ //Second encoder in Source Code
+ //Assuming neon[3] holds 1-bit for the 1 second light
+ if(tsec&1){ neon[3]=1; } else{ neon[3]=0; }
+
+Hour: The next two rows of 8 red light fields indicate the hour, using a 24-hour format. Each light in the upper row marks 5 full hours, while each light in the lower row marks 1 full hour. Thus, the maximum hour number which can be displayed is 4*5+4=24, and the minimal displayable hour is 0, indicated when all 8 of these lights are OFF. Since a 24-hour clock only uses hour numbers from 0 to 23, an hour number of "24" (the state with all lights ON) is never displayed.
+
+ //Hour encoder in Source Code
+ //Assuming neon[0] holds 8-bit for the top 8 lights
+ //Hour-top
+ for( uint8_t i=0; i<(thr/5);i++){
+   neon[0]|=(1<<i);
+ }
+ //Hour-bottom
+ for( uint8_t i=4; i<((thr%5)+4);i++){
+   neon[0]|=(1<<i);
+ }
+
+Minute: The bottom two rows consist of an upper row of 11 yellow and red light fields and a lower row of 4 yellow light fields. These rows are encoded similarly to the hour mark, with each light in the upper row indicating 5 full minutes, and each light in the lower row indicating 1 full minute. A maximum possible number of 11*5+4=59 minutes can be displayed. A 0 minute mark is indicated when all of these lights are OFF. The upper of these two rows has 3 unique colored lights, representing the minute mark at 3*5-minute intervals of 15, 30, and 45, to assist with telling the time quickly.
+
+ //Minute encoder in Source Code
+ //Assuming neon[1] and neon[2] hold 15-bit for the bottom 15 lights
+ //Minute-top
+ for( uint8_t i=8; i<(tmin/5)+8;i++){
+   neon[i/8]|=(1<<i%8);
+ }
+ //Minute-bottom
+ for( uint8_t i=19; i<(tmin%5)+19;i++){
+   neon[i/8]|=(1<<i%8);
+ }
+
+Time decoding - How to Read the Clock
+
+This section demonstrates telling the time, using the accompanying image as an example, in which a time of 12:32 is indicated.
+Hour (upper row 2 lit, and lower row 2 lit): 2*5+2=12. Each of the 4 upper row lights represents a 5 increment hour: 5, 10, 15, 20.
+Minute (upper row 6 lit and lower row 2 lit): 6*5+2=32. Each of the 11 upper row lights represents a 5 increment minute: 5,10,15,20,25,30,35,40,45,50,55.
+Second ( top 1 ): The lamp is lit, indicating an odd number of seconds.
+
+Kryptos
+This clock may be referred to in the unsolved section of Kryptos, a sculpture at the Central Intelligence Agency (CIA) headquarters in Langley, Virginia, United States. The sculptor, Jim Sanborn, gave two clues to The New York Times in November 2010 and November 2014, revealing that the portion of the deciphered "K4" sculpture text, in positions 64–74, reads "BERLIN CLOCK". When asked if the clue referred to the Mengenlehreuhr, Sanborn replied, "You'd better delve into that particular clock".
+However, Sanborn also noted that, "There are several really interesting clocks in Berlin."

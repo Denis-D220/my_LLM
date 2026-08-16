@@ -1,0 +1,88 @@
+In descriptive set theory, the Borel determinacy theorem states that any Gale–Stewart game whose payoff set is a Borel set is determined, meaning that one of the two players will have a winning strategy for the game. A Gale–Stewart game is a possibly infinite two-player game, where both players have perfect information and no randomness is involved.
+The theorem is a far reaching generalization of Zermelo's theorem about the determinacy of finite games. It was proved by Donald A. Martin in 1975, and is applied in descriptive set theory to show that Borel sets in Polish spaces have regularity properties such as the perfect set property.
+The theorem is also known for its metamathematical properties. In 1971, before the theorem was proved, Harvey Friedman showed that any proof of the theorem in Zermelo–Fraenkel set theory must make repeated use of instances of the axiom schema of replacement. Later results showed that stronger determinacy theorems cannot be proven in Zermelo–Fraenkel set theory, although they are relatively consistent with it, if certain large cardinals are consistent.
+
+Background
+
+Gale–Stewart games
+
+A Gale–Stewart game is a two-player game of perfect information. The game is defined using a set A, and is denoted GA. The two players alternate turns, and each player is aware of all moves before making the next one. On each turn, each player chooses a single element of A to play. The same element may be chosen more than once without restriction. The game can be visualized through the following diagram, in which the moves are made from left to right, with the moves of player I above and the moves of player II below.
+
+The play continues without end, so that a single play of the game determines an infinite sequence 
+  
+    
+      
+        ⟨
+        
+          a
+          
+            1
+          
+        
+        ,
+        
+          a
+          
+            2
+          
+        
+        ,
+        
+          a
+          
+            3
+          
+        
+        …
+        ⟩
+      
+    
+    {\displaystyle \langle a_{1},a_{2},a_{3}\ldots \rangle }
+  
+ of elements of A. The set of all such sequences is denoted Aω.    The players are aware, from the beginning of the game, of a fixed payoff set (a.k.a. winning set) that will determine who wins.   The payoff set is a subset of Aω. If the infinite sequence created by a play of the game is in the payoff set, then player I wins. Otherwise, player II wins; there are no ties.
+This definition initially does not seem to include traditional perfect information games such as chess, since the set of moves available in such games changes every turn. However, this sort of case can be handled by declaring that a player who makes an illegal move loses immediately, so that the Gale–Stewart notion of a game does in fact generalize the concept of a game defined by a game tree.
+
+Winning strategies
+A winning strategy for a player is a function that tells the player what move to make from any position in the game, such that if the player follows the function they will surely win.  More specifically, a winning strategy for player I is a function f that takes as input sequences of elements of A of even length and returns an element of A, such that player I will win every play of the form
+
+A winning strategy for player II is a function g that takes odd-length sequences of elements of A and returns elements of A, such that player II will win every play of the form
+
+At most one player can have a winning strategy; if both players had winning strategies, and played the strategies against each other, only one of the two strategies could win that play of the game.   If one of the players has a winning strategy for a particular payoff set, that payoff set is said to be determined.
+
+Topology
+For a given set A, whether a subset of Aω will be determined depends to some extent on its topological structure. For the purposes of Gale–Stewart games, the set A is endowed with the discrete topology, and Aω endowed with the resulting product topology, where Aω is viewed as a countably infinite topological product of A with itself.  In particular, when A is the set {0,1}, the topology defined on Aω is exactly the ordinary topology on Cantor space, and when A is the set of natural numbers, it is the ordinary topology on Baire space.
+The set Aω can be viewed as the set of paths through a certain tree, which leads to a second characterization of its topology. The tree consists of all finite sequences of elements of A, and the children of a particular node σ of the tree are exactly the sequences that extend σ by one element. Thus if A = { 0, 1 }, the first level of the tree consists of the sequences ⟨ 0 ⟩ and ⟨ 1 ⟩; the second level consists of the four sequences ⟨ 0, 0 ⟩, ⟨ 0, 1 ⟩, ⟨ 1, 0 ⟩, ⟨ 1, 1 ⟩; and so on.  For each of the finite sequences σ in the tree, the set of all elements of Aω that begin with σ is a basic open set in the topology on A. The open sets of Aω are precisely the sets expressible as unions of these basic open sets. The closed sets, as usual, are those whose complement is open.
+The Borel sets of Aω are the smallest class of subsets of Aω that includes the open sets and is closed under complement and countable union. That is, the Borel sets are the smallest σ-algebra of subsets of Aω containing all the open sets. The Borel sets are classified in the Borel hierarchy based on how many times the operations of complement and countable union are required to produce them from open sets.
+
+Previous results
+Gale and Stewart (1953) proved that if the payoff set is an open or closed subset of Aω then the Gale–Stewart game with that payoff set is always determined. Over the next twenty years, this was extended to slightly higher levels of the Borel hierarchy through ever more complicated proofs.  This led to the question of whether the game must be determined whenever the payoff set is a Borel subset of Aω.  It was known that, using the axiom of choice, it is possible to construct a subset of {0,1}ω that is not determined (Kechris 1995, p. 139).
+Harvey Friedman (1971) proved that any proof that all Borel subsets of Cantor space ({0,1}ω ) were determined would require repeated use of instances of the axiom schema of replacement, an axiom not typically required to prove theorems about "small" structures such as Cantor space that are not explicitly "set-theoretic" (that is, constructed for the purposes of exploring axiomatic set theory).
+
+Borel determinacy
+Donald A. Martin (1975) proved that for any set A, all Borel subsets of Aω are determined. Because the original proof was quite complicated, Martin published a shorter proof in 1982 that did not require as much technical machinery. In his review of Martin's paper, Drake describes the second proof as "surprisingly straightforward."
+The field of descriptive set theory studies properties of Polish spaces (essentially, complete separable metric spaces). The Borel determinacy theorem has been used to establish many properties of Borel subsets of these spaces. For example, all analytic subsets of Polish spaces have the perfect set property, the property of Baire, and are Lebesgue measurable. However, the last two properties can be more easily proved without using Borel determinacy, by showing that the σ-algebras of measurable sets or sets with the Baire property are closed under Suslin's operation 
+  
+    
+      
+        
+          
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathcal {A}}}
+  
+.
+
+Set-theoretic aspects
+The Borel determinacy theorem is of interest for its metamathematical properties as well as its consequences in descriptive set theory.
+Determinacy of closed sets of Aω for arbitrary A is equivalent to the axiom of choice over ZF (Kechris 1995, p. 139). When working in  set-theoretical systems where the axiom of choice is not assumed, this can be circumvented by considering generalized strategies known as quasistrategies (Kechris 1995, p. 139) or by only considering games where A is the set of natural numbers, as in the axiom of determinacy.
+Zermelo set theory (Z) is (roughly) Zermelo–Fraenkel set theory without the axiom schema of replacement. One way it differs from ZF is that Z does not prove that the power set operation can be iterated infinitely many times beginning with an arbitrary infinite set.  In particular, Vω + ω, a particular level of the cumulative hierarchy with countable rank, is a model of Zermelo set theory.  The axiom schema of replacement, on the other hand, is only satisfied by Vκ for significantly larger values of κ, such as when κ is a strongly inaccessible cardinal. Friedman's theorem of 1971 showed that there is a model of Zermelo set theory (with the axiom of choice) in which Borel determinacy fails, and thus Zermelo set theory alone cannot prove the Borel determinacy theorem.
+The existence of all beth numbers of countable index is sufficient to prove the Borel determinacy theorem.
+
+Stronger forms of determinacy
+
+Several set-theoretic principles about determinacy stronger than Borel determinacy are studied in descriptive set theory. They are closely related to large cardinal axioms.
+The axiom of projective determinacy states that all projective subsets of a Polish space are determined. It is known to be unprovable in ZFC but relatively consistent with it and implied by certain large cardinal axioms. The existence of a measurable cardinal is enough to imply over ZFC the result that all analytic subsets of Polish spaces are determined, which is weaker than full projective determinacy.
+The axiom of determinacy states that all subsets of all Polish spaces are determined. It is inconsistent with ZFC but in ZF + DC (Zermelo–Fraenkel set theory plus the axiom of dependent choice) it is equiconsistent with certain large cardinal axioms.

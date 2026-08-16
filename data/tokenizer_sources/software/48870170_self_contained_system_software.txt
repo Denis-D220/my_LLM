@@ -1,0 +1,23 @@
+In computing, self-contained system  (SCS)  is a software architecture approach that focuses on a separation of the functionality into many independent systems, making the complete logical system a collaboration of many smaller software systems.
+
+Self-contained system characteristics
+SCSs have certain characteristics:
+
+Each SCS is an autonomous web application.
+Each SCS is owned by one team.
+Communication with other SCSs or third-party systems is asynchronous wherever possible.
+An SCS can have an optional service API.
+Each SCS must include data and logic.
+An SCS should make its features usable to end-users by its own UI.
+To avoid tight coupling an SCS should share no business code with other SCSs.
+Shared infrastructure should be reduced to increase availability and decrease coupling.
+Implementations create larger systems using this approach – in particular web applications. There are many case studies and further links available.
+
+Self-contained systems and microservices
+While self-contained systems are similar to microservices there are differences: A system will usually contain fewer SCS than microservices. Also microservices can communicate with other microservices – even synchronously. SCS prefer no communication or asynchronous communication. Microservices might also have a separate UI unlike the SCS that include a UI.
+
+Self-contained systems and Vertical Slice Architecture
+Self-contained systems and vertical slice architecture have similarities but also decisive differences. Both approaches divide a system into smaller, manageable units. Vertical slices are cut on the basis of features, Self-contained systems along the boundaries of functional domains. They also differ in the strictness with which they attempt to encapsulate and isolate specialized logic.
+
+Usage
+There are quite a few known usages of SCS – e.g. at Otto, Galeria Kaufhof, and Kühne+Nagel.

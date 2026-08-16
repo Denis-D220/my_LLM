@@ -1,0 +1,29 @@
+In computing, bandwidth is the maximum rate of data transfer across a given path. Bandwidth may be characterized as network bandwidth, data bandwidth, or digital bandwidth.
+This definition of bandwidth contrasts with usage in signal processing, wireless communications, modem data transmission, digital communications, and electronics, in which bandwidth is used to refer to the signal bandwidth measured in hertz, meaning the frequency range between lowest and highest attainable frequency while meeting a well-defined impairment level in signal power. The actual bit rate that can be achieved depends not only on the signal bandwidth but also on the noise on the channel.
+
+Network capacity
+The term bandwidth sometimes refers to the net bit rate, peak bit rate, information rate, physical-layer useful bit rate, channel capacity, or maximum throughput of a logical or physical communication path in a digital communication system. For example, bandwidth tests measure the maximum throughput of a computer network. The maximum rate that can be sustained on a link is limited by the Shannon–Hartley channel capacity for these communication systems, which is dependent on the bandwidth in hertz and the noise on the channel.
+
+Network consumption
+The consumed bandwidth in bit/s corresponds to achieved throughput or goodput, i.e., the average rate of successful data transfer through a communication path. The consumed bandwidth can be affected by technologies such as bandwidth shaping, bandwidth management, bandwidth throttling, bandwidth cap, bandwidth allocation (for example bandwidth allocation protocol and dynamic bandwidth allocation), etc. A bit stream's bandwidth is proportional to the average consumed signal bandwidth in hertz (the average spectral bandwidth of the analog signal representing the bit stream) during a studied time interval.
+Channel bandwidth may be confused with useful data throughput (or goodput). For example, a channel with x bit/s may not necessarily transmit data at x rate, since protocols, encryption, and other factors can add appreciable overhead. For instance, much internet traffic uses the transmission control protocol (TCP), which requires a three-way handshake for each transaction. Although in many modern implementations the protocol is efficient, it does add significant overhead compared to simpler protocols. Also, data packets may be lost, which further reduces the useful data throughput. In general, for any effective digital communication, a framing protocol is needed; overhead and effective throughput depends on implementation. Useful throughput is less than or equal to the actual channel capacity minus implementation overhead.
+
+Maximum throughput
+The asymptotic bandwidth (formally asymptotic throughput) for a network is the measure of maximum throughput for a greedy source, for example when the message size (the number of packets per second from a source) approaches close to the maximum amount.
+Asymptotic bandwidths are usually estimated by sending a number of very large messages through the network, measuring the end-to-end throughput. As with other bandwidths, the asymptotic bandwidth is measured in multiples of bits per seconds. Since bandwidth spikes can skew the measurement, carriers often use the 95th percentile method. This method continuously measures bandwidth usage and then removes the top 5 percent.
+
+Multimedia
+Digital bandwidth may also refer to: multimedia bit rate or average bitrate after multimedia data compression (source coding), defined as the total amount of data divided by the playback time.
+Due to the impractically high bandwidth requirements of uncompressed digital media, the required multimedia bandwidth can be significantly reduced with data compression. The most widely used data compression technique for media bandwidth reduction is the discrete cosine transform (DCT), which was first proposed by Nasir Ahmed in the early 1970s. DCT compression significantly reduces the amount of memory and bandwidth required for digital signals, capable of achieving a data compression ratio of up to 100:1 compared to uncompressed media.
+
+Web hosting
+
+In web hosting service, the term bandwidth is often used to describe the amount of data transferred to or from the website or server within a prescribed period of time, for example bandwidth consumption accumulated over a month measured in gigabytes per month. The more accurate phrase used for this meaning of a maximum amount of data transfer each month or given period is monthly data transfer.
+A similar situation can occur for end-user Internet service providers as well, especially where network capacity is limited (for example in areas with underdeveloped internet connectivity and on wireless networks).
+
+Internet connections
+
+Edholm's law
+
+Edholm's law, proposed by and named after Phil Edholm in 2004, holds that the bandwidth of telecommunication networks double every 18 months, which has proven to be true since the 1970s. The trend is evident in the cases of Internet, cellular (mobile), wireless LAN and wireless personal area networks.
+The MOSFET (metal–oxide–semiconductor field-effect transistor) is the most important factor enabling the rapid increase in bandwidth. The MOSFET (MOS transistor) was invented by Mohamed M. Atalla and Dawon Kahng at Bell Labs in 1959, and went on to become the basic building block of modern telecommunications technology. Continuous MOSFET scaling, along with various advances in MOS technology, has enabled both Moore's law (transistor counts in integrated circuit chips doubling every two years) and Edholm's law (communication bandwidth doubling every 18 months).

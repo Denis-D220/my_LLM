@@ -1,0 +1,2481 @@
+In the mathematical discipline of functional analysis, the concept of a compact operator on Hilbert space is an extension of the concept of a matrix acting on a finite-dimensional vector space; in Hilbert space, compact operators are precisely the closure of finite-rank operators (representable by finite-dimensional matrices) in the topology induced by the operator norm. As such, results from matrix theory can sometimes be extended to compact operators using similar arguments. By contrast, the study of general operators on infinite-dimensional spaces often requires a genuinely different approach.
+For example, the spectral theory of compact operators on Banach spaces takes a form that is very similar to the Jordan canonical form of matrices. In the context of Hilbert spaces, a square matrix is unitarily diagonalizable if and only if it is normal. A corresponding result holds for normal compact operators on Hilbert spaces. More generally, the compactness assumption can be dropped. As stated above, the techniques used to prove results, e.g., the spectral theorem, in the non-compact case are typically different, involving operator-valued measures on the spectrum.
+The quotient 
+  
+    
+      
+        
+          C
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle C^{\ast }}
+  
+-algebra of 
+  
+    
+      
+        L
+        (
+        H
+        )
+      
+    
+    {\displaystyle L(H)}
+  
+ modulo the compact operators is called the Calkin algebra, in which one can consider properties of an operator up to compact perturbation.
+
+Definition
+Let 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ be a Hilbert space and 
+  
+    
+      
+        L
+        (
+        H
+        )
+      
+    
+    {\displaystyle L(H)}
+  
+ be the set of bounded operators on 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+. Then, an operator 
+  
+    
+      
+        T
+        ∈
+        L
+        (
+        H
+        )
+      
+    
+    {\displaystyle T\in L(H)}
+  
+ is said to be a compact operator if the image of each bounded set under 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is relatively compact.
+
+Some general properties
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are separable Hilbert spaces (in fact, 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ Banach and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ normed will suffice), then 
+  
+    
+      
+        T
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle T:X\to Y}
+  
+ is compact if and only if it is sequentially continuous when viewed as a map from 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ with the weak topology to 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ (with the norm topology).
+The family of compact operators is a norm-closed, two-sided, *-ideal in 
+  
+    
+      
+        L
+        (
+        H
+        )
+      
+    
+    {\displaystyle L(H)}
+  
+. Consequently, if 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ is infinite-dimensional, then the inverse of a compact invertible operator 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ cannot be bounded (otherwise, the identity operator would be compact, which is the case if and only if 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ is finite-dimensional.)
+If 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is compact, and 
+  
+    
+      
+        (
+        
+          B
+          
+            n
+          
+        
+        
+          )
+          
+            n
+            ∈
+            
+              N
+            
+          
+        
+        ,
+        (
+        
+          C
+          
+            n
+          
+        
+        
+          )
+          
+            n
+            ∈
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle (B_{n})_{n\in \mathbb {N} },(C_{n})_{n\in \mathbb {N} }}
+  
+ are two sequences of bounded operators converging for the strong operator topology to B and C respectively, then 
+  
+    
+      
+        
+          B
+          
+            n
+          
+        
+        T
+        
+          C
+          
+            n
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle B_{n}TC_{n}^{*}}
+  
+ converges to 
+  
+    
+      
+        B
+        T
+        
+          C
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle BTC^{*}}
+  
+ in norm. For example, consider the Hilbert space 
+  
+    
+      
+        
+          ℓ
+          
+            2
+          
+        
+        (
+        
+          N
+        
+        )
+        ,
+      
+    
+    {\displaystyle \ell ^{2}(\mathbf {N} ),}
+  
+ with standard basis 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        
+          )
+          
+            n
+            ∈
+            N
+          
+        
+      
+    
+    {\displaystyle (e_{n})_{n\in N}}
+  
+. Let 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ be the orthogonal projection on the linear span of 
+  
+    
+      
+        (
+        
+          e
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          e
+          
+            m
+          
+        
+        )
+      
+    
+    {\displaystyle (e_{1},\dots ,e_{m})}
+  
+. The sequence 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ converges to the identity operator 
+  
+    
+      
+        
+          I
+        
+      
+    
+    {\displaystyle \mathrm {I} }
+  
+ strongly but not uniformly. Define 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ by 
+  
+    
+      
+        T
+        
+          e
+          
+            n
+          
+        
+        =
+        
+          
+            
+              1
+              
+                n
+                
+                  2
+                
+              
+            
+          
+        
+        
+          e
+          
+            n
+          
+        
+        .
+      
+    
+    {\displaystyle Te_{n}={\tfrac {1}{n^{2}}}e_{n}.}
+  
+ 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is compact, and, as claimed above, 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+        T
+        →
+        I
+        T
+        =
+        T
+      
+    
+    {\displaystyle P_{m}T\to IT=T}
+  
+ in the uniform operator topology: for all 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+,
+
+  
+    
+      
+        
+          ‖
+          
+            
+              P
+              
+                m
+              
+            
+            T
+            x
+            −
+            T
+            x
+          
+          ‖
+        
+        ≤
+        
+          
+            (
+            
+              
+                1
+                
+                  m
+                  +
+                  1
+                
+              
+            
+            )
+          
+          
+            2
+          
+        
+        ‖
+        x
+        ‖
+        .
+      
+    
+    {\displaystyle \left\|P_{m}Tx-Tx\right\|\leq \left({\frac {1}{m+1}}\right)^{2}\|x\|.}
+  
+Notice each 
+  
+    
+      
+        
+          P
+          
+            m
+          
+        
+      
+    
+    {\displaystyle P_{m}}
+  
+ is a finite-rank operator.
+
+A bounded operator 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is compact if and only if it is the uniform limit of some sequence of finite-rank operators.
+
+Compact self-adjoint operators
+
+Spectral theorem
+A bounded operator 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ on a Hilbert space 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ is said to be self-adjoint if 
+  
+    
+      
+        T
+        =
+        
+          T
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle T=T^{\ast }}
+  
+, or equivalently,
+  
+    
+      
+        ∀
+        x
+        ,
+        y
+        ∈
+        H
+        ,
+        
+        ⟨
+        T
+        x
+        ,
+        y
+        ⟩
+        =
+        ⟨
+        x
+        ,
+        T
+        y
+        ⟩
+        .
+      
+    
+    {\displaystyle \forall x,y\in H,\quad \langle Tx,y\rangle =\langle x,Ty\rangle .}
+  
+The spectral theorem for (finite-dimensional) self-adjoint matrices generalizes to compact self-adjoint operators on real or complex Hilbert spaces, namely such an operator can be diagonalized by an orthonormal set of eigenvectors, each of which corresponding to a real eigenvalue. More precisely, the orthogonal complement of the kernel of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ admits an orthonormal basis 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle (e_{n})}
+  
+ of cardinal at most countable consisting of eigenvectors of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ with corresponding eigenvalues 
+  
+    
+      
+        
+          λ
+          
+            n
+          
+        
+        ∈
+        
+          R
+        
+      
+    
+    {\displaystyle \lambda _{n}\in \mathbb {R} }
+  
+, such that 
+  
+    
+      
+        
+          λ
+          
+            n
+          
+        
+        →
+        0
+      
+    
+    {\displaystyle \lambda _{n}\to 0}
+  
+. When the Hilbert space is in addition separable, one can mix the basis 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle (e_{n})}
+  
+ with a countable orthonormal basis for the kernel of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, and obtain a countable orthonormal basis 
+  
+    
+      
+        (
+        
+          f
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle (f_{n})}
+  
+ for the total space, consisting of eigenvectors of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ with real eigenvalues 
+  
+    
+      
+        
+          μ
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mu _{n}}
+  
+ such that 
+  
+    
+      
+        
+          μ
+          
+            n
+          
+        
+        →
+        0
+      
+    
+    {\displaystyle \mu _{n}\to 0}
+  
+.
+As in finite dimension, the spectral theorems is shown by using induction together with the existence of one eigenvector 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+. In finite dimension, the existence of an eigenvector can be shown in (at least) two alternative ways:
+
+One can argue algebraically: The characteristic polynomial of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ has a complex root, therefore 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ has an eigenvalue with a corresponding eigenvector.
+The eigenvalues can be characterized variationally: The largest eigenvalue is the maximum on the closed unit sphere of the function 
+  
+    
+      
+        f
+        :
+        
+          
+            R
+          
+          
+            2
+            n
+          
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f:\mathbb {R} ^{2n}\to \mathbb {R} }
+  
+ defined by 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          x
+          
+            ∗
+          
+        
+        T
+        x
+        =
+        ⟨
+        T
+        x
+        ,
+        x
+        ⟩
+      
+    
+    {\displaystyle f(x)=x^{\ast }Tx=\langle Tx,x\rangle }
+  
+.
+In infinite dimension, the existence of an eigenvector for every compact self-adjoint operator can be obtained by extending the second finite-dimensional argument above. In this argument, one has to replace the compactness of the unit ball by an argument involving the compactness of the operator.
+More precisely, setting
+  
+    
+      
+        m
+        (
+        T
+        )
+        :=
+        sup
+        
+          
+            {
+          
+        
+        
+          |
+        
+        ⟨
+        T
+        x
+        ,
+        x
+        ⟩
+        
+          |
+        
+        :
+        x
+        ∈
+        H
+        ,
+        
+        ‖
+        x
+        ‖
+        ≤
+        1
+        
+          
+            }
+          
+        
+        ,
+      
+    
+    {\displaystyle m(T):=\sup {\bigl \{}|\langle Tx,x\rangle |:x\in H,\,\|x\|\leq 1{\bigr \}},}
+  
+it can be shown first that 
+  
+    
+      
+        m
+        (
+        T
+        )
+      
+    
+    {\displaystyle m(T)}
+  
+ is in fact a maximum and then that either 
+  
+    
+      
+        m
+        (
+        T
+        )
+      
+    
+    {\displaystyle m(T)}
+  
+ or 
+  
+    
+      
+        −
+        m
+        (
+        T
+        )
+      
+    
+    {\displaystyle -m(T)}
+  
+ is an eigenvalue of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+. 
+
+Functional calculus
+If 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is compact on an infinite-dimensional Hilbert space 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+, then 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is not invertible, hence 
+  
+    
+      
+        σ
+        (
+        T
+        )
+      
+    
+    {\displaystyle \sigma (T)}
+  
+, the spectrum of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, always contains 0. The spectral theorem shows that 
+  
+    
+      
+        σ
+        (
+        T
+        )
+      
+    
+    {\displaystyle \sigma (T)}
+  
+ consists of the eigenvalues 
+  
+    
+      
+        
+          λ
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \lambda _{n}}
+  
+ of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ and of 0 (if 0 is not already an eigenvalue). The set 
+  
+    
+      
+        σ
+        (
+        T
+        )
+      
+    
+    {\displaystyle \sigma (T)}
+  
+ is a compact subset of the complex numbers, and the eigenvalues are dense in 
+  
+    
+      
+        σ
+        (
+        T
+        )
+      
+    
+    {\displaystyle \sigma (T)}
+  
+.
+Any spectral theorem can be reformulated in terms of a functional calculus. In the present context, we have:
+Theorem. Let 
+  
+    
+      
+        C
+        (
+        σ
+        (
+        T
+        )
+        )
+      
+    
+    {\displaystyle C(\sigma (T))}
+  
+ denote the C*-algebra of continuous functions on 
+  
+    
+      
+        σ
+        (
+        T
+        )
+      
+    
+    {\displaystyle \sigma (T)}
+  
+. There exists a unique isometric homomorphism 
+  
+    
+      
+        Φ
+        :
+        C
+        (
+        σ
+        (
+        T
+        )
+        )
+        →
+        L
+        (
+        H
+        )
+      
+    
+    {\displaystyle \Phi :C(\sigma (T))\to L(H)}
+  
+ such that 
+  
+    
+      
+        Φ
+        (
+        1
+        )
+        =
+        
+          I
+        
+      
+    
+    {\displaystyle \Phi (1)=\mathrm {I} }
+  
+ and, if 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is the identity function 
+  
+    
+      
+        f
+        (
+        λ
+        )
+        =
+        λ
+      
+    
+    {\displaystyle f(\lambda )=\lambda }
+  
+, then 
+  
+    
+      
+        Φ
+        (
+        f
+        )
+        =
+        T
+      
+    
+    {\displaystyle \Phi (f)=T}
+  
+. Now we may define 
+  
+    
+      
+        g
+        (
+        T
+        )
+        :=
+        Φ
+        (
+        g
+        )
+      
+    
+    {\displaystyle g(T):=\Phi (g)}
+  
+ (clearly this would hold when 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is polynomial). Then it also  holds, that 
+  
+    
+      
+        σ
+        (
+        g
+        (
+        T
+        )
+        )
+        =
+        g
+        (
+        σ
+        (
+        T
+        )
+        )
+      
+    
+    {\displaystyle \sigma (g(T))=g(\sigma (T))}
+  
+.
+The functional calculus map 
+  
+    
+      
+        Φ
+      
+    
+    {\displaystyle \Phi }
+  
+ is defined in a natural way: let 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle (e_{n})}
+  
+ be an orthonormal basis of eigenvectors for 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+, with corresponding eigenvalues 
+  
+    
+      
+        
+          λ
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \lambda _{n}}
+  
+; for 
+  
+    
+      
+        f
+        ∈
+        C
+        (
+        σ
+        (
+        T
+        )
+        )
+      
+    
+    {\displaystyle f\in C(\sigma (T))}
+  
+, the operator 
+  
+    
+      
+        Φ
+        (
+        f
+        )
+      
+    
+    {\displaystyle \Phi (f)}
+  
+, diagonal with respect to the orthonormal basis 
+  
+    
+      
+        
+          e
+          
+            n
+          
+        
+      
+    
+    {\displaystyle e_{n}}
+  
+, is defined by setting
+
+  
+    
+      
+        Φ
+        (
+        f
+        )
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+        =
+        f
+        (
+        
+          λ
+          
+            n
+          
+        
+        )
+        
+          e
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \Phi (f)(e_{n})=f(\lambda _{n})e_{n}}
+  
+
+for every 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+. Since 
+  
+    
+      
+        Φ
+        (
+        f
+        )
+      
+    
+    {\displaystyle \Phi (f)}
+  
+ is diagonal with respect to an orthonormal basis, its norm is equal to the supremum of the modulus of diagonal coefficients,
+
+  
+    
+      
+        ‖
+        Φ
+        (
+        f
+        )
+        ‖
+        =
+        
+          sup
+          
+            
+              λ
+              
+                n
+              
+            
+            ∈
+            σ
+            (
+            T
+            )
+          
+        
+        
+          |
+        
+        f
+        (
+        
+          λ
+          
+            n
+          
+        
+        )
+        
+          |
+        
+        =
+        ‖
+        f
+        
+          ‖
+          
+            C
+            (
+            σ
+            (
+            T
+            )
+            )
+          
+        
+        .
+      
+    
+    {\displaystyle \|\Phi (f)\|=\sup _{\lambda _{n}\in \sigma (T)}|f(\lambda _{n})|=\|f\|_{C(\sigma (T))}.}
+  
+
+The other properties of 
+  
+    
+      
+        Φ
+      
+    
+    {\displaystyle \Phi }
+  
+ can be readily verified. For the unicity part, notice that any homomorphism 
+  
+    
+      
+        Ψ
+      
+    
+    {\displaystyle \Psi }
+  
+ satisfying the requirements of the theorem must coincide with 
+  
+    
+      
+        Φ
+      
+    
+    {\displaystyle \Phi }
+  
+ when evaluated on a polynomial function. By the Weierstrass approximation theorem, polynomial functions are dense in 
+  
+    
+      
+        C
+        (
+        σ
+        (
+        T
+        )
+        )
+      
+    
+    {\displaystyle C(\sigma (T))}
+  
+, and it follows that 
+  
+    
+      
+        Ψ
+        =
+        Φ
+      
+    
+    {\displaystyle \Psi =\Phi }
+  
+. This shows that 
+  
+    
+      
+        Φ
+      
+    
+    {\displaystyle \Phi }
+  
+ is unique.
+The more general continuous functional calculus can be defined for any self-adjoint (or even normal, in the complex case) bounded linear operator on a Hilbert space. The compact case described here is a particularly simple instance of this functional calculus.
+
+Simultaneous diagonalization
+Consider a Hilbert space 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ (e.g. the finite-dimensional 
+  
+    
+      
+        
+          
+            C
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {C} ^{n}}
+  
+), and a commuting set 
+  
+    
+      
+        
+          
+            F
+          
+        
+        ⊆
+        Hom
+        ⁡
+        (
+        H
+        ,
+        H
+        )
+      
+    
+    {\displaystyle {\mathcal {F}}\subseteq \operatorname {Hom} (H,H)}
+  
+ of self-adjoint operators. Then under suitable conditions, it can be simultaneously (unitarily) diagonalized. Viz., there exists an orthonormal basis 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ consisting of common eigenvectors for the operators — i.e.,
+
+  
+    
+      
+        (
+        ∀
+        
+          q
+          ∈
+          Q
+          ,
+          T
+          ∈
+          
+            
+              F
+            
+          
+        
+        )
+        (
+        ∃
+        
+          σ
+          ∈
+          
+            C
+          
+        
+        )
+        (
+        T
+        −
+        σ
+        )
+        q
+        =
+        0
+      
+    
+    {\displaystyle (\forall {q\in Q,T\in {\mathcal {F}}})(\exists {\sigma \in \mathbf {C} })(T-\sigma )q=0}
+  
+
+Notice we did not have to directly use the machinery of matrices at all in this proof. There are other versions which do.
+We can strengthen the above to the case where all the operators merely commute with their adjoint; in this case we remove the term "orthogonal" from the diagonalisation. There are weaker results for operators arising from representations due to Weyl–Peter. Let 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ be a fixed locally compact hausdorff group, and 
+  
+    
+      
+        H
+        =
+        
+          L
+          
+            2
+          
+        
+        (
+        G
+        )
+      
+    
+    {\displaystyle H=L^{2}(G)}
+  
+ (the space of square integrable measurable functions with respect to the unique-up-to-scale Haar measure on G). Consider the continuous shift action:
+
+  
+    
+      
+        
+          
+            {
+            
+              
+                
+                  G
+                  ×
+                  H
+                  →
+                  H
+                
+              
+              
+                
+                  (
+                  g
+                  f
+                  )
+                  (
+                  x
+                  )
+                  =
+                  f
+                  (
+                  
+                    g
+                    
+                      −
+                      1
+                    
+                  
+                  x
+                  )
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{cases}G\times H\to H\\(gf)(x)=f(g^{-1}x)\end{cases}}}
+  
+
+Then if G were compact then there is a unique decomposition of 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ into a countable direct sum of finite-dimensional, irreducible, invariant subspaces (this is essentially diagonalisation of the family of operators 
+  
+    
+      
+        G
+        ⊆
+        U
+        (
+        H
+        )
+      
+    
+    {\displaystyle G\subseteq U(H)}
+  
+). If 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ were not compact, but were abelian, then diagonalisation is not achieved, but we get a unique continuous decomposition of 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ into 1-dimensional invariant subspaces.
+
+Compact normal operator
+The family of Hermitian matrices is a proper subset of matrices that are unitarily diagonalizable. A matrix 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ is unitarily diagonalizable if and only if it is normal, i.e., 
+  
+    
+      
+        
+          M
+          
+            ∗
+          
+        
+        M
+        =
+        M
+        
+          M
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle M^{\ast }M=MM^{\ast }}
+  
+. Similar statements hold for compact normal operators.
+Let 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ be compact and 
+  
+    
+      
+        
+          T
+          
+            ∗
+          
+        
+        T
+        =
+        T
+        
+          T
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle T^{\ast }T=TT^{\ast }}
+  
+. Apply the Cartesian decomposition to 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+: define
+
+  
+    
+      
+        R
+        =
+        
+          
+            
+              T
+              +
+              
+                T
+                
+                  ∗
+                
+              
+            
+            2
+          
+        
+        ,
+        
+        J
+        =
+        
+          
+            
+              T
+              −
+              
+                T
+                
+                  ∗
+                
+              
+            
+            
+              2
+              i
+            
+          
+        
+        .
+      
+    
+    {\displaystyle R={\frac {T+T^{*}}{2}},\quad J={\frac {T-T^{*}}{2i}}.}
+  
+
+The self-adjoint compact operators 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ and 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+  
+ are called the real and imaginary parts of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+, respectively. That 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is compact implies that 
+  
+    
+      
+        
+          T
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle T^{\ast }}
+  
+ and, consequently, 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ and 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+  
+ are compact. Furthermore, the normality of 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ implies that 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ and 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+  
+ commute. Therefore they can be simultaneously diagonalized, from which follows the claim.
+A hyponormal compact operator (in particular, a subnormal operator) is normal.
+
+Unitary operator
+The spectrum of a unitary operator 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ lies on the unit circle in the complex plane; it could be the entire unit circle. However, if 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is identity plus a compact perturbation, 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ has only a countable spectrum, containing 1 and possibly, a finite set or a sequence tending to 1 on the unit circle. More precisely, suppose 
+  
+    
+      
+        U
+        =
+        I
+        +
+        C
+      
+    
+    {\displaystyle U=I+C}
+  
+ where 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is compact. The equations 
+  
+    
+      
+        U
+        
+          U
+          
+            ∗
+          
+        
+        =
+        
+          U
+          
+            ∗
+          
+        
+        U
+        =
+        I
+      
+    
+    {\displaystyle UU^{\ast }=U^{\ast }U=I}
+  
+ and 
+  
+    
+      
+        C
+        =
+        U
+        −
+        I
+      
+    
+    {\displaystyle C=U-I}
+  
+ show that 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is normal. The spectrum of 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ contains 0, and possibly, a finite set or a sequence tending to 0. Since U = I + C, the spectrum of 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is obtained by shifting the spectrum of 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ by 1.
+
+Examples
+Let H = L2([0, 1]). The multiplication operator M defined by 
+  
+    
+      
+        (
+        M
+        f
+        )
+        (
+        x
+        )
+        =
+        x
+        f
+        (
+        x
+        )
+        ,
+        
+        f
+        ∈
+        H
+        ,
+        
+        
+        x
+        ∈
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle (Mf)(x)=xf(x),\quad f\in H,\,\,x\in [0,1]}
+  
+ is a bounded self-adjoint operator on H that has no eigenvector and hence, by the spectral theorem, cannot be compact.
+An example of a compact operator on a Hilbert space that is not self-adjoint is the Volterra operator, defined for a function 
+  
+    
+      
+        f
+        ∈
+        
+          L
+          
+            2
+          
+        
+        (
+        [
+        0
+        ,
+        1
+        ]
+        )
+      
+    
+    {\displaystyle f\in L^{2}([0,1])}
+  
+ and a value 
+  
+    
+      
+        t
+        ∈
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle t\in [0,1]}
+  
+ as 
+  
+    
+      
+        V
+        (
+        f
+        )
+        (
+        t
+        )
+        =
+        
+          ∫
+          
+            0
+          
+          
+            t
+          
+        
+        f
+        (
+        s
+        )
+        
+        d
+        s
+        .
+      
+    
+    {\displaystyle V(f)(t)=\int _{0}^{t}f(s)\,ds.}
+  
+ It is the operator corresponding to the Volterra integral equations.
+Define a Hilbert-Schmidt kernel 
+  
+    
+      
+        K
+        :
+        Ω
+        ×
+        Ω
+        →
+        
+          C
+        
+      
+    
+    {\displaystyle K:\Omega \times \Omega \to \mathbb {C} }
+  
+ on 
+  
+    
+      
+        Ω
+        =
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle \Omega =[0,1]}
+  
+ and its associated Hilbert-Schmidt integral operator 
+  
+    
+      
+        
+          T
+          
+            K
+          
+        
+        :
+        
+          L
+          
+            2
+          
+        
+        (
+        Ω
+        )
+        →
+        
+          L
+          
+            2
+          
+        
+        (
+        Ω
+        )
+      
+    
+    {\displaystyle T_{K}:L^{2}(\Omega )\to L^{2}(\Omega )}
+  
+ as 
+  
+    
+      
+        (
+        
+          T
+          
+            K
+          
+        
+        f
+        )
+        (
+        x
+        )
+        =
+        
+          ∫
+          
+            0
+          
+          
+            1
+          
+        
+        K
+        (
+        x
+        ,
+        y
+        )
+        f
+        (
+        y
+        )
+        
+        
+          d
+        
+        y
+        .
+      
+    
+    {\displaystyle (T_{K}f)(x)=\int _{0}^{1}K(x,y)f(y)\,\mathrm {d} y.}
+  
+ Then 
+  
+    
+      
+        
+          T
+          
+            K
+          
+        
+      
+    
+    {\displaystyle T_{K}}
+  
+ is a compact operator; it is a Hilbert–Schmidt operator with Hilbert-Schmidt norm 
+  
+    
+      
+        ‖
+        
+          T
+          
+            k
+          
+        
+        
+          ‖
+          
+            
+              H
+              S
+            
+          
+        
+        =
+        ‖
+        K
+        
+          ‖
+          
+            
+              L
+              
+                2
+              
+            
+          
+        
+      
+    
+    {\displaystyle \|T_{k}\|_{\mathrm {HS} }=\|K\|_{L^{2}}}
+  
+.
+
+  
+    
+      
+        
+          T
+          
+            K
+          
+        
+      
+    
+    {\displaystyle T_{K}}
+  
+ is a compact self-adjoint operator if and only if 
+  
+    
+      
+        K
+        (
+        x
+        ,
+        y
+        )
+      
+    
+    {\displaystyle K(x,y)}
+  
+ is a hermitian kernel which, according to Mercer's theorem, can be represented as 
+  
+    
+      
+        K
+        (
+        x
+        ,
+        y
+        )
+        =
+        ∑
+        
+          λ
+          
+            n
+          
+        
+        
+          φ
+          
+            n
+          
+        
+        (
+        x
+        )
+        
+          
+            
+              
+                φ
+                
+                  n
+                
+              
+              (
+              y
+              )
+            
+            ¯
+          
+        
+        ,
+      
+    
+    {\displaystyle K(x,y)=\sum \lambda _{n}\varphi _{n}(x){\overline {\varphi _{n}(y)}},}
+  
+ where 
+  
+    
+      
+        {
+        
+          φ
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle \{\varphi _{n}\}}
+  
+ is an orthonormal basis of eigenvectors of 
+  
+    
+      
+        
+          T
+          
+            K
+          
+        
+      
+    
+    {\displaystyle T_{K}}
+  
+, with eigenvalues 
+  
+    
+      
+        {
+        
+          λ
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle \{\lambda _{n}\}}
+  
+ and the sum converges absolutely and uniformly on 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle [0,1]}
+  
+.

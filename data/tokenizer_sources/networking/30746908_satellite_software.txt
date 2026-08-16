@@ -1,0 +1,67 @@
+In computing, Red Hat Satellite is a systems-management product by the company “Red Hat”. It allows system administrators to deploy and manage Red Hat Enterprise Linux (RHEL) hosts.
+A Satellite server registers with Red Hat Subscription Management, mirrors all relevant software like security errata and bug fixes, and provides this together with locally added software and configuration to the attached servers.
+The managed hosts register against the local Satellite server and access the provided resources like software packages, patches, configuration, etc. while they also provide information about the current health state of the server to the Satellite
+As of March 2017:
+
+The latest version is Red Hat Satellite 6, based on Foreman. This article focuses on Red Hat Satellite 6
+The previous version was Red Hat Satellite 5. Based on Spacewalk, it is still in widespread use despite being in the sunset of its lifecycle
+
+Architecture
+Source:
+
+Red Hat Satellite Server
+The Red Hat Satellite Server enables planning and management of the content life cycle and the configuration of Capsule Servers and hosts through GUI, CLI (Hammer), or API (RESTful API).
+
+Capsule Servers
+Capsule Servers mirror content from the Satellite Server to establish content sources in different geographical locations, they are analogous to the Red Hat Satellite 5 Proxy Server.
+
+Managed Client Systems
+As well as Supported Managed Hosts  Red Hat Satellite 6 also has some deployment and management capability on certain other hosts though Red Hat Support for these will be limited.
+
+Connection to Red Hat Customer Portal and External Content Sources
+Satellite generally operates in "connected" mode, registering directly with the RHN and downloading relevant software into Satellite's software channels. The organisation's hosts then register against the local Satellite server, instead of directly against Red Hat Network.
+For secure deployments, Satellite can operate in a "Disconnected" mode, where updates are downloaded directly from Red Hat via an Internet connected machine and then uploaded into Satellite or a local offline RHN proxy.
+Both modes allow the organisation to control which versions of software it makes available for its hosts, as well as making additional software available within the local network.
+
+Red Hat Satellite 6 components
+
+Major modules
+Source:
+
+Provision
+Satellite offers numerous methods for deploying hosts, including simple kickstart, bare metal install and re-imaging. Current versions of Satellite support kickstart using Cobbler as an underlying framework. PXE Boot, and Koan are methods that can be used to implement bare metal installs and re-imaging of hosts.
+
+Manage
+Satellite assists in remotely managing hosts in several areas: software, operational management, and configuration. The 3 main mechanisms for managing hosts are:
+
+Software Channel
+Configuration Channels
+Activation Keys
+
+Monitor
+Satellite can provide monitoring of software and systems via probes. These probes periodically explore the target host and send alerts if the probes do not get the correct replies, or if the replies fall outside of some specified range.
+
+History and Lifecycle
+A primary purpose of earlier versions of Satellite was to  allow organizations to utilize the benefits of Red Hat Network (RHN) without having to provide public Internet access to their servers or other client systems.  Later version of the tool have developed increased functionality.
+
+|-
+
+Future of Red Hat Satellite 6
+The Lifecycle of Red Hat Satellite 6 is recorded at the Red Hat Satellite and Proxy Server Life Cycle which is updated as required, with future events on a bona fide basis.  When viewed in August 2019, Red Hat didn't indicate any date for end of support.
+
+Red Hat Satellite 5
+For Red Hat Satellite version 5 the Satellite Application was implemented by a toolset named Project Spacewalk.
+Red Hat announced in June 2008 Project Spacewalk was to be made open source under the GPLv2 License
+Satellite 5.3 was the first version to be based on upstream Spacewalk code.
+In the Spacewalk FAQ issued in 2015 after the release of Red Hat Satellite 6:
+
+Red Hat formally released Spacewalk as open source(GPLv2) in June 2008.
+Red Hat would continue to sponsor and support Spacewalk as the upstream Red Hat Satellite 5. however that participation is anticipated to diminish as Red Hat Satellite 5 enters the final phases of its lifecycle.  Spacewalk is not and can never be upstream for Red Hat Satellite 6 released in September 2014.  due to it being a ground up rebuild with a different toolset.
+
+Future of Red Hat Satellite 5
+The Lifecycle of Red Hat Satellite 5 is recorded at the Red Hat Satellite and Proxy Server Life Cycle which is updated as required, with future events on a bona fide basis.  When viewed in March 2017 Red Hat indicated:
+
+Red Hat Satellite 5 is in the final Production 3 phase.
+The current releases, 5.6 and 5.7, would remain supported through January 2019.
+A further minor release 5.8 will be the only release supported in a supplementary Extended Life Phase from February 2019 through to EOL in May 2020.
+As of April 2017 Satellite minor release 5.8 is in available in beta.

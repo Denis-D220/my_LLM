@@ -1,0 +1,346 @@
+The mass-spring-damper model consists of discrete mass nodes distributed throughout an object and interconnected via a network of springs and dampers. 
+This form of model is also well-suited for modelling objects with complex material behavior such as those with nonlinearity or viscoelasticity.
+As well as engineering simulation, these systems have applications in computer graphics and computer animation.
+
+Derivation
+The equations of motion for this model are usually derived by summing the forces on the mass (including any applied external forces 
+  
+    
+      
+        
+          F
+          
+            external
+          
+        
+        )
+      
+    
+    {\displaystyle F_{\text{external}})}
+  
+:
+
+  
+    
+      
+        F
+        =
+        −
+        k
+        x
+        −
+        c
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        +
+        
+          F
+          
+            external
+          
+        
+        =
+        m
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+      
+    
+    {\displaystyle F=-kx-c{\dot {x}}+F_{\text{external}}=m{\ddot {x}}}
+  
+
+By rearranging this equation, one can obtain the standard form:
+
+  
+    
+      
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+        +
+        2
+        ζ
+        
+          ω
+          
+            n
+          
+        
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        +
+        
+          ω
+          
+            n
+          
+          
+            2
+          
+        
+        x
+        =
+        u
+      
+    
+    {\displaystyle {\ddot {x}}+2\zeta \omega _{n}{\dot {x}}+\omega _{n}^{2}x=u}
+  
+ where 
+  
+    
+      
+        
+          ω
+          
+            n
+          
+        
+        =
+        
+          
+            
+              k
+              m
+            
+          
+        
+        ;
+        
+        ζ
+        =
+        
+          
+            c
+            
+              2
+              m
+              
+                ω
+                
+                  n
+                
+              
+            
+          
+        
+        ;
+        
+        u
+        =
+        
+          
+            
+              F
+              
+                external
+              
+            
+            m
+          
+        
+      
+    
+    {\displaystyle \omega _{n}={\sqrt {\frac {k}{m}}};\quad \zeta ={\frac {c}{2m\omega _{n}}};\quad u={\frac {F_{\text{external}}}{m}}}
+  
+
+  
+    
+      
+        
+          ω
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \omega _{n}}
+  
+ is the undamped natural frequency and 
+  
+    
+      
+        ζ
+      
+    
+    {\displaystyle \zeta }
+  
+ is the damping ratio. The homogeneous equation for the mass spring system is:
+
+  
+    
+      
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+        +
+        2
+        ζ
+        
+          ω
+          
+            n
+          
+        
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        +
+        
+          ω
+          
+            n
+          
+          
+            2
+          
+        
+        x
+        =
+        0
+      
+    
+    {\displaystyle {\ddot {x}}+2\zeta \omega _{n}{\dot {x}}+\omega _{n}^{2}x=0}
+  
+
+This has the solution:
+
+  
+    
+      
+        x
+        =
+        A
+        
+          e
+          
+            −
+            
+              ω
+              
+                n
+              
+            
+            t
+            
+              (
+              
+                ζ
+                +
+                
+                  
+                    
+                      ζ
+                      
+                        2
+                      
+                    
+                    −
+                    1
+                  
+                
+              
+              )
+            
+          
+        
+        +
+        B
+        
+          e
+          
+            −
+            
+              ω
+              
+                n
+              
+            
+            t
+            
+              (
+              
+                ζ
+                −
+                
+                  
+                    
+                      ζ
+                      
+                        2
+                      
+                    
+                    −
+                    1
+                  
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle x=Ae^{-\omega _{n}t\left(\zeta +{\sqrt {\zeta ^{2}-1}}\right)}+Be^{-\omega _{n}t\left(\zeta -{\sqrt {\zeta ^{2}-1}}\right)}}
+  
+
+If 
+  
+    
+      
+        ζ
+        <
+        1
+      
+    
+    {\displaystyle \zeta <1}
+  
+ then 
+  
+    
+      
+        
+          ζ
+          
+            2
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle \zeta ^{2}-1}
+  
+ is negative, meaning the square root will be imaginary and therefore the solution will have an oscillatory component.

@@ -1,0 +1,768 @@
+In mathematics, particularly in algebra, the injective hull (or injective envelope) of a module is both the smallest injective module containing it and the largest essential extension of it.  Injective hulls were first described in (Eckmann & Schopf 1953).
+
+Definition
+A module 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is called the injective hull of a module 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+, if 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is an essential extension of 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+, and 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is injective. Here, the base ring is a ring with unity, though possibly non-commutative.
+
+Examples
+An injective module is its own injective hull.
+The injective hull of an integral domain (as a module over itself) is its field of fractions (Lam 1999, Example 3.35).
+The injective hull of a cyclic 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+-group (as 
+  
+    
+      
+        
+          Z
+        
+      
+    
+    {\displaystyle \mathbb {Z} }
+  
+-module) is a Prüfer group (Lam 1999, Example 3.36).
+The injective hull of a torsion-free abelian group 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is the tensor product 
+  
+    
+      
+        
+          Q
+        
+        
+          ⊗
+          
+            
+              Z
+            
+          
+        
+        A
+      
+    
+    {\displaystyle \mathbb {Q} \otimes _{\mathbb {Z} }A}
+  
+.
+The injective hull of 
+  
+    
+      
+        R
+        
+          /
+        
+        
+          
+            R
+          
+        
+      
+    
+    {\displaystyle R/{\mathfrak {R}}}
+  
+ is 
+  
+    
+      
+        
+          
+            H
+            o
+            m
+          
+          
+            
+              k
+            
+          
+        
+        (
+        R
+        ,
+        
+          k
+        
+        )
+      
+    
+    {\displaystyle \mathrm {Hom} _{\mathbb {k} }(R,\mathbb {k} )}
+  
+, where 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ is a finite-dimensional 
+  
+    
+      
+        
+          k
+        
+      
+    
+    {\displaystyle \mathbb {k} }
+  
+-algebra with Jacobson radical 
+  
+    
+      
+        
+          
+            R
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {R}}}
+  
+ (Lam 1999, Example 3.41).
+A simple module is necessarily the socle of its injective hull.
+The injective hull of the residue field of a discrete valuation ring 
+  
+    
+      
+        (
+        R
+        ,
+        
+          
+            m
+          
+        
+        ,
+        k
+        )
+      
+    
+    {\displaystyle (R,{\mathfrak {m}},k)}
+  
+ where 
+  
+    
+      
+        
+          
+            m
+          
+        
+        =
+        x
+        ⋅
+        R
+      
+    
+    {\displaystyle {\mathfrak {m}}=x\cdot R}
+  
+ is 
+  
+    
+      
+        
+          R
+          
+            x
+          
+        
+        
+          /
+        
+        R
+      
+    
+    {\displaystyle R_{x}/R}
+  
+.
+In particular, the injective hull of 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+ in 
+  
+    
+      
+        (
+        
+          C
+        
+        [
+        [
+        t
+        ]
+        ]
+        ,
+        (
+        t
+        )
+        ,
+        
+          C
+        
+        )
+      
+    
+    {\displaystyle (\mathbb {C} [[t]],(t),\mathbb {C} )}
+  
+ is the module 
+  
+    
+      
+        
+          C
+        
+        (
+        (
+        t
+        )
+        )
+        
+          /
+        
+        
+          C
+        
+        [
+        [
+        t
+        ]
+        ]
+      
+    
+    {\displaystyle \mathbb {C} ((t))/\mathbb {C} [[t]]}
+  
+.
+
+Properties
+The injective hull of 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ is unique up to isomorphisms which are the identity on 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+, however the isomorphism is not necessarily unique. This is because the injective hull's map extension property is not a full-fledged universal property. Because of this uniqueness, the hull can be denoted as 
+  
+    
+      
+        E
+        (
+        M
+        )
+      
+    
+    {\displaystyle E(M)}
+  
+.
+The injective hull 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+(
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+) is a maximal essential extension of 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ in the sense that if 
+  
+    
+      
+        M
+        ⊆
+        E
+        (
+        M
+        )
+        ⊊
+        B
+      
+    
+    {\displaystyle M\subseteq E(M)\subsetneq B}
+  
+ for a module 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, then 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ is not an essential submodule of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+.
+The injective hull 
+  
+    
+      
+        E
+        (
+        M
+        )
+      
+    
+    {\displaystyle E(M)}
+  
+ is a minimal injective module containing 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ in the sense that if 
+  
+    
+      
+        M
+        ⊆
+        B
+      
+    
+    {\displaystyle M\subseteq B}
+  
+ for an injective module 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, then 
+  
+    
+      
+        E
+        (
+        M
+        )
+      
+    
+    {\displaystyle E(M)}
+  
+ is (isomorphic to) a submodule of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+.
+If 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+ is an essential submodule of 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+, then 
+  
+    
+      
+        E
+        (
+        N
+        )
+        =
+        E
+        (
+        M
+        )
+      
+    
+    {\displaystyle E(N)=E(M)}
+  
+.
+Every module 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ has an injective hull. A construction of the injective hull in terms of homomorphisms 
+  
+    
+      
+        
+          H
+          o
+          m
+        
+        (
+        I
+        ,
+        M
+        )
+      
+    
+    {\displaystyle \mathrm {Hom} (I,M)}
+  
+, where 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+  
+ runs through the ideals of 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+, is given by Fleischer (1968).
+The dual notion of a projective cover does not always exist for a module, however a flat cover exists for every module.
+
+Ring structure
+In some cases, for 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ a subring of a self-injective ring 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+, the injective hull of 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ will also have a ring structure. For instance, taking 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ to be a full matrix ring over a field, and taking 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ to be any ring containing every matrix which is zero in all but the last column, the injective hull of the right 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+-module 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ is 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+. For instance, one can take 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ to be the ring of all upper triangular matrices. However, it is not always the case that the injective hull of a ring has a ring structure, as an example in (Osofsky 1964) shows.
+A large class of rings which do have ring structures on their injective hulls are the nonsingular rings. In particular, for an integral domain, the injective hull of the ring (considered as a module over itself) is the field of fractions. The injective hulls of nonsingular rings provide an analogue of the ring of quotients for non-commutative rings, where the absence of the Ore condition may impede the formation of the classical ring of quotients. This type of "ring of quotients" (as these more general "fields of fractions" are called) was pioneered in (Utumi 1956), and the connection to injective hulls was recognized in (Lambek 1963).
+
+Uniform dimension and injective modules
+An 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ module 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ has finite uniform dimension (=finite rank) 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ if and only if the injective hull of 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ is a finite direct sum of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ indecomposable submodules.
+
+Generalization
+More generally, let 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbf {C} }
+  
+ be an abelian category. An object 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is an injective hull of an object 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ if 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ → 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is an essential extension and 
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+  
+ is an injective object.
+If 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbf {C} }
+  
+ is locally small, satisfies Grothendieck's axiom AB5 and has enough injectives, then every object in 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbf {C} }
+  
+ has an injective hull (these three conditions are satisfied by the category of modules over a ring). Every object in a Grothendieck category has an injective hull.

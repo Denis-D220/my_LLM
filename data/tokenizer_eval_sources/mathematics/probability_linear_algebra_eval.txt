@@ -1,0 +1,73 @@
+PROBABILITY AND LINEAR ALGEBRA: RANDOM VECTORS AND PROJECTION
+
+Probability and linear algebra are usually taught as separate subjects, and the separation obscures how thoroughly they depend on one another. As soon as uncertainty involves more than one quantity, probability becomes a subject about vectors and matrices. Expectation is a linear operator, covariance is a matrix, a Markov chain is repeated matrix multiplication, least squares regression is an orthogonal projection, and principal component analysis is an eigendecomposition of a covariance matrix. Each is a probability result whose content is entirely linear-algebraic.
+
+EXPECTATION AS A LINEAR MAP
+
+The single most useful property of expectation is linearity. For random variables X and Y and constants a and b, the expectation of aX + bY equals a times the expectation of X plus b times that of Y. This holds whether or not X and Y are independent, and that unconditional validity is what makes it powerful.
+
+Many results that appear to require difficult combinatorics follow immediately. To find the expected number of fixed points in a random permutation of n elements, define an indicator for each position equal to 1 if that element is fixed. Each has expectation 1/n and there are n of them, so the expected total is exactly 1 regardless of n; the indicators are heavily dependent, and linearity does not care.
+
+Variance is not linear. The variance of a sum equals the sum of the variances plus twice the sum of all pairwise covariances, so independence recovers simple addition but dependence must be accounted for. This asymmetry is a recurring source of error, most consequentially in risk assessment, where assuming independence understates the probability of simultaneous failures.
+
+RANDOM VECTORS AND THE COVARIANCE MATRIX
+
+A random vector X collects several random variables into one object. Its mean is the vector of individual means, and its covariance matrix Sigma has the variance of the i-th component on the diagonal and the covariance between components i and j off the diagonal.
+
+The covariance matrix is symmetric, and it is positive semidefinite, which follows from the fact that the variance of any linear combination cannot be negative: for any fixed vector a, the variance of a-transpose times X equals a-transpose times Sigma times a. This one identity is the bridge between the two subjects, because it converts a probabilistic statement about spread into an algebraic statement about a quadratic form.
+
+Linear transformations of random vectors follow simple rules. If Y equals A times X plus b, then the mean of Y equals A times the mean of X plus b, and the covariance of Y equals A times Sigma times A-transpose, the shift disappearing because translation does not change spread. These two formulas handle a large fraction of applied work, from error propagation in measurement to the update step of a Kalman filter.
+
+A singular covariance matrix indicates exact linear dependence among components: some linear combination has zero variance and is therefore constant. This is the probabilistic reading of rank deficiency, and it is why perfectly collinear predictors break regression.
+
+THE MULTIVARIATE NORMAL DISTRIBUTION
+
+The multivariate normal distribution is determined entirely by a mean vector and a covariance matrix. Its density involves the inverse of Sigma in a quadratic form and the determinant of Sigma as a normalizing constant, so it is well defined only when Sigma is positive definite.
+
+Its geometry is governed by the eigendecomposition of Sigma. Because Sigma is symmetric, the spectral theorem guarantees real eigenvalues and an orthonormal basis of eigenvectors, and level sets of the density are ellipsoids whose axes point along those eigenvectors with lengths proportional to the square roots of the eigenvalues. One large and one small eigenvalue produce a long narrow ellipse, meaning the variables are strongly correlated and the effective dimensionality is closer to one than two.
+
+Several properties make this distribution unusually tractable. Any linear transformation of a multivariate normal vector is again multivariate normal, marginal distributions of any subset of components are normal, and conditional distributions are normal with a mean adjusting linearly to the observed components and a covariance that does not depend on the observed values at all. That last fact is why linear Gaussian models permit closed-form inference, underlying Kalman filtering and Gaussian process regression.
+
+For jointly normal variables, zero correlation implies independence. This equivalence is special to the normal family: in general, uncorrelated variables can be strongly dependent through a nonlinear relationship, since correlation measures only linear association.
+
+MARKOV CHAINS AS MATRIX ITERATION
+
+A finite Markov chain has a set of states and a transition matrix P, in which the entry in row i and column j gives the probability of moving from state i to state j in one step. Each row sums to one, making P a stochastic matrix.
+
+If the current distribution over states is a row vector v, the distribution after one step is v times P, and after k steps it is v times P raised to the power k. The entire dynamics of the chain reduce to repeated matrix multiplication, and the long-run behavior reduces to an eigenvalue question.
+
+A stochastic matrix always has eigenvalue one, with the all-ones vector as a right eigenvector. The corresponding left eigenvector, normalized to sum to one, is the stationary distribution: the distribution unchanged by another step. For a chain that is irreducible, meaning every state is reachable from every other, and aperiodic, meaning it does not cycle deterministically, the Perron-Frobenius theorem guarantees that this stationary distribution is unique and that the chain converges to it from any starting point.
+
+The rate of convergence is governed by the second largest eigenvalue in magnitude. The spectral gap, the difference between one and that second eigenvalue, determines how quickly the influence of the initial state decays. A chain with a small gap mixes slowly, which matters greatly in Markov chain Monte Carlo methods, where the mixing time determines how many samples must be discarded before the output is usable.
+
+Diagonalizing P makes the k-step behavior transparent: eigenvalues with magnitude less than one decay geometrically, leaving only the eigenvalue-one component in the limit, so the stationary distribution is not an approximation but the surviving term of an exact expression.
+
+LEAST SQUARES AS ORTHOGONAL PROJECTION
+
+Linear regression is the clearest place where the two subjects become one. The model states that a response vector y equals a design matrix A times an unknown coefficient vector x plus a noise vector. With more observations than parameters, the system A x equals y generally has no exact solution, because y does not lie in the column space of A.
+
+The least squares solution minimizes the squared length of the residual. The geometric characterization is that the best approximation to y within the column space of A is its orthogonal projection onto that space, and the residual is therefore perpendicular to every column of A. Writing that orthogonality condition gives A-transpose times the residual equals zero, which rearranges into the normal equations: A-transpose A x equals A-transpose y.
+
+This derivation is purely geometric and contains no probability at all. Probability enters when the noise is modeled: if the errors are independent with equal variance, the least squares estimator has the smallest variance among all linear unbiased estimators, and if they are additionally normal, least squares coincides with maximum likelihood, which is why the sum of squared errors is the default loss rather than an arbitrary choice.
+
+The covariance matrix of the estimated coefficients is the error variance times the inverse of A-transpose A, and this single formula explains most regression pathologies. When predictors are nearly collinear, A-transpose A is close to singular, its inverse has enormous entries, and coefficient estimates swing wildly in sign and magnitude with small changes in the data. The condition number of A quantifies how severe the amplification will be.
+
+Ridge regression addresses this by adding a small multiple of the identity to A-transpose A before inverting. Algebraically it shifts every eigenvalue upward, bounding the inverse and stabilizing the solution; statistically it corresponds to a normal prior on the coefficients, trading bias for substantially reduced variance. The same operation has a clean interpretation in both subjects. Solving the normal equations directly is nonetheless numerically inferior to QR factorization or the singular value decomposition, because forming A-transpose A squares the condition number and doubles the loss of precision — a case where the algebraically obvious route is the computationally wrong one.
+
+PRINCIPAL COMPONENT ANALYSIS
+
+Principal component analysis seeks the directions along which data varies most. Formally, it looks for a unit vector a maximizing the variance of a-transpose times X, which equals a-transpose times Sigma times a. Maximizing a quadratic form subject to unit length is a standard constrained optimization, and the Lagrange conditions give Sigma times a equals lambda times a. The maximizing direction is therefore the eigenvector of the covariance matrix with the largest eigenvalue, and the maximum variance is that eigenvalue.
+
+Subsequent components are the remaining eigenvectors in decreasing order of eigenvalue, mutually orthogonal because Sigma is symmetric. The total variance equals the trace of Sigma, which equals the sum of the eigenvalues, so the proportion explained by each component is its eigenvalue divided by that sum. Dimensionality reduction follows by keeping the leading components: among all rank-k linear approximations, the truncated eigendecomposition minimizes reconstruction error, equivalent to the Eckart-Young theorem for the SVD.
+
+Two cautions are worth stating. PCA depends on scale, so variables in different units must be standardized first or the component with the largest numerical range dominates for no meaningful reason. And PCA finds directions of maximum variance, which are not necessarily those most useful for prediction; a low-variance direction can carry the entire signal relevant to a classification task.
+
+CONCENTRATION AND HIGH DIMENSIONS
+
+In high dimensions, random vectors behave in ways that contradict low-dimensional intuition. Independent standard normal vectors in d dimensions have length concentrated near the square root of d, so nearly all probability mass sits in a thin shell rather than near the origin where the density is highest, and two independent random vectors are very nearly orthogonal with high probability. Estimating a covariance matrix is correspondingly difficult, since d variables require on the order of d squared over two parameters; shrinkage estimators pull the sample covariance toward a scaled identity, which is the ridge idea in a different setting.
+
+WHY THE COMBINATION MATTERS
+
+The practical payoff of holding both subjects together is that a problem stated in one vocabulary can be solved in the other. A question about the long-run behavior of a random process becomes a question about the dominant eigenvalue of a matrix; a question about the best predictor becomes one about orthogonal projection; a question about which features to keep becomes one about eigenvalue magnitudes.
+
+Nearly all of applied statistics and machine learning sits at this intersection. Fitting a model involves a design matrix and a loss function, regularization modifies the spectrum of a matrix, uncertainty quantification requires a covariance matrix, and inference in linear Gaussian models is closed-form precisely because the algebra of normal distributions is the algebra of matrices.

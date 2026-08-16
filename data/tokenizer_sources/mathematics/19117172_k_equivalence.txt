@@ -1,0 +1,237 @@
+In mathematics, 
+  
+    
+      
+        
+          
+            K
+          
+        
+      
+    
+    {\displaystyle {\mathcal {K}}}
+  
+-equivalence, or contact equivalence, is an equivalence relation between map germs.  It was introduced by John Mather in his seminal work in Singularity theory in the 1960s as a technical tool for studying stable maps.  Since then it has proved important in its own right.  Roughly speaking, two map germs ƒ, g are 
+  
+    
+      
+        
+          
+            
+              K
+            
+          
+        
+      
+    
+    {\displaystyle \scriptstyle {\mathcal {K}}}
+  
+-equivalent if ƒ−1(0) and g−1(0) are diffeomorphic.
+
+Definition
+Two map germs 
+  
+    
+      
+        f
+        ,
+        g
+        :
+        X
+        →
+        (
+        Y
+        ,
+        0
+        )
+      
+    
+    {\displaystyle f,g:X\to (Y,0)}
+  
+ are 
+  
+    
+      
+        
+          
+            
+              K
+            
+          
+        
+      
+    
+    {\displaystyle \scriptstyle {\mathcal {K}}}
+  
+-equivalent if there is a diffeomorphism 
+
+  
+    
+      
+        Ψ
+        :
+        X
+        ×
+        Y
+        →
+        X
+        ×
+        Y
+      
+    
+    {\displaystyle \Psi :X\times Y\to X\times Y}
+  
+
+of the form Ψ(x,y) = (φ(x),ψ(x,y)), satisfying,
+
+  
+    
+      
+        Ψ
+        (
+        x
+        ,
+        0
+        )
+        =
+        (
+        φ
+        (
+        x
+        )
+        ,
+        0
+        )
+      
+    
+    {\displaystyle \Psi (x,0)=(\varphi (x),0)}
+  
+, and
+
+  
+    
+      
+        Ψ
+        (
+        x
+        ,
+        f
+        (
+        x
+        )
+        )
+        =
+        (
+        φ
+        (
+        x
+        )
+        ,
+        g
+        (
+        φ
+        (
+        x
+        )
+        )
+        )
+      
+    
+    {\displaystyle \Psi (x,f(x))=(\varphi (x),g(\varphi (x)))}
+  
+.
+In other words, &Psi. Maps the graph of f to the graph of g, as well as the graph of the zero map to itself.  In particular, the diffeomorphism φ maps f−1(0) to g−1(0). The name contact is explained by the fact that this equivalence is measuring the contact between the graph of f and the graph of the zero map.
+Contact equivalence is the appropriate equivalence relation for studying the sets of solutions of equations, and finds many applications in dynamical systems and bifurcation theory, for example.
+It is easy to see that this equivalence relation is weaker than A-equivalence, in that any pair of 
+  
+    
+      
+        
+          
+            
+              A
+            
+          
+        
+      
+    
+    {\displaystyle \scriptstyle {\mathcal {A}}}
+  
+-equivalent map germs are necessarily 
+  
+    
+      
+        
+          
+            
+              K
+            
+          
+        
+      
+    
+    {\displaystyle \scriptstyle {\mathcal {K}}}
+  
+-equivalent.
+
+KV-equivalence
+This modification of 
+  
+    
+      
+        
+          
+            
+              K
+            
+          
+        
+      
+    
+    {\displaystyle \scriptstyle {\mathcal {K}}}
+  
+-equivalence was introduced by James Damon in the 1980s. Here V is a subset (or subvariety) of Y, and the diffeomorphism Ψ above is required to preserve not 
+  
+    
+      
+        X
+        ×
+        {
+        0
+        }
+      
+    
+    {\displaystyle X\times \{0\}}
+  
+ but 
+  
+    
+      
+        X
+        ×
+        V
+      
+    
+    {\displaystyle X\times V}
+  
+ (that is, 
+  
+    
+      
+        y
+        ∈
+        V
+        ⇒
+        ψ
+        (
+        x
+        ,
+        y
+        )
+        ∈
+        V
+      
+    
+    {\displaystyle y\in V\Rightarrow \psi (x,y)\in V}
+  
+). In particular, Ψ maps f−1(V) to g−1(V).

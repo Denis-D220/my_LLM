@@ -1,0 +1,594 @@
+In computable analysis, Weihrauch reducibility is a notion of reducibility between multi-valued functions on represented spaces that roughly captures the uniform computational strength of computational problems. It was originally introduced by Klaus Weihrauch in an unpublished 1992 technical report.
+
+Definition
+A represented space is a pair 
+  
+    
+      
+        (
+        X
+        ,
+        δ
+        )
+      
+    
+    {\textstyle (X,\delta )}
+  
+ of a set 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+  and a surjective partial function 
+  
+    
+      
+        δ
+        :⊂
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+        →
+        X
+      
+    
+    {\displaystyle \delta :\subset \mathbb {N} ^{\mathbb {N} }\rightarrow X}
+  
+.
+Let 
+  
+    
+      
+        (
+        X
+        ,
+        
+          δ
+          
+            X
+          
+        
+        )
+      
+    
+    {\displaystyle (X,\delta _{X})}
+  
+ and 
+  
+    
+      
+        (
+        Y
+        ,
+        
+          δ
+          
+            Y
+          
+        
+        )
+      
+    
+    {\displaystyle (Y,\delta _{Y})}
+  
+ be represented spaces and let 
+  
+    
+      
+        f
+        :⊂
+        X
+        ⇉
+        Y
+      
+    
+    {\displaystyle f:\subset X\rightrightarrows Y}
+  
+ be a partial multi-valued function. A realizer for 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a (possibly partial) function 
+  
+    
+      
+        F
+        :⊂
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+        →
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle F:\subset \mathbb {N} ^{\mathbb {N} }\to \mathbb {N} ^{\mathbb {N} }}
+  
+ such that, for every 
+  
+    
+      
+        p
+        ∈
+        
+          d
+          o
+          m
+        
+        f
+        ∘
+        
+          δ
+          
+            X
+          
+        
+      
+    
+    {\displaystyle p\in \mathrm {dom} f\circ \delta _{X}}
+  
+, 
+  
+    
+      
+        
+          δ
+          
+            Y
+          
+        
+        ∘
+        F
+        (
+        p
+        )
+        =
+        f
+        ∘
+        
+          δ
+          
+            X
+          
+        
+        (
+        p
+        )
+      
+    
+    {\displaystyle \delta _{Y}\circ F(p)=f\circ \delta _{X}(p)}
+  
+. Intuitively, a realizer 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ for 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ behaves "just like 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+" but it works on names. If 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is a realizer for 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ we write 
+  
+    
+      
+        F
+        ⊢
+        f
+      
+    
+    {\displaystyle F\vdash f}
+  
+.
+Let 
+  
+    
+      
+        X
+        ,
+        Y
+        ,
+        Z
+        ,
+        W
+      
+    
+    {\displaystyle X,Y,Z,W}
+  
+ be represented spaces and let 
+  
+    
+      
+        f
+        :⊂
+        X
+        ⇉
+        Y
+        ,
+        g
+        :⊂
+        Z
+        ⇉
+        W
+      
+    
+    {\displaystyle f:\subset X\rightrightarrows Y,g:\subset Z\rightrightarrows W}
+  
+ be partial multi-valued functions. We say that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is Weihrauch reducible to 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+, and write 
+  
+    
+      
+        f
+        
+          ≤
+          
+            
+              W
+            
+          
+        
+        g
+      
+    
+    {\displaystyle f\leq _{\mathrm {W} }g}
+  
+, if there are computable partial functions 
+  
+    
+      
+        Φ
+        ,
+        Ψ
+        :⊂
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+        →
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \Phi ,\Psi :\subset \mathbb {N} ^{\mathbb {N} }\to \mathbb {N} ^{\mathbb {N} }}
+  
+ such that
+  
+    
+      
+        (
+        ∀
+        G
+        ⊢
+        g
+        )
+        (
+        Ψ
+        ⟨
+        
+          i
+          d
+        
+        ,
+        G
+        Φ
+        ⟩
+        ⊢
+        f
+        )
+        ,
+      
+    
+    {\displaystyle (\forall G\vdash g)(\Psi \langle \mathrm {id} ,G\Phi \rangle \vdash f),}
+  
+where 
+  
+    
+      
+        Ψ
+        ⟨
+        
+          i
+          d
+        
+        ,
+        G
+        Φ
+        ⟩
+        :=
+        ⟨
+        p
+        ,
+        q
+        ⟩
+        ↦
+        Ψ
+        (
+        ⟨
+        p
+        ,
+        G
+        Φ
+        (
+        q
+        )
+        ⟩
+        )
+      
+    
+    {\displaystyle \Psi \langle \mathrm {id} ,G\Phi \rangle :=\langle p,q\rangle \mapsto \Psi (\langle p,G\Phi (q)\rangle )}
+  
+ and 
+  
+    
+      
+        ⟨
+        ⋅
+        ⟩
+      
+    
+    {\displaystyle \langle \cdot \rangle }
+  
+ denotes the join in the Baire space. Very often, in the literature we find 
+  
+    
+      
+        Ψ
+      
+    
+    {\displaystyle \Psi }
+  
+ written as a binary function, so to avoid the use of the join. In other words, 
+  
+    
+      
+        f
+        
+          ≤
+          
+            
+              W
+            
+          
+        
+        g
+      
+    
+    {\displaystyle f\leq _{\mathrm {W} }g}
+  
+ if there are two computable maps 
+  
+    
+      
+        Φ
+        ,
+        Ψ
+      
+    
+    {\displaystyle \Phi ,\Psi }
+  
+ such that the function 
+  
+    
+      
+        p
+        ↦
+        Ψ
+        (
+        p
+        ,
+        q
+        )
+      
+    
+    {\displaystyle p\mapsto \Psi (p,q)}
+  
+ is a realizer for 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ whenever 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ is a solution for 
+  
+    
+      
+        g
+        (
+        Φ
+        (
+        p
+        )
+        )
+      
+    
+    {\displaystyle g(\Phi (p))}
+  
+. The maps 
+  
+    
+      
+        Φ
+        ,
+        Ψ
+      
+    
+    {\displaystyle \Phi ,\Psi }
+  
+ are often called forward and backward functional respectively.
+We say that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is strongly Weihrauch reducible to 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+, and write 
+  
+    
+      
+        f
+        
+          ≤
+          
+            
+              s
+              W
+            
+          
+        
+        g
+      
+    
+    {\displaystyle f\leq _{\mathrm {sW} }g}
+  
+, if the backward functional 
+  
+    
+      
+        Ψ
+      
+    
+    {\displaystyle \Psi }
+  
+ does not have access to the original input. In symbols:
+  
+    
+      
+        (
+        ∀
+        G
+        ⊢
+        g
+        )
+        (
+        Ψ
+        G
+        Φ
+        ⊢
+        f
+        )
+        .
+      
+    
+    {\displaystyle (\forall G\vdash g)(\Psi G\Phi \vdash f).}

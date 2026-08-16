@@ -1,0 +1,24 @@
+# Normalize line endings in the repository.
+#
+# Without this, files committed from Windows carry CRLF into history and the
+# same file checked out on Linux differs byte-for-byte. That matters here more
+# than usual: several tests assert exact file contents and SHA-256 digests, and
+# a line-ending flip would fail them on the other platform for no real reason.
+* text=auto
+
+# Model weights through Git LFS.
+#
+# GitHub rejects any file over 100 MB outside LFS, and the released checkpoint
+# is ~375 MB. `-text` marks them binary so Git never attempts line-ending
+# conversion on them.
+*.pt  filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.ckpt filter=lfs diff=lfs merge=lfs -text
+
+# Binary data formats, in case any are ever tracked deliberately.
+*.bin binary
+*.gz binary
+*.sqlite binary
+
+# Generated reports are JSON: diffable, but noisy in review.
+*.json diff=json

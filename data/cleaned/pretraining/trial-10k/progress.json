@@ -1,0 +1,24 @@
+{
+  "completed_shards": [],
+  "next_output_index": 1,
+  "partial_shard": {
+    "name": "cc_text_00000.jsonl.gz",
+    "next_line": 10000
+  },
+  "totals": {
+    "records_seen": 10000,
+    "documents_accepted": 9865,
+    "documents_rejected": 135,
+    "accepted_characters": 43355044,
+    "accepted_utf8_bytes": 43699706,
+    "output_jsonl_bytes": 47436196,
+    "acceptance_rate": 0.9865,
+    "rejected_by_reason": {
+      "control_characters": 15,
+      "duplicate_lines": 96,
+      "keyword_wall": 10,
+      "replacement_characters": 14
+    }
+  },
+  "updated_at_utc": "2026-08-14T22:43:37.041643+00:00"
+}

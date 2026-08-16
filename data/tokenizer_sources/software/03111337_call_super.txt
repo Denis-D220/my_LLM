@@ -1,0 +1,22 @@
+Call super is a code smell or anti-pattern of some object-oriented programming languages. Call super is a design pattern in which a particular class stipulates that in a derived subclass, the user is required to override a method and call back the overridden function itself at a particular point. The overridden method may be intentionally incomplete, and reliant on the overriding method to augment its functionality in a prescribed manner. However, the fact that the language itself may not be able to enforce all conditions prescribed on this call is what makes this an anti-pattern.
+
+Description
+In object-oriented programming, users can inherit the properties and behaviour of a superclass in subclasses. A subclass can override methods of its superclass, substituting its own implementation of the method for the superclass's implementation. Sometimes the overriding method will completely replace the corresponding functionality in the superclass, while in other cases the superclass's method must still be called from the overriding method. Therefore, most programming languages require that an overriding method must explicitly call the overridden method on the superclass for it to be executed.
+The call super anti-pattern relies on the users of an interface or framework to derive a subclass from a particular class, override a certain method and require the overridden method to call the original method from the overriding method:
+
+This is often required, since the superclass must perform some setup tasks for the class or framework to work correctly, or since the superclass's main task (which is performed by this method) is only augmented by the subclass.
+The anti-pattern is the requirement of calling the parent. There are many examples in real code where the method in the subclass may still want the superclass's functionality, usually where it is only augmenting the parent functionality. If it still has to call the parent class even if it is fully replacing the functionality, the anti-pattern is present.
+A better approach to solve these issues is instead to use the template method pattern, where the superclass includes a purely abstract method that must be implemented by the subclasses and have the original method call that method:
+
+Language variation
+The appearance of this anti-pattern in programs is usually because few programming languages provide a feature to contractually ensure that a super method is called from a derived class. One language that does have this feature, in a quite radical fashion, is BETA. The feature is found in a limited way in for instance Java and C++, where a child class constructor always calls the parent class constructor.
+Languages that support before and after methods, such as Common Lisp (specifically the Common Lisp Object System), provide a different way to avoid this anti-pattern. The subclass's programmer can, instead of overriding the superclass's method, supply an additional method which will be executed before or after the superclass's method.  Also, the superclass's programmer can specify before, after, and around methods that are guaranteed to be executed in addition to the subclass's actions.
+
+Example
+Suppose there is a class for generating a report about the inventory of a video rental store. Each particular store has a different way of tabulating the videos currently available, but the algorithm for generating the final report is the same for all stores. A framework that uses the call super anti-pattern may provide the following abstract class (in C#):
+
+A user of the class is expected to implement a subclass like this:
+
+A preferable interface looks like this:
+
+An implementation would override this class like this:

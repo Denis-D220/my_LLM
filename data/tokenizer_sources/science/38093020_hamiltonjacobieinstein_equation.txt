@@ -1,0 +1,440 @@
+In general relativity, the Hamilton–Jacobi–Einstein equation (HJEE) or Einstein–Hamilton–Jacobi equation (EHJE) is an equation in the Hamiltonian formulation of geometrodynamics in superspace, cast in the "geometrodynamics era" around the 1960s, by Asher Peres in 1962 and others. It is an attempt to reformulate general relativity in such a way that it resembles quantum theory within a semiclassical approximation, much like the correspondence between quantum mechanics and classical mechanics.
+It is named for Albert Einstein, Carl Gustav Jacob Jacobi, and William Rowan Hamilton. The EHJE contains as much information as all ten Einstein field equations (EFEs). It is a modification of the Hamilton–Jacobi equation (HJE) from classical mechanics, and can be derived from the Einstein–Hilbert action using the principle of least action in the ADM formalism.
+
+Background and motivation
+
+Correspondence between classical and quantum physics
+In classical analytical mechanics, the dynamics of the system is summarized by the action S. In quantum theory, namely non-relativistic quantum mechanics (QM), relativistic quantum mechanics (RQM), as well as quantum field theory (QFT), with varying interpretations and mathematical formalisms in these theories, the behavior of a system is completely contained in a complex-valued probability amplitude Ψ (more formally as a quantum state ket |Ψ⟩ – an element of a Hilbert space). Using the polar form of the wave function,  so making a Madelung transformation:
+
+  
+    
+      
+        Ψ
+        =
+        
+          
+            ρ
+          
+        
+        
+          e
+          
+            i
+            S
+            
+              /
+            
+            ℏ
+          
+        
+      
+    
+    {\displaystyle \Psi ={\sqrt {\rho }}e^{iS/\hbar }}
+  
+
+the phase of Ψ is interpreted as the action, and the modulus √ρ = √Ψ*Ψ = |Ψ| is interpreted according to the Copenhagen interpretation as the probability density function. The reduced Planck constant ħ is the quantum of angular momentum. Substitution of this into the quantum general Schrödinger equation (SE):
+
+  
+    
+      
+        i
+        ℏ
+        
+          
+            
+              ∂
+              Ψ
+            
+            
+              ∂
+              t
+            
+          
+        
+        =
+        
+          
+            
+              H
+              ^
+            
+          
+        
+        Ψ
+        
+        ,
+      
+    
+    {\displaystyle i\hbar {\frac {\partial \Psi }{\partial t}}={\hat {H}}\Psi \,,}
+  
+
+and taking the limit ħ → 0 yields the classical HJE:
+
+  
+    
+      
+        −
+        
+          
+            
+              ∂
+              S
+            
+            
+              ∂
+              t
+            
+          
+        
+        =
+        H
+        
+        ,
+      
+    
+    {\displaystyle -{\frac {\partial S}{\partial t}}=H\,,}
+  
+
+which is one aspect of the correspondence principle.
+
+Shortcomings of four-dimensional spacetime
+On the other hand, the transition between quantum theory and general relativity (GR) is difficult to make; one reason is the treatment of space and time in these theories. In non-relativistic QM, space and time are not on equal footing; time is a parameter while position is an operator. In RQM and QFT, position returns to the usual spatial coordinates alongside the time coordinate, although these theories are consistent only with SR in four-dimensional flat Minkowski space, and not curved space nor GR. It is possible to formulate quantum field theory in curved spacetime, yet even this still cannot incorporate GR because gravity is not renormalizable in QFT. Additionally, in GR particles move through curved spacetime with a deterministically known position and momentum at every instant, while in quantum theory, the position and momentum of a particle cannot be exactly known simultaneously; space x and momentum p, and energy E and time t, are pairwise subject to the uncertainty principles
+
+  
+    
+      
+        Δ
+        x
+        Δ
+        p
+        ≥
+        
+          
+            ℏ
+            2
+          
+        
+        ,
+        
+        Δ
+        E
+        Δ
+        t
+        ≥
+        
+          
+            ℏ
+            2
+          
+        
+        
+        ,
+      
+    
+    {\displaystyle \Delta x\Delta p\geq {\frac {\hbar }{2}},\quad \Delta E\Delta t\geq {\frac {\hbar }{2}}\,,}
+  
+
+which imply that small intervals in space and time mean large fluctuations in energy and momentum are possible. Since in GR mass–energy and momentum–energy is the source of spacetime curvature, large fluctuations in energy and momentum mean the spacetime "fabric" could potentially become so distorted that it breaks up at sufficiently small scales. There is theoretical and experimental evidence from QFT that vacuum does have energy since the motion of electrons in atoms is fluctuated, this is related to the Lamb shift. For these reasons and others, at increasingly small scales, space and time are thought to be dynamical up to the Planck length and Planck time scales.
+In any case, a four-dimensional curved spacetime continuum is a well-defined and central feature of general relativity, but not in quantum mechanics.
+
+Equation
+One attempt to find an equation governing the dynamics of a system, in as close a way as possible to QM and GR, is to reformulate the HJE in three-dimensional curved space understood to be "dynamic" (changing with time), and not four-dimensional spacetime dynamic in all four dimensions, as the EFEs are. The space has a metric (see Metric space for details).
+The metric tensor in general relativity is an essential object, since proper time, arc length, geodesic motion in curved spacetime, and other things, all depend on the metric. The HJE above is modified to include the metric, although it is only a function of the 3d spatial coordinates r, (for example r = (x, y, z) in Cartesian coordinates) without the coordinate time t:
+
+  
+    
+      
+        
+          g
+          
+            i
+            j
+          
+        
+        =
+        
+          g
+          
+            i
+            j
+          
+        
+        (
+        
+          r
+        
+        )
+        
+        .
+      
+    
+    {\displaystyle g_{ij}=g_{ij}(\mathbf {r} )\,.}
+  
+
+In this context gij is referred to as the "metric field" or simply "field".
+
+General equation (free curved space)
+For a free particle in curved "empty space" or "free space", i.e. in the absence of matter other than the particle itself, the equation can be written:
+
+where g is the determinant of the metric tensor and R the Ricci scalar curvature of the 3d geometry (not including time), and the "δ" instead of "d" denotes the variational derivative rather than the ordinary derivative. These derivatives correspond to the field momenta "conjugate to the metric field":
+
+  
+    
+      
+        
+          π
+          
+            i
+            j
+          
+        
+        (
+        
+          r
+        
+        )
+        =
+        
+          π
+          
+            i
+            j
+          
+        
+        =
+        
+          
+            
+              δ
+              S
+            
+            
+              δ
+              
+                g
+                
+                  i
+                  j
+                
+              
+            
+          
+        
+        
+        ,
+      
+    
+    {\displaystyle \pi ^{ij}(\mathbf {r} )=\pi ^{ij}={\frac {\delta S}{\delta g_{ij}}}\,,}
+  
+
+the rate of change of action with respect to the field coordinates gij(r). The g and π here are analogous to q and p = ∂S/∂q, respectively, in classical Hamiltonian mechanics. See canonical coordinates for more background.
+The equation describes how wavefronts of constant action propagate in superspace - as the dynamics of matter waves of a free particle unfolds in curved space. Additional source terms are needed to account for the presence of extra influences on the particle, which include the presence of other particles or distributions of matter (which contribute to space curvature), and sources of electromagnetic fields affecting particles with electric charge or spin. Like the Einstein field equations, it is non-linear in the metric because of the products of the metric components, and like the HJE it is non-linear in the action due to the product of variational derivatives in the action.
+The quantum mechanical concept, that action is the phase of the wavefunction, can be interpreted from this equation as follows. The phase has to satisfy the principle of least action; it must be stationary for a small change in the configuration of the system, in other words for a slight change in the position of the particle, which corresponds to a slight change in the metric components;
+
+  
+    
+      
+        
+          g
+          
+            i
+            j
+          
+        
+        →
+        
+          g
+          
+            i
+            j
+          
+        
+        +
+        δ
+        
+          g
+          
+            i
+            j
+          
+        
+        
+        ,
+      
+    
+    {\displaystyle g_{ij}\rightarrow g_{ij}+\delta g_{ij}\,,}
+  
+
+the slight change in phase is zero:
+
+  
+    
+      
+        δ
+        S
+        =
+        ∫
+        
+          
+            
+              δ
+              S
+            
+            
+              δ
+              
+                g
+                
+                  i
+                  j
+                
+              
+              (
+              
+                r
+              
+              )
+            
+          
+        
+        δ
+        
+          g
+          
+            i
+            j
+          
+        
+        (
+        
+          r
+        
+        )
+        
+          
+            d
+          
+          
+            3
+          
+        
+        
+          r
+        
+        =
+        0
+        
+        ,
+      
+    
+    {\displaystyle \delta S=\int {\frac {\delta S}{\delta g_{ij}(\mathbf {r} )}}\delta g_{ij}(\mathbf {r} )\mathrm {d} ^{3}\mathbf {r} =0\,,}
+  
+
+(where d3r is the volume element of the volume integral). So the constructive interference of the matter waves is a maximum.  This can be expressed by the superposition principle; applied to many non-localized wavefunctions spread throughout the curved space to form a localized wavefunction:
+
+  
+    
+      
+        Ψ
+        =
+        
+          ∑
+          
+            n
+          
+        
+        
+          c
+          
+            n
+          
+        
+        
+          ψ
+          
+            n
+          
+        
+        
+        ,
+      
+    
+    {\displaystyle \Psi =\sum _{n}c_{n}\psi _{n}\,,}
+  
+
+for some coefficients cn, and additionally the action (phase) Sn for each ψn must satisfy:
+
+  
+    
+      
+        δ
+        S
+        =
+        
+          S
+          
+            n
+            +
+            1
+          
+        
+        −
+        
+          S
+          
+            n
+          
+        
+        =
+        0
+        
+        ,
+      
+    
+    {\displaystyle \delta S=S_{n+1}-S_{n}=0\,,}
+  
+
+for all n, or equivalently,
+
+  
+    
+      
+        
+          S
+          
+            1
+          
+        
+        =
+        
+          S
+          
+            2
+          
+        
+        =
+        ⋯
+        =
+        
+          S
+          
+            n
+          
+        
+        =
+        ⋯
+        
+        .
+      
+    
+    {\displaystyle S_{1}=S_{2}=\cdots =S_{n}=\cdots \,.}
+  
+
+Regions where Ψ is maximal or minimal occur at points where there is a probability of finding the particle there, and where the action (phase) change is zero. So in the EHJE above, each wavefront of constant action is where the particle could be found.
+This equation still does not "unify" quantum mechanics and general relativity, because the semiclassical Eikonal approximation in the context of quantum theory and general relativity has been applied, to provide a transition between these theories.
+
+Applications
+The equation takes various complicated forms in:
+
+Quantum gravity
+Quantum cosmology

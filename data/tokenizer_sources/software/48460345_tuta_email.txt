@@ -1,0 +1,44 @@
+Tuta, formerly Tutanota, is an end-to-end encrypted email and calendar app and a freemium secure email service run by Tutao GmbH, a German company established in 2011. In June 2023, the company said there were over 10 million users of the product.
+
+History
+
+Tutanota is derived from Latin and contains the words "tuta" and "nota" which means "secure message". Tutao GmbH was founded in 2011 in Hanover, Germany.
+Since 2014, the software has been open-sourced and can be reviewed by outsiders on GitHub. The software completed a phase in beta status in 2015.
+In August 2018, Tuta became the first email service provider to release their app on F-Droid, removing all dependence on proprietary code. This was part of a full remake of the app, which removed dependence on GCM for notifications by replacing it with SSE. The new app also enabled search, 2FA and got a new reworked user interface.
+The company announced a transition to 100% renewable electricity in March 2019. This decision coincided with employee participation in Fridays for Future protests.
+In November 2020, the Cologne court ordered monitoring of a single Tuta account that had been used for an extortion attempt. The monitoring function should only apply to future unencrypted emails this account receives and it will not affect emails previously received.
+On 7 November 2023, Tutanota announced it was rebranded to simply 'Tuta'. The former domain name tutanota.com now redirects to the shorter tuta.com.
+In November 2023, it was alleged that Tuta was being used as a honeypot for criminals with a backdoor from authorities. An ex-RCMP officer, Cameron Ortis, testified that the service was used as a storefront to lure criminals in and gain information on those who fell for it. He stated authorities were monitoring the whole service, feeding it to Five Eyes, which would disperse it back to the RCMP in order to gain more knowledge about the criminal underground. However, no evidence was presented to back up this statement, and Tuta repudiated the claim.
+Tuta Mail has integrated post-quantum cryptography features through its protocol, TutaCrypt, replacing standard encryption methods like RSA-2048 and AES-256 for accounts created after March 2024.
+In October 2024, Tuta launched its standalone encrypted calendar app. In 2025 the company confirmed plans to launch a file storage application, known as Tuta Drive, although no release date has been given. Tuta Drive entered closed beta in April 2026. Tuta as a European tech company is part of the trend for digital sovereignty. 
+
+Services
+
+Tuta Mail
+Tuta Mail is an end-to-end encrypted email service. Tuta Mail client is available for Android, iOS, Linux, MacOS, Windows and as a Web app. In March 2024, Tuta introduced a proprietary quantum-resistant hybrid protocol called TutaCrypt for its services.
+
+Tuta Calendar
+Tuta Calendar is an end-to-end encrypted calendar app that supports post-quantum cryptography. It was first released as an integrated calendar in Tuta Mail. In October 2024, Tuta released it as a stand-alone calendar app available for iOS and Android. In February 2026, Tuta released an add-on allowing Tuta Calendar to be integrated into Thunderbird.
+
+Tuta Drive
+Tuta Drive is an in-development end-to-end encrypted cloud storage service that will support post-quantum cryptography, like other Tuta services. The company received a €1.5M grant from the German Government to develop this service. An additional €0.6M has been allocated through a partnership with the University of Wuppertal. In April 2026, Tuta launched a closed beta version of Tuta Drive. No public release date has been announced yet.
+
+Encryption
+When a user registers on Tuta, a private and public key is generated locally on their device. The private key is encrypted with the user's password before being sent to Tuta's servers. User passwords are hashed using Argon2 and SHA256.
+Emails between Tuta users are automatically encrypted end-to-end. For emails sent to external recipients, a password must be exchanged for symmetric encryption. Tuta also encrypts subject lines and attachments of emails and calendars with metadata and search indexes. The email addresses of users, as well as those of senders and recipients, are stored in plain text. The timestamps indicating when an email was sent or received are also not encrypted.
+Tuta uses a standardized, hybrid method consisting of a symmetrical and an asymmetrical algorithm - AES with a length of 256 bit and RSA with 2048 bit. To external recipients who do not use Tuta a notification is sent with a link to a temporary Tuta account. After entering a previously exchanged password, the recipient can read the message and reply end-to-end encrypted.
+Tuta Mail uses post-quantum cryptography features through its new protocol, TutaCrypt for its newly created accounts after March 2024. TutaCrypt combines traditional encryption methods with quantum-resistant algorithms to secure communications. It replaces the previous RSA-2048 keys with two new key pairs:
+
+Elliptic Curve Key Pair: utilizes the X25519 curve for the Elliptic Curve Diffie-Hellman (ECDH) key exchange.
+Kyber-1024 Key Pair: implements post-quantum key encapsulation using the CRYSTALS-Kyber algorithm.
+TutaCrypt employs AES-256 in CBC mode alongside HMAC-SHA-256 for authenticated symmetric encryption. A transition to TutaCrypt for old existing user accounts created before March 2024 occurred in December 2024. Tuta also stated that it does not use PGP due to its limitations in encrypting subject lines and lack of flexibility for algorithm updates. S/MIME is also avoided due to critical vulnerabilities identified in 2018.
+
+Reception
+Reviews by technology websites were generally positive for Tuta. In July 2023, TechRadar praised Tuta Mail as an "Excellent encrypted email platform" focusing on its broad features and intuitive design. However, it criticized the limitations in customer support and the cost of additional storage. In June 2024, PCMag highlighted Tuta for its strong encryption and user-friendly interface with a rating of 4 out 5. CyberNews rated 4.6 overall, but criticized Tuta for its lack of PGP and IMAP support. It also pointed out Tuta's headquarters, Germany as a drawback for being a part in Fourteen Eyes Alliance.
+
+Account deletion
+Tuta deletes free accounts that have not been logged into for six months. According to Tuta, this happens for security reasons and to help keep the service free.
+Tuta has also been GDPR compliant since 2018.
+
+Censorship
+Tuta has been blocked in Egypt since October 2019, and blocked in Russia since February 2020 for unknown reasons, believed to be tied to actions against services operating outside of the country, especially those that involve encrypted communications.

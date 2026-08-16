@@ -1,0 +1,423 @@
+In convex geometry, the Mahler volume of a centrally symmetric convex body is a dimensionless quantity that is associated with the body and is invariant under linear transformations. It is named after German-English mathematician Kurt Mahler. It is known that the shapes with the largest possible Mahler volume are the balls and solid ellipsoids; this is now known as the Blaschke–Santaló inequality. The still-unsolved Mahler conjecture states that the minimum possible Mahler volume is attained by a hypercube.
+
+Definition
+A convex body in Euclidean space is defined as a compact convex set with non-empty interior.  If 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is a centrally symmetric convex body in 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-dimensional Euclidean space, the polar body 
+  
+    
+      
+        
+          B
+          
+            ∘
+          
+        
+      
+    
+    {\displaystyle B^{\circ }}
+  
+ is another centrally symmetric body in the same space, defined as the set
+
+  
+    
+      
+        
+          {
+          
+            x
+            ∣
+            x
+            ⋅
+            y
+            ≤
+            1
+            
+               for all 
+            
+            y
+            ∈
+            B
+          
+          }
+        
+        .
+      
+    
+    {\displaystyle \left\{x\mid x\cdot y\leq 1{\text{ for all }}y\in B\right\}.}
+  
+
+The Mahler volume of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is the product of the volumes of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ and 
+  
+    
+      
+        
+          B
+          
+            ∘
+          
+        
+      
+    
+    {\displaystyle B^{\circ }}
+  
+.
+If 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is an invertible linear transformation, then 
+  
+    
+      
+        (
+        T
+        B
+        
+          )
+          
+            ∘
+          
+        
+        =
+        (
+        
+          T
+          
+            −
+            1
+          
+        
+        
+          )
+          
+            ∗
+          
+        
+        
+          B
+          
+            ∘
+          
+        
+      
+    
+    {\displaystyle (TB)^{\circ }=(T^{-1})^{\ast }B^{\circ }}
+  
+. Applying 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ to 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ multiplies its volume by 
+  
+    
+      
+        det
+        T
+      
+    
+    {\displaystyle \det T}
+  
+ and multiplies the volume of 
+  
+    
+      
+        
+          B
+          
+            ∘
+          
+        
+      
+    
+    {\displaystyle B^{\circ }}
+  
+ by 
+  
+    
+      
+        det
+        (
+        
+          T
+          
+            −
+            1
+          
+        
+        
+          )
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \det(T^{-1})^{\ast }}
+  
+.  As these determinants are multiplicative inverses, the overall Mahler volume of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is preserved by linear transformations.
+
+Examples
+The polar body of an 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-dimensional unit ball is itself another unit ball. Thus, its Mahler volume is just the square of its volume, 
+
+  
+    
+      
+        
+          
+            
+              Γ
+              (
+              3
+              
+                /
+              
+              2
+              
+                )
+                
+                  2
+                  n
+                
+              
+              
+                4
+                
+                  n
+                
+              
+            
+            
+              Γ
+              (
+              
+                
+                  n
+                  2
+                
+              
+              +
+              1
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\Gamma (3/2)^{2n}4^{n}}{\Gamma ({\frac {n}{2}}+1)^{2}}}}
+  
+
+where 
+  
+    
+      
+        Γ
+      
+    
+    {\displaystyle \Gamma }
+  
+ is the Gamma function.
+By affine invariance, any solid ellipsoid has the same Mahler volume.
+The polar body of a polyhedron or polytope is its dual polyhedron or dual polytope. In particular, the polar body of a cube or hypercube is an octahedron or cross polytope. Its Mahler volume can be calculated as
+
+  
+    
+      
+        
+          
+            
+              4
+              
+                n
+              
+            
+            
+              Γ
+              (
+              n
+              +
+              1
+              )
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\frac {4^{n}}{\Gamma (n+1)}}.}
+  
+
+The Mahler volume of the ball is larger than the Mahler volume of the hypercube by a factor of approximately 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  π
+                  2
+                
+              
+            
+            )
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \left({\tfrac {\pi }{2}}\right)^{n}}
+  
+.
+
+Extreme shapes
+
+The Blaschke–Santaló inequality states that the shapes with maximum Mahler volume are the balls and solid ellipsoids. The three-dimensional case of this result was proven by Wilhelm Blaschke (1917); the full result was proven much later by Luis Santaló (1949) using a technique known as Steiner symmetrization by which any centrally symmetric convex body can be replaced with a more sphere-like body without decreasing its Mahler volume.
+The shapes with the minimum known Mahler volume are hypercubes, cross polytopes, and more generally the Hanner polytopes which include these two types of shapes, as well as their affine transformations. The Mahler conjecture states that the Mahler volume of these shapes is the smallest of any n-dimensional symmetric convex body; it remains unsolved when 
+  
+    
+      
+        n
+        ≥
+        4
+      
+    
+    {\displaystyle n\geq 4}
+  
+. As Terry Tao writes:
+
+The main reason why this conjecture is so difficult is that unlike the upper bound, in which there is essentially only one extremiser up to affine transformations (namely the ball), there are many distinct extremisers for the lower bound - not only the cube and the octahedron, but also products of cubes and octahedra, polar bodies of products of cubes and octahedra, products of polar bodies of… well, you get the idea. It is really difficult to conceive of any sort of flow or optimisation procedure which would converge to exactly these bodies and no others; a radically different type of argument might be needed.
+Bourgain & Milman (1987) proved that the Mahler volume is bounded below by 
+  
+    
+      
+        
+          c
+          
+            n
+          
+        
+      
+    
+    {\displaystyle c^{n}}
+  
+ times the volume of a sphere for some absolute constant 
+  
+    
+      
+        c
+        >
+        0
+      
+    
+    {\displaystyle c>0}
+  
+, matching the scaling behavior of the hypercube volume but with a smaller constant. Kuperberg (2008) proved that, more concretely, one can take 
+  
+    
+      
+        c
+        =
+        
+          
+            
+              1
+              2
+            
+          
+        
+      
+    
+    {\displaystyle c={\tfrac {1}{2}}}
+  
+ in this bound.  A result of this type is known as a reverse Santaló inequality.
+
+Partial results
+The 2-dimensional case of the Mahler conjecture has been solved by Mahler and the 3-dimensional case by Iriyeh and Shibata.
+It is known that each of the Hanner polytopes is a strict local minimizer for the Mahler volume in the class of origin-symmetric convex bodies endowed with the Banach–Mazur distance. This was first proven by Nazarov, Petrov, Ryabogin, and Zvavitch for the unit cube, and later generalized to all Hanner polytopes by Jaegil Kim.
+The Mahler conjecture holds for zonotopes.
+The Mahler conjecture holds in the class of unconditional bodies, that is, convex bodies invariant under reflection on each coordinate hyperplane {xi = 0}. This was first proven by Saint-Raymond in 1980. Later, a much shorter proof was found by Meyer. This was further generalized to convex bodies with symmetry groups that are more general reflection groups. The minimizers are then not necessarily Hanner polytopes, but were found to be regular polytopes corresponding to the reflection groups.
+Reisner et al. (2010) showed that a minimizer of the Mahler volume must have Gaussian curvature equal to zero almost everywhere on its boundary, suggesting strongly that a minimal body is a polytope.
+
+For asymmetric bodies
+The Mahler volume can be defined in the same way, as the product of the volume and the polar volume, for convex bodies whose interior contains the origin regardless of symmetry. Mahler conjectured that, for this generalization, the minimum volume is obtained by a simplex, with its centroid at the origin. As with the symmetric Mahler conjecture, reverse Santaló inequalities are known showing that the minimum volume is at least within an exponential factor of the simplex.

@@ -1,0 +1,38 @@
+VP/MS  (Visual Product Modeling System) is a family of software components developed by CSC that support product development and product lifecycle management. Insurance companies (among other users in business and IT) use VP/MS to manage the rules, clauses, formulas and calculations associated with savings and both life and non-life insurance products. With VP/MS all calculations and queries for purposes such as quotes and administration are supported by a central repository of product definitions.
+VP/MS supports processes like product definition and administration, product testing and documentation, design checks, visualization and cross-platform usage of products.  In addition to hosting product definitions, VP/MS  is a modeling language.  It provides a graphical interface (GUI) for creating business rules as components and models.
+VP/MS is platform independent – products can be ported to any administration or illustration system or deployed over the Internet – and makes use of the Eclipse platform for developing software.
+
+Product server
+VP/MS is a product server – a software tool that hosts all knowledge on insurance and other products centrally and provides it to application systems in various deployment scenarios and across various platforms.
+The outcome of a VP/MS-designed model is modular, portable calculation rules. VP/MS rendered calculation rules are in turn incorporated with associated applications, such as VP/MS Designer or J-VP/MS, to create (respectively) GUIs or a calculations architecture compatible with existing software architecture.
+Systems used by insurance policy administrators, product brokers and web servers ultimately rely on libraries of VP/MS rendered architecture for the production of product illustrations and calculations.
+
+VP/MS users
+
+Industries
+VP/MS is industry-neutral – it is a generic tool that is not designed to be used exclusively within a specific industry.  VP/MS has been deployed within non-insurance applications as a general rules engine. However, since it was developed within an insurance context, VP/MS is applied broadly and extensively in insurance.
+Among users of VP/MS are life insurers and providers of pensions, property and casualty insurers and health insurers
+Other sectors where VP/MS’s underlying rules management capabilities are applied include banking, energy and utilities.
+
+Design
+VP/MS Workbench is the main environment for modeling in VP/MS.  As such, it is used extensively in the back office during the design or maintenance of product rules. Actuaries, financial modelers, business analysts, product specialists and programmers are among those using VP/MS during this phase.
+A number of supplementary components support this phase of the product lifecycle.  Examples are VP/MS Documentation Suite, VP/MS Test Suite and VP/MS Checker.  Product managers use VP/MS Model Manager for an overview, product release and versioning, team collaboration and access control.  VP/MS Runtime is then responsible for sharing a single instance of a product across various platforms.
+
+Implementation
+After the design phase, VP/MS hosted architecture is supplied to the organization via related applications.  For example, IT specialists use VP/MS Designer and J-VP/MS to integrate model libraries with end-user applications. The product server is sold as part of other applications under different names.
+
+Multi platform capabilities
+J-VP/MS integrates VP/MS calculation rules into existing software architectures via standard interfaces and technologies such as Java EE, XML-based SOAP, WSDL and Struts.
+
+Summarized history of VP/MS
+1995 – VP/MS was designed by a team of M+I Unternehmensberatung GmbH (an Austrian consulting company, founded by Gerhard Friedrich and partners) with Interunfall Versicherung AG, a subsidiary insurance company of Generali Austria as the first client.  Software development was done by CAF GmbH (a German software development company). It is originally named Versicherungsprodukt-Modellierungssystem (which translates to "insurance product modeling system").
+1996 - M+I and CAF start to sell VP/MS to insurance companies in Germany, Austria and Switzerland.
+1998 – Development of VP/MS Designer by CAF.
+1999 - PMS Micado (the German subsidiary of the US based Policy Management Systems Corporation) takes over CAF and obtains a worldwide general license to develop and sell VP/MS from M+I and Generali.
+2001 – CSC takes over ownership of Policy Management Systems Corporation and all subsidiaries. Introduction of J-VP/MS and integration of VP/MS into CSC offerings.
+2003 – Development of Eclipse-based VP/MS Model Manager.
+2005 – Development of Eclipse-based VP/MS Test Suite.
+2006 – Development of Eclipse-based VP/MS Documentation Suite.
+2008 – Development of Eclipse-based Workbench and VP/MS Checker.
+2017 - CSC is now a part of DXC Technology
+In 2009 there are over 140 companies in 24 countries using VP/MS, e.g. Axa, Generali and Uniqa. A market research source listed the following VP/MS users in the USA in 2008: American National, New York Life, Ohio National and Symetra.

@@ -1,0 +1,162 @@
+In logic and formal semantics, term logic, also known as traditional logic, syllogistic logic or Aristotelian logic, is a loose name for an approach to formal logic that began with Aristotle and was developed further in ancient history mostly by his followers, the Peripatetics. It was revived after the third century CE by Porphyry's Isagoge.
+Term logic revived in medieval times, first in Islamic logic by Alpharabius in the tenth century, and later in Christian Europe in the twelfth century with the advent of new logic, remaining dominant until the advent of predicate logic in the late nineteenth century.
+However, even if eclipsed by newer logical systems, term logic still plays a significant role in the study of logic. Rather than radically breaking with term logic, modern logics typically expand it.
+
+Aristotle's system
+Aristotle's logical work is collected in the six texts that are collectively known as the Organon. Two of these texts in particular, namely the Prior Analytics and On Interpretation, contain the heart of Aristotle's treatment of judgements and formal inference, and it is principally this part of Aristotle's works that is about term logic. Modern work on Aristotle's logic builds on the tradition started in 1951 with the establishment by Jan Lukasiewicz of a revolutionary paradigm. Lukasiewicz's approach was reinvigorated in the early 1970s by John Corcoran and Timothy Smiley – which informs modern translations of Prior Analytics by Robin Smith in 1989 and Gisela Striker in 2009.
+The Prior Analytics represents the first formal study of logic, where logic is understood as the study of arguments. An argument is a series of true or false statements which lead to a true or false conclusion. In the Prior Analytics, Aristotle identifies valid and invalid forms of arguments called syllogisms. A syllogism is an argument that consists of at least three sentences: at least two premises and a conclusion. Although Aristotle does not call them "categorical sentences", tradition does; he deals with them briefly in the Analytics and more extensively in On Interpretation. Each proposition (statement that is a thought of the kind expressible by a declarative sentence) of a syllogism is a categorical sentence which has a subject and a predicate connected by a verb. The usual way of connecting the subject and predicate of a categorical sentence as Aristotle does in On Interpretation is by using a linking verb e.g. P is S. However, in the Prior Analytics Aristotle rejects the usual form in favour of three of his inventions:
+
+P belongs to S
+P is predicated of S
+P is said of S
+Aristotle does not explain why he introduces these innovative expressions but scholars conjecture that the reason may have been that it facilitates the use of letters instead of terms avoiding the ambiguity that results in Greek when letters are used with the linking verb. In his formulation of syllogistic propositions, instead of the copula ("All/some... are/are not..."), Aristotle uses the expression, "... belongs to/does not belong to all/some..." or "... is said/is not said of all/some..." There are four different types of categorical sentences: universal affirmative (A), universal negative (E), particular affirmative (I) and particular negative (O).
+
+A	-	A belongs to every B
+E - A belongs to no B
+I	-	A belongs to some B
+O	-	A does not belong to some B
+A method of symbolization that originated and was used in the Middle Ages greatly simplifies the study of the Prior Analytics.
+Following this tradition then, let:
+
+a = belongs to every
+e = belongs to no
+i = belongs to some
+o = does not belong to some
+Categorical sentences may then be abbreviated as follows:
+
+AaB = A belongs to every B (Every B is A)
+AeB = A belongs to no B (No B is A)
+AiB = A belongs to some B (Some B is A)
+AoB = A does not belong to some B (Some B is not A)
+From the viewpoint of modern logic, only a few types of sentences can be represented in this way.
+
+Basics
+The fundamental assumption behind the theory is that the formal model of propositions are composed of two logical symbols called terms – hence the name "two-term theory" or "term logic" – and that the reasoning process is in turn built from propositions:
+
+The term is a part of speech representing something, but which is not true or false in its own right, such as "man" or "mortal". As originally conceived, all terms would be drawn from one of ten categories enumerated by Aristotle in his Organon, classifying all objects and qualities within the domain of logical discourse.
+The formal model of proposition consists of two terms, one of which, the "predicate", is "affirmed" or "denied" of the other, the "subject", and which is capable of truth or falsity.
+The syllogism is an inference in which one proposition (the "conclusion") follows of necessity from two other propositions (the "premises").
+A proposition may be universal or particular, and it may be affirmative or negative. Traditionally, the four kinds of propositions are:
+
+A-type: Universal and affirmative ("All philosophers are mortal")
+E-type: Universal and negative ("All philosophers are not mortal")
+I-type: Particular and affirmative ("Some philosophers are mortal")
+O-type: Particular and negative ("Some philosophers are not mortal")
+This was called the fourfold scheme of propositions (see types of syllogism for an explanation of the letters A, I, E, and O in the traditional square). Aristotle's original square of opposition, however, does not lack existential import.
+The kinds of propositions used for each of the premises and the conclusion combine to create the "mood" of the syllogism. For instance, if the major premise, minor premise, and conclusion are all universal affirmative statements (i.e., A-type), then the syllogism has the mood AAA.
+
+Term
+A term (Greek ὅρος horos) is the basic component of the proposition. The original meaning of the horos (and also of the Latin terminus) is "extreme" or "boundary". The two terms lie on the outside of the proposition, joined by the act of affirmation or denial.
+For early modern logicians like Arnauld (whose Port-Royal Logic was the best-known text of his day), it is a psychological entity like an "idea" or "concept". John Stuart Mill considers it a word. To assert "all Greeks are men" is not to say that the concept of Greeks is the concept of men, or that word "Greeks" is the word "men". A proposition cannot be built from real things or ideas, but it is not just meaningless words either.
+
+Major and minor terms
+The "major term" is the predicate of the syllogism's conclusion; the "minor term" is the subject of the syllogism's conclusion.
+
+Singular terms
+For Aristotle, the distinction between singular and universal is a fundamental metaphysical one, and not merely grammatical. A singular term for Aristotle is primary substance, which can only be predicated of itself: (this) "Callias" or (this) "Socrates" are not predicable of any other thing, thus one does not say every Socrates one says every human (De Int. 7; Meta. D9, 1018a4). It may feature as a grammatical predicate, as in the sentence "the person coming this way is Callias". But it is still a logical subject.
+He contrasts universal (katholou) secondary substance, genera, with primary substance, particular (kath' hekaston) specimens. The formal nature of universals, in so far as they can be generalized "always, or for the most part", is the subject matter of both scientific study and formal logic.
+
+Proposition
+
+In term logic, a "proposition" is simply a form of language: a particular kind of sentence, in which the subject and predicate are combined, so as to assert something true or false. It is not a thought, nor an abstract entity. The word "propositio" is from the Latin, meaning the first premise of a syllogism. Aristotle uses the word premise (protasis) as a sentence affirming or denying one thing or another (Posterior Analytics 1. 1 24a 16), so a premise is also a form of words.
+However, as in modern philosophical logic, it means that which is asserted by the sentence. Writers before Frege and Russell, such as Bradley, sometimes spoke of the "judgment" as something distinct from a sentence, but this is not quite the same. As a further confusion the word "sentence" derives from the Latin, meaning an opinion or judgment, and so is equivalent to "proposition".
+The logical quality of a proposition is whether it is affirmative (the predicate is affirmed of the subject) or negative (the predicate is denied of the subject). Thus every philosopher is mortal is affirmative, since the mortality of philosophers is affirmed universally, whereas no philosopher is mortal is negative by denying such mortality in particular.
+The quantity of a proposition is whether it is universal (the predicate is affirmed or denied of all subjects or of "the whole") or particular (the predicate is affirmed or denied of some subject or a "part" thereof). In case where existential import is assumed, quantification implies the existence of at least one subject, unless disclaimed.
+
+Syllogisms
+A syllogism comprises a conclusion derived from two premises. The essential feature of the syllogism is that, of the three terms in the two premises, one must occur twice: this is called the "middle term", and it does not appear in the conclusion. The premise that contains the middle term and the major term (i.e., the predicate of the conclusion) is called the "major premise". The premise that contains the middle term and the minor term (i.e., the subject of the conclusion) is called the "minor premise". For instance:
+
+All men are mortal. [Major premise: "men" is the middle term; "mortal" is the major term]
+All Greeks are men. [Minor premise: "men" is the middle term; "Greeks" is the minor term]
+Therefore, all Greeks are mortal. [Conclusion: "Greeks" is the minor term; "mortal" is the major term]
+Depending on the roles of the middle term in each of the premises, Aristotle divides the syllogism into three kinds: syllogism in the first, second, and third figure. If the Middle Term is subject of one premise and predicate of the other, the premises are in the First Figure. If the Middle Term is predicate of both premises, the premises are in the Second Figure. If the Middle Term is subject of both premises, the premises are in the Third Figure. The Fourth Figure, in which the middle term is the predicate in the major premise and the subject in the minor, was added by Aristotle's pupil Theophrastus and does not occur in Aristotle's work, although there is evidence that Aristotle knew of fourth-figure syllogisms.
+Symbolically, Aristotle's Three Figures may be represented as follows:
+
+Syllogism in the first figure
+In the Prior Analytics, Aristotle says of the first figure: "... For if A is predicated of every B and B of every C, it is necessary for A to be predicated of every C."
+Taking a = is predicated of all = is predicated of every, and using the symbolical method used in the Middle Ages, then the first figure is simplified to:
+
+If AaB
+
+and BaC
+
+then AaC.
+Or what amounts to the same thing:
+
+AaB, BaC; therefore AaC
+When the four syllogistic propositions, a, e, i, o are placed in the first figure, Aristotle comes up with the following valid forms of deduction for the first figure:
+
+AaB, BaC; therefore, AaC
+AeB, BaC; therefore, AeC
+AaB, BiC; therefore, AiC
+AeB, BiC; therefore, AoC
+In the Middle Ages, for mnemonic reasons (based on the pattern of vowels used to represent each of the propositions) they were called "Barbara", "Celarent", "Darii" and "Ferio" respectively.
+The difference between the first figure and the other two figures is that the syllogism of the first figure is "perfect" (i.e., obviously valid without any further steps or premises) while that of the second and third is not. This is important in Aristotle's theory of the syllogism for the first figure is axiomatic while the second and third require proof. The proof of the second and third figure always leads back to the first figure.
+
+Syllogism in the second figure
+Aristotle says of the second figure: "... If M belongs to every N but to no X, then neither will N belong to any X. For if M belongs to no X, neither does X belong to any M; but M belonged to every N; therefore, X will belong to no N (for the first figure has again come about)."
+The above statement can be simplified by using the symbolical method used in the Middle Ages:
+
+If MaN
+
+but MeX
+
+then NeX.
+
+For if MeX
+
+then XeM
+
+but MaN
+
+therefore XeN.
+When the four syllogistic propositions, a, e, i, o are placed in the second figure, Aristotle comes up with the following valid forms of deduction for the second figure:
+
+MaN, MeX; therefore NeX
+MeN, MaX; therefore NeX
+MeN, MiX; therefore NoX
+MaN, MoX; therefore NoX
+In the Middle Ages, for mnemonic reasons they were called respectively "Camestres", "Cesare", "Festino" and "Baroco".
+
+Syllogism in the third figure
+Aristotle says of the third figure: "... If one term belongs to all and another to none of the same thing, or if they both belong to all or none of it, I call such figure the third." Referring to universal terms, "... then when both P and R belongs to every S, it results of necessity that P will belong to some R."
+Simplifying:
+
+If PaS
+
+and RaS
+
+then PiR.
+When the four syllogistic propositions, a, e, i, o are placed in the third figure, Aristotle develops four more valid forms of deduction:
+
+PiS, RaS; therefore PiR
+PaS, RiS; therefore PiR
+PoS, RaS; therefore PoR
+PeS, RiS; therefore PoR
+In the Middle Ages, for mnemonic reasons, these four forms were called respectively: "Disamis", "Datisi", "Bocardo" and "Ferison".
+
+Table of valid syllogisms
+In the following table, a syllogism with "conditional" validity is one whose validity depends on existential import (i.e., it is valid only if at least one instance of the minor term or middle term actually exists). An unconditionally valid syllogism does not depend on existential import. All valid syllogisms must contain at least one universal premise (i.e., an A-type or E-type proposition), but need not contain a particular premise (i.e., an I-type or O-type proposition).
+
+Decline of term logic
+Term logic began to decline in Europe during the Renaissance, when logicians like Rodolphus Agricola Phrisius (1444–1485) and Ramus (1515–1572) began to promote place logics. The logical tradition called Port-Royal Logic, or sometimes "traditional logic", saw propositions as combinations of ideas rather than of terms, but otherwise followed many of the conventions of term logic. It remained influential, especially in England, until the 19th century. Leibniz created a distinctive logical calculus, but nearly all of his work on logic remained unpublished and unremarked until Louis Couturat went through the Leibniz Nachlass around 1900, publishing his pioneering studies in logic.
+19th-century attempts to algebraize logic, such as the work of Boole (1815–1864) and Venn (1834–1923), typically yielded systems highly influenced by the term-logic tradition. The first predicate logic was that of Frege's landmark Begriffsschrift (1879), little read before 1950, in part because of its eccentric notation. Modern predicate logic as we know it began in the 1880s with the writings of Charles Sanders Peirce, who influenced Peano (1858–1932) and even more, Ernst Schröder (1841–1902). It reached fruition in the hands of Bertrand Russell and A. N. Whitehead, whose Principia Mathematica (1910–13) made use of a variant of Peano's predicate logic.
+Term logic also survived to some extent in traditional Roman Catholic education, especially in seminaries. Medieval Catholic theology, especially the writings of Thomas Aquinas, had a powerfully Aristotelian cast, and thus term logic became a part of Catholic theological reasoning. For example, Joyce's Principles of Logic (1908; 3rd edition 1949), written for use in Catholic seminaries, made no mention of Frege or of Bertrand Russell.
+
+Revival
+Some philosophers have complained that predicate logic:
+
+Is unnatural in a sense, in that its syntax does not follow the syntax of the sentences that figure in our everyday reasoning. It is, as Quine acknowledged, "Procrustean," employing an artificial language of function and argument, quantifier, and bound variable.
+Suffers from theoretical problems, probably the most serious being empty names and identity statements.
+Even academic philosophers entirely in the mainstream, such as Gareth Evans, have written as follows:
+
+"I come to semantic investigations with a preference for homophonic theories; theories which try to take serious account of the syntactic and semantic devices which actually exist in the language ...I would prefer [such] a theory ... over a theory which is only able to deal with [sentences of the form "all A's are B's"] by "discovering" hidden logical constants ... The objection would not be that such [Fregean] truth conditions are not correct, but that, in a sense which we would all dearly love to have more exactly explained, the syntactic shape of the sentence is treated as so much misleading surface structure" (Evans 1977)
+
+Boole’s acceptance of Aristotle
+
+George Boole's unwavering acceptance of Aristotle's logic is emphasized by the historian of logic John Corcoran in an accessible introduction to Laws of Thought Corcoran also wrote a point-by-point comparison of Prior Analytics and Laws of Thought. According to Corcoran, Boole fully accepted and endorsed Aristotle's logic. Boole's goals were “to go under, over, and beyond” Aristotle's logic by:
+
+providing it with mathematical foundations involving equations;
+extending the class of problems it could treat– from assessing validity to solving equations; and
+expanding the range of applications it could handle– e.g. from propositions having only two terms to those having arbitrarily many.
+More specifically, Boole agreed with what Aristotle said; Boole's ‘disagreements’, if they might be called that, concern what Aristotle did not say. First, in the realm of foundations, Boole reduced the four propositional forms of Aristotle's logic to formulas in the form of equations –itself a revolutionary idea. Second, in the realm of logic's problems, Boole's addition of equation solving to logic—another revolutionary idea—involved Boole's doctrine that Aristotle's rules of inference (the “perfect syllogisms”) must be supplemented by rules for equation solving. Third, in the realm of applications, Boole's system could handle multi-term propositions and arguments whereas Aristotle could handle only two-termed subject-predicate propositions and arguments. For example, Aristotle's system could not deduce “No quadrangle that is a square is a rectangle that is a rhombus” from “No square that is a quadrangle is a rhombus that is a rectangle” or from “No rhombus that is a rectangle is a square that is a quadrangle”.

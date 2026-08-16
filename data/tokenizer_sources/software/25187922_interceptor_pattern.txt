@@ -1,0 +1,7 @@
+In the field of software development, an interceptor pattern is a software design pattern that is used when software systems or frameworks want to offer a way to change, or augment, their usual processing cycle. For example, a (simplified) typical processing sequence for a web-server is to receive a URI from the browser, map it to a file on disk, open the file and send its contents to the browser. Any of these steps could be replaced or changed, e.g. by replacing the way URIs are mapped to filenames, or by inserting a new step which processes the files contents.
+Key aspects of the pattern are that the change is transparent and used automatically. In essence, the rest of the system does not have to know something has been added or changed and can keep working as before. To facilitate this, a predefined interface for extension has to be implemented, some kind of dispatching mechanism is required where interceptors are registered (this may be dynamic, at runtime, or static, e.g. through configuration files) and context objects are provided, which allow access to the framework's internal state.
+
+Uses and context
+Typical users of this pattern are web-servers (as mentioned above), object- and message-oriented middleware
+An example of implementation of this pattern is the javax.servlet.Filter interface, which is part of Java Platform, Enterprise Edition.
+Aspect-oriented programming (AOP) can also be used in some situations to provide the capability of an interceptor, although AOP doesn't use the elements typically defined  for the interceptor pattern.

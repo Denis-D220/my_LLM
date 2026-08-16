@@ -1,0 +1,550 @@
+In classical mechanics, the parameters that define the configuration of a system are called generalized coordinates, and the space defined by these coordinates is called the configuration space of the physical system.  It is often the case that these parameters satisfy mathematical constraints, such that the set of actual configurations of the system is a manifold in the space of generalized coordinates.  This manifold is called the configuration manifold of the system. Notice that this is a notion of "unrestricted" configuration space, i.e. in which different point particles may occupy the same position. In mathematics, in particular in topology, a notion of "restricted" configuration space is mostly used, in which the diagonals, representing "colliding" particles, are removed.
+
+Examples
+
+A particle in 3D space
+The position of a single particle moving in ordinary Euclidean 3-space is defined by the vector 
+  
+    
+      
+        q
+        =
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+      
+    
+    {\displaystyle q=(x,y,z)}
+  
+, and therefore its configuration space is 
+  
+    
+      
+        Q
+        =
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle Q=\mathbb {R} ^{3}}
+  
+.  It is conventional to use the symbol 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ for a point in configuration space; this is the convention in both the Hamiltonian formulation of classical mechanics, and in Lagrangian mechanics. The symbol 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is used to denote momenta; the symbol 
+  
+    
+      
+        
+          
+            
+              q
+              ˙
+            
+          
+        
+        =
+        d
+        q
+        
+          /
+        
+        d
+        t
+      
+    
+    {\displaystyle {\dot {q}}=dq/dt}
+  
+ refers to velocities.
+A particle might be constrained to move on a specific manifold. For example, if the particle is attached to a rigid linkage, free to swing about the origin, it is effectively constrained to lie on a sphere. Its configuration space is the subset of coordinates in 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{3}}
+  
+ that define points on the sphere 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+      
+    
+    {\displaystyle S^{2}}
+  
+. In this case, one says that the manifold 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is the sphere, i.e. 
+  
+    
+      
+        Q
+        =
+        
+          S
+          
+            2
+          
+        
+      
+    
+    {\displaystyle Q=S^{2}}
+  
+.
+For n disconnected, non-interacting point particles, the configuration space is 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{3n}}
+  
+. In general, however, one is interested in the case where the particles interact: for example, they are specific locations in some assembly of gears, pulleys, rolling balls, etc. often constrained to move without slipping. In this case, the configuration space is not all of 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{3n}}
+  
+, but the subspace (submanifold) of allowable positions that the points can take.
+
+Rigid body in 3D space
+The set of coordinates that define the position of a reference point and the orientation of a coordinate frame attached to a rigid body in three-dimensional space form its configuration space, often denoted 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+        ×
+        
+          S
+          O
+        
+        (
+        3
+        )
+      
+    
+    {\displaystyle \mathbb {R} ^{3}\times \mathrm {SO} (3)}
+  
+ where 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{3}}
+  
+ represents the coordinates of the origin of the frame attached to the body, and 
+  
+    
+      
+        
+          S
+          O
+        
+        (
+        3
+        )
+      
+    
+    {\displaystyle \mathrm {SO} (3)}
+  
+ represents the rotation matrices that define the orientation of this frame relative to a ground frame.  A configuration of the rigid body is defined by six parameters, three from 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{3}}
+  
+ and three from 
+  
+    
+      
+        
+          S
+          O
+        
+        (
+        3
+        )
+      
+    
+    {\displaystyle \mathrm {SO} (3)}
+  
+, and is said to have six degrees of freedom.
+In this case, the configuration space 
+  
+    
+      
+        Q
+        =
+        
+          
+            R
+          
+          
+            3
+          
+        
+        ×
+        
+          S
+          O
+        
+        (
+        3
+        )
+      
+    
+    {\displaystyle Q=\mathbb {R} ^{3}\times \mathrm {SO} (3)}
+  
+ is six-dimensional, and a point 
+  
+    
+      
+        q
+        ∈
+        Q
+      
+    
+    {\displaystyle q\in Q}
+  
+ is just a point in that space. The "location" of 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ in that configuration space is described using generalized coordinates; thus, three of the coordinates might describe the location of the center of mass of the rigid body, while three more might be the Euler angles describing its orientation. There is no canonical choice of coordinates; one could also choose some tip or endpoint of the rigid body, instead of its center of mass; one might choose to use quaternions instead of Euler angles, and so on. However, the parameterization does not change the mechanical characteristics of the system; all of the different parameterizations ultimately describe the same (six-dimensional) manifold, the same set of possible positions and orientations. 
+Some parameterizations are easier to work with than others, and many important statements can be made by working in a coordinate-free fashion.  Examples of coordinate-free statements are that the tangent space 
+  
+    
+      
+        T
+        Q
+      
+    
+    {\displaystyle TQ}
+  
+ corresponds to the velocities of the points 
+  
+    
+      
+        q
+        ∈
+        Q
+      
+    
+    {\displaystyle q\in Q}
+  
+, while the cotangent space 
+  
+    
+      
+        
+          T
+          
+            ∗
+          
+        
+        Q
+      
+    
+    {\displaystyle T^{*}Q}
+  
+ corresponds to momenta. (Velocities and momenta can be connected; for the most general, abstract case, this is done with the rather abstract notion of the tautological one-form.)
+
+Robotic arm
+
+For a robotic arm consisting of numerous rigid linkages, the configuration space consists of the location of each linkage (taken to be a rigid body, as in the section above), subject to the constraints of how the linkages are attached to each other, and their allowed range of motion. Thus, for 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ linkages, one might consider the total space
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  R
+                
+                
+                  3
+                
+              
+              ×
+              
+                S
+                O
+              
+              (
+              3
+              )
+            
+            ]
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \left[\mathbb {R} ^{3}\times \mathrm {SO} (3)\right]^{n}}
+  
+
+except that all of the various attachments and constraints mean that not every point in this space is reachable.  Thus, the configuration space 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is necessarily a subspace of the 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-rigid-body configuration space. 
+Note, however, that in robotics, the term configuration space can also refer to a further-reduced subset: the set of reachable positions by a robot's end-effector. This definition, however, leads to complexities described by the holonomy: that is, there may be several different ways of arranging a robot arm to obtain a particular end-effector location, and it is even possible to have the robot arm move while keeping the end effector stationary. Thus, a complete description of the arm, suitable for use in kinematics, requires the specification of all of the joint positions and angles, and not just some of them.
+The joint parameters of the robot are used as generalized coordinates to define configurations.  The set of joint parameter values is called the joint space.  A robot's forward and inverse kinematics equations define maps between configurations and end-effector positions, or between joint space and configuration space.  Robot motion planning uses this mapping to find a path in joint space that provides an achievable route in the configuration space of the end-effector.
+
+Formal definition
+In classical mechanics, the configuration of a system refers to the position of all constituent point particles of the system.
+
+Phase space
+The configuration space is insufficient to completely describe a mechanical system: it fails to take into account velocities.  The set of velocities available to a system defines a plane tangent to the configuration manifold of the system. At a point 
+  
+    
+      
+        q
+        ∈
+        Q
+      
+    
+    {\displaystyle q\in Q}
+  
+, that tangent plane is denoted by 
+  
+    
+      
+        
+          T
+          
+            q
+          
+        
+        Q
+      
+    
+    {\displaystyle T_{q}Q}
+  
+. Momentum vectors are linear functionals of the tangent plane, known as cotangent vectors; for a point 
+  
+    
+      
+        q
+        ∈
+        Q
+      
+    
+    {\displaystyle q\in Q}
+  
+, that cotangent plane is denoted by 
+  
+    
+      
+        
+          T
+          
+            q
+          
+          
+            ∗
+          
+        
+        Q
+      
+    
+    {\displaystyle T_{q}^{*}Q}
+  
+.  The set of positions and momenta of a mechanical system forms the cotangent bundle 
+  
+    
+      
+        
+          T
+          
+            ∗
+          
+        
+        Q
+      
+    
+    {\displaystyle T^{*}Q}
+  
+ of the configuration manifold 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+. This larger manifold is called the phase space of the system.
+
+Quantum state space
+
+In quantum mechanics, configuration space can be used (see for example the Mott problem), but the classical mechanics extension to phase space cannot. Instead, a rather different set of formalisms and notation are used in the analogous concept called quantum state space. The analog of a "point particle" becomes a single point in 
+  
+    
+      
+        
+          C
+        
+        
+          
+            P
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \mathbb {C} \mathbf {P} ^{1}}
+  
+, the complex projective line, also known as the Bloch sphere. It is complex, because a quantum-mechanical wave function has a complex phase; it is projective because the wave-function is normalized to unit probability.  That is, given a wave-function 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ one is free to normalize it by the total probability 
+  
+    
+      
+        ∫
+        
+          ψ
+          
+            ∗
+          
+        
+        ψ
+      
+    
+    {\textstyle \int \psi ^{*}\psi }
+  
+, thus making it projective.

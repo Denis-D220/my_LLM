@@ -1,0 +1,67 @@
+Laboratory Virtual Instrument Engineering Workbench (LabVIEW) is a graphical system design and development platform produced and distributed by National Instruments, based on a programming environment that uses a visual programming language. It is widely used for data acquisition, instrument control, and industrial automation. It provides tools for designing and deploying complex test and measurement systems.
+The visual (aka graphical) programming language is called "G" (not to be confused with G-code). It is a dataflow language originally developed by National Instruments. LabVIEW is supported on a variety of operating systems (OSs), including macOS and other versions of Unix and Linux, as well as Microsoft Windows.
+The latest versions of LabVIEW are LabVIEW 2024 Q3 (released in July 2024) and LabVIEW NXG 5.1 (released in January 2021). National Instruments released the free for non-commercial use LabVIEW and LabVIEW NXG Community editions on April 28, 2020.
+
+Dataflow programming
+
+The programming paradigm used in the LabVIEW "G" language is based on data availability. If there is enough data available to a function, it will execute. The execution flow is determined by the structure of a graphical block diagram (the LabVIEW-source code) on which the programmer places nodes and connects them by drawing wires. A node can be a control, indicator, structure, function, or recursively, another block diagram. An example of a simple four-node block diagram is two controls and an indicator wired to the addition function, causing the indicator to display the sum of the two controls. The wires connecting nodes propagate data as variables, and any node can execute as soon as all its input variables (data) become available. Since this might be the case for multiple nodes simultaneously, LabVIEW can conceptually execute in parallel. Multi-processing and multi-threading hardware is exploited automatically by the built-in scheduler, which multiplexes multiple OS threads over the nodes ready for execution.
+
+Graphical programming
+
+LabVIEW integrates the creation of user interfaces (termed front panels) into the program development cycle. LabVIEW programs are collections of one or more virtual instruments (VIs). Each VI has three components, a front panel, back panel, and connector panel, all composed of nodes and wires represented graphically to the user. The front panel is built using controls and indicators. Controls are inputs, they allow a user to supply information to the VI. Indicators are outputs, they indicate or display the results based on the inputs given to the VI. The back panel consists of a block diagram containing the graphical source code. All of the objects placed on the front panel will appear in the back panel block diagram as terminals. The block diagram also contains structures and functions, chosen from a Functions palette, which perform operations on controls and supply data to indicators. The connector panel has terminals whose wires go to or come from nodes in the front and back panels, and is used to represent the VI within the back panel of upstream (calling) VIs and downstream (called) VIs to which it might be connected.
+There are two ways to run a VI. It can be run by itself as a program, with the front panel serving as a user interface. Alternatively, it can be treated as a node that is dropped onto the block diagram of another VI and wired to its nodes through the connector panel. In that case it runs as a subroutine within a larger program, and the front panel controls the inputs and outputs of the VI node. Thus, each VI can be easily tested as a stand-alone program before being embedded as a subroutine into a larger program.
+The "G" graphical approach allows non-programmers to easily build programs by dragging and dropping virtual representations of lab equipment with which they are already familiar. The LabVIEW programming environment includes examples and documentation to guide and simplify the creation of small applications. As with all introductory programming guides, the ease of construction of working "G" programs may cause the programmer to underestimate the expertise needed for high-quality "G" programming. For complex algorithms or large-scale code, a programmer must possess extensive knowledge of the special LabVIEW syntax and the topology of its memory management. The most advanced LabVIEW development systems offer the ability to build stand-alone applications. Furthermore, it is possible to create distributed applications that communicate using a simple client–server model which takes advantage of the inherently parallel nature of "G".
+
+Common application design patterns
+Applications in LabVIEW are typically designed using well-known architectures known as design patterns. The most common design patterns for graphical LabVIEW applications are listed in the table below.
+
+Features and Resources
+
+Interfacing to devices
+LabVIEW includes extensive support for interfacing to instruments, cameras, and other devices. Users interface to hardware by either writing direct bus commands (USB, GPIB, Serial) or using high-level, device-specific drivers that provide native "G" function nodes for controlling the device. National Instruments makes thousands of device drivers available for download on their Instrument Driver Network (IDNet).
+LabVIEW has built-in support for other National Instruments products, such as the CompactDAQ and CompactRIO hardware platforms and Measurement and Automation eXplorer (MAX) and Virtual Instrument Software Architecture (VISA) toolsets.
+
+Code compiling and execution
+LabVIEW includes a compiler that translates "G" code into native code for supported CPU platforms. The graphical code is converted into Dataflow Intermediate Representation, and then translated into chunks of executable machine code by a compiler based on LLVM. These code chunks are called by the "G" run-time engine, providing for fast, high-performance native  execution of the graphical code. The LabVIEW syntax is strictly enforced during the editing process, and when "G" code is run or saved, the compiler is automatically invoked. "G" code is saved to a single binary file that contains both the source and executable code. Execution is controlled by the run-time engine, which contains some pre-compiled code to perform common tasks defined in the "G" language. The run-time engine manages execution flow, and provides a consistent interface to supported operating systems, graphic systems and hardware components. The use of a portable run-time environment makes the source code files portable across supported platforms. LabVIEW programs are slower than equivalent compiled C code, although it is often possible to mitigate speed issues with program optimizations.
+
+Large libraries
+LabVIEW includes a large number of libraries containing functions for data acquisition, signal generation, mathematics, statistics, signal conditioning, analysis, integration, filtering, and other specialized abilities such as data capture from hardware sensors. In addition, it includes MathScript, a text-based programming component with built-in functions for signal processing, analysis, and mathematics. MathScript can be integrated with graphical programming using script nodes and uses a syntax that is generally compatible with MATLAB.
+
+Parallel programming
+LabVIEW is an inherently concurrent language, so it is very easy to program multiple tasks that are performed in parallel via multithreading, for example by drawing two or more parallel while loops and connecting them to two separate nodes. This provides a great benefit for test system automation, where it is common practice to run processes like test sequencing, data recording, and hardware interfacing in parallel.
+
+Ecosystem
+Due to the longevity and popularity of the LabVIEW platform and the ability for users to extend its functions, a large ecosystem of third-party add-ons has developed via contributions from the community. Most of these add-ons are available for direct download and installation into LabVIEW using the VI Package Manager (VIPM), the official package manager for LabVIEW add-ons. National Instruments also hosts a marketplace for both free and paid LabVIEW add-ons, called the NI Tools Network.
+
+User community
+There is a low-cost LabVIEW Student Edition aimed at educational institutions for learning purposes. There is also an active community of LabVIEW users who communicate through several electronic mailing lists (email groups) and Internet forums.
+
+Home Bundle Edition
+National Instruments provides a low cost LabVIEW Home Bundle Edition.
+
+Community Edition
+National Instruments provides a free-for-non-commercial use version called LabVIEW Community Edition. This version includes everything in the Professional Editions of LabVIEW, has no watermarks, and includes the LabVIEW NXG Web Module for non-commercial use. These editions may also be used by K-12 schools.
+
+Criticism
+LabVIEW is a proprietary product of National Instruments. Unlike common programming languages such as C or Fortran, LabVIEW is not managed or standardized by any third-party standards committee. 
+
+Non-textual
+Since the "G" language is non-textual, common software tools such as versioning, side-by-side (or diff) comparison, and version code change tracking cannot be applied in the same manner as for textual programming languages. There are, however, some source code control (versioning) tools that do enable code comparison and merging, such as subversion, CVS and Perforce.
+
+Release history
+The first release of LabVIEW, 1.0, was released in late October 1986, initially only for the Apple Macintosh. The developers originally planned to target the IBM PC, due to its greater popularity, but decided it would be faster to target the Macintosh for an initial prototype; in the process of developing it, they realised that an IBM PC version would not be feasible, until such time as the PC platform gained a proper windowing environment.
+In 2005, starting with LabVIEW 8.0, major versions are released around the first week of August, to coincide with the annual National Instruments conference NI Week, and followed by a bug-fix release the following February.
+In 2009, National Instruments began naming releases after the year in which they are released. A bug-fix is termed a Service Pack, for example, the 2009 service pack 1 was released in February 2010.
+In 2017, National Instruments moved the annual conference to May and released LabVIEW 2017 alongside a completely redesigned LabVIEW NXG 1.0 built on Windows Presentation Foundation (WPF).
+
+Repositories and libraries
+OpenG and LAVA Code Repository (LAVAcr) serve as repositories for a wide range of Open Source LabVIEW applications and libraries. SourceForge has LabVIEW listed as one of the possible languages in which code can be written.
+VI Package Manager has become the standard package manager for LabVIEW libraries. It is very similar in purpose to Ruby's RubyGems and Perl's CPAN, although it provides a graphical user interface similar to the Synaptic Package Manager. VI Package Manager provides access to a repository of the OpenG (and other) libraries for LabVIEW.
+Tools exist to convert MathML into "G" code.
+
+Related software
+National Instruments also offers Measurement Studio, a product that offers many of the test, measurement, and control abilities of LabVIEW as a set of classes for use with Microsoft Visual Studio. This allows developers to harness some of LabVIEW's strengths within the text-based .NET Framework. National Instruments also offers LabWindows/CVI as an alternative for ANSI C programmers.
+When applications need sequencing, users often use LabVIEW with the National Instruments TestStand test management software.
+The Ch interpreter is a C/C++ interpreter that can be embedded in LabVIEW for scripting.
+DSP Robotics' FlowStone DSP also uses a form of graphical programming similar to LabVIEW but is limited to the robotics industry.
+LabVIEW has a direct node with modeFRONTIER, a multidisciplinary and multi-objective optimization and design environment, written to allow coupling to almost any computer-aided engineering tool. Both can be part of the same process workflow description and can be virtually driven by the optimization technologies available in modeFRONTIER.

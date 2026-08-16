@@ -1,0 +1,157 @@
+PROBABILITY AND DISCRETE MATHEMATICS: COUNTING, CHANCE, AND STRUCTURE
+
+Discrete mathematics studies objects that come in separate, countable pieces rather than continuous quantities: integers, sets, graphs, logical statements, finite structures, and algorithms. Probability studies uncertainty, assigning numerical measures to events whose outcomes are not determined in advance. The two subjects are joined at the hip. Most elementary probability is counting done carefully, and most analysis of algorithms involves both combinatorial structure and probabilistic behavior over random inputs.
+
+Together they form the mathematical foundation of computer science, cryptography, statistics, operations research, information theory, and much of modern data analysis. Where calculus describes continuous change, discrete mathematics describes systems built from distinguishable parts, and probability describes what happens when those parts behave unpredictably.
+
+PART ONE: SETS, LOGIC, AND PROOF
+
+SETS AND SET OPERATIONS
+
+A set is an unordered collection of distinct objects called elements. Membership is written x is in A. Sets may be given by listing, as in {2, 3, 5, 7}, or by a defining property, as in the set of all x such that x is a prime less than 10. Order and repetition carry no meaning: {1, 2, 2, 3} and {3, 2, 1} denote the same set.
+
+Basic operations combine sets. The union of A and B contains every element in either. The intersection contains every element in both. The difference A minus B contains the elements of A not in B. The complement of A contains everything in the universal set not in A. The symmetric difference contains elements in exactly one of the two sets.
+
+Two identities deserve particular attention because they recur throughout logic and computing. De Morgan's laws state that the complement of a union equals the intersection of the complements, and the complement of an intersection equals the union of the complements. Distribution states that A intersected with the union of B and C equals the union of A-with-B and A-with-C, and the dual statement with the operations exchanged.
+
+The power set of A is the set of all subsets of A, including the empty set and A itself. If A has n elements, its power set has 2^n elements, because each element is independently either included or excluded. This doubling is the simplest instance of exponential growth from binary choice, and it explains why exhaustive search over subsets becomes infeasible so quickly.
+
+The Cartesian product of A and B is the set of ordered pairs with first component from A and second from B. Unlike the set operations above, this one respects order, and its size is the product of the sizes. Cartesian products model tables, coordinate systems, and the state spaces of combined systems.
+
+Cardinality measures set size. Two sets have the same cardinality when a bijection exists between them. Finite cardinalities behave as expected. Infinite ones do not: the integers, the even integers, and the rational numbers all have the same cardinality, called countable, because each can be listed in a sequence that eventually reaches any given element. The real numbers cannot be so listed, a fact established by Cantor's diagonal argument, and are therefore strictly larger. This distinction between countable and uncountable infinity has direct computational consequences, since the set of possible programs is countable while the set of possible functions from integers to integers is not, which guarantees that most functions are not computable.
+
+PROPOSITIONAL AND PREDICATE LOGIC
+
+A proposition is a statement with a definite truth value. Connectives build compound propositions: negation, conjunction, disjunction, implication, and biconditional. Truth tables define each connective exhaustively by listing outputs for every combination of inputs.
+
+Implication causes the most difficulty. The statement "if P then Q" is false only when P is true and Q is false; it is true in all other cases, including when P is false. This convention makes vacuously true statements possible, such as "every element of the empty set is purple," and while it can feel counterintuitive, any other convention breaks the algebra of logic in worse ways.
+
+Related conditionals must be distinguished. The converse of "if P then Q" is "if Q then P" and is not equivalent. The inverse is "if not P then not Q" and is likewise not equivalent. The contrapositive is "if not Q then not P" and is equivalent, which is why proof by contraposition is legitimate.
+
+A tautology is true under every assignment of truth values; a contradiction is false under every assignment; a contingency is neither. Logical equivalence means two expressions have identical truth tables, and the standard equivalences allow expressions to be simplified in the same mechanical way that algebraic expressions are.
+
+Predicate logic extends propositional logic with variables and quantifiers. The universal quantifier asserts that a predicate holds for every element of a domain; the existential quantifier asserts that it holds for at least one. Negation exchanges them: the negation of "for all x, P(x)" is "there exists x with not P(x)". Nested quantifiers are order-sensitive, and reversing them changes the claim substantially. "For every real number there is a larger one" is true; "there is a real number larger than every real number" is false, though the two differ only in quantifier order.
+
+METHODS OF PROOF
+
+Direct proof assumes the hypothesis and derives the conclusion through valid steps. To show that the sum of two even integers is even, write them as 2a and 2b, add to get 2(a + b), and observe that the result has the required form.
+
+Proof by contraposition proves "if not Q then not P" instead of "if P then Q", exploiting their equivalence. This helps when the negated conclusion is more tractable than the original hypothesis. To show that if n^2 is even then n is even, assume n is odd, write n = 2k + 1, and compute n^2 = 4k^2 + 4k + 1, which is odd.
+
+Proof by contradiction assumes the negation of the desired conclusion and derives an impossibility. The classical example shows that the square root of two is irrational: assume it equals a fully reduced fraction p/q, square both sides to get p^2 = 2q^2, conclude that p is even, substitute p = 2r to obtain q^2 = 2r^2, conclude that q is also even, and contradict the assumption that the fraction was in lowest terms.
+
+Proof by induction establishes statements indexed by natural numbers. The base case verifies the statement for the smallest index. The inductive step assumes the statement for an arbitrary n and proves it for n + 1. Together these establish the statement for all n at or above the base. Strong induction assumes the statement for all values up to n rather than only for n, which is convenient when a recursive structure divides a problem into several smaller pieces of unpredictable size.
+
+A standard induction proves that the sum of the first n positive integers equals n(n + 1)/2. The base case gives 1 = 1·2/2. Assuming the formula for n, adding n + 1 to both sides yields n(n+1)/2 + (n+1), which factors as (n+1)(n+2)/2, exactly the formula with n replaced by n + 1.
+
+Proof by exhaustion checks every case when the number of cases is finite and manageable. Counterexamples disprove universal claims and require only a single instance, which is why disproving a general statement is often far easier than proving one.
+
+RELATIONS AND FUNCTIONS
+
+A relation on a set is a subset of the Cartesian product, specifying which pairs are related. Important properties include reflexivity, where every element relates to itself; symmetry, where a relation between x and y implies one between y and x; antisymmetry, where relations in both directions force equality; and transitivity, where relations from x to y and y to z imply one from x to z.
+
+An equivalence relation is reflexive, symmetric, and transitive. It partitions a set into disjoint equivalence classes, and every partition arises from exactly one equivalence relation. Congruence modulo n is the canonical example, grouping integers by remainder.
+
+A partial order is reflexive, antisymmetric, and transitive. Divisibility on the positive integers and subset inclusion on a power set are partial orders in which some pairs are incomparable. A total order additionally requires every pair to be comparable, as with the usual ordering of numbers. Topological sorting extends a partial order to a total one, which is exactly what a build system does when scheduling tasks that have dependency constraints.
+
+A function assigns exactly one output to each input. It is injective when distinct inputs give distinct outputs, surjective when every element of the codomain is attained, and bijective when both. Bijections are precisely the invertible functions, and their existence is the criterion for two sets having equal cardinality.
+
+The pigeonhole principle states that placing n items into m containers with n greater than m forces some container to hold at least two items. Despite its triviality it proves substantial results: among any thirteen people two share a birth month; in any group of n people at least two have the same number of acquaintances within the group; any lossless compression scheme must expand some inputs, since no injection exists from a larger set into a smaller one.
+
+PART TWO: COMBINATORICS
+
+COUNTING PRINCIPLES
+
+The rule of product states that if one choice can be made in m ways and an independent second choice in n ways, the combined choice can be made in m·n ways. The rule of sum states that if two alternatives are mutually exclusive with m and n options, the total is m + n. Most counting problems reduce to applying these two rules in the correct combination.
+
+A permutation is an ordered arrangement. The number of arrangements of n distinct objects is n factorial. The number of ordered selections of k objects from n is n!/(n - k)!, written P(n, k). A combination is an unordered selection, and the number of k-subsets of an n-set is the binomial coefficient C(n, k) = n!/(k!(n - k)!). The relationship between them is that each combination corresponds to k! permutations, which is why the permutation count divided by k! yields the combination count.
+
+The binomial theorem states that (x + y)^n expands as the sum over k of C(n, k)·x^(n-k)·y^k. The coefficients form Pascal's triangle, in which each entry is the sum of the two above it, reflecting the identity C(n, k) = C(n-1, k-1) + C(n-1, k). Combinatorially this identity says that every k-subset either contains a particular fixed element or does not.
+
+Arrangements with repetition allow n^k sequences of length k from n symbols, since each position is chosen independently. Permutations of a multiset with repeated elements divide by the factorials of the repetition counts, so the word MISSISSIPPI with eleven letters comprising one M, four I, four S, and two P has 11!/(1!·4!·4!·2!) distinct arrangements. Combinations with repetition, sometimes called the stars and bars problem, count the ways to distribute k identical items into n distinct categories as C(n + k - 1, k).
+
+Inclusion-exclusion corrects for overcounting when sets overlap. For two sets the size of the union is the sum of the sizes minus the size of the intersection. For three sets, single intersections are subtracted and the triple intersection added back. The general pattern alternates signs across the sizes of all intersections. Derangements, permutations leaving no element in its original position, are counted this way and their number approaches n!/e, so the probability that a random permutation is a derangement approaches about 0.368 regardless of n.
+
+RECURRENCE RELATIONS
+
+A recurrence defines each term of a sequence in terms of earlier ones. The Fibonacci recurrence F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1 is the standard example. Linear homogeneous recurrences with constant coefficients are solved by substituting a geometric trial solution, which produces a characteristic polynomial whose roots determine the general solution. Initial conditions fix the arbitrary constants. For the Fibonacci recurrence the characteristic roots are the golden ratio and its conjugate, giving a closed form in which the golden ratio term dominates and the ratio of consecutive Fibonacci numbers converges to approximately 1.618.
+
+Recurrences also describe algorithm running times. Divide-and-conquer algorithms satisfy recurrences of the form T(n) = a·T(n/b) + f(n), where a subproblems of size n/b are solved and f(n) accounts for splitting and combining. The master theorem resolves the common cases: merge sort with a = 2, b = 2, and f(n) linear gives n log n; binary search with a = 1, b = 2, and constant f gives log n.
+
+GRAPH THEORY
+
+A graph consists of vertices and edges connecting pairs of vertices. Graphs model road networks, social connections, circuit layouts, dependency structures, molecules, state machines, and communication systems. Edges may be undirected or directed, weighted or unweighted, and multiple edges or self-loops may be permitted depending on the variant.
+
+The degree of a vertex counts its incident edges. The handshaking lemma states that the sum of all degrees equals twice the number of edges, since each edge contributes to two degrees. It follows immediately that the number of vertices of odd degree is even.
+
+A path is a sequence of distinct vertices joined by edges; a cycle returns to its start. A graph is connected when a path exists between every pair of vertices. Components are the maximal connected pieces. A tree is a connected acyclic graph, and it has exactly one fewer edge than it has vertices, with a unique path between any two vertices. Adding any edge to a tree creates exactly one cycle; removing any edge disconnects it.
+
+Eulerian paths traverse every edge exactly once. Such a path exists in a connected graph precisely when the number of odd-degree vertices is zero or two, a result originating in Euler's analysis of the bridges of Königsberg and the historical starting point of the subject. Hamiltonian paths visit every vertex exactly once, and despite the similar phrasing no comparably simple criterion is known; deciding Hamiltonicity is NP-complete, which is a sharp illustration of how superficially similar problems can differ enormously in difficulty.
+
+Standard algorithms operate on graphs. Breadth-first search explores level by level and finds shortest paths in unweighted graphs. Depth-first search explores as far as possible before backtracking and underlies cycle detection, topological sorting, and the identification of strongly connected components. Dijkstra's algorithm finds shortest paths with nonnegative weights by repeatedly finalizing the nearest unfinalized vertex. Kruskal's and Prim's algorithms build minimum spanning trees, connecting all vertices at least total cost, which models network construction under budget constraints.
+
+Graph coloring assigns labels to vertices so that adjacent vertices differ. The minimum number required is the chromatic number. Applications include exam scheduling, where conflicting exams must not share a time slot, and register allocation in compilers, where variables live simultaneously cannot share a register. Planar graphs, drawable without edge crossings, satisfy Euler's formula relating vertices, edges, and faces, and require at most four colors, a result whose proof famously required computer assistance.
+
+PART THREE: PROBABILITY
+
+FOUNDATIONS
+
+A random experiment has an uncertain outcome. The sample space is the set of all possible outcomes, and an event is a subset of the sample space. Probability assigns to each event a number between zero and one, subject to three axioms: probabilities are nonnegative, the probability of the entire sample space is one, and the probability of a union of mutually exclusive events is the sum of their probabilities.
+
+When outcomes are equally likely, the probability of an event equals the number of favorable outcomes divided by the total number of outcomes, which reduces probability to counting. Rolling two fair dice yields 36 equally likely ordered outcomes; six of them sum to seven, giving probability 6/36 or 1/6. The most common error in such problems is treating unequally likely composite outcomes as equally likely, for instance assuming that the eleven possible sums from two dice each have probability 1/11.
+
+The complement rule states that the probability of an event not occurring is one minus the probability that it does, and it is frequently easier to compute. The probability of at least one success in n independent trials is best found as one minus the probability of no successes. The addition rule for non-exclusive events subtracts the intersection to avoid double counting, mirroring inclusion-exclusion.
+
+CONDITIONAL PROBABILITY AND INDEPENDENCE
+
+The conditional probability of A given B is the probability of both divided by the probability of B, defined when the latter is nonzero. It represents the updated likelihood of A once B is known to have occurred, effectively restricting the sample space to B.
+
+Events are independent when conditioning changes nothing, equivalently when the probability of both equals the product of the individual probabilities. Independence is an assumption about the world, not a mathematical convenience, and assuming it wrongly is among the most consequential errors in applied probability. Correlated failures in engineered systems, correlated defaults in financial portfolios, and correlated errors in redundant sensors have each produced serious real-world consequences precisely because independence was assumed where a common cause existed.
+
+The law of total probability decomposes an event across a partition: the probability of A equals the sum over each partition element of the probability of A given that element times the probability of that element. This is how probabilities are computed in staged experiments and tree diagrams.
+
+Bayes' theorem reverses conditioning. The probability of a hypothesis given evidence equals the probability of the evidence given the hypothesis, times the prior probability of the hypothesis, divided by the total probability of the evidence. Its practical importance is enormous and its misapplication is widespread.
+
+Consider a diagnostic test with 99 percent sensitivity and 95 percent specificity applied to a condition present in one person per thousand. Among 100,000 people, 100 have the condition and about 99 test positive. Of the 99,900 without it, five percent, or about 4,995, test positive falsely. Total positives number about 5,094, of whom 99 actually have the condition, giving a positive predictive value near two percent. The test is accurate in the ordinary sense yet a positive result still leaves the condition unlikely, because the base rate is low. Neglecting this base rate is a well-documented error among professionals as well as laypeople, and it is the reason screening programs are targeted at higher-prevalence populations.
+
+RANDOM VARIABLES AND DISTRIBUTIONS
+
+A random variable assigns a number to each outcome. Discrete random variables take countably many values and are described by a probability mass function. Continuous random variables take values in intervals and are described by a probability density function, whose integral over a range gives the probability of falling in that range. For continuous variables the probability of any single exact value is zero, which surprises people until they notice that the same is true of the length of any single point on a ruler.
+
+Expected value is the probability-weighted average, computed as the sum of value times probability for discrete variables or the corresponding integral for continuous ones. It is linear: the expectation of a sum equals the sum of expectations regardless of dependence, which makes it a remarkably robust tool. Variance measures spread as the expected squared deviation from the mean, and standard deviation is its square root, restored to the original units. Variance adds across independent variables but not across dependent ones, where covariance terms appear.
+
+Several distributions describe recurring situations. The Bernoulli distribution models a single trial with two outcomes. The binomial distribution counts successes in a fixed number of independent identical trials, with mean np and variance np(1-p). The geometric distribution counts trials until the first success and is memoryless, meaning past failures do not improve future prospects. The Poisson distribution models counts of rare events in a fixed interval when events occur independently at a constant average rate, with mean and variance both equal to that rate; it describes arrivals at a service counter, decay events, and defects per unit area. The uniform distribution spreads probability evenly across an interval. The exponential distribution models waiting times between Poisson events and is likewise memoryless. The normal distribution, with its symmetric bell shape, describes measurement error, aggregate effects of many small independent contributions, and the approximate behavior of sample means.
+
+LIMIT THEOREMS
+
+The law of large numbers states that the sample mean of independent identically distributed random variables converges to the true mean as the sample grows. It justifies estimating unknown quantities by averaging repeated observations, and it explains why insurance and casinos are viable businesses despite the unpredictability of any individual case.
+
+The central limit theorem is stronger and more surprising. The distribution of the standardized sample mean approaches a normal distribution as sample size grows, almost regardless of the shape of the underlying distribution, provided it has finite variance. This is why the normal distribution appears so widely and why confidence intervals and hypothesis tests based on normality work even when the raw data are visibly non-normal. The convergence is not instantaneous, and heavily skewed populations or heavy tails require larger samples before the approximation is trustworthy.
+
+The law of large numbers is often misremembered as a claim that deviations get corrected. They do not. In a sequence of fair coin flips, an early excess of heads is not compensated by a later excess of tails; it is merely diluted as the denominator grows. Expecting compensation is the gambler's fallacy, and it persists because the correct statement, that the proportion converges while the absolute difference typically grows, is genuinely counterintuitive.
+
+MARKOV CHAINS AND STOCHASTIC PROCESSES
+
+A Markov chain is a sequence of states in which the next state depends only on the current one, not on the full history. Transition probabilities are collected into a matrix whose rows sum to one. Multiplying a state distribution by this matrix advances the system one step, and raising the matrix to a power advances it many steps at once. Under mild conditions the distribution converges to a stationary distribution independent of the starting point, computable as the eigenvector associated with eigenvalue one. Markov chains model queueing systems, text generation, board games, population dynamics, and the link-following model underlying early web search ranking.
+
+NUMBER THEORY AND ITS APPLICATIONS
+
+Divisibility, primes, and modular arithmetic constitute the number-theoretic core of discrete mathematics. The fundamental theorem of arithmetic states that every integer greater than one factors uniquely into primes up to ordering. The Euclidean algorithm computes greatest common divisors efficiently by repeated remainder-taking and extends to express that divisor as an integer combination of the inputs, which is what makes modular inverses computable.
+
+Modular arithmetic works with remainders. Two integers are congruent modulo n when they leave the same remainder on division by n. Addition, subtraction, and multiplication respect congruence; division does not in general, requiring a modular inverse which exists only when the divisor is coprime to the modulus. Fermat's little theorem and Euler's theorem describe how exponentiation behaves modulo a prime or a composite, and they make modular exponentiation predictable.
+
+These results are not merely abstract. Public-key cryptography rests directly on them: encryption and decryption are modular exponentiations, and security rests on the practical difficulty of factoring large integers or computing discrete logarithms while the corresponding forward operations remain fast. Hash functions, error-correcting codes, checksum digits on identification numbers, and pseudorandom number generators all use modular arithmetic as their computational substrate.
+
+COMPLEXITY AND THE LIMITS OF COMPUTATION
+
+Algorithm analysis measures how resource use grows with input size. Big-O notation gives an upper bound on growth rate, discarding constants and lower-order terms because they matter less as inputs grow. Common classes in increasing order are constant, logarithmic, linear, linearithmic, quadratic, cubic, exponential, and factorial. The practical significance is stark: an algorithm requiring 2^n steps becomes unusable somewhere around n equal to forty or fifty, while one requiring n log n remains practical for inputs of millions.
+
+The class P contains problems solvable in polynomial time. The class NP contains problems whose proposed solutions can be verified in polynomial time. Whether these classes are equal is the central open question of theoretical computer science. NP-complete problems, including satisfiability, the travelling salesman decision problem, graph coloring, and subset sum, are the hardest members of NP in the sense that a polynomial algorithm for any one would give one for all.
+
+Some problems are not merely hard but impossible. The halting problem, deciding whether an arbitrary program terminates on a given input, has no algorithmic solution. The proof is a diagonal argument in the same spirit as Cantor's: assume such a decider exists, construct a program that consults it about itself and does the opposite, and derive a contradiction. This is a genuine boundary rather than a gap in current knowledge, and it explains why static analysis tools must approximate, why perfect virus detection is unattainable, and why compilers cannot in general prove that arbitrary code terminates.
+
+WHY THESE SUBJECTS TRAVEL TOGETHER
+
+Discrete mathematics supplies the structures and probability supplies the behavior over them. Analyzing a randomized algorithm requires counting the configurations it might reach and averaging over them. Designing a network requires graph theory for the topology and probability for the traffic. Cryptography requires number theory for the operations and probability for assessing attack success. Machine learning requires combinatorics for model capacity and probability for generalization.
+
+The habits these subjects instill are as valuable as the specific results: define terms precisely, count carefully and check for double counting, distinguish what is guaranteed from what is likely, verify independence rather than assuming it, and remember that a base rate can overwhelm the apparent strength of any individual piece of evidence.

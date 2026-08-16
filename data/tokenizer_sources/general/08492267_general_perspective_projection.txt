@@ -1,0 +1,561 @@
+The General Perspective projection is a map projection. When the Earth is photographed from space, the camera records the view as a perspective projection. When the camera is aimed toward the center of the Earth, the resulting projection is called Vertical Perspective. When aimed in other directions, the resulting projection is called a Tilted Perspective.
+
+Perspective and usage
+The Vertical Perspective is related to the stereographic projection, gnomonic projection, and orthographic projection. These are all true perspective projections, meaning that they result from viewing the globe from some vantage point. They are also azimuthal projections, meaning that the projection surface is a plane tangent to the sphere. This results in correct directions from the center to all other points. The point of perspective, or vantage point, for the General Perspective Projection is at a finite distance. It depicts the earth as it appears from some relatively short distance above the surface, typically a few hundred to a few tens of thousands of kilometers.
+When tilted, the General Perspective projection, also called the tilted perspective projection, is not azimuthal (see second figure below); directions are not true from the central point, and the projection plane is not tangent to the sphere.
+Tilted perspectives are common from aerial and low orbit photography, generally taken from at a height measured in kilometers to hundreds of kilometers, rather than the hundreds or thousands of kilometers typical of a vertical perspective. However, Richard Edes Harrison pioneered the use of this projection on strategic maps showing military theaters during WWII.
+Some prominent Internet mapping tools also use the tilted perspective projection. For example, Google Earth and NASA World Wind show the globe as it appears from space. These applications permit a wide variety of interactive pan and zoom operations, including fly-through simulations, mimicking pictures or movies taken with a hand-held camera from an airplane or spacecraft.
+
+History
+Some forms of the projection were known to the Greeks and Egyptians 2,000 years ago. It was studied by several French and British scientists in the 18th and 19th centuries. However, the projection had little practical value at that time; computationally simpler nonperspective azimuthal projections could be used instead.
+Space exploration led to a renewed interest in the perspective projection. Now the concern was for a pictorial view from space, not for minimal distortion. A picture taken with a hand-held camera from the window of a spacecraft has a tilted vertical perspective, so the crewed Gemini and Apollo space missions sparked interest in this projection.
+
+Mathematics
+The formulas for the general perspective projection are derived using trigonometry.  They are written in terms of longitude (λ) and latitude (φ) on the sphere. Define the radius of the sphere R and the center point (and origin) of the projection (λ0, φ0).  The equations for the orthographic projection onto the (x, y) tangent plane reduce to the following:
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                R
+                
+                
+                  k
+                  ′
+                
+                cos
+                ⁡
+                φ
+                sin
+                ⁡
+                
+                  (
+                  
+                    λ
+                    −
+                    
+                      λ
+                      
+                        0
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                R
+                
+                
+                  k
+                  ′
+                
+                
+                  
+                    (
+                  
+                
+                cos
+                ⁡
+                
+                  φ
+                  
+                    0
+                  
+                
+                sin
+                ⁡
+                φ
+                −
+                sin
+                ⁡
+                
+                  φ
+                  
+                    0
+                  
+                
+                cos
+                ⁡
+                φ
+                cos
+                ⁡
+                
+                  (
+                  
+                    λ
+                    −
+                    
+                      λ
+                      
+                        0
+                      
+                    
+                  
+                  )
+                
+                
+                  
+                    )
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=R\,k'\cos \varphi \sin \left(\lambda -\lambda _{0}\right)\\y&=R\,k'{\big (}\cos \varphi _{0}\sin \varphi -\sin \varphi _{0}\cos \varphi \cos \left(\lambda -\lambda _{0}\right){\big )}\\\end{aligned}}}
+  
+
+where
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  k
+                  ′
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      d
+                      −
+                      R
+                    
+                    
+                      d
+                      −
+                      R
+                      cos
+                      ⁡
+                      c
+                    
+                  
+                
+              
+            
+            
+              
+                cos
+                ⁡
+                c
+              
+              
+                
+                =
+                sin
+                ⁡
+                
+                  φ
+                  
+                    0
+                  
+                
+                sin
+                ⁡
+                φ
+                +
+                cos
+                ⁡
+                
+                  φ
+                  
+                    0
+                  
+                
+                cos
+                ⁡
+                φ
+                cos
+                ⁡
+                
+                  (
+                  
+                    λ
+                    −
+                    
+                      λ
+                      
+                        0
+                      
+                    
+                  
+                  )
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}k'&={\frac {d-R}{d-R\cos c}}\\\cos c&=\sin \varphi _{0}\sin \varphi +\cos \varphi _{0}\cos \varphi \cos \left(\lambda -\lambda _{0}\right)\end{aligned}}}
+  
+
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ is the angular distance and 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ denotes the distance from the perspective point to the center of earth. It is positive in the direction of the center of the projection (for the “view from space”) and negative in the opposite direction. For the stereographic projection, 
+  
+    
+      
+        d
+        =
+        −
+        R
+      
+    
+    {\displaystyle d=-R}
+  
+, for the gnomonic projection, 
+  
+    
+      
+        d
+        =
+        0
+      
+    
+    {\displaystyle d=0}
+  
+, and for the orthographic projection, 
+  
+    
+      
+        d
+        =
+        ∞
+      
+    
+    {\displaystyle d=\infty }
+  
+.
+The inverse formulas are given by:
+
+  
+    
+      
+        
+          
+            
+              
+                φ
+              
+              
+                
+                =
+                arcsin
+                ⁡
+                
+                  (
+                  
+                    cos
+                    ⁡
+                    c
+                    sin
+                    ⁡
+                    
+                      φ
+                      
+                        0
+                      
+                    
+                    +
+                    
+                      
+                        
+                          y
+                          sin
+                          ⁡
+                          c
+                          cos
+                          ⁡
+                          
+                            φ
+                            
+                              0
+                            
+                          
+                        
+                        ρ
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+                λ
+              
+              
+                
+                =
+                
+                  λ
+                  
+                    0
+                  
+                
+                +
+                arctan
+                ⁡
+                
+                  (
+                  
+                    
+                      
+                        x
+                        sin
+                        ⁡
+                        c
+                      
+                      
+                        ρ
+                        cos
+                        ⁡
+                        c
+                        cos
+                        ⁡
+                        
+                          φ
+                          
+                            0
+                          
+                        
+                        −
+                        y
+                        sin
+                        ⁡
+                        c
+                        sin
+                        ⁡
+                        
+                          φ
+                          
+                            0
+                          
+                        
+                      
+                    
+                  
+                  )
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\varphi &=\arcsin \left(\cos c\sin \varphi _{0}+{\frac {y\sin c\cos \varphi _{0}}{\rho }}\right)\\\lambda &=\lambda _{0}+\arctan \left({\frac {x\sin c}{\rho \cos c\cos \varphi _{0}-y\sin c\sin \varphi _{0}}}\right)\end{aligned}}}
+  
+
+where
+
+  
+    
+      
+        
+          
+            
+              
+                ρ
+              
+              
+                
+                =
+                
+                  
+                    
+                      x
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      y
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                c
+              
+              
+                
+                =
+                arcsin
+                ⁡
+                
+                  
+                    
+                      P
+                      −
+                      
+                        
+                          1
+                          −
+                          
+                            
+                              
+                                
+                                  ρ
+                                  
+                                    2
+                                  
+                                
+                                (
+                                P
+                                +
+                                1
+                                )
+                              
+                              
+                                
+                                  R
+                                  
+                                    2
+                                  
+                                
+                                (
+                                P
+                                −
+                                1
+                                )
+                              
+                            
+                          
+                        
+                      
+                    
+                    
+                      
+                        
+                          
+                            R
+                            (
+                            P
+                            −
+                            1
+                            )
+                          
+                          ρ
+                        
+                      
+                      +
+                      
+                        
+                          ρ
+                          
+                            R
+                            (
+                            P
+                            −
+                            1
+                            )
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\rho &={\sqrt {x^{2}+y^{2}}}\\c&=\arcsin {\frac {P-{\sqrt {1-{\frac {\rho ^{2}(P+1)}{R^{2}(P-1)}}}}}{{\frac {R(P-1)}{\rho }}+{\frac {\rho }{R(P-1)}}}}\end{aligned}}}
+  
+
+If 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is negative and 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is greater than 
+  
+    
+      
+        R
+        (
+        P
+        −
+        1
+        )
+        
+          /
+        
+        P
+      
+    
+    {\displaystyle R(P-1)/P}
+  
+, 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ must be subtracted from 180° to place it in the proper quadrant. For computation of the inverse formulas the use of the two-argument atan2 form of the inverse tangent function (as opposed to atan) is recommended.  This ensures that the sign of the orthographic projection as written is correct in all quadrants.

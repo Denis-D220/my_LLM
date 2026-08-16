@@ -1,0 +1,160 @@
+Quasi-set theory is a formal mathematical theory for dealing with collections of objects, some of which may be indistinguishable from one another. Quasi-set theory is mainly motivated by the assumption that certain objects treated in quantum physics are indistinguishable and don't have individuality.
+
+Motivation
+The American Mathematical Society sponsored a 1974 meeting to evaluate the resolution and consequences of the 23 problems Hilbert proposed in 1900. An outcome of that meeting was a new list of mathematical problems, the first of which, due to Manin (1976, p. 36), questioned whether classical set theory was an adequate paradigm for treating collections of indistinguishable elementary particles in quantum mechanics. He suggested that such collections cannot be sets in the usual sense, and that the study of such collections required a "new language".
+The use of the term quasi-set follows a suggestion in da Costa's 1980 monograph Ensaio sobre os Fundamentos da Lógica (see da Costa and Krause 1994), in which he explored possible semantics for what he called "Schrödinger Logics". In these logics, the concept of identity is restricted to some objects of the domain, and has motivation in Schrödinger's claim that the concept of identity does not make sense for elementary particles (Schrödinger 1952). Thus in order to provide a semantics that fits the logic, da Costa submitted that "a theory of quasi-sets should be developed", encompassing "standard sets" as particular cases, yet da Costa did not develop this theory in any concrete way. To the same end and independently of da Costa, Dalla Chiara and di Francia (1993) proposed a theory of quasets to enable a semantic treatment of the language of microphysics. The first quasi-set theory was proposed by D. Krause in his PhD thesis, in 1990 (see Krause 1992).  A related physics theory, based on the logic of adding fundamental indistinguishability to equality and inequality, was developed and elaborated independently in the book The Theory of Indistinguishables by A. F. Parker-Rhodes.
+
+Summary of the theory
+We now expound Krause's (1992) axiomatic theory 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+, the first quasi-set theory; other formulations and improvements have since appeared. For an updated paper on the subject, see French and Krause (2010). Krause builds on the set theory ZFU, consisting of Zermelo-Fraenkel set theory with an ontology extended to include two kinds of urelements:
+
+m-atoms, whose intended interpretation is elementary quantum particles;
+M-atoms, macroscopic objects to which classical logic is assumed to apply.
+Quasi-sets (q-sets) are collections resulting from applying axioms, very similar to those for ZFU, to a basic domain composed of m-atoms, M-atoms, and aggregates of these. The axioms of 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+ include equivalents of extensionality, but in a weaker form, termed "weak extensionality axiom"; axioms asserting the existence of the empty set, unordered pair, union set, and power set; the axiom of separation; an axiom stating the image of a q-set under a q-function is also a q-set; q-set equivalents of the axioms of infinity, regularity, and choice. Q-set theories based on other set-theoretical frameworks are, of course, possible.
+
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+ has a primitive concept of quasi-cardinal, governed by eight additional axioms, intuitively standing for the quantity of objects in a collection. The quasi-cardinal of a quasi-set is not defined in the usual sense (by means of ordinals) because the m-atoms are assumed (absolutely) indistinguishable. Furthermore, it is possible to define a translation from the language of ZFU into the language of 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+ in such a way so that there is a 'copy' of ZFU in 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+. In this copy, all the usual mathematical concepts can be defined, and the 'sets' (in reality, the '
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+-sets') turn out to be those q-sets whose transitive closure contains no m-atoms.
+In 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+ there may exist q-sets, called "pure" q-sets, whose elements are all m-atoms, and the axiomatics of 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+ provides the grounds for saying that nothing in 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+ distinguishes the elements of a pure q-set from one another, for certain pure q-sets. Within the theory, the idea that there is more than one entity in x is expressed by an axiom stating that the quasi-cardinal of the power quasi-set of x has quasi-cardinal 2qc(x), where qc(x) is the quasi-cardinal of x (which is a cardinal obtained in the 'copy' of ZFU just mentioned).
+What exactly does this mean? Consider the level 2p of a sodium atom, in which there are six indiscernible electrons. Even so, physicists reason as if there are in fact six entities in that level, and not only one. In this way, by saying that the quasi-cardinal of the power quasi-set of x is 2qc(x) (suppose that qc(x) = 6 to follow the example), we are not excluding the hypothesis that there can exist six subquasi-sets of x that are 'singletons', although we cannot distinguish among them. Whether there are or not six elements in x is something that cannot be ascribed by the theory (although the notion is compatible with the theory). If the theory could answer this question, the elements of x would be individualized and hence counted, contradicting the basic assumption that they cannot be distinguished.
+In other words, we may consistently (within the axiomatics of 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+) reason as if there are six entities in x, but x  must be regarded as a collection whose elements cannot be discerned as individuals. Using quasi-set theory, we can express some facts of quantum physics without introducing symmetry conditions (Krause et al. 1999, 2005). As is well known, in order to express indistinguishability, the particles are deemed to be individuals, say by attaching them to coordinates or to adequate functions/vectors like |ψ>. Thus, given two quantum systems labeled |ψ1⟩ and |ψ2⟩ at the outset, we need to consider a function like |ψ12⟩ = |ψ1⟩|ψ2⟩ ± |ψ2⟩|ψ1⟩ (except for certain constants), which keep the quanta indistinguishable by permutations; the probability density of the joint system independs on which is quanta #1 and which is quanta #2. (Note that precision requires that we talk of "two" quanta without distinguishing them, which is impossible in conventional set theories.) In 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathfrak {Q}}}
+  
+, we can dispense with this "identification" of the quanta; for details, see Krause et al. (1999, 2005) and French and Krause (2006).
+Quasi-set theory is a way to operationalize Heinz Post's (1963) claim that quanta should be deemed indistinguishable "right from the start."

@@ -1,0 +1,155 @@
+{
+  "created_at_utc": "2026-08-13T01:53:39.677060+00:00",
+  "corpus_sha256": "2a2fd3331a52dad8940aa3e425d3b52435265c1d9c59b1b03f57288dd400f850",
+  "stats": {
+    "files_discovered": 107,
+    "documents_seen": 129,
+    "documents_selected": 139,
+    "large_documents_chunked": 26,
+    "chunks_created": 165,
+    "chunk_tails_merged": 0,
+    "chunks_skipped_too_short": 0,
+    "skipped_empty": 0,
+    "skipped_too_short": 0,
+    "skipped_too_long": 0,
+    "skipped_duplicate": 1,
+    "skipped_special_token_collision": 0,
+    "selected_characters": 8156061,
+    "selected_utf8_bytes": 8195738,
+    "selected_lines": 182417
+  },
+  "categories": {
+    "business_finance": {
+      "files_discovered": 5,
+      "documents_seen": 5,
+      "large_documents_chunked": 1,
+      "chunks_created": 6,
+      "documents_accepted_before_sampling": 10,
+      "documents_selected": 8,
+      "bytes_accepted_before_sampling": 522764,
+      "bytes_selected": 372263
+    },
+    "code": {
+      "files_discovered": 17,
+      "documents_seen": 39,
+      "large_documents_chunked": 7,
+      "chunks_created": 33,
+      "documents_accepted_before_sampling": 64,
+      "documents_selected": 10,
+      "bytes_accepted_before_sampling": 3040137,
+      "bytes_selected": 405927
+    },
+    "engineering": {
+      "files_discovered": 19,
+      "documents_seen": 19,
+      "large_documents_chunked": 3,
+      "chunks_created": 20,
+      "documents_accepted_before_sampling": 36,
+      "documents_selected": 14,
+      "bytes_accepted_before_sampling": 1848526,
+      "bytes_selected": 850721
+    },
+    "general": {
+      "files_discovered": 17,
+      "documents_seen": 17,
+      "large_documents_chunked": 3,
+      "chunks_created": 42,
+      "documents_accepted_before_sampling": 56,
+      "documents_selected": 36,
+      "bytes_accepted_before_sampling": 3721688,
+      "bytes_selected": 2401435
+    },
+    "humanities": {
+      "files_discovered": 7,
+      "documents_seen": 7,
+      "large_documents_chunked": 0,
+      "chunks_created": 0,
+      "documents_accepted_before_sampling": 7,
+      "documents_selected": 7,
+      "bytes_accepted_before_sampling": 378962,
+      "bytes_selected": 378962
+    },
+    "logical": {
+      "files_discovered": 8,
+      "documents_seen": 8,
+      "large_documents_chunked": 4,
+      "chunks_created": 13,
+      "documents_accepted_before_sampling": 17,
+      "documents_selected": 15,
+      "bytes_accepted_before_sampling": 1045941,
+      "bytes_selected": 979739
+    },
+    "mathematics": {
+      "files_discovered": 11,
+      "documents_seen": 11,
+      "large_documents_chunked": 3,
+      "chunks_created": 18,
+      "documents_accepted_before_sampling": 26,
+      "documents_selected": 14,
+      "bytes_accepted_before_sampling": 1517506,
+      "bytes_selected": 851697
+    },
+    "networking": {
+      "files_discovered": 5,
+      "documents_seen": 5,
+      "large_documents_chunked": 1,
+      "chunks_created": 3,
+      "documents_accepted_before_sampling": 7,
+      "documents_selected": 7,
+      "bytes_accepted_before_sampling": 266018,
+      "bytes_selected": 266018
+    },
+    "science": {
+      "files_discovered": 11,
+      "documents_seen": 11,
+      "large_documents_chunked": 1,
+      "chunks_created": 15,
+      "documents_accepted_before_sampling": 25,
+      "documents_selected": 16,
+      "bytes_accepted_before_sampling": 1471936,
+      "bytes_selected": 1020249
+    },
+    "software": {
+      "files_discovered": 7,
+      "documents_seen": 7,
+      "large_documents_chunked": 3,
+      "chunks_created": 15,
+      "documents_accepted_before_sampling": 19,
+      "documents_selected": 12,
+      "bytes_accepted_before_sampling": 1088847,
+      "bytes_selected": 668727
+    }
+  },
+  "weights": {
+    "general": 0.3,
+    "logical": 0.12,
+    "mathematics": 0.1,
+    "science": 0.12,
+    "engineering": 0.1,
+    "software": 0.08,
+    "code": 0.05,
+    "networking": 0.04,
+    "business_finance": 0.04,
+    "humanities": 0.05
+  },
+  "filters": {
+    "min_chars": 100,
+    "max_chars": 100000,
+    "chunk_target_chars": 75000,
+    "min_tail_chars": 10000,
+    "oversized_documents_chunked": true,
+    "exact_deduplication": true,
+    "special_token_collision_rejected": true
+  },
+  "rejected_documents": [
+    {
+      "category": "code",
+      "source_file": "C:\\Users\\Daniel\\OneDrive\\Documents\\Proyects\\my_LLM-main\\data\\tokenizer_sources\\code\\Python_programming_languageTyping.txt",
+      "source_record": null,
+      "source_chunk": null,
+      "reason": "duplicate",
+      "characters": 23691,
+      "duplicate_of_sha256": "2c85a02c44f17fce8924d1bb17b44b215d28d287823680482b9f96f82749dcbc"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+The Exner equation describes conservation of mass between sediment in the bed of a channel and sediment that is being transported. 
+ 
+It states that bed elevation increases (the bed aggrades) proportionally to the amount of sediment that drops out of transport, and conversely decreases (the bed degrades) proportionally to the amount of sediment that becomes entrained by the flow.
+It was developed by the Austrian meteorologist and sedimentologist Felix Maria Exner, from whom it derives its name.
+It is typically applied to sediment in a fluvial system such as a river. 
+The Exner equation states that the change in bed elevation, 
+  
+    
+      
+        η
+      
+    
+    {\displaystyle \eta }
+  
+, over time, 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+, is equal to one over the grain packing density, 
+  
+    
+      
+        
+          ε
+          
+            o
+          
+        
+      
+    
+    {\displaystyle \varepsilon _{o}}
+  
+, times the negative divergence of sediment flux, 
+  
+    
+      
+        
+          
+            q
+            
+              s
+            
+          
+        
+      
+    
+    {\displaystyle \mathbf {q_{s}} }
+  
+,
+
+  
+    
+      
+        
+          
+            
+              ∂
+              η
+            
+            
+              ∂
+              t
+            
+          
+        
+        =
+        −
+        
+          
+            1
+            
+              ε
+              
+                o
+              
+            
+          
+        
+        ∇
+        ⋅
+        
+          
+            q
+            
+              s
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial \eta }{\partial t}}=-{\frac {1}{\varepsilon _{o}}}\nabla \cdot \mathbf {q_{s}} }
+  
+
+The packing density 
+  
+    
+      
+        
+          ε
+          
+            o
+          
+        
+      
+    
+    {\displaystyle \varepsilon _{o}}
+  
+ can also be expressed as 
+  
+    
+      
+        (
+        1
+        −
+        
+          λ
+          
+            p
+          
+        
+        )
+      
+    
+    {\displaystyle (1-\lambda _{p})}
+  
+, where 
+  
+    
+      
+        
+          λ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \lambda _{p}}
+  
+ equals the bed porosity.
+Good values of 
+  
+    
+      
+        
+          ε
+          
+            o
+          
+        
+      
+    
+    {\displaystyle \varepsilon _{o}}
+  
+ for natural systems range from 0.45 to 0.75. A typical value for spherical grains is 0.64, as given by random close packing. An upper bound for close-packed spherical grains is 0.74048 (see sphere packing for more details); this degree of packing is extremely improbable in natural systems, making random close packing the more realistic upper bound on grain packing density.
+Often, for reasons of computational convenience and/or lack of data, the Exner equation is used in its one-dimensional form. This is generally done with respect to the downstream direction 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+, as one is typically interested in the downstream distribution of erosion and deposition though a river reach
+
+  
+    
+      
+        
+          
+            
+              ∂
+              η
+            
+            
+              ∂
+              t
+            
+          
+        
+        =
+        −
+        
+          
+            1
+            
+              ε
+              
+                o
+              
+            
+          
+        
+        
+          
+            
+              ∂
+              
+                
+                  q
+                  
+                    s
+                  
+                
+              
+            
+            
+              ∂
+              x
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\partial \eta }{\partial t}}=-{\frac {1}{\varepsilon _{o}}}{\frac {\partial {q_{s}}}{\partial x}}}
+  
+
+where 
+  
+    
+      
+        
+          q
+          
+            s
+          
+        
+      
+    
+    {\displaystyle q_{s}}
+  
+ is scalar sediment flux in the downstream direction.

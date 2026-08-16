@@ -1,0 +1,255 @@
+{
+  "created_at_utc": "2026-08-14T23:50:52.715239+00:00",
+  "started_at_utc": "2026-08-14T23:45:47.777367+00:00",
+  "duration_seconds": 304.937872,
+  "limits": {
+    "max_records": 100000,
+    "max_documents": null,
+    "resume": false
+  },
+  "orphan_shards_removed": [],
+  "stats": {
+    "shards_read": 2,
+    "records_seen": 100000,
+    "documents_accepted": 98578,
+    "documents_rejected": 1422,
+    "accepted_characters": 419824366,
+    "accepted_utf8_bytes": 422782346,
+    "acceptance_rate": 0.98578,
+    "rejected_by_reason": {
+      "control_characters": 116,
+      "duplicate_lines": 1050,
+      "keyword_wall": 103,
+      "language_script_mismatch": 72,
+      "replacement_characters": 80,
+      "secret_material": 1
+    }
+  },
+  "totals": {
+    "records_seen": 100000,
+    "documents_accepted": 98578,
+    "documents_rejected": 1422,
+    "accepted_characters": 419824366,
+    "accepted_utf8_bytes": 422782346,
+    "output_jsonl_bytes": 460253463,
+    "acceptance_rate": 0.98578,
+    "rejected_by_reason": {
+      "control_characters": 116,
+      "duplicate_lines": 1050,
+      "keyword_wall": 103,
+      "language_script_mismatch": 72,
+      "replacement_characters": 80,
+      "secret_material": 1
+    }
+  },
+  "rejected_samples": [
+    {
+      "reason": "replacement_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 9,
+      "url": "http://archive.cpiml.org/liberation/year_2002/april/article%20hindu%20rashtra.htm",
+      "characters": 12027,
+      "excerpt": "Beware, Men at Work: Hindu Rashtra under Construction!\nBeware, Men at Work: Hindu Rashtra under Construction!\nTEN YEARS after the shocking demolition of Babri Masjid in UP, the BJP has organised yet another crash course on applied Hindutva. The laboratory, this time around, has shifted to Gujarat, a"
+    },
+    {
+      "reason": "duplicate_lines",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 43,
+      "url": "http://frostmusic.net/forum/index.php?topic=3601.15",
+      "characters": 956,
+      "excerpt": "► Fanfare For The Common Man... Uploaded!! :0 Its ALIVE!\nFanfare For The Common Man... Uploaded!! :0 Its ALIVE!\n0 Members and 1 Guest are viewing this topic.\nRe: Fanfare For The Common Man... Uploaded!! :0 Its ALIVE!\nI'm amazed this is still alive, someone make a copy until you know who's estate fin"
+    },
+    {
+      "reason": "language_script_mismatch",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 196,
+      "url": "http://xn--c1adb8b7d.xn--p1ai/forum/masta-mix/421-enantat-golden-dragon-petropavlovskkamchatskiy/",
+      "characters": 11514,
+      "excerpt": "В апреле и мае по данному факту возбудили два уголовных дела о мошенничестве, которые позднее объединили в одно. У ярмарочных мошенников очень распространен сценарий.\nСогласно этому определению, заемщик тоже может потребовать вернуть себе часть процентов при досрочном погашении. И дело не только в е"
+    },
+    {
+      "reason": "language_script_mismatch",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 197,
+      "url": "http://xn--e1annh5b.xn--p1ai/help/5000-aspartame/941-zakazat-sp-deka-durabolin-novocherkassk/",
+      "characters": 8937,
+      "excerpt": "Рубль слегка снизился к бивалютной корзине в условиях легкого снижения нефти и относительного затишья на мировых рынках капитала. Пять минут занимайтесь кардио: быстрым шагом поднимайтесь в гору, поупражняйтесь на эллиптическом тренажёре или велотренажёре. С гарниром Известный способ изготовления га"
+    },
+    {
+      "reason": "replacement_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 219,
+      "url": "https://3bizhealthcare.com/shop/177445858028",
+      "characters": 2812,
+      "excerpt": "“Trusted Healthcare Solutions Delivering Quality Medicines With Care”\nTrusted Pharma & Healthcare Partner providing quality medicines, healthcare solutions and better career opportunities.\n3BIZ Heathcare Pvt Ltd. is corporate in 2017 with the motive to provide best quality medicines of Pharmaceutica"
+    },
+    {
+      "reason": "control_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 578,
+      "url": "https://buckscountyeducation.com/2025/01/middle-bucks-institute-of-technology-mbit-has-been-recognized-as-best-in-the-region/",
+      "characters": 1448,
+      "excerpt": "We are over­joyed to share that Middle Bucks Institute of Technology (MBIT) has been rec­og­nized as Best in the Region, earn­ing top hon­ors in FOUR cat­e­gories in the Bucks County Herald’s Best of the Region awards! Your unwa­ver­ing sup­port and votes have pro­pelled us to this incred­i­ble achi"
+    },
+    {
+      "reason": "duplicate_lines",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 589,
+      "url": "https://business.mashpeechamber.com/events/Search?from=11%2F22%2F2024&to=11%2F23%2F2024&mode=0&cid=6527&DateFilter=5",
+      "characters": 2246,
+      "excerpt": "Advertise on the next edition of Discovery Map!\nDiscovery Map of Falmouth, Mashpee, & Woods Hole is a well-known, brand-name tourist publication. This colorful map showcases restaurants, shops, activities, and accommodations. If you would like to market your business to tourists on 125,000 ...\nThis "
+    },
+    {
+      "reason": "duplicate_lines",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 834,
+      "url": "https://decoroomae.com/catalogue/decoroom-curated-cardoni-table-lamp-smoke/",
+      "characters": 907,
+      "excerpt": "When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures.\nWhen autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users,"
+    },
+    {
+      "reason": "keyword_wall",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 914,
+      "url": "https://donlichterman.com/heres-your-daily-outline-for-sustainable-action-now-highlighting-whats-happening-today-wednesday-july-9-2025/",
+      "characters": 51954,
+      "excerpt": "Maryland Terrapins The Maryland Terrapins men’s basketball team represents the University of Maryland in National Collegiate Athletic Association Division I competition. Maryland, a founding member of the Atlantic Coast Conference, left the ACC in 2014 to join the Big Ten Conference.\nPhiladelphia Fl"
+    },
+    {
+      "reason": "keyword_wall",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 915,
+      "url": "https://donlichterman.com/sustainable-action-now-your-daily-report-june-11-2025/",
+      "characters": 51684,
+      "excerpt": "Maryland Terrapins The Maryland Terrapins men’s basketball team represents the University of Maryland in National Collegiate Athletic Association Division I competition. Maryland, a founding member of the Atlantic Coast Conference, left the ACC in 2014 to join the Big Ten Conference.\nPhiladelphia Fl"
+    },
+    {
+      "reason": "duplicate_lines",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1004,
+      "url": "https://en.ejo.ch/newsroom-management/doubts-concerning-the-jacks-of-all-trades",
+      "characters": 8172,
+      "excerpt": "Doubts Concerning the “Jacks of All Trades”\nJudging from the declarations made during media conferences and the targets defined by top managers in the media industry, traditional newsrooms in the US and elsewhere are transforming themselves into fully “integrated ones” applying content to “multimedi"
+    },
+    {
+      "reason": "duplicate_lines",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1065,
+      "url": "https://fabfitfun.com/shop?category=New+Arrivals&product_link=DCO-WE-004",
+      "characters": 503,
+      "excerpt": "Shop the sale now through July 15th. No checkout required; everything in your cart will be automatically billed on July 16th.\nShop the sale now through July 15th. No checkout required; everything in your cart will be automatically billed on July 16th.\nShop the sale now through July 15th. No checkout"
+    },
+    {
+      "reason": "replacement_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1179,
+      "url": "https://furnittrends.com/articles/artificial-ivy-wall-decor-modern-interiors/",
+      "characters": 29195,
+      "excerpt": "In the world of interior design, the way we decorate our spaces speaks volumes about our personalities and lifestyles. Recently, artificial ivy wall decor has been making waves in contemporary aesthetics. This trend is not just about beautifying walls but weaves a narrative of nature and tranquility"
+    },
+    {
+      "reason": "replacement_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1180,
+      "url": "https://futurecar.ai/vehicle-comparison-tool",
+      "characters": 21562,
+      "excerpt": "Vehicle Comparison Tool 2026: Whoâ€™s Really Choosing Your Car?\nForget the glossy ads and the endless scroll of â€œexpertâ€� opinions splattered across your feed. In 2025, the act of choosing your next ride has become a high-stakes game of information warfare. The vehicle comparison toolâ€”marketed "
+    },
+    {
+      "reason": "language_script_mismatch",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1244,
+      "url": "https://giweb.io/clientes/cart.php?a=add&pid=103&language=ukranian",
+      "characters": 577,
+      "excerpt": "Перевірка доступності... Перевірка можливості переносу... Перевірка обраного домену...\nЯкщо домен був нещодавно зареєстрований, можливо, доведеться повторити спробу пізніше.\nВ якості альтернативи, ви можете виконати пошук, щоб зареєструвати цей домен.\nПеревірте введені дані і спробуйте ще раз.\nДайте"
+    },
+    {
+      "reason": "replacement_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1341,
+      "url": "https://historiadorioparatodos.com.br/",
+      "characters": 288712,
+      "excerpt": "Die Popularität von Betplay Casino in Deutschland wächst stetig dank der exklusiven Partnerschaften mit führenden Softwareanbietern.\nMit seinem vielfältigen Portfolio überzeugt das Betplay Casino in Deutschland Spieler mit unterschiedlichsten Vorlieben.\nDie Verfügbarkeit von Krypto-Zahlungen macht d"
+    },
+    {
+      "reason": "language_script_mismatch",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1384,
+      "url": "https://icenter-store.ru/catalog/aksessuary/dlya-mac/pitanie-i-kabeli-mac/aksessuary-storonnikh-brendov2/80761/",
+      "characters": 6346,
+      "excerpt": "string(43) \"Количество ядер Neural Engine\"\nstring(43) \"Количество ядер Neural Engine\"\nstring(62) \"Беспроводная сеть и сотовая связь\"\nstring(62) \"Беспроводная сеть и сотовая связь\"\nstring(67) \"Поддержка беспроводной зарядки AirPower\"\nstring(67) \"Поддержка беспроводной зарядки AirPower\"\nstring(75) \"Ко"
+    },
+    {
+      "reason": "keyword_wall",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1524,
+      "url": "https://judithcurry.com/2010/12/05/confidence-in-radiative-transfer-models/",
+      "characters": 1041015,
+      "excerpt": "Confidence in radiative transfer models - Climate Etc.\nThe calculation of atmospheric radiative fluxes is central to any argument related to the atmospheric greenhouse/Tyndall gas effect. Atmospheric radiative transfer models rank among the most robust components of climate model, in terms of having"
+    },
+    {
+      "reason": "language_script_mismatch",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1561,
+      "url": "https://kitty-stage.com/%EB%9D%BC%EC%98%A4%EC%8A%A4-%EC%97%AC%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "characters": 1276,
+      "excerpt": "라오스는 동남아시아의 숨겨진 보석으로, 비엔티안 붐붐 마사지 이용 가이드 아름다운 자연 경관과 독특한 문화가 어우러진 매력적인 여행지입니다. 이 나라는 아시아 대륙의 심장부에 위치해 있으며, 태국, 베트남, 중국, 미얀마, 캄보디아와 국경을 접하고 있습니다. 라오스를 여행하는 것은 잊지 못할 경험을 선사할 것입니다.\n라오스는 광활한 산맥과 푸르른 계곡, 그리고 아름다운 강이 흐르는 나라입니다. 특히 메콩 강은 라오스의 주요한 생명선으로, 여행자들에게 수많은 액티비티를 제공합니다. 자전거 타기, 하이킹, 카약, 낚시 등 다양한 야외 "
+    },
+    {
+      "reason": "control_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1728,
+      "url": "https://martinproperty.es/property/townhouse-in-la-cala-de-mijas-r5350084/",
+      "characters": 2097,
+      "excerpt": "Discover a truly exceptional home in the heart of La Cala de Mijas, one of the most sought-after locations on the Costa del Sol, where Mediterranean living meets modern luxury just moments from the beach.\nSet within the exclusive La Valvega de La Cala development, the property enjoys a prime locatio"
+    },
+    {
+      "reason": "control_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 1776,
+      "url": "https://metamods.net/en/mods/legacy4j",
+      "characters": 4426,
+      "excerpt": "Library for cre­at­ing advanced 3D ani­ma­tions of enti­ties, blocks, items, and armor in Minecraft with sup­port for keyframes and com­plex transitions.\nAn addon for TACZ that adds var­i­ous weapons and equip­ment select­ed by devel­op­er Max — from rare Balkan AKs to game mod­els and much more.\nVi"
+    },
+    {
+      "reason": "control_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 2337,
+      "url": "https://serendipitytravel.net/how-to-celebrate-chinese-new-year-in-london/",
+      "characters": 4301,
+      "excerpt": "The YeÂ­ar of the Dog is coming, and it’s going to be celeÂ­brated all over London. On February 18, theÂ­ city will be alive with color and exciteÂ­ment. Think dragons and lots of happy noise. Chinatown will look like a giant party, all seÂ­t up for the start of Chinese NeÂ­w Year.\nThousands of peop"
+    },
+    {
+      "reason": "keyword_wall",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 2439,
+      "url": "https://statusquo.in/collections/sweaters",
+      "characters": 9960,
+      "excerpt": "Log in to check out faster.\nTaxes included. Discounts and shipping calculated at checkout.\nWe make things that work better and last longer. Our products solve real problems with clean design and honest materials.\nProduct Detail GRAPE Solid Sweater has Round Neck, Full Sleeves. Fabric Composition: 10"
+    },
+    {
+      "reason": "control_characters",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 2638,
+      "url": "https://trendsideas.com/stories/clean-lined-but-with-an-emphasis-on-natural-materials-this-kitchen-doesnt-get-in-the-way-of-its-golf-fairway-views",
+      "characters": 2370,
+      "excerpt": "Context was key for this airy kitchen, part of a new build for a retired couple fulfilling their dream of living on the edge of a golf course. And while ‘playing through’ is a popular golfing term, ‘seeing through’ was the apt phrase when it came to tweaking the initial layout.\nDesigner Chelsey Math"
+    },
+    {
+      "reason": "keyword_wall",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 3648,
+      "url": "https://atk14.net/article/if-self-regulating-whistling-mix-up-blank-swallowing-21774.html",
+      "characters": 10386,
+      "excerpt": "If self-regulating whistling mix-up blank swallowing.\nIf self-regulating whistling mix-up blank swallowing.\nConstrictive elude [URL=https://cassandraplummer.com/pill/womenra/]womenra[/URL] womenra 100mg [URL=https://cassandraplummer.com/pill/fildena/]fildena[/URL] [URL=https://floridamotorcycletrain"
+    },
+    {
+      "reason": "secret_material",
+      "source_shard": "cc_text_00000.jsonl.gz",
+      "source_line": 40316,
+      "url": "https://supermarket-staging.chef.io/cookbooks/stash/versions/2.10.0",
+      "characters": 2831,
+      "excerpt": "Looking for a cookbook to adopt? You can now see a list of cookbooks available for adoption!\nSupermarket belongs to the community. While Chef has the responsibility to keep it running and be stewards of its functionality, what it does and how it works is driven by the community. The chef/supermarket"
+    }
+  ]
+}

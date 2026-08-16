@@ -1,0 +1,4889 @@
+In mathematical logic, the Friedberg–Muchnik theorem is a theorem about Turing reductions that was proven independently by Albert Muchnik and Richard Friedberg in the middle of the 1950s. It is a more general view of the Kleene–Post theorem. The Kleene–Post theorem states that there exist incomparable languages A and B that are Turing reducible to the halting problem. The Friedberg–Muchnik theorem states that there exist incomparable, computably enumerable languages A and B. Incomparable meaning that there does not exist a Turing reduction from A to B or a Turing reduction from B to A. It is notable for its use of the priority finite injury approach.
+
+Notation
+We write 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+        ↑
+        A
+      
+    
+    {\displaystyle A_{n}\uparrow A}
+  
+ to denote that 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        ⊂
+        
+          A
+          
+            1
+          
+        
+        ⊂
+        ⋯
+      
+    
+    {\displaystyle A_{0}\subset A_{1}\subset \cdots }
+  
+, and 
+  
+    
+      
+        A
+        =
+        
+          lim
+          
+            n
+          
+        
+        
+          A
+          
+            n
+          
+        
+      
+    
+    {\displaystyle A=\lim _{n}A_{n}}
+  
+. We will always assume by default that 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        ,
+        
+          A
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle A_{0},A_{1},\dots }
+  
+ are finite.
+An oracle is a subset 
+  
+    
+      
+        A
+        ⊂
+        
+          N
+        
+      
+    
+    {\displaystyle A\subset \mathbb {N} }
+  
+. To make an inquiry to an oracle is to ask whether 
+  
+    
+      
+        j
+        ∈
+        A
+      
+    
+    {\displaystyle j\in A}
+  
+. The response is "
+  
+    
+      
+        j
+        ∈
+        A
+      
+    
+    {\displaystyle j\in A}
+  
+" xor "
+  
+    
+      
+        j
+        ∉
+        A
+      
+    
+    {\displaystyle j\not \in A}
+  
+".
+
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ is the halting oracle.
+
+  
+    
+      
+        
+          ≤
+          
+            T
+          
+        
+      
+    
+    {\displaystyle \leq _{T}}
+  
+ is Turing reducibility.
+
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+        
+      
+    
+    {\displaystyle TM_{i}}
+  
+ is the i-th Turing machine.
+
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{A}}
+  
+ is the i-th Turing machine equipped with an oracle for set 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+.
+
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+      
+    
+    {\displaystyle TM_{i}^{A}(j)}
+  
+ is the output of 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{A}}
+  
+ upon input 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+. If the machine does not halt, then define 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+        =
+        ⊥
+      
+    
+    {\displaystyle TM_{i}^{A}(j)=\bot }
+  
+.
+
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+        [
+        k
+        ]
+      
+    
+    {\displaystyle TM_{i}^{A}(j)[k]}
+  
+ is the output of 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{A}}
+  
+ upon input 
+  
+    
+      
+        j
+      
+    
+    {\displaystyle j}
+  
+, if the machine halts within k steps. If it has not yet halted, then define 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+        [
+        k
+        ]
+        =
+        ⊥
+      
+    
+    {\displaystyle TM_{i}^{A}(j)[k]=\bot }
+  
+. This definition ensures 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+        =
+        
+          lim
+          
+            k
+          
+        
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+        [
+        k
+        ]
+      
+    
+    {\displaystyle TM_{i}^{A}(j)=\lim _{k}TM_{i}^{A}(j)[k]}
+  
+.
+
+  
+    
+      
+        
+          ϕ
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+      
+    
+    {\displaystyle \phi _{i}^{A}(j)}
+  
+ is the largest number that would ever be inquired by 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{A}}
+  
+ while it is computing 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+      
+    
+    {\displaystyle TM_{i}^{A}(j)}
+  
+. If 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+        =
+        ⊥
+      
+    
+    {\displaystyle TM_{i}^{A}(j)=\bot }
+  
+, then define 
+  
+    
+      
+        
+          ϕ
+          
+            i
+          
+          
+            A
+          
+        
+        (
+        j
+        )
+        =
+        ⊥
+      
+    
+    {\displaystyle \phi _{i}^{A}(j)=\bot }
+  
+.
+
+Kleene–Post theorem
+
+The theorem is proven by constructing a Turing machine equipped with 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+  
+ as its oracle, such that:
+
+It streams out a sequence of binary strings 
+  
+    
+      
+        
+          α
+          
+            0
+          
+        
+        ,
+        
+          β
+          
+            0
+          
+        
+        ,
+        
+          α
+          
+            1
+          
+        
+        ,
+        
+          β
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle \alpha _{0},\beta _{0},\alpha _{1},\beta _{1},\dots }
+  
+.
+Each 
+  
+    
+      
+        
+          α
+          
+            n
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle \alpha _{n+1}}
+  
+ extends 
+  
+    
+      
+        
+          α
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \alpha _{n}}
+  
+.
+The characteristic function of A is 
+  
+    
+      
+        
+          χ
+          
+            A
+          
+        
+        :=
+        
+          lim
+          
+            n
+          
+        
+        
+          α
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \chi _{A}:=\lim _{n}\alpha _{n}}
+  
+.
+Similarly for B.
+All requirements 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            0
+            ,
+            B
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle R_{0,A},R_{0,B},R_{1,A},R_{1,A},\dots }
+  
+ are satisfied.
+
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ states that "The i-th Turing machine, equipped with B as oracle, fails to decide A".
+Similarly for B.
+Each 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ can be satisfied in two ways:
+
+Negatively, if 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            B
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{B}}
+  
+ (the i-th Turing machine, equipped with B as oracle) fails to halt on some input.
+Positively, if 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            B
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{B}}
+  
+ halts on some input j and outputs a value different from 
+  
+    
+      
+        
+          χ
+          
+            A
+          
+        
+        (
+        j
+        )
+      
+    
+    {\displaystyle \chi _{A}(j)}
+  
+. Such j is called a witness to 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+.
+The construction uses the priority method: The machine streams out 
+  
+    
+      
+        
+          α
+          
+            0
+          
+        
+        ,
+        
+          β
+          
+            0
+          
+        
+        ,
+        
+          α
+          
+            1
+          
+        
+        ,
+        
+          β
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle \alpha _{0},\beta _{0},\alpha _{1},\beta _{1},\dots }
+  
+ one by one, such that the requirements 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            0
+            ,
+            B
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle R_{0,A},R_{0,B},R_{1,A},R_{1,A},\dots }
+  
+ are satisfied one by one in stages.
+At stage 2n:
+
+  
+    
+      
+        
+          α
+          
+            0
+          
+        
+        ,
+        
+          β
+          
+            0
+          
+        
+        ,
+        …
+        ,
+        
+          α
+          
+            2
+            n
+            −
+            1
+          
+        
+        ,
+        
+          β
+          
+            2
+            n
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle \alpha _{0},\beta _{0},\dots ,\alpha _{2n-1},\beta _{2n-1}}
+  
+ have already been constructed so far, and we seek to construct 
+  
+    
+      
+        
+          α
+          
+            2
+            n
+          
+        
+        ,
+        
+          β
+          
+            2
+            n
+          
+        
+      
+    
+    {\displaystyle \alpha _{2n},\beta _{2n}}
+  
+.
+Construct a Turing machine as follows:
+For each possible binary string 
+  
+    
+      
+        
+          β
+          ′
+        
+      
+    
+    {\displaystyle \beta '}
+  
+ that extends 
+  
+    
+      
+        
+          β
+          
+            2
+            n
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle \beta _{2n-1}}
+  
+, it tests whether the n-th Turing machine would halt on input n given 
+  
+    
+      
+        
+          β
+          ′
+        
+      
+    
+    {\displaystyle \beta '}
+  
+ as its oracle, without attempting to read any bit outside of 
+  
+    
+      
+        
+          β
+          ′
+        
+      
+    
+    {\displaystyle \beta '}
+  
+.
+As soon as such a machine is found, it outputs 
+  
+    
+      
+        
+          β
+          ′
+        
+      
+    
+    {\displaystyle \beta '}
+  
+ and halts.
+Then the halting oracle is consulted to see if the previously constructed Turing machine halts.
+If it halts, then run it, and assign 
+  
+    
+      
+        
+          β
+          
+            2
+            n
+          
+        
+      
+    
+    {\displaystyle \beta _{2n}}
+  
+ to its output 
+  
+    
+      
+        
+          β
+          ′
+        
+      
+    
+    {\displaystyle \beta '}
+  
+. After that, compute 
+  
+    
+      
+        T
+        
+          M
+          
+            n
+          
+          
+            
+              β
+              
+                2
+                n
+              
+            
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle TM_{n}^{\beta _{2n}}(n)}
+  
+, and assign 
+  
+    
+      
+        
+          α
+          
+            2
+            n
+          
+        
+        =
+        
+          α
+          
+            2
+            n
+            −
+            1
+          
+        
+        ⊕
+        b
+      
+    
+    {\displaystyle \alpha _{2n}=\alpha _{2n-1}\oplus b}
+  
+, where 
+  
+    
+      
+        b
+        ∈
+        {
+        0
+        ,
+        1
+        }
+      
+    
+    {\displaystyle b\in \{0,1\}}
+  
+ is chosen to be different from 
+  
+    
+      
+        T
+        
+          M
+          
+            n
+          
+          
+            
+              β
+              
+                2
+                n
+              
+            
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle TM_{n}^{\beta _{2n}}(n)}
+  
+. This satisfies 
+  
+    
+      
+        
+          R
+          
+            n
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{n,A}}
+  
+ positively.
+Otherwise, it does not halt, indicating that all possible 
+  
+    
+      
+        
+          χ
+          
+            B
+          
+        
+      
+    
+    {\displaystyle \chi _{B}}
+  
+ that extends the current 
+  
+    
+      
+        
+          β
+          
+            2
+            n
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle \beta _{2n-1}}
+  
+ will necessarily cause 
+  
+    
+      
+        T
+        
+          M
+          
+            n
+          
+          
+            B
+          
+        
+        (
+        n
+        )
+      
+    
+    {\displaystyle TM_{n}^{B}(n)}
+  
+ to hang forever, thus meaning that 
+  
+    
+      
+        
+          R
+          
+            n
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{n,A}}
+  
+ will be satisfied negatively no matter which 
+  
+    
+      
+        
+          χ
+          
+            B
+          
+        
+      
+    
+    {\displaystyle \chi _{B}}
+  
+ we end up with. In that case, just define 
+  
+    
+      
+        
+          α
+          
+            2
+            n
+          
+        
+        :=
+        
+          α
+          
+            2
+            n
+            −
+            1
+          
+        
+        ⊕
+        0
+        ,
+        
+        
+          β
+          
+            2
+            n
+          
+        
+        :=
+        
+          β
+          
+            2
+            n
+            −
+            1
+          
+        
+        ⊕
+        0
+      
+    
+    {\displaystyle \alpha _{2n}:=\alpha _{2n-1}\oplus 0,\;\beta _{2n}:=\beta _{2n-1}\oplus 0}
+  
+, or whatever.
+Stage 2n+1 is done similarly to satisfy 
+  
+    
+      
+        
+          R
+          
+            n
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{n,B}}
+  
+.
+
+Friedberg–Muchnik theorem
+The above construction uses the halting oracle, so the two sets 
+  
+    
+      
+        A
+        ,
+        B
+      
+    
+    {\displaystyle A,B}
+  
+ might not be enumerable. It can be strengthened:
+
+The theorem can be proved by constructing a Turing machine without oracle such that: 
+
+It streams out a sequence of finite sets 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        ,
+        
+          B
+          
+            0
+          
+        
+        ,
+        
+          A
+          
+            1
+          
+        
+        ,
+        
+          B
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle A_{0},B_{0},A_{1},B_{1},\dots }
+  
+ such that 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+        ↑
+        A
+        ,
+        
+          B
+          
+            n
+          
+        
+        ↑
+        B
+      
+    
+    {\displaystyle A_{n}\uparrow A,B_{n}\uparrow B}
+  
+, and similarly for B.
+All requirements 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            0
+            ,
+            B
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle R_{0,A},R_{0,B},R_{1,A},R_{1,A},\dots }
+  
+ are satisfied.
+
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ states that "The i-th Turing machine, equipped with B as oracle, fails to decide A". Similarly for B.
+Each 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ can be satisfied in two ways as before. Negatively without a witness, or positively with a witness.
+
+Finite injury method
+The idea of the finite injury method is that we will optimistically hope that the sets we have constructed so far are good enough, and will procrastinate on change for as long as possible, until a requirement gets "injured" (as they must eventually). The injury is positive evidence that our optimism has failed. So we reluctantly update the sets, healing the requirement, update some witnesses, then optimisitically hope all over again.
+Because there are infinitely many requirements, healing a requirement might clobber other requirements. Specifically, if we ever change our mind about what should go into 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, then that would change the behavior of 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{A}}
+  
+ for some i, which might then injure some previously satisfied requirements. To bypass this difficulty, the finite injury method ensures:
+
+Every requirement can be healed infinitely often, because it has an infinite pool of witnesses to choose from.
+Every requirement can be injured only finitely often, because we arrange the requirements in a well-ordered set of priorities 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            A
+          
+        
+        ≺
+        
+          R
+          
+            0
+            ,
+            B
+          
+        
+        ≺
+        ⋯
+      
+    
+    {\displaystyle R_{0,A}\prec R_{0,B}\prec \cdots }
+  
+, and ensure that every requirement can only be clobbered by requirements prior to it.
+Thus, all requirements will be satisfied in the end.
+
+Proof
+We computably partition 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ into infinitely many infinite sets. For example, we can define them by repeated bisection:
+  
+    
+      
+        {
+        0
+        ,
+        2
+        ,
+        4
+        ,
+        6
+        ,
+        …
+        }
+        ∪
+        {
+        1
+        ,
+        5
+        ,
+        9
+        ,
+        13
+        ,
+        …
+        }
+        ∪
+        {
+        3
+        ,
+        11
+        ,
+        19
+        ,
+        27
+        ,
+        …
+        }
+        ∪
+        ⋯
+      
+    
+    {\displaystyle \{0,2,4,6,\dots \}\cup \{1,5,9,13,\dots \}\cup \{3,11,19,27,\dots \}\cup \cdots }
+  
+We enumerate them by 
+  
+    
+      
+        
+          r
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle r_{ij}}
+  
+ for 
+  
+    
+      
+        i
+        ,
+        j
+        ∈
+        
+          N
+        
+      
+    
+    {\displaystyle i,j\in \mathbb {N} }
+  
+. The idea is that 
+  
+    
+      
+        
+          r
+          
+            i
+            0
+          
+        
+        ,
+        
+          r
+          
+            i
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle r_{i0},r_{i1},\dots }
+  
+ are a list of candidate witnesses to 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+, and 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{i,B}}
+  
+.
+
+At stage 0, we initialize the algorithm by outputting 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        :=
+        ∅
+        ,
+        
+          B
+          
+            0
+          
+        
+        :=
+        ∅
+      
+    
+    {\displaystyle A_{0}:=\emptyset ,B_{0}:=\emptyset }
+  
+, and assigning witnesses to all requirements:
+for 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+, assign witness 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        ←
+        
+          r
+          
+            i
+            0
+          
+        
+      
+    
+    {\displaystyle w_{i,A}\leftarrow r_{i0}}
+  
+;
+for 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{i,B}}
+  
+, assign witness 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            B
+          
+        
+        ←
+        
+          r
+          
+            i
+            0
+          
+        
+      
+    
+    {\displaystyle w_{i,B}\leftarrow r_{i0}}
+  
+.
+Note that, even though we are performing an infinite number of assignments, this can be done, because the entire assignment is computable. Later, we will update this infinite list of assignments. But we will ensure every update is still computable.
+At stage 2n,
+We check the health of all requirements 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ for all 
+  
+    
+      
+        i
+        ∈
+        0
+        :
+        2
+        n
+        −
+        1
+      
+    
+    {\displaystyle i\in 0:2n-1}
+  
+, by simulating 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+                −
+                1
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        )
+      
+    
+    {\displaystyle TM_{i}^{B_{2n-1}}(w_{i,A})}
+  
+ for up to 
+  
+    
+      
+        2
+        n
+        −
+        1
+      
+    
+    {\displaystyle 2n-1}
+  
+ steps.
+If all these 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+                −
+                1
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        )
+        ≠
+        0
+      
+    
+    {\displaystyle TM_{i}^{B_{2n-1}}(w_{i,A})\neq 0}
+  
+ at step 
+  
+    
+      
+        2
+        n
+        −
+        1
+      
+    
+    {\displaystyle 2n-1}
+  
+, either because it hasn't halted yet, or because it halted on a different value, then we have no positive evidence that we need to change anything. So we change nothing. Keep all witnesses the same, and output
+  
+    
+      
+        
+          A
+          
+            2
+            n
+          
+        
+        :=
+        
+          A
+          
+            2
+            n
+            −
+            1
+          
+        
+        ,
+        
+          B
+          
+            2
+            n
+          
+        
+        :=
+        
+          B
+          
+            2
+            n
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle A_{2n}:=A_{2n-1},B_{2n}:=B_{2n-1}}
+  
+
+Otherwise, find the lowest 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ such that 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+                −
+                1
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        )
+        =
+        0
+      
+    
+    {\displaystyle TM_{i}^{B_{2n-1}}(w_{i,A})=0}
+  
+. The requirement 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ is the priority injured requirement.
+Output 
+  
+    
+      
+        
+          A
+          
+            2
+            n
+          
+        
+        :=
+        
+          A
+          
+            2
+            n
+            −
+            1
+          
+        
+        ∪
+        {
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        }
+      
+    
+    {\displaystyle A_{2n}:=A_{2n-1}\cup \{w_{i,A}\}}
+  
+ to heal the priority injured requirement, and simultaneously update all 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            B
+          
+        
+        ,
+        
+          w
+          
+            i
+            +
+            1
+            ,
+            B
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle w_{i,B},w_{i+1,B},\dots }
+  
+ by
+  
+    
+      
+        
+          w
+          
+            j
+            ,
+            B
+          
+        
+        ←
+        min
+        {
+        
+          r
+          
+            j
+            k
+          
+        
+        :
+        k
+        ∈
+        
+          N
+        
+        ,
+        
+          r
+          
+            j
+            k
+          
+        
+        >
+        max
+        (
+        
+          w
+          
+            j
+            ,
+            B
+          
+        
+        ,
+        
+          ϕ
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+                −
+                1
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        )
+        )
+        }
+      
+    
+    {\displaystyle w_{j,B}\leftarrow \min\{r_{jk}:k\in \mathbb {N} ,r_{jk}>\max(w_{j,B},\phi _{i}^{B_{2n-1}}(w_{i,A}))\}}
+  
+to ensure that, if we ever need to heal one of the requirements 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            B
+          
+        
+        ,
+        
+          R
+          
+            i
+            +
+            1
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{i,B},R_{i+1,B}}
+  
+ by adding a witness into 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, it will not thereby injure 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+. Nothing else needs to change, so we output 
+  
+    
+      
+        
+          B
+          
+            2
+            n
+          
+        
+        :=
+        
+          B
+          
+            2
+            n
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle B_{2n}:=B_{2n-1}}
+  
+ and keep all other witnesses the same.
+In order to compute the assignment, we simply need to apply all updates in sequence. It is as if applying a list of software patches, one patch after another. Since each update is computable, the whole witness assignment at this step is still computable.
+At stage 2n+1, the construction goes over almost exactly the same way.
+The only difference is that, if 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ is injured, then we must simultaneously update all 
+  
+    
+      
+        
+          w
+          
+            i
+            
+              +
+              1
+              
+                ,
+                A
+              
+            
+          
+        
+        ,
+        
+          w
+          
+            i
+            +
+            2
+            ,
+            A
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle w_{i\color {red}+1\color {black},A},w_{i+2,A},\dots }
+  
+. This avoids an infinite mutual injury loop between 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ and 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{i,B}}
+  
+.
+The construction ensures that 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{i,A}}
+  
+ can only be injured by attempts to heal 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            B
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            B
+          
+        
+        ,
+        …
+        ,
+        
+          R
+          
+            i
+            −
+            1
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{0,B},R_{1,B},\dots ,R_{i-1,B}}
+  
+, and 
+  
+    
+      
+        
+          R
+          
+            i
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{i,B}}
+  
+ only by 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ,
+        …
+        ,
+        
+          R
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{0,A},R_{1,A},\dots ,R_{i,A}}
+  
+.
+
+Variants
+The same idea allows us to construct variants or stronger versions of the Friedberg–Muchnik theorem.
+We say that 
+  
+    
+      
+        A
+        ⊂
+        
+          N
+        
+      
+    
+    {\displaystyle A\subset \mathbb {N} }
+  
+ is autoreducible for some Turing machine 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+        
+      
+    
+    {\displaystyle TM_{i}}
+  
+, iff for all 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+,
+
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+            ∖
+            {
+            k
+            }
+          
+        
+        (
+        k
+        )
+        =
+        0
+      
+    
+    {\displaystyle TM_{i}^{A\setminus \{k\}}(k)=0}
+  
+ and 
+  
+    
+      
+        k
+        ∉
+        A
+      
+    
+    {\displaystyle k\not \in A}
+  
+, or
+
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            A
+            ∖
+            {
+            k
+            }
+          
+        
+        (
+        k
+        )
+        =
+        1
+      
+    
+    {\displaystyle TM_{i}^{A\setminus \{k\}}(k)=1}
+  
+ and 
+  
+    
+      
+        k
+        ∈
+        A
+      
+    
+    {\displaystyle k\in A}
+  
+.
+In other words, each 
+  
+    
+      
+        k
+        ∈
+        A
+      
+    
+    {\displaystyle k\in A}
+  
+ question can be settled by 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+        
+      
+    
+    {\displaystyle TM_{i}}
+  
+ that inquires an oracle that will answer all questions concerning 
+  
+    
+      
+        j
+        ∈
+        A
+      
+    
+    {\displaystyle j\in A}
+  
+, as long as 
+  
+    
+      
+        j
+        ≠
+        k
+      
+    
+    {\displaystyle j\neq k}
+  
+. We say 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is not autoreducible iff it is not autoreducible for any 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+        
+      
+    
+    {\displaystyle TM_{i}}
+  
+.
+Then there exists an enumerable but not autoreducible set 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+. We construct it thus:
+
+We ensure nonautoreducibility with an infinite list of requirements. Let 
+  
+    
+      
+        
+          R
+          
+            i
+          
+        
+      
+    
+    {\displaystyle R_{i}}
+  
+ be the requirement that 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+        
+      
+    
+    {\displaystyle TM_{i}}
+  
+ does not autoreduce 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+.
+We ensure every requirement can only be injured finitely often, by well-ordering the requirements 
+  
+    
+      
+        
+          R
+          
+            0
+          
+        
+        ≺
+        
+          R
+          
+            1
+          
+        
+        ≺
+        ⋯
+      
+    
+    {\displaystyle R_{0}\prec R_{1}\prec \cdots }
+  
+.
+We ensure every requirement can be healed infinitely often, by assigning an infinite list of potential witnesses 
+  
+    
+      
+        
+          r
+          
+            i
+            0
+          
+        
+        <
+        
+          r
+          
+            i
+            1
+          
+        
+        <
+        ⋯
+      
+    
+    {\displaystyle r_{i0}<r_{i1}<\cdots }
+  
+ to each requirement 
+  
+    
+      
+        
+          R
+          
+            i
+          
+        
+      
+    
+    {\displaystyle R_{i}}
+  
+. We also ensure 
+  
+    
+      
+        {
+        
+          r
+          
+            i
+            0
+          
+        
+        <
+        
+          r
+          
+            i
+            1
+          
+        
+        <
+        ⋯
+        
+          }
+          
+            i
+            ∈
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \{r_{i0}<r_{i1}<\cdots \}_{i\in \mathbb {N} }}
+  
+ are mutually disjoint.
+The previous construction then works in the same way, because it is impossible for any requirement to cause self-injury.
+Given an infinite and enumerable set 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+, we can construct 
+  
+    
+      
+        C
+        ⊃
+        
+          A
+          
+            0
+          
+        
+        ⊃
+        
+          A
+          
+            1
+          
+        
+        ⊃
+        ⋯
+      
+    
+    {\displaystyle C\supset A_{0}\supset A_{1}\supset \cdots }
+  
+, such that 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        ,
+        
+          A
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle A_{0},A_{1},\dots }
+  
+ are enumerable, mutually irreducible, and every inclusion is sparse. We construct it by generalizing the previous construction:
+
+We ensure mutual irreducibility with an infinite list of requirements. Let 
+  
+    
+      
+        
+          R
+          
+            i
+            j
+            k
+          
+        
+      
+    
+    {\displaystyle R_{ijk}}
+  
+ be the requirement that 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            
+              A
+              
+                j
+              
+            
+          
+        
+      
+    
+    {\displaystyle TM_{i}^{A_{j}}}
+  
+ does not decide 
+  
+    
+      
+        
+          A
+          
+            k
+          
+        
+      
+    
+    {\displaystyle A_{k}}
+  
+. Here, 
+  
+    
+      
+        j
+        ≠
+        k
+      
+    
+    {\displaystyle j\neq k}
+  
+.
+We ensure every requirement can only be injured finitely often, by well-ordering the requirements.
+Any computable well-ordering will work. For example, we can use the Cantor zig-zag function 
+  
+    
+      
+        f
+        :
+        
+          
+            N
+          
+          
+            3
+          
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f:\mathbb {N} ^{3}\to \mathbb {N} }
+  
+, then define 
+  
+    
+      
+        
+          R
+          
+            i
+            j
+            k
+          
+        
+        ≺
+        
+          R
+          
+            
+              i
+              ′
+            
+            
+              j
+              ′
+            
+            
+              k
+              ′
+            
+          
+        
+        
+        ⟺
+        
+        f
+        (
+        i
+        ,
+        j
+        ,
+        k
+        )
+        <
+        f
+        (
+        
+          i
+          ′
+        
+        ,
+        
+          j
+          ′
+        
+        ,
+        
+          k
+          ′
+        
+        )
+      
+    
+    {\displaystyle R_{ijk}\prec R_{i'j'k'}\iff f(i,j,k)<f(i',j',k')}
+  
+.
+We ensure every requirement can be healed infinitely often by assigning, for each 
+  
+    
+      
+        i
+        ,
+        j
+        ,
+        k
+      
+    
+    {\displaystyle i,j,k}
+  
+ such that 
+  
+    
+      
+        j
+        ≠
+        k
+      
+    
+    {\displaystyle j\neq k}
+  
+, an infinite list of potential witnesses 
+  
+    
+      
+        
+          r
+          
+            i
+            j
+            k
+            0
+          
+        
+        <
+        
+          r
+          
+            i
+            j
+            k
+            1
+          
+        
+        <
+        ⋯
+      
+    
+    {\displaystyle r_{ijk0}<r_{ijk1}<\cdots }
+  
+ that may eventually be inserted 
+  
+    
+      
+        
+          A
+          
+            k
+          
+        
+      
+    
+    {\displaystyle A_{k}}
+  
+ to witness 
+  
+    
+      
+        
+          R
+          
+            i
+            j
+            k
+          
+        
+      
+    
+    {\displaystyle R_{ijk}}
+  
+. For each 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+, the lists 
+  
+    
+      
+        {
+        
+          r
+          
+            i
+            j
+            k
+            0
+          
+        
+        <
+        
+          r
+          
+            i
+            j
+            k
+            1
+          
+        
+        <
+        ⋯
+        
+          }
+          
+            i
+            ∈
+            
+              N
+            
+            ,
+            j
+            ∈
+            
+              N
+            
+            ,
+            j
+            ≠
+            k
+          
+        
+      
+    
+    {\displaystyle \{r_{ijk0}<r_{ijk1}<\cdots \}_{i\in \mathbb {N} ,j\in \mathbb {N} ,j\neq k}}
+  
+ are mutually disjoint.
+We ensure 
+  
+    
+      
+        C
+        ⊃
+        
+          A
+          
+            0
+          
+        
+        ⊃
+        
+          A
+          
+            1
+          
+        
+        ⊃
+        ⋯
+      
+    
+    {\displaystyle C\supset A_{0}\supset A_{1}\supset \cdots }
+  
+ sparsely by an iterative process of sparsification and partition:
+Enumerate an infinite list of ascending elements 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+        <
+        
+          c
+          
+            1
+          
+        
+        <
+        ⋯
+        ∈
+        C
+      
+    
+    {\displaystyle c_{0}<c_{1}<\cdots \in C}
+  
+. This is possible since 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is infinite and enumerable.
+At stage 0, sparsify the list to 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+        ,
+        
+          c
+          
+            2
+          
+        
+        ,
+        
+          c
+          
+            4
+          
+        
+        ,
+        
+          c
+          
+            8
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle c_{0},c_{2},c_{4},c_{8},\dots }
+  
+. Call this list 
+  
+    
+      
+        
+          L
+          
+            0
+          
+        
+      
+    
+    {\displaystyle L_{0}}
+  
+. Then partition 
+  
+    
+      
+        
+          L
+          
+            0
+          
+        
+      
+    
+    {\displaystyle L_{0}}
+  
+ into a doubly-infinite list of lists 
+  
+    
+      
+        {
+        
+          r
+          
+            i
+            j
+            00
+          
+        
+        <
+        
+          r
+          
+            i
+            j
+            01
+          
+        
+        <
+        ⋯
+        
+          }
+          
+            i
+            ∈
+            
+              N
+            
+            ,
+            j
+            ∈
+            
+              N
+            
+            ,
+            j
+            ≠
+            0
+          
+        
+      
+    
+    {\displaystyle \{r_{ij00}<r_{ij01}<\cdots \}_{i\in \mathbb {N} ,j\in \mathbb {N} ,j\neq 0}}
+  
+.
+At stage 1, sparsify 
+  
+    
+      
+        
+          L
+          
+            0
+          
+        
+      
+    
+    {\displaystyle L_{0}}
+  
+ into 
+  
+    
+      
+        
+          L
+          
+            1
+          
+        
+      
+    
+    {\displaystyle L_{1}}
+  
+. Then partition 
+  
+    
+      
+        
+          L
+          
+            1
+          
+        
+      
+    
+    {\displaystyle L_{1}}
+  
+ into a doubly-infinite list of lists 
+  
+    
+      
+        {
+        
+          r
+          
+            i
+            j
+            10
+          
+        
+        <
+        
+          r
+          
+            i
+            j
+            11
+          
+        
+        <
+        ⋯
+        
+          }
+          
+            i
+            ∈
+            
+              N
+            
+            ,
+            j
+            ∈
+            
+              N
+            
+            ,
+            j
+            ≠
+            1
+          
+        
+      
+    
+    {\displaystyle \{r_{ij10}<r_{ij11}<\cdots \}_{i\in \mathbb {N} ,j\in \mathbb {N} ,j\neq 1}}
+  
+.
+And so on.
+Combining the above two constructions, we can make all 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        ,
+        
+          A
+          
+            1
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle A_{0},A_{1},\dots }
+  
+ non-autoreducible as well.
+
+Friedberg–Muchnik theorem below C
+
+This shows that the order-structure of Turing degrees is quite complicated, even among enumerable sets.
+WLOG, we assume that 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is enumerated as 
+  
+    
+      
+        
+          C
+          
+            0
+          
+        
+        ⊊
+        
+          C
+          
+            1
+          
+        
+        ⊊
+        
+          C
+          
+            2
+          
+        
+        ⊊
+        ⋯
+      
+    
+    {\displaystyle C_{0}\subsetneq C_{1}\subsetneq C_{2}\subsetneq \cdots }
+  
+, each 
+  
+    
+      
+        
+          C
+          
+            n
+          
+        
+      
+    
+    {\displaystyle C_{n}}
+  
+ being a finite set.
+
+Permit
+To prove the theorem, we define the concept of permission. Technically, this is the Yates permitting. There are other kids of permissions.
+Given two sequences of finite sets 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+        ↑
+        A
+        ,
+        
+          C
+          
+            n
+          
+        
+        ↑
+        C
+      
+    
+    {\displaystyle A_{n}\uparrow A,C_{n}\uparrow C}
+  
+, we say that 
+  
+    
+      
+        {
+        
+          C
+          
+            n
+          
+        
+        
+          }
+          
+            n
+            ∈
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \{C_{n}\}_{n\in \mathbb {N} }}
+  
+ permits 
+  
+    
+      
+        {
+        
+          A
+          
+            n
+          
+        
+        
+          }
+          
+            n
+            ∈
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \{A_{n}\}_{n\in \mathbb {N} }}
+  
+ iff 
+  
+    
+      
+        ∀
+        n
+        ,
+        i
+        
+        
+          C
+          
+            n
+          
+        
+        ∩
+        [
+        0
+        :
+        i
+        ]
+        =
+        C
+        ∩
+        [
+        0
+        :
+        i
+        ]
+        
+        ⟹
+        
+        i
+        ∉
+        
+          A
+          
+            n
+            +
+            1
+          
+        
+        ∖
+        
+          A
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \forall n,i\quad C_{n}\cap [0:i]=C\cap [0:i]\implies i\not \in A_{n+1}\setminus A_{n}}
+  
+A bit more generally, if 
+  
+    
+      
+        f
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f:\mathbb {N} \to \mathbb {N} }
+  
+, then we say that 
+  
+    
+      
+        {
+        
+          C
+          
+            n
+          
+        
+        
+          }
+          
+            n
+            ∈
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \{C_{n}\}_{n\in \mathbb {N} }}
+  
+ f-permits 
+  
+    
+      
+        {
+        
+          A
+          
+            n
+          
+        
+        
+          }
+          
+            n
+            ∈
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle \{A_{n}\}_{n\in \mathbb {N} }}
+  
+ iff 
+  
+    
+      
+        ∀
+        n
+        ,
+        i
+        
+        
+          C
+          
+            n
+          
+        
+        ∩
+        [
+        0
+        :
+        f
+        (
+        i
+        )
+        ]
+        =
+        C
+        ∩
+        [
+        0
+        :
+        f
+        (
+        i
+        )
+        ]
+        
+        ⟹
+        
+        i
+        ∉
+        
+          A
+          
+            n
+            +
+            1
+          
+        
+        ∖
+        
+          A
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \forall n,i\quad C_{n}\cap [0:f(i)]=C\cap [0:f(i)]\implies i\not \in A_{n+1}\setminus A_{n}}
+  
+
+Proof
+The requirements are still the same, with the same priority: 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            A
+          
+        
+        ≺
+        
+          R
+          
+            0
+            ,
+            B
+          
+        
+        ≺
+        
+          R
+          
+            1
+            ,
+            A
+          
+        
+        ≺
+        
+          R
+          
+            1
+            ,
+            B
+          
+        
+        ≺
+        ⋯
+      
+    
+    {\displaystyle R_{0,A}\prec R_{0,B}\prec R_{1,A}\prec R_{1,B}\prec \cdots }
+  
+.
+In the original construction for the Friedberg–Muchnik theorem, if it were true that every time we add a witness via 
+  
+    
+      
+        
+          A
+          
+            2
+            n
+          
+        
+        :=
+        
+          A
+          
+            2
+            n
+            −
+            1
+          
+        
+        ∪
+        {
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        }
+      
+    
+    {\displaystyle A_{2n}:=A_{2n-1}\cup \{w_{i,A}\}}
+  
+, we also have 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        ≥
+        min
+        (
+        
+          C
+          
+            2
+            n
+            +
+            2
+          
+        
+        ∖
+        
+          C
+          
+            2
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle w_{i,A}\geq \min(C_{2n+2}\setminus C_{2n})}
+  
+, then by the permitting lemma, 
+  
+    
+      
+        A
+        
+          ≤
+          
+            T
+          
+        
+        C
+      
+    
+    {\displaystyle A\leq _{T}C}
+  
+. Similarly for 
+  
+    
+      
+        B
+        
+          ≤
+          
+            T
+          
+        
+        C
+      
+    
+    {\displaystyle B\leq _{T}C}
+  
+. However, this is not true in general.
+In order to bypass the difficulty, we define 3 types of witnesses, 2 types of injuries, and 1 type of permissive moves, that a requirement can have.
+
+Type 0 witness: 
+  
+    
+      
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        ,
+        −
+        ,
+        −
+        )
+      
+    
+    {\displaystyle (w_{i,A,0},-,-)}
+  
+. This tentatively witnesses 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        ∉
+        A
+      
+    
+    {\displaystyle w_{i,A,0}\not \in A}
+  
+ and 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            B
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        )
+        ≠
+        0
+      
+    
+    {\displaystyle TM_{i}^{B}(w_{i,A,0})\neq 0}
+  
+.
+Type 1 witness: 
+  
+    
+      
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        ,
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            1
+          
+        
+        ,
+        −
+        )
+      
+    
+    {\displaystyle (w_{i,A,0},w_{i,A,1},-)}
+  
+. This tentatively witnesses 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        ∉
+        A
+      
+    
+    {\displaystyle w_{i,A,0}\not \in A}
+  
+ and 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            B
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        )
+        ≠
+        0
+      
+    
+    {\displaystyle TM_{i}^{B}(w_{i,A,0})\neq 0}
+  
+, and 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            1
+          
+        
+        ∉
+        A
+      
+    
+    {\displaystyle w_{i,A,1}\not \in A}
+  
+ and 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            B
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            1
+          
+        
+        )
+        =
+        0
+      
+    
+    {\displaystyle TM_{i}^{B}(w_{i,A,1})=0}
+  
+.
+Type 2 witness: 
+  
+    
+      
+        (
+        −
+        ,
+        −
+        ,
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle (-,-,w_{i,A,2})}
+  
+. This tentatively witnesses 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            2
+          
+        
+        ∈
+        A
+      
+    
+    {\displaystyle w_{i,A,2}\in A}
+  
+ and 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            B
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            2
+          
+        
+        )
+        =
+        0
+      
+    
+    {\displaystyle TM_{i}^{B}(w_{i,A,2})=0}
+  
+.
+Type 0 injury: Because a prior requirement has made a permitted move, this requirement's witness has possibly been invalidated. The witness updates into a type 0 witness.
+Type 1 injury: Because of a previous update to 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, or because the computation has finally halted, a type 0 witness has been invalidated, in that 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        )
+        =
+        0
+      
+    
+    {\displaystyle TM_{i}^{B_{2n}}(w_{i,A,0})=0}
+  
+. The witness updates into a type 1 witness.
+Permitted move: Because 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            1
+          
+        
+        ≥
+        min
+        (
+        
+          C
+          
+            2
+            n
+            +
+            2
+          
+        
+        ∖
+        
+          C
+          
+            2
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle w_{i,A,1}\geq \min(C_{2n+2}\setminus C_{2n})}
+  
+, the type 1 witness updates into a type 2 witness.
+At stage 2n,
+
+We check if any type 1 witness is permitted to be moved into a type 2 witness.
+If so, then let 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ be the smallest 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ such that 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            1
+          
+        
+        ≥
+        min
+        (
+        
+          C
+          
+            2
+            n
+            +
+            1
+          
+        
+        ∖
+        
+          C
+          
+            2
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle w_{i,A,1}\geq \min(C_{2n+1}\setminus C_{2n})}
+  
+, and we perform the update:
+  
+    
+      
+        
+          A
+          
+            2
+            n
+            +
+            1
+          
+        
+        :=
+        
+          A
+          
+            2
+            n
+          
+        
+        ∪
+        {
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            1
+          
+        
+        }
+        ,
+        
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        ←
+        (
+        −
+        ,
+        −
+        ,
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle A_{2n+1}:=A_{2n}\cup \{w_{i,A,1}\},\;w_{i,A}\leftarrow (-,-,w_{i,A,1})}
+  
+and simultaneously incur type 0 injury on all 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            B
+          
+        
+        ,
+        
+          w
+          
+            i
+            +
+            1
+            ,
+            B
+          
+        
+        ,
+        …
+      
+    
+    {\displaystyle w_{i,B},w_{i+1,B},\dots }
+  
+ by updating each to
+  
+    
+      
+        
+          w
+          
+            j
+            ,
+            B
+          
+        
+        ←
+        (
+        min
+        {
+        
+          r
+          
+            j
+            k
+          
+        
+        :
+        k
+        ∈
+        
+          N
+        
+        ,
+        
+          r
+          
+            j
+            k
+          
+        
+        >
+        max
+        (
+        
+          w
+          
+            j
+            ,
+            B
+          
+        
+        ,
+        
+          ϕ
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+                −
+                1
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        )
+        )
+        }
+        ,
+        −
+        ,
+        −
+        )
+      
+    
+    {\displaystyle w_{j,B}\leftarrow (\min\{r_{jk}:k\in \mathbb {N} ,r_{jk}>\max(w_{j,B},\phi _{i}^{B_{2n-1}}(w_{i,A}))\},-,-)}
+  
+
+Otherwise, we check for all type 1 injuries.
+For each 
+  
+    
+      
+        i
+        ∈
+        0
+        :
+        2
+        n
+        −
+        1
+      
+    
+    {\displaystyle i\in 0:2n-1}
+  
+, such that 
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle w_{i,A}}
+  
+ is a type 0 or type 1 witness,
+Simulate 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+                −
+                1
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        )
+      
+    
+    {\displaystyle TM_{i}^{B_{2n-1}}(w_{i,A,0})}
+  
+ for up to 
+  
+    
+      
+        2
+        n
+        −
+        1
+      
+    
+    {\displaystyle 2n-1}
+  
+ steps.
+If 
+  
+    
+      
+        T
+        
+          M
+          
+            i
+          
+          
+            
+              B
+              
+                2
+                n
+                −
+                1
+              
+            
+          
+        
+        (
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        )
+        [
+        2
+        n
+        −
+        1
+        ]
+        =
+        0
+      
+    
+    {\displaystyle TM_{i}^{B_{2n-1}}(w_{i,A,0})[2n-1]=0}
+  
+, then a type 1 injury has occurred. Update the witness to
+  
+    
+      
+        
+          w
+          
+            i
+            ,
+            A
+          
+        
+        ←
+        (
+        min
+        {
+        
+          r
+          
+            i
+            k
+          
+        
+        :
+        k
+        ∈
+        
+          N
+        
+        ,
+        
+          r
+          
+            i
+            k
+          
+        
+        >
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        }
+        ,
+        
+          w
+          
+            i
+            ,
+            A
+            ,
+            0
+          
+        
+        ,
+        −
+        )
+      
+    
+    {\displaystyle w_{i,A}\leftarrow (\min\{r_{ik}:k\in \mathbb {N} ,r_{ik}>w_{i,A,0}\},w_{i,A,0},-)}
+  
+
+Similarly for stage (2n+1).
+To show that the construction works, we need to show that each requirement's witness can only change state a finite number of times, by induction on the requirements.
+By inductive hypothesis, since 
+  
+    
+      
+        
+          R
+          
+            0
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            0
+            ,
+            B
+          
+        
+        ,
+        …
+        ,
+        
+          R
+          
+            n
+            ,
+            A
+          
+        
+        ,
+        
+          R
+          
+            n
+            ,
+            B
+          
+        
+      
+    
+    {\displaystyle R_{0,A},R_{0,B},\dots ,R_{n,A},R_{n,B}}
+  
+ would only change their witnesses a finite number of times, 
+  
+    
+      
+        
+          R
+          
+            n
+            +
+            1
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{n+1,A}}
+  
+ can only be type-0 injured a finite number of times. Consequently, the only way 
+  
+    
+      
+        
+          R
+          
+            n
+            +
+            1
+            ,
+            A
+          
+        
+      
+    
+    {\displaystyle R_{n+1,A}}
+  
+ can change its witness is if it is type-1 injured an infinite number of times. Suppose this is the case, then its witness will eventually settle into an infinite process of being repeatedly type-1 injured, never permitted to move into a type 2 witness.
+Suppose this is the case, then let 
+  
+    
+      
+        f
+        (
+        k
+        )
+      
+    
+    {\displaystyle f(k)}
+  
+ be 
+  
+    
+      
+        
+          w
+          
+            n
+            +
+            1
+            ,
+            A
+            ,
+            1
+          
+        
+      
+    
+    {\displaystyle w_{n+1,A,1}}
+  
+ at stage 2k. By construction, 
+  
+    
+      
+        f
+        (
+        k
+        )
+      
+    
+    {\displaystyle f(k)}
+  
+ is a function that is computable, non-decreasing, and because the witness is injured infinitely many times, 
+  
+    
+      
+        
+          lim
+          
+            k
+          
+        
+        f
+        (
+        k
+        )
+        =
+        ∞
+      
+    
+    {\displaystyle \lim _{k}f(k)=\infty }
+  
+. By assumption, this witness will eventually be stuck forever as a type 1 witness, never permitted to move, so
+  
+    
+      
+        f
+        (
+        k
+        )
+        <
+        min
+        (
+        
+          C
+          
+            2
+            k
+            +
+            2
+          
+        
+        ∖
+        
+          C
+          
+            2
+            k
+          
+        
+        )
+      
+    
+    {\displaystyle f(k)<\min(C_{2k+2}\setminus C_{2k})}
+  
+for all large enough k. However, if this is the case, then 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is decidable, contradicting the original assumption that 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ is enumerable but undecidable.
+
+Sacks's splitting theorem
+We also have
+and

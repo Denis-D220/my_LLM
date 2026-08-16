@@ -1,0 +1,55 @@
+Transbase is a relational database management system, developed and maintained by Transaction Software GmbH, Munich. The development of Transbase was started in the 1980s by Rudolf Bayer under the name "Merkur" at the department of Computer Science of the Technical University of Munich (TUM).
+Transbase largely conforms with the SQL standard "SQL2 intermediate level" (SQL-92) and supports various features of SQL2 follow-on versions (SQL:1999, SQL:2003 etc.).
+
+History
+As a professor of the computer science department of the Technical University of Munich, Rudolf Bayer
+developed a database management system called "Merkur" in the 1980s. The development involved a larger number of diploma and PHD students and resulted in 1987 in a new company, called Transaction Software GmbH, founded by Rudolf Bayer and several co-workers of his institute at TUM. In 1989 "Merkur" was renamed and called "Transbase". 
+The wide use of Transbase, especially as basis for repair part management and documentation systems in the automobile industry soon led to a considerable number of ports to diverse operating systems, such as UNIX derivatives, Linux, Windows, VMS, and Mac OS. Major steps in the further development of Transbase were the integration of functions for distributed queries to several databases in parallel, the fulltext-search extension and the support of foreign languages, ("Myriad") such as Chinese  and Japanese,
+as well as the support of data warehouse functions ("Transbase Hypercube") 
+and the dynamic, parallel execution of queries.
+
+Properties and functions
+
+Standard SQL properties
+Transbase supports all important functions of the SQL standard: 
+
+Extensive transaction concept
+Complex queries with included subqueries
+Referential integrity (primary keys, foreign keys, check constraints and others)
+Set operations
+Updatable views
+Trigger
+Interface for C, C++, Java/JDBC, PHP, ODBC
+Export and import of data as well as database schema
+Integrated programming language based on PSM (Persistent Stored Modules), from version 8.4
+The database is extensible via additional functions and custom data types.
+
+Extensions
+
+ROM-Operation
+The TransbaseCD database option can use read-only storage media such as CD, DVD or Blu-ray Discs. In addition, a persistent disk cache can be utilized to store data for performance improvement and/or for updates of data supplied originally as read-only media. Optionally, TransbaseCD pages can be compressed. This saves half of storage requirement and response times, typically.
+
+Hypercube search
+Transbase Hypercube supports Relational Online Analytical Processing (ROLAP), which is primarily used in data warehouse applications. The search function for OLAP data cubes („hyper cubes“) is accelerated dramatically through the use of UB-Trees (in comparison to queries using standard indices).
+
+Encryption
+Transbase offers optional encryption of data stored on disk, using the Advanced Encryption Standard algorithm, as well as encryption of data transferred through database connections.
+
+Parallelism of queries
+Transbase provides parallel execution of queries via dynamic multithreading technology. This feature executes parts of the query tree in separate threads or splits query sequences into separate threads.
+
+Replication
+Transbase supports  replication of a master database in several slave database instances. Replication can be configured synchronous (for hot-standby databases) or asynchronous for distributing database changes to a huge number of recipients. Replicated databases can even be cascaded in the latter case.
+
+Transbase Crowd
+Transbase Crowd was designed to store IoT data in local edge databases that are connected to a Transbase Crowd database that distributed query processing automatically over all connected edge databases and thus produces global results. Edge resources are perfectly utilised and data transfer is minimized. This database architecture provides perfect scalability for rapidly growing numbers of IoT devices.
+
+Limits
+The following summarizes the current limits as implemented in version 6.9 of Transbase:
+
+The size of the database is limited to 2^31 pages or 128 Terabytes.
+The size of a (data) page can vary between 4 KB and 64 KB.
+The size of a table is limited solely by the maximum size of the database itself.
+The maximum size of BLOB (Binary Large Objects) is 2 GB.
+The number of attributes per table is limited to 256. In addition, the length of a record is limited to one data page.
+The number of records per table is not limited except as given by the maximum size of the database.

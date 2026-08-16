@@ -1,0 +1,258 @@
+# Asynchronous Python
+
+### Coroutines, the Event Loop, and Structured Concurrency
+
+---
+
+## I. The Problem Async Solves
+
+Most programs that feel slow are not computing anything. They are waiting — for a database, an HTTP response, a disk, a socket. During that wait a thread blocked in `recv()` holds a full call stack, typically eight megabytes of reserved address space, and consumes a scheduler slot while doing nothing.
+
+Asynchronous programming replaces blocking with suspension. A coroutine that awaits I/O yields control back to an event loop, which runs other ready coroutines until the operating system reports that the awaited socket is readable. One thread can then hold tens of thousands of in-flight operations, limited by memory for coroutine state rather than by thread stacks.
+
+The critical qualification: this helps **I/O-bound** work only. Async does nothing for CPU-bound work, because a coroutine computing a hash never yields and the loop never advances. Python's Global Interpreter Lock makes this worse — threads do not help with CPU work either, and `multiprocessing` or a native extension is the real answer there.
+
+---
+
+## II. Coroutines and await
+
+A coroutine function is declared with `async def`. Calling it does not execute it; it returns a coroutine object that must be awaited or scheduled.
+
+```python
+import asyncio
+
+async def fetch_user(user_id: int) -> dict:
+    await asyncio.sleep(0.1)          # stands in for network I/O
+    return {"id": user_id, "name": f"user{user_id}"}
+
+async def main() -> None:
+    user = await fetch_user(42)
+    print(user)
+
+asyncio.run(main())
+```
+
+`await` means "suspend here until this completes, and let the loop run something else meanwhile." It is legal only inside `async def`. Forgetting it is the single most common async bug:
+
+```python
+user = fetch_user(42)        # BUG: a coroutine object, never executed
+print(user)                  # <coroutine object fetch_user at 0x...>
+                             # RuntimeWarning: coroutine was never awaited
+```
+
+`asyncio.run()` creates an event loop, runs the coroutine to completion, cancels leftover tasks, and closes the loop. It is the correct entry point and should be called exactly once per program.
+
+---
+
+## III. Concurrency with Tasks
+
+Awaiting sequentially is not concurrent. This takes one full second:
+
+```python
+async def sequential() -> list[dict]:
+    return [await fetch_user(i) for i in range(10)]   # 10 × 0.1s
+```
+
+Wrapping coroutines in tasks schedules them on the loop immediately, so they overlap:
+
+```python
+async def concurrent() -> list[dict]:
+    tasks = [asyncio.create_task(fetch_user(i)) for i in range(10)]
+    return await asyncio.gather(*tasks)               # ~0.1s total
+```
+
+`asyncio.gather` preserves result order regardless of completion order. By default the first exception propagates while other tasks keep running; `return_exceptions=True` collects exceptions as results instead:
+
+```python
+results = await asyncio.gather(*tasks, return_exceptions=True)
+ok      = [r for r in results if not isinstance(r, Exception)]
+failed  = [r for r in results if isinstance(r, Exception)]
+```
+
+`asyncio.as_completed` yields results in completion order, which lets processing start on the first finisher rather than the slowest:
+
+```python
+for coro in asyncio.as_completed(tasks):
+    result = await coro
+    process(result)
+```
+
+---
+
+## IV. Structured Concurrency with TaskGroup
+
+Bare `create_task` has a real hazard: if nothing holds a reference, the task may be garbage collected mid-flight, and an exception inside it can vanish silently. `asyncio.TaskGroup`, added in Python 3.11, fixes ownership and error propagation together.
+
+```python
+async def load_dashboard(user_id: int) -> dict:
+    async with asyncio.TaskGroup() as tg:
+        profile = tg.create_task(fetch_profile(user_id))
+        orders  = tg.create_task(fetch_orders(user_id))
+        prefs   = tg.create_task(fetch_prefs(user_id))
+    return {
+        "profile": profile.result(),
+        "orders":  orders.result(),
+        "prefs":   prefs.result(),
+    }
+```
+
+The `async with` block does not exit until every child task finishes. If any task raises, the remaining siblings are cancelled and the errors surface together as an `ExceptionGroup`, caught with `except*`:
+
+```python
+try:
+    data = await load_dashboard(42)
+except* TimeoutError as eg:
+    log.warning("timeouts: %d", len(eg.exceptions))
+except* ValueError as eg:
+    log.error("bad data: %s", eg.exceptions)
+```
+
+The guarantee is that no task outlives its scope. This is the same principle that makes lexical scoping work for variables, applied to concurrency.
+
+---
+
+## V. Timeouts and Cancellation
+
+Cancellation is delivered by raising `asyncio.CancelledError` at the coroutine's next suspension point. It inherits from `BaseException`, not `Exception`, specifically so that `except Exception:` does not swallow it.
+
+```python
+async def with_deadline() -> None:
+    try:
+        async with asyncio.timeout(5.0):
+            await slow_operation()
+    except TimeoutError:
+        log.warning("operation exceeded 5s budget")
+```
+
+Cleanup must be honoured on cancellation, and re-raising is mandatory:
+
+```python
+async def worker(queue: asyncio.Queue) -> None:
+    try:
+        while True:
+            item = await queue.get()
+            await handle(item)
+            queue.task_done()
+    except asyncio.CancelledError:
+        await flush_pending()
+        raise                       # never suppress cancellation
+```
+
+`asyncio.shield` protects a critical section from cancellation propagating inward, which is appropriate for a commit that must not be torn in half — and inappropriate for anything else, because a shield that outlives its caller is a leak.
+
+---
+
+## VI. Limiting Concurrency
+
+Unbounded fan-out is the classic async failure: ten thousand simultaneous connections exhaust file descriptors, saturate the remote service, and trigger rate limiting. A semaphore bounds it.
+
+```python
+async def fetch_all(urls: list[str], limit: int = 20) -> list[bytes]:
+    sem = asyncio.Semaphore(limit)
+
+    async def bounded(url: str) -> bytes:
+        async with sem:
+            return await fetch(url)
+
+    async with asyncio.TaskGroup() as tg:
+        tasks = [tg.create_task(bounded(u)) for u in urls]
+    return [t.result() for t in tasks]
+```
+
+A queue with a fixed worker pool gives the same bound with backpressure:
+
+```python
+async def pipeline(items: list[str], workers: int = 8) -> None:
+    queue: asyncio.Queue[str] = asyncio.Queue(maxsize=100)
+
+    async def consumer() -> None:
+        while True:
+            item = await queue.get()
+            try:
+                await process(item)
+            finally:
+                queue.task_done()
+
+    tasks = [asyncio.create_task(consumer()) for _ in range(workers)]
+    for item in items:
+        await queue.put(item)        # blocks when full — backpressure
+    await queue.join()
+    for t in tasks:
+        t.cancel()
+    await asyncio.gather(*tasks, return_exceptions=True)
+```
+
+`maxsize` is what makes this safe: a fast producer cannot outrun slow consumers and accumulate the entire input in memory.
+
+---
+
+## VII. Async Context Managers and Iterators
+
+`__aenter__` and `__aexit__` define an async context manager, letting setup and teardown await.
+
+```python
+class Connection:
+    async def __aenter__(self) -> "Connection":
+        self._sock = await open_socket(self.host, self.port)
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb) -> bool:
+        await self._sock.close()
+        return False                 # do not suppress exceptions
+
+async with Connection("db.internal", 5432) as conn:
+    rows = await conn.query("SELECT id, email FROM users WHERE active")
+```
+
+`__aiter__` and `__anext__` define an async iterator, and `async for` drives it. Async generators combine both and are the natural way to stream paginated results without holding them all:
+
+```python
+async def paginate(endpoint: str, page_size: int = 100):
+    offset = 0
+    while True:
+        batch = await fetch_page(endpoint, offset, page_size)
+        if not batch:
+            return
+        for row in batch:
+            yield row
+        offset += page_size
+
+async for record in paginate("/api/events"):
+    await index(record)
+```
+
+---
+
+## VIII. The Blocking Call Problem
+
+A single synchronous call blocks the entire loop and every coroutine on it. These are all bugs inside `async def`:
+
+```python
+time.sleep(1)                    # blocks the loop for a full second
+requests.get(url)                # blocks on the socket
+open("big.csv").read()           # blocks on disk
+hashlib.pbkdf2_hmac(...)         # blocks on CPU
+```
+
+The replacements are an async library where one exists, and a thread or process pool otherwise:
+
+```python
+await asyncio.sleep(1)                               # yields to the loop
+data = await asyncio.to_thread(path.read_bytes)      # offload blocking I/O
+
+loop = asyncio.get_running_loop()
+with concurrent.futures.ProcessPoolExecutor() as pool:
+    digest = await loop.run_in_executor(pool, expensive_hash, payload)
+```
+
+`asyncio.to_thread` suits blocking I/O and C extensions that release the GIL. A process pool is required for genuine CPU work. Enabling `asyncio.run(main(), debug=True)` logs any callback exceeding 100 milliseconds, which finds accidental blocking quickly.
+
+---
+
+## IX. Practical Guidance
+
+Do not mix paradigms carelessly. Calling `asyncio.run()` from inside a running loop raises `RuntimeError`; use `await` instead. Library code should expose async functions rather than starting loops of its own, leaving loop ownership to the application.
+
+Synchronization primitives have async equivalents — `asyncio.Lock`, `Event`, `Condition`, `Semaphore` — and the threading versions must never be used in coroutines, since acquiring a `threading.Lock` blocks the loop rather than suspending.
+
+Async is not automatically faster. It wins when concurrency is high and per-operation work is dominated by waiting. For a handful of concurrent requests, threads are simpler and perform comparably. For CPU-bound work it is strictly worse than multiprocessing. The technique earns its complexity at scale, on workloads where thousands of connections spend nearly all their time idle.

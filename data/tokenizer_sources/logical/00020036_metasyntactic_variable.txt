@@ -1,0 +1,70 @@
+A metasyntactic variable is a specific word or set of words identified as a placeholder in computer science and specifically computer programming. These words are commonly found in source code and are intended to be modified or substituted before real-world usage. For example, foo and bar are used in over 330 Internet Engineering Task Force Requests for Comments, the documents which define foundational internet technologies like HTTP (web), TCP/IP, and email protocols.
+By mathematical analogy, a metasyntactic variable is a word that is a variable for other words, just as in algebra letters are used as variables for numbers.
+Metasyntactic variables are used to name entities such as variables, functions, and commands whose exact identity is unimportant and serve only to demonstrate a concept, which is useful for teaching programming.
+
+Common metasyntactic variables
+Since English is the foundation language or lingua franca of most computer programming languages, variables that originate in English are commonly seen even in programs and examples of programs written for other spoken-language audiences.
+The variables used in a particular context may depend on subcultures that develop around programming languages.
+
+General usage
+Metasyntactic variables used commonly across all programming languages include foobar, foo, bar, baz, qux, quux, corge, grault, garply, waldo, fred, plugh, xyzzy, and thud. Two of these words, plugh and xyzzy, are taken from the game Colossal Cave Adventure.
+A fuller reference can be found in The Hacker's Dictionary from MIT Press.
+
+Japanese
+In Japanese, the words hoge (ほげ) and fuga (ふが) are commonly used, with other common words and variants being piyo (ぴよ), hogera (ほげら), and hogehoge (ほげほげ). The origin of hoge as a metasyntactic variable is not known, but it is believed to date to the early 1980s.
+
+French
+In France, the word toto is widely used, with variants tata, titi, tutu as related placeholders. One commonly-raised source for the use of toto is a reference to the stock character used to tell jokes with Tête à Toto.
+
+Turkish
+In  Turkey, the words hede and hödö (usually spelt hodo due to ASCII-only naming constraints of programming languages) are well-known metasyntactic variables that stem from popular humorous cartoon magazines of the 90's like LeMan. The words do not mean anything, and are used for precisely that reason. The terms were popularized more widely by the actor and stand-up comedian Cem Yılmaz in the late 90's and early 2000's.
+
+Italian
+In Italian software programming culture, it is common to encounter names of Walt Disney characters (as found in the Italian versions of the shows) being used as variables. These names often appear in pseudo-code, are referenced in software engineering classes, and are commonly employed when explaining algorithms to colleagues. Among the most frequently used are "pippo" (Goofy), "pluto", and "paperino" (Donald Duck).
+
+Usage examples
+
+C
+
+In the following example the function name foo and the variable name bar are both metasyntactic variables. Lines beginning with // are comments.
+
+C++
+
+Function prototypes with examples of different argument passing mechanisms:
+
+Example showing the function overloading capabilities of the C++ language
+
+Python
+Spam, ham, and eggs are the principal metasyntactic variables used in the Python programming language. This is a reference to the famous comedy sketch, "Spam", by Monty Python, the eponym of the language.
+In the following example spam, ham, and eggs are metasyntactic variables and lines beginning with # are comments.
+
+IETF Requests for Comments
+Both the IETF RFCs and computer programming languages are rendered in plain text, making it necessary to distinguish metasyntactic variables by a naming convention, since it would not be obvious from context.
+Here is an example from the official IETF document explaining the e-mail protocols (from RFC 772 - cited in RFC 3092):
+
+ All is well; now the recipients can be specified.
+
+     S: MRCP TO:<Foo@Y> <CRLF>
+     R: 200 OK
+
+     S: MRCP TO:<Raboof@Y> <CRLF>
+     R: 553  No such user here
+
+     S: MRCP TO:<bar@Y> <CRLF>
+     R: 200 OK
+
+     S: MRCP TO:<@Y,@X,fubar@Z> <CRLF>
+     R: 200 OK
+
+  Note that the failure of "Raboof" has no effect on the storage of
+  mail for "Foo", "bar" or the mail to be forwarded to "fubar@Z"
+  through host "X".
+
+(The documentation for texinfo emphasizes the distinction between metavariables and mere variables used in a programming language being documented in some texinfo file as: "Use the @var command to indicate metasyntactic variables. A metasyntactic variable is something that stands for another piece of text. For example, you should use a metasyntactic variable in the documentation of a function to describe the arguments that are passed to that function. Do not use @var for the names of particular variables in programming languages. These are specific names from a program, so @code is correct for them.")
+Another point reflected in the above example is the convention that a metavariable is to be uniformly substituted with the same instance in all its appearances in a given schema. This is in contrast with nonterminal symbols in formal grammars where the nonterminals on the right of a production can be substituted by different instances.
+
+Example data
+
+SQL
+It is common to use the name ACME in example SQL databases and as a placeholder company-name for the purpose of teaching. The term 'ACME Database' is commonly used to mean a training or example-only set of database data used solely for training or testing. 
+ACME is also commonly used in documentation which shows SQL usage examples, a common practice with in many educational texts as well as technical documentation from companies such as Microsoft and Oracle.

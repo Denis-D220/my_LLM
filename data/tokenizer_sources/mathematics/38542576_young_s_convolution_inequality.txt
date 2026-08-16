@@ -1,0 +1,2050 @@
+In mathematics, Young's convolution inequality is a mathematical inequality about the convolution of two functions, named after William Henry Young.
+
+Statement
+
+Euclidean space
+In real analysis, the following result is called Young's convolution inequality:
+Suppose 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is in the Lebesgue space 
+  
+    
+      
+        
+          L
+          
+            p
+          
+        
+        (
+        
+          
+            R
+          
+          
+            d
+          
+        
+        )
+      
+    
+    {\displaystyle L^{p}(\mathbb {R} ^{d})}
+  
+ and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is in 
+  
+    
+      
+        
+          L
+          
+            q
+          
+        
+        (
+        
+          
+            R
+          
+          
+            d
+          
+        
+        )
+      
+    
+    {\displaystyle L^{q}(\mathbb {R} ^{d})}
+  
+ and
+
+  
+    
+      
+        
+          
+            1
+            p
+          
+        
+        +
+        
+          
+            1
+            q
+          
+        
+        =
+        
+          
+            1
+            r
+          
+        
+        +
+        1
+      
+    
+    {\displaystyle {\frac {1}{p}}+{\frac {1}{q}}={\frac {1}{r}}+1}
+  
+
+with 
+  
+    
+      
+        1
+        ≤
+        p
+        ,
+        q
+        ,
+        r
+        ≤
+        ∞
+        .
+      
+    
+    {\displaystyle 1\leq p,q,r\leq \infty .}
+  
+ Then
+
+  
+    
+      
+        ‖
+        f
+        ∗
+        g
+        
+          ‖
+          
+            r
+          
+        
+        ≤
+        ‖
+        f
+        
+          ‖
+          
+            p
+          
+        
+        ‖
+        g
+        
+          ‖
+          
+            q
+          
+        
+        .
+      
+    
+    {\displaystyle \|f*g\|_{r}\leq \|f\|_{p}\|g\|_{q}.}
+  
+
+Here the star denotes convolution, 
+  
+    
+      
+        
+          L
+          
+            p
+          
+        
+      
+    
+    {\displaystyle L^{p}}
+  
+ is Lebesgue space, and
+
+  
+    
+      
+        ‖
+        f
+        
+          ‖
+          
+            p
+          
+        
+        =
+        
+          
+            (
+          
+        
+        
+          ∫
+          
+            
+              
+                R
+              
+              
+                d
+              
+            
+          
+        
+        
+          |
+        
+        f
+        (
+        x
+        )
+        
+          
+            |
+          
+          
+            p
+          
+        
+        
+        d
+        x
+        
+          
+            
+              )
+            
+          
+          
+            1
+            
+              /
+            
+            p
+          
+        
+      
+    
+    {\displaystyle \|f\|_{p}={\Bigl (}\int _{\mathbb {R} ^{d}}|f(x)|^{p}\,dx{\Bigr )}^{1/p}}
+  
+
+denotes the usual 
+  
+    
+      
+        
+          L
+          
+            p
+          
+        
+      
+    
+    {\displaystyle L^{p}}
+  
+ norm.
+Equivalently, if 
+  
+    
+      
+        p
+        ,
+        q
+        ,
+        r
+        ≥
+        1
+      
+    
+    {\displaystyle p,q,r\geq 1}
+  
+ and 
+  
+    
+      
+        
+          
+            1
+            p
+          
+        
+        +
+        
+          
+            1
+            q
+          
+        
+        +
+        
+          
+            1
+            r
+          
+        
+        =
+        2
+      
+    
+    {\textstyle {\frac {1}{p}}+{\frac {1}{q}}+{\frac {1}{r}}=2}
+  
+ then 
+
+  
+    
+      
+        
+          |
+          
+            
+              ∫
+              
+                
+                  
+                    R
+                  
+                  
+                    d
+                  
+                
+              
+            
+            
+              ∫
+              
+                
+                  
+                    R
+                  
+                  
+                    d
+                  
+                
+              
+            
+            f
+            (
+            x
+            )
+            g
+            (
+            x
+            −
+            y
+            )
+            h
+            (
+            y
+            )
+            
+            
+              d
+            
+            x
+            
+            
+              d
+            
+            y
+          
+          |
+        
+        ≤
+        
+          
+            (
+            
+              
+                ∫
+                
+                  
+                    
+                      R
+                    
+                    
+                      d
+                    
+                  
+                
+              
+              |
+              f
+              
+                |
+                
+                  p
+                
+              
+            
+            )
+          
+          
+            
+              1
+              p
+            
+          
+        
+        
+          
+            (
+            
+              
+                ∫
+                
+                  
+                    
+                      R
+                    
+                    
+                      d
+                    
+                  
+                
+              
+              |
+              g
+              
+                |
+                
+                  q
+                
+              
+            
+            )
+          
+          
+            
+              1
+              q
+            
+          
+        
+        
+          
+            (
+            
+              
+                ∫
+                
+                  
+                    
+                      R
+                    
+                    
+                      d
+                    
+                  
+                
+              
+              |
+              h
+              
+                |
+                
+                  r
+                
+              
+            
+            )
+          
+          
+            
+              1
+              r
+            
+          
+        
+      
+    
+    {\displaystyle \left|\int _{\mathbb {R} ^{d}}\int _{\mathbb {R} ^{d}}f(x)g(x-y)h(y)\,\mathrm {d} x\,\mathrm {d} y\right|\leq \left(\int _{\mathbb {R} ^{d}}\vert f\vert ^{p}\right)^{\frac {1}{p}}\left(\int _{\mathbb {R} ^{d}}\vert g\vert ^{q}\right)^{\frac {1}{q}}\left(\int _{\mathbb {R} ^{d}}\vert h\vert ^{r}\right)^{\frac {1}{r}}}
+  
+
+Generalizations
+Young's convolution inequality has a natural generalization in which we replace 
+  
+    
+      
+        
+          
+            R
+          
+          
+            d
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{d}}
+  
+ by a 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+-compact unimodular group 
+  
+    
+      
+        G
+        .
+      
+    
+    {\displaystyle G.}
+  
+ If we let 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ be a bi-invariant Haar measure on 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ and we let 
+  
+    
+      
+        f
+        ,
+        g
+        :
+        G
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f,g:G\to \mathbb {R} }
+  
+ or 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+ be integrable functions, then we define 
+  
+    
+      
+        f
+        ∗
+        g
+      
+    
+    {\displaystyle f*g}
+  
+ by
+
+  
+    
+      
+        f
+        ∗
+        g
+        (
+        x
+        )
+        =
+        
+          ∫
+          
+            G
+          
+        
+        f
+        (
+        y
+        )
+        g
+        (
+        
+          y
+          
+            −
+            1
+          
+        
+        x
+        )
+        
+        
+          d
+        
+        μ
+        (
+        y
+        )
+        .
+      
+    
+    {\displaystyle f*g(x)=\int _{G}f(y)g(y^{-1}x)\,\mathrm {d} \mu (y).}
+  
+
+Then in this case, Young's inequality states that for 
+  
+    
+      
+        f
+        ∈
+        
+          L
+          
+            p
+          
+        
+        (
+        G
+        ,
+        μ
+        )
+      
+    
+    {\displaystyle f\in L^{p}(G,\mu )}
+  
+ and 
+  
+    
+      
+        g
+        ∈
+        
+          L
+          
+            q
+          
+        
+        (
+        G
+        ,
+        μ
+        )
+      
+    
+    {\displaystyle g\in L^{q}(G,\mu )}
+  
+ and 
+  
+    
+      
+        p
+        ,
+        q
+        ,
+        r
+        ∈
+        [
+        1
+        ,
+        ∞
+        ]
+      
+    
+    {\displaystyle p,q,r\in [1,\infty ]}
+  
+ such that 
+
+  
+    
+      
+        
+          
+            1
+            p
+          
+        
+        +
+        
+          
+            1
+            q
+          
+        
+        =
+        
+          
+            1
+            r
+          
+        
+        +
+        1
+      
+    
+    {\displaystyle {\frac {1}{p}}+{\frac {1}{q}}={\frac {1}{r}}+1}
+  
+
+we have a bound 
+
+  
+    
+      
+        ‖
+        f
+        ∗
+        g
+        
+          ‖
+          
+            r
+          
+        
+        ≤
+        ‖
+        f
+        
+          ‖
+          
+            p
+          
+        
+        ‖
+        g
+        
+          ‖
+          
+            q
+          
+        
+        .
+      
+    
+    {\displaystyle \lVert f*g\rVert _{r}\leq \lVert f\rVert _{p}\lVert g\rVert _{q}.}
+  
+
+Equivalently, if 
+  
+    
+      
+        p
+        ,
+        q
+        ,
+        r
+        ≥
+        1
+      
+    
+    {\displaystyle p,q,r\geq 1}
+  
+ and 
+  
+    
+      
+        
+          
+            1
+            p
+          
+        
+        +
+        
+          
+            1
+            q
+          
+        
+        +
+        
+          
+            1
+            r
+          
+        
+        =
+        2
+      
+    
+    {\textstyle {\frac {1}{p}}+{\frac {1}{q}}+{\frac {1}{r}}=2}
+  
+ then 
+
+  
+    
+      
+        
+          |
+          
+            
+              ∫
+              
+                G
+              
+            
+            
+              ∫
+              
+                G
+              
+            
+            f
+            (
+            x
+            )
+            g
+            (
+            
+              y
+              
+                −
+                1
+              
+            
+            x
+            )
+            h
+            (
+            y
+            )
+            
+            
+              d
+            
+            μ
+            (
+            x
+            )
+            
+            
+              d
+            
+            μ
+            (
+            y
+            )
+          
+          |
+        
+        ≤
+        
+          
+            (
+            
+              
+                ∫
+                
+                  G
+                
+              
+              |
+              f
+              
+                |
+                
+                  p
+                
+              
+            
+            )
+          
+          
+            
+              1
+              p
+            
+          
+        
+        
+          
+            (
+            
+              
+                ∫
+                
+                  G
+                
+              
+              |
+              g
+              
+                |
+                
+                  q
+                
+              
+            
+            )
+          
+          
+            
+              1
+              q
+            
+          
+        
+        
+          
+            (
+            
+              
+                ∫
+                
+                  G
+                
+              
+              |
+              h
+              
+                |
+                
+                  r
+                
+              
+            
+            )
+          
+          
+            
+              1
+              r
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \left|\int _{G}\int _{G}f(x)g(y^{-1}x)h(y)\,\mathrm {d} \mu (x)\,\mathrm {d} \mu (y)\right|\leq \left(\int _{G}\vert f\vert ^{p}\right)^{\frac {1}{p}}\left(\int _{G}\vert g\vert ^{q}\right)^{\frac {1}{q}}\left(\int _{G}\vert h\vert ^{r}\right)^{\frac {1}{r}}.}
+  
+
+Since 
+  
+    
+      
+        
+          
+            R
+          
+          
+            d
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{d}}
+  
+ is in fact a locally compact abelian group (and therefore unimodular) with the Lebesgue measure the desired Haar measure, this is in fact a generalization.
+This generalization may be refined. Let 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ and 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ be as before and assume 
+  
+    
+      
+        1
+        <
+        p
+        ,
+        q
+        ,
+        r
+        <
+        ∞
+      
+    
+    {\displaystyle 1<p,q,r<\infty }
+  
+ satisfy 
+  
+    
+      
+        
+          
+            
+              1
+              p
+            
+          
+        
+        +
+        
+          
+            
+              1
+              q
+            
+          
+        
+        =
+        
+          
+            
+              1
+              r
+            
+          
+        
+        +
+        1.
+      
+    
+    {\textstyle {\tfrac {1}{p}}+{\tfrac {1}{q}}={\tfrac {1}{r}}+1.}
+  
+ Then there exists a constant 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ such that for any 
+  
+    
+      
+        f
+        ∈
+        
+          L
+          
+            p
+          
+        
+        (
+        G
+        ,
+        μ
+        )
+      
+    
+    {\displaystyle f\in L^{p}(G,\mu )}
+  
+ and any measurable function 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ on 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ that belongs to the weak 
+  
+    
+      
+        
+          L
+          
+            q
+          
+        
+      
+    
+    {\displaystyle L^{q}}
+  
+ space 
+  
+    
+      
+        
+          L
+          
+            q
+            ,
+            w
+          
+        
+        (
+        G
+        ,
+        μ
+        )
+        ,
+      
+    
+    {\displaystyle L^{q,w}(G,\mu ),}
+  
+ which by definition means that the following supremum
+
+  
+    
+      
+        ‖
+        g
+        
+          ‖
+          
+            q
+            ,
+            w
+          
+          
+            q
+          
+        
+         
+        :=
+         
+        
+          sup
+          
+            t
+            >
+            0
+          
+        
+        
+        
+          t
+          
+            q
+          
+        
+        μ
+        (
+        
+          |
+        
+        g
+        
+          |
+        
+        >
+        t
+        )
+      
+    
+    {\displaystyle \|g\|_{q,w}^{q}~:=~\sup _{t>0}\,t^{q}\mu (|g|>t)}
+  
+
+is finite, we have 
+  
+    
+      
+        f
+        ∗
+        g
+        ∈
+        
+          L
+          
+            r
+          
+        
+        (
+        G
+        ,
+        μ
+        )
+      
+    
+    {\displaystyle f*g\in L^{r}(G,\mu )}
+  
+ and
+
+  
+    
+      
+        ‖
+        f
+        ∗
+        g
+        
+          ‖
+          
+            r
+          
+        
+         
+        ≤
+         
+        C
+        
+        ‖
+        f
+        
+          ‖
+          
+            p
+          
+        
+        
+        ‖
+        g
+        
+          ‖
+          
+            q
+            ,
+            w
+          
+        
+        .
+      
+    
+    {\displaystyle \|f*g\|_{r}~\leq ~C\,\|f\|_{p}\,\|g\|_{q,w}.}
+  
+
+Applications
+An example application is that Young's inequality can be used to show that the heat semigroup is a contracting semigroup using the 
+  
+    
+      
+        
+          L
+          
+            2
+          
+        
+      
+    
+    {\displaystyle L^{2}}
+  
+ norm (that is, the Weierstrass transform does not enlarge the 
+  
+    
+      
+        
+          L
+          
+            2
+          
+        
+      
+    
+    {\displaystyle L^{2}}
+  
+ norm).
+
+Proof
+
+Proof by Hölder's inequality
+Young's inequality has an elementary proof with the non-optimal constant 1.
+We assume that the functions 
+  
+    
+      
+        f
+        ,
+        g
+        ,
+        h
+        :
+        G
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f,g,h:G\to \mathbb {R} }
+  
+ are nonnegative and integrable, where 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+ is a 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+-compact unimodular group endowed with a bi-invariant 
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+  
+-finite Haar measure 
+  
+    
+      
+        μ
+        .
+      
+    
+    {\displaystyle \mu .}
+  
+ We use the fact that 
+  
+    
+      
+        μ
+        (
+        S
+        )
+        =
+        μ
+        (
+        
+          S
+          
+            −
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle \mu (S)=\mu (S^{-1})}
+  
+ for any measurable 
+  
+    
+      
+        S
+        ⊆
+        G
+        .
+      
+    
+    {\displaystyle S\subseteq G.}
+  
+
+Since 
+  
+    
+      
+        p
+        (
+        2
+        −
+        
+          
+            
+              1
+              q
+            
+          
+        
+        −
+        
+          
+            
+              1
+              r
+            
+          
+        
+        )
+        =
+        q
+        (
+        2
+        −
+        
+          
+            
+              1
+              p
+            
+          
+        
+        −
+        
+          
+            
+              1
+              r
+            
+          
+        
+        )
+        =
+        r
+        (
+        2
+        −
+        
+          
+            
+              1
+              p
+            
+          
+        
+        −
+        
+          
+            
+              1
+              q
+            
+          
+        
+        )
+        =
+        1
+      
+    
+    {\textstyle p(2-{\tfrac {1}{q}}-{\tfrac {1}{r}})=q(2-{\tfrac {1}{p}}-{\tfrac {1}{r}})=r(2-{\tfrac {1}{p}}-{\tfrac {1}{q}})=1}
+  
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                
+                  ∫
+                  
+                    G
+                  
+                
+                
+                  ∫
+                  
+                    G
+                  
+                
+                f
+                (
+                x
+                )
+                g
+                (
+                
+                  y
+                  
+                    −
+                    1
+                  
+                
+                x
+                )
+                h
+                (
+                y
+                )
+                
+                
+                  d
+                
+                μ
+                (
+                x
+                )
+                
+                
+                  d
+                
+                μ
+                (
+                y
+                )
+              
+            
+            
+              
+                =
+                
+
+                
+              
+              
+                
+                
+                  ∫
+                  
+                    G
+                  
+                
+                
+                  ∫
+                  
+                    G
+                  
+                
+                
+                  
+                    (
+                    
+                      f
+                      (
+                      x
+                      
+                        )
+                        
+                          p
+                        
+                      
+                      g
+                      (
+                      
+                        y
+                        
+                          −
+                          1
+                        
+                      
+                      x
+                      
+                        )
+                        
+                          q
+                        
+                      
+                    
+                    )
+                  
+                  
+                    1
+                    −
+                    
+                      
+                        1
+                        r
+                      
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      f
+                      (
+                      x
+                      
+                        )
+                        
+                          p
+                        
+                      
+                      h
+                      (
+                      y
+                      
+                        )
+                        
+                          r
+                        
+                      
+                    
+                    )
+                  
+                  
+                    1
+                    −
+                    
+                      
+                        1
+                        q
+                      
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      g
+                      (
+                      
+                        y
+                        
+                          −
+                          1
+                        
+                      
+                      x
+                      
+                        )
+                        
+                          q
+                        
+                      
+                      h
+                      (
+                      y
+                      
+                        )
+                        
+                          r
+                        
+                      
+                    
+                    )
+                  
+                  
+                    1
+                    −
+                    
+                      
+                        1
+                        p
+                      
+                    
+                  
+                
+                
+                
+                  d
+                
+                μ
+                (
+                x
+                )
+                
+                
+                  d
+                
+                μ
+                (
+                y
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\int _{G}\int _{G}f(x)g(y^{-1}x)h(y)\,\mathrm {d} \mu (x)\,\mathrm {d} \mu (y)\\={}&\int _{G}\int _{G}\left(f(x)^{p}g(y^{-1}x)^{q}\right)^{1-{\frac {1}{r}}}\left(f(x)^{p}h(y)^{r}\right)^{1-{\frac {1}{q}}}\left(g(y^{-1}x)^{q}h(y)^{r}\right)^{1-{\frac {1}{p}}}\,\mathrm {d} \mu (x)\,\mathrm {d} \mu (y)\end{aligned}}}
+  
+
+By the Hölder inequality for three functions we deduce that 
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                
+                  ∫
+                  
+                    G
+                  
+                
+                
+                  ∫
+                  
+                    G
+                  
+                
+                f
+                (
+                x
+                )
+                g
+                (
+                
+                  y
+                  
+                    −
+                    1
+                  
+                
+                x
+                )
+                h
+                (
+                y
+                )
+                
+                
+                  d
+                
+                μ
+                (
+                x
+                )
+                
+                
+                  d
+                
+                μ
+                (
+                y
+                )
+              
+            
+            
+              
+              
+                
+                ≤
+                
+                  
+                    (
+                    
+                      
+                        ∫
+                        
+                          G
+                        
+                      
+                      
+                        ∫
+                        
+                          G
+                        
+                      
+                      f
+                      (
+                      x
+                      
+                        )
+                        
+                          p
+                        
+                      
+                      g
+                      (
+                      
+                        y
+                        
+                          −
+                          1
+                        
+                      
+                      x
+                      
+                        )
+                        
+                          q
+                        
+                      
+                      
+                      
+                        d
+                      
+                      μ
+                      (
+                      x
+                      )
+                      
+                      
+                        d
+                      
+                      μ
+                      (
+                      y
+                      )
+                    
+                    )
+                  
+                  
+                    1
+                    −
+                    
+                      
+                        1
+                        r
+                      
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        ∫
+                        
+                          G
+                        
+                      
+                      
+                        ∫
+                        
+                          G
+                        
+                      
+                      f
+                      (
+                      x
+                      
+                        )
+                        
+                          p
+                        
+                      
+                      h
+                      (
+                      y
+                      
+                        )
+                        
+                          r
+                        
+                      
+                      
+                      
+                        d
+                      
+                      μ
+                      (
+                      x
+                      )
+                      
+                      
+                        d
+                      
+                      μ
+                      (
+                      y
+                      )
+                    
+                    )
+                  
+                  
+                    1
+                    −
+                    
+                      
+                        1
+                        q
+                      
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        ∫
+                        
+                          G
+                        
+                      
+                      
+                        ∫
+                        
+                          G
+                        
+                      
+                      g
+                      (
+                      
+                        y
+                        
+                          −
+                          1
+                        
+                      
+                      x
+                      
+                        )
+                        
+                          q
+                        
+                      
+                      h
+                      (
+                      y
+                      
+                        )
+                        
+                          r
+                        
+                      
+                      
+                      
+                        d
+                      
+                      μ
+                      (
+                      x
+                      )
+                      
+                      
+                        d
+                      
+                      μ
+                      (
+                      y
+                      )
+                    
+                    )
+                  
+                  
+                    1
+                    −
+                    
+                      
+                        1
+                        p
+                      
+                    
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\int _{G}\int _{G}f(x)g(y^{-1}x)h(y)\,\mathrm {d} \mu (x)\,\mathrm {d} \mu (y)\\&\leq \left(\int _{G}\int _{G}f(x)^{p}g(y^{-1}x)^{q}\,\mathrm {d} \mu (x)\,\mathrm {d} \mu (y)\right)^{1-{\frac {1}{r}}}\left(\int _{G}\int _{G}f(x)^{p}h(y)^{r}\,\mathrm {d} \mu (x)\,\mathrm {d} \mu (y)\right)^{1-{\frac {1}{q}}}\left(\int _{G}\int _{G}g(y^{-1}x)^{q}h(y)^{r}\,\mathrm {d} \mu (x)\,\mathrm {d} \mu (y)\right)^{1-{\frac {1}{p}}}.\end{aligned}}}
+  
+
+The conclusion follows then by left-invariance of the Haar measure, the fact that integrals are preserved by inversion of the domain, and by Fubini's theorem.
+
+Proof by interpolation
+Young's inequality can also be proved by interpolation; see the article on Riesz–Thorin interpolation for a proof.
+
+Sharp constant
+In case 
+  
+    
+      
+        p
+        ,
+        q
+        >
+        1
+        ,
+      
+    
+    {\displaystyle p,q>1,}
+  
+ Young's inequality can be strengthened to a sharp form, via
+
+  
+    
+      
+        ‖
+        f
+        ∗
+        g
+        
+          ‖
+          
+            r
+          
+        
+        ≤
+        
+          c
+          
+            p
+            ,
+            q
+          
+        
+        ‖
+        f
+        
+          ‖
+          
+            p
+          
+        
+        ‖
+        g
+        
+          ‖
+          
+            q
+          
+        
+        .
+      
+    
+    {\displaystyle \|f*g\|_{r}\leq c_{p,q}\|f\|_{p}\|g\|_{q}.}
+  
+
+where the constant 
+  
+    
+      
+        
+          c
+          
+            p
+            ,
+            q
+          
+        
+        <
+        1.
+      
+    
+    {\displaystyle c_{p,q}<1.}
+  
+ 
+When this optimal constant is achieved, the function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ are multidimensional Gaussian functions.

@@ -1,0 +1,263 @@
+In mathematical logic, an arithmetical set (or arithmetic set) is a set of natural numbers that can be defined by a formula of first-order Peano arithmetic. The arithmetical sets are  classified by the arithmetical hierarchy.
+The definition can be extended to an arbitrary countable set A (e.g. the set of n-tuples of integers, the set of rational numbers, the set of formulas in some formal language, etc.) by using Gödel numbers to represent elements of the set and declaring a subset of A to be arithmetical if the set of corresponding Gödel numbers is arithmetical.
+A function 
+  
+    
+      
+        f
+        :
+        A
+        ⊆
+        
+          
+            N
+          
+          
+            k
+          
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f:A\subseteq \mathbb {N} ^{k}\to \mathbb {N} }
+  
+ is called arithmetically definable if the graph of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is an arithmetical set.
+A real number is called arithmetical if the set of all smaller rational numbers is arithmetical. A complex number is called arithmetical if its real and imaginary parts are both arithmetical.
+
+Formal definition
+A set X of natural numbers is arithmetical or arithmetically definable if there is a first-order formula φ(n) in the language of Peano arithmetic such that each number n is in X if and only if φ(n) holds in the standard model of arithmetic.  Similarly, a k-ary relation 
+  
+    
+      
+        R
+        (
+        
+          n
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          n
+          
+            k
+          
+        
+        )
+      
+    
+    {\displaystyle R(n_{1},\ldots ,n_{k})}
+  
+ is arithmetical if there is a formula 
+  
+    
+      
+        ψ
+        (
+        
+          n
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          n
+          
+            k
+          
+        
+        )
+      
+    
+    {\displaystyle \psi (n_{1},\ldots ,n_{k})}
+  
+ such that 
+  
+    
+      
+        R
+        (
+        
+          n
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          n
+          
+            k
+          
+        
+        )
+        
+        ⟺
+        
+        ψ
+        (
+        
+          n
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          n
+          
+            k
+          
+        
+        )
+      
+    
+    {\displaystyle R(n_{1},\ldots ,n_{k})\iff \psi (n_{1},\ldots ,n_{k})}
+  
+ holds for all k-tuples 
+  
+    
+      
+        (
+        
+          n
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          n
+          
+            k
+          
+        
+        )
+      
+    
+    {\displaystyle (n_{1},\ldots ,n_{k})}
+  
+ of natural numbers. 
+A function 
+  
+    
+      
+        f
+        :⊆
+        
+          
+            N
+          
+          
+            k
+          
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f:\subseteq \mathbb {N} ^{k}\to \mathbb {N} }
+  
+ is called arithmetical if its graph is an arithmetical (k+1)-ary relation.
+A set A is said to be arithmetical in a set B if A is definable by an arithmetical formula that has B as a set parameter.
+
+Examples
+The set of all prime numbers is arithmetical.
+Every recursively enumerable set is arithmetical.
+Every computable function is arithmetically definable.
+The set encoding the halting problem is arithmetical.
+Chaitin's constant Ω is an arithmetical real number.
+Tarski's indefinability theorem shows that the (Gödel numbers of the) set of true formulas of first-order arithmetic is not arithmetically definable.
+
+Properties
+The complement of an arithmetical set is an arithmetical set.
+The Turing jump of an arithmetical set is an arithmetical set.
+The collection of arithmetical sets is countable, but the sequence of arithmetical sets is not arithmetically definable. Thus, there is no arithmetical formula φ(n,m) that is true if and only if m is a member of the nth arithmetical predicate.
+In fact, such a formula would describe a decision problem for all finite Turing jumps, and hence belongs to 0(ω), which cannot be formalized in first-order arithmetic, as it does not belong to the first-order arithmetical hierarchy.
+The set of real arithmetical numbers is countable, dense and order-isomorphic to the set of rational numbers.
+
+Implicitly arithmetical sets
+Each arithmetical set has an arithmetical formula that says whether particular numbers are in the set.  An alternative notion of definability allows for a formula that does not say whether particular numbers are in the set but says whether the set itself satisfies some arithmetical property. 
+A set Y of natural numbers is implicitly arithmetical or implicitly arithmetically definable if it is definable with an arithmetical formula that is able to use Y as a parameter.  That is, if there is a formula 
+  
+    
+      
+        θ
+        (
+        Z
+        )
+      
+    
+    {\displaystyle \theta (Z)}
+  
+ in the language of Peano arithmetic with no free number variables and a new set parameter Z and set membership relation 
+  
+    
+      
+        ∈
+      
+    
+    {\displaystyle \in }
+  
+ such that Y is the unique set Z such that 
+  
+    
+      
+        θ
+        (
+        Z
+        )
+      
+    
+    {\displaystyle \theta (Z)}
+  
+ holds.
+Every arithmetical set is implicitly arithmetical; if X is arithmetically defined by φ(n) then it is implicitly defined by the formula
+
+  
+    
+      
+        ∀
+        n
+        [
+        n
+        ∈
+        Z
+        ⇔
+        ϕ
+        (
+        n
+        )
+        ]
+      
+    
+    {\displaystyle \forall n[n\in Z\Leftrightarrow \phi (n)]}
+  
+.
+Not every implicitly arithmetical set is arithmetical, however. In particular, the truth set of first-order arithmetic is implicitly arithmetical but not arithmetical.

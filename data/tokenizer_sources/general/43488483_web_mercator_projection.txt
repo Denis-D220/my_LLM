@@ -1,0 +1,297 @@
+Web Mercator, Pseudo-Mercator, or Google Web Mercator is a variant of the Mercator map projection used for coordinates in WGS 84 Web Mercator or WGS 84 / Pseudo-Mercator and visualisation. It became the de facto standard for Web mapping applications after Google Maps adopted it in 2005. It is used by virtually all major online map providers, including Google Maps, CARTO, Mapbox, Bing Maps, OpenStreetMap, Mapquest, Esri, and many others. The EPSG identifier for the CRS is EPSG:3857, although others have been used historically.
+
+Properties
+Web Mercator is a slight variant of the Mercator projection, one used primarily in Web-based mapping programs. It uses the same formulas as the standard Mercator as used for small-scale maps. However, the Web Mercator uses the spherical formulas at all scales whereas large-scale Mercator maps normally use the ellipsoidal form of the projection. The discrepancy is imperceptible at the global scale but causes maps of local areas to deviate slightly from true ellipsoidal Mercator maps at the same scale. 
+While the Web Mercator's formulas are for the spherical form of the Mercator, geographical coordinates are required to be in the WGS 84 ellipsoidal datum. This discrepancy causes the projection to be slightly non-conformal. General lack of understanding that the Web Mercator differs from standard Mercator usage has caused considerable confusion and misuse. Mistaking Web Mercator for the standard Mercator during coordinate conversion can lead to deviations as much as 40 km on the ground. For all these reasons, the United States Department of Defense through the National Geospatial-Intelligence Agency has declared this map projection to be unacceptable for any official use.
+Unlike most map projections for the sphere, the Web Mercator uses the equatorial radius of the WGS 84 spheroid, rather than some compromise between the equatorial and polar radii. This results in a slightly larger map compared to the map's stated (nominal) scale than for most maps.
+
+Formulas
+Formulas for the Web Mercator are fundamentally the same as for the standard spherical Mercator, but before applying zoom, the "world coordinates" are adjusted such that the upper left corner is (0, 0) and the lower right corner is ( 
+  
+    
+      
+        
+          2
+          
+            zoom level
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle 2^{\text{zoom level}}-1}
+  
+, 
+  
+    
+      
+        
+          2
+          
+            zoom level
+          
+        
+        −
+        1
+      
+    
+    {\displaystyle 2^{\text{zoom level}}-1}
+  
+):
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                
+                  ⌊
+                  
+                    
+                      
+                        1
+                        
+                          2
+                          π
+                        
+                      
+                    
+                    ⋅
+                    
+                      2
+                      
+                        zoom level
+                      
+                    
+                    
+                      (
+                      
+                        π
+                        +
+                        λ
+                      
+                      )
+                    
+                  
+                  ⌋
+                
+                
+                   pixels
+                
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                
+                  ⌊
+                  
+                    
+                      
+                        1
+                        
+                          2
+                          π
+                        
+                      
+                    
+                    ⋅
+                    
+                      2
+                      
+                        zoom level
+                      
+                    
+                    
+                      (
+                      
+                        π
+                        −
+                        ln
+                        ⁡
+                        
+                          [
+                          
+                            tan
+                            ⁡
+                            
+                              (
+                              
+                                
+                                  
+                                    π
+                                    4
+                                  
+                                
+                                +
+                                
+                                  
+                                    φ
+                                    2
+                                  
+                                
+                              
+                              )
+                            
+                          
+                          ]
+                        
+                      
+                      )
+                    
+                  
+                  ⌋
+                
+                
+                   pixels
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=\left\lfloor {\frac {1}{2\pi }}\cdot 2^{\text{zoom level}}\left(\pi +\lambda \right)\right\rfloor {\text{ pixels}}\\[5pt]y&=\left\lfloor {\frac {1}{2\pi }}\cdot 2^{\text{zoom level}}\left(\pi -\ln \left[\tan \left({\frac {\pi }{4}}+{\frac {\varphi }{2}}\right)\right]\right)\right\rfloor {\text{ pixels}}\end{aligned}}}
+  
+
+where 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+  
+ is the longitude in radians and 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+  is geodetic latitude in radians.
+Because the Mercator projects the poles at infinity, a map using the Web Mercator projection cannot show the poles. Services such as Google Maps cut off coverage at 85.051129° north and south. This is not a limitation for street maps, which is the primary purpose for such services. The value 85.051129° is the latitude at which the full projected map becomes a square, and is computed as 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ given y = 0:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  φ
+                  
+                    max
+                  
+                
+                =
+                
+                  [
+                  
+                    2
+                    arctan
+                    ⁡
+                    (
+                    
+                      e
+                      
+                        π
+                      
+                    
+                    )
+                    −
+                    
+                      
+                        π
+                        2
+                      
+                    
+                  
+                  ]
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\varphi _{\text{max}}=\left[2\arctan(e^{\pi })-{\frac {\pi }{2}}\right]\end{aligned}}}
+  
+
+Spherical and ellipsoidal mix
+The projection is neither strictly ellipsoidal nor strictly spherical. EPSG's definition says the projection "uses spherical development of ellipsoidal coordinates". The underlying geographic coordinates are defined using the WGS84 ellipsoidal model of the Earth's surface, but are projected as if defined on a sphere. This practice is uncontroversial for small-scale maps (such as of the entire world), but has little precedent in large-scale maps (such as of a city or province).
+
+Advantages and disadvantages
+Web Mercator is a spherical Mercator projection, and so it has the same properties as a spherical Mercator: north is up everywhere, meridians are equally spaced vertical lines, angles are locally correct (assuming spherical coordinates), and areas inflate with distance from the equator such that the polar regions are grossly exaggerated. The ellipsoidal Mercator has these same properties, but models the earth as an ellipsoid.
+Unlike the ellipsoidal Mercator, however, the Web Mercator is not quite conformal. This means that angles between lines on the surface will not be drawn to the same angles in the map, although they will not deviate enough to be noticeable by eye. Lines deviate because Web Mercator specifies that coordinates be given as surveyed on the WGS 84 ellipsoidal model. By projecting coordinates surveyed against the ellipsoid as if they were surveyed on a sphere, angular relationships change slightly. This is standard practice on the standard spherical Mercator projection, but unlike Web Mercator, the spherical Mercator is not normally used for maps of local areas, such as street maps, and so the accuracy of positions needed for plotting is typically less than the angular deviation caused by using spherical formulas. The benefit the Web Mercator gains is that the spherical form is much simpler to calculate than the ellipsoidal form, and so requires only a fraction of the computing resources.
+
+Identifiers
+Due to slow adoption by the EPSG registry, the Web Mercator is represented by several different names and spatial reference system identifiers (SRIDs), including EPSG:900913, EPSG:3785 and EPSG:3857, the latter being the official EPSG identifier since 2008.
+
+EPSG:900913
+The projected coordinate reference system originally lacked an official spatial reference identifier (SRID), and the Geodesy subcommittee of the OGP's Geomatics committee (also known as EPSG) refused to provide it with one, declaring "We have reviewed the coordinate reference system used by Microsoft, Google, etc. and believe that it is technically flawed. We will not devalue the EPSG dataset by including such inappropriate geodesy and cartography." The unofficial code "EPSG:900913" (GOOGLE transliterated to numbers) came to be used. It was originally defined by Christopher Schmidt in his Technical Ramblings blog and became codified in OpenLayers 2, which, technically, would make OpenLayers the SRID authority.
+
+EPSG:3785
+In 2008, EPSG provided the official identifier EPSG:3785 with the official name "Popular Visualisation CRS / Mercator", but noted "It is not an official geodetic system". This definition used a spherical (rather than ellipsoidal) model of the Earth.
+
+EPSG:3857
+Later that year, EPSG provided an updated identifier, EPSG:3857 with the official name "WGS 84 / Pseudo-Mercator". The definition switched to using the WGS84 ellipsoid (EPSG:4326), rather than the sphere.
+Although the projection is closely associated with Google, Microsoft is listed as the "information source" in EPSG's standards.
+
+Other identifiers
+Other identifiers that have been used include ESRI:102113, ESRI:102100, and OSGEO:41001.
+ESRI:102113 corresponds to EPSG:3785 while ESRI:102100 corresponds to EPSG:3857.
+
+WKT definition
+The projection covers the Earth from −180° to 180° longitude, and 85.05° north and south. Using well-known text representation of coordinate reference systems (WKT), EPSG:3857 is defined as follows:
+
+PROJCRS["WGS 84 / Pseudo-Mercator",
+    BASEGEOGCRS["WGS 84",
+        ENSEMBLE["World Geodetic System 1984 ensemble",
+            MEMBER["World Geodetic System 1984 (Transit)", ID["EPSG",1166]],
+            MEMBER["World Geodetic System 1984 (G730)",    ID["EPSG",1152]],
+            MEMBER["World Geodetic System 1984 (G873)",    ID["EPSG",1153]],
+            MEMBER["World Geodetic System 1984 (G1150)",   ID["EPSG",1154]],
+            MEMBER["World Geodetic System 1984 (G1674)",   ID["EPSG",1155]],
+            MEMBER["World Geodetic System 1984 (G1762)",   ID["EPSG",1156]],
+            MEMBER["World Geodetic System 1984 (G2139)",   ID["EPSG",1309]],
+            ELLIPSOID["WGS 84", 6378137, 298.257223563, LENGTHUNIT["metre", 1, ID["EPSG",9001]], ID["EPSG",7030]],
+            ENSEMBLEACCURACY[2], ID["EPSG",6326]],
+        ID["EPSG",4326]],
+    CONVERSION["Popular Visualisation Pseudo-Mercator",
+        METHOD["Popular Visualisation Pseudo Mercator", ID["EPSG",1024]],
+        PARAMETER["Latitude of natural origin",  0, ANGLEUNIT["degree", 0.0174532925199433, ID["EPSG",9102]], ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin", 0, ANGLEUNIT["degree", 0.0174532925199433, ID["EPSG",9102]], ID["EPSG",8802]],
+        PARAMETER["False easting",               0, LENGTHUNIT["metre", 1,                  ID["EPSG",9001]], ID["EPSG",8806]],
+        PARAMETER["False northing",              0, LENGTHUNIT["metre", 1,                  ID["EPSG",9001]], ID["EPSG",8807]],
+        ID["EPSG",3856]],
+    CS[Cartesian, 2, ID["EPSG",4499]],
+    AXIS["Easting (X)", east],
+    AXIS["Northing (Y)", north],
+    LENGTHUNIT["metre", 1, ID["EPSG",9001]],
+    ID["EPSG",3857]]

@@ -1,0 +1,25 @@
+{
+  "tokenizer_version": "0.1",
+  "algorithm": "byte_level_bpe",
+  "encoding": "UTF-8",
+  "unicode_normalization": "NFC",
+  "preserve_case": true,
+  "settings": {
+    "vocab_size": 24000,
+    "min_pair_frequency": 2,
+    "text_field": "text",
+    "max_documents": null,
+    "max_bytes": null,
+    "special_tokens": [
+      "<|pad|>",
+      "<|bos|>",
+      "<|eos|>",
+      "<|system|>",
+      "<|user|>",
+      "<|assistant|>",
+      "<|end_turn|>",
+      "<|tool|>",
+      "<|tool_result|>"
+    ]
+  }
+}

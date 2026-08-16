@@ -1,0 +1,1012 @@
+In logic, reductio ad absurdum (Latin for "reduction to absurdity"), also known as argumentum ad absurdum (Latin for "argument to absurdity"), apagogical argument, or proof by contradiction, is the form of argument that attempts to establish a claim by showing that following the logic of a contrary proposition or argument would lead to absurdity or contradiction. Although it is quite freely used in mathematical proofs, not every school of mathematical thought accepts this kind of nonconstructive proof.
+This argument form traces back to Ancient Greek philosophy and has been used throughout history in both formal mathematical and philosophical reasoning, as well as in debate. In mathematics, the technique is called proof by contradiction. In formal logic, this technique is captured by an inference rule for reductio ad absurdum.
+More broadly, proof by contradiction is any form of argument that establishes a statement by arriving at a contradiction, even when the initial assumption is not the negation of the statement to be proved. In this general sense, proof by contradiction is also known as indirect proof, proof by assuming the opposite, and reductio ad impossibile.
+G. H. Hardy described proof by contradiction as "one of a mathematician's finest weapons", saying "It is a far finer gambit than any chess gambit: a chess player may offer the sacrifice of a pawn or even a piece, but a mathematician offers the game."
+
+Examples
+The "absurd" conclusion of a reductio ad absurdum argument can take a range of forms, as can be seen in the following examples of refutation by contradiction:
+
+The Earth cannot be flat; otherwise, since the Earth is assumed to be finite in extent, we would find people falling off the edge.
+There is no smallest positive rational number; if ⁠
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+⁠ were the smallest positive rational, then ⁠
+  
+    
+      
+        q
+        
+          /
+        
+        2
+      
+    
+    {\displaystyle q/2}
+  
+⁠ would be a positive rational number that is smaller than ⁠
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+⁠ because it equals half of ⁠
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+⁠, and it would also not be smaller than ⁠
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+⁠ because ⁠
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+⁠ is assumed to be the smallest positive rational.
+The first example argues that denial of the premise would result in a ridiculous conclusion, against the evidence of our senses (empirical evidence). The second example is a mathematical proof by contradiction (also known as an indirect proof), which argues that the denial of the premise would result in a logical contradiction (⁠
+  
+    
+      
+        q
+        
+          /
+        
+        2
+      
+    
+    {\displaystyle q/2}
+  
+⁠ is both smaller and not smaller than ⁠
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+⁠).
+A mathematical proof employing proof by contradiction usually proceeds as follows:
+
+The proposition to be proved is P.
+We assume P to be false, i.e., we assume ¬P.
+It is then shown that ¬P implies falsehood. This is typically accomplished by deriving two mutually contradictory assertions, Q and ¬Q, and appealing to the law of noncontradiction.
+Since assuming P to be false leads to a contradiction, it is concluded that P is in fact true.
+An important special case is the existence proof by contradiction: in order to demonstrate that an object with a given property exists, we derive a contradiction from the assumption that all objects satisfy the negation of the property.
+
+Greek philosophy
+Reductio ad absurdum was used throughout Greek philosophy. The earliest example of a reductio argument can be found in a satirical poem attributed to Xenophanes of Colophon (c. 570 – c. 475 BCE). Criticizing Homer's attribution of human faults to the gods, Xenophanes states that humans also believe that the gods' bodies have human form. But if horses and oxen could draw, they would draw the gods with horse and ox bodies. The gods cannot have both forms, so this is a contradiction. Therefore, the attribution of other human characteristics to the gods, such as human faults, is also false.
+Greek mathematicians proved fundamental propositions using reductio ad absurdum. Euclid of Alexandria (mid-4th – mid-3rd centuries BCE) and Archimedes of Syracuse (c. 287 – c. 212 BCE) are two very early examples.
+The earlier dialogues of Plato (424–348 BCE), relating the discourses of Socrates, raised the use of reductio arguments to a formal dialectical method (elenchus), also called the Socratic method. Typically, Socrates' opponent would make what would seem to be an innocuous assertion. In response, Socrates, via a step-by-step train of reasoning, bringing in other background assumptions, would make the person admit that the assertion resulted in an absurd or contradictory conclusion, forcing him to abandon his assertion and adopt a position of aporia.
+Elenctic refutation depends on a dichotomous thesis, one that may be divided into exactly two mutually exclusive parts, only one of which may be true. Then Socrates goes on to demonstrate the contrary of the commonly accepted part using the law of non-contradiction. According to Gregory Vlastos, the method has the following steps:
+
+Socrates' interlocutor asserts a thesis, for example, "Courage is endurance of the soul", which Socrates considers false and targets for refutation.
+Socrates secures his interlocutor's agreement to further premises, for example, "Courage is a fine thing" and "Ignorant endurance is not a fine thing".
+Socrates then argues, and the interlocutor agrees, that these further premises imply the contrary of the original thesis, in this case, it leads to: "courage is not endurance of the soul".
+Socrates then claims that he has shown that his interlocutor's thesis is false and that its negation is true.
+The technique was also a focus of the work of Aristotle (384–322 BCE), particularly in his Prior Analytics where he referred to it as demonstration to the impossible (Ancient Greek: ἡ εἰς τὸ ἀδύνατον ἀπόδειξις, lit. 'demonstration to the impossible', 62b).
+Another example of this technique is found in the sorites paradox, where it was argued that if 1,000,000 grains of sand formed a heap, and removing one grain from a heap left it a heap, then a single grain of sand (or even no grains) forms a heap.
+
+Buddhist philosophy
+Much of Madhyamaka Buddhist philosophy centers on showing how various essentialist ideas have absurd conclusions through reductio ad absurdum arguments (known as prasaṅga, "consequence" in Sanskrit). In the Mūlamadhyamakakārikā, Nāgārjuna's reductio ad absurdum arguments are used to show that any theory of substance or essence was unsustainable and therefore, phenomena (dharmas) such as change, causality, and sense perception were empty (sunya) of any essential existence. Nāgārjuna's main goal is often seen by scholars as refuting the essentialism of certain Buddhist Abhidharma schools (mainly Vaibhasika) which posited theories of svabhava (essential nature) and also the Hindu Nyāya and Vaiśeṣika schools which posited a theory of ontological substances (dravyatas).
+In 13:5, Nagarjuna wishes to demonstrate consequences of the presumption that things essentially, or inherently, exist, pointing out that if a "young man" exists in himself then it follows he cannot grow old (because he would no longer be a "young man"). As we attempt to separate the man from his properties (youth), we find that everything is subject to momentary change, and are left with nothing beyond the merely arbitrary convention that such entities as "young man" depend upon.
+
+A thing itself does not change.
+Something different does not change.
+Because a young man does not grow old.
+And because an old man does not grow old either.
+
+Modern philosophy
+Contemporary philosophers have also utilized appeals to the reductio ad absurdum argument within their respective scholarly works. Included among them are:
+
+Lewis White Beck - in a criticism of the mechanism philosophy. (The Actor and the Spectator, 1974)
+Robert L. Holmes - in his criticism of deterrence theory based upon the deontological prima facie presumption against killing innocent life and the irrationality of any reliance upon a system of preventing war which is based exclusively upon the threat of waging war. (On War and Morality, 1989)
+
+Relation to the principle of non-contradiction
+Aristotle clarified the connection between contradiction and falsity in his principle of non-contradiction, which states that a proposition cannot be both true and false. That is, a proposition 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ and its negation 
+  
+    
+      
+        ¬
+        Q
+      
+    
+    {\displaystyle \lnot Q}
+  
+ (not-Q) cannot both be true. Therefore, if a proposition and its negation are both entailed by a premise, the premise is false. This technique is the most common way of reaching a contradiction in mathematical arguments.
+
+Formalization
+The principle may be formally expressed as the propositional formula ¬¬P ⇒ P, equivalently (¬P ⇒ ⊥) ⇒ P, which reads: "If assuming P to be false implies falsehood, then P is true."
+In natural deduction the principle takes the form of the rule of inference
+
+  
+    
+      
+        
+          
+            
+              
+                
+              
+              
+                
+                  ⊢
+                  ¬
+                  ¬
+                  P
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  ⊢
+                  P
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\cfrac {\vdash \lnot \lnot P}{\vdash P}}}
+  
+
+which reads: "If 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \lnot \lnot P}
+  
+ is proved, then 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ may be concluded."
+In sequent calculus the principle is expressed by the sequent
+
+  
+    
+      
+        Γ
+        ,
+        ¬
+        ¬
+        P
+        ⊢
+        P
+        ,
+        Δ
+      
+    
+    {\displaystyle \Gamma ,\lnot \lnot P\vdash P,\Delta }
+  
+
+which reads: "Hypotheses 
+  
+    
+      
+        Γ
+      
+    
+    {\displaystyle \Gamma }
+  
+ and 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \lnot \lnot P}
+  
+ entail the conclusion 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ or 
+  
+    
+      
+        Δ
+      
+    
+    {\displaystyle \Delta }
+  
+."
+
+Justification
+In classical logic the principle may be justified by the examination of the truth table of the proposition ¬¬P ⇒ P, which demonstrates it to be a tautology:
+
+Another way to justify the principle is to derive it from the law of the excluded middle, as follows. We assume ¬¬P and seek to prove P. By the law of excluded middle P either holds or it does not:
+
+if P holds, then of course P holds.
+if ¬P holds, then we derive falsehood by applying the law of noncontradiction to ¬P and ¬¬P, after which the principle of explosion allows us to conclude P.
+In either case, we established P. It turns out that, conversely, proof by contradiction can be used to derive the law of excluded middle.
+In classical sequent calculus LK proof by contradiction is derivable from the inference rules for negation:
+
+  
+    
+      
+        
+          
+            
+              
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            
+                              
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                       
+                                    
+                                  
+                                
+                                
+                                  
+                                    
+                                  
+                                  
+                                    
+                                      Γ
+                                      ,
+                                      P
+                                      ⊢
+                                      P
+                                      ,
+                                      Δ
+                                    
+                                  
+                                
+                              
+                            
+                            
+                            (
+                            I
+                            )
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            Γ
+                            ,
+                            ⊢
+                            ¬
+                            P
+                            ,
+                            P
+                            ,
+                            Δ
+                          
+                        
+                      
+                    
+                  
+                  
+                  (
+                  
+                    ¬
+                  
+                  R
+                  )
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  Γ
+                  ,
+                  ¬
+                  ¬
+                  P
+                  ⊢
+                  P
+                  ,
+                  Δ
+                
+              
+            
+          
+        
+        
+        (
+        
+          ¬
+        
+        L
+        )
+      
+    
+    {\displaystyle {\cfrac {{\cfrac {{\cfrac {\ }{\Gamma ,P\vdash P,\Delta }}\;(I)}{\Gamma ,\vdash \lnot P,P,\Delta }}\;({\lnot }R)}{\Gamma ,\lnot \lnot P\vdash P,\Delta }}\;({\lnot }L)}
+  
+
+Relationship with other proof techniques
+
+Refutation by contradiction
+Proof by contradiction is similar to refutation by contradiction, also known as proof of negation, which states that ¬P is proved as follows:
+
+The proposition to be proved is ¬P.
+Assume P.
+Derive falsehood.
+Conclude ¬P.
+In contrast, proof by contradiction proceeds as follows:
+
+The proposition to be proved is P.
+Assume ¬P.
+Derive falsehood.
+Conclude P.
+Formally these are not the same, as refutation by contradiction applies only when the proposition to be proved is negated, whereas proof by contradiction may be applied to any proposition whatsoever. In classical logic, where 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ and 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \neg \neg P}
+  
+ may be freely interchanged, the distinction is largely obscured. Thus in mathematical practice, both principles are referred to as "proof by contradiction".
+
+Proof by contradiction in intuitionistic logic
+In intuitionistic logic proof by contradiction is not generally valid, although some particular instances can be derived. In contrast, proof of negation and principle of noncontradiction are both intuitionistically valid.
+Brouwer–Heyting–Kolmogorov interpretation of proof by contradiction gives the following intuitionistic validity condition: if there is no method for establishing that a proposition is false, then there is a method for establishing that the proposition is true.
+If we take "method" to mean algorithm, then the condition is not acceptable, as it would allow us to solve the Halting problem. To see how, consider the statement H(M) stating "Turing machine M halts or does not halt". Its negation ¬H(M) states that "M neither halts nor does not halt", which is false by the law of noncontradiction (which is intuitionistically valid). If proof by contradiction were intuitionistically valid, we would obtain an algorithm for deciding whether an arbitrary Turing machine M halts, thereby violating the (intuitionistically valid) proof of non-solvability of the Halting problem.
+A proposition P which satisfies 
+  
+    
+      
+        ¬
+        ¬
+        P
+        ⇒
+        P
+      
+    
+    {\displaystyle \lnot \lnot P\Rightarrow P}
+  
+ is known as a ¬¬-stable proposition. Thus in intuitionistic logic proof by contradiction is not universally valid, but can only be applied to the ¬¬-stable propositions. An instance of such a proposition is a decidable one, i.e., satisfying 
+  
+    
+      
+        P
+        ∨
+        ¬
+        P
+      
+    
+    {\displaystyle P\lor \lnot P}
+  
+. Indeed, the above proof that the law of excluded middle implies proof by contradiction can be repurposed to show that a decidable proposition is ¬¬-stable. A typical  example of a decidable proposition is a statement that can be checked by direct computation, such as "
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is prime" or "
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ divides 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+".
+
+Examples of proofs by contradiction
+
+Euclid's Elements
+An early occurrence of proof by contradiction can be found in Euclid's Elements, Book 1, Proposition 6:
+
+If in a triangle two angles equal one another, then the sides opposite the equal angles also equal one another.
+The proof proceeds by assuming that the opposite sides are not equal, and derives a contradiction. Likewise, many other proofs following in Euclid's Elements also use the same proof strategy, such as in Book 7, Proposition 33:
+
+If the side of the hexagon and that of the decagon inscribed in the same circle are added together, then the whole straight line has been cut in extreme and mean ratio, and its greater segment is the side of the hexagon.
+
+Hilbert's Nullstellensatz
+An influential proof by contradiction was given by David Hilbert. His Nullstellensatz states:
+
+If 
+  
+    
+      
+        
+          f
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          f
+          
+            k
+          
+        
+      
+    
+    {\displaystyle f_{1},\ldots ,f_{k}}
+  
+ are polynomials in n indeterminates with complex coefficients, which have no common complex zeros, then there are polynomials 
+  
+    
+      
+        
+          g
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          g
+          
+            k
+          
+        
+      
+    
+    {\displaystyle g_{1},\ldots ,g_{k}}
+  
+ such that 
+  
+    
+      
+        
+          f
+          
+            1
+          
+        
+        
+          g
+          
+            1
+          
+        
+        +
+        …
+        +
+        
+          f
+          
+            k
+          
+        
+        
+          g
+          
+            k
+          
+        
+        =
+        1.
+      
+    
+    {\displaystyle f_{1}g_{1}+\ldots +f_{k}g_{k}=1.}
+  
+
+Hilbert proved the statement by assuming that there are no such polynomials 
+  
+    
+      
+        
+          g
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          g
+          
+            k
+          
+        
+      
+    
+    {\displaystyle g_{1},\ldots ,g_{k}}
+  
+ and derived a contradiction.
+
+Infinitude of primes
+Euclid's theorem states that there are infinitely many primes. In Euclid's Elements, the theorem is stated in Book IX, Proposition 20:
+
+Prime numbers are more than any assigned multitude of prime numbers.
+Depending on how we formally write the above statement, the usual proof takes either the form of a proof by contradiction or a refutation by contradiction. We present here the former, see below how the proof is done as refutation by contradiction.
+If we formally express Euclid's theorem as saying that for every natural number 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ there is a prime bigger than it, then we employ proof by contradiction, as follows.
+Given any number 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, we seek to prove that there is a prime larger than 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+. Suppose to the contrary that no such p exists (an application of proof by contradiction). Then all primes are smaller than or equal to 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, and we may form the list 
+  
+    
+      
+        
+          p
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          p
+          
+            k
+          
+        
+      
+    
+    {\displaystyle p_{1},\ldots ,p_{k}}
+  
+ of them all. Let 
+  
+    
+      
+        P
+        =
+        
+          p
+          
+            1
+          
+        
+        ⋅
+        …
+        ⋅
+        
+          p
+          
+            k
+          
+        
+      
+    
+    {\displaystyle P=p_{1}\cdot \ldots \cdot p_{k}}
+  
+ be the product of all primes and 
+  
+    
+      
+        Q
+        =
+        P
+        +
+        1
+      
+    
+    {\displaystyle Q=P+1}
+  
+. Because 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is larger than all prime numbers it is not prime, hence it must be divisible by one of them, say 
+  
+    
+      
+        
+          p
+          
+            i
+          
+        
+      
+    
+    {\displaystyle p_{i}}
+  
+. Now both 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ and 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ are divisible by 
+  
+    
+      
+        
+          p
+          
+            i
+          
+        
+      
+    
+    {\displaystyle p_{i}}
+  
+, hence so is their difference 
+  
+    
+      
+        Q
+        −
+        P
+        =
+        1
+      
+    
+    {\displaystyle Q-P=1}
+  
+, but this cannot be because 1 is not divisible by any primes. Hence we have a contradiction and so there is a prime number bigger than 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+.
+
+Examples of refutations by contradiction
+The following examples are commonly referred to as proofs by contradiction, but formally employ refutation by contradiction (and therefore are intuitionistically valid).
+
+Infinitude of primes
+Euclid's theorem, in his Elements Book IX, Proposition 20, states:
+
+Prime numbers are more than any assigned multitude of prime numbers.
+We may read the statement as saying that for every finite list of primes, there is another prime not on that list, which is arguably closer to and in the same spirit as Euclid's original formulation. In this case Euclid's proof applies refutation by contradiction at one step, as follows.
+Given any finite list of prime numbers 
+  
+    
+      
+        
+          p
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          p
+          
+            n
+          
+        
+      
+    
+    {\displaystyle p_{1},\ldots ,p_{n}}
+  
+, it will be shown that at least one additional prime number not in this list exists. Let 
+  
+    
+      
+        P
+        =
+        
+          p
+          
+            1
+          
+        
+        ⋅
+        
+          p
+          
+            2
+          
+        
+        ⋯
+        
+          p
+          
+            n
+          
+        
+      
+    
+    {\displaystyle P=p_{1}\cdot p_{2}\cdots p_{n}}
+  
+ be the product of all the listed primes and 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ a prime factor of 
+  
+    
+      
+        P
+        +
+        1
+      
+    
+    {\displaystyle P+1}
+  
+, possibly 
+  
+    
+      
+        P
+        +
+        1
+      
+    
+    {\displaystyle P+1}
+  
+ itself. We claim that 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is not in the given list of primes. Suppose to the contrary that it were (an application of refutation by contradiction). Then 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ would divide both 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ and  
+  
+    
+      
+        P
+        +
+        1
+      
+    
+    {\displaystyle P+1}
+  
+, therefore also their difference, which is 
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+. This gives a contradiction, since no prime number divides 1.
+
+Irrationality of the square root of 2
+The classic proof that the square root of 2 is irrational is a refutation by contradiction. Indeed, we set out to prove the negation ¬ ∃ a, b ∈ 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ . a/b = √2 by assuming that there exist natural numbers a and b whose ratio is the square root of two, and derive a contradiction.
+Assume that √2 is rational, so it can be written as a fraction a/b in lowest terms, where a and b are integers with no common factors. This assumption allows us to apply a proof by contradiction. Squaring both sides gives 2 = a²/b², which implies that a² = 2b². Therefore, a² is even, and it follows that a must also be even. Let a = 2k for some integer k. Substituting back into the equation gives (2k)² = 2b², which simplifies to 4k² = 2b², or b² = 2k². Hence, b² is even, and therefore b must also be even. This shows that both a and b are even, which contradicts the assumption that a/b was in lowest terms. Therefore, the original assumption is false, and √2 is irrational.
+
+Proof by infinite descent
+Proof by infinite descent is a method of proof whereby a smallest object with desired property is shown not to exist as follows:
+
+Assume that there is a smallest object with the desired property.
+Demonstrate that an even smaller object with the desired property exists, thereby deriving a contradiction.
+Such a proof is again a refutation by contradiction. A typical example is the proof of the proposition "there is no smallest positive rational number": assume there is a smallest positive rational number q and derive a contradiction by observing that ⁠q/2⁠ is even smaller than q and still positive.
+
+Russell's paradox
+Russell's paradox, stated set-theoretically as "there is no set whose elements are precisely those sets that do not contain themselves", is a negated statement whose usual proof is a refutation by contradiction.
+
+Notation
+Proofs by contradiction sometimes end with the word "Contradiction!".  Isaac Barrow and Baermann used the notation Q.E.A., for "quod est absurdum" ("which is absurd"), along the lines of Q.E.D., but this notation is rarely used today. A graphical symbol sometimes used for contradictions is a downwards zigzag arrow "lightning" symbol (U+21AF: ↯), for example in Davey and Priestley.  Other symbols sometimes used include a pair of opposing arrows (as 
+  
+    
+      
+        →
+        
+        ←
+      
+    
+    {\displaystyle \rightarrow \!\leftarrow }
+  
+ or 
+  
+    
+      
+        ⇒
+        
+        ⇐
+      
+    
+    {\displaystyle \Rightarrow \!\Leftarrow }
+  
+), struck-out arrows (
+  
+    
+      
+        ↮
+      
+    
+    {\displaystyle \nleftrightarrow }
+  
+), a stylized form of hash (such as U+2A33: ⨳), or the "reference mark" (U+203B: ※), or 
+  
+    
+      
+        ×
+        
+        
+        
+        
+        ×
+      
+    
+    {\displaystyle \times \!\!\!\!\times }
+  
+.
+
+Automated theorem proving
+In automated theorem proving the method of resolution is based on proof by contradiction. That is, in order to show that a given statement is entailed by given hypotheses, the automated prover assumes the hypotheses and the negation of the statement, and attempts to derive a contradiction.

@@ -1,0 +1,160 @@
+The AND gate is a basic digital logic gate that implements the logical conjunction (∧) from mathematical logic –  AND gates behave according to their truth table. A HIGH output (1) results only if all the inputs to the AND gate are HIGH (1). If any of the inputs to the AND gate are not HIGH, a LOW (0) is outputted. The function can be extended to any number of inputs by multiple gates up in a chain.
+
+Symbols
+There are three symbols for AND gates: the American (ANSI or 'military') symbol and the IEC ('European' or 'rectangular') symbol, as well as the deprecated DIN symbol. Additional inputs can be added as needed. For more information see the Logic gate symbols article. It can also be denoted as symbol "^" or "&".
+
+The AND gate with inputs A and B and output C implements the logical expression 
+  
+    
+      
+        C
+        =
+        A
+        ⋅
+        B
+      
+    
+    {\displaystyle C=A\cdot B}
+  
+. This expression also may be denoted as 
+  
+    
+      
+        C
+        =
+        A
+        ∧
+        B
+      
+    
+    {\displaystyle C=A\wedge B}
+  
+ or 
+  
+    
+      
+        C
+        =
+        A
+        &
+        B
+      
+    
+    {\displaystyle C=A\And B}
+  
+.
+As of Unicode 16.0.0, the AND gate is also encoded in the Symbols for Legacy Computing Supplement block as U+1CC16 𜰖 LOGIC GATE AND.
+
+Implementations
+
+In logic families like TTL, NMOS, PMOS and CMOS, an AND gate is built from a NAND gate followed by an inverter. In the CMOS implementation above, transistors T1-T4 realize the NAND gate and transistors T5 and T6 the inverter.  The need for an inverter makes AND gates less efficient than NAND gates.
+AND gates can also be made from discrete components and are readily available as integrated circuits in several different logic families.
+
+Analytical representation
+
+  
+    
+      
+        f
+        (
+        a
+        ,
+        b
+        )
+        =
+        a
+        ∗
+        b
+      
+    
+    {\displaystyle f(a,b)=a*b}
+  
+ is the analytical representation of AND gate:
+
+  
+    
+      
+        f
+        (
+        0
+        ,
+        0
+        )
+        =
+        0
+        ∗
+        0
+        =
+        0
+      
+    
+    {\displaystyle f(0,0)=0*0=0}
+  
+
+  
+    
+      
+        f
+        (
+        0
+        ,
+        1
+        )
+        =
+        0
+        ∗
+        1
+        =
+        0
+      
+    
+    {\displaystyle f(0,1)=0*1=0}
+  
+
+  
+    
+      
+        f
+        (
+        1
+        ,
+        0
+        )
+        =
+        1
+        ∗
+        0
+        =
+        0
+      
+    
+    {\displaystyle f(1,0)=1*0=0}
+  
+
+  
+    
+      
+        f
+        (
+        1
+        ,
+        1
+        )
+        =
+        1
+        ∗
+        1
+        =
+        1
+      
+    
+    {\displaystyle f(1,1)=1*1=1}
+  
+
+Alternatives
+
+If no specific AND gates are available, one can be made from NAND or NOR gates, because NAND and NOR gates are "universal gates"  meaning that they can be used to make all the others.
+
+AND gates with multiple inputs
+AND gates with multiple inputs are designated with the same symbol, with more lines leading in.
+While direct implementations with more than four inputs are possible in logic families like CMOS, these are inefficient. More efficient implementations use a cascade of NAND and NOR gates, as shown in the picture on the right below. This is more efficient than the cascade of AND gates shown on the left.

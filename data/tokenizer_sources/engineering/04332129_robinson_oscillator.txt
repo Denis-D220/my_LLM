@@ -1,0 +1,96 @@
+The Robinson oscillator is an electronic oscillator circuit originally devised for use in continuous wave (CW) nuclear magnetic resonance (NMR). It was invented by the British physicist Neville Robinson in the 1950s.
+Continuous-wave NMR is usually detected by measuring the change in quality factor of an electrical resonator containing the sample to be measured. In early NMR experiments, this was done by driving the resonator with an oscillating current and measuring the amplitude of the resulting voltage. However, a disadvantage of this method is that any difference between the frequency of the oscillator and of the resonator leads to a voltage that is indistinguishable from the signal due to NMR.
+In Robinson's circuit, the electrical resonator is incorporated into the oscillator. This ensures that the oscillator frequency always coincides with the resonator frequency, making the NMR signal clearer. While such an arrangement had been used previously (the so-called marginal oscillator)., Robinson's innovation was to insert a limiter into the feedback loop of the oscillator; this has several benefits including more precise control of the oscillating magnetic field applied to the sample.
+
+Development of magnetic resonance detection circuits
+
+The figure shows three types of CW magnetic resonance detection circuits.
+
+The transmission circuit
+The simplest detection circuit (the transmission circuit) uses a drive oscillator to inject a current into an LC resonator.
+
+If this current has amplitude I, the resulting voltage at the input to the amplifier is
+
+  
+    
+      
+        
+          V
+          
+            
+              i
+              n
+            
+          
+        
+        =
+        
+          
+            I
+            Z
+          
+        
+      
+    
+    {\displaystyle V_{\mathrm {in} }={\frac {I}{Z}}}
+  
+
+where Z is the impedance of the resonator at the oscillator frequency. If the NMR sample absorbs energy, the quality factor of the resonator decreases, leading to a decrease in 
+  
+    
+      
+        
+          V
+          
+            
+              i
+              n
+            
+          
+        
+      
+    
+    {\displaystyle V_{\mathrm {in} }}
+  
+, and therefore a change in the power detected at the amplifier output (for example using a bridge circuit).
+The disadvantage of this circuit is that the resonator impedance depends strongly on frequency, independent of any contribution from the sample. If the frequency of either the oscillator or the resonator fluctuates, there will therefore be a change in 
+  
+    
+      
+        
+          V
+          
+            
+              i
+              n
+            
+          
+        
+      
+    
+    {\displaystyle V_{\mathrm {in} }}
+  
+ that can mask the signal due to magnetic resonance. Such a fluctuation can occur for example due to vibrations, which affect the circuit capacitance.
+
+The marginal oscillator
+The marginal oscillator circuit avoids this problem by incorporating the resonator as part of the oscillator circuit. This is done by using a feedback path to couple the voltage at the output of the amplifier to the input of the resonator. If the gain of the amplifier is large enough, this feedback will cause it to oscillate, and the oscillation frequency will coincide with the resonator frequency, since that is where Z is largest. Thus the oscillator frequency automatically tracks the resonator frequency, even if it fluctuates.
+To set the amplitude of the oscillation, the amplifier is designed with an input-dependent gain, which becomes smaller as the input voltage decreases. The amplitude of the oscillation will be such that the total gain around the feedback loop is unity; by adjusting the amplifier gain, the amplitude can therefore be set to any desired value.
+In a magnetic resonance experiment, the oscillator is set running. When magnetic resonance absorption occurs, the impedance of the resonator will be reduced, the overall gain in the feedback loop will decrease, and therefore the oscillation amplitude will decrease. This is detected by the power meter.
+While this circuit is more stable than the original transmission circuit, Robinson identified three disadvantages:
+
+It is difficult to control the oscillation amplitude at low levels, which is a problem when measuring resonances that saturate easily.
+It is difficult to lock to a resonator with low impedance, since the total gain in the feedback path is low.
+The sensitivity is lower than for the transmission circuit.
+
+The Robinson oscillator
+The Robinson oscillator solves these problems by modifying the marginal oscillator with a voltage limiter in the feedback path. At low signal levels, the limiter outputs the same voltage that it receives; at high levels, it truncates its output.
+This modification addresses the disadvantages of the marginal oscillator as follows:
+
+With the gain of the amplifier chosen to be large and nearly independent of input voltage, the oscillation at its output can be large even if the current fed to the resonator is made small by using a large resistor in the feedback path. Therefore the circuit still works, even with a small oscillation amplitude inside the resonator.
+A large amplifier gain also allows for oscillations even with a resonator of low impedance.
+The sensitivity is better than for the marginal oscillator, and as good as the transmission circuit in the ideal case, as shown in Robinson's paper.
+The Robinson oscillator can therefore measure CW magnetic resonance with a sensitivity as good as the transmission circuit, but a stability as good as the marginal oscillator.
+
+Use today
+Improvements to the circuitry for the Robinson oscillator have been made using integrated circuits and MOSFET transistors.
+Nevertheless, the Robionson oscillator is no longer widely used. Modern continuous spectrometers use automatic frequency control to lock the oscillator to the resonator frequency. In many applications, continuous-wave NMR has been replaced by pulsed NMR.

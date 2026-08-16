@@ -1,0 +1,5550 @@
+In mathematical logic, Heyting arithmetic 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ is an axiomatization of arithmetic in accordance with the philosophy of intuitionism.  It is named after Arend Heyting, who first proposed it.
+
+Axiomatization
+Heyting arithmetic can be characterized just like the first-order theory of Peano arithmetic 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+, except that it uses the intuitionistic predicate calculus 
+  
+    
+      
+        
+          
+            I
+            Q
+            C
+          
+        
+      
+    
+    {\displaystyle {\mathsf {IQC}}}
+  
+ for inference. In particular, this means that the double-negation elimination principle, as well as the principle of the excluded middle 
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+, do not hold. Note that to say 
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+ does not hold exactly means that the excluded middle statement is not automatically provable for all propositions—indeed many such statements are still provable in 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ and the negation of any such disjunction is inconsistent. 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ is strictly stronger than 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ in the sense that all 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+-theorems are also 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+-theorems.
+Heyting arithmetic comprises the axioms of Peano arithmetic and the intended model is the collection of natural numbers 
+  
+    
+      
+        
+          
+            N
+          
+        
+      
+    
+    {\displaystyle {\mathbb {N} }}
+  
+. The signature includes zero "
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+" and the successor "
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+", and the theories characterize addition and multiplication. This impacts the logic: With 
+  
+    
+      
+        1
+        :=
+        S
+        0
+      
+    
+    {\displaystyle 1:=S0}
+  
+, it is a metatheorem that 
+  
+    
+      
+        ⊥
+      
+    
+    {\displaystyle \bot }
+  
+ can be defined as 
+  
+    
+      
+        0
+        =
+        1
+      
+    
+    {\displaystyle 0=1}
+  
+ and so that 
+  
+    
+      
+        ¬
+        P
+      
+    
+    {\displaystyle \neg P}
+  
+ is 
+  
+    
+      
+        P
+        →
+        ⊥
+      
+    
+    {\displaystyle P\to \bot }
+  
+ for every proposition 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+. The negation of 
+  
+    
+      
+        ⊥
+      
+    
+    {\displaystyle \bot }
+  
+ is of the form 
+  
+    
+      
+        P
+        →
+        P
+      
+    
+    {\displaystyle P\to P}
+  
+ and thus a trivial proposition.
+For terms, write 
+  
+    
+      
+        s
+        ≠
+        t
+      
+    
+    {\displaystyle s\neq t}
+  
+ for 
+  
+    
+      
+        ¬
+        (
+        s
+        =
+        t
+        )
+      
+    
+    {\displaystyle \neg (s=t)}
+  
+.
+For a fixed term 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+, the equality 
+  
+    
+      
+        t
+        =
+        t
+      
+    
+    {\displaystyle t=t}
+  
+ is true by reflexivity and a proposition 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is equivalent to 
+  
+    
+      
+        (
+        t
+        =
+        t
+        )
+        →
+        P
+      
+    
+    {\displaystyle (t=t)\to P}
+  
+. 
+It may be shown that 
+  
+    
+      
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle P\lor Q}
+  
+ can then be defined as 
+  
+    
+      
+        ∃
+        n
+        .
+        (
+        n
+        =
+        0
+        →
+        P
+        )
+        ∧
+        (
+        n
+        ≠
+        0
+        →
+        Q
+        )
+      
+    
+    {\displaystyle \exists n.(n=0\to P)\land (n\neq 0\to Q)}
+  
+. This formal elimination of disjunctions was not possible in the quantifier-free primitive recursive arithmetic 
+  
+    
+      
+        
+          
+            P
+            R
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PRA}}}
+  
+. The theory may be extended with function symbols for any primitive recursive function, making 
+  
+    
+      
+        
+          
+            P
+            R
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PRA}}}
+  
+ also a fragment of this theory. For a total function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, one often considers predicates of the form 
+  
+    
+      
+        f
+        (
+        n
+        )
+        =
+        0
+      
+    
+    {\displaystyle f(n)=0}
+  
+.
+
+Theorems
+
+Double negations
+With explosion valid in any intuitionistic theory, if 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \neg \neg P}
+  
+ is a theorem for some 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+, then by definition 
+  
+    
+      
+        ¬
+        P
+      
+    
+    {\displaystyle \neg P}
+  
+ is provable if and only if the theory is inconsistent. Indeed, in Heyting arithmetic the double-negation explicitly expresses 
+  
+    
+      
+        ¬
+        P
+        →
+        0
+        =
+        1
+      
+    
+    {\displaystyle \neg P\to 0=1}
+  
+. For a predicate 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+, a theorem of the form 
+  
+    
+      
+        ¬
+        ¬
+        ∃
+        n
+        .
+        Q
+        (
+        n
+        )
+      
+    
+    {\displaystyle \neg \neg \exists n.Q(n)}
+  
+ expresses that it is inconsistent to rule out that 
+  
+    
+      
+        ¬
+        Q
+        (
+        t
+        )
+      
+    
+    {\displaystyle \neg Q(t)}
+  
+ could be validated for some 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+. Constructively, this is weaker than the existence claim of such a 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+.
+A big part of the metatheoretical discussion will concern classically provable existence claims.
+A double-negation 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \neg \neg P}
+  
+ entails 
+  
+    
+      
+        (
+        α
+        →
+        ¬
+        P
+        )
+        →
+        (
+        α
+        →
+        0
+        =
+        1
+        )
+      
+    
+    {\displaystyle (\alpha \to \neg P)\to (\alpha \to 0=1)}
+  
+. So a theorem of the form 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \neg \neg P}
+  
+ also always gives new means to conclusively reject (also positive) statements 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.
+
+Proofs of classically equivalent statements
+Recall that the implication in 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        α
+        →
+        ¬
+        ¬
+        α
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash \alpha \to \neg \neg \alpha }
+  
+ can classically be reversed, and with that so can the one in 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        
+          
+            (
+          
+        
+        ∃
+        n
+        .
+        ¬
+        ψ
+        (
+        n
+        )
+        
+          
+            )
+          
+        
+        →
+        ¬
+        ∀
+        n
+        .
+        ψ
+        (
+        n
+        )
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash {\big (}\exists n.\neg \psi (n){\big )}\to \neg \forall n.\psi (n)}
+  
+. Here the distinction is between existence of numerical counter-examples versus absurd conclusions when assuming validity for all numbers. Inserting double-negations turns 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+-theorems into 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+-theorems. More exactly, for any formula provable in 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+, the classically equivalent Gödel–Gentzen negative translation of that formula is already provable in 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+. In one formulation, the translation procedure includes a rewriting of 
+  
+    
+      
+        
+          
+            (
+          
+        
+        ∃
+        n
+        .
+        Q
+        (
+        n
+        )
+        
+          
+            
+              )
+            
+          
+          
+            N
+          
+        
+      
+    
+    {\displaystyle {\big (}\exists n.Q(n){\big )}^{N}}
+  
+ to 
+  
+    
+      
+        ¬
+        ∀
+        n
+        .
+        ¬
+        
+          Q
+          
+            N
+          
+        
+        (
+        n
+        )
+        .
+      
+    
+    {\displaystyle \neg \forall n.\neg Q^{N}(n).}
+  
+ The result means that all Peano arithmetic theorems have a proof that consists of a constructive proof followed by a classical logical rewriting. Roughly, the final step amounts to applications of double-negation elimination.
+In particular, with undecidable atomic propositions being absent, for any proposition 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+  
+ not including existential quantifications or disjunctions at all, one has 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+        ⊢
+        ψ
+        
+        ⟺
+        
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ψ
+      
+    
+    {\displaystyle {\mathsf {PA}}\vdash \psi \iff {\mathsf {HA}}\vdash \psi }
+  
+.
+
+Valid principles and rules
+Minimal logic proves double-negation elimination for negated formulas, 
+  
+    
+      
+        ¬
+        ¬
+        (
+        ¬
+        α
+        )
+        ↔
+        (
+        ¬
+        α
+        )
+      
+    
+    {\displaystyle \neg \neg (\neg \alpha )\leftrightarrow (\neg \alpha )}
+  
+. More generally, Heyting arithmetic proves this classical equivalence for any Harrop formula.
+And 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{0}}
+  
+-results are well behaved as well: Markov's rule at the lowest level of the arithmetical hierarchy is an admissible rule of inference, i.e. for 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ with 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ free,
+
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ¬
+        ¬
+        ∃
+        m
+        .
+        φ
+        (
+        n
+        ,
+        m
+        )
+        
+        ⟺
+        
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ∃
+        m
+        .
+        φ
+        (
+        n
+        ,
+        m
+        )
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash \neg \neg \exists m.\varphi (n,m)\iff {\mathsf {HA}}\vdash \exists m.\varphi (n,m)}
+  
+
+Instead of speaking of quantifier-free predicates, one may equivalently formulate this for primitive recursive predicate or Kleene's T predicate, called 
+  
+    
+      
+        
+          
+            
+              M
+              R
+            
+          
+          
+            
+              Q
+              F
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MR} }_{\mathrm {QF} }}
+  
+, resp. 
+  
+    
+      
+        
+          
+            
+              M
+              R
+            
+            
+              
+                P
+                R
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MR} _{\mathrm {PR} }}}
+  
+ and 
+  
+    
+      
+        
+          
+            
+              M
+              R
+            
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MR} _{0}}}
+  
+.
+Even the related rule 
+  
+    
+      
+        
+          
+            
+              M
+              R
+            
+          
+          
+            
+              D
+              e
+              c
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MR} }_{\mathrm {Dec} }}
+  
+ is admissible, in which the tractability aspect of 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ is not e.g. based on a syntactic condition but where the left hand side also requires 
+  
+    
+      
+        ⊢
+        ∀
+        m
+        .
+        φ
+        (
+        n
+        ,
+        m
+        )
+        ∨
+        ¬
+        φ
+        (
+        n
+        ,
+        m
+        )
+      
+    
+    {\displaystyle \vdash \forall m.\varphi (n,m)\lor \neg \varphi (n,m)}
+  
+.
+Beware that in classifying a proposition based on its syntactic form, one ought not mistakenly assign a lower complexity based on some only classical valid equivalence.
+
+Excluded middle
+As with other theories over intuitionistic logic, various instances of 
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+ can be proven in this constructive arithmetic. By disjunction introduction, whenever either the proposition 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ or 
+  
+    
+      
+        ¬
+        P
+      
+    
+    {\displaystyle \neg P}
+  
+ is proven, then 
+  
+    
+      
+        P
+        ∨
+        ¬
+        P
+      
+    
+    {\displaystyle P\lor \neg P}
+  
+ is proven as well. So for example, equipped with 
+  
+    
+      
+        0
+        =
+        0
+      
+    
+    {\displaystyle 0=0}
+  
+ and 
+  
+    
+      
+        ∀
+        n
+        .
+        S
+        n
+        ≠
+        0
+      
+    
+    {\displaystyle \forall n.Sn\neq 0}
+  
+ from the axioms, one may validate the premise for induction of excluded middle for the predicate 
+  
+    
+      
+        n
+        =
+        0
+      
+    
+    {\displaystyle n=0}
+  
+. One then says equality to zero is decidable. Indeed, 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ proves equality "
+  
+    
+      
+        =
+      
+    
+    {\displaystyle =}
+  
+" decidable for all numbers, i.e. 
+  
+    
+      
+        ∀
+        n
+        .
+        ∀
+        m
+        .
+        (
+        n
+        =
+        m
+        ∨
+        n
+        ≠
+        m
+        )
+      
+    
+    {\displaystyle \forall n.\forall m.(n=m\lor n\neq m)}
+  
+. Stronger yet, as equality is the only predicate symbol in Heyting arithmetic, it then follows that, for any quantifier-free formula 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+, where 
+  
+    
+      
+        n
+        ,
+        …
+        ,
+        m
+      
+    
+    {\displaystyle n,\dots ,m}
+  
+ are the free variables, the theory is closed under the rule
+
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ∀
+        n
+        .
+        ⋯
+        ∀
+        m
+        .
+        
+        ϕ
+        (
+        n
+        ,
+        …
+        ,
+        m
+        )
+        ∨
+        ¬
+        ϕ
+        (
+        n
+        ,
+        …
+        ,
+        m
+        )
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash \forall n.\cdots \forall m.\,\phi (n,\dots ,m)\lor \neg \phi (n,\dots ,m)}
+  
+
+Any theory over minimal logic proves 
+  
+    
+      
+        ¬
+        ¬
+        (
+        P
+        ∨
+        ¬
+        P
+        )
+      
+    
+    {\displaystyle \neg \neg (P\lor \neg P)}
+  
+ for all propositions. So if the theory is consistent, it never proves the negation of an excluded middle statement. 
+Practically speaking, in rather conservative constructive frameworks such as 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+, when it is understood what type of statements are algorithmically decidable, then an unprovability result of an excluded middle disjunction expresses the algorithmic undecidability of 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+.
+
+Conservativity
+For simple statements, the theory does not just validate such classically valid binary dichotomies 
+  
+    
+      
+        ϕ
+        (
+        n
+        ,
+        …
+        )
+        ∨
+        ¬
+        ϕ
+        (
+        n
+        ,
+        …
+        )
+      
+    
+    {\displaystyle \phi (n,\dots )\lor \neg \phi (n,\dots )}
+  
+. The Friedman translation can be used to establish that 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+'s 
+  
+    
+      
+        
+          Π
+          
+            2
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{2}^{0}}
+  
+-theorems are all proven by 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+: For any 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and quantifier-free 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+,
+
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+        ⊢
+        ∃
+        m
+        .
+        φ
+        (
+        n
+        ,
+        m
+        )
+        
+        ⟺
+        
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ∃
+        m
+        .
+        φ
+        (
+        n
+        ,
+        m
+        )
+      
+    
+    {\displaystyle {\mathsf {PA}}\vdash \exists m.\varphi (n,m)\iff {\mathsf {HA}}\vdash \exists m.\varphi (n,m)}
+  
+
+This result may of course also be expressed with explicit universal closures 
+  
+    
+      
+        ∀
+        n
+      
+    
+    {\displaystyle \forall n}
+  
+. Roughly, simple statements about computable relations provable classically are already provable constructively. Although in halting problems, not just quantifier-free propositions but also 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+-propositions play an important role, and as will be argued these can be even classically independent. Similarly, already unique existence 
+  
+    
+      
+        ∃
+        !
+        n
+        .
+        Q
+        (
+        n
+        )
+      
+    
+    {\displaystyle \exists !n.Q(n)}
+  
+ in an infinite domain, i.e. 
+  
+    
+      
+        ∃
+        n
+        .
+        ∀
+        w
+        .
+        
+          
+            (
+          
+        
+        n
+        =
+        w
+        ↔
+        Q
+        (
+        w
+        )
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle \exists n.\forall w.{\big (}n=w\leftrightarrow Q(w){\big )}}
+  
+, is formally not particularly simple.
+So 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ is 
+  
+    
+      
+        
+          Π
+          
+            2
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{2}^{0}}
+  
+-conservative over 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+. This can be contrasted with the situation for Robinson arithmetic 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathsf {Q}}}
+  
+, which is a weaker theory in that it lacks Induction. First off, classical 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathsf {Q}}}
+  
+ proves all 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{0}}
+  
+-
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+-theorems, but some simple 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+-
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+-theorems are already independent of it. Induction can be seen to play a crucial role in Friedman's result, as the more workable theory obtained by strengthening 
+  
+    
+      
+        
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle {\mathsf {Q}}}
+  
+ with axioms about ordering, and optionally decidable equality, does prove more 
+  
+    
+      
+        
+          Π
+          
+            2
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{2}^{0}}
+  
+-statements than its intuitionistic counterpart.
+The discussion here is by no means exhaustive. There are various results for when a classical theorem is already entailed by the constructive theory. Also note that it can be relevant what logic was used to obtain metalogical results. For example, many results on realizability were indeed obtained in a constructive metalogic. But when no specific context is given, stated results need to be assumed to be classical.
+
+Unprovable statements
+Independence results concern propositions such that neither they, nor their negations can be proven in a theory. If the classical theory is consistent (i.e. does not prove 
+  
+    
+      
+        ⊥
+      
+    
+    {\displaystyle \bot }
+  
+) and the constructive counterpart does not prove one of its classical theorems 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+, then that 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is independent of the latter. Given some independent propositions, it is easy to define more from them, especially in a constructive framework. 
+Heyting arithmetic has the disjunction property 
+  
+    
+      
+        
+          
+            D
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {DP} }}
+  
+: For all propositions 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ and 
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  
+,
+
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        α
+        ∨
+        β
+        
+        ⟺
+        
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        α
+        
+           or 
+        
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        β
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash \alpha \lor \beta \iff {\mathsf {HA}}\vdash \alpha {\text{ or }}{\mathsf {HA}}\vdash \beta }
+  
+
+Indeed, this and its numerical generalization are also exhibited by constructive second-order arithmetic and common set theories such as 
+  
+    
+      
+        
+          
+            C
+            Z
+            F
+          
+        
+      
+    
+    {\displaystyle {\mathsf {CZF}}}
+  
+ and 
+  
+    
+      
+        
+          
+            I
+            Z
+            F
+          
+        
+      
+    
+    {\displaystyle {\mathsf {IZF}}}
+  
+. It is a common desideratum for the informal notion of a constructive theory. 
+Now in a theory with 
+  
+    
+      
+        
+          
+            D
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {DP} }}
+  
+, if a proposition 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is independent, then the classically trivial 
+  
+    
+      
+        P
+        ∨
+        ¬
+        P
+      
+    
+    {\displaystyle P\lor \neg P}
+  
+ is another independent proposition, and vice versa. A schema is not valid if there is at least one instance that cannot be proven, which is how 
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+ comes to fail. One may break 
+  
+    
+      
+        
+          
+            D
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {DP} }}
+  
+ by adopting an excluded middle statement axiomatically without validating either of the disjuncts, as is the case in 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+. 
+More can be said: If 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is even classically independent, then also the negation 
+  
+    
+      
+        ¬
+        P
+      
+    
+    {\displaystyle \neg P}
+  
+ is independent—this holds whether or not 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \neg \neg P}
+  
+ is equivalent to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+. Then, constructively, the weak excluded middle 
+  
+    
+      
+        
+          
+            W
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {WPEM} }}
+  
+ does not hold, i.e. the principle that 
+  
+    
+      
+        ¬
+        α
+        ∨
+        ¬
+        ¬
+        α
+      
+    
+    {\displaystyle \neg \alpha \lor \neg \neg \alpha }
+  
+ would hold for all propositions is not valid. If such 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{0}}
+  
+, unprovability of the disjunction manifests the breakdown of 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+-
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+, or what amounts to an instance of  
+  
+    
+      
+        
+          
+            W
+            L
+            P
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathrm {WLPO} }}
+  
+ for a primitive recursive function.
+
+Classically independent propositions
+Knowledge of Gödel's incompleteness theorems aids in understanding the type of statements that are 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+-provable but not 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+-provable.
+The resolution of Hilbert's tenth problem provided some concrete polynomials 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and corresponding polynomial equations, such that the claim that the latter have a solution is algorithmically undecidable. The proposition can be expressed as
+
+  
+    
+      
+        ∃
+        
+          w
+          
+            1
+          
+        
+        .
+        ⋯
+        ∃
+        
+          w
+          
+            n
+          
+        
+        .
+        f
+        (
+        
+          w
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          w
+          
+            n
+          
+        
+        )
+        =
+        0
+      
+    
+    {\displaystyle \exists w_{1}.\cdots \exists w_{n}.f(w_{1},\dots ,w_{n})=0}
+  
+
+Certain such zero value existence claims have a more particular interpretation: Theories such as 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ or 
+  
+    
+      
+        
+          
+            Z
+            F
+            C
+          
+        
+      
+    
+    {\displaystyle {\mathsf {ZFC}}}
+  
+ prove that these propositions are equivalent to the arithmetized claim of the theories own inconsistency. Thus, such propositions can even be written down for strong classical set theories.
+In a consistent and sound arithmetic theory, such an existence claim 
+  
+    
+      
+        
+          
+            
+              I
+            
+            
+              f
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {I} _{f}}}
+  
+ is an independent 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{0}}
+  
+-proposition. Then 
+  
+    
+      
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        :=
+        ¬
+        
+          
+            
+              I
+            
+            
+              f
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {C} _{f}}:=\neg {\mathrm {I} _{f}}}
+  
+, by pushing a negation through the quantifier, is seen to be an independent Goldbach-type- or 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+-proposition. To be explicit, the double-negation 
+  
+    
+      
+        ¬
+        ¬
+        
+          
+            
+              I
+            
+            
+              f
+            
+          
+        
+      
+    
+    {\displaystyle \neg \neg {\mathrm {I} _{f}}}
+  
+ (or 
+  
+    
+      
+        ¬
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+      
+    
+    {\displaystyle \neg {\mathrm {C} _{f}}}
+  
+) is also independent. And any triple-negation is, in any case, already intuitionistically equivalent to a single negation.
+
+PA violates DP
+The following illuminates the meaning involved in such independent statements. Given an index in an enumeration of all proofs of a theory, one can inspect what proposition it is a proof of. 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ is adequate in that it can correctly represent this procedure: there is a primitive recursive predicate 
+  
+    
+      
+        
+          F
+        
+        (
+        w
+        )
+        :=
+        
+          P
+          r
+          f
+        
+        (
+        w
+        ,
+        ⌜
+        0
+        =
+        1
+        ⌝
+        )
+      
+    
+    {\displaystyle \mathrm {F} (w):=\mathrm {Prf} (w,\ulcorner 0=1\urcorner )}
+  
+ expressing that a proof is one of the absurd proposition 
+  
+    
+      
+        0
+        =
+        1
+      
+    
+    {\displaystyle 0=1}
+  
+. This relates to the more explicitly arithmetical predicate above, about a polynomial's return value being zero. One may metalogically reason that if 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ is consistent, then it indeed proves 
+  
+    
+      
+        ¬
+        
+          F
+        
+        (
+        
+          
+            
+              w
+            
+            _
+          
+        
+        )
+      
+    
+    {\displaystyle \neg \mathrm {F} ({\underline {\mathrm {w} }})}
+  
+ for every individual index 
+  
+    
+      
+        
+          
+            w
+          
+        
+      
+    
+    {\displaystyle {\mathrm {w} }}
+  
+. 
+In an effectively axiomatized theory, one may successively perform an inspection of each proof. If a theory is indeed consistent, then there does not exist a proof of an absurdity, which corresponds to the statement that the mentioned "absurdity search" will never halt. Formally in the theory, the former is expressed by the proposition 
+  
+    
+      
+        ¬
+        ∃
+        w
+        .
+        
+          F
+        
+        (
+        w
+        )
+      
+    
+    {\displaystyle \neg \exists w.\mathrm {F} (w)}
+  
+, negating the arithmetized inconsistency claim. The equivalent 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+-proposition 
+  
+    
+      
+        ∀
+        w
+        .
+        ¬
+        
+          F
+        
+        (
+        w
+        )
+      
+    
+    {\displaystyle \forall w.\neg \mathrm {F} (w)}
+  
+ formalizes the never halting of the search by stating that all proofs are not a proof of an absurdity. And indeed, in an omega-consistent theory that accurately represents provability, there is no proof that the absurdity search would ever conclude by halting (explicit inconsistency not derivable), nor—as shown by Gödel—can there be a proof that the absurdity search would never halt (consistency not derivable). Reformulated, there is no proof that the absurdity search never halts (consistency not derivable), nor is there a proof that the absurdity search does not never halt (consistency not rejectible).
+To reiterate, neither of these two disjuncts is 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+-provable, while their disjunction is trivially 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+-provable. Indeed, if 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ is consistent then it violates 
+  
+    
+      
+        
+          
+            D
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {DP} }}
+  
+.
+The 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{0}}
+  
+-proposition expressing the existence of a proof of 
+  
+    
+      
+        0
+        =
+        1
+      
+    
+    {\displaystyle 0=1}
+  
+ is a logically positive statement. Nonetheless, it is historically denoted 
+  
+    
+      
+        ¬
+        
+          
+            
+              C
+              o
+              n
+            
+          
+          
+            
+              P
+              A
+            
+          
+        
+      
+    
+    {\displaystyle \neg {\mathrm {Con} }_{\mathsf {PA}}}
+  
+, while its negation is a 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+-proposition denoted by 
+  
+    
+      
+        
+          
+            
+              C
+              o
+              n
+            
+          
+          
+            
+              P
+              A
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {Con} }_{\mathsf {PA}}}
+  
+. In a constructive context, this use of the negation sign may be misleading nomenclature.
+Friedman established another interesting unprovable statement, namely that a consistent and adequate theory never proves its arithmetized disjunction property.
+
+Unprovable classical principles
+Already minimal logic logically proves all non-contradiction claims, and in particular 
+  
+    
+      
+        ¬
+        (
+        
+          
+            
+              I
+            
+            
+              f
+            
+          
+        
+        ∧
+        ¬
+        
+          
+            
+              I
+            
+            
+              f
+            
+          
+        
+        )
+      
+    
+    {\displaystyle \neg ({\mathrm {I} _{f}}\land \neg {\mathrm {I} _{f}})}
+  
+ and 
+  
+    
+      
+        ¬
+        (
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        ∧
+        ¬
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        )
+      
+    
+    {\displaystyle \neg ({\mathrm {C} _{f}}\land \neg {\mathrm {C} _{f}})}
+  
+. Since also 
+  
+    
+      
+        (
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        ∧
+        ¬
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        )
+        ↔
+        ¬
+        (
+        
+          
+            
+              I
+            
+            
+              f
+            
+          
+        
+        ∨
+        ¬
+        
+          
+            
+              I
+            
+            
+              f
+            
+          
+        
+        )
+      
+    
+    {\displaystyle ({\mathrm {C} _{f}}\land \neg {\mathrm {C} _{f}})\leftrightarrow \neg ({\mathrm {I} _{f}}\lor \neg {\mathrm {I} _{f}})}
+  
+, the theorem 
+  
+    
+      
+        ¬
+        (
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        ∧
+        ¬
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        )
+      
+    
+    {\displaystyle \neg ({\mathrm {C} _{f}}\land \neg {\mathrm {C} _{f}})}
+  
+ may be read as a provable double-negated excluded middle disjunction (or existence claim). But in light of the disjunction property, the plain excluded middle 
+  
+    
+      
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+        ∨
+        ¬
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {C} _{f}}\lor \neg {\mathrm {C} _{f}}}
+  
+ cannot be 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+-provable. So one of the De Morgan's laws cannot intuitionistically hold in general either.
+The breakdown of the principles 
+  
+    
+      
+        
+          
+            W
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {WPEM} }}
+  
+ and 
+  
+    
+      
+        
+          
+            W
+            L
+            P
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathrm {WLPO} }}
+  
+ have been explained.
+Now in 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+, the least number principle 
+  
+    
+      
+        
+          
+            L
+            N
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {LNP} }}
+  
+ is just one of many statements equivalent to the induction principle. The proof below shows how 
+  
+    
+      
+        
+          
+            L
+            N
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {LNP} }}
+  
+ implies 
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+, and therefore why this principle also cannot be generally valid in 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+. However, the schema granting double-negated least number existence for every non-trivial predicate, denoted 
+  
+    
+      
+        ¬
+        ¬
+        
+          
+            L
+            N
+            P
+          
+        
+      
+    
+    {\displaystyle \neg \neg {\mathrm {LNP} }}
+  
+, is generally valid. In light of Gödel's proof, the breakdown of these three principles can be understood as Heyting arithmetic being consistent with the provability reading of constructive logic.
+Markov's principle for primitive recursive predicates 
+  
+    
+      
+        
+          
+            
+              M
+              P
+            
+            
+              
+                P
+                R
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MP} _{\mathrm {PR} }}}
+  
+ does already not hold as an implication schema for 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+, let alone the strictly stronger 
+  
+    
+      
+        
+          
+            
+              M
+              P
+            
+            
+              
+                D
+                e
+                c
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MP} _{\mathrm {Dec} }}}
+  
+. Although in the form of the corresponding rules, they are admissible, as mentioned.
+Similarly, the theory does not prove the independence of premise principle 
+  
+    
+      
+        
+          
+            I
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {IP} }}
+  
+ for negated predicates, albeit it is closed under the rule for all negated propositions, i.e. one may pull out the existential quantifier in 
+  
+    
+      
+        ¬
+        P
+        →
+        ∃
+        n
+        .
+        Q
+        (
+        n
+        )
+      
+    
+    {\displaystyle \neg P\to \exists n.Q(n)}
+  
+. The same holds for the version where the existential statement is replaced by a mere disjunction.
+The valid implication 
+  
+    
+      
+        ¬
+        ¬
+        (
+        α
+        →
+        β
+        )
+        →
+        (
+        α
+        →
+        ¬
+        ¬
+        β
+        )
+      
+    
+    {\displaystyle \neg \neg (\alpha \to \beta )\to (\alpha \to \neg \neg \beta )}
+  
+ can be proven to hold also in its reversed form, using the disjunctive syllogism. However, the double-negation shift 
+  
+    
+      
+        
+          
+            D
+            N
+            S
+          
+        
+      
+    
+    {\displaystyle {\mathrm {DNS} }}
+  
+ is not intuitionistically provable, i.e. the schema of commutativity of "
+  
+    
+      
+        ¬
+        ¬
+      
+    
+    {\displaystyle \neg \neg }
+  
+" with universal quantification over all numbers. This is an interesting breakdown that is explained by the consistency of 
+  
+    
+      
+        ¬
+        
+          
+            
+              D
+              e
+              c
+            
+            
+              M
+            
+          
+        
+      
+    
+    {\displaystyle \neg {\mathrm {Dec} _{M}}}
+  
+ for some 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+, as discussed in the section on Church's thesis.
+
+Least number principle
+Making use of the order relation on the naturals, the strong induction principle reads
+
+  
+    
+      
+        ∀
+        n
+        .
+        
+          
+            (
+          
+        
+        
+          
+            (
+          
+        
+        ∀
+        (
+        k
+        <
+        n
+        )
+        .
+        ϕ
+        (
+        k
+        )
+        
+          
+            )
+          
+        
+        
+        →
+        
+        ϕ
+        (
+        n
+        )
+        
+          
+            )
+          
+        
+        
+        →
+        
+        ∀
+        m
+        .
+        ϕ
+        (
+        m
+        )
+      
+    
+    {\displaystyle \forall n.{\Big (}{\big (}\forall (k<n).\phi (k){\big )}\,\to \,\phi (n){\Big )}\,\to \,\forall m.\phi (m)}
+  
+
+In class notation, as familiar from set theory, an arithmetic statement 
+  
+    
+      
+        Q
+        (
+        n
+        )
+      
+    
+    {\displaystyle Q(n)}
+  
+ is expressed as 
+  
+    
+      
+        n
+        ∈
+        B
+      
+    
+    {\displaystyle n\in B}
+  
+ where 
+  
+    
+      
+        B
+        :=
+        {
+        m
+        ∈
+        
+          
+            N
+          
+        
+        ∣
+        Q
+        (
+        m
+        )
+        }
+      
+    
+    {\displaystyle B:=\{m\in {\mathbb {N} }\mid Q(m)\}}
+  
+. For any given predicate of negated form, i.e. 
+  
+    
+      
+        ϕ
+        (
+        n
+        )
+        :=
+        ¬
+        (
+        n
+        ∈
+        B
+        )
+      
+    
+    {\displaystyle \phi (n):=\neg (n\in B)}
+  
+, a logical equivalent to induction is
+
+  
+    
+      
+        ¬
+        ∃
+        (
+        n
+        ∈
+        B
+        )
+        .
+        ¬
+        ∃
+        (
+        k
+        ∈
+        B
+        )
+        .
+        k
+        <
+        n
+        
+        
+        
+        ↔
+        
+        
+        
+        B
+        =
+        {
+        }
+      
+    
+    {\displaystyle \neg \exists (n\in B).\neg \exists (k\in B).k<n\,\,\,\leftrightarrow \,\,\,B=\{\}}
+  
+
+The insight is that among subclasses 
+  
+    
+      
+        B
+        ⊆
+        
+          
+            N
+          
+        
+      
+    
+    {\displaystyle B\subseteq {\mathbb {N} }}
+  
+, the property of (provably) having no least member is equivalent to being uninhabited, i.e. to being the empty class. Taking the contrapositive results in a theorem expressing that for any non-empty subclass, it cannot consistently be ruled out that there exists a member 
+  
+    
+      
+        n
+        ∈
+        B
+      
+    
+    {\displaystyle n\in B}
+  
+ such that there is no member 
+  
+    
+      
+        k
+        ∈
+        B
+      
+    
+    {\displaystyle k\in B}
+  
+ smaller than 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+:
+
+  
+    
+      
+        B
+        ≠
+        {
+        }
+        
+        →
+        
+        ¬
+        ¬
+        ∃
+        (
+        n
+        ∈
+        B
+        )
+        .
+        ¬
+        ∃
+        (
+        k
+        ∈
+        B
+        )
+        .
+        k
+        <
+        n
+      
+    
+    {\displaystyle B\neq \{\}\,\to \,\neg \neg \exists (n\in B).\neg \exists (k\in B).k<n}
+  
+
+In Peano arithmetic, where double-negation elimination is always valid, this proves the least number principle in its common formulation. In the classical reading, being non-empty is equivalent to (provably) being inhabited by some least member.
+A binary relation "
+  
+    
+      
+        <
+      
+    
+    {\displaystyle <}
+  
+" that validates the strong induction schema in the above form is always also irreflexive: Considering 
+  
+    
+      
+        
+          ϕ
+          
+            c
+          
+        
+        (
+        n
+        )
+        :=
+        (
+        n
+        ≠
+        c
+        )
+      
+    
+    {\displaystyle \phi _{c}(n):=(n\neq c)}
+  
+ or equivalently
+
+  
+    
+      
+        
+          Q
+          
+            c
+          
+        
+        (
+        n
+        )
+        :=
+        (
+        n
+        =
+        c
+        )
+      
+    
+    {\displaystyle Q_{c}(n):=(n=c)}
+  
+
+for some fixed number 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+, the above simplifies to the statement that no member 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ of 
+  
+    
+      
+        B
+        =
+        {
+        c
+        }
+      
+    
+    {\displaystyle B=\{c\}}
+  
+ validates 
+  
+    
+      
+        k
+        <
+        c
+      
+    
+    {\displaystyle k<c}
+  
+, which is to say 
+  
+    
+      
+        ¬
+        (
+        c
+        <
+        c
+        )
+      
+    
+    {\displaystyle \neg (c<c)}
+  
+. (And this logical deduction did not even use any other property of the binary relation.)
+More generally, if 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ is non-empty and the associated (classical) least number principle can be used to prove some statement of negated form (such as 
+  
+    
+      
+        ¬
+        (
+        c
+        <
+        c
+        )
+      
+    
+    {\displaystyle \neg (c<c)}
+  
+), then one can extend this to a fully constructive proof. This is because implications 
+  
+    
+      
+        α
+        →
+        ¬
+        β
+      
+    
+    {\displaystyle \alpha \to \neg \beta }
+  
+ are always intutionistically equivalent to the formally stronger 
+  
+    
+      
+        (
+        ¬
+        ¬
+        α
+        )
+        →
+        ¬
+        β
+      
+    
+    {\displaystyle (\neg \neg \alpha )\to \neg \beta }
+  
+.
+But in general, over constructive logic, the weakening of the least number principle can not be lifted. The following example demonstrates this: For some proposition 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ (say 
+  
+    
+      
+        
+          
+            
+              C
+            
+            
+              f
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {C} _{f}}}
+  
+ as above), consider the predicate
+
+  
+    
+      
+        
+          Q
+          
+            P
+          
+        
+        (
+        n
+        )
+        :=
+        (
+        n
+        =
+        0
+        ∧
+        P
+        )
+        ∨
+        (
+        n
+        =
+        1
+        )
+      
+    
+    {\displaystyle Q_{P}(n):=(n=0\land P)\lor (n=1)}
+  
+
+This 
+  
+    
+      
+        
+          Q
+          
+            P
+          
+        
+      
+    
+    {\displaystyle Q_{P}}
+  
+ corresponds to a subclass 
+  
+    
+      
+        
+          b
+          
+            P
+          
+        
+        :=
+        {
+        z
+        ∈
+        {
+        0
+        }
+        ∣
+        P
+        }
+        ∪
+        {
+        1
+        }
+      
+    
+    {\displaystyle b_{P}:=\{z\in \{0\}\mid P\}\cup \{1\}}
+  
+ of the natural numbers. Any number proven or assumed to be in this class provably either equals 
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+ or 
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+, i.e. 
+  
+    
+      
+        
+          b
+          
+            P
+          
+        
+        ⊆
+        {
+        0
+        ,
+        1
+        }
+      
+    
+    {\displaystyle b_{P}\subseteq \{0,1\}}
+  
+. As 
+  
+    
+      
+        1
+        =
+        1
+      
+    
+    {\displaystyle 1=1}
+  
+, the proposition 
+  
+    
+      
+        
+          Q
+          
+            P
+          
+        
+        (
+        1
+        )
+      
+    
+    {\displaystyle Q_{P}(1)}
+  
+ or 
+  
+    
+      
+        1
+        ∈
+        
+          b
+          
+            P
+          
+        
+      
+    
+    {\displaystyle 1\in b_{P}}
+  
+ is trivially true and so the class is inhabited. Further, using decidability of equality and the disjunctive syllogism proves the equivalence 
+  
+    
+      
+        
+          Q
+          
+            P
+          
+        
+        (
+        0
+        )
+        ↔
+        P
+      
+    
+    {\displaystyle Q_{P}(0)\leftrightarrow P}
+  
+. In other words, whether 
+  
+    
+      
+        0
+      
+    
+    {\displaystyle 0}
+  
+ is a member of the class is exactly as hard as 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+. If the underlying proposition 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is independent, then also the predicate is undecidable in the theory.
+One may ask what the least member of the class 
+  
+    
+      
+        
+          b
+          
+            P
+          
+        
+      
+    
+    {\displaystyle b_{P}}
+  
+ may be. As it is inhabited, the least number existence for this class cannot be rejected. In fact, given a conjunction with 
+  
+    
+      
+        
+          Q
+          
+            P
+          
+        
+        (
+        1
+        )
+      
+    
+    {\displaystyle Q_{P}(1)}
+  
+ is trivial, the existence claim of a least number validating 
+  
+    
+      
+        
+          Q
+          
+            P
+          
+        
+      
+    
+    {\displaystyle Q_{P}}
+  
+ itself translates to the excluded middle statement for 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+. Knowledge of such a number's value does determine whether or not 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ holds. So for independent 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+, the least number principle instance with 
+  
+    
+      
+        
+          Q
+          
+            P
+          
+        
+      
+    
+    {\displaystyle Q_{P}}
+  
+ is also independent of 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+.
+In set theory notation, 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is also equivalent to 
+  
+    
+      
+        
+          b
+          
+            P
+          
+        
+        =
+        {
+        0
+        ,
+        1
+        }
+      
+    
+    {\displaystyle b_{P}=\{0,1\}}
+  
+, while its negation is equivalent to 
+  
+    
+      
+        
+          b
+          
+            P
+          
+        
+        =
+        {
+        1
+        }
+      
+    
+    {\displaystyle b_{P}=\{1\}}
+  
+. This demonstrates that elusive predicates can define elusive subsets. And so also in constructive set theory, while the standard order on the class of naturals is decidable, the naturals are not well-ordered. But strong induction principles, that constructively do not imply unrealizable existence claims, are also still available.
+
+Anti-classical extensions
+In a computable context, for a predicate 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+, the classically trivial infinite disjunction
+
+  
+    
+      
+        ∀
+        n
+        .
+        
+          
+            (
+          
+        
+        M
+        (
+        n
+        )
+        ∨
+        ¬
+        M
+        (
+        n
+        )
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle \forall n.{\big (}M(n)\lor \neg M(n){\big )}}
+  
+,
+also written 
+  
+    
+      
+        
+          
+            
+              D
+              e
+              c
+            
+          
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {Dec} }_{M}}
+  
+, can be read as a validation of the decidability of a decision problem. In class notation, 
+  
+    
+      
+        M
+        (
+        n
+        )
+      
+    
+    {\displaystyle M(n)}
+  
+ is also written 
+  
+    
+      
+        n
+        ∈
+        M
+      
+    
+    {\displaystyle n\in M}
+  
+.
+
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ proves no propositions not provable by 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ and so, in particular, it does not reject any theorems of the classical theory. But there are also predicates 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ such that the axioms 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        +
+        ¬
+        
+          
+            
+              D
+              e
+              c
+            
+          
+          
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}+\neg {\mathrm {Dec} }_{M}}
+  
+ are consistent. Again, constructively, such a negation is not equivalent to the existence of a particular numerical counter-example 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  
+ to excluded middle for 
+  
+    
+      
+        M
+        (
+        t
+        )
+      
+    
+    {\displaystyle M(t)}
+  
+. Indeed, already minimal logic proves the double-negated excluded middle for all propositions, and so 
+  
+    
+      
+        ∀
+        n
+        .
+        ¬
+        ¬
+        
+          
+            (
+          
+        
+        Q
+        (
+        n
+        )
+        ∨
+        ¬
+        Q
+        (
+        n
+        )
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle \forall n.\neg \neg {\big (}Q(n)\lor \neg Q(n){\big )}}
+  
+, which is equivalent to 
+  
+    
+      
+        ¬
+        ∃
+        n
+        .
+        ¬
+        
+          
+            (
+          
+        
+        Q
+        (
+        n
+        )
+        ∨
+        ¬
+        Q
+        (
+        n
+        )
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle \neg \exists n.\neg {\big (}Q(n)\lor \neg Q(n){\big )}}
+  
+, for any predicate 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+.
+
+Church's thesis
+Church's rule is an admissible rule in 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+. Church's thesis principle 
+  
+    
+      
+        
+          
+            
+              C
+              T
+            
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {CT} _{0}}}
+  
+ may be adopted in 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+, while 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ rejects it: It implies negations such as the ones just described. 
+Consider the principle in the form stating that all predicates that are decidable in the logic sense above are also decidable by a total computable function. To see how it is in conflict with excluded middle, one merely needs to define a predicate that is not computably decidable.
+To this end, write 
+  
+    
+      
+        
+          Δ
+          
+            e
+          
+        
+        (
+        w
+        )
+        :=
+        
+          T
+          
+            1
+          
+        
+        (
+        e
+        ,
+        e
+        ,
+        w
+        )
+      
+    
+    {\displaystyle \Delta _{e}(w):=T_{1}(e,e,w)}
+  
+ for predicates defined from Kleene's T predicate. The indices 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ of total computable functions fulfill 
+  
+    
+      
+        ∀
+        x
+        .
+        ∃
+        w
+        .
+        
+          T
+          
+            1
+          
+        
+        (
+        e
+        ,
+        x
+        ,
+        w
+        )
+      
+    
+    {\displaystyle \forall x.\exists w.T_{1}(e,x,w)}
+  
+. While 
+  
+    
+      
+        
+          T
+          
+            1
+          
+        
+      
+    
+    {\displaystyle T_{1}}
+  
+ can be realized in a primitive recursive fashion, the predicate 
+  
+    
+      
+        ∃
+        w
+        .
+        
+          Δ
+          
+            e
+          
+        
+        (
+        w
+        )
+      
+    
+    {\displaystyle \exists w.\Delta _{e}(w)}
+  
+ in 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+, i.e. the class 
+  
+    
+      
+        H
+        :=
+        {
+        e
+        ∣
+        ∃
+        w
+        .
+        
+          Δ
+          
+            e
+          
+        
+        (
+        w
+        )
+        }
+      
+    
+    {\displaystyle H:=\{e\mid \exists w.\Delta _{e}(w)\}}
+  
+ of partial computable function indices with a witness describing how they halt on the diagonal, is computably enumerable but not computable. The classical compliment 
+  
+    
+      
+        M
+      
+    
+    {\displaystyle M}
+  
+ defined using 
+  
+    
+      
+        ¬
+        ∃
+        w
+        .
+        
+          Δ
+          
+            e
+          
+        
+        (
+        w
+        )
+      
+    
+    {\displaystyle \neg \exists w.\Delta _{e}(w)}
+  
+ is not even computably enumerable, see halting problem. This provenly undecidable problem 
+  
+    
+      
+        e
+        ∈
+        M
+      
+    
+    {\displaystyle e\in M}
+  
+ provides a violating example. For any index 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+, the equivalent form 
+  
+    
+      
+        ∀
+        w
+        .
+        ¬
+        
+          Δ
+          
+            e
+          
+        
+        (
+        w
+        )
+      
+    
+    {\displaystyle \forall w.\neg \Delta _{e}(w)}
+  
+ expresses that when the corresponding function is evaluated (at 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+), then all conceivable descriptions of evaluation histories (
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+) do not describe the evaluation at hand. Specifically, this not being decidable for functions establishes the negation of what amounts to 
+  
+    
+      
+        
+          
+            W
+            L
+            P
+            O
+          
+        
+      
+    
+    {\displaystyle {\mathrm {WLPO} }}
+  
+.
+The formal Church's principles are associated with the recursive school, naturally. Markov's principle 
+  
+    
+      
+        
+          
+            
+              M
+              P
+            
+            
+              
+                D
+                e
+                c
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MP} _{\mathrm {Dec} }}}
+  
+ is commonly adopted, by that school and by constructive mathematics more broadly. In the presence of Church's principle, 
+  
+    
+      
+        
+          
+            
+              M
+              P
+            
+            
+              
+                D
+                e
+                c
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MP} _{\mathrm {Dec} }}}
+  
+ is equivalent to its weaker form 
+  
+    
+      
+        
+          
+            
+              M
+              P
+            
+            
+              
+                P
+                R
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MP} _{\mathrm {PR} }}}
+  
+. The latter can generally be expressed as a single axiom, namely double-negation elimination for any 
+  
+    
+      
+        ¬
+        ¬
+        ∃
+        w
+        .
+        
+          T
+          
+            1
+          
+        
+        (
+        e
+        ,
+        x
+        ,
+        w
+        )
+      
+    
+    {\displaystyle \neg \neg \exists w.T_{1}(e,x,w)}
+  
+. Heyting arithmetic together with both 
+  
+    
+      
+        
+          
+            
+              M
+              P
+            
+            
+              
+                D
+                e
+                c
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {MP} _{\mathrm {Dec} }}}
+  
++
+  
+    
+      
+        
+          
+            
+              E
+              C
+              T
+            
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {ECT} _{0}}}
+  
+ prove independence of premise for decidable predicates, 
+  
+    
+      
+        
+          
+            
+              I
+              P
+            
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle {\mathrm {IP} }_{0}}
+  
+. But they do not go together, consistently, with 
+  
+    
+      
+        
+          
+            I
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {IP} }}
+  
+.
+
+  
+    
+      
+        
+          
+            
+              C
+              T
+            
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {CT} _{0}}}
+  
+ also negates 
+  
+    
+      
+        
+          
+            D
+            N
+            S
+          
+        
+      
+    
+    {\displaystyle {\mathrm {DNS} }}
+  
+. The intuitionist school of L. E. J. Brouwer extends Heyting arithmetic by 
+a collection of principles that negate both 
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+ as well as 
+  
+    
+      
+        
+          
+            
+              C
+              T
+            
+            
+              0
+            
+          
+        
+      
+    
+    {\displaystyle {\mathrm {CT} _{0}}}
+  
+.
+
+Models
+
+Realizability
+For some number 
+  
+    
+      
+        
+          n
+        
+      
+    
+    {\displaystyle \mathrm {n} }
+  
+ in the metatheory, the numeral in the studied object theory is denoted by 
+  
+    
+      
+        
+          
+            
+              n
+            
+            _
+          
+        
+      
+    
+    {\displaystyle {\underline {\mathrm {n} }}}
+  
+.
+In intuitionistic arithmetics, the disjunction property 
+  
+    
+      
+        
+          
+            D
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {DP} }}
+  
+ is typically valid. And it is a theorem that any c.e. extension of arithmetic for which it holds also has the numerical existence property 
+  
+    
+      
+        
+          
+            N
+            E
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {NEP} }}
+  
+:
+
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ∃
+        n
+        .
+        ψ
+        (
+        n
+        )
+        
+        ⟺
+        
+        
+           exists 
+        
+        
+          
+            n
+          
+        
+        
+           
+        
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ψ
+        (
+        
+          
+            
+              n
+            
+            _
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash \exists n.\psi (n)\iff {\text{ exists }}{\mathrm {n} }{\text{ }}{\mathsf {HA}}\vdash \psi ({\underline {\mathrm {n} }})}
+  
+
+So these properties are metalogical equivalent in Heyting arithmetic. The existence and disjunction property in fact still holds when relativizing the existence claim by a Harrop formula 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+, i.e. for provable 
+  
+    
+      
+        α
+        →
+        ∃
+        n
+        .
+        ψ
+        (
+        n
+        )
+      
+    
+    {\displaystyle \alpha \to \exists n.\psi (n)}
+  
+.
+Kleene, a student of Church, introduced important realizability models of the Heyting arithmetic.
+In turn, his student Nels David Nelson established (in an extension of 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+) that all closed theorems of 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ (meaning all variables are bound) can be realized. Inference in Heyting arithmetic preserves realizability. Moreover, if 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        ∀
+        n
+        .
+        ∃
+        m
+        .
+        φ
+        (
+        n
+        ,
+        m
+        )
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash \forall n.\exists m.\varphi (n,m)}
+  
+ then there is a partial recursive function realizing 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  
+ in the sense that whenever the function evaluated at 
+  
+    
+      
+        
+          
+            n
+          
+        
+      
+    
+    {\displaystyle {\mathrm {n} }}
+  
+ terminates with 
+  
+    
+      
+        
+          
+            m
+          
+        
+      
+    
+    {\displaystyle {\mathrm {m} }}
+  
+, then 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+        ⊢
+        φ
+        (
+        
+          
+            
+              n
+            
+            _
+          
+        
+        ,
+        
+          
+            
+              m
+            
+            _
+          
+        
+        )
+      
+    
+    {\displaystyle {\mathsf {HA}}\vdash \varphi ({\underline {\mathrm {n} }},{\underline {\mathrm {m} }})}
+  
+. This can be extended to any finite number of function arguments 
+  
+    
+      
+        
+          
+            n
+          
+        
+      
+    
+    {\displaystyle {\mathrm {n} }}
+  
+. 
+There are also classical theorems that are not 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+-provable but do have a realization.
+Typed versions of realizability have been introduced by Georg Kreisel. With it he demonstrated the independence of the classically valid Markov's principle for intuitionistic theories.
+See also BHK interpretation and Dialectica interpretation.
+In the effective topos, already the finitely axiomizable subsystem of Heyting arithmetic with induction restricted to 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}}
+  
+ is categorical. Categoricity here is reminiscent of Tennenbaum's theorem. The model validates 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ but not 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ and so completeness fails in this context.
+
+Consistency and Soundness
+If a theory is consistent, then no proof is one of an absurdity. Kurt Gödel introduced the negative translation and proved that if Heyting arithmetic is consistent, then so is Peano arithmetic. That is to say, he reduced the consistency task for 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ to that of 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+. However, Gödel's incompleteness theorems, about the incapability of certain theories to prove their own consistency, also applies to Heyting arithmetic itself.
+
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ or any consistent extension of it that has the numerical existence property 
+  
+    
+      
+        
+          
+            N
+            E
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {NEP} }}
+  
+ is also automatically 
+  
+    
+      
+        
+          Σ
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Sigma _{1}^{0}}
+  
+-sound. (Conversely, the property requires soundness. So for example, while even the theory 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+        +
+        ¬
+        
+          
+            
+              C
+              o
+              n
+            
+          
+          
+            
+              P
+              A
+            
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}+\neg {\mathrm {Con} }_{\mathsf {PA}}}
+  
+ is actually equiconsistent with 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+, already the pendant of it with 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ is unsound and thus does not have 
+  
+    
+      
+        
+          
+            N
+            E
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathrm {NEP} }}
+  
+.)
+The standard model of the classical first-order theory 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ as well as any of its non-standard models is also a model for Heyting arithmetic 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+.
+
+Set theory
+There are also constructive set theory models for full 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ and its intended semantics. Relatively weak set theories suffice: They shall adopt the Axiom of infinity, the Axiom schema of predicative separation to prove induction of arithmetical formulas in 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+, as well as the existence of function spaces on finite domains for recursive definitions. 
+Specifically, those theories do not require 
+  
+    
+      
+        
+          
+            P
+            E
+            M
+          
+        
+      
+    
+    {\displaystyle {\mathrm {PEM} }}
+  
+, the full axiom of separation or set induction (let alone the axiom of regularity), nor general function spaces (let alone the full axiom of power set).
+
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ furthermore is bi-interpretable with a weak constructive set theory in which the class of ordinals is 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  
+, so that the collection of von Neumann naturals do not exist as a set in the theory. Meta-theoretically, the domain of that theory is as big as the class of its ordinals and essentially given through the class 
+  
+    
+      
+        
+          
+            F
+            i
+            n
+          
+        
+      
+    
+    {\displaystyle {\mathrm {Fin} }}
+  
+ of all sets that are in bijection with a natural 
+  
+    
+      
+        n
+        ∈
+        ω
+      
+    
+    {\displaystyle n\in \omega }
+  
+. As an axiom this is called 
+  
+    
+      
+        V
+        =
+        
+          
+            F
+            i
+            n
+          
+        
+      
+    
+    {\displaystyle V={\mathrm {Fin} }}
+  
+ and the other axioms are those related to set algebra and order: Union and Binary Intersection, which is tightly related to the Predicative Separation schema, Extensionality, Pairing, and the Set induction schema. This theory is then already identical with the theory given by 
+  
+    
+      
+        
+          
+            C
+            Z
+            F
+          
+        
+      
+    
+    {\displaystyle {\mathsf {CZF}}}
+  
+ without Strong Infinity and with the finitude axiom added. The discussion of 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ in this set theory is as in model theory. And in the other direction, the set theoretical axioms are proven with respect to the primitive recursive relation
+
+  
+    
+      
+        x
+        ∈
+        y
+        
+        ⟺
+        
+        ∃
+        (
+        r
+        <
+        
+          2
+          
+            x
+          
+        
+        )
+        .
+        ∃
+        (
+        s
+        <
+        y
+        )
+        .
+        
+          
+            (
+          
+        
+        
+          2
+          
+            x
+          
+        
+        (
+        2
+        s
+        +
+        1
+        )
+        +
+        r
+        =
+        y
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle x\in y\iff \exists (r<2^{x}).\exists (s<y).{\big (}2^{x}(2s+1)+r=y{\big )}}
+  
+
+That small universe of sets can be understood as the ordered collection of finite binary sequences which encode their mutual membership. For example, the 
+  
+    
+      
+        
+          100
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 100_{2}}
+  
+'th set contains one other set and the 
+  
+    
+      
+        
+          110101
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 110101_{2}}
+  
+'th set contains four other sets. See BIT predicate.
+
+Type theory
+Type theoretical realizations mirroring inference rules based logic formalizations have been implemented in various languages.
+
+Extensions
+Heyting arithmetic has been discussed with potential function symbols added for primitive recursive functions. That theory proves the Ackermann function total. 
+Beyond this, axiom and formalism selection always has been a debate even within the constructivist circle. Many typed extensions of 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ have been extensively studied in proof theory, e.g. with types of functions between numbers, and functions between those, etc. The formalities naturally become more complicated, with different possible axioms governing the application of functions. The class of functions being total can be enriched this way. The theory with finite types 
+  
+    
+      
+        
+          
+            
+              H
+              A
+            
+          
+          
+            ω
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}^{\omega }}
+  
+ when further combined with function extensionality plus an axiom of choice in 
+  
+    
+      
+        
+          
+            
+              N
+            
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle {\mathbb {N} }^{\mathbb {N} }}
+  
+ still proves the same arithmetic formulas as just 
+  
+    
+      
+        
+          
+            H
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {HA}}}
+  
+ and has a type theoretic interpretation. However, that theory rejects Church’s thesis for 
+  
+    
+      
+        
+          
+            
+              N
+            
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle {\mathbb {N} }^{\mathbb {N} }}
+  
+ as well as that all functions in 
+  
+    
+      
+        
+          
+            
+              N
+            
+          
+          
+            
+              N
+            
+          
+        
+        →
+        
+          
+            N
+          
+        
+      
+    
+    {\displaystyle {\mathbb {N} }^{\mathbb {N} }\to {\mathbb {N} }}
+  
+ would be continuous. But adopting, say, different extensionality rules, choice axioms, Markov's and independence principles and even the Kőnig's lemma—all together but each at specific strength or levels—one can define rather "stuffed" arithmetics that may still fail to prove excluded middle at the level of 
+  
+    
+      
+        
+          Π
+          
+            1
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \Pi _{1}^{0}}
+  
+-formulas. 
+Early on, also variants with intensional equality and Brouwerian choice sequence have been investigated.
+Reverse mathematics studies of constructive second-order arithmetic have been performed.
+
+History
+Formal axiomatization of the theory trace back to Heyting (1930), Herbrand and Kleene. 
+Gödel proved the consistency result concerning 
+  
+    
+      
+        
+          
+            P
+            A
+          
+        
+      
+    
+    {\displaystyle {\mathsf {PA}}}
+  
+ in 1933.
+
+Related concepts
+Heyting arithmetic should not be confused with Heyting algebras, which are the intuitionistic analogue of Boolean algebras.

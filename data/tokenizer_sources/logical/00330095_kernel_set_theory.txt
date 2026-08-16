@@ -1,0 +1,697 @@
+In set theory, the kernel of a function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ (or equivalence kernel) may be taken to be either
+
+the equivalence relation on the function's domain that roughly expresses the idea of "equivalent as far as the function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ can tell", or
+the corresponding partition of the domain.
+An unrelated notion is that of the kernel of a non-empty family of sets 
+  
+    
+      
+        
+          
+            B
+          
+        
+        ,
+      
+    
+    {\displaystyle {\mathcal {B}},}
+  
+ which by definition is the intersection of all its elements:
+
+  
+    
+      
+        ker
+        ⁡
+        
+          
+            B
+          
+        
+         
+        =
+         
+        
+          ⋂
+          
+            B
+            ∈
+            
+              
+                B
+              
+            
+          
+        
+        
+        B
+        .
+      
+    
+    {\displaystyle \ker {\mathcal {B}}~=~\bigcap _{B\in {\mathcal {B}}}\,B.}
+  
+ 
+This definition is used in the theory of filters to classify them as being free or principal. 
+
+Definition
+Kernel of a function
+For the formal definition, let 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f:X\to Y}
+  
+ be a function between two sets.
+Elements 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ∈
+        X
+      
+    
+    {\displaystyle x_{1},x_{2}\in X}
+  
+ are equivalent if and only if 
+  
+    
+      
+        f
+        
+          (
+          
+            x
+            
+              1
+            
+          
+          )
+        
+      
+    
+    {\displaystyle f\left(x_{1}\right)}
+  
+ and 
+  
+    
+      
+        f
+        
+          (
+          
+            x
+            
+              2
+            
+          
+          )
+        
+      
+    
+    {\displaystyle f\left(x_{2}\right)}
+  
+ are equal, that is, are the same element of 
+  
+    
+      
+        Y
+        .
+      
+    
+    {\displaystyle Y.}
+  
+
+The kernel of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is the equivalence relation thus defined. 
+Kernel of a family of sets
+The kernel of a family 
+  
+    
+      
+        
+          
+            B
+          
+        
+        ≠
+        ∅
+      
+    
+    {\displaystyle {\mathcal {B}}\neq \varnothing }
+  
+ of sets is 
+
+  
+    
+      
+        ker
+        ⁡
+        
+          
+            B
+          
+        
+         
+        :=
+         
+        
+          ⋂
+          
+            B
+            ∈
+            
+              
+                B
+              
+            
+          
+        
+        B
+        .
+      
+    
+    {\displaystyle \ker {\mathcal {B}}~:=~\bigcap _{B\in {\mathcal {B}}}B.}
+  
+
+The kernel of 
+  
+    
+      
+        
+          
+            B
+          
+        
+      
+    
+    {\displaystyle {\mathcal {B}}}
+  
+ is also sometimes denoted by 
+  
+    
+      
+        ∩
+        
+          
+            B
+          
+        
+        .
+      
+    
+    {\displaystyle \cap {\mathcal {B}}.}
+  
+ The kernel of the empty set, 
+  
+    
+      
+        ker
+        ⁡
+        ∅
+        ,
+      
+    
+    {\displaystyle \ker \varnothing ,}
+  
+ is typically left undefined. 
+A family is called fixed and is said to have non-empty intersection if its kernel is not empty.  
+A family is said to be free if it is not fixed; that is, if its kernel is the empty set.
+
+Quotients
+Like any equivalence relation, the kernel can be modded out to form a quotient set, and the quotient set is the partition:
+
+  
+    
+      
+        
+          {
+          
+            
+            {
+            w
+            ∈
+            X
+            :
+            f
+            (
+            x
+            )
+            =
+            f
+            (
+            w
+            )
+            }
+             
+            :
+             
+            x
+            ∈
+            X
+            
+          
+          }
+        
+         
+        =
+         
+        
+          {
+          
+            
+              f
+              
+                −
+                1
+              
+            
+            (
+            y
+            )
+             
+            :
+             
+            y
+            ∈
+            f
+            (
+            X
+            )
+          
+          }
+        
+        .
+      
+    
+    {\displaystyle \left\{\,\{w\in X:f(x)=f(w)\}~:~x\in X\,\right\}~=~\left\{f^{-1}(y)~:~y\in f(X)\right\}.}
+  
+
+This quotient set 
+  
+    
+      
+        X
+        
+          /
+        
+        
+          =
+          
+            f
+          
+        
+      
+    
+    {\displaystyle X/=_{f}}
+  
+ is called the coimage of the function 
+  
+    
+      
+        f
+        ,
+      
+    
+    {\displaystyle f,}
+  
+ and denoted 
+  
+    
+      
+        coim
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {coim} f}
+  
+ (or a variation).
+The coimage is naturally isomorphic (in the set-theoretic sense of a bijection) to the image, 
+  
+    
+      
+        im
+        ⁡
+        f
+        ;
+      
+    
+    {\displaystyle \operatorname {im} f;}
+  
+ specifically, the equivalence class of 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ in 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ (which is an element of 
+  
+    
+      
+        coim
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {coim} f}
+  
+) corresponds to 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+ in 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ (which is an element of 
+  
+    
+      
+        im
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {im} f}
+  
+).
+
+As a subset of the Cartesian product
+Like any binary relation, the kernel of a function may be thought of as a subset of the Cartesian product 
+  
+    
+      
+        X
+        ×
+        X
+        .
+      
+    
+    {\displaystyle X\times X.}
+  
+
+In this guise, the kernel may be denoted 
+  
+    
+      
+        ker
+        ⁡
+        f
+      
+    
+    {\displaystyle \ker f}
+  
+ (or a variation) and may be defined symbolically as
+
+  
+    
+      
+        ker
+        ⁡
+        f
+        :=
+        {
+        (
+        x
+        ,
+        
+          x
+          ′
+        
+        )
+        :
+        f
+        (
+        x
+        )
+        =
+        f
+        (
+        
+          x
+          ′
+        
+        )
+        }
+        .
+      
+    
+    {\displaystyle \ker f:=\{(x,x'):f(x)=f(x')\}.}
+  
+
+The study of the properties of this subset can shed light on 
+  
+    
+      
+        f
+        .
+      
+    
+    {\displaystyle f.}
+  
+
+Algebraic structures
+
+If 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ are algebraic structures of some fixed type (such as groups, rings, or vector spaces), and if the function 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f:X\to Y}
+  
+ is a homomorphism, then 
+  
+    
+      
+        ker
+        ⁡
+        f
+      
+    
+    {\displaystyle \ker f}
+  
+ is a congruence relation (that is an equivalence relation that is compatible with the algebraic structure), and the coimage of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a quotient of 
+  
+    
+      
+        X
+        .
+      
+    
+    {\displaystyle X.}
+  
+
+The bijection between the coimage and the image of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is an isomorphism in the algebraic sense; this is the most general form of the first isomorphism theorem. 
+
+In topology
+
+If 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f:X\to Y}
+  
+ is a continuous function between two topological spaces then the topological properties of 
+  
+    
+      
+        ker
+        ⁡
+        f
+      
+    
+    {\displaystyle \ker f}
+  
+ can shed light on the spaces 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ and 
+  
+    
+      
+        Y
+        .
+      
+    
+    {\displaystyle Y.}
+  
+
+For example, if 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ is a Hausdorff space then 
+  
+    
+      
+        ker
+        ⁡
+        f
+      
+    
+    {\displaystyle \ker f}
+  
+ must be a closed set.
+Conversely, if 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ is a Hausdorff space and 
+  
+    
+      
+        ker
+        ⁡
+        f
+      
+    
+    {\displaystyle \ker f}
+  
+ is a closed set, then the coimage of 
+  
+    
+      
+        f
+        ,
+      
+    
+    {\displaystyle f,}
+  
+ if given the quotient space topology, must also be a Hausdorff space. 
+A space is compact if and only if the kernel of every family of closed subsets having the finite intersection property (FIP) is non-empty; said differently, a space is compact if and only if every family of closed subsets with F.I.P. is fixed.

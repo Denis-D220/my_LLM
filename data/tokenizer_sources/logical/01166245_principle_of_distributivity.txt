@@ -1,0 +1,204 @@
+The principle of distributivity states that the algebraic distributive law is valid, where both logical conjunction and logical disjunction are distributive over each other. 
+
+In Propositional Logic
+For any propositions A, B and C, the following equivalences hold:
+
+  
+    
+      
+        A
+        ∧
+        (
+        B
+        ∨
+        C
+        )
+        
+        ⟺
+        
+        (
+        A
+        ∧
+        B
+        )
+        ∨
+        (
+        A
+        ∧
+        C
+        )
+      
+    
+    {\displaystyle A\land (B\lor C)\iff (A\land B)\lor (A\land C)}
+  
+
+  
+    
+      
+        A
+        ∨
+        (
+        B
+        ∧
+        C
+        )
+        
+        ⟺
+        
+        (
+        A
+        ∨
+        B
+        )
+        ∧
+        (
+        A
+        ∨
+        C
+        )
+      
+    
+    {\displaystyle A\lor (B\land C)\iff (A\lor B)\land (A\lor C)}
+  
+
+Proof using truth tables
+The distributive laws can be verified using truth tables.
+
+Conjunction distributes over disjunction
+For the equivalence 
+  
+    
+      
+        A
+        ∧
+        (
+        B
+        ∨
+        C
+        )
+        
+        ⟺
+        
+        (
+        A
+        ∧
+        B
+        )
+        ∨
+        (
+        A
+        ∧
+        C
+        )
+      
+    
+    {\displaystyle A\land (B\lor C)\iff (A\land B)\lor (A\land C)}
+  
+, the truth table is:
+
+As seen from the table, the columns for 
+  
+    
+      
+        A
+        ∧
+        (
+        B
+        ∨
+        C
+        )
+      
+    
+    {\displaystyle A\land (B\lor C)}
+  
+ and 
+  
+    
+      
+        (
+        A
+        ∧
+        B
+        )
+        ∨
+        (
+        A
+        ∧
+        C
+        )
+      
+    
+    {\displaystyle (A\land B)\lor (A\land C)}
+  
+ are identical. Therefore, the equivalence is valid.
+
+Disjunction distributes over conjunction
+For the equivalence 
+  
+    
+      
+        A
+        ∨
+        (
+        B
+        ∧
+        C
+        )
+        
+        ⟺
+        
+        (
+        A
+        ∨
+        B
+        )
+        ∧
+        (
+        A
+        ∨
+        C
+        )
+      
+    
+    {\displaystyle A\lor (B\land C)\iff (A\lor B)\land (A\lor C)}
+  
+, the truth table is:
+
+As seen from the table, the columns for 
+  
+    
+      
+        A
+        ∨
+        (
+        B
+        ∧
+        C
+        )
+      
+    
+    {\displaystyle A\lor (B\land C)}
+  
+ and 
+  
+    
+      
+        (
+        A
+        ∨
+        B
+        )
+        ∧
+        (
+        A
+        ∨
+        C
+        )
+      
+    
+    {\displaystyle (A\lor B)\land (A\lor C)}
+  
+ are identical. Therefore, the equivalence is valid.
+
+Notes on Logic Systems
+The principle of distributivity is valid in classical logic, but in quantum logic it may be both valid and invalid. The article "Is Logic Empirical?" discusses the case that quantum logic is the correct, empirical logic, on the grounds that the principle of distributivity is inconsistent with a reasonable interpretation of quantum phenomena.

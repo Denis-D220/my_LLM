@@ -1,0 +1,558 @@
+The notion of institution was created by Joseph Goguen and Rod Burstall in the late 1970s, in order to deal with the  "population explosion among the logical systems used in computer science". The notion attempts to "formalize the informal" concept of logical system.
+The use of institutions makes it possible to develop concepts of specification languages (like structuring of specifications, parameterization, implementation, refinement, and development), proof calculi, and even tools in a way completely independent of the underlying logical system. There are also morphisms that allow to relate and translate logical systems. Important applications of this are re-use of logical structure (also called borrowing), and heterogeneous specification and combination of logics. 
+The spread of institutional model theory has generalized various notions and results of model theory, and institutions themselves have impacted the progress of universal logic.
+
+Definition
+The theory of institutions does not assume anything about the nature of the logical system. That is, models and sentences may be arbitrary objects; the only assumption is that there is a satisfaction relation between models and sentences, telling whether a sentence holds in a model or not. Satisfaction is inspired by Tarski's truth definition, but can in fact be any binary relation.
+A crucial feature of institutions is that models, sentences, and their satisfaction, are always considered to live in some vocabulary or context (called signature) that defines the (non-logic) symbols that may be used in sentences and that need to be interpreted in models. Moreover, signature morphisms allow to extend signatures, change notation, and so on. Nothing is assumed about signatures and signature morphisms except that signature morphisms can be composed; this amounts to having a 
+category of signatures and morphisms. Finally, it is assumed that signature morphisms lead to translations of sentences and models in a way that satisfaction is preserved. While sentences are translated along with signature morphisms (think of symbols being replaced along the morphism), models are translated (or better: reduced) against signature morphisms. For example, in the case of a signature extension, a model of the (larger) target signature may be reduced to a model of the (smaller) source signature by just forgetting some components of the model.
+Let 
+  
+    
+      
+        
+          
+            C
+            a
+            t
+          
+          
+            
+              o
+              p
+            
+          
+        
+      
+    
+    {\displaystyle \mathbf {Cat} ^{\mathrm {op} }}
+  
+ denote the opposite of the category of small categories. An institution formally consists of
+
+a category 
+  
+    
+      
+        
+          S
+          i
+          g
+          n
+        
+      
+    
+    {\displaystyle \mathbf {Sign} }
+  
+ of signatures,
+a functor 
+  
+    
+      
+        
+          
+            S
+            e
+            n
+          
+        
+        :
+        
+          S
+          i
+          g
+          n
+        
+        →
+      
+    
+    {\displaystyle {\mathit {Sen}}\colon \mathbf {Sign} \to }
+  
+ 
+  
+    
+      
+        
+          S
+          e
+          t
+        
+      
+    
+    {\displaystyle \mathbf {Set} }
+  
+ giving, for each signature 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+, the set of sentences 
+  
+    
+      
+        
+          
+            S
+            e
+            n
+          
+        
+        (
+        Σ
+        )
+      
+    
+    {\displaystyle {\mathit {Sen}}(\Sigma )}
+  
+, and for each signature morphism 
+  
+    
+      
+        σ
+        :
+        Σ
+        →
+        
+          Σ
+          ′
+        
+      
+    
+    {\displaystyle \sigma \colon \Sigma \to \Sigma '}
+  
+, the sentence translation map 
+  
+    
+      
+        
+          
+            S
+            e
+            n
+          
+        
+        (
+        σ
+        )
+        :
+        
+          
+            S
+            e
+            n
+          
+        
+        (
+        Σ
+        )
+        →
+        
+          
+            S
+            e
+            n
+          
+        
+        (
+        
+          Σ
+          ′
+        
+        )
+      
+    
+    {\displaystyle {\mathit {Sen}}(\sigma )\colon {\mathit {Sen}}(\Sigma )\to {\mathit {Sen}}(\Sigma ')}
+  
+, where often 
+  
+    
+      
+        
+          
+            S
+            e
+            n
+          
+        
+        (
+        σ
+        )
+        (
+        φ
+        )
+      
+    
+    {\displaystyle {\mathit {Sen}}(\sigma )(\varphi )}
+  
+ is written as 
+  
+    
+      
+        σ
+        (
+        φ
+        )
+      
+    
+    {\displaystyle \sigma (\varphi )}
+  
+,
+a functor 
+  
+    
+      
+        
+          M
+          o
+          d
+        
+        :
+        
+          S
+          i
+          g
+          n
+        
+        →
+        
+          
+            C
+            a
+            t
+          
+          
+            
+              o
+              p
+            
+          
+        
+      
+    
+    {\displaystyle \mathbf {Mod} \colon \mathbf {Sign} \to \mathbf {Cat} ^{\mathrm {op} }}
+  
+ giving, for each signature 
+  
+    
+      
+        Σ
+      
+    
+    {\displaystyle \Sigma }
+  
+, the category of models 
+  
+    
+      
+        
+          M
+          o
+          d
+        
+        (
+        Σ
+        )
+      
+    
+    {\displaystyle \mathbf {Mod} (\Sigma )}
+  
+, and for each signature morphism 
+  
+    
+      
+        σ
+        :
+        Σ
+        →
+        
+          Σ
+          ′
+        
+      
+    
+    {\displaystyle \sigma \colon \Sigma \to \Sigma '}
+  
+, the reduct functor 
+  
+    
+      
+        
+          M
+          o
+          d
+        
+        (
+        σ
+        )
+        :
+        
+          M
+          o
+          d
+        
+        (
+        
+          Σ
+          ′
+        
+        )
+        →
+        
+          M
+          o
+          d
+        
+        (
+        Σ
+        )
+      
+    
+    {\displaystyle \mathbf {Mod} (\sigma )\colon \mathbf {Mod} (\Sigma ')\to \mathbf {Mod} (\Sigma )}
+  
+, where often 
+  
+    
+      
+        
+          M
+          o
+          d
+        
+        (
+        σ
+        )
+        (
+        
+          M
+          ′
+        
+        )
+      
+    
+    {\displaystyle \mathbf {Mod} (\sigma )(M')}
+  
+ is written as 
+  
+    
+      
+        
+          M
+          ′
+        
+        
+          
+            |
+          
+          
+            σ
+          
+        
+      
+    
+    {\displaystyle M'|_{\sigma }}
+  
+,
+a satisfaction relation 
+  
+    
+      
+        
+          
+            ⊨
+            
+              Σ
+            
+          
+        
+        ⊆
+        
+          |
+        
+        
+          
+            M
+            o
+            d
+          
+          (
+          Σ
+          )
+          
+            |
+          
+          ×
+          
+            
+              S
+              e
+              n
+            
+          
+          (
+          Σ
+          )
+        
+      
+    
+    {\displaystyle {\models _{\Sigma }}\subseteq |{\mathbf {Mod} (\Sigma )|\times {\mathit {Sen}}(\Sigma )}}
+  
+ for each 
+  
+    
+      
+        Σ
+        ∈
+        
+          S
+          i
+          g
+          n
+        
+      
+    
+    {\displaystyle \Sigma \in \mathbf {Sign} }
+  
+,
+such that for each 
+  
+    
+      
+        σ
+        :
+        Σ
+        →
+        
+          Σ
+          ′
+        
+      
+    
+    {\displaystyle \sigma \colon \Sigma \to \Sigma '}
+  
+ in 
+  
+    
+      
+        
+          S
+          i
+          g
+          n
+        
+      
+    
+    {\displaystyle \mathbf {Sign} }
+  
+, the following satisfaction condition  holds:
+
+  
+    
+      
+        
+          M
+          ′
+        
+        
+          ⊨
+          
+            
+              Σ
+              ′
+            
+          
+        
+        σ
+        (
+        φ
+        )
+        
+        
+          if and only if
+        
+        
+        
+          M
+          ′
+        
+        
+          
+            |
+          
+          
+            σ
+          
+        
+        
+          ⊨
+          
+            Σ
+          
+        
+        φ
+      
+    
+    {\displaystyle M'\models _{\Sigma '}\sigma (\varphi )\quad {\text{if and only if}}\quad M'|_{\sigma }\models _{\Sigma }\varphi }
+  
+
+for each 
+  
+    
+      
+        
+          M
+          ′
+        
+        ∈
+        
+          M
+          o
+          d
+        
+        (
+        
+          Σ
+          ′
+        
+        )
+      
+    
+    {\displaystyle M'\in \mathbf {Mod} (\Sigma ')}
+  
+ and 
+  
+    
+      
+        φ
+        ∈
+        
+          
+            S
+            e
+            n
+          
+        
+        (
+        Σ
+        )
+      
+    
+    {\displaystyle \varphi \in {\mathit {Sen}}(\Sigma )}
+  
+.
+The satisfaction condition expresses that truth is invariant under change of notation 
+(and also under enlargement or quotienting of context).
+Strictly speaking, the model functor ends in the "category" of all large categories.
+
+Examples of institutions
+Common logic
+Common Algebraic Specification Language (CASL)
+First-order logic
+Higher-order logic
+Intuitionistic logic
+Modal logic
+Propositional logic
+Temporal logic
+Web Ontology Language (OWL)

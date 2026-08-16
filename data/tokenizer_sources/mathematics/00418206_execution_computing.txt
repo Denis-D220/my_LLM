@@ -1,0 +1,45 @@
+In computing, execution is the process by which a computer program is processed to perform the actions that it encodes. As the processor follows the program instructions, effects are produced in accordance with the semantics of those instructions. The term run is generally synonymous. The act of starting execution is often called launching or invoking in addition to executing and running.
+An execution processor comes in many forms. A machine code program may be executed via the programmable interface of a computer where execution involves repeatedly following a fetch–decode–execute cycle for each program instruction executed by the control unit. Source code may be executed by interpreter software. A program may be executed in a batch process without human interaction or a user may type commands in an interactive session.
+
+Relation to development
+Aspects of execution affect and drive software development.
+
+Platform independence
+Often, software relies on external services such as a runtime environment and a runtime library tailored to the host environment to provide services that can decouple an executable from direct manipulation of the computer and its peripherals, and thus provide a more platform-independent solution.
+
+Runtime error
+A runtime error is detected after or during the execution (running state) of a program, whereas a compile-time error is detected by the compiler before the program is executed. Type checking, register allocation, code generation, and code optimization are typically done at compile time, but may be done at runtime depending on the particular language and compiler. Many other runtime errors exist and are handled differently by different programming languages, such as division by zero errors, domain errors, array subscript out of bounds errors, arithmetic underflow errors, several types of underflow and overflow errors, and many other runtime errors generally considered as software bugs which may or may not be caught and handled by any particular computer language.  
+Exception handling supports handling runtime errors, providing a structured way to catch unexpected situations as well as predictable errors or unusual results without the amount of inline error checking required of languages without it. More recent advancements in runtime engines enable automated exception handling which provides "root-cause" debug information for every exception of interest and is implemented independent of the source code, by attaching a special software product to the runtime engine.
+
+Debugging
+Some debugging can only be performed (or is more efficient or accurate when performed) at runtime. Logic errors and array bounds checking are examples. For this reason, some programming bugs are not discovered until the program is tested in a production environment with real data, despite sophisticated compile-time checking and pre-release testing. In this case, the end-user may encounter a "runtime error" message.
+
+Execution environment
+An execution environment is the context in which a program runs. The following notable environment attributes are commonly-used. They are not strictly distinct as an environment may be described with multiple of these attributes.
+
+Host-native
+Host-native is a common scenario for execution, especially historically. It involves controlling a computer via the instructions of its central processing unit (CPU). The CPU interprets the program at the machine instruction level.
+
+Context switch
+Context switching, a feature of a multitasking operating system (OS), supports concurrent execution of multiple host-native executables. To swap out an executable (identified by a process-context identifier) from the execution environment, the OS saves its execution context data such as memory page addresses and register values. To swap it back in, the OS restores the data.
+In a Linux-based OS, a set of data stored in registers is usually saved into a process descriptor in memory to implement a context switch. PCIDs are also used.
+
+Loading
+When a program is started, a loader performs memory setup and links the program with any dynamically linked libraries it needs, and then execution begins at the program's entry point. In some cases, a language or implementation will have these tasks done by the language runtime instead, though this is unusual in mainstream languages on common consumer operating systems.
+
+Runtime system
+A runtime system is a software layer that provides services to an executable. It is a portion of an execution model. Relatedly, a runtime environment (RTE) is everything that a program can interact with, including a runtime system.
+Most programming languages include a runtime system. It may address issues including memory management, variable access, parameter passing mechanisms, operating system access, and more. The compiler makes assumptions depending on the specific runtime system to generate code. Typically, the runtime system has some responsibility for setting up and managing the stack and heap, and may include features such as garbage collection, threading or other dynamic features of the language.
+
+Instruction cycle
+The instruction cycle is the cycle that the CPU follows from boot-up until the computer has shut down in order to process instructions. It is composed of three main stages: the fetch stage, the decode stage, and the execute stage. 
+
+In simpler CPUs, the instruction cycle is executed sequentially, each instruction being processed before the next one is started. In most modern CPUs, the instruction cycles are instead executed concurrently, and often in parallel, through an instruction pipeline: the next instruction starts being processed before the previous instruction has finished, which is possible because the cycle is broken up into separate steps.
+
+Virtual
+A virtual machine (VM) provides the functionality of a physical computer that is either partially or fully implemented as a layer of software – instead of accessing the host system directly. Via virtualization, a VM provides a computer system that is logically independent from the host computer and other VMs on the host via a relatively thin software layer that allows for relatively high performance at the cost of being constrained by the host's technology. Via  emulation, a VM provides a distinct computer that may differ significantly from the host computer system technology, but generally at the cost of relatively slow performance due to a relatively thick software layer.
+A VM technology can differ by scope. A system VM (a.k.a. full virtualization VM) provides the functionality needed to execute an independent operating system. A hypervisor uses native execution to share and manage hardware, allowing for multiple environments which are isolated from one another, yet exist on the same physical machine. Modern hypervisors use hardware-assisted virtualization, virtualization-specific hardware, primarily from the host CPUs. In contrast, a process VM (such as the .NET, Java and Python runtimes) executes a computer program in a platform-independent environment.
+Some emulators, such as QEMU and video game console emulators, are designed to also emulate (or "virtually imitate") different system architectures thus allowing execution of software applications and operating systems written for another CPU or architecture. OS-level virtualization allows the resources of a computer to be partitioned via the kernel. The terms are not universally interchangeable.
+
+Interpreted
+An interpreter executes code that is in a form that can be executed directly. Any preparation steps required for the environment have already been performed. An executable is directly executable by a CPU (including a virtual CPU). Source code can be executable in an environment that supports it. For example, JavaScript and Python are executed by interpreter software that does not require a compilation operation.

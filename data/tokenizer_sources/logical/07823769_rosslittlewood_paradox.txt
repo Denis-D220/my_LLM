@@ -1,0 +1,37 @@
+The Ross–Littlewood paradox (also known as the balls and vase problem or the ping pong ball problem) is a hypothetical problem in abstract mathematics and logic designed to illustrate the paradoxical, or at least non-intuitive, nature of infinity. More specifically, like the Thomson's lamp paradox, the Ross–Littlewood paradox tries to illustrate the conceptual difficulties with the notion of a supertask, in which an infinite number of tasks are completed sequentially. The problem was originally described by mathematician John E. Littlewood in his 1953 book Littlewood's Miscellany, and was later expanded upon by Sheldon Ross in his 1988 book A First Course in Probability.
+The problem starts with an empty vase and an infinite supply of balls. An infinite number of steps are then performed, such that at each step 10 balls are added to the vase and 1 ball removed from it. The question is then posed: How many balls are in the vase when the task is finished?
+To complete an infinite number of steps, it is assumed that the vase is empty at one minute before noon, and that the following steps are performed:
+
+The first step is performed at 30 seconds before noon.
+The second step is performed at 15 seconds before noon.
+Each subsequent step is performed in half the time of the previous step, i.e., step n is performed at 2−n minutes before noon.
+This guarantees that a countably infinite number of steps is performed by noon. Since each subsequent step takes half as much time as the previous step, an infinite number of steps is performed by the time one minute has passed. The question is then: How many balls are in the vase at noon?
+
+Solutions
+Answers to the puzzle fall into several categories.
+
+Vase contains infinitely many balls
+The most intuitive answer seems to be that the vase contains an infinite number of balls by noon, since at every step along the way more balls are being added than removed. By definition, at each step, there will be a greater number of balls than at the previous step. There is no step, in fact, where the number of balls is decreased from the previous step. If the number of balls increases each time, then after infinite steps there will be an infinite number of balls.
+
+Vase is empty
+Suppose that the balls of the infinite supply of balls were numbered, and that at step 1 balls 1 through 10 are inserted into the vase, and ball number 1 is then removed. At step 2, balls 11 through 20 are inserted, and ball 2 is then removed. This means that by noon, every ball labeled n that is inserted into the vase is eventually removed in a subsequent step (namely, at step n). Hence, the vase is empty at noon. This is the solution favored by mathematicians Allis and Koetsier. It is the juxtaposition of this argument that the vase is empty at noon, together with the more intuitive answer that the vase should have infinitely many balls, that has warranted this problem to be named the Ross–Littlewood paradox.
+Ross's probabilistic version of the problem extended the removal method to the case where whenever a ball is to be withdrawn that ball is uniformly randomly selected from among those present in the vase at that time. He showed in this case that the probability that any particular ball remained in the vase at noon was 0 and therefore, by using Boole's inequality and taking a countable sum over the balls, that the probability the vase would be empty at noon was 1.
+
+Depends on the conditions
+The number of balls that one ends up with depends on the order in which the balls are removed from the vase. As stated previously, the balls can be added and removed in such a way that no balls will be left in the vase at noon. However, if ball number 10 were removed from the vase at step 1, ball number 20 at step 2, and so forth, then it is clear that there will be an infinite number of balls left in the vase at noon. In fact, depending on which ball is removed at the various steps, any chosen number of balls can be placed in the vase by noon, as the procedure below demonstrates. This is the solution favored by philosopher logician Tom Tymoczko and mathematician logician Jim Henle. This solution corresponds mathematically to taking the limit inferior of a sequence of sets.
+The following procedure outlines exactly how to get a chosen n number of balls remaining in the vase.
+Let n denote the desired final number of balls in the vase (n ≥ 0).
+Let i denote the number of the operation currently taking place (i ≥ 1).
+Procedure:
+
+for i = 1 to infinity:
+put balls numbered from (10*i - 9) to (10*i) into the vase
+if i ≤ n then remove ball number 2*i
+if i > n then remove ball number n + i
+Clearly, the first n odd balls are not removed, while all balls greater than or equal to 2n are. Therefore, exactly n balls remain in the vase.
+
+Problem is underspecified
+Although the state of the balls and the vase is well-defined at every moment in time prior to noon, no conclusion can be made about any moment in time at or after noon.  Thus, for all we know, at noon, the vase just magically disappears, or something else happens to it. But we don't know, as the problem statement says nothing about this. Hence, like the previous solution, this solution states that the problem is underspecified, but in a different way than the previous solution. This solution is favored by philosopher of mathematics Paul Benacerraf.
+
+Problem is ill-formed
+The problem is ill-posed. To be precise, according to the problem statement, an infinite number of operations will be performed before noon, and then asks about the state of affairs at noon. But, as in Zeno's paradoxes, if infinitely many operations have to take place (sequentially) before noon, then noon is a point in time that can never be reached. On the other hand, to ask how many balls will be left at noon is to assume that noon will be reached. Hence there is a contradiction implicit in the very statement of the problem, and this contradiction is the assumption that one can somehow 'complete' an infinite number of steps. This is the solution favored by mathematician and philosopher Jean Paul Van Bendegem.

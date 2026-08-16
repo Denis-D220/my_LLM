@@ -1,0 +1,97 @@
+# Small Syntaxes
+
+### An Essay on the Formats Between Humans and Machines
+
+---
+
+## I. Prologue
+
+Between the programs people write and the systems people operate sits a layer of small notations: a timestamp, a path, a version string, a log line, an IP address. None is a language in the full sense. Each is a convention for encoding one kind of fact as text, and each carries the same design question — how much structure to make explicit, and how much to leave for the reader to infer. Ambiguity is cheap to write and expensive to parse, and every entry below is a record of that trade.
+
+---
+
+## II. JSON
+
+JSON offers six types — object, array, string, number, boolean, null — and nothing else. There are no comments, no trailing commas, no date type, and no integer/float distinction, since numbers are IEEE-754 doubles in most parsers and lose precision above 2^53 (which is why IDs should travel as strings). Its virtue is that every language parses it identically. Keys should be quoted, encoding should be UTF-8, and object key order is not guaranteed by the specification even though most implementations preserve it. **JSON Lines** — one object per line, newline-delimited — is the streaming variant, and it is strictly better than a top-level array for logs and large exports because a consumer can process it incrementally and a truncated file loses only its last record.
+
+---
+
+## III. YAML
+
+YAML is a JSON superset optimized for human authoring: comments, multi-line scalars, anchors for reuse, and indentation instead of braces. It is also the most treacherous format in common use. Unquoted scalars are type-inferred, so `NO` becomes boolean false (the Norway problem), `1.10` becomes a float that loses its trailing zero, `yes`/`on`/`off` become booleans, and `12:30` may become sexagesimal. Tabs are forbidden entirely. The defenses are mechanical: quote anything ambiguous, validate against a schema, lint in CI, and prefer block scalars (`|` to keep newlines, `>` to fold them) over clever inline strings.
+
+---
+
+## IV. XML
+
+XML is verbose and, for that verbosity, buys things JSON does not have: namespaces, attributes distinct from element content, comments, a mature schema language (XSD), and a real query language (XPath and XSLT). It remains dominant where documents rather than records are the unit — SOAP, SVG, office formats, RSS, configuration in the Java and .NET ecosystems. Five characters must be escaped in content (`<`, `>`, `&`, and quotes in attributes), and `CDATA` sections exist to avoid escaping blocks wholesale. Two hazards deserve naming: **XXE**, where an external entity declaration makes a parser read local files or make network requests, and the billion-laughs entity expansion attack. Disable external entity resolution by default; nearly every parser now does, and the ones that do not are how the vulnerability persists.
+
+---
+
+## V. CSV
+
+CSV looks trivial and is not. RFC 4180 exists but is widely ignored, so real-world CSV varies in delimiter (comma, semicolon in locales where comma is the decimal separator, tab), quoting rules, line endings, header presence, and encoding. Fields containing the delimiter, a quote, or a newline must be quoted, with embedded quotes doubled. **Never parse CSV with `split(',')`** — a quoted field containing a comma will silently corrupt every column after it, and the corruption looks like plausible data. Use a real parser. The deeper problem is that CSV carries no types, so leading zeros vanish, long numeric IDs become floats in scientific notation, and anything resembling a date gets reinterpreted by whatever opens it. Where types matter, Parquet or JSON Lines is the better answer.
+
+---
+
+## VI. URLs and Paths
+
+A URL decomposes as `scheme://user@host:port/path?query#fragment`. The fragment never reaches the server; the query is conventionally `key=value` joined by `&`, with repeated keys handled inconsistently across frameworks. **Percent-encoding** rules differ by component: a space becomes `%20` in a path but may be `+` in a query string, and `/` is a separator in a path and data in a query value. Encode per component with a library, never with string replacement.
+
+Filesystem paths split along the same fault line. Unix uses `/` and is case-sensitive; Windows uses `\`, is case-insensitive, has per-drive current directories, reserves names like `CON` and `NUL`, and has a legacy 260-character limit escaped by the `\\?\` prefix. Always join paths with a library (`pathlib`, `path.join`, `Join-Path`) rather than concatenation, always quote paths in shell scripts, and prefer absolute paths in anything scheduled or daemonized, because the working directory of a cron job or service is rarely what the author assumed.
+
+---
+
+## VII. Timestamps
+
+Use **ISO 8601 / RFC 3339** — `2026-08-13T17:42:09Z` — and use UTC, and store the offset when local time matters semantically. Every other format is a regional ambiguity waiting to happen: `03/04/2026` is two different days depending on the reader's continent. Sortability is the underrated benefit; ISO strings sort lexicographically into chronological order, which makes them work correctly as filenames, log keys, and database indexes without special handling.
+
+Unix epoch seconds are compact and unambiguous but need care about units, since milliseconds are equally common and a factor of a thousand is easy to miss. Time zones are political rather than geographic and change by legislation, so store the IANA zone name (`America/Caracas`) rather than a fixed offset for future events. Local time is not monotonic — DST transitions repeat one hour and skip another — so never measure durations with a wall clock; use a monotonic clock. And leap seconds mean a minute occasionally has 61 seconds.
+
+---
+
+## VIII. Logs
+
+A log line has one job: to be useful at 3 a.m. to someone who was not there. That means a timestamp in UTC ISO 8601, a level, a source, a correlation identifier, and a message stating what happened with enough context to act on. **Structured logging** — emitting JSON rather than prose — is the single highest-return change available, because it makes fields queryable without regular expressions and survives message wording changes.
+
+Levels carry meaning worth respecting: `ERROR` means something needs human attention, `WARN` means something recovered but should not recur, `INFO` records significant state changes, and `DEBUG` is for development. When everything is an error, nothing is. Never log secrets, tokens, full request bodies, or personal data, since logs are copied, shipped, and retained far more widely than the systems that produced them. Log the *reason* alongside the outcome; "connection failed" is a fact, "connection to db-02:5432 failed after 3 retries: timeout" is a diagnosis.
+
+---
+
+## IX. Command Lines
+
+The conventions are near-universal: single-dash short flags that may be bundled (`-la`), double-dash long flags (`--verbose`), `--` to terminate option parsing so following arguments are treated as operands even if they begin with a dash, and `-` conventionally meaning stdin or stdout. In documentation, `[]` marks optional, `<>` marks a placeholder, and `...` marks repetition.
+
+Two rules prevent most incidents. **Quote every variable expansion** in shell — an unquoted path with a space becomes two arguments. And **never pass secrets as arguments**, because the full command line is visible to any user via the process table and lands in shell history; use environment variables, a file, or stdin. For anything destructive, prefer tools that offer a dry-run mode and use it first.
+
+---
+
+## X. IPs, Versions, and Hardware Identifiers
+
+An IPv4 address is four dotted octets with a prefix length; IPv6 is eight hex groups with `::` collapsing one run of zeros, once only. Both should be stored in a purpose-built type, not a string, because string comparison sorts `10.0.0.2` before `10.0.0.10` and because `::1`, `0:0:0:0:0:0:0:1`, and `0::1` are the same address in three spellings. Always record the prefix length alongside the address; an address without its mask is half a fact.
+
+**Semantic versioning** — `MAJOR.MINOR.PATCH`, with optional `-prerelease` and `+build` — encodes a compatibility promise: patch fixes bugs, minor adds compatibly, major breaks. Precedence compares numerically field by field, and a prerelease sorts *before* its release, so `2.0.0-rc.1 < 2.0.0`. Never compare version strings lexically; `1.10.0` is greater than `1.9.0` and sorts before it.
+
+Hardware identifiers each have their own shape: MAC addresses are 48 bits in six hex octets with the first three identifying the vendor, and their separator and case vary by platform, so normalize on ingest. UUIDs are 128 bits in `8-4-4-4-12` hex; version 4 is random and version 7 is time-ordered, which matters because random UUIDs make poor database primary keys. Serial numbers are vendor-defined and should be treated as opaque strings — never parsed, never assumed unique across vendors.
+
+---
+
+## XI. Environment Variables and Units
+
+Environment variables are the standard configuration channel for processes and containers. Convention is `UPPER_SNAKE_CASE`, values are always strings, and every consumer must parse and validate its own. `PATH` is separated by `:` on Unix and `;` on Windows. Precedence should run: defaults, then config file, then environment, then command-line flags — most specific wins. Validate at startup and fail loudly on a missing required variable rather than discovering it at first use. Secrets in environment variables are better than secrets in arguments and worse than a secret manager, since they are inherited by child processes and often dumped in crash reports.
+
+Units belong in the name, not the documentation: `timeout_ms`, `size_bytes`, `interval_seconds`. The Mars Climate Orbiter is the canonical demonstration of what an unstated unit costs. Beware the binary/decimal split — `KB` is 1000 and `KiB` is 1024, and disk vendors and operating systems disagree by design — and beware bits versus bytes, where `Mb/s` and `MB/s` differ by eight and network gear reports the former while file managers report the latter.
+
+---
+
+## XII. Markdown and Mixed Prose
+
+Markdown succeeded because it degrades gracefully: the plain text is readable even unrendered. Its core is stable — `#` headings, `*` emphasis, `-` lists, `[text](url)` links, backticks for code — while tables, footnotes, and task lists vary by flavor, so target CommonMark plus GitHub-flavored extensions and test what actually renders where it will be read.
+
+The rule that matters most is **fencing code with a language tag**. Triple backticks with `python` or `bash` gives syntax highlighting and, more importantly, tells the reader unambiguously where prose ends and executable text begins. Inline backticks do the same at word scale, and every filename, flag, variable, and value in a sentence should wear them.
+
+Mixed prose and code is the dominant form of technical writing — READMEs, runbooks, tickets, incident notes — and it fails in predictable ways. Commands are pasted without their working directory or required environment. Placeholders are indistinguishable from literals, so someone runs `--host <your-host>` verbatim. Output is shown without the command that produced it. Prompt characters are included in copyable blocks, so the paste fails. The fixes are small: state prerequisites before the first command, mark placeholders consistently, separate command from output, and prefer copy-pasteable blocks over prose describing what to type. The test is whether a competent stranger can follow it without asking a question — and the only way to know is to hand it to one.
+
+---
+
+*End of document.*

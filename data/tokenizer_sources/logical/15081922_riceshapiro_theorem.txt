@@ -1,0 +1,3513 @@
+In computability theory, the Rice–Shapiro theorem is a generalization of Rice's theorem, named after Henry Gordon Rice and Norman Shapiro. It states that when a semi-decidable property of partial computable functions is true on a certain partial function, one can extract a finite subfunction such that the property is still true.
+The informal idea of the theorem is that the "only general way" to obtain information on the behavior of a program is to run the program, and because a computation is finite, one can only try the program on a finite number of inputs.
+A closely related theorem is the Kreisel–Lacombe–Shoenfield–Tseitin theorem (or KLST theorem), which was obtained independently by Georg Kreisel, Daniel Lacombe and Joseph R. Shoenfield , and by Grigori Tseitin.
+
+Formal statement
+Rice-Shapiro theorem. Let 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ be a set of partial computable functions such that the index set of 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ (i.e., the set of indices 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ such that 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{e}\in P}
+  
+, for some fixed admissible numbering 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+) is semi-decidable. Then for any partial computable function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, it holds that 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ contains 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ if and only if 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ contains a finite subfunction of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ (i.e., a partial function defined in finitely many points, which takes the same values as 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ on those points).
+Kreisel–Lacombe–Shoenfield–Tseitin theorem. Let 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ be a set of total computable functions such that the index set of 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is decidable with a promise that the input is the index of a total computable function (i.e., there is a partial computable function 
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+  
+ which, given an index 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ such that 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \phi _{e}}
+  
+ is total, returns 1 if 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{e}\in P}
+  
+ and 0 otherwise; 
+  
+    
+      
+        D
+        (
+        e
+        )
+      
+    
+    {\displaystyle D(e)}
+  
+ need not be defined if 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \phi _{e}}
+  
+ is not total). We say that two total functions 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ "agree until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+" if 
+  
+    
+      
+        f
+        (
+        k
+        )
+        =
+        g
+        (
+        k
+        )
+      
+    
+    {\displaystyle f(k)=g(k)}
+  
+ holds for all 
+  
+    
+      
+        k
+        ≤
+        n
+      
+    
+    {\displaystyle k\leq n}
+  
+. Then for any total computable function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, there exists 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ such that for all total computable function 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ which agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, we have 
+  
+    
+      
+        f
+        ∈
+        P
+        
+        ⟺
+        
+        g
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P\iff g\in P}
+  
+.
+
+Examples
+By the Rice-Shapiro theorem, it is neither semi-decidable nor co-semi-decidable whether a given program:
+
+Terminates on all inputs (universal halting problem);
+Terminates on finitely many inputs;
+Is equivalent to a fixed other program.
+By the Kreisel–Lacombe–Shoenfield–Tseitin theorem, it is undecidable whether a given program which is assumed to always terminate:
+
+Always returns an even number;
+Is equivalent to a fixed other program that always terminates;
+Always returns the same value.
+
+Discussion
+The two theorems are closely related, and also relate to Rice's theorem. Specifically:
+
+Rice's theorem applies to decidable sets of partial computable functions, concluding that they must be trivial.
+The Rice-Shapiro theorem applies to semi-decidable sets of partial computable functions, concluding that they can only recognize elements based on a finite number of values.
+The Kreisel–Lacombe–Shoenfield–Tseitin theorem applies to decidable sets of total computable functions, with a conclusion similar to the Rice-Shapiro theorem.
+It is natural to wonder what can be said about semi-decidable sets of total computable functions. Perhaps surprisingly, these need not verify the conclusion of the Rice-Shapiro and Kreisel–Lacombe–Shoenfield–Tseitin theorems. The following counterexample is due to Richard M. Friedberg.
+Let 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ be the set of total computable functions 
+  
+    
+      
+        f
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle f:\mathbb {N} \to \mathbb {N} }
+  
+ such that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is not the constant zero function and, defining 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ to be the maximum index such that 
+  
+    
+      
+        f
+        (
+        n
+        )
+      
+    
+    {\displaystyle f(n)}
+  
+ is zero, there exists a program of code 
+  
+    
+      
+        e
+        ≤
+        n
+      
+    
+    {\displaystyle e\leq n}
+  
+ such that 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        (
+        i
+        )
+      
+    
+    {\displaystyle \phi _{e}(i)}
+  
+ is defined and equal to 
+  
+    
+      
+        f
+        (
+        i
+        )
+      
+    
+    {\displaystyle f(i)}
+  
+ for each 
+  
+    
+      
+        i
+        ≤
+        n
+        +
+        1
+      
+    
+    {\displaystyle i\leq n+1}
+  
+. Let 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ be the set 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ with the constant zero function added.
+On the one hand, 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ contains the constant zero function by definition, yet there is no 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ such that if a total computable 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ agrees with the constant zero function until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ then 
+  
+    
+      
+        g
+        ∈
+        P
+      
+    
+    {\displaystyle g\in P}
+  
+. Indeed, given 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, we can define a total function 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ by setting 
+  
+    
+      
+        g
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle g(n+1)}
+  
+ to some value larger than every 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle \phi _{e}(n+1)}
+  
+ for 
+  
+    
+      
+        e
+        ≤
+        n
+        +
+        1
+      
+    
+    {\displaystyle e\leq n+1}
+  
+ such that 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle \phi _{e}(n+1)}
+  
+ is defined, and 
+  
+    
+      
+        g
+        (
+        
+          n
+          ′
+        
+        )
+        =
+        0
+      
+    
+    {\displaystyle g(n')=0}
+  
+ for 
+  
+    
+      
+        
+          n
+          ′
+        
+        ≠
+        n
+        +
+        1
+      
+    
+    {\displaystyle n'\neq n+1}
+  
+. The function 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is zero except on the value 
+  
+    
+      
+        n
+        +
+        1
+      
+    
+    {\displaystyle n+1}
+  
+, thus computable, it agrees with the zero function up to 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, but it does not belong to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ by construction.
+On the other hand, given a program 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ and a promise that 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \phi _{e}}
+  
+ is total, it is possible to semi-decide whether 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{e}\in P}
+  
+ by dovetailing, running one task to semi-decide 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        ∈
+        Q
+      
+    
+    {\displaystyle \phi _{e}\in Q}
+  
+, which can clearly be done, and another task to semi-decide whether 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        (
+        k
+        )
+        =
+        0
+      
+    
+    {\displaystyle \phi _{e}(k)=0}
+  
+ for all 
+  
+    
+      
+        k
+        ≤
+        e
+      
+    
+    {\displaystyle k\leq e}
+  
+. This is correct because the zero function is detected by the second task, and conversely, if the second task returns true, then either 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \phi _{e}}
+  
+ is zero, or 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \phi _{e}}
+  
+ is only zero up to an index 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, which must satisfy 
+  
+    
+      
+        e
+        ≤
+        n
+      
+    
+    {\displaystyle e\leq n}
+  
+, which by definition of 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ implies that 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        ∈
+        Q
+      
+    
+    {\displaystyle \phi _{e}\in Q}
+  
+.
+
+Proof of the Rice-Shapiro theorem
+Let 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ be a set of partial computable functions with semi-decidable index set. We prove the two implications separately.
+
+Upward closedness
+We first prove that if 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a finite subfunction of 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ and 
+  
+    
+      
+        f
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P}
+  
+ then 
+  
+    
+      
+        g
+        ∈
+        P
+      
+    
+    {\displaystyle g\in P}
+  
+. The hypothesis that 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is finite is in fact of no use.
+The proof uses a diagonal argument typical of theorems in computability. We build a program 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ as follows. This program takes an input 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. Using a standard dovetailing technique, 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ runs two tasks in parallel.
+
+The first task executes a semi-algorithm that semi-decides 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ itself (
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ can get access to its own source code by Kleene's recursion theorem). If this eventually returns true, then this first task continues by executing a semi-algorithm that semi-computes 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ on 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ (the input to 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+), and if that terminates, then the task makes 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ as a whole return 
+  
+    
+      
+        g
+        (
+        x
+        )
+      
+    
+    {\displaystyle g(x)}
+  
+.
+The second task runs a semi-algorithm that semi-computes 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ on 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. If this returns true, then the task makes 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ as a whole return 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+.
+If 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        ∉
+        P
+      
+    
+    {\displaystyle \phi _{p}\notin P}
+  
+, the first task can never finish, therefore the result of 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is entirely determined by the second task, thus 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ is simply 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, a contradiction. This shows that 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{p}\in P}
+  
+.
+Thus, both tasks are relevant; however, because 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a subfunction of 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ and the second task returns 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        g
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)=g(x)}
+  
+ when 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+ is defined, while the first task returns 
+  
+    
+      
+        g
+        (
+        x
+        )
+      
+    
+    {\displaystyle g(x)}
+  
+ when defined, the program in fact computes 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+, i.e., 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        =
+        g
+      
+    
+    {\displaystyle \phi _{p}=g}
+  
+, and therefore 
+  
+    
+      
+        g
+        ∈
+        P
+      
+    
+    {\displaystyle g\in P}
+  
+.
+
+Extracting a finite subfunction
+Conversely, we prove that if 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ contains a partial computable function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, then it contains a finite subfunction of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+. Let us fix 
+  
+    
+      
+        f
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P}
+  
+. We build a program 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ which takes input 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and runs the following steps:
+
+Run 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ computation steps of a semi-algorithm that semi-decides 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+, with 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ itself as input. If this semi-algorithm terminates and returns true, then loop indefinitely.
+Otherwise, semi-compute 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ on 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+, and if this terminates, return the result 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+.
+Suppose that 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        ∉
+        P
+      
+    
+    {\displaystyle \phi _{p}\notin P}
+  
+. This implies that the semi-algorithm for semi-deciding 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ used in the first step never returns true. Then, 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ computes 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, and this contradicts the assumption 
+  
+    
+      
+        f
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P}
+  
+. Thus, we must have 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{p}\in P}
+  
+, and the algorithm for semi-deciding 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ returns true on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ after a certain number of steps 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+. The partial function 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ can only be defined on inputs 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ such that 
+  
+    
+      
+        x
+        ≤
+        n
+      
+    
+    {\displaystyle x\leq n}
+  
+, and it returns 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+ on such inputs, so it is a finite subfunction of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ that belongs to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+.
+
+Proof of the Kreisel–Lacombe–Shoenfield–Tseitin theorem
+
+Preliminaries
+A total function 
+  
+    
+      
+        h
+        :
+        
+          N
+        
+        →
+        
+          N
+        
+      
+    
+    {\displaystyle h:\mathbb {N} \to \mathbb {N} }
+  
+ is said to be ultimately zero if it always takes the value zero except for a finite number of points, i.e., there exists 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+ such that 
+  
+    
+      
+        h
+        (
+        n
+        )
+        =
+        0
+      
+    
+    {\displaystyle h(n)=0}
+  
+ for all 
+  
+    
+      
+        n
+        ≥
+        N
+      
+    
+    {\displaystyle n\geq N}
+  
+. Note that such a function is always computable (it can be computed by simply checking if the input is in a certain predefined list, and otherwise returning zero).
+We fix 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ a computable enumeration of all total functions which are ultimately zero, that is, 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is such that:
+
+For all 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+, the function 
+  
+    
+      
+        
+          ϕ
+          
+            U
+            (
+            k
+            )
+          
+        
+      
+    
+    {\displaystyle \phi _{U(k)}}
+  
+ is ultimately zero;
+For all total function 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ which is ultimately zero, there exists 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ such that 
+  
+    
+      
+        
+          ϕ
+          
+            U
+            (
+            k
+            )
+          
+        
+        =
+        h
+      
+    
+    {\displaystyle \phi _{U(k)}=h}
+  
+;
+The function 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ is itself total computable.
+We can build 
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  
+ by standard techniques (e.g., for increasing 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+, enumerate ultimately zero functions which are bounded by 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+ and zero on inputs larger than 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+).
+
+Approximating by ultimately zero functions
+Let 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ be as in the statement of the theorem: a set of total computable functions such that there is an algorithm which, given an index 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+  
+ and a promise that 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+      
+    
+    {\displaystyle \phi _{e}}
+  
+ is total, decides whether 
+  
+    
+      
+        
+          ϕ
+          
+            e
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{e}\in P}
+  
+. 
+We first prove a lemma: For all total computable function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, and for all integer 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+, there exists an ultimately zero function 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ such that 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+, and 
+  
+    
+      
+        f
+        ∈
+        P
+        
+        ⟺
+        
+        h
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P\iff h\in P}
+  
+.
+To prove this lemma, fix a total computable function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and an integer 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+, and let 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ be the boolean 
+  
+    
+      
+        f
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P}
+  
+. Build a program 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ which takes input 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and takes these steps:
+
+If 
+  
+    
+      
+        x
+        ≤
+        N
+      
+    
+    {\displaystyle x\leq N}
+  
+ then return 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+;
+Otherwise, run 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ computation steps of the algorithm that decides 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+, and if this returns 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, then return zero;
+Otherwise, return 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+.
+Clearly, 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ always terminates, i.e., 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ is total. Therefore, the promise to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ run on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is fulfilled.
+Suppose for contradiction that one of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ belongs to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ and the other does not, i.e., 
+  
+    
+      
+        (
+        
+          ϕ
+          
+            p
+          
+        
+        ∈
+        P
+        )
+        ≠
+        B
+      
+    
+    {\displaystyle (\phi _{p}\in P)\neq B}
+  
+. Then we see that 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ computes 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, since 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ does not return 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ no matter the amount of steps. Thus, we have 
+  
+    
+      
+        f
+        =
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle f=\phi _{p}}
+  
+, contradicting the fact that one of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ and 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ belongs to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ and the other does not. This argument proves that 
+  
+    
+      
+        f
+        ∈
+        P
+        
+        ⟺
+        
+        
+          ϕ
+          
+            p
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P\iff \phi _{p}\in P}
+  
+. Then, the second step makes 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ return zero for sufficiently large 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+, thus 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ is ultimately zero; and by construction (due to the first step), 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+  
+. Therefore, we can take 
+  
+    
+      
+        h
+        =
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle h=\phi _{p}}
+  
+ and the lemma is proved.
+
+Main proof
+With the previous lemma, we can now prove the Kreisel–Lacombe–Shoenfield–Tseitin theorem. Again, fix 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ as in the theorem statement, let 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ be a total computable function and let 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ be the boolean "
+  
+    
+      
+        f
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P}
+  
+". Build the program 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ which takes input 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ and runs these steps:
+
+Run 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ computation steps of the algorithm that decides 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+.
+If this returns 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ in a certain number of steps 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ (which is at most 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+), then search in parallel for 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ such that 
+  
+    
+      
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle U(k)}
+  
+ agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and 
+  
+    
+      
+        (
+        U
+        (
+        k
+        )
+        ∈
+        P
+        )
+        ≠
+        B
+      
+    
+    {\displaystyle (U(k)\in P)\neq B}
+  
+. As soon as such a 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ is found, return 
+  
+    
+      
+        U
+        (
+        k
+        )
+        (
+        x
+        )
+      
+    
+    {\displaystyle U(k)(x)}
+  
+.
+Otherwise (if 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ did not return 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ in 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ steps), return 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+.
+We first prove that 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ returns 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+. Suppose by contradiction that this is not the case (
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ returns 
+  
+    
+      
+        ¬
+        B
+      
+    
+    {\displaystyle \lnot B}
+  
+, or 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ does not terminate). Then 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ actually computes 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+. In particular, 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \phi _{p}}
+  
+ is total, so the promise to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ when run on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is fulfilled, and 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ returns the boolean 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{p}\in P}
+  
+, which is 
+  
+    
+      
+        f
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P}
+  
+, i.e., 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, contradicting the assumption.
+Let 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ be the number of steps that 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ takes to return 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+. We claim that 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ satisfies the conclusion of the theorem: for all total computable function 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ which agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, it holds that 
+  
+    
+      
+        f
+        ∈
+        P
+        
+        ⟺
+        
+        g
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P\iff g\in P}
+  
+. Assume for contradiction that there exists 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ total computable which agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and such that 
+  
+    
+      
+        (
+        g
+        ∈
+        P
+        )
+        ≠
+        B
+      
+    
+    {\displaystyle (g\in P)\neq B}
+  
+.
+Applying the lemma again, there exists 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ such that 
+  
+    
+      
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle U(k)}
+  
+ agrees with 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and 
+  
+    
+      
+        g
+        ∈
+        P
+        
+        ⟺
+        
+        U
+        (
+        k
+        )
+        ∈
+        P
+      
+    
+    {\displaystyle g\in P\iff U(k)\in P}
+  
+. Since both 
+  
+    
+      
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle U(k)}
+  
+ and 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ agree with 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, 
+  
+    
+      
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle U(k)}
+  
+ also agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, and since 
+  
+    
+      
+        (
+        g
+        ∈
+        P
+        )
+        ≠
+        B
+      
+    
+    {\displaystyle (g\in P)\neq B}
+  
+ and 
+  
+    
+      
+        g
+        ∈
+        P
+        
+        ⟺
+        
+        U
+        (
+        k
+        )
+        ∈
+        P
+      
+    
+    {\displaystyle g\in P\iff U(k)\in P}
+  
+, we have 
+  
+    
+      
+        (
+        U
+        (
+        k
+        )
+        ∈
+        P
+        )
+        ≠
+        B
+      
+    
+    {\displaystyle (U(k)\in P)\neq B}
+  
+.  Therefore, 
+  
+    
+      
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle U(k)}
+  
+ satisfies the conditions of the parallel search step in the program 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+, namely: 
+  
+    
+      
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle U(k)}
+  
+ agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and 
+  
+    
+      
+        (
+        U
+        (
+        k
+        )
+        ∈
+        P
+        )
+        ≠
+        B
+      
+    
+    {\displaystyle (U(k)\in P)\neq B}
+  
+. This proves that the search in the second step always terminates. We fix 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ to be the value that it finds.
+We observe that 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        =
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle \phi _{p}=U(k)}
+  
+. Indeed, either the second step of 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ returns 
+  
+    
+      
+        U
+        (
+        k
+        )
+        (
+        x
+        )
+      
+    
+    {\displaystyle U(k)(x)}
+  
+, or the third step returns 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+, but the latter case only happens for 
+  
+    
+      
+        x
+        ≤
+        n
+      
+    
+    {\displaystyle x\leq n}
+  
+, and we know that 
+  
+    
+      
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle U(k)}
+  
+ agrees with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+.
+In particular, 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        =
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle \phi _{p}=U(k)}
+  
+ is total. This makes the promise to 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ run on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ fulfilled, therefore 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ returns 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{p}\in P}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+.
+We have found a contradiction: one the one hand, the boolean 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        ∈
+        P
+      
+    
+    {\displaystyle \phi _{p}\in P}
+  
+ is the return value of 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ on 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+, which is 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+, and on the other hand, we have 
+  
+    
+      
+        
+          ϕ
+          
+            p
+          
+        
+        =
+        U
+        (
+        k
+        )
+      
+    
+    {\displaystyle \phi _{p}=U(k)}
+  
+, and we know that 
+  
+    
+      
+        (
+        U
+        (
+        k
+        )
+        ∈
+        P
+        )
+        ≠
+        B
+      
+    
+    {\displaystyle (U(k)\in P)\neq B}
+  
+.
+
+Topological view
+The set of total computable functions can be viewed as a subspace of the Baire space 
+  
+    
+      
+        
+          
+            T
+          
+        
+        ⊆
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+      
+    
+    {\displaystyle {\mathcal {T}}\subseteq \mathbb {N} ^{\mathbb {N} }}
+  
+. The Kreisel–Lacombe–Shoenfield–Tseitin theorem states that if a function 
+  
+    
+      
+        F
+        :
+        
+          
+            T
+          
+        
+        →
+        2
+      
+    
+    {\displaystyle F:{\mathcal {T}}\to 2}
+  
+ (where the set of booleans 
+  
+    
+      
+        2
+      
+    
+    {\displaystyle 2}
+  
+ has the discrete topology) is computable (from a program computing 
+  
+    
+      
+        f
+        ∈
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle f\in {\mathcal {T}}}
+  
+, we can compute 
+  
+    
+      
+        F
+        (
+        f
+        )
+      
+    
+    {\displaystyle F(f)}
+  
+), then 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ must be continuous.
+The above proof of the Kreisel–Lacombe–Shoenfield–Tseitin gives a strengthening of the theorem: from programs computing 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ and 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, one can compute 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ such that 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ is constant on functions agreeing with 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ until 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+. This strengthened version has a natural interpretation from the point of view of realizability: inside the internal logic of the effective topos, it holds that every function 
+  
+    
+      
+        
+          
+            N
+          
+          
+            
+              N
+            
+          
+        
+        →
+        2
+      
+    
+    {\displaystyle \mathbb {N} ^{\mathbb {N} }\to 2}
+  
+ is continuous.
+For the Rice–Shapiro theorem, one views the set of partial computable functions as a subspace of the space 
+  
+    
+      
+        
+          
+            P
+          
+        
+      
+    
+    {\displaystyle {\mathcal {P}}}
+  
+ of all partial functions from 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ to 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+ topologized in the following way: for each finite partial function 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, the set of partial functions extending 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is declared to be a basic open set. The theorem states that if a subset 
+  
+    
+      
+        P
+        ⊆
+        
+          
+            P
+          
+        
+      
+    
+    {\displaystyle P\subseteq {\mathcal {P}}}
+  
+ is semi-decidable (from a program computing 
+  
+    
+      
+        f
+        ∈
+        
+          
+            P
+          
+        
+      
+    
+    {\displaystyle f\in {\mathcal {P}}}
+  
+, we can semi-decide whether 
+  
+    
+      
+        f
+        ∈
+        P
+      
+    
+    {\displaystyle f\in P}
+  
+), then it must be open.

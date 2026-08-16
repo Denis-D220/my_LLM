@@ -1,0 +1,446 @@
+Albert Strickler (25 July 1887 – 1 February 1963) was a Swiss mechanical engineer recognized for contributions to our understanding of hydraulic roughness in open channel and pipe flow. Strickler proposed that hydraulic roughness could be characterized as a function of measurable surface roughness and described the concept of relative roughness, the ratio of hydraulic radius to surface roughness. He applied these concepts to the development of a dimensionally homogeneous form of the Manning formula. 
+
+Life
+Albert Strickler was the only child of Albert Strickler Sr. (1853–1936) and Maria Auguste Flentjen (1863–1945) of Wädenswil, Canton of Zürich, Switzerland. He was married twice, the second time as a widower. Neither marriage produced children.
+Strickler graduated from ETH Zurich as a mechanical engineer in 1911. He earned a Ph.D. in 1917 while serving as the principal assistant to Professor Franz Prasil (1857–1929). Throughout his career, he was involved in the development of hydropower with interests ranging from hydraulic machinery to the regulation of river flows for inland navigation. Prior to World War II, he was the vice president of the Association of Exporting Electricity and a member of the board of directors on the Gotthard Electricity Mains AG, Altdorf, Uri. He subsequently worked as an engineering consultant until illness forced his withdrawal from practice in 1950.
+
+Strickler's Equation
+In 1923, Strickler published a report examining 34 formulas for the computation of flow in pipes and open channels and related experimental data. 
+The report validated the Gauckler formula and by inference, the Manning formula. Strickler proposed that the Ganguillet-Kutter n-value, used to characterize hydraulic roughness in the Manning formula, could be defined as a function of surface roughness, 
+  
+    
+      
+        
+          
+            k
+          
+          
+            S
+          
+        
+      
+    
+    {\displaystyle {k}_{S}}
+  
+.
+
+  
+    
+      
+        n
+        ∝
+        
+          
+            
+              k
+              
+                6
+              
+            
+          
+          
+            S
+          
+        
+      
+    
+    {\displaystyle n\propto {\sqrt[{6}]{k}}_{S}}
+  
+
+Strickler's equation introduces a new empirical coefficient which must be determined experimentally to define n-value. However, unlike n-value, which has units of T/L1/3, 
+  
+    
+      
+        
+          
+            k
+          
+          
+            S
+          
+        
+      
+    
+    {\displaystyle {k}_{S}}
+  
+ has units of length, and at least in theory, is a measurable quantity. A measurable quantity is potentially useful for channel design and stream restoration engineering where the design value of hydraulic roughness may be unknown.
+Strickler proposed that for a fixed boundary, surface roughness could be defined by the median grain size of a river's bed material. He also noted that the onset of sediment transport, the mobile boundary condition, increased the observed hydraulic roughness.
+
+For fixed boundary, gravel bed rivers, Strickler's equation can be quantified as:
+
+  
+    
+      
+        n
+        =
+        
+          
+            1
+            21.1
+          
+        
+        
+          
+            D
+          
+          
+            50
+          
+          
+            1
+            
+              /
+            
+            6
+          
+        
+      
+    
+    {\displaystyle n={\frac {1}{21.1}}{D}_{50}^{1/6}}
+  
+
+where 
+  
+    
+      
+        
+          
+            D
+          
+          
+            50
+          
+        
+      
+    
+    {\displaystyle {D}_{50}}
+  
+ is the median grain size in meters.
+Later researchers produced variations on Strickler's equation proposing different measures of surface roughness and corresponding variations in the empirical coefficient. For example, Strickler's equation has been used to estimate n-values for riprap lined channels from stone gradation.
+
+The equation also describes the scaling of hydraulic roughness in Froude scaled, physical hydraulic models.
+
+In 1933, Johann Nikuradse published a study of hydraulic roughness in pipes that validated Strickler's observations of the influence of surface roughness in turbulent flows.
+
+Dimensionally Homogeneous Gauckler–Manning–Strickler Formula
+Given the Gauckler–Manning–Strickler formula:
+
+  
+    
+      
+        V
+        =
+        
+          (
+          
+            
+              1
+              n
+            
+          
+          )
+        
+        
+          
+            R
+          
+          
+            H
+          
+          
+            2
+            
+              /
+            
+            3
+          
+        
+        
+          
+            S
+          
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        =
+        
+          
+            K
+          
+          
+            S
+          
+        
+        
+          
+            R
+          
+          
+            H
+          
+          
+            2
+            
+              /
+            
+            3
+          
+        
+        
+          
+            S
+          
+          
+            1
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle V=\left({\frac {1}{n}}\right){R}_{H}^{2/3}{S}^{1/2}={K}_{S}{R}_{H}^{2/3}{S}^{1/2}}
+  
+
+where:
+
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ is velocity in meters per second, 
+
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ is n-value in seconds per meter1/3, 
+
+  
+    
+      
+        
+          
+            K
+          
+          
+            S
+          
+        
+      
+    
+    {\displaystyle {K}_{S}}
+  
+ is the Strickler coefficient, 
+  
+    
+      
+        1
+        
+          /
+        
+        n
+      
+    
+    {\displaystyle 1/n}
+  
+, 
+
+  
+    
+      
+        
+          
+            R
+          
+          
+            H
+          
+        
+      
+    
+    {\displaystyle {R}_{H}}
+  
+ is hydraulic radius in meters, and 
+
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is the dimensionless water surface slope.
+Substituting Strickler's equation for n-value and rearranging terms produces a dimensionally homogeneous form of the Manning's formula:
+
+  
+    
+      
+        V
+        ∝
+        
+          
+            
+              (
+              
+                
+                  
+                    
+                      R
+                    
+                    
+                      H
+                    
+                  
+                  
+                    
+                      k
+                    
+                    
+                      S
+                    
+                  
+                
+              
+              )
+            
+          
+          
+            1
+            
+              /
+            
+            6
+          
+        
+        
+          
+            g
+            
+              
+                R
+              
+              
+                H
+              
+            
+            S
+          
+        
+      
+    
+    {\displaystyle V\propto {\left({\frac {{R}_{H}}{{k}_{S}}}\right)}^{1/6}{\sqrt {g{R}_{H}S}}}
+  
+
+Where 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+ is acceleration due to gravity in meters per second2.
+The first term on the right-hand side of the equation is the dimensionless ratio of hydraulic radius to roughness height,  commonly referred to as relative roughness. The remaining term, known as the boundary shear velocity, approximates the flow of water downhill under the influence of gravity and has units of velocity, i.e., L/T. 
+
+From experimental data, Stickler proposed that the dimensionally homogeneous form of the Manning formula could be quantified as:
+
+  
+    
+      
+        V
+        =
+        α
+        
+          
+            
+              
+                
+                  R
+                
+                
+                  H
+                
+              
+              
+                
+                  k
+                
+                
+                  S
+                
+              
+            
+            
+              6
+            
+          
+        
+        
+          
+            2
+            g
+            
+              
+                R
+              
+              
+                H
+              
+            
+            S
+          
+        
+      
+    
+    {\displaystyle V=\alpha {\sqrt[{6}]{\frac {{R}_{H}}{{k}_{S}}}}{\sqrt {2g{R}_{H}S}}}
+  
+
+where 
+  
+    
+      
+        α
+        =
+        21.1
+        
+          /
+        
+        
+          
+            2
+            g
+          
+        
+      
+    
+    {\displaystyle \alpha =21.1/{\sqrt {2g}}}
+  
+
+In civil engineering practice, the Manning formula is more widely used than Stricker's dimensionally homogeneous form of the equation. However, Strickler's observations on the influence of surface roughness and the concept of relative roughness are common features of a variety of formulas used to estimate hydraulic roughness. 
+
+Publications
+Source:
+
+Strickler, A. (1923). “Contributions to the question of velocity formula and the roughness numbers for rivers, channels and pipes.” Mitteilung 16, C. Mutzner, ed., Amt für Wasserwirtschaft, Bern, Switzerland (in German).
+Strickler, A. (1924). “Drag resistance of propeller boats, and their performance in inland navigation.” Mitteilung 17, Amt für Wasserwirtschaft, Bern, Switzerland (in German).
+Strickler, A. (1925). “The regulation of Rhine River between Strassburg and Basle.” Schweizerische Techniker-Zeitung, 22(33), 389–394 (in German).
+Strickler, A. (1926). “Studies on measurement of discharge.” Mitteilung 18, C. Mutzner, ed., Amt für Wasserwirtschaft, Bern, Switzerland (in German).
+Strickler, A. (1926). “Relation between the Swiss hydropower development and inland navigation.” Werft, Reederei, Hafen, 7(14), 345–346 (in German).
+Strickler, A. (1930). “The question of the coefficient in Chézy’s formula.” Gesamtbericht der 2. Weltkraftkonferenz, Berlin, 2, 137–152 (in German).

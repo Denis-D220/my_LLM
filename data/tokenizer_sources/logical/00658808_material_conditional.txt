@@ -1,0 +1,1050 @@
+The material conditional (also known as material implication) is a binary operation commonly used in logic. When the conditional symbol 
+  
+    
+      
+        →
+      
+    
+    {\displaystyle \to }
+  
+ is interpreted as material implication, a formula 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q}
+  
+ is true unless 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ is true and 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  
+ is false.
+Material implication is used in all the basic systems of classical logic as well as some nonclassical logics. It is assumed as a model of correct conditional reasoning within mathematics and serves as the basis for commands in many programming languages. However, many logics replace material implication with other operators such as the strict conditional and the variably strict conditional. Due to the paradoxes of material implication and related problems, material implication is not generally considered a viable analysis of conditional sentences in natural language.
+
+Notation
+In logic and related fields, the material conditional is customarily notated with an infix operator 
+  
+    
+      
+        →
+      
+    
+    {\displaystyle \to }
+  
+ (U+2192 → RIGHTWARDS ARROW). The material conditional is also notated using the infixes 
+  
+    
+      
+        ⊃
+      
+    
+    {\displaystyle \supset }
+  
+ and 
+  
+    
+      
+        ⇒
+      
+    
+    {\displaystyle \Rightarrow }
+  
+ (U+2283 ⊃ SUPERSET OF and U+21D2 ⇒ RIGHTWARDS DOUBLE ARROW respectively). In the prefixed Polish notation, conditionals are notated as 
+  
+    
+      
+        C
+        p
+        q
+      
+    
+    {\displaystyle Cpq}
+  
+. In a conditional formula 
+  
+    
+      
+        p
+        →
+        q
+      
+    
+    {\displaystyle p\to q}
+  
+, the subformula 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ is referred to as the antecedent and 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ is termed the consequent of the conditional. Conditional statements may be nested such that the antecedent or the consequent may themselves be conditional statements, as in the formula 
+  
+    
+      
+        (
+        p
+        →
+        q
+        )
+        →
+        (
+        r
+        →
+        s
+        )
+      
+    
+    {\displaystyle (p\to q)\to (r\to s)}
+  
+.
+
+History
+In Arithmetices Principia: Nova Methodo Exposita (1889), Peano expressed the proposition "If 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+, then 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+" as 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ Ɔ 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ with the symbol Ɔ, which is the opposite of C. He also expressed the proposition 
+  
+    
+      
+        A
+        ⊃
+        B
+      
+    
+    {\displaystyle A\supset B}
+  
+ as 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ Ɔ 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+. Hilbert expressed the proposition "If A, then B" as 
+  
+    
+      
+        A
+        →
+        B
+      
+    
+    {\displaystyle A\to B}
+  
+ in 1918. Russell followed Peano in his Principia Mathematica (1910–1913), in which he expressed the proposition "If A, then B" as 
+  
+    
+      
+        A
+        ⊃
+        B
+      
+    
+    {\displaystyle A\supset B}
+  
+. Following Russell, Gentzen expressed the proposition "If A, then B" as 
+  
+    
+      
+        A
+        ⊃
+        B
+      
+    
+    {\displaystyle A\supset B}
+  
+. Heyting expressed the proposition "If A, then B" as 
+  
+    
+      
+        A
+        ⊃
+        B
+      
+    
+    {\displaystyle A\supset B}
+  
+ at first but later came to express it as 
+  
+    
+      
+        A
+        →
+        B
+      
+    
+    {\displaystyle A\to B}
+  
+ with a right-pointing arrow. Bourbaki expressed the proposition "If A, then B" as 
+  
+    
+      
+        A
+        ⇒
+        B
+      
+    
+    {\displaystyle A\Rightarrow B}
+  
+ in 1954.
+
+Semantics
+
+Truth table
+From a classical semantic perspective, material implication is the binary truth functional operator which returns "true" unless its first argument is true and its second argument is false. This semantics can be shown graphically in the following truth table:
+
+One can also consider the equivalence 
+  
+    
+      
+        A
+        →
+        B
+        ≡
+        ¬
+        (
+        A
+        ∧
+        ¬
+        B
+        )
+        ≡
+        ¬
+        A
+        ∨
+        B
+      
+    
+    {\displaystyle A\to B\equiv \neg (A\land \neg B)\equiv \neg A\lor B}
+  
+. 
+The conditionals 
+  
+    
+      
+        (
+        A
+        →
+        B
+        )
+      
+    
+    {\displaystyle (A\to B)}
+  
+ where the antecedent 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  
+ is false, are called "vacuous truths".
+Examples are ...
+
+... with 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ false: "If Marie Curie is a sister of Galileo Galilei, then Galileo Galilei is a brother of Marie Curie."
+... with 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  
+ true: "If Marie Curie is a sister of Galileo Galilei, then Marie Curie has a sibling."
+
+Analytic tableaux
+
+Formulas over the set of connectives 
+  
+    
+      
+        {
+        →
+        ,
+        ⊥
+        }
+      
+    
+    {\displaystyle \{\to ,\bot \}}
+  
+ are called f-implicational. In classical logic the other connectives, such as 
+  
+    
+      
+        ¬
+      
+    
+    {\displaystyle \neg }
+  
+ (negation), 
+  
+    
+      
+        ∧
+      
+    
+    {\displaystyle \land }
+  
+ (conjunction), 
+  
+    
+      
+        ∨
+      
+    
+    {\displaystyle \lor }
+  
+ (disjunction) and 
+  
+    
+      
+        ↔
+      
+    
+    {\displaystyle \leftrightarrow }
+  
+ (equivalence), can be defined in terms of 
+  
+    
+      
+        →
+      
+    
+    {\displaystyle \to }
+  
+ and 
+  
+    
+      
+        ⊥
+      
+    
+    {\displaystyle \bot }
+  
+ (falsity):
+
+  
+    
+      
+        
+          
+            
+              
+                ¬
+                A
+              
+              
+                
+                
+                
+                  
+                    =
+                    def
+                  
+                
+                
+                A
+                →
+                ⊥
+              
+            
+            
+              
+                A
+                ∧
+                B
+              
+              
+                
+                
+                
+                  
+                    =
+                    def
+                  
+                
+                
+                (
+                A
+                →
+                (
+                B
+                →
+                ⊥
+                )
+                )
+                →
+                ⊥
+              
+            
+            
+              
+                A
+                ∨
+                B
+              
+              
+                
+                
+                
+                  
+                    =
+                    def
+                  
+                
+                
+                (
+                A
+                →
+                ⊥
+                )
+                →
+                B
+              
+            
+            
+              
+                A
+                ↔
+                B
+              
+              
+                
+                
+                
+                  
+                    =
+                    def
+                  
+                
+                
+                {
+                (
+                A
+                →
+                B
+                )
+                →
+                [
+                (
+                B
+                →
+                A
+                )
+                →
+                ⊥
+                ]
+                }
+                →
+                ⊥
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\neg A&\quad {\overset {\text{def}}{=}}\quad A\to \bot \\A\land B&\quad {\overset {\text{def}}{=}}\quad (A\to (B\to \bot ))\to \bot \\A\lor B&\quad {\overset {\text{def}}{=}}\quad (A\to \bot )\to B\\A\leftrightarrow B&\quad {\overset {\text{def}}{=}}\quad \{(A\to B)\to [(B\to A)\to \bot ]\}\to \bot \\\end{aligned}}}
+  
+
+The validity of f-implicational formulas can be semantically established by the method of analytic tableaux. The logical rules are
+
+Syntactical properties
+
+The semantic definition by truth tables does not permit the examination of structurally identical propositional forms in various logical systems, where different properties may be demonstrated. The language considered here is restricted to f-implicational formulas.
+Consider the following (candidate) natural deduction rules.
+
+Minimal logic: By limiting the natural deduction rules to Implication Introduction (
+  
+    
+      
+        →
+      
+    
+    {\displaystyle \to }
+  
+I) and Implication Elimination (
+  
+    
+      
+        →
+      
+    
+    {\displaystyle \to }
+  
+E), one obtains (the implicational fragment of) minimal logic (as defined by Johansson).
+
+Intuitionistic logic: By adding Falsum Elimination (
+  
+    
+      
+        ⊥
+      
+    
+    {\displaystyle \bot }
+  
+E) as a rule, one obtains (the implicational fragment of) intuitionistic logic.
+The statement 
+  
+    
+      
+        P
+        →
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle P\to \neg \neg P}
+  
+ is valid (already in minimal logic), unlike the reverse implication which would entail the law of excluded middle.
+Classical logic: If Double Negation Elimination (
+  
+    
+      
+        ¬
+        ¬
+      
+    
+    {\displaystyle \neg \neg }
+  
+E) is also permitted, the system defines (full!) classical logic.
+
+A selection of theorems (classical logic)
+In classical logic material implication validates the following:
+
+Import-export: 
+  
+    
+      
+        P
+        →
+        (
+        Q
+        →
+        R
+        )
+        ≡
+        (
+        P
+        ∧
+        Q
+        )
+        →
+        R
+      
+    
+    {\displaystyle P\to (Q\to R)\equiv (P\land Q)\to R}
+  
+
+Negated conditionals: 
+  
+    
+      
+        ¬
+        (
+        P
+        →
+        Q
+        )
+        ≡
+        P
+        ∧
+        ¬
+        Q
+      
+    
+    {\displaystyle \neg (P\to Q)\equiv P\land \neg Q}
+  
+
+Or-and-if: 
+  
+    
+      
+        P
+        →
+        Q
+        ≡
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle P\to Q\equiv \neg P\lor Q}
+  
+
+Commutativity of antecedents: 
+  
+    
+      
+        
+          
+            (
+          
+        
+        P
+        →
+        (
+        Q
+        →
+        R
+        )
+        
+          
+            )
+          
+        
+        ≡
+        
+          
+            (
+          
+        
+        Q
+        →
+        (
+        P
+        →
+        R
+        )
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle {\big (}P\to (Q\to R){\big )}\equiv {\big (}Q\to (P\to R){\big )}}
+  
+
+Left distributivity: 
+  
+    
+      
+        
+          
+            (
+          
+        
+        R
+        →
+        (
+        P
+        →
+        Q
+        )
+        
+          
+            )
+          
+        
+        ≡
+        
+          
+            (
+          
+        
+        (
+        R
+        →
+        P
+        )
+        →
+        (
+        R
+        →
+        Q
+        )
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle {\big (}R\to (P\to Q){\big )}\equiv {\big (}(R\to P)\to (R\to Q){\big )}}
+  
+
+Similarly, on classical interpretations of the other connectives, material implication validates the following entailments:
+
+Antecedent strengthening: 
+  
+    
+      
+        P
+        →
+        Q
+        ⊨
+        (
+        P
+        ∧
+        R
+        )
+        →
+        Q
+      
+    
+    {\displaystyle P\to Q\models (P\land R)\to Q}
+  
+
+Transitivity: 
+  
+    
+      
+        (
+        P
+        →
+        Q
+        )
+        ∧
+        (
+        Q
+        →
+        R
+        )
+        ⊨
+        P
+        →
+        R
+      
+    
+    {\displaystyle (P\to Q)\land (Q\to R)\models P\to R}
+  
+
+Simplification of disjunctive antecedents: 
+  
+    
+      
+        (
+        P
+        ∨
+        Q
+        )
+        →
+        R
+        ⊨
+        (
+        P
+        →
+        R
+        )
+        ∧
+        (
+        Q
+        →
+        R
+        )
+      
+    
+    {\displaystyle (P\lor Q)\to R\models (P\to R)\land (Q\to R)}
+  
+
+Tautologies involving material implication include:
+
+Reflexivity: 
+  
+    
+      
+        ⊨
+        P
+        →
+        P
+      
+    
+    {\displaystyle \models P\to P}
+  
+
+Totality: 
+  
+    
+      
+        ⊨
+        (
+        P
+        →
+        Q
+        )
+        ∨
+        (
+        Q
+        →
+        P
+        )
+      
+    
+    {\displaystyle \models (P\to Q)\lor (Q\to P)}
+  
+
+Conditional excluded middle: 
+  
+    
+      
+        ⊨
+        (
+        P
+        →
+        Q
+        )
+        ∨
+        (
+        P
+        →
+        ¬
+        Q
+        )
+      
+    
+    {\displaystyle \models (P\to Q)\lor (P\to \neg Q)}
+  
+
+The relationship between the material conditional and logical consequence
+The material conditional is a sentential connective within a formal language. It should not be confused with the relation of logical consequence (also called logical implication or entailment), which is standardly treated as a relation between sentences expressed in a metalanguage. 
+The relationship between the material conditional and the logical consequence relation is given by the deduction theorem. 
+
+  
+    
+      
+        Γ
+        ∪
+        {
+        A
+        }
+        ⊢
+        B
+        
+      
+    
+    {\displaystyle \Gamma \cup \{A\}\vdash B\;}
+  
+ if and only if 
+  
+    
+      
+        
+        Γ
+        ⊢
+        A
+        →
+        B
+      
+    
+    {\displaystyle \;\Gamma \vdash A\to B}
+  
+
+This can be read as stating that the set of sentences 
+  
+    
+      
+        Γ
+      
+    
+    {\displaystyle \Gamma }
+  
+ together with A logically implies B if and only if 
+  
+    
+      
+        Γ
+      
+    
+    {\displaystyle \Gamma }
+  
+ logically implies the material conditional 
+  
+    
+      
+        A
+        →
+        B
+      
+    
+    {\displaystyle A\to B}
+  
+. 
+In the special case where 
+  
+    
+      
+        Γ
+      
+    
+    {\displaystyle \Gamma }
+  
+ is empty, this reduces to: 
+
+  
+    
+      
+        A
+        ⊢
+        B
+        
+      
+    
+    {\displaystyle A\vdash B\;}
+  
+ if and only if 
+  
+    
+      
+        
+        ⊢
+        A
+        →
+        B
+      
+    
+    {\displaystyle \;\vdash A\to B}
+  
+
+This states A logically implies B if and only if the material conditional 
+  
+    
+      
+        A
+        →
+        B
+      
+    
+    {\displaystyle A\to B}
+  
+ is a theorem of the logic. 
+Many textbooks reserve the term logical consequence (or logical implication) for the semantic consequence relation with the symbol 
+  
+    
+      
+        ⊨
+      
+    
+    {\displaystyle \models }
+  
+. In which case the relation becomes 
+
+  
+    
+      
+        A
+        ⊨
+        B
+        
+      
+    
+    {\displaystyle A\models B\;}
+  
+ if and only if 
+  
+    
+      
+        
+        ⊨
+        A
+        →
+        B
+      
+    
+    {\displaystyle \;\models A\to B}
+  
+
+A logically implies B if and only if the material conditional 
+  
+    
+      
+        A
+        →
+        B
+      
+    
+    {\displaystyle A\to B}
+  
+ is a tautology.
+
+Discrepancies with natural language
+Material implication does not closely match the usage of conditional sentences in natural language. For example, even though material conditionals with false antecedents are vacuously true, the natural language statement "If 8 is odd, then 3 is prime" is typically judged false. Similarly, any material conditional with a true consequent is itself true, but speakers typically reject sentences such as "If I have a penny in my pocket, then Paris is in France". These classic problems have been called the paradoxes of material implication. In addition to the paradoxes, a variety of other arguments have been given against a material implication analysis. For instance, counterfactual conditionals would all be vacuously true on such an account, when in fact some are false.
+In the mid-20th century, a number of researchers including H. P. Grice and Frank Jackson proposed that pragmatic principles could explain the discrepancies between natural language conditionals and the material conditional. On their accounts, conditionals denote material implication but end up conveying additional information when they interact with conversational norms such as Grice's maxims. Recent work in formal semantics and philosophy of language has generally eschewed material implication as an analysis for natural-language conditionals. In particular, such work has often rejected the assumption that natural-language conditionals are truth functional in the sense that the truth value of "If P, then Q" is determined solely by the truth values of P and Q. Thus semantic analyses of conditionals typically propose alternative interpretations built on foundations such as modal logic, relevance logic, probability theory, and causal models.
+Similar discrepancies have been observed by psychologists studying conditional reasoning, for instance, by the notorious Wason selection task study, where less than 10% of participants reasoned according to the material conditional. Some researchers have interpreted this result as a failure of the participants to conform to normative laws of reasoning, while others interpret the participants as reasoning normatively according to nonclassical laws.

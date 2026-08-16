@@ -1,0 +1,175 @@
+The Hammer retroazimuthal projection is a modified azimuthal proposed by Ernst Hermann Heinrich Hammer in 1910. As a retroazimuthal projection, azimuths (directions) are correct from any point to the designated center point. Additionally, all distances from the center of the map are proportional to what they are on the globe. In whole-world presentation, the back and front hemispheres overlap, making the projection a non-injective function. The back hemisphere can be rotated 180° to avoid overlap, but in this case, any azimuths measured from the back hemisphere must be corrected.
+Given a radius R for the projecting globe, the projection is defined as:
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                R
+                K
+                cos
+                ⁡
+                
+                  φ
+                  
+                    1
+                  
+                
+                sin
+                ⁡
+                (
+                λ
+                −
+                
+                  λ
+                  
+                    0
+                  
+                
+                )
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                −
+                R
+                K
+                
+                  
+                    (
+                  
+                
+                sin
+                ⁡
+                
+                  φ
+                  
+                    1
+                  
+                
+                cos
+                ⁡
+                φ
+                −
+                cos
+                ⁡
+                
+                  φ
+                  
+                    1
+                  
+                
+                sin
+                ⁡
+                φ
+                cos
+                ⁡
+                (
+                λ
+                −
+                
+                  λ
+                  
+                    0
+                  
+                
+                )
+                
+                  
+                    )
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}x&=RK\cos \varphi _{1}\sin(\lambda -\lambda _{0})\\y&=-RK{\big (}\sin \varphi _{1}\cos \varphi -\cos \varphi _{1}\sin \varphi \cos(\lambda -\lambda _{0}){\big )}\end{aligned}}}
+  
+
+where
+
+  
+    
+      
+        K
+        =
+        
+          
+            z
+            
+              sin
+              ⁡
+              z
+            
+          
+        
+      
+    
+    {\displaystyle K={\frac {z}{\sin z}}}
+  
+
+and
+
+  
+    
+      
+        cos
+        ⁡
+        z
+        =
+        sin
+        ⁡
+        
+          φ
+          
+            1
+          
+        
+        sin
+        ⁡
+        φ
+        +
+        cos
+        ⁡
+        
+          φ
+          
+            1
+          
+        
+        cos
+        ⁡
+        φ
+        cos
+        ⁡
+        (
+        λ
+        −
+        
+          λ
+          
+            0
+          
+        
+        )
+      
+    
+    {\displaystyle \cos z=\sin \varphi _{1}\sin \varphi +\cos \varphi _{1}\cos \varphi \cos(\lambda -\lambda _{0})}
+  
+
+The latitude and longitude of the point to be plotted are φ and λ respectively, and the center point to which all azimuths are to be correct is given as φ1 and λ0.

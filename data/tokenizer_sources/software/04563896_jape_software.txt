@@ -1,0 +1,10 @@
+Jape is a configurable, graphical proof assistant, originally developed by Richard Bornat at Queen Mary, University of London and Bernard Sufrin the University of Oxford. The program is available for the Mac, Unix, and Windows operating systems. It is written in the Java programming language and released under the GNU GPL.
+It is claimed that Jape is the most popular program for "computer-assisted logic teaching" that involves exercises in developing proofs in mathematical logic.
+
+History
+Jape was created in 1992 by Richard Bornat and Bernard Sufrin with the intent to get a better understanding of the formal reasoning. Bernard Sufrin came up with the name "Jape".
+In 2019, they released the code on GitHub.
+
+Overview
+Jape supports human-directed discovery of proofs in a logic which is defined by the user as a system of inference rules. It maps the user's gestures (e.g. typing, mouse-clicks or mouse-drags) to the assistant's proof actions. Jape does not have any special knowledge of any object logic or theory, and it will make moves in a proof if and only if they are justifiable by rules of the object logic that is currently loaded. Jape allows to make proof steps and undo them, and it shows the effect of the added proof steps which helps to understand strategies for finding proofs. When the user adds and removes the proof steps, the proof tree is constructed which Jape can show either in a tree shape or in box forms. Jape allows to display proofs at different levels of abstraction. It is also possible to present a forward proof in a natural deduction style by using the specialized modes of display for proofs.
+Jape works with variants of the sequent calculus and natural deduction. It also supports formal proofs with quantifiers.

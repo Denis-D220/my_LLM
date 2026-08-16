@@ -1,0 +1,874 @@
+An armature controlled DC motor is a direct current (DC) motor that uses a permanent magnet driven by the armature coils only.
+
+Basic operation of DC motor
+A motor is an actuator, converting electrical energy in to rotational mechanical energy. A motor requiring a DC power supply for operation is termed a DC motor. DC motors are widely used in control applications like robotics, tape drives, machines and many more. 
+Separately excited DC motors are suitable for control applications because of separate field and armature circuit. Two ways to control DC separately excited motors are: Armature Control and Field Control.
+A DC motor consists of two parts: a rotor and a stator. The stator consists of field windings while the rotor (also called the armature) consists of an armature winding. When both the armature and the field windings are excited by a DC supply, current flows through the windings and a magnetic flux proportional to the current is produced. When the flux from the field interacts with the flux from the armature, it results in motion of the rotor. Armature control is the most common control technique for DC motors. In order to implement this control, the stator flux must be kept constant. To achieve this, either the stator voltage is kept constant or the stator coils are replaced by a permanent magnet. In the latter case, the motor is said to be a permanent magnet DC motor and is driven by the armature coils only.
+
+Equations for motor operation
+Equations governing the operation of motor are made linear by simplifying the effects of the magnetic field from the stator to only its flux, 
+  
+    
+      
+        Φ
+      
+    
+    {\displaystyle \Phi }
+  
+, and a term that describes the effect of the stator field on the rotor, 
+  
+    
+      
+        
+          K
+          
+            ϕ
+          
+        
+      
+    
+    {\displaystyle K_{\phi }}
+  
+. 
+  
+    
+      
+        
+          K
+          
+            ϕ
+          
+        
+      
+    
+    {\displaystyle K_{\phi }}
+  
+ is unlikely to be a constant and may be a function of 
+  
+    
+      
+        Φ
+      
+    
+    {\displaystyle \Phi }
+  
+:
+
+  
+    
+      
+        T
+        =
+        
+          K
+          
+            ϕ
+          
+        
+        Φ
+        
+          I
+        
+      
+    
+    {\displaystyle T=K_{\phi }\Phi \mathrm {I} }
+  
+ (1)
+where 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  
+ is motor torque and 
+  
+    
+      
+        
+          I
+        
+      
+    
+    {\displaystyle \mathrm {I} }
+  
+ is armature current. When field flux is constant, equation (1) becomes
+
+  
+    
+      
+        T
+        =
+        
+          K
+          ′
+        
+        
+          I
+        
+      
+    
+    {\displaystyle T=K'\mathrm {I} }
+  
+ (2)
+where 
+  
+    
+      
+        
+          K
+          ′
+        
+        =
+        
+          K
+          
+            ϕ
+          
+        
+        ϕ
+      
+    
+    {\displaystyle K'=K_{\phi }\phi }
+  
+ as 
+  
+    
+      
+        Φ
+      
+    
+    {\displaystyle \Phi }
+  
+ is constant.
+In addition, the motor has an intrinsic negative feedback structure, hence at the steady state, the speed ω is proportional to the reference input Va.
+These two facts, in addition to the cheaper price of a permanent magnet motor with respect to a standard DC motor (because only the rotor coils need to be wound), are the main reasons why armature controlled motors are widely used. However, several disadvantages arise from this control technique, of which major is the flow of large currents during transients. For example, when started speed ω is zero initially, hence back EMF (electromotive force) governed by the following relation, would be zero.
+
+  
+    
+      
+        
+          E
+          
+            b
+          
+        
+        =
+        
+          K
+          
+            ϕ
+          
+        
+        ϕ
+        ω
+      
+    
+    {\displaystyle E_{b}=K_{\phi }\phi \omega }
+  
+ (3)
+Also, armature current is given by  
+  
+    
+      
+        I
+        =
+        
+          (
+          
+            
+              
+                V
+                −
+                
+                  E
+                  
+                    b
+                  
+                
+              
+              
+                R
+                
+                  a
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle I=\left({\frac {V-E_{b}}{R_{a}}}\right)}
+  
+(4)
+which will be very high causing increase in heating of machine and it may damage the insulation.
+
+Equations for transfer function
+
+Essential Equations for transfer function:
+
+  
+    
+      
+        
+          E
+          
+            b
+          
+        
+        =
+        
+          K
+          
+            ϕ
+          
+        
+        ϕ
+        ω
+      
+    
+    {\displaystyle E_{b}=K_{\phi }\phi \omega }
+  
+ in Laplace domain 
+  
+    
+      
+        
+          E
+          
+            b
+          
+        
+        (
+        s
+        )
+        =
+        
+          K
+          
+            ϕ
+          
+        
+        ϕ
+        ω
+        (
+        s
+        )
+      
+    
+    {\displaystyle E_{b}(s)=K_{\phi }\phi \omega (s)}
+  
+(5)
+
+  
+    
+      
+        I
+        =
+        
+          (
+          
+            
+              
+                V
+                −
+                
+                  E
+                  
+                    b
+                  
+                
+              
+              
+                R
+                
+                  a
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle I=\left({\frac {V-E_{b}}{R_{a}}}\right)}
+  
+ in Laplace domain 
+  
+    
+      
+        I
+        (
+        s
+        )
+        =
+        
+          (
+          
+            
+              
+                V
+                (
+                s
+                )
+                −
+                
+                  E
+                  
+                    b
+                  
+                
+                (
+                s
+                )
+              
+              
+                R
+                
+                  a
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle I(s)=\left({\frac {V(s)-E_{b}(s)}{R_{a}}}\right)}
+  
+ (6)
+
+  
+    
+      
+        T
+        =
+        
+          K
+          
+            ϕ
+          
+        
+        Φ
+        
+          I
+        
+      
+    
+    {\displaystyle T=K_{\phi }\Phi \mathrm {I} }
+  
+ in Laplace domain 
+  
+    
+      
+        T
+        (
+        s
+        )
+        =
+        
+          K
+          
+            ϕ
+          
+        
+        Φ
+        
+          I
+        
+        (
+        s
+        )
+      
+    
+    {\displaystyle T(s)=K_{\phi }\Phi \mathrm {I} (s)}
+  
+ (7)
+
+  
+    
+      
+        T
+        −
+        
+          T
+          
+            L
+          
+        
+        =
+        J
+        
+          
+            
+              d
+              ω
+            
+            
+              d
+              t
+            
+          
+        
+        +
+        F
+        ω
+      
+    
+    {\displaystyle T-T_{L}=J{d\omega  \over dt}+F\omega }
+  
+ in Laplace domain 
+  
+    
+      
+        T
+        (
+        s
+        )
+        −
+        
+          T
+          
+            L
+          
+        
+        (
+        s
+        )
+        =
+        J
+        
+          
+            
+              d
+              ω
+              (
+              s
+              )
+            
+            
+              d
+              t
+            
+          
+        
+        +
+        F
+        ω
+        (
+        s
+        )
+      
+    
+    {\displaystyle T(s)-T_{L}(s)=J{d\omega (s) \over dt}+F\omega (s)}
+  
+ (8)
+Various parameters in figure are described as 
+
+  
+    
+      
+        
+          K
+          
+            a
+          
+        
+        =
+        
+          
+            1
+            
+              R
+              
+                a
+              
+            
+          
+        
+      
+    
+    {\displaystyle K_{a}={1 \over R_{a}}}
+  
+  is the rotor gain.
+
+  
+    
+      
+        
+          τ
+          
+            a
+          
+        
+        =
+        
+          
+            L
+            
+              R
+              
+                a
+              
+            
+          
+        
+      
+    
+    {\displaystyle \tau _{a}={L \over R_{a}}}
+  
+   is the electrical time constant.
+
+  
+    
+      
+        
+          
+            T
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \mathrm {T} _{m}}
+  
+ is the motor torque.
+
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  
+ is a constant depending on field flux.
+
+  
+    
+      
+        
+          K
+          
+            m
+          
+        
+        =
+        
+          
+            1
+            F
+          
+        
+      
+    
+    {\displaystyle K_{m}={1 \over F}}
+  
+ is mechanical gain.
+F is viscous friction coefficient.
+
+  
+    
+      
+        
+          τ
+          
+            m
+          
+        
+        =
+        
+          
+            J
+            F
+          
+        
+      
+    
+    {\displaystyle \tau _{m}={J \over F}}
+  
+ is the mechanical time constant, where J is moment of inertia of the load.
+
+  
+    
+      
+        ω
+        (
+        s
+        )
+      
+    
+    {\displaystyle \omega (s)}
+  
+ is the resulting angular velocity.
+The transfer matrix of the system may be written as
+
+  
+    
+      
+        ω
+        (
+        s
+        )
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    W
+                    
+                      1
+                    
+                  
+                  (
+                  s
+                  )
+                
+                
+                  
+                    W
+                    
+                      2
+                    
+                  
+                  (
+                  s
+                  )
+                
+              
+            
+            ]
+          
+        
+        
+          
+            [
+            
+              
+                
+                  
+                    V
+                    
+                      a
+                    
+                  
+                
+              
+              
+                
+                  
+                    T
+                    
+                      L
+                    
+                  
+                  (
+                  s
+                  )
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle \omega (s)={\begin{bmatrix}W_{1}(s)&W_{2}(s)\end{bmatrix}}{\begin{bmatrix}V_{a}\\T_{L}(s)\end{bmatrix}}}
+  
+ (9)
+where 
+  
+    
+      
+        
+          W
+          
+            1
+          
+        
+        (
+        s
+        )
+        =
+        
+          
+            
+              
+                K
+                
+                  a
+                
+              
+              
+                K
+                
+                  ϕ
+                
+              
+              
+                K
+                
+                  m
+                
+              
+              ϕ
+            
+            
+              (
+              1
+              +
+              
+                τ
+                
+                  a
+                
+              
+              s
+              )
+              (
+              1
+              +
+              
+                τ
+                
+                  m
+                
+              
+              s
+              )
+              +
+              
+                K
+                
+                  a
+                
+              
+              
+                K
+                
+                  m
+                
+              
+              (
+              
+                K
+                
+                  ϕ
+                
+              
+              ϕ
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle W_{1}(s)={\frac {K_{a}K_{\phi }K_{m}\phi }{(1+\tau _{a}s)(1+\tau _{m}s)+K_{a}K_{m}(K_{\phi }\phi )^{2}}}}
+  
+ (10)
+
+  
+    
+      
+        
+          W
+          
+            2
+          
+        
+        (
+        s
+        )
+        =
+        
+          
+            
+              
+                K
+                
+                  m
+                
+              
+              (
+              1
+              +
+              
+                τ
+                
+                  a
+                
+              
+              s
+              )
+            
+            
+              (
+              1
+              +
+              
+                τ
+                
+                  a
+                
+              
+              s
+              )
+              (
+              1
+              +
+              
+                τ
+                
+                  m
+                
+              
+              s
+              )
+              +
+              
+                K
+                
+                  a
+                
+              
+              
+                K
+                
+                  m
+                
+              
+              (
+              
+                K
+                
+                  ϕ
+                
+              
+              ϕ
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle W_{2}(s)={\frac {K_{m}(1+\tau _{a}s)}{(1+\tau _{a}s)(1+\tau _{m}s)+K_{a}K_{m}(K_{\phi }\phi )^{2}}}}
+  
+ (11)

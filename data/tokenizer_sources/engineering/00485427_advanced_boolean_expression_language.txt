@@ -1,0 +1,9 @@
+The Advanced Boolean Expression Language (ABEL) is an obsolete hardware description language (HDL) and an associated set of design tools for programming programmable logic devices (PLDs). It was created in 1983 by Data I/O Corporation, in Redmond, Washington.
+ABEL includes both concurrent equation and truth table logic formats as well as a sequential state machine description format. A preprocessor with syntax loosely based on Digital Equipment Corporation's MACRO-11 assembly language is also included.
+In addition to being used for describing digital logic, ABEL may also be used to describe test vectors (patterns of inputs and expected outputs) that may be downloaded to a hardware PLD programmer along with the compiled and fuse-mapped PLD programming data.
+Other PLD design languages originating in the same era include CUPL and PALASM. Since the advent of larger field-programmable gate arrays (FPGAs), PLD-specific HDLs have fallen out of favor as standard HDLs such as Verilog and VHDL gained adoption.
+The ABEL concept and original compiler were created by Russell de Pina of Data I/O's Applied Research Group in 1981. The work was continued by ABEL product development team (led by Dr. Kyu Y. Lee) and included Mary Bailey, Bjorn Benson, Walter Bright, Michael Holley, Charles Olivier, and David Pellerin.
+After a series of acquisitions, the ABEL toolchain and intellectual property were bought by Xilinx.  Xilinx discontinued support for ABEL in its ISE Design Suite starting with version 11 (released in 2010).
+
+Use at Caltech
+Though considered obsolete, ABEL is taught as a part of the undergraduate curriculum at the California Institute of Technology in EE/CS 10a: Introduction to Digital Logic and Embedded Systems, which is taught by Glen George and Chris Hiszpanski. Use of the language in an instructional setting arguably encourages students to develop the deepest level of understanding of computational technology.

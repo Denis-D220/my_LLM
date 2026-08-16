@@ -1,0 +1,34 @@
+Eddystone was a Bluetooth Low Energy beacon profile released by Google in July 2015. In December 2018 Google stopped delivering both Eddystone and Physical Web beacon notifications. The Apache 2.0-licensed, cross-platform, and versioned profile contained several frame types, including Eddystone-UID, Eddystone-URL, and Eddystone-TLM. Eddystone-URL was used by the Physical Web project, whereas Eddystone-UID was typically used by native apps on a user's device, including Google's first party apps such as Google Maps.
+
+Background
+The format was named after the Eddystone Lighthouse in the UK, motivated by the simplicity of a lighthouse-signal and its one-directional nature.
+
+Technical details
+Though similar to the iBeacon profile released by Apple in 2013, Eddystone can be implemented without restriction. Eddystone also contains a telemetry frame (Eddystone-TLM) designed for reporting on a beacon's health, including, for example, battery level. Like other beacon technology, beacons with Eddystone can give devices a better indication of what objects and places are around them. Importantly, beacons do not generally accept connections from other devices, meaning that the beacon itself cannot record what devices are in its vicinity. In many cases, the simplicity of the beacon frame means that an app (for example Google Chrome) is required in order to interpret the beacon's signal.
+Nearby Messages is the API that can be used off of this protocol to receive data that is stored within beacons. Differing from iBeacon, Google beacons use not only Bluetooth but also WiFi and near ultrasonic sounds to communicate between devices.
+Eddystone has 4 frame types.
+
+Eddystone-UID broadcasts an identifying code that allows apps to retrieve information from app servers. These can be used for indoor location, identification of physical objects, and to interact with apps in any way the developer decides.
+Eddystone-EID broadcasts an encrypted rotating identifier in order to increase the security of the protocol, but otherwise acts similarly to the UID frame
+Eddystone-TLM broadcasts information about the beacon. This can include battery level, sensor data, or other relevant information to beacon administrators. It must be accompanied by another frame type to be usable as a beacon.
+Eddystone-URL broadcasts a URL of at most 18 characters that redirects to a website that is secured using SSL. This beacon is the underpinning of the Physical Web.
+In android 4.4 or higher, it causes a notification to be displayed on the user's phone.
+As of October 2017, Google removed Eddystone detection from Chrome on iOS and Android.
+
+Google Beacon platform
+In tandem with the Eddystone, Google launched the Google beacon platform. The platform includes the Proximity Beacon API designed to associate content with individual beacons. The Proximity Beacon API fronts a registry of beacons where extra information (known as "attachments"), useful to developers' applications, can be associated with individual beacon IDs. Several attachments can be associated with a single beacon. Attachments can be updated in real-time and can be retrieved by an app using the Nearby API in Android (through Google Play Services) and the Nearby library for iOS.
+In 2018, the security of the Google Nearby API and ecosystem came under scrutiny from privacy advocates over the use and recording of ultrasonic (high frequency) audio in combination with Bluetooth and Wi-Fi to better discover, track, and connect nearby devices. Users may not be aware of the extent of the information that is exposed and potentially recorded by consenting to the use of the Nearby API.
+
+Waze Beacons
+Google's navigation platform Waze has deployed Eddystone beacons in tunnels around the world (where GPS would not work).
+They transmit the following data:
+
+A unique ID
+Power left in the battery
+How many times it has transmitted a message
+Time since power-on or reboot
+Its temperature
+They will ignore this information from any beacons that do not use an ID number belonging to Waze.
+
+Discontinuation
+In December 2018, Google stopped delivering both Eddystone and Physical Web beacon notifications. The low number of users and the poor user experience were the reasons to discontinued the Eddystone beacons. Google continues to enable access to the beacon dashboard and can deliver proximity-based experiences similar to Nearby Notifications via third-party apps using the Proximity Beacons API.

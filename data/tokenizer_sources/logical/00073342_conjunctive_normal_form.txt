@@ -1,0 +1,3136 @@
+In Boolean algebra, a formula is in conjunctive normal form (CNF) or clausal normal form if it is a conjunction of one or more clauses, where a clause is a disjunction of literals; otherwise put, it is a product of sums or an AND of ORs.
+In automated theorem proving, the notion "clausal normal form" is often used in a narrower sense, meaning a particular representation of a CNF formula as a set of sets of literals (i.e., the product and sum operations are left implicit).
+
+Definition
+A logical formula is considered to be in CNF if it is a conjunction of one or more disjunctions of one or more literals. As in disjunctive normal form (DNF), the only propositional operators in CNF are or (
+  
+    
+      
+        ∨
+      
+    
+    {\displaystyle \vee }
+  
+), and (
+  
+    
+      
+        ∧
+      
+    
+    {\displaystyle \land }
+  
+), and not (
+  
+    
+      
+        ¬
+      
+    
+    {\displaystyle \neg }
+  
+). The not operator can only be used as part of a literal, which means that it can only precede a propositional variable.
+The following is a context-free grammar for CNF:
+
+CNF 
+  
+    
+      
+        
+        →
+        
+      
+    
+    {\displaystyle \,\to \,}
+  
+ Disjunct 
+  
+    
+      
+        
+        ∣
+        
+      
+    
+    {\displaystyle \,\mid \,}
+  
+ Disjunct 
+  
+    
+      
+        
+        ∧
+        
+      
+    
+    {\displaystyle \,\land \,}
+  
+ CNF
+Disjunct 
+  
+    
+      
+        
+        →
+        
+      
+    
+    {\displaystyle \,\to \,}
+  
+ Literal 
+  
+    
+      
+        
+        ∣
+        
+      
+    
+    {\displaystyle \,\mid \,}
+  
+ Literal 
+  
+    
+      
+        
+        ∨
+        
+      
+    
+    {\displaystyle \,\lor \,}
+  
+ Disjunct
+Literal 
+  
+    
+      
+        
+        →
+        
+      
+    
+    {\displaystyle \,\to \,}
+  
+ Variable 
+  
+    
+      
+        
+        ∣
+        
+      
+    
+    {\displaystyle \,\mid \,}
+  
+ 
+  
+    
+      
+        
+        ¬
+        
+      
+    
+    {\displaystyle \,\neg \,}
+  
+ Variable
+Where Variable is any variable.
+All of the following formulas in the variables 
+  
+    
+      
+        A
+        ,
+        B
+        ,
+        C
+        ,
+        D
+        ,
+        E
+        ,
+      
+    
+    {\displaystyle A,B,C,D,E,}
+  
+ and 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+ are in conjunctive normal form:
+
+  
+    
+      
+        (
+        A
+        ∨
+        ¬
+        B
+        ∨
+        ¬
+        C
+        )
+        ∧
+        (
+        ¬
+        D
+        ∨
+        E
+        ∨
+        F
+        )
+      
+    
+    {\displaystyle (A\lor \neg B\lor \neg C)\land (\neg D\lor E\lor F)}
+  
+
+  
+    
+      
+        (
+        A
+        ∨
+        B
+        )
+        ∧
+        (
+        C
+        )
+      
+    
+    {\displaystyle (A\lor B)\land (C)}
+  
+
+  
+    
+      
+        (
+        A
+        ∨
+        B
+        )
+      
+    
+    {\displaystyle (A\lor B)}
+  
+
+  
+    
+      
+        (
+        A
+        )
+      
+    
+    {\displaystyle (A)}
+  
+
+The following formulas are not in conjunctive normal form:
+
+  
+    
+      
+        ¬
+        (
+        A
+        ∧
+        B
+        )
+      
+    
+    {\displaystyle \neg (A\land B)}
+  
+, since an AND is nested within a NOT
+
+  
+    
+      
+        ¬
+        (
+        A
+        ∨
+        B
+        )
+        ∧
+        C
+      
+    
+    {\displaystyle \neg (A\lor B)\land C}
+  
+, since an OR is nested within a NOT
+
+  
+    
+      
+        A
+        ∧
+        (
+        B
+        ∨
+        (
+        D
+        ∧
+        E
+        )
+        )
+      
+    
+    {\displaystyle A\land (B\lor (D\land E))}
+  
+, since an AND is nested within an OR
+
+  
+    
+      
+        A
+        ∧
+        (
+        B
+        ∨
+        (
+        C
+        ∨
+        D
+        )
+        )
+      
+    
+    {\displaystyle A\land (B\lor (C\lor D))}
+  
+, since a nested OR should be written without parenthesis
+
+Conversion to CNF
+In classical logic each propositional formula can be converted to an equivalent formula that is in CNF. This transformation is based on rules about logical equivalences: double negation elimination, De Morgan's laws, and the distributive law.
+
+Basic algorithm
+The algorithm to compute a CNF-equivalent of a given propositional formula 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ builds upon 
+  
+    
+      
+        ¬
+        ϕ
+      
+    
+    {\displaystyle \lnot \phi }
+  
+ in disjunctive normal form (DNF): step 1.
+Then 
+  
+    
+      
+        ¬
+        
+          ϕ
+          
+            D
+            N
+            F
+          
+        
+      
+    
+    {\displaystyle \lnot \phi _{DNF}}
+  
+ is converted to 
+  
+    
+      
+        
+          ϕ
+          
+            C
+            N
+            F
+          
+        
+      
+    
+    {\displaystyle \phi _{CNF}}
+  
+ by swapping ANDs with ORs and vice versa while negating all the literals. Remove all 
+  
+    
+      
+        ¬
+        ¬
+      
+    
+    {\displaystyle \lnot \lnot }
+  
+.
+
+Conversion by syntactic means
+Convert to CNF the propositional formula 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+.
+Step 1: Convert its negation to disjunctive normal form. 
+
+  
+    
+      
+        ¬
+        
+          ϕ
+          
+            D
+            N
+            F
+          
+        
+        =
+        (
+        
+          C
+          
+            1
+          
+        
+        ∨
+        
+          C
+          
+            2
+          
+        
+        ∨
+        …
+        ∨
+        
+          C
+          
+            i
+          
+        
+        ∨
+        …
+        ∨
+        
+          C
+          
+            m
+          
+        
+        )
+      
+    
+    {\displaystyle \lnot \phi _{DNF}=(C_{1}\lor C_{2}\lor \ldots \lor C_{i}\lor \ldots \lor C_{m})}
+  
+,
+where each 
+  
+    
+      
+        
+          C
+          
+            i
+          
+        
+      
+    
+    {\displaystyle C_{i}}
+  
+ is a conjunction of literals 
+  
+    
+      
+        
+          l
+          
+            i
+            1
+          
+        
+        ∧
+        
+          l
+          
+            i
+            2
+          
+        
+        ∧
+        …
+        ∧
+        
+          l
+          
+            i
+            
+              n
+              
+                i
+              
+            
+          
+        
+      
+    
+    {\displaystyle l_{i1}\land l_{i2}\land \ldots \land l_{in_{i}}}
+  
+.
+Step 2: Negate 
+  
+    
+      
+        ¬
+        
+          ϕ
+          
+            D
+            N
+            F
+          
+        
+      
+    
+    {\displaystyle \lnot \phi _{DNF}}
+  
+.
+Then shift 
+  
+    
+      
+        ¬
+      
+    
+    {\displaystyle \lnot }
+  
+ inwards by applying the (generalized) De Morgan's equivalences until no longer possible.
+
+  
+    
+      
+        
+          
+            
+              
+                ϕ
+              
+              
+                
+                ↔
+                ¬
+                ¬
+                
+                  ϕ
+                  
+                    D
+                    N
+                    F
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                ¬
+                (
+                
+                  C
+                  
+                    1
+                  
+                
+                ∨
+                
+                  C
+                  
+                    2
+                  
+                
+                ∨
+                …
+                ∨
+                
+                  C
+                  
+                    i
+                  
+                
+                ∨
+                …
+                ∨
+                
+                  C
+                  
+                    m
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                ↔
+                ¬
+                
+                  C
+                  
+                    1
+                  
+                
+                ∧
+                ¬
+                
+                  C
+                  
+                    2
+                  
+                
+                ∧
+                …
+                ∧
+                ¬
+                
+                  C
+                  
+                    i
+                  
+                
+                ∧
+                …
+                ∧
+                ¬
+                
+                  C
+                  
+                    m
+                  
+                
+              
+              
+              
+                
+                  // (generalized) D.M.
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\phi &\leftrightarrow \lnot \lnot \phi _{DNF}\\&=\lnot (C_{1}\lor C_{2}\lor \ldots \lor C_{i}\lor \ldots \lor C_{m})\\&\leftrightarrow \lnot C_{1}\land \lnot C_{2}\land \ldots \land \lnot C_{i}\land \ldots \land \lnot C_{m}&&{\text{// (generalized) D.M.}}\end{aligned}}}
+  
+
+where
+  
+    
+      
+        
+          
+            
+              
+                ¬
+                
+                  C
+                  
+                    i
+                  
+                
+              
+              
+                
+                =
+                ¬
+                (
+                
+                  l
+                  
+                    i
+                    1
+                  
+                
+                ∧
+                
+                  l
+                  
+                    i
+                    2
+                  
+                
+                ∧
+                …
+                ∧
+                
+                  l
+                  
+                    i
+                    
+                      n
+                      
+                        i
+                      
+                    
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                ↔
+                (
+                ¬
+                
+                  l
+                  
+                    i
+                    1
+                  
+                
+                ∨
+                ¬
+                
+                  l
+                  
+                    i
+                    2
+                  
+                
+                ∨
+                …
+                ∨
+                ¬
+                
+                  l
+                  
+                    i
+                    
+                      n
+                      
+                        i
+                      
+                    
+                  
+                
+                )
+              
+              
+              
+                
+                  // (generalized) D.M.
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\lnot C_{i}&=\lnot (l_{i1}\land l_{i2}\land \ldots \land l_{in_{i}})\\&\leftrightarrow (\lnot l_{i1}\lor \lnot l_{i2}\lor \ldots \lor \lnot l_{in_{i}})&&{\text{// (generalized) D.M.}}\end{aligned}}}
+  
+
+Step 3: Remove all double negations.
+Example
+Convert to CNF the propositional formula
+
+  
+    
+      
+        ϕ
+        =
+        (
+        (
+        ¬
+        (
+        p
+        ∧
+        q
+        )
+        )
+        ↔
+        (
+        ¬
+        r
+        ↑
+        (
+        p
+        ⊕
+        q
+        )
+        )
+        )
+      
+    
+    {\displaystyle \phi =((\lnot (p\land q))\leftrightarrow (\lnot r\uparrow (p\oplus q)))}
+  
+.
+The (full) DNF equivalent of its negation is
+
+  
+    
+      
+        ¬
+        
+          ϕ
+          
+            D
+            N
+            F
+          
+        
+        =
+        (
+        p
+        ∧
+        q
+        ∧
+        r
+        )
+        ∨
+        (
+        p
+        ∧
+        q
+        ∧
+        ¬
+        r
+        )
+        ∨
+        (
+        p
+        ∧
+        ¬
+        q
+        ∧
+        ¬
+        r
+        )
+        ∨
+        (
+        ¬
+        p
+        ∧
+        q
+        ∧
+        ¬
+        r
+        )
+      
+    
+    {\displaystyle \lnot \phi _{DNF}=(p\land q\land r)\lor (p\land q\land \lnot r)\lor (p\land \lnot q\land \lnot r)\lor (\lnot p\land q\land \lnot r)}
+  
+
+  
+    
+      
+        
+          
+            
+              
+                ϕ
+              
+              
+                
+                ↔
+                ¬
+                ¬
+                
+                  ϕ
+                  
+                    D
+                    N
+                    F
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                ¬
+                {
+                (
+                p
+                ∧
+                q
+                ∧
+                r
+                )
+                ∨
+                (
+                p
+                ∧
+                q
+                ∧
+                ¬
+                r
+                )
+                ∨
+                (
+                p
+                ∧
+                ¬
+                q
+                ∧
+                ¬
+                r
+                )
+                ∨
+                (
+                ¬
+                p
+                ∧
+                q
+                ∧
+                ¬
+                r
+                )
+                }
+              
+            
+            
+              
+              
+                
+                ↔
+                
+                  
+                    
+                      ¬
+                      (
+                      p
+                      ∧
+                      q
+                      ∧
+                      r
+                      )
+                    
+                    _
+                  
+                
+                ∧
+                
+                  
+                    
+                      ¬
+                      (
+                      p
+                      ∧
+                      q
+                      ∧
+                      ¬
+                      r
+                      )
+                    
+                    _
+                  
+                
+                ∧
+                
+                  
+                    
+                      ¬
+                      (
+                      p
+                      ∧
+                      ¬
+                      q
+                      ∧
+                      ¬
+                      r
+                      )
+                    
+                    _
+                  
+                
+                ∧
+                
+                  
+                    
+                      ¬
+                      (
+                      ¬
+                      p
+                      ∧
+                      q
+                      ∧
+                      ¬
+                      r
+                      )
+                    
+                    _
+                  
+                
+              
+              
+              
+                
+                  // generalized D.M. 
+                
+              
+            
+            
+              
+              
+                
+                ↔
+                (
+                ¬
+                p
+                ∨
+                ¬
+                q
+                ∨
+                ¬
+                r
+                )
+                ∧
+                (
+                ¬
+                p
+                ∨
+                ¬
+                q
+                ∨
+                ¬
+                ¬
+                r
+                )
+                ∧
+                (
+                ¬
+                p
+                ∨
+                ¬
+                ¬
+                q
+                ∨
+                ¬
+                ¬
+                r
+                )
+                ∧
+                (
+                ¬
+                ¬
+                p
+                ∨
+                ¬
+                q
+                ∨
+                ¬
+                ¬
+                r
+                )
+              
+              
+              
+                
+                  // generalized D.M. 
+                
+                (
+                4
+                ×
+                )
+              
+            
+            
+              
+              
+                
+                ↔
+                (
+                ¬
+                p
+                ∨
+                ¬
+                q
+                ∨
+                ¬
+                r
+                )
+                ∧
+                (
+                ¬
+                p
+                ∨
+                ¬
+                q
+                ∨
+                r
+                )
+                ∧
+                (
+                ¬
+                p
+                ∨
+                q
+                ∨
+                r
+                )
+                ∧
+                (
+                p
+                ∨
+                ¬
+                q
+                ∨
+                r
+                )
+              
+              
+              
+                
+                  // remove all 
+                
+                ¬
+                ¬
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ϕ
+                  
+                    C
+                    N
+                    F
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\phi &\leftrightarrow \lnot \lnot \phi _{DNF}\\&=\lnot \{(p\land q\land r)\lor (p\land q\land \lnot r)\lor (p\land \lnot q\land \lnot r)\lor (\lnot p\land q\land \lnot r)\}\\&\leftrightarrow {\underline {\lnot (p\land q\land r)}}\land {\underline {\lnot (p\land q\land \lnot r)}}\land {\underline {\lnot (p\land \lnot q\land \lnot r)}}\land {\underline {\lnot (\lnot p\land q\land \lnot r)}}&&{\text{// generalized D.M. }}\\&\leftrightarrow (\lnot p\lor \lnot q\lor \lnot r)\land (\lnot p\lor \lnot q\lor \lnot \lnot r)\land (\lnot p\lor \lnot \lnot q\lor \lnot \lnot r)\land (\lnot \lnot p\lor \lnot q\lor \lnot \lnot r)&&{\text{// generalized D.M. }}(4\times )\\&\leftrightarrow (\lnot p\lor \lnot q\lor \lnot r)\land (\lnot p\lor \lnot q\lor r)\land (\lnot p\lor q\lor r)\land (p\lor \lnot q\lor r)&&{\text{// remove all }}\lnot \lnot \\&=\phi _{CNF}\end{aligned}}}
+  
+
+Conversion by semantic means
+A CNF equivalent of a formula can be derived from its truth table. Again, consider the formula
+
+  
+    
+      
+        ϕ
+        =
+        (
+        (
+        ¬
+        (
+        p
+        ∧
+        q
+        )
+        )
+        ↔
+        (
+        ¬
+        r
+        ↑
+        (
+        p
+        ⊕
+        q
+        )
+        )
+        )
+      
+    
+    {\displaystyle \phi =((\lnot (p\land q))\leftrightarrow (\lnot r\uparrow (p\oplus q)))}
+  
+.
+The corresponding truth table is
+
+A CNF equivalent of 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ is
+
+  
+    
+      
+        (
+        ¬
+        p
+        ∨
+        ¬
+        q
+        ∨
+        ¬
+        r
+        )
+        ∧
+        (
+        ¬
+        p
+        ∨
+        ¬
+        q
+        ∨
+        r
+        )
+        ∧
+        (
+        ¬
+        p
+        ∨
+        q
+        ∨
+        r
+        )
+        ∧
+        (
+        p
+        ∨
+        ¬
+        q
+        ∨
+        r
+        )
+      
+    
+    {\displaystyle (\lnot p\lor \lnot q\lor \lnot r)\land (\lnot p\lor \lnot q\lor r)\land (\lnot p\lor q\lor r)\land (p\lor \lnot q\lor r)}
+  
+
+Each disjunction reflects an assignment of variables for which 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  
+ evaluates to F(alse).
+If in such an assignment a variable 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+
+is T(rue), then the literal is set to 
+  
+    
+      
+        ¬
+        V
+      
+    
+    {\displaystyle \lnot V}
+  
+ in the disjunction,
+is F(alse), then the literal is set to 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  
+ in the disjunction.
+
+Other approaches
+Since all propositional formulas can be converted into an equivalent formula in conjunctive normal form, proofs are often based on the assumption that all formulae are CNF. However, in some cases this conversion to CNF can lead to an exponential explosion of the formula. For example, translating the non-CNF formula
+
+  
+    
+      
+        (
+        
+          X
+          
+            1
+          
+        
+        ∧
+        
+          Y
+          
+            1
+          
+        
+        )
+        ∨
+        (
+        
+          X
+          
+            2
+          
+        
+        ∧
+        
+          Y
+          
+            2
+          
+        
+        )
+        ∨
+        …
+        ∨
+        (
+        
+          X
+          
+            n
+          
+        
+        ∧
+        
+          Y
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle (X_{1}\wedge Y_{1})\vee (X_{2}\wedge Y_{2})\vee \ldots \vee (X_{n}\wedge Y_{n})}
+  
+ 
+into CNF produces a formula with 
+  
+    
+      
+        
+          2
+          
+            n
+          
+        
+      
+    
+    {\displaystyle 2^{n}}
+  
+ clauses:
+
+  
+    
+      
+        (
+        
+          X
+          
+            1
+          
+        
+        ∨
+        
+          X
+          
+            2
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            n
+          
+        
+        )
+        ∧
+        (
+        
+          Y
+          
+            1
+          
+        
+        ∨
+        
+          X
+          
+            2
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            n
+          
+        
+        )
+        ∧
+        (
+        
+          X
+          
+            1
+          
+        
+        ∨
+        
+          Y
+          
+            2
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            n
+          
+        
+        )
+        ∧
+        (
+        
+          Y
+          
+            1
+          
+        
+        ∨
+        
+          Y
+          
+            2
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            n
+          
+        
+        )
+        ∧
+        …
+        ∧
+        (
+        
+          Y
+          
+            1
+          
+        
+        ∨
+        
+          Y
+          
+            2
+          
+        
+        ∨
+        …
+        ∨
+        
+          Y
+          
+            n
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle (X_{1}\vee X_{2}\vee \ldots \vee X_{n})\wedge (Y_{1}\vee X_{2}\vee \ldots \vee X_{n})\wedge (X_{1}\vee Y_{2}\vee \ldots \vee X_{n})\wedge (Y_{1}\vee Y_{2}\vee \ldots \vee X_{n})\wedge \ldots \wedge (Y_{1}\vee Y_{2}\vee \ldots \vee Y_{n}).}
+  
+
+Each clause contains either 
+  
+    
+      
+        
+          X
+          
+            i
+          
+        
+      
+    
+    {\displaystyle X_{i}}
+  
+ or 
+  
+    
+      
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Y_{i}}
+  
+ for each 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+.
+There exist transformations into CNF that avoid an exponential increase in size by preserving satisfiability rather than equivalence. These transformations are guaranteed to only linearly increase the size of the formula, but introduce new variables. For example, the above formula can be transformed into CNF by adding variables 
+  
+    
+      
+        
+          Z
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          Z
+          
+            n
+          
+        
+      
+    
+    {\displaystyle Z_{1},\ldots ,Z_{n}}
+  
+ as follows:
+
+  
+    
+      
+        (
+        
+          Z
+          
+            1
+          
+        
+        ∨
+        …
+        ∨
+        
+          Z
+          
+            n
+          
+        
+        )
+        ∧
+        (
+        ¬
+        
+          Z
+          
+            1
+          
+        
+        ∨
+        
+          X
+          
+            1
+          
+        
+        )
+        ∧
+        (
+        ¬
+        
+          Z
+          
+            1
+          
+        
+        ∨
+        
+          Y
+          
+            1
+          
+        
+        )
+        ∧
+        …
+        ∧
+        (
+        ¬
+        
+          Z
+          
+            n
+          
+        
+        ∨
+        
+          X
+          
+            n
+          
+        
+        )
+        ∧
+        (
+        ¬
+        
+          Z
+          
+            n
+          
+        
+        ∨
+        
+          Y
+          
+            n
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle (Z_{1}\vee \ldots \vee Z_{n})\wedge (\neg Z_{1}\vee X_{1})\wedge (\neg Z_{1}\vee Y_{1})\wedge \ldots \wedge (\neg Z_{n}\vee X_{n})\wedge (\neg Z_{n}\vee Y_{n}).}
+  
+
+An interpretation satisfies this formula only if at least one of the new variables is true. If this variable is 
+  
+    
+      
+        
+          Z
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Z_{i}}
+  
+, then both 
+  
+    
+      
+        
+          X
+          
+            i
+          
+        
+      
+    
+    {\displaystyle X_{i}}
+  
+ and 
+  
+    
+      
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Y_{i}}
+  
+ are true as well. This means that every model that satisfies this formula also satisfies the original one. On the other hand, only some of the models of the original formula satisfy this one: since the 
+  
+    
+      
+        
+          Z
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Z_{i}}
+  
+ are not mentioned in the original formula, their values are irrelevant to satisfaction of it, which is not the case in the last formula. This means that the original formula and the result of the translation are equisatisfiable but not equivalent.
+An alternative translation, the Tseitin transformation, also includes the clauses 
+  
+    
+      
+        
+          Z
+          
+            i
+          
+        
+        ∨
+        ¬
+        
+          X
+          
+            i
+          
+        
+        ∨
+        ¬
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Z_{i}\vee \neg X_{i}\vee \neg Y_{i}}
+  
+. With these clauses, the formula implies 
+  
+    
+      
+        
+          Z
+          
+            i
+          
+        
+        ≡
+        
+          X
+          
+            i
+          
+        
+        ∧
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Z_{i}\equiv X_{i}\wedge Y_{i}}
+  
+; this formula is often regarded to "define" 
+  
+    
+      
+        
+          Z
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Z_{i}}
+  
+ to be a name for 
+  
+    
+      
+        
+          X
+          
+            i
+          
+        
+        ∧
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle X_{i}\wedge Y_{i}}
+  
+.
+
+Maximum number of disjunctions
+
+Consider a propositional formula with 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ variables, 
+  
+    
+      
+        n
+        ≥
+        1
+      
+    
+    {\displaystyle n\geq 1}
+  
+.
+There are 
+  
+    
+      
+        2
+        n
+      
+    
+    {\displaystyle 2n}
+  
+ possible literals: 
+  
+    
+      
+        L
+        =
+        {
+        
+          p
+          
+            1
+          
+        
+        ,
+        ¬
+        
+          p
+          
+            1
+          
+        
+        ,
+        
+          p
+          
+            2
+          
+        
+        ,
+        ¬
+        
+          p
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          p
+          
+            n
+          
+        
+        ,
+        ¬
+        
+          p
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle L=\{p_{1},\lnot p_{1},p_{2},\lnot p_{2},\ldots ,p_{n},\lnot p_{n}\}}
+  
+.
+
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  
+ has 
+  
+    
+      
+        (
+        
+          2
+          
+            2
+            n
+          
+        
+        −
+        1
+        )
+      
+    
+    {\displaystyle (2^{2n}-1)}
+  
+ non-empty subsets.
+This is the maximum number of disjunctions a CNF can have.
+All truth-functional combinations can be expressed with 
+  
+    
+      
+        
+          2
+          
+            n
+          
+        
+      
+    
+    {\displaystyle 2^{n}}
+  
+ disjunctions, one for each row of the truth table.In the example below they are underlined.
+Example
+Consider a formula with two variables 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ and 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+.
+The longest possible CNF has 
+  
+    
+      
+        
+          2
+          
+            (
+            2
+            ×
+            2
+            )
+          
+        
+        −
+        1
+        =
+        15
+      
+    
+    {\displaystyle 2^{(2\times 2)}-1=15}
+  
+ disjunctions:
+
+  
+    
+      
+        
+          
+            
+              
+                (
+                ¬
+                p
+                )
+                ∧
+                (
+                p
+                )
+                ∧
+                (
+                ¬
+                q
+                )
+                ∧
+                (
+                q
+                )
+                ∧
+              
+            
+            
+              
+                (
+                ¬
+                p
+                ∨
+                p
+                )
+                ∧
+                
+                  
+                    
+                      (
+                      ¬
+                      p
+                      ∨
+                      ¬
+                      q
+                      )
+                    
+                    _
+                  
+                
+                ∧
+                
+                  
+                    
+                      (
+                      ¬
+                      p
+                      ∨
+                      q
+                      )
+                    
+                    _
+                  
+                
+                ∧
+                
+                  
+                    
+                      (
+                      p
+                      ∨
+                      ¬
+                      q
+                      )
+                    
+                    _
+                  
+                
+                ∧
+                
+                  
+                    
+                      (
+                      p
+                      ∨
+                      q
+                      )
+                    
+                    _
+                  
+                
+                ∧
+                (
+                ¬
+                q
+                ∨
+                q
+                )
+                ∧
+              
+            
+            
+              
+                (
+                ¬
+                p
+                ∨
+                p
+                ∨
+                ¬
+                q
+                )
+                ∧
+                (
+                ¬
+                p
+                ∨
+                p
+                ∨
+                q
+                )
+                ∧
+                (
+                ¬
+                p
+                ∨
+                ¬
+                q
+                ∨
+                q
+                )
+                ∧
+                (
+                p
+                ∨
+                ¬
+                q
+                ∨
+                q
+                )
+                ∧
+              
+            
+            
+              
+                (
+                ¬
+                p
+                ∨
+                p
+                ∨
+                ¬
+                q
+                ∨
+                q
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{array}{lcl}(\lnot p)\land (p)\land (\lnot q)\land (q)\land \\(\lnot p\lor p)\land {\underline {(\lnot p\lor \lnot q)}}\land {\underline {(\lnot p\lor q)}}\land {\underline {(p\lor \lnot q)}}\land {\underline {(p\lor q)}}\land (\lnot q\lor q)\land \\(\lnot p\lor p\lor \lnot q)\land (\lnot p\lor p\lor q)\land (\lnot p\lor \lnot q\lor q)\land (p\lor \lnot q\lor q)\land \\(\lnot p\lor p\lor \lnot q\lor q)\end{array}}}
+  
+
+This formula is a contradiction. It can be simplified to 
+  
+    
+      
+        (
+        ¬
+        p
+        ∧
+        p
+        )
+      
+    
+    {\displaystyle (\neg p\land p)}
+  
+ or to 
+  
+    
+      
+        (
+        ¬
+        q
+        ∧
+        q
+        )
+      
+    
+    {\displaystyle (\neg q\land q)}
+  
+, which are also contradictions, as well as valid CNFs.
+
+Computational complexity
+An important set of problems in computational complexity involves finding assignments to the variables of a Boolean formula expressed in conjunctive normal form, such that the formula is true. The k-SAT problem is the problem of finding a satisfying assignment to a Boolean formula expressed in CNF in which each disjunction contains at most k variables. 3-SAT is NP-complete (like any other k-SAT problem with k>2) while 2-SAT is known to have solutions in polynomial time. As a consequence, the task of converting a formula into a DNF, preserving satisfiability, is NP-hard; dually, converting into CNF, preserving validity, is also NP-hard; hence equivalence-preserving conversion into DNF or CNF is again NP-hard.
+Typical problems in this case involve formulas in "3CNF": conjunctive normal form with no more than three variables per conjunct. Examples of such formulas encountered in practice can be very large, for example with 100,000 variables and 1,000,000 conjuncts.
+A formula in CNF can be converted into an equisatisfiable formula in "kCNF" (for k≥3) by replacing each conjunct with more than k variables 
+  
+    
+      
+        
+          X
+          
+            1
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            k
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            n
+          
+        
+      
+    
+    {\displaystyle X_{1}\vee \ldots \vee X_{k}\vee \ldots \vee X_{n}}
+  
+ by two conjuncts 
+  
+    
+      
+        
+          X
+          
+            1
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            k
+            −
+            1
+          
+        
+        ∨
+        Z
+      
+    
+    {\displaystyle X_{1}\vee \ldots \vee X_{k-1}\vee Z}
+  
+ and 
+  
+    
+      
+        ¬
+        Z
+        ∨
+        
+          X
+          
+            k
+          
+        
+        ∨
+        …
+        ∨
+        
+          X
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \neg Z\vee X_{k}\lor \ldots \vee X_{n}}
+  
+ with Z a new variable, and repeating as often as necessary.
+
+First-order logic
+In first order logic, conjunctive normal form can be taken further to yield the clausal normal form of a logical formula, which can be then used to perform first-order resolution.
+In resolution-based automated theorem-proving, a CNF formula 
+
+See below for an example.
+
+Converting from first-order logic
+To convert first-order logic to CNF:
+
+Convert to negation normal form.
+Eliminate implications and equivalences: repeatedly replace 
+  
+    
+      
+        P
+        →
+        Q
+      
+    
+    {\displaystyle P\rightarrow Q}
+  
+ with 
+  
+    
+      
+        ¬
+        P
+        ∨
+        Q
+      
+    
+    {\displaystyle \lnot P\lor Q}
+  
+; replace 
+  
+    
+      
+        P
+        ↔
+        Q
+      
+    
+    {\displaystyle P\leftrightarrow Q}
+  
+ with 
+  
+    
+      
+        (
+        P
+        ∨
+        ¬
+        Q
+        )
+        ∧
+        (
+        ¬
+        P
+        ∨
+        Q
+        )
+      
+    
+    {\displaystyle (P\lor \lnot Q)\land (\lnot P\lor Q)}
+  
+. Eventually, this will eliminate all occurrences of 
+  
+    
+      
+        →
+      
+    
+    {\displaystyle \rightarrow }
+  
+ and 
+  
+    
+      
+        ↔
+      
+    
+    {\displaystyle \leftrightarrow }
+  
+.
+Move NOTs inwards by repeatedly applying De Morgan's law. Specifically, replace 
+  
+    
+      
+        ¬
+        (
+        P
+        ∨
+        Q
+        )
+      
+    
+    {\displaystyle \lnot (P\lor Q)}
+  
+ with 
+  
+    
+      
+        (
+        ¬
+        P
+        )
+        ∧
+        (
+        ¬
+        Q
+        )
+      
+    
+    {\displaystyle (\lnot P)\land (\lnot Q)}
+  
+; replace 
+  
+    
+      
+        ¬
+        (
+        P
+        ∧
+        Q
+        )
+      
+    
+    {\displaystyle \lnot (P\land Q)}
+  
+ with 
+  
+    
+      
+        (
+        ¬
+        P
+        )
+        ∨
+        (
+        ¬
+        Q
+        )
+      
+    
+    {\displaystyle (\lnot P)\lor (\lnot Q)}
+  
+; and replace 
+  
+    
+      
+        ¬
+        ¬
+        P
+      
+    
+    {\displaystyle \lnot \lnot P}
+  
+ with 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+; replace 
+  
+    
+      
+        ¬
+        (
+        ∀
+        x
+        P
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle \lnot (\forall xP(x))}
+  
+ with 
+  
+    
+      
+        ∃
+        x
+        ¬
+        P
+        (
+        x
+        )
+      
+    
+    {\displaystyle \exists x\lnot P(x)}
+  
+; 
+  
+    
+      
+        ¬
+        (
+        ∃
+        x
+        P
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle \lnot (\exists xP(x))}
+  
+ with 
+  
+    
+      
+        ∀
+        x
+        ¬
+        P
+        (
+        x
+        )
+      
+    
+    {\displaystyle \forall x\lnot P(x)}
+  
+. After that, a 
+  
+    
+      
+        ¬
+      
+    
+    {\displaystyle \lnot }
+  
+ may occur only immediately before a predicate symbol.
+Standardize variables
+For sentences like 
+  
+    
+      
+        (
+        ∀
+        x
+        P
+        (
+        x
+        )
+        )
+        ∨
+        (
+        ∃
+        x
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle (\forall xP(x))\lor (\exists xQ(x))}
+  
+ which use the same variable name twice, change the name of one of the variables. This avoids confusion later when dropping quantifiers. For example, 
+  
+    
+      
+        ∀
+        x
+        [
+        ∃
+        y
+        
+          A
+          n
+          i
+          m
+          a
+          l
+        
+        (
+        y
+        )
+        ∧
+        ¬
+        
+          L
+          o
+          v
+          e
+          s
+        
+        (
+        x
+        ,
+        y
+        )
+        ]
+        ∨
+        [
+        ∃
+        y
+        
+          L
+          o
+          v
+          e
+          s
+        
+        (
+        y
+        ,
+        x
+        )
+        ]
+      
+    
+    {\displaystyle \forall x[\exists y\mathrm {Animal} (y)\land \lnot \mathrm {Loves} (x,y)]\lor [\exists y\mathrm {Loves} (y,x)]}
+  
+ is renamed to 
+  
+    
+      
+        ∀
+        x
+        [
+        ∃
+        y
+        
+          A
+          n
+          i
+          m
+          a
+          l
+        
+        (
+        y
+        )
+        ∧
+        ¬
+        
+          L
+          o
+          v
+          e
+          s
+        
+        (
+        x
+        ,
+        y
+        )
+        ]
+        ∨
+        [
+        ∃
+        z
+        
+          L
+          o
+          v
+          e
+          s
+        
+        (
+        z
+        ,
+        x
+        )
+        ]
+      
+    
+    {\displaystyle \forall x[\exists y\mathrm {Animal} (y)\land \lnot \mathrm {Loves} (x,y)]\lor [\exists z\mathrm {Loves} (z,x)]}
+  
+.
+Skolemize the statement
+Move quantifiers outwards: repeatedly replace 
+  
+    
+      
+        P
+        ∧
+        (
+        ∀
+        x
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle P\land (\forall xQ(x))}
+  
+ with 
+  
+    
+      
+        ∀
+        x
+        (
+        P
+        ∧
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle \forall x(P\land Q(x))}
+  
+; replace 
+  
+    
+      
+        P
+        ∨
+        (
+        ∀
+        x
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle P\lor (\forall xQ(x))}
+  
+ with 
+  
+    
+      
+        ∀
+        x
+        (
+        P
+        ∨
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle \forall x(P\lor Q(x))}
+  
+; replace 
+  
+    
+      
+        P
+        ∧
+        (
+        ∃
+        x
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle P\land (\exists xQ(x))}
+  
+ with 
+  
+    
+      
+        ∃
+        x
+        (
+        P
+        ∧
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle \exists x(P\land Q(x))}
+  
+; replace 
+  
+    
+      
+        P
+        ∨
+        (
+        ∃
+        x
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle P\lor (\exists xQ(x))}
+  
+ with 
+  
+    
+      
+        ∃
+        x
+        (
+        P
+        ∨
+        Q
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle \exists x(P\lor Q(x))}
+  
+. These replacements preserve equivalence, since the previous variable standardization step ensured that 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ doesn't occur in 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+. After these replacements, a quantifier may occur only in the initial prefix of the formula, but never inside a 
+  
+    
+      
+        ¬
+      
+    
+    {\displaystyle \lnot }
+  
+, 
+  
+    
+      
+        ∧
+      
+    
+    {\displaystyle \land }
+  
+, or 
+  
+    
+      
+        ∨
+      
+    
+    {\displaystyle \lor }
+  
+.
+Repeatedly replace 
+  
+    
+      
+        ∀
+        
+          x
+          
+            1
+          
+        
+        …
+        ∀
+        
+          x
+          
+            n
+          
+        
+        
+        ∃
+        y
+        
+        P
+        (
+        y
+        )
+      
+    
+    {\displaystyle \forall x_{1}\ldots \forall x_{n}\;\exists y\;P(y)}
+  
+ with 
+  
+    
+      
+        ∀
+        
+          x
+          
+            1
+          
+        
+        …
+        ∀
+        
+          x
+          
+            n
+          
+        
+        
+        P
+        (
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            n
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle \forall x_{1}\ldots \forall x_{n}\;P(f(x_{1},\ldots ,x_{n}))}
+  
+, where 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ is a new 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+-ary function symbol, a so-called "Skolem function". This is the only step that preserves only satisfiability rather than equivalence. It eliminates all existential quantifiers.
+Drop all universal quantifiers.
+Distribute ORs inwards over ANDs: repeatedly replace 
+  
+    
+      
+        P
+        ∨
+        (
+        Q
+        ∧
+        R
+        )
+      
+    
+    {\displaystyle P\lor (Q\land R)}
+  
+ with 
+  
+    
+      
+        (
+        P
+        ∨
+        Q
+        )
+        ∧
+        (
+        P
+        ∨
+        R
+        )
+      
+    
+    {\displaystyle (P\lor Q)\land (P\lor R)}
+  
+.
+Example
+As an example, the formula saying "Anyone who loves all animals, is in turn loved by someone" is converted into CNF (and subsequently into clause form in the last line) as follows (highlighting replacement rule redexes in 
+  
+    
+      
+        
+          
+            
+              red
+            
+          
+        
+      
+    
+    {\displaystyle {\color {red}{\text{red}}}}
+  
+):
+
+Informally, the Skolem function 
+  
+    
+      
+        g
+        (
+        x
+        )
+      
+    
+    {\displaystyle g(x)}
+  
+ can be thought of as yielding the person by whom 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ is loved, while 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+ yields the animal (if any) that 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ doesn't love. The 3rd last line from below then reads as "
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ doesn't love the animal 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+, or else 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ is loved by 
+  
+    
+      
+        g
+        (
+        x
+        )
+      
+    
+    {\displaystyle g(x)}
+  
+".
+The 2nd last line from above, 
+  
+    
+      
+        (
+        
+          A
+          n
+          i
+          m
+          a
+          l
+        
+        (
+        f
+        (
+        x
+        )
+        )
+        ∨
+        
+          L
+          o
+          v
+          e
+          s
+        
+        (
+        g
+        (
+        x
+        )
+        ,
+        x
+        )
+        )
+        ∧
+        (
+        ¬
+        
+          L
+          o
+          v
+          e
+          s
+        
+        (
+        x
+        ,
+        f
+        (
+        x
+        )
+        )
+        ∨
+        
+          L
+          o
+          v
+          e
+          s
+        
+        (
+        g
+        (
+        x
+        )
+        ,
+        x
+        )
+        )
+      
+    
+    {\displaystyle (\mathrm {Animal} (f(x))\lor \mathrm {Loves} (g(x),x))\land (\lnot \mathrm {Loves} (x,f(x))\lor \mathrm {Loves} (g(x),x))}
+  
+, is the CNF.

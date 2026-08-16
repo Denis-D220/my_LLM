@@ -1,0 +1,740 @@
+Action principles are fundamental to physics, from classical mechanics through quantum mechanics, particle physics, and general relativity. Action principles start with an energy function called a Lagrangian describing the physical system. The accumulated value of this energy function between two states of the system is called the action. Action principles apply the calculus of variation to the action. The action depends on the energy function, and the energy function depends on the position, motion, and interactions in the system: variation of the action allows the derivation of the equations of motion without vectors or forces.
+Several distinct action principles differ in the constraints on their initial and final conditions.
+The names of action principles have evolved over time and differ in details of the endpoints of the paths and the nature of the variation. Quantum action principles generalize and justify the older classical principles by showing they are a direct result of quantum interference patterns. Action principles are the basis for Feynman's version of quantum mechanics, general relativity and quantum field theory.
+The action principles have applications as broad as physics, including many problems in classical mechanics but especially in modern problems of quantum mechanics and general relativity. These applications increased and expanded over two centuries as the power of the method and its further mathematical development rose.
+This article introduces the action principle concepts and summarizes other articles with more details on concepts and specific principles.
+
+Common concepts
+Action principles are "integral" approaches rather than the "differential" approach of Newtonian mechanics. The core ideas are based on energy, paths, an energy function called the Lagrangian along paths, and selection of a path according to the "action", a continuous sum or integral of the Lagrangian along the path.
+
+Energy, not force
+Introductory study of mechanics, the science of interacting objects, typically begins with Newton's laws based on the concept of force, defined by the acceleration it causes when applied to mass: F = ma. This approach to mechanics focuses on a single point in space and time, attempting to answer the question: "What happens next?". Mechanics based on action principles begin with the concept of action, an energy tradeoff between kinetic energy and potential energy, defined by the physics of the problem. These approaches answer questions relating starting and ending points: Which trajectory will place a basketball in the hoop? If we launch a rocket to the Moon today, how can it land there in 5 days? The Newtonian and action-principle forms are equivalent, and either one can solve the same problems, but selecting the appropriate form may make solutions much easier.
+The energy function in the action principles is not the total energy (conserved in an isolated system), but the Lagrangian, the difference between kinetic and potential energy. The kinetic energy combines the energy of motion for all the objects in the system; the potential energy depends upon the instantaneous position of the objects and drives the motion of the objects. The motion of the objects places them in new positions with new potential energy values, giving a new value for the Lagrangian.
+Using energy rather than force gives immediate advantages as a basis for mechanics. Force mechanics involves three-dimensional vector calculus, with three space and three momentum coordinates for each object in the scenario; energy is a scalar magnitude combining information from all objects, giving an immediate simplification in many cases. The components of force vary with coordinate systems; the energy value is the same in all coordinate systems. Force requires an inertial frame of reference; once velocities approach the speed of light, special relativity profoundly affects mechanics based on forces. In action principles, relativity merely requires a different Lagrangian: the principle itself is independent of coordinate systems.
+
+Paths, not points
+The explanatory diagrams in force-based mechanics usually focus on a single point, like the center of momentum, and show vectors of forces and velocities. The explanatory diagrams of action-based mechanics have two points with actual and possible paths connecting them. These diagrammatic conventions reiterate the different strong points of each method.
+
+Depending on the action principle, the two points connected by paths in a diagram may represent two particle positions at different times, or the two points may represent values in a configuration space or in a phase space. The mathematical technology and terminology of action principles can be learned by thinking in terms of physical space, then applied in the more powerful and general abstract spaces.
+
+Action along a path
+Action principles assign a number—the action—to each possible path between two points. This number is computed by adding an energy value for each small section of the path multiplied by the time spent in that section: 
+
+action 
+  
+    
+      
+        S
+        =
+        
+          ∫
+          
+            
+              t
+              
+                1
+              
+            
+          
+          
+            
+              t
+              
+                2
+              
+            
+          
+        
+        
+          
+            (
+          
+        
+        
+          KE
+        
+        (
+        t
+        )
+        −
+        
+          PE
+        
+        (
+        t
+        )
+        
+          
+            )
+          
+        
+        
+        d
+        t
+        ,
+      
+    
+    {\displaystyle S=\int _{t_{1}}^{t_{2}}{\bigl (}{\text{KE}}(t)-{\text{PE}}(t){\bigr )}\,dt,}
+  
+
+where the form of the kinetic energy (KE) and potential energy (PE) expressions depend upon the physics problem, and their value at each point on the path depends upon relative coordinates corresponding to that point. The energy function is called a Lagrangian; in simple problems it is the kinetic energy minus the potential energy of the system.
+
+Path variation
+In classical mechanics, a system moving between two points takes one particular path; other similar paths are not taken. Each conceivable path corresponds to a value of the action. An action principle predicts or explains that the particular path taken has a stationary value for the system's action: similar paths near the one taken have very similar action value. This variation in the action value is key to the action principles.
+In quantum mechanics, every possible path contributes an amplitude to the system's behavior, with the phase of each amplitude determined by the action for that path (phase = ⁠action/ħ⁠). The classical path emerges because:
+
+Only near the path of stationary action do neighboring paths have similar phases, leading to constructive interference,
+Neighboring paths have rapidly varying actions with the phase that interfere with other paths,
+When the scale of the problem is much larger than the Planck constant ħ (the classical limit), only the stationary action path survives the interference.
+The symbol δ is used to indicate the path variations so an action principle appears mathematically as
+
+  
+    
+      
+        (
+        δ
+        S
+        
+          )
+          
+            C
+          
+        
+        =
+        0
+        ,
+      
+    
+    {\displaystyle (\delta S)_{C}=0,}
+  
+
+meaning that at the stationary point, the variation of the action S with some fixed constraints C is zero. 
+For action principles, the stationary point may be a minimum or a saddle point, but not a maximum. Elliptical planetary orbits provide a simple example of two paths with equal action –  one in each direction around the orbit; neither can be the minimum or "least action". The path variation implied by δ is not the same as a differential like dt. The action integral depends on the coordinates of the objects, and these coordinates depend upon the path taken. Thus the action integral is a functional, a function of a function.
+
+Conservation principles
+
+An important result from geometry known as Noether's theorem states that any conserved quantities in a Lagrangian imply a continuous symmetry and conversely. For examples, a Lagrangian independent of time corresponds to a system with conserved energy; spatial translation independence implies momentum conservation; angular rotation invariance implies angular momentum conservation.
+These examples are global symmetries, where the independence is itself independent of space or time; more general local symmetries having a functional dependence on space or time lead to gauge theory. The observed conservation of isospin was used by Yang Chen-Ning and Robert Mills in 1953 to construct a gauge theory for mesons, leading some decades later to modern particle physics theory.
+
+Distinct principles
+Action principles apply to a wide variety of physical problems, including all of fundamental physics. The only major exceptions are cases involving friction or when only the initial position and velocities are given. Different action principles have different meaning for the variations; each specific application of an action principle requires a specific Lagrangian describing the physics.  A common name for any or all of these principles is "the principle of least action". For a discussion of the names and historical origin of these principles see action principle names.
+
+Fixed endpoints with conserved energy
+
+When total energy and the endpoints are fixed, Maupertuis's least action principle applies. For example, to score points in basketball the ball must leave the shooters hand and go through the hoop, but the time of the flight is not constrained. Maupertuis's least action principle is written mathematically as the stationary condition
+
+  
+    
+      
+        (
+        δ
+        W
+        
+          )
+          
+            E
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle (\delta W)_{E}=0}
+  
+
+on the abbreviated action
+
+  
+    
+      
+        W
+        [
+        
+          q
+        
+        ]
+         
+        
+          
+            
+              
+                =
+              
+              
+                def
+              
+            
+          
+        
+         
+        
+          ∫
+          
+            
+              q
+              
+                1
+              
+            
+          
+          
+            
+              q
+              
+                2
+              
+            
+          
+        
+        
+          p
+        
+        ⋅
+        
+          d
+          q
+        
+        ,
+      
+    
+    {\displaystyle W[\mathbf {q} ]\ {\stackrel {\text{def}}{=}}\ \int _{q_{1}}^{q_{2}}\mathbf {p} \cdot \mathbf {dq} ,}
+  
+
+(sometimes written S0), where p = (p1,p2,…,pN) are the particle momenta or the conjugate momenta of generalized coordinates, defined by the equation 
+
+  
+    
+      
+        
+          p
+          
+            k
+          
+        
+         
+        
+          
+            
+              
+                =
+              
+              
+                def
+              
+            
+          
+        
+         
+        
+          
+            
+              ∂
+              L
+            
+            
+              ∂
+              
+                
+                  
+                    
+                      q
+                      ˙
+                    
+                  
+                
+                
+                  k
+                
+              
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle p_{k}\ {\stackrel {\text{def}}{=}}\ {\frac {\partial L}{\partial {\dot {q}}_{k}}},}
+  
+
+where L(q,q̇,t) is the Lagrangian. Some textbooks write (δW)E = 0 as ΔS0, to emphasize that the variation used in this form of the action principle differs from Hamilton's variation. Here the total energy E is fixed during the variation, but not the time, the reverse of the constraints on Hamilton's principle. Consequently, the same path and end points take different times and energies in the two forms. The solutions in the case of this form of Maupertuis's principle are orbits: functions relating coordinates to each other in which time is simply an index or a parameter.
+
+Time-independent potentials; no forces
+
+For time-invariant system, the action 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ relates simply to the abbreviated action W on the stationary path as
+
+  
+    
+      
+        Δ
+        S
+        =
+        Δ
+        W
+        −
+        E
+        Δ
+        t
+      
+    
+    {\displaystyle \Delta S=\Delta W-E\Delta t}
+  
+
+for energy E and time difference Δt = t2 − t1. For a rigid body with no net force, the actions are identical, and the variational principles become equivalent to Fermat's principle of least time:
+
+  
+    
+      
+        δ
+        (
+        
+          t
+          
+            2
+          
+        
+        −
+        
+          t
+          
+            1
+          
+        
+        )
+        =
+        0.
+      
+    
+    {\displaystyle \delta (t_{2}-t_{1})=0.}
+  
+
+Fixed events
+
+When the physics problem gives the two endpoints as a position and a time, that is as events, Hamilton's action principle applies. For example, imagine planning a trip to the Moon. During your voyage the Moon will continue its orbit around the Earth: it is a moving target. Hamilton's principle for objects at positions q(t) is written mathematically as
+
+  
+    
+      
+        (
+        δ
+        
+          
+            S
+          
+        
+        
+          )
+          
+            Δ
+            t
+          
+        
+        =
+        0
+        ,
+        
+        
+          where
+        
+         
+        
+          
+            S
+          
+        
+        [
+        
+          q
+        
+        ]
+         
+        
+          
+            
+              
+                =
+              
+              
+                
+                  d
+                  e
+                  f
+                
+              
+            
+          
+        
+         
+        
+          ∫
+          
+            
+              t
+              
+                1
+              
+            
+          
+          
+            
+              t
+              
+                2
+              
+            
+          
+        
+        L
+        (
+        
+          q
+        
+        (
+        t
+        )
+        ,
+        
+          
+            
+              
+                q
+              
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        ,
+        t
+        )
+        
+        d
+        t
+        .
+      
+    
+    {\displaystyle (\delta {\mathcal {S}})_{\Delta t}=0,\quad {\text{where}}\ {\mathcal {S}}[\mathbf {q} ]\ {\stackrel {\mathrm {def} }{=}}\ \int _{t_{1}}^{t_{2}}L(\mathbf {q} (t),{\dot {\mathbf {q} }}(t),t)\,dt.}
+  
+
+The constraint Δt = t2 − t1 means that we only consider paths taking the same time, as well as connecting the same two points q(t1) and q(t2). The Lagrangian 
+  
+    
+      
+        L
+        =
+        T
+        −
+        V
+      
+    
+    {\displaystyle L=T-V}
+  
+ is the difference between kinetic energy and potential energy at each point on the path. Solution of the resulting equations gives the world line q(t). Starting with Hamilton's principle, the local differential Euler–Lagrange equation can be derived for systems of fixed energy. The action 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ in Hamilton's principle is the Legendre transformation of the action in Maupertuis's principle.
+
+Classical field theory
+
+The concepts and many of the methods useful for particle mechanics also apply to continuous fields. The action integral runs over a Lagrangian density, but the concepts are so close that the density is often simply called the Lagrangian.
+
+Quantum action principles
+
+For quantum mechanics, the action principles have significant advantages: only one  mechanical postulate is needed, if a covariant Lagrangian is used in the action, the result is relativistically correct, and they transition clearly to classical equivalents.
+Both Richard Feynman and Julian Schwinger developed quantum action principles based on early work by Paul Dirac. Feynman's integral method was not a variational principle but reduces to the classical least action principle; it led to his Feynman diagrams. Schwinger's differential approach relates infinitesimal amplitude changes to infinitesimal action changes.
+
+Feynman's action principle
+
+When quantum effects are important, new action principles are needed. Instead of a particle following a path, quantum mechanics defines a probability amplitude ψ(xk,t) at one point xk and time t related to a probability amplitude at a different point later in time:
+
+  
+    
+      
+        ψ
+        (
+        
+          x
+          
+            k
+            +
+            1
+          
+        
+        ,
+        t
+        +
+        ε
+        )
+        =
+        
+          
+            1
+            A
+          
+        
+        ∫
+        
+          e
+          
+            
+              
+                i
+                ℏ
+              
+            
+            S
+            (
+            
+              x
+              
+                k
+                +
+                1
+              
+            
+            ,
+            
+              x
+              
+                k
+              
+            
+            )
+          
+        
+        ψ
+        (
+        
+          x
+          
+            k
+          
+        
+        ,
+        t
+        )
+        
+        d
+        
+          x
+          
+            k
+          
+        
+        ,
+      
+    
+    {\displaystyle \psi (x_{k+1},t+\varepsilon )={\frac {1}{A}}\int e^{{\frac {i}{\hbar }}S(x_{k+1},x_{k})}\psi (x_{k},t)\,dx_{k},}
+  
+
+where S(xk + 1,xk) is the classical action.
+Instead of a single path with stationary action, all possible paths add (the integral over xk), weighted by a complex probability amplitude eiS⁄ħ. The phase of the amplitude is given by the action divided by the Planck constant or quantum of action: ⁠S/ħ⁠. When the action of a particle is much larger than ħ, ⁠S/ħ⁠ ≫ 1, the phase changes rapidly along the path: the amplitude averages to a small number.
+Thus the Planck constant sets the boundary between classical and quantum mechanics.
+All of the paths contribute in the quantum action principle. At the end point, where the paths meet, the paths with similar phases add, and those with phases differing by π subtract. Close to the path expected from classical physics, phases tend to align; the tendency is stronger for more massive objects that have larger values of action. In the classical limit, one path dominates –  the path of stationary action.
+
+Schwinger's action principle
+
+Schwinger's approach relates variations in the transition amplitudes (qf|qi) to variations in an action matrix element:
+
+  
+    
+      
+        δ
+        (
+        
+          q
+          
+            
+              r
+              
+                f
+              
+            
+          
+        
+        
+          |
+        
+        
+          q
+          
+            
+              r
+              
+                i
+              
+            
+          
+        
+        )
+        =
+        i
+        (
+        
+          q
+          
+            
+              r
+              
+                f
+              
+            
+          
+        
+        
+          |
+        
+        δ
+        S
+        
+          |
+        
+        
+          q
+          
+            
+              r
+              
+                i
+              
+            
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle \delta (q_{r_{\text{f}}}|q_{r_{\text{i}}})=i(q_{r_{\text{f}}}|\delta S|q_{r_{\text{i}}}),}
+  
+
+where the action operator is
+
+  
+    
+      
+        S
+        =
+        
+          ∫
+          
+            
+              t
+              
+                i
+              
+            
+          
+          
+            
+              t
+              
+                f
+              
+            
+          
+        
+        L
+        
+        d
+        t
+        .
+      
+    
+    {\displaystyle S=\int _{t_{\text{i}}}^{t_{\text{f}}}L\,dt.}
+  
+
+The Schwinger form makes analysis of variation of the Lagrangian itself, for example, variation in potential source strength, especially transparent.
+
+Optico-mechanical analogy
+
+For every path, the action integral builds in value from zero at the starting point to its final value at the end. Any nearby path has similar values at similar distances from the starting point. Lines or surfaces of constant partial action value can be drawn across the paths, creating a wave-like view of the action. Analysis like this connects particle-like rays of geometrical optics with the wavefronts of Huygens–Fresnel principle. 
+
+[Maupertuis] … thus pointed to that remarkable analogy between optical and mechanical phenomena which was observed much earlier by John Bernoulli and which was later fully developed in Hamilton's ingenious optico-mechanical theory. This analogy played a fundamental role in the development of modern wave-mechanics.
+
+Applications
+
+Action principles are applied to derive differential equations like the Euler–Lagrange equations or as direct applications to physical problems.
+
+Classical mechanics
+Action principles can be directly applied to many problems in classical mechanics, such as the shape of elastic rods under load,
+the shape of a liquid between two vertical plates (a capillary),
+or the motion of a pendulum when its support is in motion.
+
+Chemistry
+Quantum action principles are used in the quantum theory of atoms in molecules (QTAIM), a way of decomposing the computed electron density of molecules in to atoms as a way of gaining insight into chemical bonding.
+
+General relativity
+Inspired by Einstein's work on general relativity, the renowned mathematician David Hilbert applied the principle of least action to derive the field equations of general relativity. His action, now known as the Einstein–Hilbert action, 
+
+  
+    
+      
+        S
+        =
+        
+          
+            1
+            
+              2
+              κ
+            
+          
+        
+        ∫
+        R
+        
+          
+            −
+            g
+          
+        
+        
+        
+          d
+          
+            4
+          
+        
+        x
+        ,
+      
+    
+    {\displaystyle S={\frac {1}{2\kappa }}\int R{\sqrt {-g}}\,d^{4}x,}
+  
+
+contained a relativistically invariant volume element √−g d4x and the Ricci scalar curvature R. The scale factor 
+  
+    
+      
+        κ
+      
+    
+    {\displaystyle \kappa }
+  
+ is the Einstein gravitational constant.
+
+Other applications
+The action principle is so central in modern physics and mathematics that it is widely applied including in thermodynamics, fluid mechanics, the theory of relativity, quantum mechanics, particle physics, and string theory.
+
+History
+
+The action principle is preceded by earlier ideas in optics. In ancient Greece, Euclid wrote in his Catoptrica that, for the path of light reflecting from a mirror, the angle of incidence equals the angle of reflection. Hero of Alexandria later showed that this path has the shortest length and least time.
+Building on the early work of Pierre Louis Maupertuis, Leonhard Euler, and Joseph-Louis Lagrange defining versions of principle of least action,
+William Rowan Hamilton and in tandem Carl Gustav Jacob Jacobi developed a variational form for classical mechanics known as the Hamilton–Jacobi equation.
+In 1915, David Hilbert applied the variational principle to derive Albert Einstein's equations of general relativity.
+In 1933, the physicist Paul Dirac demonstrated how this principle can be used in quantum calculations by discerning the quantum mechanical underpinning of the principle in the quantum interference of amplitudes. Subsequently Julian Schwinger and Richard Feynman independently applied this principle in quantum electrodynamics.

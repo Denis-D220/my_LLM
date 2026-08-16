@@ -1,0 +1,1388 @@
+In dimensional analysis, the Strouhal number (St, or sometimes Sr to avoid the conflict with the Stanton number) is a dimensionless number describing oscillating flow mechanisms. The parameter is named after Vincenc Strouhal, a Czech physicist who experimented in 1878 with wires experiencing vortex shedding and singing in the wind. The Strouhal number is an integral part of the fundamentals of fluid mechanics.
+The Strouhal number is often given as
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            
+              f
+              L
+            
+            U
+          
+        
+        ,
+      
+    
+    {\displaystyle {\text{St}}={\frac {fL}{U}},}
+  
+
+where f is the frequency of vortex shedding in Hertz, L is the characteristic length (for example, hydraulic diameter or airfoil thickness), and U is the average flow speed in meters per second. In certain cases, like heaving (plunging) flight, this characteristic length is the amplitude of oscillation. This selection of characteristic length can be used to present a distinction between Strouhal number and reduced frequency:
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            
+              k
+              A
+            
+            
+              π
+              c
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\text{St}}={\frac {kA}{\pi c}},}
+  
+
+where k is the reduced frequency, and A is amplitude of the heaving oscillation.
+
+In the case of uniform flow past a fixed cylinder, the cylinder's diameter is the characteristic length. In that case, the Strouhal number is a function of the Reynolds number based on diameter, 
+  
+    
+      
+        
+          
+            R
+            e
+          
+          
+            D
+          
+        
+        =
+        ρ
+        V
+        D
+        
+          /
+        
+        μ
+      
+    
+    {\displaystyle \mathrm {Re} _{D}=\rho VD/\mu }
+  
+, where 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is the fluid's density (kg/m3) and 
+  
+    
+      
+        μ
+      
+    
+    {\displaystyle \mu }
+  
+ [kg-m/s] is the fluid's dynamic viscosity.  Over four orders of magnitude in Reynolds number, from 102 to 105, the value of the Strouhal number remains close to 0.2 (see figure).
+For spheres in uniform flow in the Reynolds number range of 8×102 < Re < 2×105 there co-exist two values of the Strouhal number.  The lower frequency is attributed to the large-scale instability of the wake, is independent of the Reynolds number Re, and is approximately equal to 0.2.  The higher-frequency Strouhal number is caused by small-scale instabilities from the separation of the shear layer.
+For large Strouhal numbers (order of 1), viscosity dominates fluid flow, resulting in a collective oscillating movement of the fluid "plug". For low Strouhal numbers (order of 10−4 and below), the high-speed, quasi-steady-state portion of the movement dominates the oscillation. Oscillation at intermediate Strouhal numbers is characterized by the buildup and rapidly subsequent shedding of vortices.
+
+Derivation
+Knowing Newton's second law stating force is equivalent to mass times acceleration, or 
+  
+    
+      
+        F
+        =
+        m
+        a
+      
+    
+    {\displaystyle F=ma}
+  
+, and that acceleration is the derivative of velocity, or 
+  
+    
+      
+        
+          
+            
+              U
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {U}{t}}}
+  
+ (characteristic speed/time) in the case of fluid mechanics, we see
+
+  
+    
+      
+        F
+        =
+        
+          
+            
+              
+                m
+                U
+              
+              t
+            
+          
+        
+      
+    
+    {\displaystyle F={\dfrac {mU}{t}}}
+  
+,
+Since characteristic speed can be represented as length per unit time, 
+  
+    
+      
+        
+          
+            
+              L
+              t
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {L}{t}}}
+  
+, we get
+
+  
+    
+      
+        F
+        =
+        
+          
+            
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+              L
+            
+          
+        
+      
+    
+    {\displaystyle F={\dfrac {mU^{2}}{L}}}
+  
+,
+where,
+
+m = mass,
+U = characteristic speed,
+L = characteristic length.
+Dividing both sides by 
+  
+    
+      
+        
+          
+            
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+              L
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {mU^{2}}{L}}}
+  
+, we get
+
+  
+    
+      
+        
+          
+            
+              
+                F
+                L
+              
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+        =
+        1
+        =
+        
+          constant
+        
+      
+    
+    {\displaystyle {\tfrac {FL}{mU^{2}}}=1={\text{constant}}}
+  
+ ⇒ 
+  
+    
+      
+        
+          
+            
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+              
+                F
+                L
+              
+            
+          
+        
+        =
+        1
+        =
+        
+          constant
+        
+      
+    
+    {\displaystyle {\tfrac {mU^{2}}{FL}}=1={\text{constant}}}
+  
+,
+where,
+
+m = mass,
+U = characteristic speed,
+F = net external forces,
+L = characteristic length.
+This provides a dimensionless basis for a relationship between mass, characteristic speed, net external forces, and length (size) which can be used to analyze the effects of fluid mechanics on a body with mass.
+If the net external forces are predominantly elastic, we can use Hooke's law to see
+
+  
+    
+      
+        F
+        =
+        k
+        Δ
+        L
+      
+    
+    {\displaystyle F=k\Delta L}
+  
+,
+where,
+
+k = spring constant (stiffness of elastic element),
+ΔL = deformation (change in length).
+Assuming 
+  
+    
+      
+        Δ
+        L
+        ∝
+        L
+      
+    
+    {\displaystyle \Delta L\propto L}
+  
+, then 
+  
+    
+      
+        F
+        ≈
+        k
+        L
+      
+    
+    {\displaystyle F\approx kL}
+  
+. With the natural resonant frequency of the elastic system, 
+  
+    
+      
+        
+          ω
+          
+            0
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \omega _{0}^{2}}
+  
+, being equal to 
+  
+    
+      
+        
+          
+            
+              k
+              m
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {k}{m}}}
+  
+, we get
+
+  
+    
+      
+        
+          
+            
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+              
+                F
+                L
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+              
+                k
+                
+                  L
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                U
+                
+                  2
+                
+              
+              
+                
+                  ω
+                  
+                    0
+                  
+                  
+                    2
+                  
+                
+                
+                  L
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\dfrac {mU^{2}}{FL}}={\dfrac {mU^{2}}{kL^{2}}}={\dfrac {U^{2}}{\omega _{0}^{2}L^{2}}}}
+  
+,
+where,
+
+m = mass,
+U = characteristic speed,
+
+  
+    
+      
+        
+          ω
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \omega _{0}}
+  
+ = natural resonant frequency,
+ΔL = deformation (change in length).
+Given that cyclic motion frequency can be represented by 
+  
+    
+      
+        f
+        =
+        
+          
+            
+              
+                
+                  ω
+                  
+                    0
+                  
+                  
+                    2
+                  
+                
+                L
+              
+              U
+            
+          
+        
+      
+    
+    {\displaystyle f={\tfrac {\omega _{0}^{2}L}{U}}}
+  
+ we get,
+
+  
+    
+      
+        
+          
+            
+              
+                U
+                
+                  2
+                
+              
+              
+                
+                  ω
+                  
+                    0
+                  
+                  
+                    2
+                  
+                
+                
+                  L
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              U
+              
+                f
+                L
+              
+            
+          
+        
+        =
+        
+          constant
+        
+        =
+        
+          
+            
+              
+                f
+                L
+              
+              U
+            
+          
+        
+        =
+        
+          St (Strouhal Number)
+        
+      
+    
+    {\displaystyle {\dfrac {U^{2}}{\omega _{0}^{2}L^{2}}}={\dfrac {U}{fL}}={\text{constant}}={\dfrac {fL}{U}}={\text{St (Strouhal Number)}}}
+  
+,
+where,
+
+f = frequency,
+L = characteristic length,
+U = characteristic speed.
+
+Applications
+
+Micro/Nanorobotics
+In the field of micro and nanorobotics, the Strouhal number is used alongside the Reynolds number in analyzing the impact of an external oscillatory fluidic flow on the body of a microrobot. When considering a microrobot with cyclic motion, the Strouhal number can be evaluated as
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            
+              
+                f
+                L
+              
+              U
+            
+          
+        
+      
+    
+    {\displaystyle {\text{St}}={\dfrac {fL}{U}}}
+  
+,
+where,
+
+f = cyclic motion frequency,
+L = characteristic length of robot,
+U = characteristic speed.
+The analysis of a microrobot using the Strouhal number allows one to assess the impact that the motion of the fluid it is in has on its motion in relation to the inertial forces acting on the robot–regardless of the dominant forces being elastic or not.
+
+Medical
+In the medical field, microrobots that use swimming motions to move may make micromanipulations in unreachable environments.
+The equation used for a blood vessel:
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            
+              
+                f
+                D
+              
+              V
+            
+          
+        
+      
+    
+    {\displaystyle {\text{St}}={\dfrac {fD}{V}}}
+  
+,
+where,
+
+f = oscillation frequency of the microbot swimming motion
+D = blood vessel diameter
+V = unsteady viscoelastic flow
+The Strouhal number is used as a ratio of the Deborah number (De) and Weissenberg number (Wi):
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            
+              De
+              Wi
+            
+          
+        
+      
+    
+    {\displaystyle {\text{St}}={\dfrac {\text{De}}{\text{Wi}}}}
+  
+.
+The Strouhal number may also be used to obtain the Womersley number (Wo). The case for blood flow can be categorized as an unsteady viscoelastic flow, therefore the Womersley number is
+
+  
+    
+      
+        
+          Wo
+        
+        =
+        
+          
+            
+              
+                
+                  π
+                  2
+                
+              
+            
+            ×
+            
+              Re
+            
+            ×
+            
+              St
+            
+          
+        
+      
+    
+    {\displaystyle {\text{Wo}}={\sqrt {{\dfrac {\pi }{2}}\times {\text{Re}}\times {\text{St}}}}}
+  
+,
+Or considering both equations,
+
+  
+    
+      
+        
+          Wo
+        
+        =
+        
+          
+            
+              
+                
+                  π
+                  2
+                
+              
+            
+            ×
+            
+              Re
+            
+            ×
+            
+              
+                
+                  De
+                  Wi
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\text{Wo}}={\sqrt {{\dfrac {\pi }{2}}\times {\text{Re}}\times {\dfrac {\text{De}}{\text{Wi}}}}}}
+  
+.
+
+Metrology
+In metrology, specifically axial-flow turbine meters, the Strouhal number is used in combination with the Roshko number to give a correlation between flow rate and frequency.  The advantage of this method over the frequency/viscosity versus K-factor method is that it takes into account temperature effects on the meter.
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            f
+            U
+          
+        
+        
+          C
+          
+            3
+          
+        
+        ,
+      
+    
+    {\displaystyle {\text{St}}={\frac {f}{U}}C^{3},}
+  
+
+where,
+
+f = meter frequency,
+U = flow rate,
+C = linear coefficient of expansion for the meter housing material.
+This relationship leaves Strouhal dimensionless, although a dimensionless approximation is often used for C3, resulting in units of pulses/volume (same as K-factor).
+This relationship between flow and frequency can also be found in the aeronautical field. Considering pulsating methane-air coflow jet diffusion flames, we get
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            
+              
+                a
+                
+                  w
+                  
+                    j
+                  
+                
+              
+              
+                U
+                
+                  j
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\text{St}}={\dfrac {aw_{j}}{U_{j}}}}
+  
+,
+where,
+
+a = fuel jet radius
+w = the modulation frequency
+U = exit velocity of the fuel jet
+For a small Strouhal number (St=0.1) the modulation forms a deviation in the flow that travels very far downstream. As the Strouhal number grows, the non-dimensional frequency approaches the natural frequency of a flickering flame, and eventually will have greater pulsation than the flame.
+
+Animal locomotion
+In swimming or flying animals, Strouhal number is defined as
+
+  
+    
+      
+        
+          St
+        
+        =
+        
+          
+            f
+            U
+          
+        
+        A
+        ,
+      
+    
+    {\displaystyle {\text{St}}={\frac {f}{U}}A,}
+  
+
+where,
+
+f = oscillation frequency (tail-beat, wing-flapping, etc.),
+U = flow rate,
+A = peak-to-peak oscillation amplitude.
+In animal flight or swimming, propulsive efficiency is high over a narrow range of Strouhal constants, generally peaking in the 0.2 < St < 0.4 range. This range is used in the swimming of dolphins, sharks, and bony fish, and in the cruising flight of birds, bats and insects. However, in other forms of flight other values are found. Intuitively the ratio measures the steepness of the strokes, viewed from the side (e.g., assuming movement through a stationary fluid) – f is the stroke frequency, A is the amplitude, so the numerator fA is half the vertical speed of the wing tip, while the denominator V is the horizontal speed. Thus the graph of the wing tip forms an approximate sinusoid with aspect (maximal slope) twice the Strouhal constant.
+
+Efficient motion
+The Strouhal number is most commonly used for assessing oscillating flow as a result of an object's motion through a fluid. The Strouhal number reflects the difficulty for animals to travel efficiently through a fluid with their cyclic propelling motions. The number relates to propulsive efficiency, which peaks between 70%–80% when within the optimal Strouhal number range of 0.2 to 0.4. Through the use of factors such as the stroke frequency, the amplitude of each stroke, and velocity, the Strouhal number is able to analyze the efficiency and impact of an animal's propulsive forces through a fluid, such as those from swimming or flying. For instance, the value represents the constraints to achieve greater propulsive efficiency, which affects motion when cruising and aerodynamic forces when hovering.
+Greater reactive forces and properties that act against the object, such as viscosity and density, reduce the ability of an animal's motion to fall within the ideal Strouhal number range when swimming. Through the assessment of different species that fly or swim, it was found that the motion of many species of birds and fish falls within the optimal Strouhal range. However, the Strouhal number varies more within the same species than other species based on the method of how they move in a constrained manner in response to aerodynamic forces.
+
+Example: Alcid
+The Strouhal number has significant importance in analyzing the flight of animals since it is based on the streamlines and the animal's velocity as it travels through the fluid. Its significance is demonstrated through the motion of alcids as it passes through different mediums (air to water). The assessment of alcids determined the peculiarity of being able to fly under the efficient Strouhal number range in air and water despite a high mass relative to their wing area. The alcid's efficient dual-medium motion developed through natural selection where the environment played a role in the evolution of animals over time to fall under a certain efficient range. The dual-medium motion demonstrates how alcids had two different flight patterns based on the stroke velocities as it moved through each fluid. However, as the bird travels through a different medium, it has to face the influence of the fluid's density and viscosity. Furthermore, the alcid also has to resist the upward-acting buoyancy as it moves horizontally.
+
+Scaling of the Strouhal number
+
+Scale Analysis
+In order to determine significance of the Strouhal number at varying scales, one may perform scale analysis–a simplification method to analyze the impact of factors as they change with respect to some scale. When considered in the context of microrobotics and nanorobotics, size is the factor of interest when performing scale analysis.
+Scale analysis of the Strouhal number allows for analysis of the relationship between mass and inertial forces as both change with respect to size. Taking its original underived form, 
+  
+    
+      
+        
+          
+            
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+              
+                F
+                L
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {mU^{2}}{FL}}}
+  
+, we can then relate each term to size and see how the ratio changes as size changes.
+Given 
+  
+    
+      
+        m
+        =
+        V
+        ρ
+      
+    
+    {\displaystyle m=V\rho }
+  
+ where m is mass, V is volume, and 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is density, we can see mass is directly related to size as volume scales with length (L). Taking the volume to be 
+  
+    
+      
+        
+          L
+          
+            3
+          
+        
+      
+    
+    {\displaystyle L^{3}}
+  
+, we can directly relate mass and size as
+
+  
+    
+      
+        m
+        ≈
+        
+          L
+          
+            3
+          
+        
+      
+    
+    {\displaystyle m\approx L^{3}}
+  
+.
+Characteristic speed (U) is in terms of 
+  
+    
+      
+        
+          
+            
+              distance
+              time
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\text{distance}}{\text{time}}}}
+  
+, and relative distance scales with size, therefore
+
+  
+    
+      
+        
+          U
+          
+            2
+          
+        
+        ≈
+        
+          L
+          
+            2
+          
+        
+      
+    
+    {\displaystyle U^{2}\approx L^{2}}
+  
+.
+The net external forces (F) scales in relation to mass and acceleration, given by 
+  
+    
+      
+        F
+        =
+        m
+        ⋅
+        a
+      
+    
+    {\displaystyle F=m\cdot a}
+  
+. Acceleration is in terms of 
+  
+    
+      
+        
+          
+            
+              distance
+              
+                
+                  time
+                
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\tfrac {\text{distance}}{{\text{time}}^{2}}}}
+  
+, therefore 
+  
+    
+      
+        a
+        ≈
+        L
+      
+    
+    {\displaystyle a\approx L}
+  
+. The mass-size relationship was established to be 
+  
+    
+      
+        m
+        ≈
+        
+          L
+          
+            3
+          
+        
+      
+    
+    {\displaystyle m\approx L^{3}}
+  
+, so considering all three relationships, we get
+
+  
+    
+      
+        F
+        ≈
+        
+          L
+          
+            4
+          
+        
+      
+    
+    {\displaystyle F\approx L^{4}}
+  
+.
+Length (L) already denotes size and remains L.
+Taking all of this together, we get
+
+  
+    
+      
+        
+          
+            
+              
+                m
+                
+                  U
+                  
+                    2
+                  
+                
+              
+              
+                F
+                L
+              
+            
+          
+        
+        ≈
+        
+          
+            
+              
+                
+                  L
+                  
+                    3
+                  
+                
+                
+                  L
+                  
+                    2
+                  
+                
+              
+              
+                
+                  L
+                  
+                    4
+                  
+                
+                L
+              
+            
+          
+        
+        ≈
+        
+          
+            
+              
+                L
+                
+                  5
+                
+              
+              
+                L
+                
+                  5
+                
+              
+            
+          
+        
+        ≈
+        
+          L
+          
+            0
+          
+        
+        =
+        1
+      
+    
+    {\displaystyle {\dfrac {mU^{2}}{FL}}\approx {\dfrac {L^{3}L^{2}}{L^{4}L}}\approx {\dfrac {L^{5}}{L^{5}}}\approx L^{0}=1}
+  
+.
+With the Strouhal number relating the mass to inertial forces, this can be expected as these two factors will scale proportionately with size and neither will increase nor decrease in significance with respect to their contribution to the body's behavior in the cyclic motion of the fluid.
+
+Relationship with the Richardson number
+The scaling relationship between the Richardson number and the Strouhal number is represented by the equation:
+
+  
+    
+      
+        
+          
+            St
+          
+          
+            l
+          
+        
+        =
+        b
+        
+          
+            Ri
+          
+          
+            l
+          
+          
+            a
+          
+        
+      
+    
+    {\displaystyle {\text{St}}_{l}=b{\text{Ri}}_{l}^{a}}
+  
+,
+where a and b are constants depending on the condition.
+For round helium buoyant jets and plumes:
+
+  
+    
+      
+        
+          
+            St
+          
+          
+            D
+          
+        
+        ∼
+        
+          
+            Ri
+          
+          
+            D
+          
+          
+            0.38
+          
+        
+      
+    
+    {\displaystyle {\text{St}}_{D}\sim {\text{Ri}}_{D}^{0.38}}
+  
+.
+When 
+  
+    
+      
+        
+          Ri
+        
+        <
+        100
+      
+    
+    {\displaystyle {\text{Ri}}<100}
+  
+,
+
+  
+    
+      
+        
+          
+            St
+          
+          
+            D
+          
+        
+        =
+        0.8
+        
+          
+            Ri
+          
+          
+            D
+          
+          
+            0.38
+          
+        
+      
+    
+    {\displaystyle {\text{St}}_{D}=0.8{\text{Ri}}_{D}^{0.38}}
+  
+.
+When 
+  
+    
+      
+        100
+        <
+        
+          Ri
+        
+        <
+        500
+      
+    
+    {\displaystyle 100<{\text{Ri}}<500}
+  
+,
+
+  
+    
+      
+        
+          
+            St
+          
+          
+            D
+          
+        
+        =
+        2.1
+        
+          
+            Ri
+          
+          
+            D
+          
+          
+            0.28
+          
+        
+      
+    
+    {\displaystyle {\text{St}}_{D}=2.1{\text{Ri}}_{D}^{0.28}}
+  
+.
+For planar buoyant jets and plumes:
+
+  
+    
+      
+        
+          
+            St
+          
+          
+            W
+          
+        
+        =
+        0.55
+        
+          
+            Ri
+          
+          
+            W
+          
+          
+            0.45
+          
+        
+      
+    
+    {\displaystyle {\text{St}}_{W}=0.55{\text{Ri}}_{W}^{0.45}}
+  
+.
+For shape-independent scaling:
+
+  
+    
+      
+        
+          
+            St
+          
+          
+            R
+            h
+          
+        
+        =
+        
+          e
+          
+            −
+            1
+          
+        
+        
+          
+            Ri
+          
+          
+            R
+            h
+          
+          
+            
+              
+                2
+                5
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\text{St}}_{Rh}=e^{-1}{\text{Ri}}_{Rh}^{\tfrac {2}{5}}}
+  
+
+Relationship with Reynolds number
+The Strouhal number and Reynolds number must be considered when addressing the ideal method to develop a body made to move through a fluid. Furthermore, the relationship for these values is expressed through Lighthill's elongated-body theory, which relates the reactive forces experienced by a body moving through a fluid with its inertial forces. The Strouhal number was determined to depend upon the dimensionless Lighthill number, which in turn relates to the Reynolds number. The value of the Strouhal number can then be seen to decrease with an increasing Reynolds number, and to increase with an increasing Lighthill number.

@@ -1,0 +1,1524 @@
+The Venturi effect is the reduction in fluid pressure that results when a moving fluid speeds up as it is funneled from one section of a pipe to another, smaller section. As the fluid flows into a smaller area, the fluid's velocity increases, while the static pressure decreases. The Venturi effect is an example of Bernoulli's principle.
+The Venturi effect is named after its discoverer, the Italian Physicist Giovanni Battista Venturi, and was first published in 1797.
+The effect has various applications in engineering, architecture, and everyday objects such as atomizer nozzles and wine aerators. The reduction in pressure inside the constriction can be used both for measuring the fluid flow and for moving other fluids (e.g. in a vacuum ejector).
+
+Background
+In inviscid fluid dynamics, an incompressible fluid's velocity must increase as it passes through a constriction in accord with the principle of mass continuity, while its static pressure must decrease in accord with the principle of conservation of mechanical energy (Bernoulli's principle) or according to the Euler equations. Thus, any gain in kinetic energy a fluid may attain by its increased velocity through a constriction is balanced by a drop in pressure because of its loss in potential energy.
+By measuring the pressure difference without needing to measure the actual pressures at the two points, the flow rate can be determined, as in various flow measurement devices such as Venturi meters, Venturi nozzles and orifice plates.
+Referring to the adjacent diagram, using Bernoulli's equation in the special case of steady, incompressible, inviscid flows (such as the flow of water or other liquid, or low-speed flow of gas) along a streamline, the theoretical static pressure drop at the constriction is given by
+
+  
+    
+      
+        
+          p
+          
+            1
+          
+        
+        −
+        
+          p
+          
+            2
+          
+        
+        =
+        
+          
+            ρ
+            2
+          
+        
+        (
+        
+          v
+          
+            2
+          
+          
+            2
+          
+        
+        −
+        
+          v
+          
+            1
+          
+          
+            2
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle p_{1}-p_{2}={\frac {\rho }{2}}(v_{2}^{2}-v_{1}^{2}),}
+  
+
+where 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  
+ is the density of the fluid, 
+  
+    
+      
+        
+          v
+          
+            1
+          
+        
+      
+    
+    {\displaystyle v_{1}}
+  
+ is the (slower) fluid velocity where the pipe is wider, and 
+  
+    
+      
+        
+          v
+          
+            2
+          
+        
+      
+    
+    {\displaystyle v_{2}}
+  
+ is the (faster) fluid velocity where the pipe is narrower (as seen in the figure). The static pressure at each position is measured using a small tube either outside and ending at the wall or into the pipe with the small tube end face parallel with the flow direction. 
+
+Choked flow
+The limiting case of the Venturi effect is when a fluid reaches the state of choked flow, where the fluid velocity approaches the local speed of sound of the fluid. When a fluid system is in a state of choked flow, a further decrease in the downstream pressure environment will not lead to an increase in velocity, unless the fluid is compressed.
+The mass flow rate for a compressible fluid will increase with increased upstream pressure, which will increase the density of the fluid through the constriction (though the velocity will remain constant).  This is the principle of operation of a de Laval nozzle. Increasing source temperature can also increase the local sonic velocity, thus allowing increased mass flow rate.
+
+Expansion of the section
+The Bernoulli equation is invertible, and pressure should rise when a fluid slows down. Nevertheless, if there is a shortening expansion in the tube section, turbulence is more likely to appear, and the variation from the theorem will increase. Generally in Venturi tubes, the pressure in the entrance is compared to the pressure in the middle section and the output section is not compared with them.
+
+Experimental apparatus
+
+Venturi tubes
+The simplest apparatus is a tubular setup known as a Venturi tube or simply a Venturi (plural: "Venturis" or occasionally "Venturies").  Fluid first flows through a length of converging tube and then often flows into a diverging tube.  To avoid undue aerodynamic drag, a Venturi tube typically has an entry cone of 30 degrees and an exit cone of 5 degrees.
+Venturi tubes are often used in processes where permanent pressure loss is not tolerable and where maximum accuracy is needed in case of highly viscous liquids.
+
+Orifice plate
+Venturi tubes are more expensive to construct than simple orifice plates, and both function on the same basic principle. However, for any given differential pressure, orifice plates cause significantly more permanent energy loss.
+
+Instrumentation and measurement
+Both Venturi tubes and orifice plates are used in industrial applications and in scientific laboratories for measuring the flow rate of liquids.
+
+Flow rate
+A Venturi can be used to measure the volumetric flow rate, 
+  
+    
+      
+        
+          Q
+        
+      
+    
+    {\displaystyle \scriptstyle Q}
+  
+, using Bernoulli's principle.
+Since
+
+  
+    
+      
+        
+          
+            
+              
+                Q
+              
+              
+                
+                =
+                
+                  v
+                  
+                    1
+                  
+                
+                
+                  A
+                  
+                    1
+                  
+                
+                =
+                
+                  v
+                  
+                    2
+                  
+                
+                
+                  A
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+                
+                  p
+                  
+                    1
+                  
+                
+                −
+                
+                  p
+                  
+                    2
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    ρ
+                    2
+                  
+                
+                
+                  (
+                  
+                    
+                      v
+                      
+                        2
+                      
+                      
+                        2
+                      
+                    
+                    −
+                    
+                      v
+                      
+                        1
+                      
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}Q&=v_{1}A_{1}=v_{2}A_{2}\\[3pt]p_{1}-p_{2}&={\frac {\rho }{2}}\left(v_{2}^{2}-v_{1}^{2}\right)\end{aligned}}}
+  
+
+then
+
+  
+    
+      
+        Q
+        =
+        
+          A
+          
+            1
+          
+        
+        
+          
+            
+              
+                2
+                ρ
+              
+            
+            ⋅
+            
+              
+                
+                  
+                    p
+                    
+                      1
+                    
+                  
+                  −
+                  
+                    p
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        
+                          
+                            A
+                            
+                              1
+                            
+                          
+                          
+                            A
+                            
+                              2
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      2
+                    
+                  
+                  −
+                  1
+                
+              
+            
+          
+        
+        =
+        
+          A
+          
+            2
+          
+        
+        
+          
+            
+              
+                2
+                ρ
+              
+            
+            ⋅
+            
+              
+                
+                  
+                    p
+                    
+                      1
+                    
+                  
+                  −
+                  
+                    p
+                    
+                      2
+                    
+                  
+                
+                
+                  1
+                  −
+                  
+                    
+                      (
+                      
+                        
+                          
+                            A
+                            
+                              2
+                            
+                          
+                          
+                            A
+                            
+                              1
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle Q=A_{1}{\sqrt {{\frac {2}{\rho }}\cdot {\frac {p_{1}-p_{2}}{\left({\frac {A_{1}}{A_{2}}}\right)^{2}-1}}}}=A_{2}{\sqrt {{\frac {2}{\rho }}\cdot {\frac {p_{1}-p_{2}}{1-\left({\frac {A_{2}}{A_{1}}}\right)^{2}}}}}}
+  
+
+A Venturi can also be used to mix a liquid with a gas. If a pump forces the liquid through a tube connected to a system consisting of a Venturi to increase the liquid speed (the diameter decreases), a short piece of tube with a small hole in it, and last a Venturi that decreases speed (so the pipe gets wider again), the gas will be sucked in through the small hole because of changes in pressure. At the end of the system, a mixture of liquid and gas will appear. See aspirator and pressure head for discussion of this type of siphon.
+
+Differential pressure
+
+As fluid flows through a Venturi, the expansion and compression of the fluids cause the pressure inside the Venturi to change. This principle can be used in metrology for gauges calibrated for differential pressures. This type of pressure measurement may be more convenient, for example, to measure fuel or combustion pressures in jet or rocket engines.
+The first large-scale Venturi meters to measure liquid flows were developed by Clemens Herschel who used them to measure small and large flows of water and wastewater beginning at the end of the 19th century. While working for the Holyoke Water Power Company, Herschel would develop the means for measuring these flows to determine the water power consumption of different mills on the Holyoke Canal System, first beginning development of the device in 1886, two years later he would describe his invention of the Venturi meter to William Unwin in a letter dated June 5, 1888.
+
+Compensation for temperature, pressure, and mass
+Fundamentally, pressure-based meters measure kinetic energy density. Bernoulli's equation (used above) relates this to mass density and volumetric flow:
+
+  
+    
+      
+        Δ
+        P
+        =
+        
+          
+            1
+            2
+          
+        
+        ρ
+        (
+        
+          v
+          
+            2
+          
+          
+            2
+          
+        
+        −
+        
+          v
+          
+            1
+          
+          
+            2
+          
+        
+        )
+        =
+        
+          
+            1
+            2
+          
+        
+        ρ
+        
+          (
+          
+            
+              
+                (
+                
+                  
+                    
+                      A
+                      
+                        1
+                      
+                    
+                    
+                      A
+                      
+                        2
+                      
+                    
+                  
+                
+                )
+              
+              
+                2
+              
+            
+            −
+            1
+          
+          )
+        
+        
+          v
+          
+            1
+          
+          
+            2
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        ρ
+        
+          (
+          
+            
+              
+                1
+                
+                  A
+                  
+                    2
+                  
+                  
+                    2
+                  
+                
+              
+            
+            −
+            
+              
+                1
+                
+                  A
+                  
+                    1
+                  
+                  
+                    2
+                  
+                
+              
+            
+          
+          )
+        
+        
+          Q
+          
+            2
+          
+        
+        =
+        k
+        
+        ρ
+        
+        
+          Q
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \Delta P={\frac {1}{2}}\rho (v_{2}^{2}-v_{1}^{2})={\frac {1}{2}}\rho \left(\left({\frac {A_{1}}{A_{2}}}\right)^{2}-1\right)v_{1}^{2}={\frac {1}{2}}\rho \left({\frac {1}{A_{2}^{2}}}-{\frac {1}{A_{1}^{2}}}\right)Q^{2}=k\,\rho \,Q^{2}}
+  
+
+where constant terms are absorbed into k. Using the definitions of density (
+  
+    
+      
+        m
+        =
+        ρ
+        V
+      
+    
+    {\displaystyle m=\rho V}
+  
+), molar concentration (
+  
+    
+      
+        n
+        =
+        C
+        V
+      
+    
+    {\displaystyle n=CV}
+  
+), and molar mass (
+  
+    
+      
+        m
+        =
+        M
+        n
+      
+    
+    {\displaystyle m=Mn}
+  
+), one can also derive mass flow or molar flow (i.e. standard volume flow):
+
+  
+    
+      
+        
+          
+            
+              
+                Δ
+                P
+              
+              
+                
+                =
+                k
+                
+                ρ
+                
+                
+                  Q
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                k
+                
+                  
+                    1
+                    ρ
+                  
+                
+                
+                
+                  
+                    
+                      
+                        m
+                        ˙
+                      
+                    
+                  
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                k
+                
+                  
+                    ρ
+                    
+                      C
+                      
+                        2
+                      
+                    
+                  
+                
+                
+                
+                  
+                    
+                      
+                        n
+                        ˙
+                      
+                    
+                  
+                  
+                    2
+                  
+                
+                =
+                k
+                
+                  
+                    M
+                    C
+                  
+                
+                
+                
+                  
+                    
+                      
+                        n
+                        ˙
+                      
+                    
+                  
+                  
+                    2
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\Delta P&=k\,\rho \,Q^{2}\\&=k{\frac {1}{\rho }}\,{\dot {m}}^{2}\\&=k{\frac {\rho }{C^{2}}}\,{\dot {n}}^{2}=k{\frac {M}{C}}\,{\dot {n}}^{2}.\end{aligned}}}
+  
+
+However, measurements outside the design point must compensate for the effects of temperature, pressure, and molar mass on density and concentration. The ideal gas law is used to relate actual values to design values:
+
+  
+    
+      
+        C
+        =
+        
+          
+            P
+            
+              R
+              T
+            
+          
+        
+        =
+        
+          
+            
+              (
+              
+                
+                  P
+                  
+                    P
+                    
+                      ⊖
+                    
+                  
+                
+              
+              )
+            
+            
+              (
+              
+                
+                  T
+                  
+                    T
+                    
+                      ⊖
+                    
+                  
+                
+              
+              )
+            
+          
+        
+        
+          C
+          
+            ⊖
+          
+        
+      
+    
+    {\displaystyle C={\frac {P}{RT}}={\frac {\left({\frac {P}{P^{\ominus }}}\right)}{\left({\frac {T}{T^{\ominus }}}\right)}}C^{\ominus }}
+  
+
+  
+    
+      
+        ρ
+        =
+        
+          
+            
+              M
+              P
+            
+            
+              R
+              T
+            
+          
+        
+        =
+        
+          
+            
+              (
+              
+                
+                  
+                    M
+                    
+                      M
+                      
+                        ⊖
+                      
+                    
+                  
+                
+                
+                  
+                    P
+                    
+                      P
+                      
+                        ⊖
+                      
+                    
+                  
+                
+              
+              )
+            
+            
+              (
+              
+                
+                  T
+                  
+                    T
+                    
+                      ⊖
+                    
+                  
+                
+              
+              )
+            
+          
+        
+        
+          ρ
+          
+            ⊖
+          
+        
+        .
+      
+    
+    {\displaystyle \rho ={\frac {MP}{RT}}={\frac {\left({\frac {M}{M^{\ominus }}}{\frac {P}{P^{\ominus }}}\right)}{\left({\frac {T}{T^{\ominus }}}\right)}}\rho ^{\ominus }.}
+  
+
+Substituting these two relations into the pressure-flow equations above yields the fully compensated flows:
+
+  
+    
+      
+        
+          
+            
+              
+                Δ
+                P
+              
+              
+                
+                =
+                k
+                
+                  
+                    
+                      (
+                      
+                        
+                          
+                            M
+                            
+                              M
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                        
+                          
+                            P
+                            
+                              P
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      (
+                      
+                        
+                          T
+                          
+                            T
+                            
+                              ⊖
+                            
+                          
+                        
+                      
+                      )
+                    
+                  
+                
+                
+                  ρ
+                  
+                    ⊖
+                  
+                
+                
+                
+                  Q
+                  
+                    2
+                  
+                
+              
+              
+                =
+                Δ
+                
+                  P
+                  
+                    max
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        
+                          
+                            M
+                            
+                              M
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                        
+                          
+                            P
+                            
+                              P
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      (
+                      
+                        
+                          T
+                          
+                            T
+                            
+                              ⊖
+                            
+                          
+                        
+                      
+                      )
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        Q
+                        
+                          Q
+                          
+                            max
+                          
+                        
+                      
+                    
+                    )
+                  
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                k
+                
+                  
+                    
+                      (
+                      
+                        
+                          T
+                          
+                            T
+                            
+                              ⊖
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      
+                        (
+                        
+                          
+                            
+                              M
+                              
+                                M
+                                
+                                  ⊖
+                                
+                              
+                            
+                          
+                          
+                            
+                              P
+                              
+                                P
+                                
+                                  ⊖
+                                
+                              
+                            
+                          
+                        
+                        )
+                      
+                      
+                        ρ
+                        
+                          ⊖
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        m
+                        ˙
+                      
+                    
+                  
+                  
+                    2
+                  
+                
+              
+              
+                =
+                Δ
+                
+                  P
+                  
+                    max
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        
+                          T
+                          
+                            T
+                            
+                              ⊖
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      (
+                      
+                        
+                          
+                            M
+                            
+                              M
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                        
+                          
+                            P
+                            
+                              P
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                      
+                      )
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            m
+                            ˙
+                          
+                        
+                        
+                          
+                            
+                              
+                                m
+                                ˙
+                              
+                            
+                          
+                          
+                            max
+                          
+                        
+                      
+                    
+                    )
+                  
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                k
+                
+                  
+                    
+                      M
+                      
+                        (
+                        
+                          
+                            T
+                            
+                              T
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                        )
+                      
+                    
+                    
+                      
+                        (
+                        
+                          
+                            P
+                            
+                              P
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                        )
+                      
+                      
+                        C
+                        
+                          ⊖
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        n
+                        ˙
+                      
+                    
+                  
+                  
+                    2
+                  
+                
+              
+              
+                =
+                Δ
+                
+                  P
+                  
+                    max
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        
+                          
+                            M
+                            
+                              M
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                        
+                          
+                            T
+                            
+                              T
+                              
+                                ⊖
+                              
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      (
+                      
+                        
+                          P
+                          
+                            P
+                            
+                              ⊖
+                            
+                          
+                        
+                      
+                      )
+                    
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          
+                            n
+                            ˙
+                          
+                        
+                        
+                          
+                            
+                              
+                                n
+                                ˙
+                              
+                            
+                          
+                          
+                            max
+                          
+                        
+                      
+                    
+                    )
+                  
+                  
+                    2
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\Delta P&=k{\frac {\left({\frac {M}{M^{\ominus }}}{\frac {P}{P^{\ominus }}}\right)}{\left({\frac {T}{T^{\ominus }}}\right)}}\rho ^{\ominus }\,Q^{2}&=\Delta P_{\max }{\frac {\left({\frac {M}{M^{\ominus }}}{\frac {P}{P^{\ominus }}}\right)}{\left({\frac {T}{T^{\ominus }}}\right)}}\left({\frac {Q}{Q_{\max }}}\right)^{2}\\&=k{\frac {\left({\frac {T}{T^{\ominus }}}\right)}{\left({\frac {M}{M^{\ominus }}}{\frac {P}{P^{\ominus }}}\right)\rho ^{\ominus }}}{\dot {m}}^{2}&=\Delta P_{\max }{\frac {\left({\frac {T}{T^{\ominus }}}\right)}{\left({\frac {M}{M^{\ominus }}}{\frac {P}{P^{\ominus }}}\right)}}\left({\frac {\dot {m}}{{\dot {m}}_{\max }}}\right)^{2}\\&=k{\frac {M\left({\frac {T}{T^{\ominus }}}\right)}{\left({\frac {P}{P^{\ominus }}}\right)C^{\ominus }}}{\dot {n}}^{2}&=\Delta P_{\max }{\frac {\left({\frac {M}{M^{\ominus }}}{\frac {T}{T^{\ominus }}}\right)}{\left({\frac {P}{P^{\ominus }}}\right)}}\left({\frac {\dot {n}}{{\dot {n}}_{\max }}}\right)^{2}.\end{aligned}}}
+  
+
+Q, m, or n are easily isolated by dividing and taking the square root. Note that pressure-, temperature-, and mass-compensation is required for every flow, regardless of the end units or dimensions. Also we see the relations:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    k
+                    
+                      Δ
+                      
+                        P
+                        
+                          max
+                        
+                      
+                    
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      
+                        ρ
+                        
+                          ⊖
+                        
+                      
+                      
+                        Q
+                        
+                          max
+                        
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      ρ
+                      
+                        ⊖
+                      
+                    
+                    
+                      
+                        
+                          
+                            m
+                            ˙
+                          
+                        
+                      
+                      
+                        max
+                      
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        
+                          C
+                          
+                            ⊖
+                          
+                        
+                      
+                      
+                        2
+                      
+                    
+                    
+                      
+                        ρ
+                        
+                          ⊖
+                        
+                      
+                      
+                        
+                          
+                            
+                              n
+                              ˙
+                            
+                          
+                        
+                        
+                          max
+                        
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+                =
+                
+                  
+                    
+                      C
+                      
+                        ⊖
+                      
+                    
+                    
+                      
+                        M
+                        
+                          ⊖
+                        
+                      
+                      
+                        
+                          
+                            
+                              n
+                              ˙
+                            
+                          
+                        
+                        
+                          max
+                        
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{\frac {k}{\Delta P_{\max }}}&={\frac {1}{\rho ^{\ominus }Q_{\max }^{2}}}\\&={\frac {\rho ^{\ominus }}{{\dot {m}}_{\max }^{2}}}\\&={\frac {{C^{\ominus }}^{2}}{\rho ^{\ominus }{\dot {n}}_{\max }^{2}}}={\frac {C^{\ominus }}{M^{\ominus }{\dot {n}}_{\max }^{2}}}.\end{aligned}}}
+  
+
+Examples
+
+The Venturi effect may be observed or used in the following:
+
+Machines
+During Underway replenishment the helmsman of each ship must constantly steer away from the other ship due to the Venturi effect, otherwise they will collide.
+Cargo eductors on oil product and chemical ship tankers
+Inspirators mix air and flammable gas in grills, gas stoves and Bunsen burners
+Water aspirators produce a partial vacuum using the kinetic energy from the faucet water pressure
+Steam siphons use the kinetic energy from the steam pressure to create a partial vacuum
+Atomizers disperse perfume or spray paint (i.e. from a spray gun or airbrush)
+Carburetors can use the effect to force gasoline into an engine's intake air stream at the throat by the difference between the pressure there and at the upstream start of the converging wall (which is fed to the float bowl). In other carburetors ambient air pressure can be fed to the float bowl, in which case the effect comes from Bernoulli's principle.
+Cylinder heads in piston engines have multiple Venturi areas like the valve seat and the port entrance, although these are not part of the design intent, merely a byproduct and any venturi effect is without specific function.
+Wine aerators infuse air into wine as it is poured into a glass
+Protein skimmers filter saltwater aquaria
+Automated pool cleaners use pressure-side water flow to collect sediment and debris
+Clarinets use a reverse taper to speed the air down the tube, enabling better tone, response and intonation
+The leadpipe of a trombone, affecting the timbre
+Industrial vacuum cleaners use compressed air
+Venturi scrubbers are used to clean flue gas emissions
+Injectors (also called ejectors) are used to add chlorine gas to water treatment chlorination systems
+Steam injectors use the Venturi effect and the latent heat of evaporation to deliver feed water to a steam locomotive boiler.
+Sandblasting nozzles accelerate an air and media mixture
+Bilge water can be emptied from a moving boat through a small waste gate in the hull. The air pressure inside the moving boat is greater than the water sliding by beneath.
+A scuba diving regulator uses the Venturi effect to assist maintaining the flow of gas once it starts flowing
+In recoilless rifles to decrease the recoil of firing
+The diffuser on an automobile
+Race cars utilising ground effect to increase downforce and thus become capable of higher cornering speeds
+Foam proportioners used to induct fire fighting foam concentrate into fire protection systems
+Trompe air compressors entrain air into a falling column of water
+The bolts in some brands of paintball markers
+Low-speed wind tunnels can be considered very large Venturi because they take advantage of the Venturi effect to increase velocity and decrease pressure to simulate expected flight conditions.
+
+Architecture
+Hawa Mahal of Jaipur, also utilizes the Venturi effect, by allowing cool air to pass through, thus making the whole area more pleasant during the high temperatures in summer.
+Large cities where wind is forced between buildings - the gap between the Twin Towers of the original World Trade Center was an extreme example of the phenomenon, which made the ground level plaza notoriously windswept. In fact, some gusts were so high that pedestrian travel had to be aided by ropes.
+In the south of Iraq, near the modern town of Nasiriyah, a 4000-year-old flume structure has been discovered at the ancient site of Girsu. This construction by the ancient Sumerians forced the contents of a nineteen kilometre canal through a constriction to enable the side-channeling of water off to agricultural lands from a higher origin than would have been the case without the flume. A recent dig by archaeologists from the British Museum confirmed the finding.
+
+Nature
+In windy mountain passes, resulting in erroneous pressure altimeter readings
+The mistral wind in southern France increases in speed through the Rhone valley.
