@@ -1,2 +1,4 @@
 # my_LLM
 From-scratch LLM engineering project: A ~33-million-parameter, English-only, decoder-only Transformer designed for technical language modeling, using a case-preserving 24K BPE tokenizer, Unicode NFKC normalization, six Transformer layers, 512-dimensional hidden representations, eight causal attention heads, RoPE positional encoding, RMSNorm, SwiGLU feed-forward networks, a 2,048-token context window, tied embeddings, and causal next-token pretraining primarily on filtered Common Crawl data.
+
+to run the model: scripts/generate.py
